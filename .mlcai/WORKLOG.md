@@ -70,6 +70,12 @@
   - Updated bounds calculation in `src/render/bounds.ts` to include the wall and label layout to prevent clipping in the SVG viewBox.
   - Wired the new option into the Vite web demo (`index.html`, `src/demo.ts`) and CLI generator (`demo/generator.js`).
   - Compiled, generated fresh examples, and checked in all changes in Git.
+- **Interactive HTML Details Card (Event Delegation)**:
+  - Added a beautifully styled card in `index.html` below the preview container for showing hovered coordinate and value details.
+  - Implemented event delegation in `src/demo.ts` by listening to `mouseover` and `mouseout` events on the preview container.
+  - Extracted metadata directly from the SVG elements' attributes (`data-col`, `data-row`, `data-value`), which are generated automatically by the library.
+  - Kept the native `<title>` tags optional (disabling them using `interactive: false` saves significant SVG payload/size, while custom JS tools can still read the `data-` attributes).
+  - Committed all additions in Git.
 
 
 
