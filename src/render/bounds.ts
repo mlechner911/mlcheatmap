@@ -1,4 +1,4 @@
-import { HeatmapDataPoint } from '../data/types';
+import { HeatmapDataPoint, HeightGridOptions } from '../data/types';
 import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
 
 export interface Bounds {
@@ -11,6 +11,7 @@ export interface Bounds {
 export function calculateBounds(params: {
   cols: number;
   rows: number;
+  minValue: number;
   maxAbsValue: number;
   maxHeight: number;
   shape: 'prism' | 'cylinder' | 'ribbon' | 'flatribbon';
@@ -22,10 +23,12 @@ export function calculateBounds(params: {
   labelPosition: 'behind' | 'front';
   geometryConfig: GeometryConfig;
   getPoint: (col: number, row: number) => HeatmapDataPoint;
+  heightGrid?: HeightGridOptions;
 }): Bounds {
   const {
     cols,
     rows,
+    minValue,
     maxAbsValue,
     maxHeight,
     shape,
@@ -36,7 +39,8 @@ export function calculateBounds(params: {
     rowLabelInterval,
     labelPosition,
     geometryConfig,
-    getPoint
+    getPoint,
+    heightGrid
   } = params;
 
   let minX = Infinity;
@@ -183,6 +187,23 @@ export function calculateBounds(params: {
         updateBounds(x + 30, y + 10);
       }
     }
+  }
+
+  // 5. Height grid bounds
+  if (heightGrid && heightGrid.ticks > 0) {
+    const pt0_floor = getGridIntersection(0, 0, geometryConfig);
+    const ptR_floor = getGridIntersection(0, rows, geometryConfig);
+    const heightMin = minValue < 0 ? -maxHeight : 0;
+    const heightMax = maxHeight;
+
+    updateBounds(pt0_floor.x, pt0_floor.y - heightMax);
+    updateBounds(ptR_floor.x, ptR_floor.y - heightMax);
+    updateBounds(pt0_floor.x, pt0_floor.y - heightMin);
+    updateBounds(ptR_floor.x, ptR_floor.y - heightMin);
+
+    // Labels are on the left, offset by about 45px for safety
+    updateBounds(ptR_floor.x - 45, ptR_floor.y - heightMax);
+    updateBounds(ptR_floor.x - 45, ptR_floor.y - heightMin);
   }
 
   return { minX, maxX, minY, maxY };

@@ -23,6 +23,9 @@ const shape = args.shape || 'prism';
 const opacity = args.opacity ? parseFloat(args.opacity) : 1.0;
 const animated = args.animated !== 'false' && args.animated !== '0' && args['no-animate'] === undefined;
 const renderFlatZero = args['flat-zero'] !== 'false' && args['flat-zero'] !== '0' && args['no-flat-zero'] === undefined;
+const heightTicks = args['height-ticks'] ? parseInt(args['height-ticks'], 10) : undefined;
+const heightSolid = args['height-solid'] !== 'false' && args['height-solid'] !== '0' && args['no-height-solid'] === undefined;
+
 const outFile = args.out || 'output.svg';
 
 // Ensure output directory exists
@@ -31,7 +34,7 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-console.log(`Generating heatmap: preset=${presetType}, color=${colorScheme}, angle=${angle}°, label-pos=${labelPosition}, shape=${shape}, opacity=${opacity}, animated=${animated}, flat-zero=${renderFlatZero}...`);
+console.log(`Generating heatmap: preset=${presetType}, color=${colorScheme}, angle=${angle}°, label-pos=${labelPosition}, shape=${shape}, opacity=${opacity}, animated=${animated}, flat-zero=${renderFlatZero}, height-ticks=${heightTicks}, height-solid=${heightSolid}...`);
 
 let dataPoints = [];
 let options = {
@@ -47,7 +50,11 @@ let options = {
   gap: 2,
   maxHeight: 40,
   showGrid: true,
-  interactive: true
+  interactive: true,
+  heightGrid: heightTicks ? {
+    ticks: heightTicks,
+    solid: heightSolid
+  } : undefined
 };
 
 // Generate Mock Datasets

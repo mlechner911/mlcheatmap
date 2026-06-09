@@ -21,6 +21,14 @@ export interface CustomColorScheme {
   steps: string[]; // Progression of colors from low to high
 }
 
+export interface HeightGridOptions {
+  ticks: number;
+  solid?: boolean;
+  wallColor?: string;
+  gridColor?: string;
+  labelColor?: string;
+}
+
 export interface HeatmapOptions {
   cols: number;
   rows: number;
@@ -46,4 +54,5 @@ export interface HeatmapOptions {
   opacity?: number;        // Opacity of the 3D bars (default: 1.0)
   animated?: boolean;      // Enable staggered load animations (default: true)
   renderFlatZero?: boolean; // Render flat 2D cells for zero-value points (default: true)
+  heightGrid?: HeightGridOptions;
 }

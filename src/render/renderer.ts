@@ -121,6 +121,7 @@ export function renderHeatmap(
   const bounds = calculateBounds({
     cols,
     rows,
+    minValue,
     maxAbsValue,
     maxHeight,
     shape,
@@ -131,7 +132,8 @@ export function renderHeatmap(
     rowLabelInterval,
     labelPosition,
     geometryConfig,
-    getPoint
+    getPoint,
+    heightGrid: options.heightGrid
   });
 
   const barSize = gridSize - gap;
@@ -139,6 +141,69 @@ export function renderHeatmap(
 
   // Generate SVG elements cell-by-cell
   const elements: string[] = [];
+
+  // Render Height Grid Wall if specified
+  if (options.heightGrid && options.heightGrid.ticks > 0) {
+    const ticksCount = options.heightGrid.ticks;
+    const isSolid = options.heightGrid.solid !== false; // default to true
+    
+    // Resolve colors
+    const wallColor = options.heightGrid.wallColor ?? (isDark ? 'rgba(30, 41, 59, 0.7)' : 'rgba(241, 245, 249, 0.7)');
+    const wallGridColor = options.heightGrid.gridColor ?? gridColor;
+    const wallLabelColor = options.heightGrid.labelColor ?? labelColor;
+
+    const heightMin = minValue < 0 ? -maxHeight : 0;
+    const heightMax = maxHeight;
+    
+    const pt0_floor = getGridIntersection(0, 0, geometryConfig);
+    const ptR_floor = getGridIntersection(0, rows, geometryConfig);
+
+    // 1. Draw solid wall background if requested
+    if (isSolid) {
+      const p0_top = `${pt0_floor.x.toFixed(2)},${(pt0_floor.y - heightMax).toFixed(2)}`;
+      const pR_top = `${ptR_floor.x.toFixed(2)},${(ptR_floor.y - heightMax).toFixed(2)}`;
+      const pR_bottom = `${ptR_floor.x.toFixed(2)},${(ptR_floor.y - heightMin).toFixed(2)}`;
+      const p0_bottom = `${pt0_floor.x.toFixed(2)},${(pt0_floor.y - heightMin).toFixed(2)}`;
+      
+      const wallPolygon = `<polygon points="${p0_top} ${pR_top} ${pR_bottom} ${p0_bottom}" fill="${wallColor}" stroke="none" />`;
+      elements.push(wallPolygon);
+    }
+
+    // 2. Draw vertical grid lines standing on the back-left edge (aligning with rows)
+    for (let r = 0; r <= rows; r++) {
+      const pt = getGridIntersection(0, r, geometryConfig);
+      const xStr = pt.x.toFixed(2);
+      const yMinStr = (pt.y - heightMin).toFixed(2);
+      const yMaxStr = (pt.y - heightMax).toFixed(2);
+      
+      const verticalLine = `<line x1="${xStr}" y1="${yMinStr}" x2="${xStr}" y2="${yMaxStr}" stroke="${wallGridColor}" stroke-width="0.5" stroke-dasharray="2,2" />`;
+      elements.push(verticalLine);
+    }
+
+    // 3. Draw horizontal grid lines and scale labels
+    for (let i = 0; i < ticksCount; i++) {
+      const t = ticksCount > 1 ? i / (ticksCount - 1) : 1;
+      const h = heightMin + t * (heightMax - heightMin);
+      
+      // Calculate value corresponding to this height
+      const tickVal = maxAbsValue > 0 ? (h / maxHeight) * maxAbsValue : 0;
+      
+      const pt0_h = { x: pt0_floor.x, y: pt0_floor.y - h };
+      const ptR_h = { x: ptR_floor.x, y: ptR_floor.y - h };
+      
+      // Horizontal grid line across the wall
+      const horizontalLine = `<line x1="${pt0_h.x.toFixed(2)}" y1="${pt0_h.y.toFixed(2)}" x2="${ptR_h.x.toFixed(2)}" y2="${ptR_h.y.toFixed(2)}" stroke="${wallGridColor}" stroke-width="0.5" />`;
+      elements.push(horizontalLine);
+
+      // Label on the left of the left corner (ptR_h)
+      const labelText = Number(tickVal.toFixed(2)).toString();
+      const textX = (ptR_h.x - 8).toFixed(2);
+      const textY = (ptR_h.y + 3).toFixed(2);
+      
+      const textElement = `<text x="${textX}" y="${textY}" fill="${wallLabelColor}" font-size="${labelFontSize}" font-family="sans-serif" text-anchor="end">${labelText}</text>`;
+      elements.push(textElement);
+    }
+  }
 
   for (let c = 0; c < cols; c++) {
     for (let r = 0; r < rows; r++) {

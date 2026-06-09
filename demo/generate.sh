@@ -243,6 +243,25 @@ node "$SCRIPT_DIR/generator.js" \
   --label-pos=front \
   --out="$OUTPUT_DIR/24h_triple_flatribbon.svg"
 
+# Example 24: Monthly calendar activity with 3D cylinders and a solid height grid wall (5 ticks)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month \
+  --color=emerald \
+  --shape=cylinder \
+  --angle=30 \
+  --height-ticks=5 \
+  --out="$OUTPUT_DIR/month_emerald_cylinder_height_grid_solid.svg"
+
+# Example 25: 24h Double timeline with flatribbon and a wireframe height grid wall (6 ticks, no-solid)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=24h-double \
+  --color=sunset \
+  --shape=flatribbon \
+  --angle=25 \
+  --height-ticks=6 \
+  --no-height-solid \
+  --out="$OUTPUT_DIR/24h_double_flatribbon_height_grid_wireframe.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"

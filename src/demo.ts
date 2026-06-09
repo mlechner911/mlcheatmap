@@ -90,6 +90,11 @@ const interactiveSwitch = document.getElementById('interactiveSwitch') as HTMLIn
 const animationSwitch = document.getElementById('animationSwitch') as HTMLInputElement;
 const flatZeroSwitch = document.getElementById('flatZeroSwitch') as HTMLInputElement;
 
+const heightGridSwitch = document.getElementById('heightGridSwitch') as HTMLInputElement;
+const heightGridOptionsGroup = document.getElementById('heightGridOptionsGroup') as HTMLDivElement;
+const heightGridTicksInput = document.getElementById('heightGridTicks') as HTMLInputElement;
+const heightGridSolidSwitch = document.getElementById('heightGridSolidSwitch') as HTMLInputElement;
+
 // Value indicators
 const gridSizeVal = document.getElementById('gridSizeVal') as HTMLSpanElement;
 const gapVal = document.getElementById('gapVal') as HTMLSpanElement;
@@ -148,6 +153,28 @@ function updateHeatmap() {
   projectionAngleVal.textContent = `${projectionAngle}°`;
   opacityVal.textContent = opacity.toFixed(2);
 
+  // Common Heatmap Options
+  const commonOptions = {
+    gridSize,
+    gap,
+    maxHeight,
+    projectionAngle,
+    labelPosition,
+    zeroColor,
+    colorScheme,
+    showGrid,
+    interactive,
+    dark: isDark,
+    shape,
+    opacity,
+    animated,
+    renderFlatZero,
+    heightGrid: heightGridSwitch.checked ? {
+      ticks: parseInt(heightGridTicksInput.value, 10) || 5,
+      solid: heightGridSolidSwitch.checked
+    } : undefined
+  };
+
   // Aggregate and render based on active preset
   let svg = '';
   if (activePreset === '24h') {
@@ -156,27 +183,14 @@ function updateHeatmap() {
     });
     dimensionsBadge.textContent = `${cols} cols (hours) × ${rows} rows (days)`;
     svg = renderHeatmap(data, {
+      ...commonOptions,
       cols,
       rows,
-      gridSize,
-      gap,
-      maxHeight,
-      projectionAngle,
-      labelPosition,
-      zeroColor,
-      colorScheme,
-      showGrid,
-      interactive,
-      dark: isDark,
       colLabels,
       colLabelInterval: 3, // Show label every 3 hours
       rowLabels,
       rowLabelInterval: 2, // Show label every other day
       title: 'Hourly User Events — Weekly Distribution',
-      shape,
-      opacity,
-      animated,
-      renderFlatZero,
     });
   } else if (activePreset === 'month') {
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregateMonth(mockDataMonth, {
@@ -186,45 +200,19 @@ function updateHeatmap() {
     });
     dimensionsBadge.textContent = `${cols} cols (days) × ${rows} rows (weeks)`;
     svg = renderHeatmap(data, {
+      ...commonOptions,
       cols,
       rows,
-      gridSize,
-      gap,
-      maxHeight,
-      projectionAngle,
-      labelPosition,
-      zeroColor,
-      colorScheme,
-      showGrid,
-      interactive,
-      dark: isDark,
       colLabels,
       rowLabels,
       title: 'June 2026 — Calendar Activity Tracker',
-      shape,
-      opacity,
-      animated,
-      renderFlatZero,
     });
   } else if (activePreset === 'nulls') {
     const gridModel = presets.nullsExample8x8();
     dimensionsBadge.textContent = `${gridModel.cols} cols × ${gridModel.rows} rows`;
     svg = gridModel.render({
-      gridSize,
-      gap,
-      maxHeight,
-      projectionAngle,
-      labelPosition,
-      zeroColor,
-      colorScheme,
-      showGrid,
-      interactive,
-      dark: isDark,
+      ...commonOptions,
       title: '8x8 Grid with Explicit Null Values (No Data)',
-      shape,
-      opacity,
-      animated,
-      renderFlatZero,
     });
   } else {
     // Year
@@ -234,26 +222,13 @@ function updateHeatmap() {
     });
     dimensionsBadge.textContent = `${cols} cols (weeks) × ${rows} rows (days)`;
     svg = renderHeatmap(data, {
+      ...commonOptions,
       cols,
       rows,
-      gridSize,
-      gap,
-      maxHeight,
-      projectionAngle,
-      labelPosition,
-      zeroColor,
-      colorScheme,
-      showGrid,
-      interactive,
-      dark: isDark,
       colLabels,
       rowLabels,
       rowLabelInterval: 2, // Every 2 days
       title: 'GitHub Contributions — Calendar Year 2026',
-      shape,
-      opacity,
-      animated,
-      renderFlatZero,
     });
   }
 
@@ -265,6 +240,11 @@ function updateHeatmap() {
 // ==========================================
 // 4. Event Listeners
 // ==========================================
+
+// Setup height grid options group visibility toggle
+heightGridSwitch.addEventListener('change', () => {
+  heightGridOptionsGroup.style.display = heightGridSwitch.checked ? 'block' : 'none';
+});
 
 // Setup Tab switching
 presetTabs.forEach(tab => {
@@ -319,6 +299,9 @@ const controls = [
   zeroColorPicker,
   showGridSwitch,
   interactiveSwitch,
+  heightGridSwitch,
+  heightGridTicksInput,
+  heightGridSolidSwitch,
 ];
 
 controls.forEach(control => {
