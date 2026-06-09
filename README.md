@@ -6,6 +6,20 @@ Unlike traditional 2D grid heatmaps, this library projects data points into isom
 
 ---
 
+## Why 3D Isometric?
+
+Traditional 2D grid heatmaps rely **entirely on color gradients** to encode numeric values. While this works well on active digital displays, it introduces critical limitations in real-world scenarios:
+
+1.  **Printing & Grayscale Conversion**: When reports or dashboards are printed in black-and-white or photocopied into grayscale, distinct color gradients often compress into virtually identical gray levels. This makes it extremely difficult to distinguish between different values on paper.
+2.  **Colorblind Accessibility**: For users with color vision deficiencies (e.g., deuteranopia or protanopia), reading multi-hue color charts can be highly challenging.
+
+By introducing **3D height and perspective**:
+*   Values are double-encoded: by **color hue** and **physical column height**.
+*   When printed in black-and-white or viewed in grayscale, the relative differences remain **instantly readable and distinguishable** thanks to the column heights.
+*   Accessibility is greatly enhanced as the structural shape does not rely solely on color perception.
+
+---
+
 ## Features
 
 *   **Pure Vector Graphics (SVG)**: Renders directly as SVG code. Fully responsive, lightweight, scalable, and easy to embed or style.
