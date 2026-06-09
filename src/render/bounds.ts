@@ -13,7 +13,7 @@ export function calculateBounds(params: {
   rows: number;
   maxAbsValue: number;
   maxHeight: number;
-  shape: 'prism' | 'cylinder' | 'ribbon';
+  shape: 'prism' | 'cylinder' | 'ribbon' | 'flatribbon';
   renderFlatZero: boolean;
   colLabels?: string[];
   rowLabels?: string[];
@@ -44,12 +44,20 @@ export function calculateBounds(params: {
   let minY = Infinity;
   let maxY = -Infinity;
 
+  // Inline-Funktion für Performance leicht optimiert (Vermeidung von Overhead)
   function updateBounds(x: number, y: number) {
     if (x < minX) minX = x;
     if (x > maxX) maxX = x;
     if (y < minY) minY = y;
     if (y > maxY) maxY = y;
   }
+
+  // Vorberechnete Konstanten auslagern
+  const hasMaxAbsValue = maxAbsValue > 0;
+  const invMaxAbsValue = hasMaxAbsValue ? 1 / maxAbsValue : 0;
+  const isRibbonShape = shape === 'ribbon' || shape === 'flatribbon';
+  const isFlatBand = shape === 'flatribbon';
+  const thickness = Math.max(3, maxHeight * 0.1);
 
   // 1. Grid intersection bounds
   for (let c = 0; c <= cols; c++) {
@@ -60,34 +68,38 @@ export function calculateBounds(params: {
   }
 
   // 2. Bar height bounds
-  for (let c = 0; c < cols; c++) {
-    for (let r = 0; r < rows; r++) {
-      const pt = getPoint(c, r);
-      if (pt.value === null) {
-        continue;
-      }
-      const h = maxAbsValue > 0 ? (pt.value / maxAbsValue) * maxHeight : 0;
-      if (h === 0 && !renderFlatZero) {
-        continue;
-      }
+  for (let r = 0; r < rows; r++) {
+    // Zeilenweises Caching der Werte, um mehrfache getPoint-Aufrufe bei Ribbons zu verhindern
+    const rowValues: (number | null)[] = new Array(cols);
+    for (let c = 0; c < cols; c++) {
+      rowValues[c] = getPoint(c, r).value;
+    }
 
-      if (shape === 'ribbon') {
+    for (let c = 0; c < cols; c++) {
+      const val = rowValues[c];
+      if (val === null) continue;
+
+      const h = hasMaxAbsValue ? (val * invMaxAbsValue) * maxHeight : 0;
+      if (h === 0 && !renderFlatZero) continue;
+
+      if (isRibbonShape) {
         if (h !== 0) {
-          const vPrev = c > 0 ? getPoint(c - 1, r).value : 0;
-          const vNext = c < cols - 1 ? getPoint(c + 1, r).value : 0;
+          // Nutzen des Zeilen-Caches statt erneuter getPoint-Aufrufe
+          const vPrev = c > 0 ? rowValues[c - 1] : 0;
+          const vNext = c < cols - 1 ? rowValues[c + 1] : 0;
 
           const hPrev = vPrev === null ? 0 : vPrev;
           const hNext = vNext === null ? 0 : vNext;
 
-          const valPrev = hPrev !== 0 && maxAbsValue > 0 ? (hPrev / maxAbsValue) * maxHeight : 0;
-          const valNext = hNext !== 0 && maxAbsValue > 0 ? (hNext / maxAbsValue) * maxHeight : 0;
+          const valPrev = hPrev !== 0 && hasMaxAbsValue ? (hPrev * invMaxAbsValue) * maxHeight : 0;
+          const valNext = hNext !== 0 && hasMaxAbsValue ? (hNext * invMaxAbsValue) * maxHeight : 0;
 
-          const h_start = valPrev !== 0 ? (valPrev + h) / 2 : 0;
-          const h_mid = h;
-          const h_end = valNext !== 0 ? (h + valNext) / 2 : 0;
+          const h_start = valPrev !== 0 ? (valPrev + h) * 0.5 : 0;
+          const h_end = valNext !== 0 ? (h + valNext) * 0.5 : 0;
 
+          // Punkte für Oberseite berechnen
           const ptsStart = getRibbonPoints(c, r, h_start, geometryConfig);
-          const ptsMid = getRibbonPoints(c + 0.5, r, h_mid, geometryConfig);
+          const ptsMid = getRibbonPoints(c + 0.5, r, h, geometryConfig);
           const ptsEnd = getRibbonPoints(c + 1, r, h_end, geometryConfig);
 
           updateBounds(ptsStart.back.x, ptsStart.back.y);
@@ -97,11 +109,19 @@ export function calculateBounds(params: {
           updateBounds(ptsEnd.back.x, ptsEnd.back.y);
           updateBounds(ptsEnd.front.x, ptsEnd.front.y);
 
-          // Floor bounds
-          const ptsStartFloor = getRibbonPoints(c, r, 0, geometryConfig);
-          const ptsEndFloor = getRibbonPoints(c + 1, r, 0, geometryConfig);
+          // Floor/Bottom bounds
+          const h_start_bottom = isFlatBand ? (h_start - thickness) : 0;
+          const h_mid_bottom = isFlatBand ? (h - thickness) : 0;
+          const h_end_bottom = isFlatBand ? (h_end - thickness) : 0;
+
+          const ptsStartFloor = getRibbonPoints(c, r, h_start_bottom, geometryConfig);
+          const ptsMidFloor = getRibbonPoints(c + 0.5, r, h_mid_bottom, geometryConfig);
+          const ptsEndFloor = getRibbonPoints(c + 1, r, h_end_bottom, geometryConfig);
+
           updateBounds(ptsStartFloor.back.x, ptsStartFloor.back.y);
           updateBounds(ptsStartFloor.front.x, ptsStartFloor.front.y);
+          updateBounds(ptsMidFloor.back.x, ptsMidFloor.back.y);
+          updateBounds(ptsMidFloor.front.x, ptsMidFloor.front.y);
           updateBounds(ptsEndFloor.back.x, ptsEndFloor.back.y);
           updateBounds(ptsEndFloor.front.x, ptsEndFloor.front.y);
         } else {
@@ -112,10 +132,11 @@ export function calculateBounds(params: {
           updateBounds(vertices.right.x, vertices.right.y);
         }
       } else {
-        const h_top = Math.max(0, h);
-        const h_bottom = Math.min(0, h);
+        const h_top = h > 0 ? h : 0;
+        const h_bottom = h < 0 ? h : 0;
         const verticesTop = getBarVertices(c, r, h_top, geometryConfig);
         const verticesBottom = getBarVertices(c, r, h_bottom, geometryConfig);
+
         updateBounds(verticesTop.top.x, verticesTop.top.y);
         updateBounds(verticesTop.left.x, verticesTop.left.y);
         updateBounds(verticesTop.front.x, verticesTop.front.y);
@@ -128,16 +149,21 @@ export function calculateBounds(params: {
     }
   }
 
+  // Gemeinsame Variablen für Labels vorbereiten
+  const offset = geometryConfig.gap * 0.5;
+  const cosA = geometryConfig.cosAngle;
+  const sinA = geometryConfig.sinAngle;
+  const gSize = geometryConfig.gridSize;
+
   // 3. Column labels bounds
-  const offset = geometryConfig.gap / 2;
-  const rLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
   if (colLabels) {
+    const rLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
+    const yStart = rLabel * gSize + offset;
     for (let c = 0; c < cols; c += colLabelInterval) {
       if (colLabels[c]) {
-        const xStart = c * geometryConfig.gridSize + offset;
-        const yStart = rLabel * geometryConfig.gridSize + offset;
-        const x = (xStart - yStart) * geometryConfig.cosAngle;
-        const y = (xStart + yStart) * geometryConfig.sinAngle;
+        const xStart = c * gSize + offset;
+        const x = (xStart - yStart) * cosA;
+        const y = (xStart + yStart) * sinA;
         updateBounds(x - 20, y - 10);
         updateBounds(x + 20, y + 10);
       }
@@ -145,14 +171,14 @@ export function calculateBounds(params: {
   }
 
   // 4. Row labels bounds
-  const cLabel = labelPosition === 'front' ? cols + 0.5 : -1.2;
   if (rowLabels) {
+    const cLabel = labelPosition === 'front' ? cols + 0.5 : -1.2;
+    const xStart = cLabel * gSize + offset;
     for (let r = 0; r < rows; r += rowLabelInterval) {
       if (rowLabels[r]) {
-        const xStart = cLabel * geometryConfig.gridSize + offset;
-        const yStart = r * geometryConfig.gridSize + offset;
-        const x = (xStart - yStart) * geometryConfig.cosAngle;
-        const y = (xStart + yStart) * geometryConfig.sinAngle;
+        const yStart = r * gSize + offset;
+        const x = (xStart - yStart) * cosA;
+        const y = (xStart + yStart) * sinA;
         updateBounds(x - 30, y - 10);
         updateBounds(x + 30, y + 10);
       }

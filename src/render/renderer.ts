@@ -181,7 +181,7 @@ export function renderHeatmap(
       let barSvg = '';
       if (shape === 'cylinder') {
         barSvg = renderCylinder(c, r, pt.value, h, baseColor, colors, verticesTop, verticesBottom, barSize, cosAngle, sinAngle, opacity, renderFlatZero, titleTag, inlineStyle, uniqueColors);
-      } else if (shape === 'ribbon') {
+      } else if (shape === 'ribbon' || shape === 'flatribbon') {
         if (h === 0) {
           if (renderFlatZero) {
             // Draw flat polygon for zero ribbon cells
@@ -196,7 +196,7 @@ export function renderHeatmap(
               </g>`;
           }
         } else {
-          barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig));
+          barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig), shape === 'flatribbon');
         }
       } else {
         barSvg = renderPrism(c, r, pt.value, h, colors, verticesTop, verticesBottom, opacity, renderFlatZero, titleTag, inlineStyle);

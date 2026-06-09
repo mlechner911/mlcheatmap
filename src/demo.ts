@@ -121,7 +121,7 @@ function updateHeatmap() {
   const labelPosition = labelPositionSelect.value as 'behind' | 'front';
   const showGrid = showGridSwitch.checked;
   const interactive = interactiveSwitch.checked;
-  const shape = shapeSelect.value as 'prism' | 'cylinder' | 'ribbon';
+  const shape = shapeSelect.value as 'prism' | 'cylinder' | 'ribbon' | 'flatribbon';
   const opacity = parseFloat(opacityInput.value);
   const animated = animationSwitch.checked;
   const renderFlatZero = flatZeroSwitch.checked;

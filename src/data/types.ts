@@ -42,7 +42,7 @@ export interface HeatmapOptions {
   projectionAngle?: number; // Projection angle in degrees (default: 30)
   labelPosition?: 'behind' | 'front'; // Position of axis labels relative to the grid (default: 'behind')
   zeroColor?: string;      // Custom color for zero value elements
-  shape?: 'prism' | 'cylinder' | 'ribbon'; // Shape of the 3D bars (default: 'prism')
+  shape?: 'prism' | 'cylinder' | 'ribbon' | 'flatribbon'; // Shape of the 3D bars (default: 'prism')
   opacity?: number;        // Opacity of the 3D bars (default: 1.0)
   animated?: boolean;      // Enable staggered load animations (default: true)
   renderFlatZero?: boolean; // Render flat 2D cells for zero-value points (default: true)

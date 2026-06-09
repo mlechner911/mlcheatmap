@@ -215,6 +215,34 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=30 \
   --out="$OUTPUT_DIR/null_test_8x8_ribbon.svg"
 
+# Example 21: 8x8 Grid with Null values using 3D floating ribbons (flatribbon)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=nulls \
+  --color=sunset \
+  --shape=flatribbon \
+  --angle=30 \
+  --out="$OUTPUT_DIR/null_test_8x8_flatribbon.svg"
+
+# Example 22: Monthly calendar using 3D floating ribbons (flatribbon), Coral Theme
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month \
+  --color=coral \
+  --shape=flatribbon \
+  --angle=30 \
+  --label-pos=behind \
+  --out="$OUTPUT_DIR/month_coral_flatribbon.svg"
+
+# Example 23: 24h Triple timeline using 3D floating ribbons (flatribbon)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=24h-triple \
+  --color=sky \
+  --shape=flatribbon \
+  --angle=12 \
+  --grid-size=16 \
+  --max-height=15 \
+  --label-pos=front \
+  --out="$OUTPUT_DIR/24h_triple_flatribbon.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"
