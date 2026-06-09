@@ -1,4 +1,4 @@
-import { shadeHex } from '../color';
+import { shadeHex } from './color';
 
 interface Colors {
   top: string;

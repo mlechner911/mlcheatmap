@@ -1,5 +1,5 @@
 import { HeatmapDataPoint, HeatmapOptions } from './types';
-import { renderHeatmap } from './renderer';
+import { renderHeatmap } from '../render/renderer';
 
 /**
  * Grid Model representing the heatmap coordinate space and aggregated metrics.

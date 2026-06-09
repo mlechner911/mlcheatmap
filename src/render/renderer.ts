@@ -1,8 +1,11 @@
-import { HeatmapDataPoint, HeatmapOptions, CustomColorScheme } from './types';
+import { HeatmapDataPoint, HeatmapOptions, CustomColorScheme } from '../data/types';
 import { LIGHT_THEMES, DARK_THEMES, NEGATIVE_LIGHT_THEMES, NEGATIVE_DARK_THEMES, getColorForValue, shadeHex, rotateHue } from './color';
-import { renderPrism } from './renderer/prism';
-import { renderCylinder } from './renderer/cylinder';
-import { renderRibbon } from './renderer/ribbon';
+import { renderPrism } from './prism';
+import { renderCylinder } from './cylinder';
+import { renderRibbon } from './ribbon';
+import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
+import { calculateBounds } from './bounds';
+import { renderColLabels, renderRowLabels } from './labels';
 
 /**
  * Renders an isometric heatmap SVG.
@@ -104,186 +107,35 @@ export function renderHeatmap(
     return dataMap.get(`${col},${row}`) ?? { col, row, value: null };
   };
 
-  // Track bounding box for dynamic viewBox calculation
-  let minX = Infinity;
-  let maxX = -Infinity;
-  let minY = Infinity;
-  let maxY = -Infinity;
+  const geometryConfig: GeometryConfig = {
+    gridSize,
+    gap,
+    cosAngle,
+    sinAngle
+  };
 
-  function updateBounds(x: number, y: number) {
-    if (x < minX) minX = x;
-    if (x > maxX) maxX = x;
-    if (y < minY) minY = y;
-    if (y > maxY) maxY = y;
-  }
-
-  // Calculate geometry parameters
-  const barSize = gridSize - gap;
-  const offset = gap / 2;
-
-  // Function to calculate top face vertices for a cell
-  function getBarVertices(c: number, r: number, h: number) {
-    const xStart = c * gridSize + offset;
-    const yStart = r * gridSize + offset;
-
-    // Base coordinate
-    const x0 = (xStart - yStart) * cosAngle;
-    const y0 = (xStart + yStart) * sinAngle - h;
-
-    const x1 = x0 - barSize * cosAngle;
-    const y1 = y0 + barSize * sinAngle;
-
-    const x2 = x0;
-    const y2 = y0 + 2 * barSize * sinAngle;
-
-    const x3 = x0 + barSize * cosAngle;
-    const y3 = y0 + barSize * sinAngle;
-
-    return {
-      top: { x: x0, y: y0 },
-      left: { x: x1, y: y1 },
-      front: { x: x2, y: y2 },
-      right: { x: x3, y: y3 },
-    };
-  }
-
-  // Function to calculate ribbon points at any fractional column coordinate
-  function getRibbonPoints(cFraction: number, r: number, h: number) {
-    const xStart = cFraction * gridSize;
-    const yBack = r * gridSize + offset;
-    const yFront = yBack + barSize;
-
-    const ptBack = {
-      x: (xStart - yBack) * cosAngle,
-      y: (xStart + yBack) * sinAngle - h
-    };
-
-    const ptFront = {
-      x: (xStart - yFront) * cosAngle,
-      y: (xStart + yFront) * sinAngle - h
-    };
-
-    return { back: ptBack, front: ptFront };
-  }
-
-  // Function to calculate grid intersection coordinates (for grid lines)
-  function getGridIntersection(c: number, r: number) {
-    const xVal = c * gridSize;
-    const yVal = r * gridSize;
-    return {
-      x: (xVal - yVal) * cosAngle,
-      y: (xVal + yVal) * sinAngle,
-    };
-  }
+  const colLabelInterval = options.colLabelInterval ?? 1;
+  const rowLabelInterval = options.rowLabelInterval ?? 1;
 
   // Pre-calculate bounds
-  // Grid bounds:
-  for (let c = 0; c <= cols; c++) {
-    for (let r = 0; r <= rows; r++) {
-      const pt = getGridIntersection(c, r);
-      updateBounds(pt.x, pt.y);
-    }
-  }
+  const bounds = calculateBounds({
+    cols,
+    rows,
+    maxAbsValue,
+    maxHeight,
+    shape,
+    renderFlatZero,
+    colLabels,
+    rowLabels,
+    colLabelInterval,
+    rowLabelInterval,
+    labelPosition,
+    geometryConfig,
+    getPoint
+  });
 
-  // Bar height bounds:
-  for (let c = 0; c < cols; c++) {
-    for (let r = 0; r < rows; r++) {
-      const pt = getPoint(c, r);
-      if (pt.value === null) {
-        continue;
-      }
-      const h = maxAbsValue > 0 ? (pt.value / maxAbsValue) * maxHeight : 0;
-      if (h === 0 && !renderFlatZero) {
-        continue;
-      }
-      if (shape === 'ribbon') {
-        if (h !== 0) {
-          const vPrev = c > 0 ? getPoint(c - 1, r).value : 0;
-          const vNext = c < cols - 1 ? getPoint(c + 1, r).value : 0;
-
-          const hPrev = vPrev === null ? 0 : vPrev;
-          const hNext = vNext === null ? 0 : vNext;
-
-          const valPrev = hPrev !== 0 && maxAbsValue > 0 ? (hPrev / maxAbsValue) * maxHeight : 0;
-          const valNext = hNext !== 0 && maxAbsValue > 0 ? (hNext / maxAbsValue) * maxHeight : 0;
-
-          const h_start = valPrev !== 0 ? (valPrev + h) / 2 : 0;
-          const h_mid = h;
-          const h_end = valNext !== 0 ? (h + valNext) / 2 : 0;
-
-          const ptsStart = getRibbonPoints(c, r, h_start);
-          const ptsMid = getRibbonPoints(c + 0.5, r, h_mid);
-          const ptsEnd = getRibbonPoints(c + 1, r, h_end);
-
-          updateBounds(ptsStart.back.x, ptsStart.back.y);
-          updateBounds(ptsStart.front.x, ptsStart.front.y);
-          updateBounds(ptsMid.back.x, ptsMid.back.y);
-          updateBounds(ptsMid.front.x, ptsMid.front.y);
-          updateBounds(ptsEnd.back.x, ptsEnd.back.y);
-          updateBounds(ptsEnd.front.x, ptsEnd.front.y);
-
-          // Floor bounds
-          const ptsStartFloor = getRibbonPoints(c, r, 0);
-          const ptsEndFloor = getRibbonPoints(c + 1, r, 0);
-          updateBounds(ptsStartFloor.back.x, ptsStartFloor.back.y);
-          updateBounds(ptsStartFloor.front.x, ptsStartFloor.front.y);
-          updateBounds(ptsEndFloor.back.x, ptsEndFloor.back.y);
-          updateBounds(ptsEndFloor.front.x, ptsEndFloor.front.y);
-        } else {
-          const vertices = getBarVertices(c, r, 0);
-          updateBounds(vertices.top.x, vertices.top.y);
-          updateBounds(vertices.left.x, vertices.left.y);
-          updateBounds(vertices.front.x, vertices.front.y);
-          updateBounds(vertices.right.x, vertices.right.y);
-        }
-      } else {
-        const h_top = Math.max(0, h);
-        const h_bottom = Math.min(0, h);
-        const verticesTop = getBarVertices(c, r, h_top);
-        const verticesBottom = getBarVertices(c, r, h_bottom);
-        updateBounds(verticesTop.top.x, verticesTop.top.y);
-        updateBounds(verticesTop.left.x, verticesTop.left.y);
-        updateBounds(verticesTop.front.x, verticesTop.front.y);
-        updateBounds(verticesTop.right.x, verticesTop.right.y);
-
-        updateBounds(verticesBottom.left.x, verticesBottom.left.y);
-        updateBounds(verticesBottom.front.x, verticesBottom.front.y);
-        updateBounds(verticesBottom.right.x, verticesBottom.right.y);
-      }
-    }
-  }
-
-  // Column labels bounds:
-  const colLabelInterval = options.colLabelInterval ?? 1;
-  const rLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
-  if (colLabels) {
-    for (let c = 0; c < cols; c += colLabelInterval) {
-      if (colLabels[c]) {
-        const xStart = c * gridSize + offset;
-        const yStart = rLabel * gridSize + offset;
-        const x = (xStart - yStart) * cosAngle;
-        const y = (xStart + yStart) * sinAngle;
-        updateBounds(x - 20, y - 10);
-        updateBounds(x + 20, y + 10);
-      }
-    }
-  }
-
-  // Row labels bounds:
-  const rowLabelInterval = options.rowLabelInterval ?? 1;
-  const cLabel = labelPosition === 'front' ? cols + 0.5 : -1.2;
-  if (rowLabels) {
-    for (let r = 0; r < rows; r += rowLabelInterval) {
-      if (rowLabels[r]) {
-        const xStart = cLabel * gridSize + offset;
-        const yStart = r * gridSize + offset;
-        const x = (xStart - yStart) * cosAngle;
-        const y = (xStart + yStart) * sinAngle;
-        updateBounds(x - 30, y - 10);
-        updateBounds(x + 30, y + 10);
-      }
-    }
-  }
+  const barSize = gridSize - gap;
+  const offset = gap / 2;
 
   // Generate SVG elements cell-by-cell
   const elements: string[] = [];
@@ -292,10 +144,10 @@ export function renderHeatmap(
     for (let r = 0; r < rows; r++) {
       // 1. Draw grid cell polygon if showGrid is true
       if (showGrid) {
-        const p0 = getGridIntersection(c, r);
-        const p1 = getGridIntersection(c, r + 1);
-        const p2 = getGridIntersection(c + 1, r + 1);
-        const p3 = getGridIntersection(c + 1, r);
+        const p0 = getGridIntersection(c, r, geometryConfig);
+        const p1 = getGridIntersection(c, r + 1, geometryConfig);
+        const p2 = getGridIntersection(c + 1, r + 1, geometryConfig);
+        const p3 = getGridIntersection(c + 1, r, geometryConfig);
         const gridPolygon = `<polygon class="iso-grid-cell" points="${p0.x.toFixed(2)},${p0.y.toFixed(2)} ${p1.x.toFixed(2)},${p1.y.toFixed(2)} ${p2.x.toFixed(2)},${p2.y.toFixed(2)} ${p3.x.toFixed(2)},${p3.y.toFixed(2)}" fill="none" stroke="${gridColor}" stroke-width="0.5" />`;
         elements.push(gridPolygon);
       }
@@ -307,8 +159,8 @@ export function renderHeatmap(
       const h = maxAbsValue > 0 ? (pt.value / maxAbsValue) * maxHeight : 0;
       const h_top = Math.max(0, h);
       const h_bottom = Math.min(0, h);
-      const verticesTop = getBarVertices(c, r, h_top);
-      const verticesBottom = getBarVertices(c, r, h_bottom);
+      const verticesTop = getBarVertices(c, r, h_top, geometryConfig);
+      const verticesBottom = getBarVertices(c, r, h_bottom, geometryConfig);
 
       // Determine base color
       const baseColor = pt.color ?? (pt.value === 0 && options.zeroColor ? options.zeroColor : getColorForValue(pt.value, maxAbsValue, theme, negativeTheme));
@@ -344,7 +196,7 @@ export function renderHeatmap(
               </g>`;
           }
         } else {
-          barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, getRibbonPoints);
+          barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig));
         }
       } else {
         barSvg = renderPrism(c, r, pt.value, h, colors, verticesTop, verticesBottom, opacity, renderFlatZero, titleTag, inlineStyle);
@@ -357,58 +209,43 @@ export function renderHeatmap(
   }
 
   // Render Column labels
+  const rLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
   if (colLabels) {
-    const colLabelsGroup: string[] = [];
-    const colAnchor = 'middle';
-    
-    for (let c = 0; c < cols; c += colLabelInterval) {
-      const label = colLabels[c];
-      if (label) {
-        const xStart = c * gridSize + offset;
-        const yStart = rLabel * gridSize + offset;
-        const x = (xStart - yStart) * cosAngle;
-        const y = (xStart + yStart) * sinAngle;
-
-        const adjustedX = x;
-        const adjustedY = labelPosition === 'front' ? y + 10 : y;
-
-        colLabelsGroup.push(
-          `<text x="${adjustedX.toFixed(2)}" y="${adjustedY.toFixed(2)}" fill="${labelColor}" font-size="${labelFontSize}" font-family="sans-serif" text-anchor="${colAnchor}">${escapeHtml(label)}</text>`
-        );
-      }
-    }
-    elements.push(`<g class="iso-col-labels">${colLabelsGroup.join('\n')}</g>`);
+    const colLabelsSvg = renderColLabels({
+      colLabels,
+      colLabelInterval,
+      cols,
+      rLabel,
+      geometryConfig,
+      labelColor,
+      labelFontSize,
+      escapeHtml
+    });
+    elements.push(colLabelsSvg);
   }
 
   // Render Row labels
+  const cLabel = labelPosition === 'front' ? cols + 0.5 : -1.2;
   if (rowLabels) {
-    const rowLabelsGroup: string[] = [];
-    const rowAnchor = labelPosition === 'front' ? 'start' : 'end';
-    
-    for (let r = 0; r < rows; r += rowLabelInterval) {
-      const label = rowLabels[r];
-      if (label) {
-        const xStart = cLabel * gridSize + offset;
-        const yStart = r * gridSize + offset;
-        const x = (xStart - yStart) * cosAngle;
-        const y = (xStart + yStart) * sinAngle;
-
-        const adjustedX = labelPosition === 'front' ? x + 6 : x - 6;
-        const adjustedY = y + 3;
-
-        rowLabelsGroup.push(
-          `<text x="${adjustedX.toFixed(2)}" y="${adjustedY.toFixed(2)}" fill="${labelColor}" font-size="${labelFontSize}" font-family="sans-serif" text-anchor="${rowAnchor}">${escapeHtml(label)}</text>`
-        );
-      }
-    }
-    elements.push(`<g class="iso-row-labels">${rowLabelsGroup.join('\n')}</g>`);
+    const rowLabelsSvg = renderRowLabels({
+      rowLabels,
+      rowLabelInterval,
+      rows,
+      cLabel,
+      geometryConfig,
+      labelColor,
+      labelFontSize,
+      labelPosition,
+      escapeHtml
+    });
+    elements.push(rowLabelsSvg);
   }
 
   // Assemble final SVG
-  const width = (maxX - minX) + 2 * padding;
-  const height = (maxY - minY) + 2 * padding;
-  const viewX = minX - padding;
-  const viewY = minY - padding;
+  const width = (bounds.maxX - bounds.minX) + 2 * padding;
+  const height = (bounds.maxY - bounds.minY) + 2 * padding;
+  const viewX = bounds.minX - padding;
+  const viewY = bounds.minY - padding;
 
   const styleTag = interactive
     ? `<style>

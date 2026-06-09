@@ -1,5 +1,4 @@
-import { renderHeatmap, presets } from './index';
-import { ColorSchemeType } from './types';
+import { renderHeatmap, presets, ColorSchemeType } from './index';
 
 // ==========================================
 // 1. Mock Data Generators

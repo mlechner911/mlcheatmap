@@ -6,7 +6,6 @@ export interface HeatmapDataPoint {
   color?: string; // Optional specific color override for this data point
 }
 
-
 export type ColorSchemeType =
   | 'github'
   | 'emerald'

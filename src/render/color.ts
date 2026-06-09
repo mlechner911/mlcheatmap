@@ -1,4 +1,4 @@
-import { ColorSchemeType, CustomColorScheme } from './types';
+import { ColorSchemeType, CustomColorScheme } from '../data/types';
 
 export function parseHex(hex: string): { r: number; g: number; b: number } {
   let clean = hex.replace(/^#/, '');
