@@ -140,7 +140,9 @@ export function renderHeatmap(
   const offset = gap / 2;
 
   // Generate SVG elements cell-by-cell
+  const backgroundElements: string[] = [];
   const elements: string[] = [];
+  const foregroundElements: string[] = [];
 
   // Render Height Grid Wall if specified
   if (options.heightGrid && options.heightGrid.ticks > 0) {
@@ -166,7 +168,7 @@ export function renderHeatmap(
       const p0_bottom = `${pt0_floor.x.toFixed(2)},${(pt0_floor.y - heightMin).toFixed(2)}`;
       
       const wallPolygon = `<polygon points="${p0_top} ${pR_top} ${pR_bottom} ${p0_bottom}" fill="${wallColor}" stroke="none" />`;
-      elements.push(wallPolygon);
+      backgroundElements.push(wallPolygon);
     }
 
     // 2. Draw vertical grid lines standing on the back-left edge (aligning with rows)
@@ -177,7 +179,7 @@ export function renderHeatmap(
       const yMaxStr = (pt.y - heightMax).toFixed(2);
       
       const verticalLine = `<line x1="${xStr}" y1="${yMinStr}" x2="${xStr}" y2="${yMaxStr}" stroke="${wallGridColor}" stroke-width="0.5" stroke-dasharray="2,2" />`;
-      elements.push(verticalLine);
+      backgroundElements.push(verticalLine);
     }
 
     // 3. Draw horizontal grid lines and scale labels
@@ -193,7 +195,7 @@ export function renderHeatmap(
       
       // Horizontal grid line across the wall
       const horizontalLine = `<line x1="${pt0_h.x.toFixed(2)}" y1="${pt0_h.y.toFixed(2)}" x2="${ptR_h.x.toFixed(2)}" y2="${ptR_h.y.toFixed(2)}" stroke="${wallGridColor}" stroke-width="0.5" />`;
-      elements.push(horizontalLine);
+      backgroundElements.push(horizontalLine);
 
       // Label on the left of the left corner (ptR_h)
       const labelText = Number(tickVal.toFixed(2)).toString();
@@ -201,7 +203,7 @@ export function renderHeatmap(
       const textY = (ptR_h.y + 3).toFixed(2);
       
       const textElement = `<text x="${textX}" y="${textY}" fill="${wallLabelColor}" font-size="${labelFontSize}" font-family="sans-serif" text-anchor="end">${labelText}</text>`;
-      elements.push(textElement);
+      backgroundElements.push(textElement);
     }
   }
 
@@ -286,7 +288,11 @@ export function renderHeatmap(
       labelFontSize,
       escapeHtml
     });
-    elements.push(colLabelsSvg);
+    if (labelPosition === 'front') {
+      foregroundElements.push(colLabelsSvg);
+    } else {
+      backgroundElements.push(colLabelsSvg);
+    }
   }
 
   // Render Row labels
@@ -304,7 +310,11 @@ export function renderHeatmap(
       labelPosition: (labelPosition === 'front' || hasHeightGrid) ? 'front' : 'behind',
       escapeHtml
     });
-    elements.push(rowLabelsSvg);
+    if (labelPosition === 'front' || hasHeightGrid) {
+      foregroundElements.push(rowLabelsSvg);
+    } else {
+      backgroundElements.push(rowLabelsSvg);
+    }
   }
 
   // Assemble final SVG
@@ -366,7 +376,7 @@ export function renderHeatmap(
     ${defsSvg}
     ${titleSvg}
     <g>
-      ${elements.join('\n')}
+      ${[...backgroundElements, ...elements, ...foregroundElements].join('\n')}
     </g>
   </svg>`;
 }
