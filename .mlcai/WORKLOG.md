@@ -85,6 +85,12 @@
   - Placed 'behind' axis labels into the background layer, so that the 3D columns/bars naturally overlap and cover them in the 3D view.
   - Kept 'front' axis labels in the foreground layer so they draw on top of everything.
   - Committed the layering improvements.
+- **6-Month Dual Timeline Preset**:
+  - Implemented `aggregateSixMonthsDouble` preset in `src/data/presets.ts` mapping days across a 6-month period to columns (weeks) and rows (7 days * 2 measurements/day, i.e., 14 rows).
+  - Explicitly initialized out-of-bounds padding days at the beginning and end of the calendar grid to `null` so they render as transparent space.
+  - Added mock data generation and live preview options for "6-Month Dual" in the Vite browser demo (`src/demo.ts`, `index.html`).
+  - Added the `sixmonths` preset to `demo/generator.js` and a corresponding test generation script in `demo/generate.sh`.
+  - Created a test artifact `sixmonths_double_sunset_height_grid.svg` displaying a beautiful isometric projection of the 6-month double-measurement chart.
 
 
 

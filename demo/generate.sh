@@ -262,6 +262,15 @@ node "$SCRIPT_DIR/generator.js" \
   --no-height-solid \
   --out="$OUTPUT_DIR/24h_double_flatribbon_height_grid_wireframe.svg"
 
+# Example 26: 6-Month Dual Timeline (AM/PM), Sunset Theme, Prism columns, Height grid ticks=5
+node "$SCRIPT_DIR/generator.js" \
+  --preset=sixmonths \
+  --color=sunset \
+  --shape=prism \
+  --angle=30 \
+  --height-ticks=5 \
+  --out="$OUTPUT_DIR/sixmonths_double_sunset_height_grid.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"

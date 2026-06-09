@@ -62,16 +62,44 @@ function generateYearMockEvents() {
   return events;
 }
 
+function generateSixMonthsMockEvents() {
+  const events = [];
+  const year = 2026;
+  const startMonth = 0; // January
+  const D_start = new Date(year, startMonth, 1);
+  const D_end = new Date(year, startMonth + 6, 0); // End of June
+
+  const current = new Date(D_start);
+  let dayIndex = 0;
+  while (current <= D_end) {
+    for (let m = 0; m < 2; m++) {
+      const angle = (dayIndex / 181) * 6 * Math.PI + (m * Math.PI / 4);
+      let val = Math.round(Math.sin(angle) * 15);
+      val += Math.floor(Math.random() * 11) - 5;
+      if (val < -20) val = -20;
+      if (val > 20) val = 20;
+
+      const date = new Date(current);
+      date.setHours(m === 0 ? 8 : 16);
+      events.push({ date, value: val, measurement: m as 0 | 1 });
+    }
+    current.setDate(current.getDate() + 1);
+    dayIndex++;
+  }
+  return events;
+}
+
 // Generate static sets of mock data
 const mockData24h = generate24hMockEvents();
 const mockDataMonth = generateMonthMockEvents();
 const mockDataYear = generateYearMockEvents();
+const mockDataSixMonths = generateSixMonthsMockEvents();
 
 // ==========================================
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' = '24h';
+let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -212,6 +240,22 @@ function updateHeatmap() {
       rowLabels,
       title: 'June 2026 — Calendar Activity Tracker',
     });
+  } else if (activePreset === 'sixmonths') {
+    const { data, cols, rows, colLabels, rowLabels } = presets.aggregateSixMonthsDouble(mockDataSixMonths, {
+      year: 2026,
+      startMonth: 0, // Jan
+      startOfWeek: 1, // Mon
+    });
+    dimensionsBadge.textContent = `${cols} cols (weeks) × ${rows} rows (days × 2)`;
+    svg = renderHeatmap(data, {
+      ...commonOptions,
+      cols,
+      rows,
+      colLabels,
+      rowLabels,
+      rowLabelInterval: 2, // Every 2 days
+      title: 'Jan - Jun 2026 — 6-Month Dual Timeline (2 Measurements/Day)',
+    });
   } else if (activePreset === 'nulls') {
     const gridModel = presets.nullsExample8x8();
     dimensionsBadge.textContent = `${gridModel.cols} cols × ${gridModel.rows} rows`;
@@ -262,7 +306,7 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls';
+    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths';
 
     // Update geometry defaults depending on preset for best visual representation
     if (activePreset === '24h') {
@@ -273,6 +317,10 @@ presetTabs.forEach(tab => {
       gridSizeInput.value = '24';
       gapInput.value = '3';
       maxHeightInput.value = '50';
+    } else if (activePreset === 'sixmonths') {
+      gridSizeInput.value = '11';
+      gapInput.value = '1';
+      maxHeightInput.value = '25';
     } else if (activePreset === 'year') {
       gridSizeInput.value = '13';
       gapInput.value = '2';

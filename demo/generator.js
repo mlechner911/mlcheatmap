@@ -250,6 +250,44 @@ if (presetType === '24h') {
     gap: 3,
     title: 'June 2026 Activity (Month Preset)'
   };
+} else if (presetType === 'sixmonths') {
+  const mockSixMonths = [];
+  const year = 2026;
+  const startMonth = 0; // Jan
+  const D_start = new Date(year, startMonth, 1);
+  const D_end = new Date(year, startMonth + 6, 0); // End of June
+
+  const current = new Date(D_start);
+  let dayIndex = 0;
+  while (current <= D_end) {
+    for (let m = 0; m < 2; m++) {
+      const angle = (dayIndex / 181) * 6 * Math.PI + (m * Math.PI / 4);
+      let val = Math.round(Math.sin(angle) * 15);
+      val += Math.floor(Math.random() * 11) - 5;
+      if (val < -20) val = -20;
+      if (val > 20) val = 20;
+
+      const date = new Date(current);
+      date.setHours(m === 0 ? 8 : 16);
+      mockSixMonths.push({ date, value: val, measurement: m });
+    }
+    current.setDate(current.getDate() + 1);
+    dayIndex++;
+  }
+  const p = presets.aggregateSixMonthsDouble(mockSixMonths, { year, startMonth, startOfWeek: 1 });
+  dataPoints = p.data;
+  options = {
+    ...options,
+    cols: p.cols,
+    rows: p.rows,
+    colLabels: p.colLabels,
+    rowLabels: p.rowLabels,
+    rowLabelInterval: 2,
+    gridSize: 11,
+    gap: 1,
+    maxHeight: 25,
+    title: 'Jan - Jun 2026 — 6-Month Dual Timeline (2 Measurements/Day)'
+  };
 } else if (presetType === 'nulls') {
   const p = presets.nullsExample8x8();
   dataPoints = p.data;
