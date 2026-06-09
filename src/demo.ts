@@ -95,6 +95,11 @@ const heightGridOptionsGroup = document.getElementById('heightGridOptionsGroup')
 const heightGridTicksInput = document.getElementById('heightGridTicks') as HTMLInputElement;
 const heightGridSolidSwitch = document.getElementById('heightGridSolidSwitch') as HTMLInputElement;
 
+const hoverInfoDefault = document.getElementById('hoverInfoDefault') as HTMLDivElement;
+const hoverInfoData = document.getElementById('hoverInfoData') as HTMLDivElement;
+const hoverInfoPos = document.getElementById('hoverInfoPos') as HTMLSpanElement;
+const hoverInfoValue = document.getElementById('hoverInfoValue') as HTMLSpanElement;
+
 // Value indicators
 const gridSizeVal = document.getElementById('gridSizeVal') as HTMLSpanElement;
 const gapVal = document.getElementById('gapVal') as HTMLSpanElement;
@@ -307,6 +312,35 @@ const controls = [
 controls.forEach(control => {
   control.addEventListener('input', updateHeatmap);
   control.addEventListener('change', updateHeatmap);
+});
+
+// Event delegation for displaying details in HTML mode on hover
+previewContainer.addEventListener('mouseover', (e) => {
+  const target = e.target as HTMLElement;
+  const bar = target.closest('.iso-bar');
+  if (bar) {
+    const col = bar.getAttribute('data-col');
+    const row = bar.getAttribute('data-row');
+    const value = bar.getAttribute('data-value');
+    
+    if (col !== null && row !== null && value !== null) {
+      hoverInfoDefault.classList.add('d-none');
+      hoverInfoData.classList.remove('d-none');
+      hoverInfoData.classList.add('d-flex');
+      hoverInfoPos.textContent = `Column ${col}, Row ${row}`;
+      hoverInfoValue.textContent = value === 'null' ? 'No Data' : value;
+    }
+  }
+});
+
+previewContainer.addEventListener('mouseout', (e) => {
+  const target = e.target as HTMLElement;
+  const bar = target.closest('.iso-bar');
+  if (bar) {
+    hoverInfoDefault.classList.remove('d-none');
+    hoverInfoData.classList.add('d-none');
+    hoverInfoData.classList.remove('d-flex');
+  }
 });
 
 // Copy button
