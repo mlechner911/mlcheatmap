@@ -290,7 +290,8 @@ export function renderHeatmap(
   }
 
   // Render Row labels
-  const cLabel = labelPosition === 'front' ? cols + 0.5 : -1.2;
+  const hasHeightGrid = options.heightGrid && options.heightGrid.ticks > 0;
+  const cLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
   if (rowLabels) {
     const rowLabelsSvg = renderRowLabels({
       rowLabels,
@@ -300,7 +301,7 @@ export function renderHeatmap(
       geometryConfig,
       labelColor,
       labelFontSize,
-      labelPosition,
+      labelPosition: (labelPosition === 'front' || hasHeightGrid) ? 'front' : 'behind',
       escapeHtml
     });
     elements.push(rowLabelsSvg);

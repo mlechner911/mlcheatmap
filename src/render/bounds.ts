@@ -176,7 +176,8 @@ export function calculateBounds(params: {
 
   // 4. Row labels bounds
   if (rowLabels) {
-    const cLabel = labelPosition === 'front' ? cols + 0.5 : -1.2;
+    const hasHeightGrid = heightGrid && heightGrid.ticks > 0;
+    const cLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
     const xStart = cLabel * gSize + offset;
     for (let r = 0; r < rows; r += rowLabelInterval) {
       if (rowLabels[r]) {
