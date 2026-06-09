@@ -271,6 +271,13 @@ node "$SCRIPT_DIR/generator.js" \
   --height-ticks=5 \
   --out="$OUTPUT_DIR/sixmonths_double_sunset_height_grid.svg"
 
+# Example 27: June Month Tracker with Mixed Shapes per Series (Row)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=mixed \
+  --color=sunset \
+  --angle=30 \
+  --out="$OUTPUT_DIR/month_mixed_shapes_per_row.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"

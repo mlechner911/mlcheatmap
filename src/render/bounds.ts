@@ -1,4 +1,4 @@
-import { HeatmapDataPoint, HeightGridOptions } from '../data/types';
+import { HeatmapDataPoint, HeightGridOptions, HeatmapShape } from '../data/types';
 import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
 
 export interface Bounds {
@@ -14,7 +14,7 @@ export function calculateBounds(params: {
   minValue: number;
   maxAbsValue: number;
   maxHeight: number;
-  shape: 'prism' | 'cylinder' | 'ribbon' | 'flatribbon';
+  shape: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape);
   renderFlatZero: boolean;
   colLabels?: string[];
   rowLabels?: string[];
@@ -56,11 +56,19 @@ export function calculateBounds(params: {
     if (y > maxY) maxY = y;
   }
 
+  const getShapeForRow = (rowIdx: number): HeatmapShape => {
+    if (typeof shape === 'function') {
+      return shape(rowIdx);
+    }
+    if (Array.isArray(shape)) {
+      return shape[rowIdx] ?? 'prism';
+    }
+    return shape ?? 'prism';
+  };
+
   // Vorberechnete Konstanten auslagern
   const hasMaxAbsValue = maxAbsValue > 0;
   const invMaxAbsValue = hasMaxAbsValue ? 1 / maxAbsValue : 0;
-  const isRibbonShape = shape === 'ribbon' || shape === 'flatribbon';
-  const isFlatBand = shape === 'flatribbon';
   const thickness = Math.max(3, maxHeight * 0.1);
 
   // 1. Grid intersection bounds
@@ -73,6 +81,10 @@ export function calculateBounds(params: {
 
   // 2. Bar height bounds
   for (let r = 0; r < rows; r++) {
+    const rShape = getShapeForRow(r);
+    const isRibbonShape = rShape === 'ribbon' || rShape === 'flatribbon';
+    const isFlatBand = rShape === 'flatribbon';
+
     // Zeilenweises Caching der Werte, um mehrfache getPoint-Aufrufe bei Ribbons zu verhindern
     const rowValues: (number | null)[] = new Array(cols);
     for (let c = 0; c < cols; c++) {

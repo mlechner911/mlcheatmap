@@ -288,6 +288,33 @@ if (presetType === '24h') {
     maxHeight: 25,
     title: 'Jan - Jun 2026 — 6-Month Dual Timeline (2 Measurements/Day)'
   };
+} else if (presetType === 'mixed') {
+  const mockMonth = [];
+  const year = 2026;
+  const month = 5; // June
+  for (let d = 1; d <= 30; d++) {
+    const date = new Date(year, month, d);
+    const val = d % 3 === 0 ? 15 : (d % 5 === 0 ? -8 : 3);
+    mockMonth.push({ date, value: val });
+  }
+  const p = presets.aggregateMonth(mockMonth, { year, month, startOfWeek: 1 });
+  dataPoints = p.data;
+  
+  const shapes = ['prism', 'cylinder', 'ribbon', 'flatribbon'];
+  const shapeFn = (r) => shapes[r % shapes.length];
+
+  options = {
+    ...options,
+    cols: p.cols,
+    rows: p.rows,
+    colLabels: p.colLabels,
+    rowLabels: p.rowLabels,
+    shape: shapeFn,
+    gridSize: 20,
+    gap: 3,
+    maxHeight: 40,
+    title: 'June 2026 Monthly Tracker — Mixed Shapes per Series (Row)'
+  };
 } else if (presetType === 'nulls') {
   const p = presets.nullsExample8x8();
   dataPoints = p.data;

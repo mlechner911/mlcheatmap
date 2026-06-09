@@ -91,6 +91,12 @@
   - Added mock data generation and live preview options for "6-Month Dual" in the Vite browser demo (`src/demo.ts`, `index.html`).
   - Added the `sixmonths` preset to `demo/generator.js` and a corresponding test generation script in `demo/generate.sh`.
   - Created a test artifact `sixmonths_double_sunset_height_grid.svg` displaying a beautiful isometric projection of the 6-month double-measurement chart.
+- **Series-Specific Shapes & Group Wrapping**:
+  - Added support for shape-per-series (row-specific shapes) in `HeatmapOptions.shape` which can now accept a single string, an array, or a custom mapper function `(row: number) => HeatmapShape`.
+  - Updated bounding box computations in `src/render/bounds.ts` and cell rendering loops in `src/render/renderer.ts` to compute shapes dynamically per row.
+  - Implemented a `wrapper` option (`'svg' | 'g'`, defaulting to `'svg'`) in `HeatmapOptions` to render the heatmap as a `<g>` group with local styles/defs rather than a full `<svg>` document.
+  - Designed a combined multi-month preview demo in `src/demo.ts` rendering May and June 2026 as separate `<g>` elements, using translation transforms to align them side-by-side in isometric 3D space.
+  - Added a "Mixed Shapes" tab to `index.html` and a corresponding generator configuration in `demo/generator.js`.
 
 
 

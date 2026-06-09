@@ -89,6 +89,110 @@ function generateSixMonthsMockEvents() {
   return events;
 }
 
+function renderCombinedMultiMonth(commonOptions: any): string {
+  const year = 2026;
+  const startOfWeek = 1;
+  const isDark = commonOptions.dark;
+  const titleColor = isDark ? '#f0f6fc' : '#24292f';
+
+  // 1. Generate May 2026 events
+  const mockMay = [];
+  for (let d = 1; d <= 31; d++) {
+    const date = new Date(year, 4, d); // May
+    const val = d % 3 === 0 ? 15 : (d % 5 === 0 ? -10 : 5);
+    mockMay.push({ date, value: val });
+  }
+
+  // 2. Generate June 2026 events
+  const mockJune = [];
+  for (let d = 1; d <= 30; d++) {
+    const date = new Date(year, 5, d); // June
+    const val = d % 4 === 0 ? 20 : (d % 3 === 0 ? -12 : 8);
+    mockJune.push({ date, value: val });
+  }
+
+  // 3. Aggregate
+  const gridMay = presets.aggregateMonth(mockMay, { year, month: 4, startOfWeek });
+  const gridJune = presets.aggregateMonth(mockJune, { year, month: 5, startOfWeek });
+
+  // Mixed shapes per row/series: Mon=prism, Tue=cylinder, Wed=ribbon, Thu=flatribbon...
+  const shapes = ['prism', 'cylinder', 'ribbon', 'flatribbon'];
+  const shapeFn = (r: number) => shapes[r % shapes.length] as any;
+
+  const groupOptions = {
+    ...commonOptions,
+    shape: shapeFn,
+    wrapper: 'g' as const,
+  };
+
+  // Render May (with row labels, no col labels)
+  const svgMayG = gridMay.render({
+    ...groupOptions,
+    rowLabels: gridMay.rowLabels,
+    colLabels: undefined,
+  });
+
+  // Render June (no row labels, with col labels)
+  const svgJuneG = gridJune.render({
+    ...groupOptions,
+    rowLabels: undefined,
+    colLabels: gridJune.colLabels,
+  });
+
+  // Calculate translation offset for June based on May columns
+  const colsMay = gridMay.cols;
+  const rad = ((commonOptions.projectionAngle ?? 30) * Math.PI) / 180;
+  const dx = colsMay * ((commonOptions.gridSize ?? 20) + (commonOptions.gap ?? 3)) * Math.cos(rad);
+  const dy = colsMay * ((commonOptions.gridSize ?? 20) + (commonOptions.gap ?? 3)) * Math.sin(rad);
+
+  // Wrap June in a translated group
+  const translatedJune = `<g transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">
+    ${svgJuneG}
+  </g>`;
+
+  // Parse bounds from the rendered G elements to construct parent viewBox
+  const matchMay = svgMayG.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
+  const matchJune = svgJuneG.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
+
+  let minX = -100;
+  let maxX = 500;
+  let minY = -100;
+  let maxY = 400;
+
+  if (matchMay && matchJune) {
+    const minX_1 = parseFloat(matchMay[1]);
+    const minY_1 = parseFloat(matchMay[2]);
+    const width_1 = parseFloat(matchMay[3]);
+    const height_1 = parseFloat(matchMay[4]);
+    const maxX_1 = minX_1 + width_1;
+    const maxY_1 = minY_1 + height_1;
+
+    const minX_2 = parseFloat(matchJune[1]) + dx;
+    const minY_2 = parseFloat(matchJune[2]) + dy;
+    const width_2 = parseFloat(matchJune[3]);
+    const height_2 = parseFloat(matchJune[4]);
+    const maxX_2 = minX_2 + width_2;
+    const maxY_2 = minY_2 + height_2;
+
+    minX = Math.min(minX_1, minX_2);
+    maxX = Math.max(maxX_1, maxX_2);
+    minY = Math.min(minY_1, minY_2);
+    maxY = Math.max(maxY_1, maxY_2);
+  }
+
+  const padding = commonOptions.padding ?? 20;
+  const combinedWidth = (maxX - minX) + 2 * padding;
+  const combinedHeight = (maxY - minY) + 2 * padding;
+  const viewX = minX - padding;
+  const viewY = minY - padding;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
+    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May & June 2026 — Combined Multi-Month (Mixed Shapes & G-Group Integration)</text>
+    ${svgMayG}
+    ${translatedJune}
+  </svg>`;
+}
+
 // Generate static sets of mock data
 const mockData24h = generate24hMockEvents();
 const mockDataMonth = generateMonthMockEvents();
@@ -99,7 +203,7 @@ const mockDataSixMonths = generateSixMonthsMockEvents();
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' = '24h';
+let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -256,6 +360,9 @@ function updateHeatmap() {
       rowLabelInterval: 2, // Every 2 days
       title: 'Jan - Jun 2026 — 6-Month Dual Timeline (2 Measurements/Day)',
     });
+  } else if (activePreset === 'mixed') {
+    dimensionsBadge.textContent = `2 groups (May + June) × mixed shapes per row`;
+    svg = renderCombinedMultiMonth(commonOptions);
   } else if (activePreset === 'nulls') {
     const gridModel = presets.nullsExample8x8();
     dimensionsBadge.textContent = `${gridModel.cols} cols × ${gridModel.rows} rows`;
@@ -306,7 +413,7 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths';
+    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed';
 
     // Update geometry defaults depending on preset for best visual representation
     if (activePreset === '24h') {
@@ -321,6 +428,10 @@ presetTabs.forEach(tab => {
       gridSizeInput.value = '11';
       gapInput.value = '1';
       maxHeightInput.value = '25';
+    } else if (activePreset === 'mixed') {
+      gridSizeInput.value = '18';
+      gapInput.value = '2';
+      maxHeightInput.value = '35';
     } else if (activePreset === 'year') {
       gridSizeInput.value = '13';
       gapInput.value = '2';

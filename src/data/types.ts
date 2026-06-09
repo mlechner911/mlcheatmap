@@ -16,6 +16,8 @@ export type ColorSchemeType =
   | 'sunset'
   | 'grayscale';
 
+export type HeatmapShape = 'prism' | 'cylinder' | 'ribbon' | 'flatribbon';
+
 export interface CustomColorScheme {
   empty: string; // Color for zero value
   steps: string[]; // Progression of colors from low to high
@@ -50,9 +52,10 @@ export interface HeatmapOptions {
   projectionAngle?: number; // Projection angle in degrees (default: 30)
   labelPosition?: 'behind' | 'front'; // Position of axis labels relative to the grid (default: 'behind')
   zeroColor?: string;      // Custom color for zero value elements
-  shape?: 'prism' | 'cylinder' | 'ribbon' | 'flatribbon'; // Shape of the 3D bars (default: 'prism')
+  shape?: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape); // Shape of the 3D bars (default: 'prism')
   opacity?: number;        // Opacity of the 3D bars (default: 1.0)
   animated?: boolean;      // Enable staggered load animations (default: true)
   renderFlatZero?: boolean; // Render flat 2D cells for zero-value points (default: true)
   heightGrid?: HeightGridOptions;
+  wrapper?: 'svg' | 'g';   // Output wrapper element ('svg' or 'g', default: 'svg')
 }

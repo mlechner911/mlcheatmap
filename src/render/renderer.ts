@@ -1,4 +1,4 @@
-import { HeatmapDataPoint, HeatmapOptions, CustomColorScheme } from '../data/types';
+import { HeatmapDataPoint, HeatmapOptions, CustomColorScheme, HeatmapShape } from '../data/types';
 import { LIGHT_THEMES, DARK_THEMES, NEGATIVE_LIGHT_THEMES, NEGATIVE_DARK_THEMES, getColorForValue, shadeHex, rotateHue } from './color';
 import { renderPrism } from './prism';
 import { renderCylinder } from './cylinder';
@@ -47,7 +47,15 @@ export function renderHeatmap(
   const padding = options.padding ?? 20;
   const projectionAngle = options.projectionAngle ?? 30;
   const labelPosition = options.labelPosition ?? 'behind';
-  const shape = options.shape ?? 'prism';
+  const getShapeForRow = (rowIdx: number): HeatmapShape => {
+    if (typeof options.shape === 'function') {
+      return options.shape(rowIdx);
+    }
+    if (Array.isArray(options.shape)) {
+      return options.shape[rowIdx] ?? 'prism';
+    }
+    return options.shape ?? 'prism';
+  };
   const opacity = options.opacity ?? 1.0;
   const animated = options.animated ?? true;
   const renderFlatZero = options.renderFlatZero ?? true;
@@ -124,7 +132,7 @@ export function renderHeatmap(
     minValue,
     maxAbsValue,
     maxHeight,
-    shape,
+    shape: options.shape ?? 'prism',
     renderFlatZero,
     colLabels,
     rowLabels,
@@ -245,10 +253,11 @@ export function renderHeatmap(
       const origin = pt.value < 0 ? 'top' : 'bottom';
       const inlineStyle = (interactive && animated) ? ` style="animation-delay: ${delay}ms; transform-origin: ${origin};"` : '';
 
+      const rShape = getShapeForRow(r);
       let barSvg = '';
-      if (shape === 'cylinder') {
+      if (rShape === 'cylinder') {
         barSvg = renderCylinder(c, r, pt.value, h, baseColor, colors, verticesTop, verticesBottom, barSize, cosAngle, sinAngle, opacity, renderFlatZero, titleTag, inlineStyle, uniqueColors);
-      } else if (shape === 'ribbon' || shape === 'flatribbon') {
+      } else if (rShape === 'ribbon' || rShape === 'flatribbon') {
         if (h === 0) {
           if (renderFlatZero) {
             // Draw flat polygon for zero ribbon cells
@@ -263,7 +272,7 @@ export function renderHeatmap(
               </g>`;
           }
         } else {
-          barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig), shape === 'flatribbon');
+          barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig), rShape === 'flatribbon');
         }
       } else {
         barSvg = renderPrism(c, r, pt.value, h, colors, verticesTop, verticesBottom, opacity, renderFlatZero, titleTag, inlineStyle);
@@ -351,7 +360,14 @@ export function renderHeatmap(
 
   // Generate defs for cylinder gradients
   let defsSvg = '';
-  if (shape === 'cylinder' && uniqueColors.size > 0) {
+  let hasCylinder = false;
+  for (let r = 0; r < rows; r++) {
+    if (getShapeForRow(r) === 'cylinder') {
+      hasCylinder = true;
+      break;
+    }
+  }
+  if (hasCylinder && uniqueColors.size > 0) {
     const gradients: string[] = [];
     uniqueColors.forEach(color => {
       const gradId = 'cyl-grad-' + color.replace('#', '');
@@ -370,6 +386,17 @@ export function renderHeatmap(
   const titleSvg = title
     ? `<text x="${(viewX + width / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${isDark ? '#f0f6fc' : '#24292f'}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">${escapeHtml(title)}</text>`
     : '';
+
+  const wrapper = options.wrapper ?? 'svg';
+
+  if (wrapper === 'g') {
+    return `<g class="iso-heatmap-group" data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
+      ${styleTag}
+      ${defsSvg}
+      ${titleSvg}
+      ${[...backgroundElements, ...elements, ...foregroundElements].join('\n')}
+    </g>`;
+  }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${width.toFixed(2)} ${height.toFixed(2)}" width="100%" height="100%">
     ${styleTag}
