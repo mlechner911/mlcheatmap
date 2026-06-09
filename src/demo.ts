@@ -193,17 +193,127 @@ function renderCombinedMultiMonth(commonOptions: any): string {
   </svg>`;
 }
 
+function generateSixMonthsSingleMockEvents() {
+  const events = [];
+  const year = 2026;
+  const startMonth = 0; // January
+  const D_start = new Date(year, startMonth, 1);
+  const D_end = new Date(year, startMonth + 6, 0); // End of June
+
+  const current = new Date(D_start);
+  let dayIndex = 0;
+  while (current <= D_end) {
+    const angle = (dayIndex / 181) * 4 * Math.PI;
+    let val = Math.round(Math.sin(angle) * 15);
+    val += Math.floor(Math.random() * 11) - 5;
+    if (val < -20) val = -20;
+    if (val > 20) val = 20;
+
+    events.push({ date: new Date(current), value: val });
+    current.setDate(current.getDate() + 1);
+    dayIndex++;
+  }
+  return events;
+}
+
+function renderSixMonthsSplit(commonOptions: any, events: any[]): string {
+  const year = 2026;
+  const startOfWeek = 1;
+  const isDark = commonOptions.dark;
+  const titleColor = isDark ? '#f0f6fc' : '#24292f';
+
+  const months = [0, 1, 2, 3, 4, 5]; // Jan to Jun
+  const groups: string[] = [];
+  
+  let accumulatedCols = 0;
+  const spacerCols = 1;
+
+  const gridSize = commonOptions.gridSize ?? 11;
+  const gap = commonOptions.gap ?? 1;
+  const rad = ((commonOptions.projectionAngle ?? 30) * Math.PI) / 180;
+  const stepX = (gridSize + gap) * Math.cos(rad);
+  const stepY = (gridSize + gap) * Math.sin(rad);
+
+  let overallMinX = Infinity;
+  let overallMaxX = -Infinity;
+  let overallMinY = Infinity;
+  let overallMaxY = -Infinity;
+
+  for (let i = 0; i < months.length; i++) {
+    const m = months[i];
+    // Filter events for this month
+    const mEvents = events.filter(ev => {
+      const d = typeof ev.date === 'string' ? new Date(ev.date) : ev.date;
+      return d.getFullYear() === year && d.getMonth() === m;
+    });
+
+    const gridModel = presets.aggregateMonth(mEvents, { year, month: m, startOfWeek });
+    
+    // Only the first month gets row labels
+    const rowLabels = i === 0 ? gridModel.rowLabels : undefined;
+    const colLabels = gridModel.colLabels;
+
+    const mSvg = gridModel.render({
+      ...commonOptions,
+      wrapper: 'g',
+      rowLabels,
+      colLabels,
+      title: undefined, // no individual title
+    });
+
+    const colOffset = accumulatedCols + i * spacerCols;
+    const dx = colOffset * stepX;
+    const dy = colOffset * stepY;
+
+    // Wrap in translated group
+    const groupElement = `<g class="iso-month-block" data-month="${m}" transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">
+      ${mSvg}
+    </g>`;
+    groups.push(groupElement);
+
+    // Parse bounds to compute combined viewBox
+    const match = mSvg.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
+    if (match) {
+      const minX = parseFloat(match[1]) + dx;
+      const minY = parseFloat(match[2]) + dy;
+      const width = parseFloat(match[3]);
+      const height = parseFloat(match[4]);
+      const maxX = minX + width;
+      const maxY = minY + height;
+
+      if (minX < overallMinX) overallMinX = minX;
+      if (maxX > overallMaxX) overallMaxX = maxX;
+      if (minY < overallMinY) overallMinY = minY;
+      if (maxY > overallMaxY) overallMaxY = maxY;
+    }
+
+    accumulatedCols += gridModel.cols;
+  }
+
+  const padding = commonOptions.padding ?? 20;
+  const combinedWidth = (overallMaxX - overallMinX) + 2 * padding;
+  const combinedHeight = (overallMaxY - overallMinY) + 2 * padding;
+  const viewX = overallMinX - padding;
+  const viewY = overallMinY - padding;
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
+    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Jan - Jun 2026 — 6-Month Split Timeline (1 Value/Day with Monthly Spacers)</text>
+    ${groups.join('\n')}
+  </svg>`;
+}
+
 // Generate static sets of mock data
 const mockData24h = generate24hMockEvents();
 const mockDataMonth = generateMonthMockEvents();
 const mockDataYear = generateYearMockEvents();
 const mockDataSixMonths = generateSixMonthsMockEvents();
+const mockDataSixMonthsSingle = generateSixMonthsSingleMockEvents();
 
 // ==========================================
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' = '24h';
+let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -363,6 +473,9 @@ function updateHeatmap() {
   } else if (activePreset === 'mixed') {
     dimensionsBadge.textContent = `2 groups (May + June) × mixed shapes per row`;
     svg = renderCombinedMultiMonth(commonOptions);
+  } else if (activePreset === 'sixmonths-split') {
+    dimensionsBadge.textContent = `6 groups (Months) × 7 rows (days)`;
+    svg = renderSixMonthsSplit(commonOptions, mockDataSixMonthsSingle);
   } else if (activePreset === 'nulls') {
     const gridModel = presets.nullsExample8x8();
     dimensionsBadge.textContent = `${gridModel.cols} cols × ${gridModel.rows} rows`;
@@ -413,7 +526,7 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed';
+    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split';
 
     // Update geometry defaults depending on preset for best visual representation
     if (activePreset === '24h') {
@@ -425,6 +538,10 @@ presetTabs.forEach(tab => {
       gapInput.value = '3';
       maxHeightInput.value = '50';
     } else if (activePreset === 'sixmonths') {
+      gridSizeInput.value = '11';
+      gapInput.value = '1';
+      maxHeightInput.value = '25';
+    } else if (activePreset === 'sixmonths-split') {
       gridSizeInput.value = '11';
       gapInput.value = '1';
       maxHeightInput.value = '25';

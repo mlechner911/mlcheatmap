@@ -285,6 +285,13 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=30 \
   --out="$OUTPUT_DIR/multimonth_combined_groups.svg"
 
+# Example 29: 6-Month Split Calendar Timeline (Jan - Jun 2026) with visible gaps, Sunset Theme, Prism columns
+node "$SCRIPT_DIR/generator.js" \
+  --preset=sixmonths-split \
+  --color=sunset \
+  --angle=30 \
+  --out="$OUTPUT_DIR/sixmonths_split_sunset.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"

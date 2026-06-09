@@ -424,6 +424,108 @@ if (presetType === '24h') {
     console.error('Failed to write combined SVG:', err.message);
     process.exit(1);
   }
+  } else if (presetType === 'sixmonths-split') {
+  const year = 2026;
+  const startOfWeek = 1;
+
+  // Generate 6 months of daily mock events (Jan - Jun)
+  const mockSixMonthsSingle = [];
+  const D_start = new Date(year, 0, 1);
+  const D_end = new Date(year, 6, 0);
+
+  const current = new Date(D_start);
+  let dayIndex = 0;
+  while (current <= D_end) {
+    const angle = (dayIndex / 181) * 4 * Math.PI;
+    let val = Math.round(Math.sin(angle) * 15);
+    val += Math.floor(Math.random() * 11) - 5;
+    if (val < -20) val = -20;
+    if (val > 20) val = 20;
+
+    mockSixMonthsSingle.push({ date: new Date(current), value: val });
+    current.setDate(current.getDate() + 1);
+    dayIndex++;
+  }
+
+  // Render combined multi-month
+  const months = [0, 1, 2, 3, 4, 5];
+  const groups = [];
+  let accumulatedCols = 0;
+  const spacerCols = 1;
+
+  const gridSize = options.gridSize || 11;
+  const gap = options.gap || 1;
+  const rad = ((options.projectionAngle || 30) * Math.PI) / 180;
+  const stepX = (gridSize + gap) * Math.cos(rad);
+  const stepY = (gridSize + gap) * Math.sin(rad);
+
+  let overallMinX = Infinity;
+  let overallMaxX = -Infinity;
+  let overallMinY = Infinity;
+  let overallMaxY = -Infinity;
+
+  for (let i = 0; i < months.length; i++) {
+    const m = months[i];
+    const mEvents = mockSixMonthsSingle.filter(ev => ev.date.getMonth() === m);
+    const gridModel = presets.aggregateMonth(mEvents, { year, month: m, startOfWeek });
+
+    const rowLabels = i === 0 ? gridModel.rowLabels : undefined;
+    const colLabels = gridModel.colLabels;
+
+    const mSvg = gridModel.render({
+      ...options,
+      wrapper: 'g',
+      rowLabels,
+      colLabels,
+      title: undefined
+    });
+
+    const colOffset = accumulatedCols + i * spacerCols;
+    const dx = colOffset * stepX;
+    const dy = colOffset * stepY;
+
+    const groupElement = `<g class="iso-month-block" data-month="${m}" transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">
+      ${mSvg}
+    </g>`;
+    groups.push(groupElement);
+
+    const match = mSvg.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
+    if (match) {
+      const minX = parseFloat(match[1]) + dx;
+      const minY = parseFloat(match[2]) + dy;
+      const width = parseFloat(match[3]);
+      const height = parseFloat(match[4]);
+      const maxX = minX + width;
+      const maxY = minY + height;
+
+      if (minX < overallMinX) overallMinX = minX;
+      if (maxX > overallMaxX) overallMaxX = maxX;
+      if (minY < overallMinY) overallMinY = minY;
+      if (maxY > overallMaxY) overallMaxY = maxY;
+    }
+
+    accumulatedCols += gridModel.cols;
+  }
+
+  const padding = options.padding || 20;
+  const combinedWidth = (overallMaxX - overallMinX) + 2 * padding;
+  const combinedHeight = (overallMaxY - overallMinY) + 2 * padding;
+  const viewX = overallMinX - padding;
+  const viewY = overallMinY - padding;
+
+  const combinedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
+    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Jan - Jun 2026 — 6-Month Split Timeline (1 Value/Day with Monthly Spacers)</text>
+    ${groups.join('\n')}
+  </svg>`;
+
+  try {
+    fs.writeFileSync(outFile, combinedSvg);
+    console.log(`Successfully wrote combined split 6-month SVG to: ${outFile}`);
+    process.exit(0);
+  } catch (err) {
+    console.error('Failed to write combined split SVG:', err.message);
+    process.exit(1);
+  }
 } else if (presetType === 'nulls') {
   const p = presets.nullsExample8x8();
   dataPoints = p.data;
