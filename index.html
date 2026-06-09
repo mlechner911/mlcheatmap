@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isometric SVG Heatmap Demonstration</title>
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts Outfit & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #f8f9fa;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    body.dark-mode {
+      background-color: #0d1117;
+      color: #c9d1d9;
+    }
+    .card {
+      border: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 12px;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    body.dark-mode .card {
+      background-color: #161b22;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      border: 1px solid #30363d;
+    }
+    .form-label {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    body.dark-mode .form-control,
+    body.dark-mode .form-select {
+      background-color: #0d1117;
+      border-color: #30363d;
+      color: #c9d1d9;
+    }
+    body.dark-mode .form-control:focus,
+    body.dark-mode .form-select:focus {
+      background-color: #0d1117;
+      border-color: #58a6ff;
+      color: #c9d1d9;
+      box-shadow: 0 0 0 0.25rem rgba(88, 166, 255, 0.15);
+    }
+    .nav-tabs .nav-link {
+      border: none;
+      color: #57606a;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-right: 5px;
+      transition: all 0.2s ease;
+    }
+    body.dark-mode .nav-tabs .nav-link {
+      color: #8b949e;
+    }
+    .nav-tabs .nav-link.active {
+      background-color: #0d6efd;
+      color: white !important;
+    }
+    body.dark-mode .nav-tabs .nav-link.active {
+      background-color: #1f6feb;
+    }
+    #heatmap-preview-container {
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #e1e4e8;
+      overflow: auto;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    body.dark-mode #heatmap-preview-container {
+      background: #0d1117;
+      border-color: #30363d;
+    }
+    #svg-code-output {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      resize: vertical;
+      background-color: #f6f8fa;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    body.dark-mode #svg-code-output {
+      background-color: #0d1117;
+      color: #c9d1d9;
+      border-color: #30363d;
+    }
+    .header-gradient {
+      background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
+      color: white;
+      padding: 3rem 0;
+      border-bottom-left-radius: 24px;
+      border-bottom-right-radius: 24px;
+      box-shadow: 0 10px 30px rgba(13, 110, 253, 0.15);
+    }
+    body.dark-mode .header-gradient {
+      background: linear-gradient(135deg, #1f6feb 0%, #0d1117 100%);
+      border-bottom: 1px solid #30363d;
+      box-shadow: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header-gradient text-center mb-5">
+    <div class="container">
+      <span class="badge bg-light text-primary mb-2 px-3 py-2 rounded-pill font-weight-bold">TypeScript Library</span>
+      <h1 class="display-5 fw-bold">Isometric SVG Heatmap</h1>
+      <p class="lead mb-0 text-white-50">Generate premium, 3D interactive heatmaps as pure vector SVGs.</p>
+    </div>
+  </header>
+
+  <main class="container mb-5">
+    <div class="row g-4">
+      <!-- Left column: Configuration -->
+      <div class="col-lg-4 col-md-5">
+        <div class="card p-4">
+          <h3 class="h5 fw-bold mb-4">Configuration</h3>
+          
+          <div class="mb-4">
+            <label class="form-label">Preset Layout</label>
+            <ul class="nav nav-tabs border-bottom-0" id="presetTabs" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="preset-24h-tab" data-preset="24h" type="button">24h View</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="preset-month-tab" data-preset="month" type="button">Month</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="preset-year-tab" data-preset="year" type="button">Year</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="preset-nulls-tab" data-preset="nulls" type="button">8x8 Null Test</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-3">
+            <label for="colorScheme" class="form-label">Color Theme</label>
+            <select id="colorScheme" class="form-select">
+              <option value="github">GitHub Greens</option>
+              <option value="emerald" selected>Emerald Forest</option>
+              <option value="sky">Sky Blue</option>
+              <option value="coral">Coral Red</option>
+              <option value="amber">Amber Gold</option>
+              <option value="purple">Royal Purple</option>
+              <option value="sunset">Sunset Orange</option>
+              <option value="grayscale">Sleek Grayscale</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="zeroColorSelect" class="form-label">Custom 0-Value Color</label>
+            <div class="input-group">
+              <span class="input-group-text p-1">
+                <input type="color" class="form-control form-control-color border-0" id="zeroColorPicker" value="#22c55e" title="Choose color">
+              </span>
+              <select id="zeroColorSelect" class="form-select">
+                <option value="" selected>Use Theme Default</option>
+                <option value="custom">Use Color Picker</option>
+                <option value="#22c55e">Green (#22c55e)</option>
+                <option value="#1e293b">Dark Slate (#1e293b)</option>
+                <option value="#ff0000">Bright Red (#ff0000)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-check form-switch mb-4">
+            <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+            <label class="form-check-label form-label" for="darkModeSwitch">Dark Mode View</label>
+          </div>
+
+          <hr class="my-4">
+
+          <h4 class="h6 fw-bold mb-3">Geometry & Dimensions</h4>
+
+          <div class="mb-3">
+            <label for="gridSize" class="form-label d-flex justify-content-between">
+              <span>Grid Spacing:</span>
+              <span id="gridSizeVal" class="text-muted">16px</span>
+            </label>
+            <input type="range" class="form-range" id="gridSize" min="10" max="30" step="1" value="16">
+          </div>
+
+          <div class="mb-3">
+            <label for="gap" class="form-label d-flex justify-content-between">
+              <span>Bar Gap:</span>
+              <span id="gapVal" class="text-muted">2px</span>
+            </label>
+            <input type="range" class="form-range" id="gap" min="0" max="8" step="1" value="2">
+          </div>
+
+          <div class="mb-3">
+            <label for="maxHeight" class="form-label d-flex justify-content-between">
+              <span>Max Bar Height:</span>
+              <span id="maxHeightVal" class="text-muted">40px</span>
+            </label>
+            <input type="range" class="form-range" id="maxHeight" min="10" max="100" step="5" value="40">
+          </div>
+
+          <div class="mb-3">
+            <label for="projectionAngle" class="form-label d-flex justify-content-between">
+              <span>Projection Angle:</span>
+              <span id="projectionAngleVal" class="text-muted">30°</span>
+            </label>
+            <input type="range" class="form-range" id="projectionAngle" min="10" max="60" step="1" value="30">
+          </div>
+
+          <div class="mb-3">
+            <label for="labelPosition" class="form-label">Axis Labels Position</label>
+            <select id="labelPosition" class="form-select">
+              <option value="behind" selected>Behind Grid (Back)</option>
+              <option value="front">In Front of Grid (Front)</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="shapeSelect" class="form-label">Bar 3D Shape</label>
+            <select id="shapeSelect" class="form-select">
+              <option value="prism" selected>Rectangular Prism (Cube)</option>
+              <option value="cylinder">3D Cylinder Column (Säule)</option>
+              <option value="ribbon">Continuous 3D Ribbon (Band)</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="opacity" class="form-label d-flex justify-content-between">
+              <span>Bar Opacity:</span>
+              <span id="opacityVal" class="text-muted">1.0</span>
+            </label>
+            <input type="range" class="form-range" id="opacity" min="0.1" max="1.0" step="0.05" value="1.0">
+          </div>
+
+
+          <div class="form-check form-switch mb-2">
+            <input class="form-check-input" type="checkbox" id="showGridSwitch" checked>
+            <label class="form-check-label form-label" for="showGridSwitch">Show Grid Lines</label>
+          </div>
+
+          <div class="form-check form-switch mb-2">
+            <input class="form-check-input" type="checkbox" id="interactiveSwitch" checked>
+            <label class="form-check-label form-label" for="interactiveSwitch">Enable Hover / Tooltips</label>
+          </div>
+
+          <div class="form-check form-switch mb-2">
+            <input class="form-check-input" type="checkbox" id="animationSwitch" checked>
+            <label class="form-check-label form-label" for="animationSwitch">Enable CSS Load Animation</label>
+          </div>
+
+          <div class="form-check form-switch mb-2">
+            <input class="form-check-input" type="checkbox" id="flatZeroSwitch" checked>
+            <label class="form-check-label form-label" for="flatZeroSwitch">Render 2D Zero-Value Cells</label>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right column: Preview & Code -->
+      <div class="col-lg-8 col-md-7">
+        <div class="card p-4 mb-4">
+          <h3 class="h5 fw-bold mb-3 d-flex justify-content-between align-items-center">
+            <span>Heatmap Live Preview</span>
+            <span class="badge bg-secondary font-weight-normal" id="grid-dimensions-badge">24 cols × 7 rows</span>
+          </h3>
+          <div id="heatmap-preview-container">
+            <!-- SVG rendered dynamically here -->
+          </div>
+        </div>
+
+        <div class="card p-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h3 class="h5 fw-bold mb-0">Generated SVG XML</h3>
+            <button class="btn btn-outline-primary btn-sm" id="copySvgBtn">Copy SVG Code</button>
+          </div>
+          <textarea id="svg-code-output" class="form-control" rows="8" readonly></textarea>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="text-center py-4 border-top">
+    <div class="container text-muted small">
+      Designed with Antigravity AI Code Companion • 2026
+    </div>
+  </footer>
+
+  <!-- Link to TypeScript Demo script -->
+  <script type="module" src="/src/demo.ts"></script>
+</body>
+</html>

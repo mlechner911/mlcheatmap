@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Production Builds
+dist/
+dist-demo/
+
+# Generated outputs
+demo/output/
+
+# Logs & OS temporary files
+*.log
+.DS_Store
