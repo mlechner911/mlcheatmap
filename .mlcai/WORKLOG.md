@@ -52,6 +52,15 @@
     *   `src/render/renderer.ts`: Main layout coordinator.
   - Moved files and updated all module imports across the codebase and Vite configurations.
   - Successfully verified compile checks and committed the structural layout in Git.
+- **Flat Ribbon Shape Variant (`shape="flatribbon"`)**:
+  - Implemented a floating 3D band rendering mode that follows the data spline at a constant thickness ($T = \max(4, \text{maxHeight} \times 0.1)$) instead of extending down to the $y=0$ ground floor.
+  - Calculated bottom spline coordinate offsets by translating control points vertically by the thickness value.
+  - Closed front wall paths using a reverse Bezier curve along the bottom control points to construct a complete 3D tube structure.
+  - Bypassed ground-level floor plates for negative values in the flatribbon style since it is a floating shape.
+  - Updated bounds calculation in `src/render/bounds.ts` to accommodate the parallel bottom spline coordinates.
+  - Wired the new option into the Vite web demo (`index.html`, `src/demo.ts`) and generator CLI scripts.
+  - Cleaned up obsolete bounds functions (`calculateBoundsOLd`) to reduce complexity.
+  - Compiled, tested, and checked in all source updates in Git.
 
 
 
