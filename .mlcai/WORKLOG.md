@@ -61,6 +61,15 @@
   - Wired the new option into the Vite web demo (`index.html`, `src/demo.ts`) and generator CLI scripts.
   - Cleaned up obsolete bounds functions (`calculateBoundsOLd`) to reduce complexity.
   - Compiled, tested, and checked in all source updates in Git.
+- **Height Grid Scale Reference Wall (`heightGrid`)**:
+  - Added option to render a vertical reference wall stood along the back-left grid boundary (from (0,0) to (0,rows)).
+  - Supported optional solid filled backdrop (`solid: true`) with customizable colors, layering behind the 3D columns.
+  - Implemented vertical dashed grid guidelines matching floor row grid intersections, folding up the wall.
+  - Rendered horizontal value grid lines dividing the vertical range, calculated dynamically based on data bounds (including negative ranges).
+  - Placed end-aligned numerical value labels on the left of each tick scale.
+  - Updated bounds calculation in `src/render/bounds.ts` to include the wall and label layout to prevent clipping in the SVG viewBox.
+  - Wired the new option into the Vite web demo (`index.html`, `src/demo.ts`) and CLI generator (`demo/generator.js`).
+  - Compiled, generated fresh examples, and checked in all changes in Git.
 
 
 
