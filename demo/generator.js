@@ -315,6 +315,115 @@ if (presetType === '24h') {
     maxHeight: 40,
     title: 'June 2026 Monthly Tracker — Mixed Shapes per Series (Row)'
   };
+} else if (presetType === 'multimonth') {
+  const year = 2026;
+  const startOfWeek = 1;
+
+  // 1. Generate May 2026 events
+  const mockMay = [];
+  for (let d = 1; d <= 31; d++) {
+    const date = new Date(year, 4, d); // May
+    const val = d % 3 === 0 ? 15 : (d % 5 === 0 ? -10 : 5);
+    mockMay.push({ date, value: val });
+  }
+
+  // 2. Generate June 2026 events
+  const mockJune = [];
+  for (let d = 1; d <= 30; d++) {
+    const date = new Date(year, 5, d); // June
+    const val = d % 4 === 0 ? 20 : (d % 3 === 0 ? -12 : 8);
+    mockJune.push({ date, value: val });
+  }
+
+  // 3. Aggregate
+  const gridMay = presets.aggregateMonth(mockMay, { year, month: 4, startOfWeek });
+  const gridJune = presets.aggregateMonth(mockJune, { year, month: 5, startOfWeek });
+
+  // Mixed shapes per row/series: Mon=prism, Tue=cylinder, Wed=ribbon, Thu=flatribbon...
+  const shapes = ['prism', 'cylinder', 'ribbon', 'flatribbon'];
+  const shapeFn = (r) => shapes[r % shapes.length];
+
+  const groupOptions = {
+    ...options,
+    shape: shapeFn,
+    wrapper: 'g',
+  };
+
+  // Render May (with row labels, no col labels)
+  const svgMayG = gridMay.render({
+    ...groupOptions,
+    rowLabels: gridMay.rowLabels,
+    colLabels: undefined,
+  });
+
+  // Render June (no row labels, with col labels)
+  const svgJuneG = gridJune.render({
+    ...groupOptions,
+    rowLabels: undefined,
+    colLabels: gridJune.colLabels,
+  });
+
+  // Calculate translation offset for June based on May columns
+  const colsMay = gridMay.cols;
+  const rad = ((options.projectionAngle || 30) * Math.PI) / 180;
+  const dx = colsMay * ((options.gridSize || 20) + (options.gap || 3)) * Math.cos(rad);
+  const dy = colsMay * ((options.gridSize || 20) + (options.gap || 3)) * Math.sin(rad);
+
+  // Wrap June in a translated group
+  const translatedJune = `<g transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">
+    ${svgJuneG}
+  </g>`;
+
+  // Parse bounds from the rendered G elements to construct parent viewBox
+  const matchMay = svgMayG.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
+  const matchJune = svgJuneG.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
+
+  let minX = -100;
+  let maxX = 500;
+  let minY = -100;
+  let maxY = 400;
+
+  if (matchMay && matchJune) {
+    const minX_1 = parseFloat(matchMay[1]);
+    const minY_1 = parseFloat(matchMay[2]);
+    const width_1 = parseFloat(matchMay[3]);
+    const height_1 = parseFloat(matchMay[4]);
+    const maxX_1 = minX_1 + width_1;
+    const maxY_1 = minY_1 + height_1;
+
+    const minX_2 = parseFloat(matchJune[1]) + dx;
+    const minY_2 = parseFloat(matchJune[2]) + dy;
+    const width_2 = parseFloat(matchJune[3]);
+    const height_2 = parseFloat(matchJune[4]);
+    const maxX_2 = minX_2 + width_2;
+    const maxY_2 = minY_2 + height_2;
+
+    minX = Math.min(minX_1, minX_2);
+    maxX = Math.max(maxX_1, maxX_2);
+    minY = Math.min(minY_1, minY_2);
+    maxY = Math.max(maxY_1, maxY_2);
+  }
+
+  const padding = options.padding || 20;
+  const combinedWidth = (maxX - minX) + 2 * padding;
+  const combinedHeight = (maxY - minY) + 2 * padding;
+  const viewX = minX - padding;
+  const viewY = minY - padding;
+
+  const combinedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
+    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May & June 2026 — Combined Multi-Month (Mixed Shapes & G-Group Integration)</text>
+    ${svgMayG}
+    ${translatedJune}
+  </svg>`;
+
+  try {
+    fs.writeFileSync(outFile, combinedSvg);
+    console.log(`Successfully wrote combined multi-month SVG to: ${outFile}`);
+    process.exit(0);
+  } catch (err) {
+    console.error('Failed to write combined SVG:', err.message);
+    process.exit(1);
+  }
 } else if (presetType === 'nulls') {
   const p = presets.nullsExample8x8();
   dataPoints = p.data;

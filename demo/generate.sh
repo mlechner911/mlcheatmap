@@ -278,6 +278,13 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=30 \
   --out="$OUTPUT_DIR/month_mixed_shapes_per_row.svg"
 
+# Example 28: Combined Multi-Month (May & June 2026) using translated <g> groups, Sunset Theme, Mixed Shapes
+node "$SCRIPT_DIR/generator.js" \
+  --preset=multimonth \
+  --color=sunset \
+  --angle=30 \
+  --out="$OUTPUT_DIR/multimonth_combined_groups.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"
