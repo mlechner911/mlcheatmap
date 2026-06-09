@@ -43,6 +43,15 @@
   - Added a new `nullsExample8x8()` preset to `presets` in `src/presets.ts` representing an 8x8 grid with mixed positive, negative, zero, and null values.
   - Wired the "8x8 Null Test" preset layout into `index.html` and `src/demo.ts` to show visual comparisons interactively in the web demo application.
   - Documented the design decisions and updated the artifact `null_value_concept.md` with the new 8x8 visual examples.
+- **Directory Restructuring & Code Splitting**:
+  - Restructured the project by creating two specialized sub-directories: `src/data/` (for models/presets/types) and `src/render/` (for rendering engines, shape implementations, colors, labels, and geometry helpers).
+  - Split the main `src/renderer.ts` (originally containing all layout bounds, labeling, grid projection lines, and SVG packaging logic) into small, single-responsibility modules:
+    *   `src/render/geometry.ts`: Projection and intersection calculations.
+    *   `src/render/bounds.ts`: Coordinate bounding box tracking.
+    *   `src/render/labels.ts`: Multi-position row and column labels formatting.
+    *   `src/render/renderer.ts`: Main layout coordinator.
+  - Moved files and updated all module imports across the codebase and Vite configurations.
+  - Successfully verified compile checks and committed the structural layout in Git.
 
 
 
