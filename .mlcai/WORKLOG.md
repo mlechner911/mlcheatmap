@@ -76,6 +76,10 @@
   - Extracted metadata directly from the SVG elements' attributes (`data-col`, `data-row`, `data-value`), which are generated automatically by the library.
   - Kept the native `<title>` tags optional (disabling them using `interactive: false` saves significant SVG payload/size, while custom JS tools can still read the `data-` attributes).
   - Committed all additions in Git.
+- **Row Label Overlap Prevention**:
+  - Automatically forced row labels (series annotations) to display on the right-hand side of the grid (at $c = \text{cols} + 0.5$) whenever the height grid wall is active.
+  - Aligned boundary checks in `src/render/bounds.ts` to follow the right-hand placement of row labels under active height grid.
+  - Committed the alignment corrections.
 
 
 
