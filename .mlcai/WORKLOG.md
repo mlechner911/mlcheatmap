@@ -80,6 +80,11 @@
   - Automatically forced row labels (series annotations) to display on the right-hand side of the grid (at $c = \text{cols} + 0.5$) whenever the height grid wall is active.
   - Aligned boundary checks in `src/render/bounds.ts` to follow the right-hand placement of row labels under active height grid.
   - Committed the alignment corrections.
+- **3D Depth Overlay for Behind Labels**:
+  - Split rendering elements into background elements (rendered before the 3D bars) and foreground elements (rendered after the 3D bars).
+  - Placed 'behind' axis labels into the background layer, so that the 3D columns/bars naturally overlap and cover them in the 3D view.
+  - Kept 'front' axis labels in the foreground layer so they draw on top of everything.
+  - Committed the layering improvements.
 
 
 
