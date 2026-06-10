@@ -147,6 +147,10 @@ The library contains pre-configured presets and generated examples demonstrating
     *   Generates a $24 \times 24$ rolling hills landscape combining multiple sine/cosine frequencies.
     *   Features a circular "lake" of missing data (using explicit `null` coordinates) demonstrating contiguous quad-surface holes where the mesh is not closed.
     *   Optimized with `gap: 0` and smooth color interpolation (`interpolateColors: true`) for a continuous visual landscape.
-2.  **Generated SVG Files**:
+2.  **3D Mesh Calendar Month Preset (`month-mesh`)**:
+    *   Generates a standard calendar month ($5$ weeks $\times$ $7$ days) of positive-only mock data values.
+    *   Injects explicit null values on specific days (e.g. outage days) to display mesh terrain "holes" in a calendar layout.
+3.  **Generated SVG Files**:
     *   [mesh_terrain_sunset_hills.svg](file:///mnt/data2tb/mlcheatmap/demo/output/mesh_terrain_sunset_hills.svg): Mesh terrain rendered using the `sunset` scheme with a solid 3D height scale wall.
     *   [mesh_terrain_emerald_hills.svg](file:///mnt/data2tb/mlcheatmap/demo/output/mesh_terrain_emerald_hills.svg): Low-profile mesh terrain rendered using the `emerald` scheme at a $20^\circ$ tilt angle.
+    *   [month_mesh_coral_calendar.svg](file:///mnt/data2tb/mlcheatmap/demo/output/month_mesh_coral_calendar.svg): Calendar month rendered as a contiguous mesh surface using the `coral` theme, positive-only values, and explicit null outage days.

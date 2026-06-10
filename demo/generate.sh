@@ -323,6 +323,14 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=20 \
   --out="$OUTPUT_DIR/mesh_terrain_emerald_hills.svg"
 
+# Example 34: 3D Surface Mesh Calendar Month, Coral Theme, 30 degree angle, height grid wall (5 ticks)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month-mesh \
+  --color=coral \
+  --angle=30 \
+  --height-ticks=5 \
+  --out="$OUTPUT_DIR/month_mesh_coral_calendar.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"

@@ -148,6 +148,7 @@
   - Updated [examples_gallery.md](file:///home/mlc/.gemini/antigravity-cli/brain/c5d664b9-cf6f-4fa1-aebb-3042193c163a/examples_gallery.md) to showcase the new mesh terrains.
   - Documented the new shape API and math constraints in [skills.md](file:///mnt/data2tb/mlcheatmap/skills.md), [README.md](file:///mnt/data2tb/mlcheatmap/README.md), and [README.de.md](file:///mnt/data2tb/mlcheatmap/README.de.md).
   - Verified compilation of all library targets and generated assets.
+  - Added new `month-mesh` preset and Example 34 to generate a $5 \times 7$ calendar month rendered as a contiguous 3D surface mesh with the `coral` theme. The dataset features positive-only values and explicit `null` data outage days, creating clean empty holes in the calendar grid terrain. Added the tab button in `index.html` and defaults/rendering logic in `demo/demo.ts` and `demo/generator.js`. Compiled and saved `month_mesh_coral_calendar.svg` in artifacts and documented it.
 
 
 

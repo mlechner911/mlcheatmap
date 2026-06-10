@@ -299,6 +299,43 @@ if (presetType === '24h') {
     gap: 3,
     title: 'June 2026 Activity (Month Preset)'
   };
+} else if (presetType === 'month-mesh') {
+  const mockMonth = [];
+  const year = 2026;
+  const month = 5; // June
+  for (let d = 1; d <= 30; d++) {
+    const date = new Date(year, month, d);
+    const val = Math.round(12 + 10 * Math.sin((d / 30) * Math.PI * 2 - Math.PI / 2));
+    mockMonth.push({ date, value: val });
+  }
+  const gridMonth = presets.aggregateMonth(mockMonth, { year, month, startOfWeek: 1 });
+  
+  // Inject null values
+  const firstDay = new Date(year, month, 1);
+  const firstDayIndex = (firstDay.getDay() - 1 + 7) % 7;
+  const nullDays = [12, 13, 14, 24];
+  for (const d of nullDays) {
+    const cellIndex = firstDayIndex + d - 1;
+    const c = Math.floor(cellIndex / 7);
+    const r = cellIndex % 7;
+    const dateStr = `2026-06-${d.toString().padStart(2, '0')}`;
+    gridMonth.setCell(c, r, null, `${dateStr} — No Data (Outage)`);
+  }
+
+  dataPoints = gridMonth.getData();
+  options = {
+    ...options,
+    cols: gridMonth.cols,
+    rows: gridMonth.rows,
+    colLabels: gridMonth.colLabels,
+    rowLabels: gridMonth.rowLabels,
+    shape: 'mesh',
+    gridSize: 24,
+    gap: 0,
+    maxHeight: 50,
+    interpolateColors: true,
+    title: 'June 2026 — 3D Surface Mesh Calendar (With Missing Data Holes)'
+  };
 } else if (presetType === 'sixmonths') {
   const mockSixMonths = [];
   const year = 2026;

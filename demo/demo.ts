@@ -320,7 +320,7 @@ const mockDataSixMonthsSingle = generateSixMonthsSingleMockEvents();
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' = '24h';
+let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh' = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -506,6 +506,37 @@ function updateHeatmap() {
       rowLabels,
       title: 'June 2026 — Calendar Activity Tracker',
     });
+  } else if (activePreset === 'month-mesh') {
+    const mockEvents = [];
+    const year = 2026;
+    const month = 5; // June
+    for (let d = 1; d <= 30; d++) {
+      const date = new Date(year, month, d);
+      const val = Math.round(12 + 10 * Math.sin((d / 30) * Math.PI * 2 - Math.PI / 2));
+      mockEvents.push({ date, value: val });
+    }
+    const gridMonth = presets.aggregateMonth(mockEvents, { year, month, startOfWeek: 1 });
+    
+    // Inject null values
+    const firstDay = new Date(year, month, 1);
+    const firstDayIndex = (firstDay.getDay() - 1 + 7) % 7;
+    const nullDays = [12, 13, 14, 24];
+    for (const d of nullDays) {
+      const cellIndex = firstDayIndex + d - 1;
+      const c = Math.floor(cellIndex / 7);
+      const r = cellIndex % 7;
+      const dateStr = `2026-06-${d.toString().padStart(2, '0')}`;
+      gridMonth.setCell(c, r, null, `${dateStr} — No Data (Outage)`);
+    }
+
+    dimensionsBadge.textContent = `${gridMonth.cols} cols × ${gridMonth.rows} rows (Month Mesh)`;
+    svg = gridMonth.render({
+      ...commonOptions,
+      shape: 'mesh',
+      gap: 0,
+      interpolateColors: true,
+      title: 'June 2026 — 3D Surface Mesh Calendar (With Missing Data Holes)',
+    });
   } else if (activePreset === 'sixmonths') {
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregateSixMonthsDouble(mockDataSixMonths, {
       year: 2026,
@@ -615,7 +646,7 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain';
+    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh';
 
     // Update geometry defaults depending on preset for best visual representation
     if (activePreset === '24h-gradient') {
@@ -656,6 +687,12 @@ presetTabs.forEach(tab => {
       gridSizeInput.value = '18';
       gapInput.value = '0';
       maxHeightInput.value = '60';
+      interpolateColorsSwitch.checked = true;
+    } else if (activePreset === 'month-mesh') {
+      shapeSelect.value = 'mesh';
+      gridSizeInput.value = '24';
+      gapInput.value = '0';
+      maxHeightInput.value = '50';
       interpolateColorsSwitch.checked = true;
     }
 
