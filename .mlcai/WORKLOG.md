@@ -129,6 +129,11 @@
   - Replaced all code blocks in `README.md` to showcase the ES6 module syntax as the primary default and corrected import subpaths for split presets.
 - **AI Integration Guide (README)**:
   - Added an "AI-Assisted Development" section to `README.md`, guiding developers on how to prompt AI assistants (such as Claude, Cursor, or Antigravity/Agy) to read `skills.md` for context-aware code generation.
+- **German README & License Attribution (README.de.md)**:
+  - Created a full German translation `README.de.md` linking back to the English version.
+  - Linked `README.de.md` at the top of the main `README.md`.
+  - Expanded the License section in both READMEs to explicitly declare the **MIT License** and copyright attribution to **Michael Lechner**.
+
 
 
 

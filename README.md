@@ -1,5 +1,7 @@
 # MLC Isometric 3D Heatmap Library
 
+[Deutsche Version / German version](README.de.md)
+
 A lightweight, reusable TypeScript library to render high-quality, interactive 3D isometric heatmaps as pure vector SVG graphics.
 
 Unlike traditional 2D grid heatmaps, this library projects data points into isometric space using customizable 3D shapes (Prisms, Cylinders, and Continuous Ribbons), supporting load animations, diverging color schemes, negative sinking values, and transparent representation of null (missing) data.
@@ -186,6 +188,10 @@ This library includes a dedicated [skills.md](skills.md) file designed to help A
 
 ---
 
-## License
+## License & Attribution
 
-MIT License. Created by Michael Lechner 2026.
+This project is licensed under the terms of the **MIT License**.
+
+Copyright (c) 2026 Michael Lechner
+
+You are free to use, modify, and distribute this software, provided that the above copyright notice and this permission notice are included in all copies or substantial portions of the software. For more details, see the full [LICENSE](LICENSE) file.
