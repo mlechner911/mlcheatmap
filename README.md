@@ -174,6 +174,16 @@ Here are some pre-rendered SVG examples demonstrating the library's capabilities
 *   **24h Double-Row Timeline**:
     ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
 
+## AI-Assisted Development (Claude, Cursor, Antigravity)
+
+This library includes a dedicated [skills.md](skills.md) file designed to help AI coding assistants (like Claude, Cursor, ChatGPT, or Antigravity/Agy) write clean, correct integration code.
+
+### Quick Start Guide for AI Tools:
+1.  **For Antigravity (Agy) / Claude**: Prompt the agent to look up the `skills.md` file first before generating code:
+    > "Lies bitte die Datei `skills.md` im Projekt-Root-Verzeichnis, um das API-Design und die Code-Rezepte dieser Library zu verstehen."
+2.  **For Cursor**: Reference the file directly in your chat panel or composer using `@skills.md` to feed the context to the model.
+3.  **For Custom GPTs/Claude Projects**: Upload the `skills.md` file as part of the project knowledge base to get instant, highly accurate coding assistance.
+
 ---
 
 ## License

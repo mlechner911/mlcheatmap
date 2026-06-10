@@ -127,6 +127,9 @@
 - **CDN Documentation Update**:
   - Updated the main `README.md` to document browser-native ES module imports and traditional UMD global script integrations via unpkg.
   - Replaced all code blocks in `README.md` to showcase the ES6 module syntax as the primary default and corrected import subpaths for split presets.
+- **AI Integration Guide (README)**:
+  - Added an "AI-Assisted Development" section to `README.md`, guiding developers on how to prompt AI assistants (such as Claude, Cursor, or Antigravity/Agy) to read `skills.md` for context-aware code generation.
+
 
 
 
