@@ -12,3 +12,4 @@ Welcome to the documentation folder for the Isometric 3D SVG Heatmap library. Be
 6.  [6-Month Split Timeline Preset](file:///mnt/data2tb/mlcheatmap/docs/sixmonths_split_preset.md): Architecture of the single-measurement 6-month timeline with visible monthly gap spacers.
 7.  [Series-Specific Shapes & Group Wrapping](file:///mnt/data2tb/mlcheatmap/docs/series_shapes_and_wrapping.md): Details on row-specific shapes (`shapeFn`) and embedding heatmaps as `<g>` elements (`wrapper: 'g'`) translated to form composite SVG canvases.
 8.  [Smooth Color Gradients (Interpolation)](file:///mnt/data2tb/mlcheatmap/docs/gradients.md): Explanation and usage of the continuous color interpolation option (`interpolateColors`).
+9.  [3D Contiguous Surface Mesh Concept](file:///mnt/data2tb/mlcheatmap/docs/3d_mesh_concept.md): Concept, projection formulas, surface normals calculation, and lighting shading for a 3D landscape terrain representation.

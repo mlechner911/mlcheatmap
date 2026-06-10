@@ -133,6 +133,11 @@
   - Created a full German translation `README.de.md` linking back to the English version.
   - Linked `README.de.md` at the top of the main `README.md`.
   - Expanded the License section in both READMEs to explicitly declare the **MIT License** and copyright attribution to **Michael Lechner**.
+- **3D Surface Mesh Exploration (feature/3d-mesh)**:
+  - Checked out a dedicated `feature/3d-mesh` branch.
+  - Created a conceptual design document `docs/3d_mesh_concept.md` detailing the vector math, surface normals, lighting shading formulas, and back-to-front rendering loop for contiguous 3D terrain representation.
+  - Linked the concept page in `docs/README.md`.
+
 
 
 
