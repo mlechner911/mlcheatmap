@@ -35,12 +35,42 @@ By introducing **3D height and perspective**:
 
 ---
 
-## Installation
+## Installation & CDNs
 
-Install via npm:
+### 1. Via npm
+Install the library locally:
 
 ```bash
 npm install mlc-isometric-heatmap
+```
+
+### 2. Via CDN (Browser Native ES Modules)
+Load the rendering engine directly in modern browsers without build tools:
+
+```html
+<script type="module">
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
+
+  const grid = new HeatmapGrid(5, 5);
+  // ...
+</script>
+```
+
+### 3. Via CDN (Traditional UMD Globals)
+Load scripts synchronously using standard HTML `<script>` tags:
+
+```html
+<!-- Core Visuals Renderer -->
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.umd.js"></script>
+
+<!-- Optional Calendar Aggregators -->
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/presets.umd.js"></script>
+
+<script>
+  // Access elements on global window variables:
+  const grid = new MlcIsometricHeatmap.HeatmapGrid(5, 5);
+  const presets = MlcIsometricHeatmapPresets.presets;
+</script>
 ```
 
 ---
