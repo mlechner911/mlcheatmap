@@ -82,7 +82,11 @@ Load scripts synchronously using standard HTML `<script>` tags:
 The recommended approach is to use the `HeatmapGrid` class to define grid dimensions, insert data points (including `null` values), and render the SVG:
 
 ```typescript
+// ES6 Module Import (Node/Bundlers):
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
+
+// Or Browser-Native ES6 Module CDN Import:
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
 
 // Create an 8x8 coordinate grid
 const grid = new HeatmapGrid(8, 8);
@@ -98,7 +102,7 @@ grid.rowLabels = ['R0', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7'];
 
 // Render to SVG string
 const svg = grid.render({
-  shape: 'prism',          // 'prism' | 'cylinder' | 'ribbon'
+  shape: 'prism',          // 'prism' | 'cylinder' | 'ribbon' | 'flatribbon'
   colorScheme: 'emerald',  // Preset theme name or custom color scheme object
   dark: false,             // Dark mode colors
   showGrid: true,          // Draw grid cell lines
@@ -108,10 +112,16 @@ const svg = grid.render({
 
 ### 2. Using Predefined Layout Aggregators
 
-We provide several built-in presets to automatically aggregate list events into calendar structures:
+We provide built-in presets to automatically aggregate timeseries lists into calendar structures. Since these are optional, they are imported from a separate subpath:
 
 ```typescript
-import { presets, renderHeatmap } from 'mlc-isometric-heatmap';
+// ES6 Module Imports (Node/Bundlers):
+import { renderHeatmap } from 'mlc-isometric-heatmap';
+import { presets } from 'mlc-isometric-heatmap/presets';
+
+// Or Browser-Native ES6 Module CDN Imports:
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/presets.es.js';
 
 // 1. Weekly 24h Grid (24 columns x 7 days)
 const events = [

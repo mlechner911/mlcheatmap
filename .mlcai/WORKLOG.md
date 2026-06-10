@@ -126,6 +126,8 @@
   - Enables CDN users to load `dist/index.umd.js` and `dist/presets.umd.js` separately, keeping the initial footprint minimal.
 - **CDN Documentation Update**:
   - Updated the main `README.md` to document browser-native ES module imports and traditional UMD global script integrations via unpkg.
+  - Replaced all code blocks in `README.md` to showcase the ES6 module syntax as the primary default and corrected import subpaths for split presets.
+
 
 
 
