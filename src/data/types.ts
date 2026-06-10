@@ -22,7 +22,7 @@ export type ColorSchemeType =
   | 'sunset'
   | 'grayscale';
 
-export type HeatmapShape = 'prism' | 'cylinder' | 'ribbon' | 'flatribbon';
+export type HeatmapShape = 'prism' | 'cylinder' | 'ribbon' | 'flatribbon' | 'mesh';
 
 export interface CustomColorScheme {
   empty: string; // Color for zero value

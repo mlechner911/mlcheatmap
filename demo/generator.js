@@ -575,6 +575,43 @@ if (presetType === '24h') {
     console.error('Failed to write combined split SVG:', err.message);
     process.exit(1);
   }
+} else if (presetType === 'mesh-terrain') {
+  const cols = 24;
+  const rows = 24;
+  dataPoints = [];
+  for (let c = 0; c < cols; c++) {
+    for (let r = 0; r < rows; r++) {
+      const cx = c - 11.5;
+      const cy = r - 11.5;
+      const dist = Math.sqrt(cx * cx + cy * cy);
+      const val = parseFloat((Math.sin(dist / 2.5) * 8 + Math.cos(cx / 3.0) * 4).toFixed(1));
+      
+      const lakeDist = Math.sqrt(Math.pow(c - 16, 2) + Math.pow(r - 8, 2));
+      const isLake = lakeDist < 3.5;
+      
+      dataPoints.push({
+        col: c,
+        row: r,
+        value: isLake ? null : val,
+        label: `Terrain [${c}, ${r}]: ${isLake ? 'Lake (No Data)' : val.toFixed(1)}`
+      });
+    }
+  }
+  const colLabels = Array.from({ length: cols }, (_, i) => i % 4 === 0 ? `C${i}` : '');
+  const rowLabels = Array.from({ length: rows }, (_, i) => i % 4 === 0 ? `R${i}` : '');
+  options = {
+    ...options,
+    cols,
+    rows,
+    colLabels,
+    rowLabels,
+    shape: 'mesh',
+    gridSize: 18,
+    gap: 0,
+    maxHeight: 60,
+    interpolateColors: true,
+    title: '3D Contiguous Surface Mesh Terrain (Rolling Hills with Lake Hole)'
+  };
 } else if (presetType === 'nulls') {
   const p = presets.nullsExample8x8();
   dataPoints = p.data;

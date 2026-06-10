@@ -133,7 +133,20 @@ for (let r = 0; r < rows - 1; r++) {
 ---
 
 ## 5. Implementation Complexity Analysis
-
 *   **Difficulty**: **Medium** (~150-200 lines of code).
 *   **Performance**: Highly performant. Requires $(C-1)(R-1)$ polygons, which is significantly *less* DOM elements than individual prisms (which require 3 polygons per column, plus floor plates).
 *   **Dependencies**: Requires no extra external math libraries; uses standard vector cross products.
+
+---
+
+## 6. Working Examples
+
+The library contains pre-configured presets and generated examples demonstrating 3D surface mesh layouts:
+
+1.  **3D Mesh Terrain Preset (`mesh-terrain`)**:
+    *   Generates a $24 \times 24$ rolling hills landscape combining multiple sine/cosine frequencies.
+    *   Features a circular "lake" of missing data (using explicit `null` coordinates) demonstrating contiguous quad-surface holes where the mesh is not closed.
+    *   Optimized with `gap: 0` and smooth color interpolation (`interpolateColors: true`) for a continuous visual landscape.
+2.  **Generated SVG Files**:
+    *   [mesh_terrain_sunset_hills.svg](file:///mnt/data2tb/mlcheatmap/demo/output/mesh_terrain_sunset_hills.svg): Mesh terrain rendered using the `sunset` scheme with a solid 3D height scale wall.
+    *   [mesh_terrain_emerald_hills.svg](file:///mnt/data2tb/mlcheatmap/demo/output/mesh_terrain_emerald_hills.svg): Low-profile mesh terrain rendered using the `emerald` scheme at a $20^\circ$ tilt angle.

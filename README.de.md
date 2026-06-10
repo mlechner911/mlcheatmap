@@ -25,11 +25,12 @@ Durch **3D-Höhe und Perspektive**:
 ## Features
 
 *   **Reine Vektorgrafik (SVG)**: Wird direkt als SVG-String generiert. Extrem leichtgewichtig, unendlich skalierbar und einfach in HTML einzubetten oder per CSS zu stylen.
-*   **Vier 3D-Formen**:
+*   **Fünf 3D-Formen**:
     *   `prism`: Kantige, dreidimensionale Quadersäulen.
     *   `cylinder`: Runde 3D-Zylinder mit feinen Verläufen und Schattierungen.
     *   `ribbon`: Fließende, kontinuierliche 3D-Bänder (Kurven) mittels kubischer Splines.
     *   `flatribbon`: Ein schwebendes 3D-Band mit konstanter Stärke, das parallel zur Datenkurve verläuft.
+    *   `mesh`: Ein zusammenhängendes 3D-Netz (Terrain) mit Lambert-Schattierung.
 *   **Kompakte Daten-Struktur**: Klares MVC-Design mit einem eigenen Koordinaten-Datenmodell (`HeatmapGrid`) getrennt vom Rendering-Prozess.
 *   **Flexible Achsenbeschriftungen**: Automatische Zentrierung, Ausrichtung und Abstände für Zeilen-/Spaltenbeschriftungen (vorne oder hinten positionierbar).
 *   **Negative Werte (Täler & Gräben)**: Volle Unterstützung für negative Werte, die sich unter den Grid-Boden absenken, inklusive kontrastierender Divergenzfarben.
@@ -152,7 +153,7 @@ Du kannst die Darstellung anpassen, indem du diese Einstellungen an `.render()` 
 | `maxHeight` | `number` | `40` | Maximale Höhe eines 3D-Balkens (für den Höchstwert) in Pixeln. |
 | `colorScheme`| `string \| CustomColorScheme` | `'github'` | Presets: `'github'`, `'emerald'`, `'sky'`, `'coral'`, `'amber'`, `'purple'`, `'sunset'`, `'grayscale'`. |
 | `dark` | `boolean` | `false` | Aktiviert die Dark-Mode-Farbvarianten. |
-| `shape` | `'prism' \| 'cylinder' \| 'ribbon' \| 'flatribbon'` | `'prism'` | Layout-Form. |
+| `shape` | `'prism' \| 'cylinder' \| 'ribbon' \| 'flatribbon' \| 'mesh'` | `'prism'` | Layout-Form. |
 | `opacity` | `number` | `1.0` | Deckkraft der 3D-Objektkörper (0.1 bis 1.0). |
 | `showGrid` | `boolean` | `true` | Zeigt die Boden-Gitterlinien im isometrischen Raum. |
 | `zeroColor` | `string` | `undefined` | Eigene Farbe für Elemente mit dem Wert 0. |
@@ -174,7 +175,9 @@ Hier sind einige im Ordner `demo/output` vorgenerierte SVG-Grafiken, die die Fea
 *   **6-Month Split Timeline (Smooth Gradients)**:
     ![6-Month Split Timeline (Smooth Gradients)](demo/output/sixmonths_split_smooth_gradient.svg)
 *   **24h Double-Row Timeline**:
-    ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
+    *   ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
+*   **3D-Oberflächennetz-Gelände (Hügellandschaft)**:
+    *   ![3D Surface Mesh Terrain](demo/output/mesh_terrain_sunset_hills.svg)
 
 ---
 

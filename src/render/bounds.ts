@@ -89,6 +89,7 @@ export function calculateBounds(params: {
   for (let r = 0; r < rows; r++) {
     const rShape = getShapeForRow(r);
     const isRibbonShape = rShape === 'ribbon' || rShape === 'flatribbon';
+    const isMeshShape = rShape === 'mesh';
     const isFlatBand = rShape === 'flatribbon';
 
     // Zeilenweises Caching der Werte, um mehrfache getPoint-Aufrufe bei Ribbons zu verhindern
@@ -104,7 +105,11 @@ export function calculateBounds(params: {
       const h = hasMaxAbsValue ? (val * invMaxAbsValue) * maxHeight : 0;
       if (h === 0 && !renderFlatZero) continue;
 
-      if (isRibbonShape) {
+      if (isMeshShape) {
+        const px = (c * geometryConfig.gridSize - r * geometryConfig.gridSize) * geometryConfig.cosAngle;
+        const py = (c * geometryConfig.gridSize + r * geometryConfig.gridSize) * geometryConfig.sinAngle - h;
+        updateBounds(px, py);
+      } else if (isRibbonShape) {
         if (h !== 0) {
           // Nutzen des Zeilen-Caches statt erneuter getPoint-Aufrufe
           const vPrev = c > 0 ? rowValues[c - 1] : 0;

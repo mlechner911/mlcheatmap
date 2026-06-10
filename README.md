@@ -29,6 +29,8 @@ By introducing **3D height and perspective**:
     *   `prism`: Sharp 3D rectangular columns.
     *   `cylinder`: Smooth 3D cylindrical pillars with shading gradients.
     *   `ribbon`: Continuous flowing 3D bands (curves) using cubic splines, with closed side-caps.
+    *   `flatribbon`: Floating 3D ribbon bands of constant thickness.
+    *   `mesh`: 3D contiguous surface mesh (terrain) with Lambertian diffuse shading.
 *   **Model-View Separation**: Clean OOP coordinate space data model (`HeatmapGrid`) separate from the rendering engine.
 *   **Flexible Axis Labels**: Automatic centering, alignment, and spacing of row/column labels with support for front/back positioning.
 *   **Negative Values (Valleys & Trenches)**: Full projection support for negative heights sinking below the grid floor with diverging color themes.
@@ -153,7 +155,7 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 | `maxHeight` | `number` | `40` | Maximum height of a 3D bar (for max value) in pixels. |
 | `colorScheme`| `string \| CustomColorScheme` | `'github'` | Presets: `'github'`, `'emerald'`, `'sky'`, `'coral'`, `'amber'`, `'purple'`, `'sunset'`, `'grayscale'`. |
 | `dark` | `boolean` | `false` | Enable dark theme color schemes. |
-| `shape` | `'prism' \| 'cylinder' \| 'ribbon'` | `'prism'` | Visual layout style. |
+| `shape` | `'prism' \| 'cylinder' \| 'ribbon' \| 'flatribbon' \| 'mesh'` | `'prism'` | Visual layout style. |
 | `opacity` | `number` | `1.0` | Opacity value from `0.1` to `1.0`. |
 | `showGrid` | `boolean` | `true` | Show isometric grid floor layout lines. |
 | `zeroColor` | `string` | `undefined` | Override color of zero-value cells. |
@@ -174,7 +176,9 @@ Here are some pre-rendered SVG examples demonstrating the library's capabilities
 *   **6-Month Split Timeline (Smooth Gradients)**:
     ![6-Month Split Timeline (Smooth Gradients)](demo/output/sixmonths_split_smooth_gradient.svg)
 *   **24h Double-Row Timeline**:
-    ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
+    *   ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
+*   **3D Surface Mesh Terrain (Rolling Hills)**:
+    *   ![3D Surface Mesh Terrain](demo/output/mesh_terrain_sunset_hills.svg)
 
 ## AI-Assisted Development (Claude, Cursor, Antigravity)
 

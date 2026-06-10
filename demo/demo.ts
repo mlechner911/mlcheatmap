@@ -320,7 +320,7 @@ const mockDataSixMonthsSingle = generateSixMonthsSingleMockEvents();
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' = '24h';
+let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -381,7 +381,7 @@ function updateHeatmap() {
   const labelPosition = labelPositionSelect.value as 'behind' | 'front';
   const showGrid = showGridSwitch.checked;
   const interactive = interactiveSwitch.checked;
-  const shape = shapeSelect.value as 'prism' | 'cylinder' | 'ribbon' | 'flatribbon';
+  const shape = shapeSelect.value as 'prism' | 'cylinder' | 'ribbon' | 'flatribbon' | 'mesh';
   const opacity = parseFloat(opacityInput.value);
   const animated = animationSwitch.checked;
   const renderFlatZero = flatZeroSwitch.checked;
@@ -535,6 +535,43 @@ function updateHeatmap() {
       ...commonOptions,
       title: '8x8 Grid with Explicit Null Values (No Data)',
     });
+  } else if (activePreset === 'mesh-terrain') {
+    const cols = 24;
+    const rows = 24;
+    const data = [];
+    for (let c = 0; c < cols; c++) {
+      for (let r = 0; r < rows; r++) {
+        const cx = c - 11.5;
+        const cy = r - 11.5;
+        const dist = Math.sqrt(cx * cx + cy * cy);
+        const val = parseFloat((Math.sin(dist / 2.5) * 8 + Math.cos(cx / 3.0) * 4).toFixed(1));
+        
+        // Define a "lake" / null hole in the terrain
+        const lakeDist = Math.sqrt(Math.pow(c - 16, 2) + Math.pow(r - 8, 2));
+        const isLake = lakeDist < 3.5;
+        
+        data.push({
+          col: c,
+          row: r,
+          value: isLake ? null : val,
+          label: `Terrain [${c}, ${r}]: ${isLake ? 'Lake (No Data)' : val.toFixed(1)}`
+        });
+      }
+    }
+    dimensionsBadge.textContent = `${cols} cols × ${rows} rows (Terrain)`;
+    
+    const colLabels = Array.from({ length: cols }, (_, i) => i % 4 === 0 ? `C${i}` : '');
+    const rowLabels = Array.from({ length: rows }, (_, i) => i % 4 === 0 ? `R${i}` : '');
+
+    svg = renderHeatmap(data, {
+      ...commonOptions,
+      cols,
+      rows,
+      colLabels,
+      rowLabels,
+      shape: 'mesh',
+      title: '3D Contiguous Surface Mesh Terrain (Rolling Hills with Lake Hole)',
+    });
   } else {
     // Year
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregateYear(mockDataYear, {
@@ -578,7 +615,7 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient';
+    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain';
 
     // Update geometry defaults depending on preset for best visual representation
     if (activePreset === '24h-gradient') {
@@ -614,6 +651,12 @@ presetTabs.forEach(tab => {
       gridSizeInput.value = '24';
       gapInput.value = '3';
       maxHeightInput.value = '40';
+    } else if (activePreset === 'mesh-terrain') {
+      shapeSelect.value = 'mesh';
+      gridSizeInput.value = '18';
+      gapInput.value = '0';
+      maxHeightInput.value = '60';
+      interpolateColorsSwitch.checked = true;
     }
 
     updateHeatmap();

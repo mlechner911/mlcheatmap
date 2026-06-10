@@ -83,6 +83,7 @@ interface HeightGridOptions {
 2.  `'cylinder'`: Cylindrical columns with linear-gradient shading.
 3.  `'ribbon'`: A continuous 3D surface generated using cubic splines running along the center of each row.
 4.  `'flatribbon'`: A floating ribbon band of constant thickness ($T = \max(4, \text{maxHeight} \times 0.1)$) running parallel to the spline curve.
+5.  `'mesh'`: A continuous 3D surface mesh (terrain) connecting adjacent cells directly via quadrilateral polygons with Lambertian diffuse shading.
 
 ---
 
@@ -236,3 +237,10 @@ const compositeSvg = `
     To compute smooth color transitions, the theme colors are concatenated: $\mathbf{C} = [ C_{\text{empty}}, C_{\text{step 0}}, \dots, C_{\text{step } N-1} ]$.
     The float color index is determined by $i = \min(1.0, |v| / V_{\max}) \cdot N$.
     Linear RGB interpolation is then calculated between stops $C[\lfloor i \rfloor]$ and $C[\lceil i \rceil]$.
+*   **3D Surface Mesh normals**:
+    For the contiguous surface mesh (`'mesh'`), vectors on each quadrilateral patch are computed starting from corner point $\mathbf{A} = (c \cdot G_S, r \cdot G_S, h_{c,r})$:
+    $$\vec{\mathbf{U}} = \left( G_S, 0, h_{c+1,r} - h_{c,r} \right)$$
+    $$\vec{\mathbf{V}} = \left( 0, G_S, h_{c,r+1} - h_{c,r} \right)$$
+    The surface normal vector $\vec{\mathbf{N}} = \vec{\mathbf{U}} \times \vec{\mathbf{V}}$ is:
+    $$\vec{\mathbf{N}} = \left( -G_S \cdot (h_{c+1,r} - h_{c,r}), \; -G_S \cdot (h_{c,r+1} - h_{c,r}), \; G_S^2 \right)$$
+    This vector is normalized and dotted with the light vector $\hat{\mathbf{L}} = (0.408, -0.408, 0.816)$ to calculate Lambertian shading intensity.

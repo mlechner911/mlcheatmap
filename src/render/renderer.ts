@@ -9,6 +9,7 @@ import { LIGHT_THEMES, DARK_THEMES, NEGATIVE_LIGHT_THEMES, NEGATIVE_DARK_THEMES,
 import { renderPrism } from './prism';
 import { renderCylinder } from './cylinder';
 import { renderRibbon } from './ribbon';
+import { renderMeshQuad } from './mesh';
 import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
 import { calculateBounds } from './bounds';
 import { renderColLabels, renderRowLabels } from './labels';
@@ -261,7 +262,50 @@ export function renderHeatmap(
 
       const rShape = getShapeForRow(r);
       let barSvg = '';
-      if (rShape === 'cylinder') {
+      if (rShape === 'mesh') {
+        if (c < cols - 1 && r < rows - 1) {
+          const pt1 = getPoint(c + 1, r);
+          const pt2 = getPoint(c + 1, r + 1);
+          const pt3 = getPoint(c, r + 1);
+
+          if (pt1.value !== null && pt2.value !== null && pt3.value !== null) {
+            const h0 = h;
+            const h1 = maxAbsValue > 0 ? (pt1.value / maxAbsValue) * maxHeight : 0;
+            const h2 = maxAbsValue > 0 ? (pt2.value / maxAbsValue) * maxHeight : 0;
+            const h3 = maxAbsValue > 0 ? (pt3.value / maxAbsValue) * maxHeight : 0;
+
+            const avgVal = (pt.value + pt1.value + pt2.value + pt3.value) / 4;
+            const titleText = `Cols ${c}-${c+1}, Rows ${r}-${r+1}: Avg Value ${avgVal.toFixed(1)}`;
+            const titleTagMesh = interactive ? `<title>${escapeHtml(titleText)}</title>` : '';
+
+            const quadPolygon = renderMeshQuad({
+              c,
+              r,
+              h0,
+              h1,
+              h2,
+              h3,
+              v0: pt.value,
+              v1: pt1.value,
+              v2: pt2.value,
+              v3: pt3.value,
+              maxAbsValue,
+              theme,
+              negativeTheme,
+              interpolateColors: options.interpolateColors,
+              geometryConfig,
+              opacity,
+              titleTag: '',
+              inlineStyle: ''
+            });
+
+            barSvg = `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${avgVal.toFixed(2)}"${inlineStyle}>
+              ${titleTagMesh}
+              ${quadPolygon}
+            </g>`;
+          }
+        }
+      } else if (rShape === 'cylinder') {
         barSvg = renderCylinder(c, r, pt.value, h, baseColor, colors, verticesTop, verticesBottom, barSize, cosAngle, sinAngle, opacity, renderFlatZero, titleTag, inlineStyle, uniqueColors);
       } else if (rShape === 'ribbon' || rShape === 'flatribbon') {
         if (h === 0) {

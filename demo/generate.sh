@@ -308,6 +308,21 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=15 \
   --out="$OUTPUT_DIR/24h_gradient_sky_flatribbon.svg"
 
+# Example 32: 3D Mesh Terrain, Sunset Theme, Rolling hills with circular lake, 30 degree angle, height grid wall (5 ticks)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=mesh-terrain \
+  --color=sunset \
+  --angle=30 \
+  --height-ticks=5 \
+  --out="$OUTPUT_DIR/mesh_terrain_sunset_hills.svg"
+
+# Example 33: 3D Mesh Terrain, Emerald Theme, Rolling hills with circular lake, 20 degree angle, low profile
+node "$SCRIPT_DIR/generator.js" \
+  --preset=mesh-terrain \
+  --color=emerald \
+  --angle=20 \
+  --out="$OUTPUT_DIR/mesh_terrain_emerald_hills.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"

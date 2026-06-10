@@ -133,10 +133,21 @@
   - Created a full German translation `README.de.md` linking back to the English version.
   - Linked `README.de.md` at the top of the main `README.md`.
   - Expanded the License section in both READMEs to explicitly declare the **MIT License** and copyright attribution to **Michael Lechner**.
-- **3D Surface Mesh Exploration (feature/3d-mesh)**:
-  - Checked out a dedicated `feature/3d-mesh` branch.
-  - Created a conceptual design document `docs/3d_mesh_concept.md` detailing the vector math, surface normals, lighting shading formulas, and back-to-front rendering loop for contiguous 3D terrain representation.
-  - Linked the concept page in `docs/README.md`.
+- **3D Surface Mesh Implementation (`feature/3d-mesh` branch)**:
+  - Switched to the dedicated `feature/3d-mesh` branch.
+  - Created a conceptual design document [3d_mesh_concept.md](file:///mnt/data2tb/mlcheatmap/docs/3d_mesh_concept.md) detailing the vector math, surface normals, lighting shading formulas, and back-to-front rendering loop for contiguous 3D terrain representation.
+  - Added `'mesh'` to the `HeatmapShape` type in [types.ts](file:///mnt/data2tb/mlcheatmap/src/data/types.ts).
+  - Added `'mesh'` bounds calculations inside `calculateBounds` in [bounds.ts](file:///mnt/data2tb/mlcheatmap/src/render/bounds.ts) to adjust the SVG viewport.
+  - Created [mesh.ts](file:///mnt/data2tb/mlcheatmap/src/render/mesh.ts) containing vertex projection (`projectVertex`) and quad rendering (`renderMeshQuad`) featuring cross-product surface normals and dot-product Lambertian shading.
+  - Integrated quad rendering inside the main back-to-front drawing loop of [renderer.ts](file:///mnt/data2tb/mlcheatmap/src/render/renderer.ts) by invoking `renderMeshQuad` and wrapping the resulting polygon inside a `<g class="iso-bar">` group to inherit interactive hover effects.
+  - Handled `null` values by skipping rendering of any quad where one or more of its 4 corner vertices is `null`, leaving clean holes in the terrain.
+  - Added `'mesh'` option to the shape select dropdown in [index.html](file:///mnt/data2tb/mlcheatmap/index.html).
+  - Implemented a cool rolling hills landscape preset (`mesh-terrain`) combining multiple sine/cosine frequencies with a circular "lake" of missing data (`null` values) in [demo.ts](file:///mnt/data2tb/mlcheatmap/demo/demo.ts) and [generator.js](file:///mnt/data2tb/mlcheatmap/demo/generator.js).
+  - Added Example 32 and Example 33 to [generate.sh](file:///mnt/data2tb/mlcheatmap/demo/generate.sh) to generate static SVGs showcasing the mesh shape.
+  - Generated and copied `mesh_terrain_sunset_hills.svg` and `mesh_terrain_emerald_hills.svg` to the artifacts directory.
+  - Updated [examples_gallery.md](file:///home/mlc/.gemini/antigravity-cli/brain/c5d664b9-cf6f-4fa1-aebb-3042193c163a/examples_gallery.md) to showcase the new mesh terrains.
+  - Documented the new shape API and math constraints in [skills.md](file:///mnt/data2tb/mlcheatmap/skills.md), [README.md](file:///mnt/data2tb/mlcheatmap/README.md), and [README.de.md](file:///mnt/data2tb/mlcheatmap/README.de.md).
+  - Verified compilation of all library targets and generated assets.
 
 
 
