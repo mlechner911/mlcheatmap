@@ -1,3 +1,9 @@
+/**
+ * MLC Isometric Heatmap Library
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
 import { HeatmapDataPoint, HeightGridOptions, HeatmapShape } from '../data/types';
 import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
 

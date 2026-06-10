@@ -144,6 +144,9 @@
                 <button class="nav-link active" id="preset-24h-tab" data-preset="24h" type="button">24h View</button>
               </li>
               <li class="nav-item" role="presentation">
+                <button class="nav-link" id="preset-24h-gradient-tab" data-preset="24h-gradient" type="button">24h Gradient</button>
+              </li>
+              <li class="nav-item" role="presentation">
                 <button class="nav-link" id="preset-month-tab" data-preset="month" type="button">Month</button>
               </li>
               <li class="nav-item" role="presentation">
@@ -194,9 +197,14 @@
             </div>
           </div>
 
-          <div class="form-check form-switch mb-4">
+          <div class="form-check form-switch mb-2">
             <input class="form-check-input" type="checkbox" id="darkModeSwitch">
             <label class="form-check-label form-label" for="darkModeSwitch">Dark Mode View</label>
+          </div>
+
+          <div class="form-check form-switch mb-4">
+            <input class="form-check-input" type="checkbox" id="interpolateColorsSwitch">
+            <label class="form-check-label form-label" for="interpolateColorsSwitch">Smooth Color Gradients</label>
           </div>
 
           <hr class="my-4">
@@ -347,6 +355,6 @@
   </footer>
 
   <!-- Link to TypeScript Demo script -->
-  <script type="module" src="/src/demo.ts"></script>
+  <script type="module" src="/demo/demo.ts"></script>
 </body>
 </html>

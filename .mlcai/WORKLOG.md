@@ -97,6 +97,34 @@
   - Implemented a `wrapper` option (`'svg' | 'g'`, defaulting to `'svg'`) in `HeatmapOptions` to render the heatmap as a `<g>` group with local styles/defs rather than a full `<svg>` document.
   - Designed a combined multi-month preview demo in `src/demo.ts` rendering May and June 2026 as separate `<g>` elements, using translation transforms to align them side-by-side in isometric 3D space.
   - Added a "Mixed Shapes" tab to `index.html` and a corresponding generator configuration in `demo/generator.js`.
+- **Smooth Color Gradients (Interpolation)**:
+  - Added `interpolateColors` option to `HeatmapOptions` in `src/data/types.ts`.
+  - Implemented hex-based R/G/B linear color interpolation helper `interpolateColor` in `src/render/color.ts`.
+  - Updated `getColorForValue` to construct a combined stop sequence `[empty, ...steps]` and compute linear blends between bounding steps when `interpolateColors` is enabled.
+  - Plumbed the option through the SVG renderer (`src/render/renderer.ts`), CLI generator (`demo/generator.js`), and Vite browser demo controls (`index.html`, `src/demo.ts`).
+  - Added Bash Example 30 to `demo/generate.sh` to generate a 6-month split timeline showing smooth gradients in `sixmonths_split_smooth_gradient.svg`.
+  - Added a new `24h-gradient` preset to `demo/generator.js`, `src/demo.ts`, and `index.html`. It presents the same 24-hour dataset (values 0-10) using 4 separate series/rows (Flat Ribbon, Continuous Ribbon, Cylinder, and Prism) separated by empty spacer rows for clear legibility under low perspective angles.
+  - Added Bash Example 31 to `demo/generate.sh` generating `24h_gradient_sky_flatribbon.svg` to showcase a smooth color gradient across all 4 shapes simultaneously.
+  - Created a detailed documentation file `docs/gradients.md` detailing the concept, mathematical formulas, and code snippets.
+- **SVG/XML Title Well-Formedness Fix**:
+  - Replaced unescaped ampersands (`&`) in the multi-month combined SVG titles with `&amp;` in both `demo/generator.js` and `src/demo.ts`.
+  - Verified XML syntax correctness of generated SVGs using `xmllint`.
+- **License and Attribution Setup**:
+  - Created root `LICENSE` file for the MIT License, attributing the copyright to Michael Lechner.
+  - Automatically prepended copyright/license header blocks to all `.ts` source files.
+  - Embedded pre-rendered example SVGs (`24h_gradient_sky_flatribbon.svg`, `sixmonths_split_smooth_gradient.svg`, and `24h_double_row_timeline.svg`) inline inside the main project `README.md`.
+  - Created a dedicated `examples_gallery.md` artifact displaying all three SVGs inline with their detailed descriptions.
+- **Library Modularization & Separation of Demo Utilities**:
+  - Relocated the web demo source file from `src/demo.ts` to `demo/demo.ts` and updated `index.html` to load it. This excludes the demo file from TSC core compilation.
+  - Split the calendar aggregation presets out of the core library bundle by moving `src/data/presets.ts` to `src/presets.ts` and removing it from the main `src/index.ts` entry point.
+  - Created a separate configuration `vite.presets.config.ts` to compile the presets helper module to its own bundle files: `dist/presets.umd.js` and `dist/presets.es.js`.
+  - Updated `demo/generator.js` to load the presets from the split bundle.
+- **AI Coding Assistant Skills Manual (skills.md)**:
+  - Created a root-level `skills.md` file designed as a technical quick-start and API guide for LLMs/AI coding assistants. It covers types, configurations, math equations, module splitting, and advanced rendering recipes (composite canvases, mixed shapes, custom color interpolation).
+- **Subpath Package Exports Setup**:
+  - Configured `"exports"` in `package.json` to formally expose separate entry points: `mlc-isometric-heatmap` for the core library and `mlc-isometric-heatmap/presets` for the optional calendar aggregators.
+  - Enables CDN users to load `dist/index.umd.js` and `dist/presets.umd.js` separately, keeping the initial footprint minimal.
+
 
 
 

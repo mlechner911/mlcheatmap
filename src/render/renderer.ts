@@ -1,3 +1,9 @@
+/**
+ * MLC Isometric Heatmap Library
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
 import { HeatmapDataPoint, HeatmapOptions, CustomColorScheme, HeatmapShape } from '../data/types';
 import { LIGHT_THEMES, DARK_THEMES, NEGATIVE_LIGHT_THEMES, NEGATIVE_DARK_THEMES, getColorForValue, shadeHex, rotateHue } from './color';
 import { renderPrism } from './prism';
@@ -238,7 +244,7 @@ export function renderHeatmap(
       const verticesBottom = getBarVertices(c, r, h_bottom, geometryConfig);
 
       // Determine base color
-      const baseColor = pt.color ?? (pt.value === 0 && options.zeroColor ? options.zeroColor : getColorForValue(pt.value, maxAbsValue, theme, negativeTheme));
+      const baseColor = pt.color ?? (pt.value === 0 && options.zeroColor ? options.zeroColor : getColorForValue(pt.value, maxAbsValue, theme, negativeTheme, options.interpolateColors));
 
       // Shaded faces
       const colors = {

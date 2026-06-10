@@ -2,7 +2,8 @@
 
 const fs = require('fs');
 const path = require('path');
-const { renderHeatmap, presets } = require('../dist/index.umd.js');
+const { renderHeatmap } = require('../dist/index.umd.js');
+const { presets } = require('../dist/presets.umd.js');
 
 // Parse CLI Arguments
 const args = {};
@@ -25,6 +26,7 @@ const animated = args.animated !== 'false' && args.animated !== '0' && args['no-
 const renderFlatZero = args['flat-zero'] !== 'false' && args['flat-zero'] !== '0' && args['no-flat-zero'] === undefined;
 const heightTicks = args['height-ticks'] ? parseInt(args['height-ticks'], 10) : undefined;
 const heightSolid = args['height-solid'] !== 'false' && args['height-solid'] !== '0' && args['no-height-solid'] === undefined;
+const interpolateColors = args['interpolate-colors'] === true || args['interpolate-colors'] === 'true' || args['interpolate-colors'] === '1' || args.gradient === true || args.gradient === 'true' || args.gradient === '1';
 
 const outFile = args.out || 'output.svg';
 
@@ -34,7 +36,7 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-console.log(`Generating heatmap: preset=${presetType}, color=${colorScheme}, angle=${angle}°, label-pos=${labelPosition}, shape=${shape}, opacity=${opacity}, animated=${animated}, flat-zero=${renderFlatZero}, height-ticks=${heightTicks}, height-solid=${heightSolid}...`);
+console.log(`Generating heatmap: preset=${presetType}, color=${colorScheme}, angle=${angle}°, label-pos=${labelPosition}, shape=${shape}, opacity=${opacity}, animated=${animated}, flat-zero=${renderFlatZero}, height-ticks=${heightTicks}, height-solid=${heightSolid}, interpolate-colors=${interpolateColors}...`);
 
 let dataPoints = [];
 let options = {
@@ -46,6 +48,7 @@ let options = {
   opacity,
   animated,
   renderFlatZero,
+  interpolateColors,
   gridSize: 16,
   gap: 2,
   maxHeight: 40,
@@ -83,6 +86,52 @@ if (presetType === '24h') {
     rowLabels: p.rowLabels,
     rowLabelInterval: 2,
     title: 'Hourly User Load (24h Preset)'
+  };
+} else if (presetType === '24h-gradient') {
+  // 24 columns (hours), 4 rows (separated by empty rows for spacing)
+  dataPoints = [];
+  const rowsToUse = [0, 2, 4, 6];
+  for (const r of rowsToUse) {
+    const labelPrefix = r === 0 ? 'Flat Ribbon' : r === 2 ? 'Continuous Ribbon' : r === 4 ? 'Cylinder' : 'Prism (Box)';
+    for (let h = 0; h < 24; h++) {
+      const angle = (h / 24) * 2 * Math.PI - Math.PI / 2;
+      const val = parseFloat((Math.sin(angle) * 5 + 5).toFixed(1));
+      dataPoints.push({
+        col: h,
+        row: r,
+        value: val,
+        label: `${labelPrefix}, ${h.toString().padStart(2, '0')}:00 — Value: ${val}`
+      });
+    }
+  }
+  // Setup col labels for hours
+  const colLabels = Array.from({ length: 24 }, (_, i) => {
+    if (i % 6 === 0) {
+      const suffix = i >= 12 ? 'PM' : 'AM';
+      const hr = i % 12 === 0 ? 12 : i % 12;
+      return `${hr}${suffix}`;
+    }
+    return '';
+  });
+  options = {
+    ...options,
+    cols: 24,
+    rows: 7,
+    colLabels,
+    colLabelInterval: 1,
+    rowLabels: ['Flat Ribbon', '', 'Continuous Ribbon', '', 'Cylinder', '', 'Prism (Box)'],
+    rowLabelInterval: 1,
+    gridSize: 22,
+    gap: 3,
+    maxHeight: 50,
+    interpolateColors: true, // Force color interpolation/gradient on by default
+    shape: (row) => {
+      if (row === 0) return 'flatribbon';
+      if (row === 2) return 'ribbon';
+      if (row === 4) return 'cylinder';
+      return 'prism';
+    },
+    title: '24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)'
   };
 } else if (presetType === '24h-single') {
   // 24 columns (hours), 1 row (day)
@@ -411,7 +460,7 @@ if (presetType === '24h') {
   const viewY = minY - padding;
 
   const combinedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
-    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May & June 2026 — Combined Multi-Month (Mixed Shapes & G-Group Integration)</text>
+    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May &amp; June 2026 — Combined Multi-Month (Mixed Shapes &amp; G-Group Integration)</text>
     ${svgMayG}
     ${translatedJune}
   </svg>`;

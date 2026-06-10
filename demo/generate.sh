@@ -292,6 +292,22 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=30 \
   --out="$OUTPUT_DIR/sixmonths_split_sunset.svg"
 
+# Example 30: 6-Month Split Calendar Timeline (Jan - Jun 2026) with visible gaps, Sunset Theme, Prism columns, with smooth gradients enabled
+node "$SCRIPT_DIR/generator.js" \
+  --preset=sixmonths-split \
+  --color=sunset \
+  --angle=30 \
+  --interpolate-colors \
+  --out="$OUTPUT_DIR/sixmonths_split_smooth_gradient.svg"
+
+# Example 31: 24h Timeline Gradient Demo (values 0-10), Sky Theme, Flatribbon shape, showing color interpolation
+node "$SCRIPT_DIR/generator.js" \
+  --preset=24h-gradient \
+  --color=sky \
+  --shape=flatribbon \
+  --angle=15 \
+  --out="$OUTPUT_DIR/24h_gradient_sky_flatribbon.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 ls -la "$OUTPUT_DIR"

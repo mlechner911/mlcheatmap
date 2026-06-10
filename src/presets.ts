@@ -1,4 +1,10 @@
-import { HeatmapGrid } from './grid';
+/**
+ * MLC Isometric Heatmap Library - Preset Aggregators
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
+import { HeatmapGrid } from './data/grid';
 
 export interface DateEvent {
   date: Date | string;
@@ -354,7 +360,7 @@ export const presets = {
         const value = valuesMap.get(key) ?? 0;
         const r = r_day * 2 + mIndex;
         const mLabel = mIndex === 0 ? 'AM' : 'PM';
-        gridModel.setCell(c, r, value, `${dateStr} (${mLabel}) — ${value} units`);
+        gridModel.setCell(c, r, value, `${dateStr} (AM) — ${value} units`);
       }
 
       current.setDate(current.getDate() + 1);

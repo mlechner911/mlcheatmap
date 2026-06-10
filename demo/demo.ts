@@ -1,4 +1,11 @@
-import { renderHeatmap, presets, ColorSchemeType } from './index';
+/**
+ * MLC Isometric Heatmap Library
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
+import { renderHeatmap, ColorSchemeType } from '../src/index';
+import { presets } from '../src/presets';
 
 // ==========================================
 // 1. Mock Data Generators
@@ -187,7 +194,7 @@ function renderCombinedMultiMonth(commonOptions: any): string {
   const viewY = minY - padding;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
-    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May & June 2026 — Combined Multi-Month (Mixed Shapes & G-Group Integration)</text>
+    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May &amp; June 2026 — Combined Multi-Month (Mixed Shapes &amp; G-Group Integration)</text>
     ${svgMayG}
     ${translatedJune}
   </svg>`;
@@ -313,7 +320,7 @@ const mockDataSixMonthsSingle = generateSixMonthsSingleMockEvents();
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' = '24h';
+let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -331,6 +338,7 @@ const showGridSwitch = document.getElementById('showGridSwitch') as HTMLInputEle
 const interactiveSwitch = document.getElementById('interactiveSwitch') as HTMLInputElement;
 const animationSwitch = document.getElementById('animationSwitch') as HTMLInputElement;
 const flatZeroSwitch = document.getElementById('flatZeroSwitch') as HTMLInputElement;
+const interpolateColorsSwitch = document.getElementById('interpolateColorsSwitch') as HTMLInputElement;
 
 const heightGridSwitch = document.getElementById('heightGridSwitch') as HTMLInputElement;
 const heightGridOptionsGroup = document.getElementById('heightGridOptionsGroup') as HTMLDivElement;
@@ -377,6 +385,7 @@ function updateHeatmap() {
   const opacity = parseFloat(opacityInput.value);
   const animated = animationSwitch.checked;
   const renderFlatZero = flatZeroSwitch.checked;
+  const interpolateColors = interpolateColorsSwitch.checked;
 
   // Read zero color options
   let zeroColor: string | undefined = undefined;
@@ -416,6 +425,7 @@ function updateHeatmap() {
     opacity,
     animated,
     renderFlatZero,
+    interpolateColors,
     heightGrid: heightGridSwitch.checked ? {
       ticks: parseInt(heightGridTicksInput.value, 10) || 5,
       solid: heightGridSolidSwitch.checked
@@ -424,7 +434,49 @@ function updateHeatmap() {
 
   // Aggregate and render based on active preset
   let svg = '';
-  if (activePreset === '24h') {
+  if (activePreset === '24h-gradient') {
+    // Generate 24 columns (hours), 4 rows (separated by empty rows for spacing)
+    const data = [];
+    const rowsToUse = [0, 2, 4, 6];
+    for (const r of rowsToUse) {
+      const labelPrefix = r === 0 ? 'Flat Ribbon' : r === 2 ? 'Continuous Ribbon' : r === 4 ? 'Cylinder' : 'Prism (Box)';
+      for (let h = 0; h < 24; h++) {
+        const angle = (h / 24) * 2 * Math.PI - Math.PI / 2;
+        const val = parseFloat((Math.sin(angle) * 5 + 5).toFixed(1));
+        data.push({
+          col: h,
+          row: r,
+          value: val,
+          label: `${labelPrefix}, ${h.toString().padStart(2, '0')}:00 — Value: ${val}`
+        });
+      }
+    }
+    const colLabels = Array.from({ length: 24 }, (_, i) => {
+      if (i % 6 === 0) {
+        const suffix = i >= 12 ? 'PM' : 'AM';
+        const hr = i % 12 === 0 ? 12 : i % 12;
+        return `${hr}${suffix}`;
+      }
+      return '';
+    });
+    dimensionsBadge.textContent = `24 cols × 7 rows`;
+    svg = renderHeatmap(data, {
+      ...commonOptions,
+      cols: 24,
+      rows: 7,
+      colLabels,
+      colLabelInterval: 1,
+      rowLabels: ['Flat Ribbon', '', 'Continuous Ribbon', '', 'Cylinder', '', 'Prism (Box)'],
+      rowLabelInterval: 1,
+      shape: (row) => {
+        if (row === 0) return 'flatribbon';
+        if (row === 2) return 'ribbon';
+        if (row === 4) return 'cylinder';
+        return 'prism';
+      },
+      title: '24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)',
+    });
+  } else if (activePreset === '24h') {
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregate24h(mockData24h, {
       startOfWeek: 1, // Start on Monday
     });
@@ -526,10 +578,15 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split';
+    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient';
 
     // Update geometry defaults depending on preset for best visual representation
-    if (activePreset === '24h') {
+    if (activePreset === '24h-gradient') {
+      gridSizeInput.value = '22';
+      gapInput.value = '3';
+      maxHeightInput.value = '50';
+      interpolateColorsSwitch.checked = true; // Enable smooth gradients by default
+    } else if (activePreset === '24h') {
       gridSizeInput.value = '16';
       gapInput.value = '2';
       maxHeightInput.value = '40';
@@ -583,6 +640,7 @@ const controls = [
   heightGridSwitch,
   heightGridTicksInput,
   heightGridSolidSwitch,
+  interpolateColorsSwitch,
 ];
 
 controls.forEach(control => {

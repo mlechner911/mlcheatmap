@@ -1,3 +1,9 @@
+/**
+ * MLC Isometric Heatmap Library
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
 export interface HeatmapDataPoint {
   col: number;
   row: number;
@@ -58,4 +64,5 @@ export interface HeatmapOptions {
   renderFlatZero?: boolean; // Render flat 2D cells for zero-value points (default: true)
   heightGrid?: HeightGridOptions;
   wrapper?: 'svg' | 'g';   // Output wrapper element ('svg' or 'g', default: 'svg')
+  interpolateColors?: boolean; // Enable smooth color interpolation (default: false)
 }

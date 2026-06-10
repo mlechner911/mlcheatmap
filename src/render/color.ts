@@ -1,3 +1,9 @@
+/**
+ * MLC Isometric Heatmap Library
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
 import { ColorSchemeType, CustomColorScheme } from '../data/types';
 
 export function parseHex(hex: string): { r: number; g: number; b: number } {
@@ -238,6 +244,19 @@ export const NEGATIVE_DARK_THEMES: Record<ColorSchemeType, CustomColorScheme> = 
   },
 };
 
+export function interpolateColor(color1: string, color2: string, factor: number): string {
+  try {
+    const c1 = parseHex(color1);
+    const c2 = parseHex(color2);
+    const r = c1.r + (c2.r - c1.r) * factor;
+    const g = c1.g + (c2.g - c1.g) * factor;
+    const b = c1.b + (c2.b - c1.b) * factor;
+    return toHex(r, g, b);
+  } catch {
+    return color1;
+  }
+}
+
 /**
  * Gets a color for a specific value and maximum absolute value, based on themes.
  */
@@ -245,7 +264,8 @@ export function getColorForValue(
   value: number,
   maxAbsValue: number,
   theme: CustomColorScheme,
-  negativeTheme?: CustomColorScheme
+  negativeTheme?: CustomColorScheme,
+  interpolate?: boolean
 ): string {
   if (value === 0) return theme.empty;
 
@@ -254,11 +274,21 @@ export function getColorForValue(
 
   if (maxAbsValue <= 0) return targetTheme.steps[0];
 
-  // Find index in steps
-  const ratio = absVal / maxAbsValue;
-  const index = Math.min(
-    Math.floor(ratio * targetTheme.steps.length),
-    targetTheme.steps.length - 1
-  );
-  return targetTheme.steps[index];
+  const ratio = Math.min(1, absVal / maxAbsValue);
+
+  if (interpolate) {
+    const allColors = [targetTheme.empty, ...targetTheme.steps];
+    const floatIdx = ratio * (allColors.length - 1);
+    const low = Math.floor(floatIdx);
+    const high = Math.min(allColors.length - 1, Math.ceil(floatIdx));
+    const factor = floatIdx - low;
+    return interpolateColor(allColors[low], allColors[high], factor);
+  } else {
+    // Find index in steps
+    const index = Math.min(
+      Math.floor(ratio * targetTheme.steps.length),
+      targetTheme.steps.length - 1
+    );
+    return targetTheme.steps[index];
+  }
 }

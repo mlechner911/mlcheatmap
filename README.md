@@ -123,6 +123,19 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 
 ---
 
+## Visual Examples
+
+Here are some pre-rendered SVG examples demonstrating the library's capabilities:
+
+*   **24h Timeline Gradient Demo (4 Shapes & Continuous Gradient)**:
+    ![24h Timeline Gradient Demo](demo/output/24h_gradient_sky_flatribbon.svg)
+*   **6-Month Split Timeline (Smooth Gradients)**:
+    ![6-Month Split Timeline (Smooth Gradients)](demo/output/sixmonths_split_smooth_gradient.svg)
+*   **24h Double-Row Timeline**:
+    ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
+
+---
+
 ## License
 
 MIT License. Created by Michael Lechner 2026.

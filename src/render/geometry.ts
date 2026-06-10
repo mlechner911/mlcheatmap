@@ -1,3 +1,9 @@
+/**
+ * MLC Isometric Heatmap Library
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
 export interface GeometryConfig {
   gridSize: number;
   gap: number;

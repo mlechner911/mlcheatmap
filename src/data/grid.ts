@@ -1,3 +1,9 @@
+/**
+ * MLC Isometric Heatmap Library
+ * Copyright (c) 2026 Michael Lechner
+ * Licensed under the MIT License.
+ */
+
 import { HeatmapDataPoint, HeatmapOptions } from './types';
 import { renderHeatmap } from '../render/renderer';
 
