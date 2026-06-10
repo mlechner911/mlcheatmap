@@ -323,13 +323,32 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=20 \
   --out="$OUTPUT_DIR/mesh_terrain_emerald_hills.svg"
 
-# Example 34: 3D Surface Mesh Calendar Month, Coral Theme, 30 degree angle, height grid wall (5 ticks)
+# Example 34: 3D Surface Mesh Calendar Month (Standard Quad Mesh), Coral Theme, 30 degree angle, height grid wall (5 ticks)
 node "$SCRIPT_DIR/generator.js" \
   --preset=month-mesh \
   --color=coral \
   --angle=30 \
   --height-ticks=5 \
+  --triangulate=false \
   --out="$OUTPUT_DIR/month_mesh_coral_calendar.svg"
+
+# Example 35: 3D Surface Mesh Calendar Month (Triangulated Planar Shading), Coral Theme, 30 degree angle, height grid wall (5 ticks)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month-mesh \
+  --color=coral \
+  --angle=30 \
+  --height-ticks=5 \
+  --triangulate=true \
+  --out="$OUTPUT_DIR/month_mesh_coral_calendar_triangulated.svg"
+
+# Example 36: 3D Experimental SVG 2.0 MeshGradient Calendar Month, Coral Theme, 30 degree angle, height grid wall (5 ticks)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month-mesh \
+  --color=coral \
+  --angle=30 \
+  --height-ticks=5 \
+  --svg2mesh=true \
+  --out="$OUTPUT_DIR/month_mesh_coral_calendar_svg2mesh.svg"
 
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"

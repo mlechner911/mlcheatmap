@@ -340,6 +340,10 @@ const animationSwitch = document.getElementById('animationSwitch') as HTMLInputE
 const flatZeroSwitch = document.getElementById('flatZeroSwitch') as HTMLInputElement;
 const interpolateColorsSwitch = document.getElementById('interpolateColorsSwitch') as HTMLInputElement;
 
+const triangulateMeshSwitch = document.getElementById('triangulateMeshSwitch') as HTMLInputElement;
+const useSvg2MeshSwitch = document.getElementById('useSvg2MeshSwitch') as HTMLInputElement;
+const meshOptionsGroup = document.getElementById('meshOptionsGroup') as HTMLDivElement;
+
 const heightGridSwitch = document.getElementById('heightGridSwitch') as HTMLInputElement;
 const heightGridOptionsGroup = document.getElementById('heightGridOptionsGroup') as HTMLDivElement;
 const heightGridTicksInput = document.getElementById('heightGridTicks') as HTMLInputElement;
@@ -386,6 +390,10 @@ function updateHeatmap() {
   const animated = animationSwitch.checked;
   const renderFlatZero = flatZeroSwitch.checked;
   const interpolateColors = interpolateColorsSwitch.checked;
+  const triangulateMesh = triangulateMeshSwitch.checked;
+  const useSvg2Mesh = useSvg2MeshSwitch.checked;
+
+  meshOptionsGroup.style.display = (shape === 'mesh') ? 'block' : 'none';
 
   // Read zero color options
   let zeroColor: string | undefined = undefined;
@@ -426,6 +434,8 @@ function updateHeatmap() {
     animated,
     renderFlatZero,
     interpolateColors,
+    triangulateMesh,
+    useSvg2Mesh,
     heightGrid: heightGridSwitch.checked ? {
       ticks: parseInt(heightGridTicksInput.value, 10) || 5,
       solid: heightGridSolidSwitch.checked
@@ -721,6 +731,8 @@ const controls = [
   heightGridTicksInput,
   heightGridSolidSwitch,
   interpolateColorsSwitch,
+  triangulateMeshSwitch,
+  useSvg2MeshSwitch,
 ];
 
 controls.forEach(control => {

@@ -77,11 +77,52 @@ We define a virtual light source direction vector pointing from top-front-left:
 $$\vec{\mathbf{L}} = (0.3, \; -0.3, \; 0.9)$$
 $$\hat{\mathbf{L}} = \frac{\vec{\mathbf{L}}}{\|\vec{\mathbf{L}}\|}$$
 
-The light intensity factor $I \in [0, 1]$ is the dot product of the unit normal and light vector:
-$$I = \max\left(0, \; \hat{\mathbf{n}} \cdot \hat{\mathbf{L}}\right)$$
+The light intensity factor $I \in [-1, 1]$ is the dot product of the unit normal and light vector:
+$$I = \hat{\mathbf{n}} \cdot \hat{\mathbf{L}}$$
 
 We compute the shaded color by blending the base color with a shadow factor based on $I$:
-$$\text{color}_{\text{shaded}} = \text{shadeHex}\left(\text{baseColor}, \; 0.7 + 0.3 \cdot I\right)$$
+$$\text{color}_{\text{shaded}} = \text{shadeHex}\left(\text{baseColor}, \; 0.85 + 0.25 \cdot I\right)$$
+
+---
+
+## 3.1 Triangulation & Shading Options
+
+To resolve non-planar quadrilaterals and achieve different shading characteristics, the library supports three modes:
+
+### 1. Triangulation (Low-Poly Planar Shading - Default)
+Since 3D quadrilaterals can be non-planar, rendering them as single flat polygons can lead to shading skew. Triangulating each cell into two coplanar triangles guarantees perfectly planar faces and accurate shading.
+
+Each cell $(c, r)$ is divided along the diagonal into:
+*   **Triangle A**: $(c, r) \to (c+1, r) \to (c+1, r+1)$
+*   **Triangle B**: $(c, r) \to (c+1, r+1) \to (c, r+1)$
+
+Surface normals are computed independently for each triangle using its actual 3D slope:
+$$\vec{\mathbf{N}}_A = \left( -G_S \cdot (h_1 - h_0), \; -G_S \cdot (h_2 - h_1), \; G_S^2 \right)$$
+$$\vec{\mathbf{N}}_B = \left( -G_S \cdot (h_2 - h_3), \; -G_S \cdot (h_3 - h_0), \; G_S^2 \right)$$
+
+This creates a beautiful, faceted "low-poly" terrain appearance where the lighting shifts sharply at boundaries.
+
+### 2. Standard Quad Mesh
+Renders each cell as a single quadrilateral polygon. Shading is calculated using an approximated normal vector based on the average slope of the quad:
+$$\vec{\mathbf{N}} = \left( -G_S \cdot (h_1 - h_0), \; -G_S \cdot (h_3 - h_0), \; G_S^2 \right)$$
+
+This produces a more continuous, simplified grid appearance but may exhibit visual anomalies on highly warped cells.
+
+### 3. SVG 2.0 meshGradient (Experimental)
+Declares local `<meshGradient>` gradients in `<defs>` for each cell. Mesh gradients perform bilinear interpolation of colors across the patch:
+```xml
+<meshGradient id="grad-c-r" x="x0" y="y0">
+  <meshRow>
+    <meshPatch>
+      <stop path="L x1,y1" stop-color="shadedColor1" />
+      <stop path="L x2,y2" stop-color="shadedColor2" />
+      <stop path="L x3,y3" stop-color="shadedColor3" />
+      <stop path="Z" stop-color="shadedColor0" />
+    </meshPatch>
+  </meshRow>
+</meshGradient>
+```
+*Note: Because SVG 2.0 `<meshGradient>` is not widely supported in modern web browsers, this is an experimental mode.*
 
 ---
 
