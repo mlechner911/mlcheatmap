@@ -350,7 +350,53 @@ node "$SCRIPT_DIR/generator.js" \
   --svg2mesh=true \
   --out="$OUTPUT_DIR/month_mesh_coral_calendar_svg2mesh.svg"
 
+# Example 37: 24h Grid, Sky Theme, Styled Row Labels with Dark Slate Background Box
+node "$SCRIPT_DIR/generator.js" \
+  --preset=24h \
+  --color=sky \
+  --angle=30 \
+  --row-label-bg="#1e293b" \
+  --row-label-padding=6 \
+  --row-label-radius=4 \
+  --row-label-font-size=10 \
+  --out="$OUTPUT_DIR/24h_sky_styled_labels_slate_bg.svg"
+
+# Example 38: Monthly Grid, Coral Theme, Styled Row Labels with Translucent Orange Background & Monospace Font
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month \
+  --color=coral \
+  --angle=30 \
+  --row-label-bg="#ff5500" \
+  --row-label-bg-opacity=0.25 \
+  --row-label-color="#ff5500" \
+  --row-label-font-size=11 \
+  --row-label-padding=4 \
+  --row-label-radius=3 \
+  --row-label-font-family=monospace \
+  --out="$OUTPUT_DIR/month_coral_styled_labels_orange_translucent.svg"
+
+# Example 39: Yearly Contributions Grid, Sunset Theme, Row Labels Hidden (Disabled)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=year \
+  --color=sunset \
+  --angle=25 \
+  --no-row-labels \
+  --out="$OUTPUT_DIR/year_sunset_no_row_labels.svg"
+
+# Example 40: 6-Month Dual Timeline Grid, Sunset Theme, Large Text Styled Labels (Serif, custom color)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=sixmonths \
+  --color=sunset \
+  --shape=prism \
+  --angle=30 \
+  --height-ticks=5 \
+  --row-label-font-size=13 \
+  --row-label-color="#cc3535" \
+  --row-label-font-family="Georgia, serif" \
+  --out="$OUTPUT_DIR/sixmonths_sunset_styled_labels_serif.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
+
 ls -la "$OUTPUT_DIR"
 echo "========================================="

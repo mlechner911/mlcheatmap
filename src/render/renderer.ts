@@ -131,6 +131,8 @@ export function renderHeatmap(
 
   const colLabelInterval = options.colLabelInterval ?? 1;
   const rowLabelInterval = options.rowLabelInterval ?? 1;
+  const showRowLabels = options.showRowLabels ?? options.rowLabelStyle?.show ?? true;
+  const rowLabelStyle = options.rowLabelStyle;
 
   // Pre-calculate bounds
   const bounds = calculateBounds({
@@ -145,11 +147,14 @@ export function renderHeatmap(
     rowLabels,
     colLabelInterval,
     rowLabelInterval,
+    showRowLabels,
+    rowLabelStyle,
     labelPosition,
     geometryConfig,
     getPoint,
     heightGrid: options.heightGrid
   });
+
 
   const barSize = gridSize - gap;
   const offset = gap / 2;
@@ -359,7 +364,7 @@ export function renderHeatmap(
   // Render Row labels
   const hasHeightGrid = options.heightGrid && options.heightGrid.ticks > 0;
   const cLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
-  if (rowLabels) {
+  if (rowLabels && showRowLabels !== false) {
     const rowLabelsSvg = renderRowLabels({
       rowLabels,
       rowLabelInterval,
@@ -369,7 +374,8 @@ export function renderHeatmap(
       labelColor,
       labelFontSize,
       labelPosition: (labelPosition === 'front' || hasHeightGrid) ? 'front' : 'behind',
-      escapeHtml
+      escapeHtml,
+      rowLabelStyle
     });
     if (labelPosition === 'front' || hasHeightGrid) {
       foregroundElements.push(rowLabelsSvg);
@@ -377,6 +383,7 @@ export function renderHeatmap(
       backgroundElements.push(rowLabelsSvg);
     }
   }
+
 
   // Assemble final SVG
   const width = (bounds.maxX - bounds.minX) + 2 * padding;

@@ -37,6 +37,17 @@ export interface HeightGridOptions {
   labelColor?: string;
 }
 
+export interface RowLabelStyle {
+  show?: boolean;            // Easily turn off (default: true)
+  fontSize?: number;         // Font size in px (default: 9)
+  fontFamily?: string;       // Font family (default: 'sans-serif')
+  color?: string;            // Text color (default: theme labelColor)
+  backgroundColor?: string;  // Background box color (optional)
+  backgroundOpacity?: number;// Background box opacity (optional, default: 0.8)
+  padding?: number;          // Padding around the text in px (optional, default: 4 when background present)
+  borderRadius?: number;     // Border radius of the background box (optional, default: 2)
+}
+
 export interface HeatmapOptions {
   cols: number;
   rows: number;
@@ -50,6 +61,8 @@ export interface HeatmapOptions {
   colLabelInterval?: number; // Label interval for columns (default: 1)
   rowLabels?: string[];    // Row labels (e.g. Days of the week)
   rowLabelInterval?: number; // Label interval for rows (default: 1)
+  showRowLabels?: boolean; // Toggle visibility of row labels (default: true)
+  rowLabelStyle?: RowLabelStyle; // Styling options for row labels
   interactive?: boolean;   // Enable SVG hover effects & tooltips (default: true)
   dark?: boolean;          // Toggle dark mode presets (default: false)
   padding?: number;        // Padding around the drawing (default: 20)
@@ -68,3 +81,4 @@ export interface HeatmapOptions {
   triangulateMesh?: boolean; // Triangulate the 3D mesh surface into planar triangles for accurate 3D shading (default: true)
   useSvg2Mesh?: boolean;    // Experimental: use SVG 2.0 meshGradient for smooth bilinear color shading (default: false)
 }
+

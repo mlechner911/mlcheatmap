@@ -349,7 +349,20 @@ const heightGridOptionsGroup = document.getElementById('heightGridOptionsGroup')
 const heightGridTicksInput = document.getElementById('heightGridTicks') as HTMLInputElement;
 const heightGridSolidSwitch = document.getElementById('heightGridSolidSwitch') as HTMLInputElement;
 
+// Row Labels inputs
+const showRowLabelsSwitch = document.getElementById('showRowLabelsSwitch') as HTMLInputElement;
+const rowLabelStyleGroup = document.getElementById('rowLabelStyleGroup') as HTMLDivElement;
+const rowLabelFontSizeInput = document.getElementById('rowLabelFontSize') as HTMLInputElement;
+const rowLabelFontSizeVal = document.getElementById('rowLabelFontSizeVal') as HTMLSpanElement;
+const rowLabelBgSelect = document.getElementById('rowLabelBgSelect') as HTMLSelectElement;
+const rowLabelColorSelect = document.getElementById('rowLabelColorSelect') as HTMLSelectElement;
+const rowLabelPaddingInput = document.getElementById('rowLabelPadding') as HTMLInputElement;
+const rowLabelPaddingVal = document.getElementById('rowLabelPaddingVal') as HTMLSpanElement;
+const rowLabelRadiusInput = document.getElementById('rowLabelRadius') as HTMLInputElement;
+const rowLabelRadiusVal = document.getElementById('rowLabelRadiusVal') as HTMLSpanElement;
+
 const hoverInfoDefault = document.getElementById('hoverInfoDefault') as HTMLDivElement;
+
 const hoverInfoData = document.getElementById('hoverInfoData') as HTMLDivElement;
 const hoverInfoPos = document.getElementById('hoverInfoPos') as HTMLSpanElement;
 const hoverInfoValue = document.getElementById('hoverInfoValue') as HTMLSpanElement;
@@ -417,6 +430,20 @@ function updateHeatmap() {
   projectionAngleVal.textContent = `${projectionAngle}°`;
   opacityVal.textContent = opacity.toFixed(2);
 
+  // Row Label Styles
+  const showRowLabels = showRowLabelsSwitch.checked;
+  rowLabelStyleGroup.style.display = showRowLabels ? 'block' : 'none';
+
+  const rowLabelFontSize = parseInt(rowLabelFontSizeInput.value, 10);
+  const rowLabelBg = rowLabelBgSelect.value || undefined;
+  const rowLabelColor = rowLabelColorSelect.value || undefined;
+  const rowLabelPadding = parseInt(rowLabelPaddingInput.value, 10);
+  const rowLabelRadius = parseInt(rowLabelRadiusInput.value, 10);
+
+  rowLabelFontSizeVal.textContent = `${rowLabelFontSize}px`;
+  rowLabelPaddingVal.textContent = `${rowLabelPadding}px`;
+  rowLabelRadiusVal.textContent = `${rowLabelRadius}px`;
+
   // Common Heatmap Options
   const commonOptions = {
     gridSize,
@@ -436,11 +463,20 @@ function updateHeatmap() {
     interpolateColors,
     triangulateMesh,
     useSvg2Mesh,
+    showRowLabels,
+    rowLabelStyle: {
+      fontSize: rowLabelFontSize,
+      backgroundColor: rowLabelBg,
+      color: rowLabelColor,
+      padding: rowLabelPadding,
+      borderRadius: rowLabelRadius
+    },
     heightGrid: heightGridSwitch.checked ? {
       ticks: parseInt(heightGridTicksInput.value, 10) || 5,
       solid: heightGridSolidSwitch.checked
     } : undefined
   };
+
 
   // Aggregate and render based on active preset
   let svg = '';
@@ -733,12 +769,19 @@ const controls = [
   interpolateColorsSwitch,
   triangulateMeshSwitch,
   useSvg2MeshSwitch,
+  showRowLabelsSwitch,
+  rowLabelFontSizeInput,
+  rowLabelBgSelect,
+  rowLabelColorSelect,
+  rowLabelPaddingInput,
+  rowLabelRadiusInput,
 ];
 
 controls.forEach(control => {
   control.addEventListener('input', updateHeatmap);
   control.addEventListener('change', updateHeatmap);
 });
+
 
 // Event delegation for displaying details in HTML mode on hover
 previewContainer.addEventListener('mouseover', (e) => {

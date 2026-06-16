@@ -4,7 +4,7 @@
  * Licensed under the MIT License.
  */
 
-import { HeatmapDataPoint, HeightGridOptions, HeatmapShape } from '../data/types';
+import { HeatmapDataPoint, HeightGridOptions, HeatmapShape, RowLabelStyle } from '../data/types';
 import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
 
 export interface Bounds {
@@ -26,6 +26,8 @@ export function calculateBounds(params: {
   rowLabels?: string[];
   colLabelInterval: number;
   rowLabelInterval: number;
+  showRowLabels?: boolean;
+  rowLabelStyle?: RowLabelStyle;
   labelPosition: 'behind' | 'front';
   geometryConfig: GeometryConfig;
   getPoint: (col: number, row: number) => HeatmapDataPoint;
@@ -43,11 +45,14 @@ export function calculateBounds(params: {
     rowLabels,
     colLabelInterval,
     rowLabelInterval,
+    showRowLabels,
+    rowLabelStyle,
     labelPosition,
     geometryConfig,
     getPoint,
     heightGrid
   } = params;
+
 
   let minX = Infinity;
   let maxX = -Infinity;
@@ -198,20 +203,31 @@ export function calculateBounds(params: {
   }
 
   // 4. Row labels bounds
-  if (rowLabels) {
+  if (rowLabels && showRowLabels !== false) {
     const hasHeightGrid = heightGrid && heightGrid.ticks > 0;
     const cLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
     const xStart = cLabel * gSize + offset;
+    const styleFontSize = rowLabelStyle?.fontSize ?? 9;
+    const padding = rowLabelStyle?.backgroundColor ? (rowLabelStyle.padding ?? 4) : 0;
+
     for (let r = 0; r < rows; r += rowLabelInterval) {
-      if (rowLabels[r]) {
+      const label = rowLabels[r];
+      if (label) {
         const yStart = r * gSize + offset;
         const x = (xStart - yStart) * cosA;
         const y = (xStart + yStart) * sinA;
-        updateBounds(x - 30, y - 10);
-        updateBounds(x + 30, y + 10);
+
+        // Approximate width based on font size and text length, then add padding and safety margins
+        const labelWidth = label.length * styleFontSize * 0.55;
+        const horizontalMargin = Math.max(30, labelWidth + padding + 6);
+        const verticalMargin = Math.max(10, styleFontSize + padding + 3);
+
+        updateBounds(x - horizontalMargin, y - verticalMargin);
+        updateBounds(x + horizontalMargin, y + verticalMargin);
       }
     }
   }
+
 
   // 5. Height grid bounds
   if (heightGrid && heightGrid.ticks > 0) {

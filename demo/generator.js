@@ -702,6 +702,29 @@ if (args['grid-size']) options.gridSize = parseInt(args['grid-size'], 10);
 if (args.gap) options.gap = parseInt(args.gap, 10);
 if (args['max-height']) options.maxHeight = parseInt(args['max-height'], 10);
 
+// Apply row label style overrides
+const showRowLabels = args['show-row-labels'] !== undefined
+  ? (args['show-row-labels'] === 'true' || args['show-row-labels'] === '1' || args['show-row-labels'] === true)
+  : (args['no-row-labels'] !== undefined ? false : undefined);
+
+if (showRowLabels !== undefined) {
+  options.showRowLabels = showRowLabels;
+}
+
+const rowLabelStyle = {};
+if (args['row-label-font-size']) rowLabelStyle.fontSize = parseInt(args['row-label-font-size'], 10);
+if (args['row-label-font-family']) rowLabelStyle.fontFamily = args['row-label-font-family'];
+if (args['row-label-color']) rowLabelStyle.color = args['row-label-color'];
+if (args['row-label-bg']) rowLabelStyle.backgroundColor = args['row-label-bg'];
+if (args['row-label-bg-opacity']) rowLabelStyle.backgroundOpacity = parseFloat(args['row-label-bg-opacity']);
+if (args['row-label-padding']) rowLabelStyle.padding = parseInt(args['row-label-padding'], 10);
+if (args['row-label-radius']) rowLabelStyle.borderRadius = parseInt(args['row-label-radius'], 10);
+
+if (Object.keys(rowLabelStyle).length > 0) {
+  options.rowLabelStyle = rowLabelStyle;
+}
+
+
 // Render SVG and write to file
 try {
   const svg = renderHeatmap(dataPoints, options);

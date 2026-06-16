@@ -329,6 +329,61 @@
             </div>
           </div>
 
+          <hr class="my-3 text-muted">
+          <h6 class="mb-2 text-primary">Row Labels Styling</h6>
+          
+          <div class="form-check form-switch mb-2">
+            <input class="form-check-input" type="checkbox" id="showRowLabelsSwitch" checked>
+            <label class="form-check-label form-label" for="showRowLabelsSwitch">Show Row Labels</label>
+          </div>
+
+          <div id="rowLabelStyleGroup" class="mb-2 p-2 border rounded" style="display: block;">
+            <div class="mb-2">
+              <label for="rowLabelFontSize" class="form-label d-flex justify-content-between">
+                <span>Font Size:</span>
+                <span id="rowLabelFontSizeVal" class="text-muted">9px</span>
+              </label>
+              <input type="range" class="form-range" id="rowLabelFontSize" min="6" max="20" step="1" value="9">
+            </div>
+            
+            <div class="mb-2">
+              <label for="rowLabelBgSelect" class="form-label">Background Color</label>
+              <select id="rowLabelBgSelect" class="form-select form-select-sm">
+                <option value="" selected>None (Transparent)</option>
+                <option value="#2f3542">Slate Dark (#2f3542)</option>
+                <option value="#ffffff">White (#ffffff)</option>
+                <option value="#ff5500">Orange (#ff5500)</option>
+                <option value="#0e4429">Dark Green (#0e4429)</option>
+              </select>
+            </div>
+
+            <div class="mb-2">
+              <label for="rowLabelColorSelect" class="form-label">Text Color</label>
+              <select id="rowLabelColorSelect" class="form-select form-select-sm">
+                <option value="" selected>Auto (Contrasting or default)</option>
+                <option value="#ffffff">White (#ffffff)</option>
+                <option value="#1e293b">Dark Slate (#1e293b)</option>
+                <option value="#ff5500">Orange (#ff5500)</option>
+              </select>
+            </div>
+
+            <div class="mb-2">
+              <label for="rowLabelPadding" class="form-label d-flex justify-content-between">
+                <span>Padding:</span>
+                <span id="rowLabelPaddingVal" class="text-muted">4px</span>
+              </label>
+              <input type="range" class="form-range" id="rowLabelPadding" min="0" max="12" step="1" value="4">
+            </div>
+
+            <div class="mb-2">
+              <label for="rowLabelRadius" class="form-label d-flex justify-content-between">
+                <span>Border Radius:</span>
+                <span id="rowLabelRadiusVal" class="text-muted">2px</span>
+              </label>
+              <input type="range" class="form-range" id="rowLabelRadius" min="0" max="10" step="1" value="2">
+            </div>
+          </div>
+
         </div>
       </div>
 

@@ -150,9 +150,19 @@
   - Verified compilation of all library targets and generated assets.
   - Added new `month-mesh` preset and Example 34 to generate a $5 \times 7$ calendar month rendered as a contiguous 3D surface mesh with the `coral` theme. The dataset features positive-only values and explicit `null` data outage days, creating clean empty holes in the calendar grid terrain. Added the tab button in `index.html` and defaults/rendering logic in `demo/demo.ts` and `demo/generator.js`. Compiled and saved `month_mesh_coral_calendar.svg` in artifacts and documented it.
 
-
-
-
+## Session: 2026-06-16 (Row Label Styling & Visibility)
+- **Goal**: Implement row/series label visibility options and detailed custom styling parameters (background boxes, padding, colors, font-size).
+- **Steps**:
+  1. Added `RowLabelStyle` interface and `showRowLabels` / `rowLabelStyle` properties to `HeatmapOptions` in [types.ts](file:///mnt/data2tb/mlcheatmap/src/data/types.ts).
+  2. Modified bounds calculation in [bounds.ts](file:///mnt/data2tb/mlcheatmap/src/render/bounds.ts) to adjust margins dynamically according to custom font size and padding, and to bypass calculation entirely if labels are disabled.
+  3. Updated row label rendering in [labels.ts](file:///mnt/data2tb/mlcheatmap/src/render/labels.ts) to support customizable fonts/sizes and render backdrop SVG `<rect>` elements when a background color is set.
+  4. Integrated a color contrast checker (`getContrastingColor`) in [labels.ts](file:///mnt/data2tb/mlcheatmap/src/render/labels.ts) that automatically selects a contrast-safe text color (light vs. dark) if a background color is set but no foreground color is specified.
+  5. Connected parameters inside [renderer.ts](file:///mnt/data2tb/mlcheatmap/src/render/renderer.ts) to pass styling settings into the layouts and drawings.
+  6. Exposed row label visibility and style overrides in the CLI generator (`demo/generator.js`).
+  7. Added input controls for row label visibility, font size, background color, text color, padding, and border radius in the Vite web demo (`index.html`, `demo/demo.ts`) to allow live interactive testing.
+  8. Created a scratch unit test script `test_row_label_styling.js` and confirmed that all assertions (show/hide, custom styling, contrast resolution) pass successfully.
+  9. Added Example 37 to 40 in `demo/generate.sh` to compile 4 new static test SVGs showcasing row label background boxes, font sizing, custom families, and hidden layouts.
+  10. Recompiled all targets, and generated 40 static mock SVG assets without errors.
 
 
 
