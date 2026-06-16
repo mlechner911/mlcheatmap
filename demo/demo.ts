@@ -652,7 +652,7 @@ function updateHeatmap() {
       rows,
       colLabels: Array.from({ length: cols }, (_, i) => `W${i + 1}`),
       rowLabels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-      title: 'June 2026 Workweek Activity (Mon-Fri Preset)',
+      title: 'June 2026 Workweek Activity\n(Mon-Fri Preset)',
     });
   } else if (activePreset === 'sixmonths') {
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregateSixMonthsDouble(mockDataSixMonths, {

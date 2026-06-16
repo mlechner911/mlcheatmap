@@ -387,9 +387,13 @@ export function renderHeatmap(
 
   // Assemble final SVG
   const width = (bounds.maxX - bounds.minX) + 2 * padding;
-  const height = (bounds.maxY - bounds.minY) + 2 * padding;
+  const titleLines = wrapTitle(title, width);
+  const titleLineHeight = 18; // 18px line height
+  const titleOffset = titleLines.length > 1 ? (titleLines.length - 1) * titleLineHeight : 0;
+
+  const height = (bounds.maxY - bounds.minY) + 2 * padding + titleOffset;
   const viewX = bounds.minX - padding;
-  const viewY = bounds.minY - padding;
+  const viewY = bounds.minY - padding - titleOffset;
 
   const styleTag = interactive
     ? `<style>
@@ -442,9 +446,14 @@ export function renderHeatmap(
     defsSvg = `<defs>${gradients.join('\n')}</defs>`;
   }
 
-  const titleSvg = title
-    ? `<text x="${(viewX + width / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${isDark ? '#f0f6fc' : '#24292f'}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">${escapeHtml(title)}</text>`
-    : '';
+  // Generate multi-line title
+  let titleSvg = '';
+  if (titleLines.length > 0) {
+    titleSvg = titleLines.map((line, idx) => {
+      const y = viewY + padding * 0.7 + idx * titleLineHeight;
+      return `<text x="${(viewX + width / 2).toFixed(2)}" y="${y.toFixed(2)}" fill="${isDark ? '#f0f6fc' : '#24292f'}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">${escapeHtml(line)}</text>`;
+    }).join('\n');
+  }
 
   const wrapper = options.wrapper ?? 'svg';
 
@@ -458,11 +467,12 @@ export function renderHeatmap(
       <rdf:Description rdf:about="">
         <dc:creator>${escapeHtml(creatorName)}</dc:creator>
         <dc:date>${currentDate}</dc:date>
-        <dc:title>${title ? escapeHtml(title) : 'MLC Isometric 3D Heatmap'}</dc:title>
+        <dc:title>${title ? escapeHtml(title.replace(/\n/g, ' — ')) : 'MLC Isometric 3D Heatmap'}</dc:title>
         <dc:description>${escapeHtml(customCommentText)}</dc:description>
       </rdf:Description>
     </rdf:RDF>
   </metadata>`;
+
 
 
   if (wrapper === 'g') {
@@ -496,4 +506,40 @@ function escapeHtml(str: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
+}
+
+function wrapText(text: string, maxCharsPerLine: number): string[] {
+  const words = text.split(/\s+/).filter(w => w.length > 0);
+  const lines: string[] = [];
+  let currentLine = '';
+
+  for (const word of words) {
+    if (!currentLine) {
+      currentLine = word;
+    } else if ((currentLine + ' ' + word).length <= maxCharsPerLine) {
+      currentLine += ' ' + word;
+    } else {
+      lines.push(currentLine);
+      currentLine = word;
+    }
+  }
+  if (currentLine) {
+    lines.push(currentLine);
+  }
+  return lines;
+}
+
+function wrapTitle(title: string | undefined, svgWidth: number): string[] {
+  if (!title) return [];
+  const manualLines = title.split('\n');
+  const maxChars = Math.max(25, Math.floor((svgWidth - 60) / 8.5));
+  const finalLines: string[] = [];
+  for (const line of manualLines) {
+    if (line.length > maxChars) {
+      finalLines.push(...wrapText(line, maxChars));
+    } else {
+      finalLines.push(line);
+    }
+  }
+  return finalLines;
 }

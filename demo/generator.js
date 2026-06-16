@@ -741,7 +741,7 @@ if (presetType === '24h') {
     gridSize: 22,
     gap: 3,
     maxHeight: 40,
-    title: 'June 2026 Workweek Activity (Mon-Fri Preset)'
+    title: 'June 2026 Workweek Activity\n(Mon-Fri Preset)'
   };
 } else {
   // Year
