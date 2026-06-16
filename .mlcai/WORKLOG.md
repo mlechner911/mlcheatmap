@@ -150,8 +150,8 @@
   - Verified compilation of all library targets and generated assets.
   - Added new `month-mesh` preset and Example 34 to generate a $5 \times 7$ calendar month rendered as a contiguous 3D surface mesh with the `coral` theme. The dataset features positive-only values and explicit `null` data outage days, creating clean empty holes in the calendar grid terrain. Added the tab button in `index.html` and defaults/rendering logic in `demo/demo.ts` and `demo/generator.js`. Compiled and saved `month_mesh_coral_calendar.svg` in artifacts and documented it.
 
-## Session: 2026-06-16 (Row Label Styling & Visibility)
-- **Goal**: Implement row/series label visibility options and detailed custom styling parameters (background boxes, padding, colors, font-size).
+## Session: 2026-06-16 (Row Label Styling & Visibility, Multi-Line Title Wrapping)
+- **Goal**: Implement row/series label visibility options, custom styling parameters, and support multi-line titles (both manual newlines and automatic width-based wrapping) to prevent titles from overflowing SVGs.
 - **Steps**:
   1. Added `RowLabelStyle` interface and `showRowLabels` / `rowLabelStyle` properties to `HeatmapOptions` in [types.ts](file:///mnt/data2tb/mlcheatmap/src/data/types.ts).
   2. Modified bounds calculation in [bounds.ts](file:///mnt/data2tb/mlcheatmap/src/render/bounds.ts) to adjust margins dynamically according to custom font size and padding, and to bypass calculation entirely if labels are disabled.
@@ -163,7 +163,9 @@
   8. Created a scratch unit test script `test_row_label_styling.js` and confirmed that all assertions (show/hide, custom styling, contrast resolution) pass successfully.
   9. Added Example 37 to 40 in `demo/generate.sh` to compile 4 new static test SVGs showcasing row label background boxes, font sizing, custom families, and hidden layouts.
   10. Prepended a generator XML comment (`<!-- Generated with MLC Isometric 3D Heatmap Library -->`) and added an RDF/Dublin Core `<metadata>` block (crediting creator Michael Lechner and date) to the rendered SVGs for clear library attribution and metadata preservation.
-  11. Recompiled all targets, and generated 40 static mock SVG assets without errors.
+  11. Implemented automatic text wrapping (`wrapTitle` / `wrapText` helpers) inside [renderer.ts](file:///mnt/data2tb/mlcheatmap/src/render/renderer.ts) that wraps long titles into multiple lines if the title's length exceeds the maximum characters supported by the computed SVG width.
+  12. Dynamically shifted `viewY` upwards and increased the SVG `height` to prevent multi-line titles from overlapping the isometric elements.
+  13. Recompiled all targets, generated 41 static mock SVG assets without errors, and pushed all updates to git main.
 
 
 
