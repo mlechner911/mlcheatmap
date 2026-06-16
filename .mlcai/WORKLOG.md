@@ -170,6 +170,7 @@
   15. Implemented `shading?: boolean` option for mesh terrain rendering to optionally toggle 3D Lambertian light shading, returning flat base colors mapping directly to data values. Integrated the control checkbox in `index.html` / `demo/demo.ts`, parsed the `--shading` option in the CLI generator `demo/generator.js`, and bumped the library package version to `v1.2.0`.
   16. Removed `demo/output/` from `.gitignore` to track all generated SVG examples, committed them, and bumped the version to `v1.2.1` to publish package updates cleanly.
   17. Updated unpkg.com CDN links from `@1.0.0` to `@1.2.1` in `README.md` and `README.de.md` to ensure they point to the correct release.
+  18. Added 3 new mesh examples (shading-disabled hills terrain as Example 43, 24h sky load mesh as Example 44, and yearly contributions mesh as Example 45) to `demo/generate.sh` and pushed all pre-rendered graphics to GitHub.
 
 
 
