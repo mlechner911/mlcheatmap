@@ -80,5 +80,8 @@ export interface HeatmapOptions {
   interpolateColors?: boolean; // Enable smooth color interpolation (default: false)
   triangulateMesh?: boolean; // Triangulate the 3D mesh surface into planar triangles for accurate 3D shading (default: true)
   useSvg2Mesh?: boolean;    // Experimental: use SVG 2.0 meshGradient for smooth bilinear color shading (default: false)
+  creator?: string;        // Creator name for SVG RDF metadata (default: 'Michael Lechner')
+  generatorComment?: string;// Custom XML generator comment string (default: 'Generated with MLC Isometric 3D Heatmap Library')
 }
+
 

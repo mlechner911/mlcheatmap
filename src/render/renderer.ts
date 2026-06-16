@@ -448,19 +448,22 @@ export function renderHeatmap(
 
   const wrapper = options.wrapper ?? 'svg';
 
-  const generatorComment = '<!-- Generated with MLC Isometric 3D Heatmap Library -->';
+  const customCommentText = options.generatorComment ?? 'Generated with MLC Isometric 3D Heatmap Library';
+  const generatorComment = `<!-- ${customCommentText} -->`;
+  const creatorName = options.creator ?? 'Michael Lechner';
   const currentDate = new Date().toISOString().split('T')[0];
   const metadataSvg = `<metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
-        <dc:creator>Michael Lechner</dc:creator>
+        <dc:creator>${escapeHtml(creatorName)}</dc:creator>
         <dc:date>${currentDate}</dc:date>
         <dc:title>${title ? escapeHtml(title) : 'MLC Isometric 3D Heatmap'}</dc:title>
-        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+        <dc:description>${escapeHtml(customCommentText)}</dc:description>
       </rdf:Description>
     </rdf:RDF>
   </metadata>`;
+
 
   if (wrapper === 'g') {
     return `<g class="iso-heatmap-group" data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
