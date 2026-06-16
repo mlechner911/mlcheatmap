@@ -166,6 +166,7 @@
   11. Implemented automatic text wrapping (`wrapTitle` / `wrapText` helpers) inside [renderer.ts](file:///mnt/data2tb/mlcheatmap/src/render/renderer.ts) that wraps long titles into multiple lines if the title's length exceeds the maximum characters supported by the computed SVG width.
   12. Dynamically shifted `viewY` upwards and increased the SVG `height` to prevent multi-line titles from overlapping the isometric elements.
   13. Recompiled all targets, generated 41 static mock SVG assets without errors, and pushed all updates to git main.
+  14. Added a 3D Surface Mesh version of the workweek calendar month data as Example 42 in `demo/generate.sh` and successfully validated its generation.
 
 
 
