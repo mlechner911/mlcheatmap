@@ -164,6 +164,26 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 | `animated` | `boolean` | `true` | Enables staggered load animations. |
 | `projectionAngle` | `number` | `30` | Isometric camera angle in degrees (10° to 60°). |
 | `labelPosition` | `'behind' \| 'front'` | `'behind'` | Render row/column labels at the back or front of the grid projection. |
+| `showRowLabels` | `boolean` | `true` | Toggle visibility of row labels (series annotations). |
+| `rowLabelStyle` | `RowLabelStyle` | `undefined` | Custom styling for row labels (colors, background boxes, padding, radius, font size). |
+
+---
+
+### RowLabelStyle Settings
+
+Customize row/series text annotations using the `rowLabelStyle` configuration object:
+
+*   `show?: boolean`: Easy toggle to turn off label rendering (default: `true`).
+*   `fontSize?: number`: Font size in pixels (default: `9`).
+*   `fontFamily?: string`: Custom font family (default: `'sans-serif'`).
+*   `color?: string`: Font text color (default: theme default label color).
+*   `backgroundColor?: string`: Backdrop rect fill color (e.g., `'#2f3542'`). If specified without a text `color`, a high-contrast text color is automatically resolved (white on dark backgrounds, slate on light backgrounds).
+*   `backgroundOpacity?: number`: Opacity of the background box (default: `0.8`).
+*   `padding?: number`: Padding spacing inside the background box (default: `4`).
+*   `borderRadius?: number`: Corner border radius of the background box (default: `2`).
+
+---
+
 
 ---
 

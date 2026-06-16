@@ -163,6 +163,23 @@ Du kannst die Darstellung anpassen, indem du diese Einstellungen an `.render()` 
 | `projectionAngle` | `number` | `30` | Isometrischer Kamerawinkel in Grad (10° bis 60°). |
 | `labelPosition` | `'behind' \| 'front'` | `'behind'` | Position der Achsenbeschriftungen relativ zum Gitter. |
 | `interpolateColors` | `boolean` | `false` | Aktiviert stufenlose Farbverläufe (RGB-Farbinterpolation). |
+| `showRowLabels` | `boolean` | `true` | Schaltet die Sichtbarkeit der Zeilenbeschriftungen (Serientext) ein/aus. |
+| `rowLabelStyle` | `RowLabelStyle` | `undefined` | Eigene Formatierung der Zeilenbeschriftungen (Hintergrund-Boxen, Farben, Padding, Schriftgröße). |
+
+---
+
+### RowLabelStyle-Optionen (Zeilenbeschriftungen)
+
+Passe die Zeilentexte mithilfe des Konfigurationsobjekts `rowLabelStyle` detailliert an:
+
+*   `show?: boolean`: Einfaches Ein- und Ausschalten der Beschriftung (Standard: `true`).
+*   `fontSize?: number`: Schriftgröße in Pixeln (Standard: `9`).
+*   `fontFamily?: string`: Schriftart (Standard: `'sans-serif'`).
+*   `color?: string`: Textfarbe (Standard: Standardbeschriftungsfarbe des gewählten Themas).
+*   `backgroundColor?: string`: Hintergrundfarbe des Textfelds (z. B. `'#2f3542'`). Wird dies ohne Textfarbe angegeben, wird automatisch eine kontraststarke Textfarbe (weiß auf dunklem Hintergrund, anthrazit auf hellem Hintergrund) ermittelt.
+*   `backgroundOpacity?: number`: Deckkraft der Hintergrundbox (Standard: `0.8`).
+*   `padding?: number`: Innenabstand (Padding) der Hintergrundbox in Pixeln (Standard: `4`).
+*   `borderRadius?: number`: Eckenradius (Border Radius) der Hintergrundbox in Pixeln (Standard: `2`).
 
 ---
 
