@@ -448,8 +448,11 @@ export function renderHeatmap(
 
   const wrapper = options.wrapper ?? 'svg';
 
+  const generatorComment = '<!-- Generated with MLC Isometric 3D Heatmap Library -->';
+
   if (wrapper === 'g') {
     return `<g class="iso-heatmap-group" data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
+      ${generatorComment}
       ${styleTag}
       ${defsSvg}
       ${titleSvg}
@@ -458,6 +461,7 @@ export function renderHeatmap(
   }
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${width.toFixed(2)} ${height.toFixed(2)}" width="100%" height="100%">
+    ${generatorComment}
     ${styleTag}
     ${defsSvg}
     ${titleSvg}
@@ -465,6 +469,7 @@ export function renderHeatmap(
       ${[...backgroundElements, ...elements, ...foregroundElements].join('\n')}
     </g>
   </svg>`;
+
 }
 
 function escapeHtml(str: string): string {
