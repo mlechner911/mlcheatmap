@@ -320,7 +320,7 @@ const mockDataSixMonthsSingle = generateSixMonthsSingleMockEvents();
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh' = '24h';
+let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh' | 'month-workweek' = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -583,6 +583,77 @@ function updateHeatmap() {
       interpolateColors: true,
       title: 'June 2026 — 3D Surface Mesh Calendar (With Missing Data Holes)',
     });
+  } else if (activePreset === 'month-workweek') {
+    // Mon-Fri Workweek Calendar Month (e.g., June 2026)
+    const year = 2026;
+    const month = 5; // June (0-indexed: Jan=0, June=5)
+    const firstDay = new Date(year, month, 1);
+    const lastDay = new Date(year, month + 1, 0);
+    const totalDays = lastDay.getDate();
+
+    // Find Monday of the first week (could be in the previous month)
+    const firstDayDay = firstDay.getDay(); // 0-6 (Sun-Sat)
+    const daysToMonday = (firstDayDay === 0 ? -6 : 1 - firstDayDay);
+    const startMonday = new Date(year, month, 1 + daysToMonday);
+
+    // Map values for each day of the month
+    const valuesMap = new Map<number, number>();
+    for (let d = 1; d <= totalDays; d++) {
+      let val = 0;
+      const date = new Date(year, month, d);
+      const day = date.getDay();
+      if (day !== 0 && day !== 6) { // Weekdays only
+        if (day === 2 || day === 4) val = (d % 3 === 0 ? 18 : 12);
+        else val = (d % 2 === 0 ? 6 : 0);
+      }
+      valuesMap.set(d, val);
+    }
+
+    // Count columns (weeks)
+    const lastDayDay = lastDay.getDay();
+    const lastDaysToMonday = (lastDayDay === 0 ? -6 : 1 - lastDayDay);
+    const lastMonday = new Date(year, month, totalDays + lastDaysToMonday);
+    const diffTime = lastMonday.getTime() - startMonday.getTime();
+    const cols = Math.round(diffTime / (1000 * 60 * 60 * 24 * 7)) + 1;
+    const rows = 5; // Mon-Fri
+
+    const data: any[] = [];
+    // Initialize all grid cells with 0 values (for padding days)
+    for (let c = 0; c < cols; c++) {
+      for (let r = 0; r < rows; r++) {
+        const cellDate = new Date(startMonday);
+        cellDate.setDate(startMonday.getDate() + c * 7 + r);
+        
+        let val = 0;
+        let label = '';
+        if (cellDate.getFullYear() === year && cellDate.getMonth() === month) {
+          val = valuesMap.get(cellDate.getDate()) ?? 0;
+          const dateStr = `${year}-${(month + 1).toString().padStart(2, '0')}-${cellDate.getDate().toString().padStart(2, '0')}`;
+          label = `${dateStr} — ${val} units`;
+        } else {
+          // Outside the month (padding days) - set value to 0
+          const dateStr = `${cellDate.getFullYear()}-${(cellDate.getMonth() + 1).toString().padStart(2, '0')}-${cellDate.getDate().toString().padStart(2, '0')}`;
+          label = `${dateStr} (Outside Month) — 0 units`;
+        }
+
+        data.push({
+          col: c,
+          row: r,
+          value: val,
+          label: label
+        });
+      }
+    }
+
+    dimensionsBadge.textContent = `${cols} cols (weeks) × ${rows} rows (Mon-Fri)`;
+    svg = renderHeatmap(data, {
+      ...commonOptions,
+      cols,
+      rows,
+      colLabels: Array.from({ length: cols }, (_, i) => `W${i + 1}`),
+      rowLabels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+      title: 'June 2026 Workweek Activity (Mon-Fri Preset)',
+    });
   } else if (activePreset === 'sixmonths') {
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregateSixMonthsDouble(mockDataSixMonths, {
       year: 2026,
@@ -692,7 +763,7 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh';
+    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh' | 'month-workweek';
 
     // Update geometry defaults depending on preset for best visual representation
     if (activePreset === '24h-gradient') {
@@ -740,6 +811,12 @@ presetTabs.forEach(tab => {
       gapInput.value = '0';
       maxHeightInput.value = '50';
       interpolateColorsSwitch.checked = true;
+    } else if (activePreset === 'month-workweek') {
+      shapeSelect.value = 'prism';
+      gridSizeInput.value = '24';
+      gapInput.value = '3';
+      maxHeightInput.value = '40';
+      interpolateColorsSwitch.checked = false;
     }
 
     updateHeatmap();

@@ -395,6 +395,14 @@ node "$SCRIPT_DIR/generator.js" \
   --row-label-font-family="Georgia, serif" \
   --out="$OUTPUT_DIR/sixmonths_sunset_styled_labels_serif.svg"
 
+# Example 41: Workweek Calendar Month (Mon-Fri rows), Coral Theme, 30 degree angle, no negative values, 0 values for padding
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month-workweek \
+  --color=coral \
+  --angle=30 \
+  --out="$OUTPUT_DIR/month_workweek_mon_fri_calendar.svg"
+
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 
