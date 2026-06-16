@@ -193,7 +193,7 @@ Hier sind einige im Ordner `demo/output` vorgenerierte SVG-Grafiken, die die Fea
     ![6-Month Split Timeline (Smooth Gradients)](demo/output/sixmonths_split_smooth_gradient.svg)
 *   **24h Double-Row Timeline**:
     *   ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
-*   **3D-Oberflächennetz-Gelände (Hügellandschaft)**:
+*   **3D-Oberflächennetz-Gelände (Hügellandschaft)** *(Hinweis: Das kreisförmige Loch in der Mitte stellt einen "See" aus absichtlichen `null`-Werten dar und demonstriert, wie fehlende Messdaten/Ausfälle als saubere Lücke im Gelände gerendert werden)*:
     *   ![3D Surface Mesh Terrain](demo/output/mesh_terrain_sunset_hills.svg)
 
 ---

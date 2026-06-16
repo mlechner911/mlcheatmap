@@ -61,10 +61,24 @@ interface HeatmapOptions {
   opacity?: number;                  // Elements opacity: 0.1 to 1.0 (default: 1.0)
   animated?: boolean;                // Staggered coordinate-delay transition (default: true)
   renderFlatZero?: boolean;          // Render a flat 2D tile for zero values (default: true)
+  showRowLabels?: boolean;           // Toggle visibility of row labels (default: true)
+  rowLabelStyle?: RowLabelStyle;     // Custom styling for row labels
   heightGrid?: HeightGridOptions;    // Reference vertical wall ticks (default: none)
   wrapper?: 'svg' | 'g';             // Output element tag: 'svg' or 'g' (default: 'svg')
   interpolateColors?: boolean;       // Enable continuous color gradients (default: false)
 }
+
+interface RowLabelStyle {
+  show?: boolean;            // Easily turn off (default: true)
+  fontSize?: number;         // Font size in px (default: 9)
+  fontFamily?: string;       // Font family (default: 'sans-serif')
+  color?: string;            // Text color (default: theme label color)
+  backgroundColor?: string;  // Background box color (optional)
+  backgroundOpacity?: number;// Background box opacity (optional, default: 0.8)
+  padding?: number;          // Padding around text in px (optional, default: 4 when background present)
+  borderRadius?: number;     // Border radius of background box (optional, default: 2)
+}
+
 ```
 
 ### `HeightGridOptions`
@@ -84,6 +98,8 @@ interface HeightGridOptions {
 3.  `'ribbon'`: A continuous 3D surface generated using cubic splines running along the center of each row.
 4.  `'flatribbon'`: A floating ribbon band of constant thickness ($T = \max(4, \text{maxHeight} \times 0.1)$) running parallel to the spline curve.
 5.  `'mesh'`: A continuous 3D surface mesh (terrain) connecting adjacent cells directly via quadrilateral polygons with Lambertian diffuse shading.
+    *Note on Null-Values*: If one or more of the 4 corner vertices of a grid quadrilateral cell has a `null` value (missing data), that quadrilateral is skipped and not drawn. This creates clean, empty "holes" in the 3D terrain representation (e.g. representing data outages or circular lake structures) rather than rendering them as zeroes.
+
 
 ---
 

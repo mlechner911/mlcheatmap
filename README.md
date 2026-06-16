@@ -197,7 +197,7 @@ Here are some pre-rendered SVG examples demonstrating the library's capabilities
     ![6-Month Split Timeline (Smooth Gradients)](demo/output/sixmonths_split_smooth_gradient.svg)
 *   **24h Double-Row Timeline**:
     *   ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
-*   **3D Surface Mesh Terrain (Rolling Hills)**:
+*   **3D Surface Mesh Terrain (Rolling Hills)** *(Note: The circular hole in the center represents a "lake" of intentional `null` values, demonstrating how missing/outage data is rendered as a clean gap in the terrain)*:
     *   ![3D Surface Mesh Terrain](demo/output/mesh_terrain_sunset_hills.svg)
 
 ## AI-Assisted Development (Claude, Cursor, Antigravity)
