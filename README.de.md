@@ -53,7 +53,7 @@ Lade die Rendering-Engine direkt in modernen Browsern ohne Build-Tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -65,10 +65,10 @@ Lade die Skripte synchron über Standard-HTML-Tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.umd.js"></script>
 
 <script>
   // Zugriff über globale Variablen:
@@ -89,7 +89,7 @@ Instanziere ein Grid, fülle Koordinaten aus und rendere das SVG:
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Oder Browser-native ES6-Modul-CDN-Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
 
 // 1. Grid erstellen (8 Spalten x 8 Zeilen)
 const grid = new HeatmapGrid(8, 8);
@@ -122,8 +122,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Oder Browser-native ES6-Modul-CDN-Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.es.js';
 
 // 1. Wöchentliche 24h-Ansicht (24 Spalten für Stunden x 7 Zeilen für Tage)
 const events = [

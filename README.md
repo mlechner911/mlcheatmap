@@ -53,7 +53,7 @@ Load the rendering engine directly in modern browsers without build tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -65,10 +65,10 @@ Load scripts synchronously using standard HTML `<script>` tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.umd.js"></script>
 
 <script>
   // Access elements on global window variables:
@@ -90,7 +90,7 @@ The recommended approach is to use the `HeatmapGrid` class to define grid dimens
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Or Browser-Native ES6 Module CDN Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
 
 // Create an 8x8 coordinate grid
 const grid = new HeatmapGrid(8, 8);
@@ -124,8 +124,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Or Browser-Native ES6 Module CDN Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.0.0/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.es.js';
 
 // 1. Weekly 24h Grid (24 columns x 7 days)
 const events = [
