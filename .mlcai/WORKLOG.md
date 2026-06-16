@@ -162,8 +162,9 @@
   7. Added input controls for row label visibility, font size, background color, text color, padding, and border radius in the Vite web demo (`index.html`, `demo/demo.ts`) to allow live interactive testing.
   8. Created a scratch unit test script `test_row_label_styling.js` and confirmed that all assertions (show/hide, custom styling, contrast resolution) pass successfully.
   9. Added Example 37 to 40 in `demo/generate.sh` to compile 4 new static test SVGs showcasing row label background boxes, font sizing, custom families, and hidden layouts.
-  10. Prepended a generator XML comment (`<!-- Generated with MLC Isometric 3D Heatmap Library -->`) to all rendered SVG/group assets for clear library attribution.
+  10. Prepended a generator XML comment (`<!-- Generated with MLC Isometric 3D Heatmap Library -->`) and added an RDF/Dublin Core `<metadata>` block (crediting creator Michael Lechner and date) to the rendered SVGs for clear library attribution and metadata preservation.
   11. Recompiled all targets, and generated 40 static mock SVG assets without errors.
+
 
 
 
