@@ -411,6 +411,34 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=30 \
   --out="$OUTPUT_DIR/month_workweek_mon_fri_calendar_mesh.svg"
 
+# Example 43: Mesh Terrain, Sunset Theme, 3D Contiguous Surface Mesh with Shading Disabled (Flat Colors)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=mesh-terrain \
+  --shape=mesh \
+  --gap=0 \
+  --color=sunset \
+  --angle=30 \
+  --no-shading \
+  --out="$OUTPUT_DIR/mesh_terrain_sunset_hills_flat.svg"
+
+# Example 44: 24h Grid Hourly Load, Sky Theme, rendered as a 3D Surface Mesh (shading = true)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=24h \
+  --shape=mesh \
+  --gap=0 \
+  --color=sky \
+  --angle=30 \
+  --out="$OUTPUT_DIR/24h_sky_mesh_terrain.svg"
+
+# Example 45: Yearly Contributions Grid, Emerald Theme, rendered as a 3D Surface Mesh (shading = true)
+node "$SCRIPT_DIR/generator.js" \
+  --preset=year \
+  --shape=mesh \
+  --gap=0 \
+  --color=emerald \
+  --angle=25 \
+  --out="$OUTPUT_DIR/year_emerald_mesh_terrain.svg"
+
 
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
