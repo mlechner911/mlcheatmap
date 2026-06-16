@@ -5,8 +5,7 @@ node_modules/
 dist/
 dist-demo/
 
-# Generated outputs
-demo/output/
+
 
 # Logs & OS temporary files
 *.log

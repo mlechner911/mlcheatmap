@@ -1,0 +1,420 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-220.43 -62.90 430.87 308.07" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>8x8 Grid with Explicit Null Values (No Data)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    
+    <text x="-5.00" y="-48.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">8x8 Grid with Explicit Null Values (No</text>
+<text x="-5.00" y="-30.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Data)</text>
+    <g>
+      <g class="iso-col-labels"><text x="24.94" y="-12.90" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C0</text>
+<text x="45.73" y="-0.90" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C1</text>
+<text x="66.51" y="11.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C2</text>
+<text x="87.30" y="23.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C3</text>
+<text x="108.08" y="35.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C4</text>
+<text x="128.86" y="47.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C5</text>
+<text x="149.65" y="59.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C6</text>
+<text x="170.43" y="71.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C7</text></g>
+<g class="iso-row-labels"><text x="-30.94" y="-10.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R0</text>
+<text x="-51.73" y="1.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R1</text>
+<text x="-72.51" y="13.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R2</text>
+<text x="-93.30" y="25.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R3</text>
+<text x="-114.08" y="37.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R4</text>
+<text x="-134.86" y="49.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R5</text>
+<text x="-155.65" y="61.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R6</text>
+<text x="-176.43" y="73.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R7</text></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -20.78,12.00 0.00,24.00 20.78,12.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
+        <title>Col 0, Row 0: 0</title>
+        <polygon points="0.00,1.50 -18.19,12.00 0.00,22.50 18.19,12.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-20.78,12.00 -41.57,24.00 -20.78,36.00 0.00,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="5" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>Col 0, Row 1: 5</title>
+      <polygon class="iso-face-left" points="-38.97,10.67 -20.78,21.17 -20.78,34.50 -38.97,24.00" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-20.78,21.17 -2.60,10.67 -2.60,24.00 -20.78,34.50" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-20.78,0.17 -38.97,10.67 -20.78,21.17 -2.60,10.67" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-41.57,24.00 -62.35,36.00 -41.57,48.00 -20.78,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="-5" style="animation-delay: 30ms; transform-origin: top;">
+      <title>Col 0, Row 2: -5</title>
+      <polygon class="iso-face-left" points="-59.76,36.00 -41.57,46.50 -41.57,59.83 -59.76,49.33" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-41.57,46.50 -23.38,36.00 -23.38,49.33 -41.57,59.83" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-41.57,25.50 -59.76,36.00 -41.57,46.50 -23.38,36.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,36.00 -83.14,48.00 -62.35,60.00 -41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 0, Row 3: 0</title>
+        <polygon points="-62.35,37.50 -80.54,48.00 -62.35,58.50 -44.17,48.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-83.14,48.00 -103.92,60.00 -83.14,72.00 -62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 0, Row 4: 5</title>
+      <polygon class="iso-face-left" points="-101.32,46.67 -83.14,57.17 -83.14,70.50 -101.32,60.00" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-83.14,57.17 -64.95,46.67 -64.95,60.00 -83.14,70.50" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-83.14,36.17 -101.32,46.67 -83.14,57.17 -64.95,46.67" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-103.92,60.00 -124.71,72.00 -103.92,84.00 -83.14,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="5" data-value="2" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Col 0, Row 5: 2</title>
+      <polygon class="iso-face-left" points="-122.11,66.67 -103.92,77.17 -103.92,82.50 -122.11,72.00" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-103.92,77.17 -85.74,66.67 -85.74,72.00 -103.92,82.50" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-103.92,56.17 -122.11,66.67 -103.92,77.17 -85.74,66.67" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-124.71,72.00 -145.49,84.00 -124.71,96.00 -103.92,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="6" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 0, Row 6: 0</title>
+        <polygon points="-124.71,73.50 -142.89,84.00 -124.71,94.50 -106.52,84.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-145.49,84.00 -166.28,96.00 -145.49,108.00 -124.71,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="20.78,12.00 0.00,24.00 20.78,36.00 41.57,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="12" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>Col 1, Row 0: 12</title>
+      <polygon class="iso-face-left" points="2.60,-8.00 20.78,2.50 20.78,34.50 2.60,24.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="20.78,2.50 38.97,-8.00 38.97,24.00 20.78,34.50" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="20.78,-18.50 2.60,-8.00 20.78,2.50 38.97,-8.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,24.00 -20.78,36.00 0.00,48.00 20.78,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="-12" style="animation-delay: 30ms; transform-origin: top;">
+      <title>Col 1, Row 1: -12</title>
+      <polygon class="iso-face-left" points="-18.19,36.00 0.00,46.50 0.00,78.50 -18.19,68.00" fill="#a5370a" stroke="#a5370a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,46.50 18.19,36.00 18.19,68.00 0.00,78.50" fill="#882e08" stroke="#882e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,25.50 -18.19,36.00 0.00,46.50 18.19,36.00" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-20.78,36.00 -41.57,48.00 -20.78,60.00 0.00,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 1, Row 2: 0</title>
+        <polygon points="-20.78,37.50 -38.97,48.00 -20.78,58.50 -2.60,48.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-41.57,48.00 -62.35,60.00 -41.57,72.00 -20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 1, Row 3: 12</title>
+      <polygon class="iso-face-left" points="-59.76,28.00 -41.57,38.50 -41.57,70.50 -59.76,60.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-41.57,38.50 -23.38,28.00 -23.38,60.00 -41.57,70.50" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-41.57,17.50 -59.76,28.00 -41.57,38.50 -23.38,28.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,60.00 -83.14,72.00 -62.35,84.00 -41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="5" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Col 1, Row 4: 5</title>
+      <polygon class="iso-face-left" points="-80.54,58.67 -62.35,69.17 -62.35,82.50 -80.54,72.00" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-62.35,69.17 -44.17,58.67 -44.17,72.00 -62.35,82.50" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-62.35,48.17 -80.54,58.67 -62.35,69.17 -44.17,58.67" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-83.14,72.00 -103.92,84.00 -83.14,96.00 -62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="5" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 1, Row 5: 0</title>
+        <polygon points="-83.14,73.50 -101.32,84.00 -83.14,94.50 -64.95,84.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-103.92,84.00 -124.71,96.00 -103.92,108.00 -83.14,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="6" data-value="12" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 1, Row 6: 12</title>
+      <polygon class="iso-face-left" points="-122.11,64.00 -103.92,74.50 -103.92,106.50 -122.11,96.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-103.92,74.50 -85.74,64.00 -85.74,96.00 -103.92,106.50" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-103.92,53.50 -122.11,64.00 -103.92,74.50 -85.74,64.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-124.71,96.00 -145.49,108.00 -124.71,120.00 -103.92,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="7" data-value="-13" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 1, Row 7: -13</title>
+      <polygon class="iso-face-left" points="-142.89,108.00 -124.71,118.50 -124.71,153.17 -142.89,142.67" fill="#832c0f" stroke="#832c0f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-124.71,118.50 -106.52,108.00 -106.52,142.67 -124.71,153.17" fill="#6c240d" stroke="#6c240d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-124.71,97.50 -142.89,108.00 -124.71,118.50 -106.52,108.00" fill="#9a3412" stroke="#9a3412" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,24.00 20.78,36.00 41.57,48.00 62.35,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="-15" style="animation-delay: 30ms; transform-origin: top;">
+      <title>Col 2, Row 0: -15</title>
+      <polygon class="iso-face-left" points="23.38,36.00 41.57,46.50 41.57,86.50 23.38,76.00" fill="#832c0f" stroke="#832c0f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="41.57,46.50 59.76,36.00 59.76,76.00 41.57,86.50" fill="#6c240d" stroke="#6c240d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="41.57,25.50 23.38,36.00 41.57,46.50 59.76,36.00" fill="#9a3412" stroke="#9a3412" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,36.00 0.00,48.00 20.78,60.00 41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 2, Row 1: 0</title>
+        <polygon points="20.78,37.50 2.60,48.00 20.78,58.50 38.97,48.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,48.00 -20.78,60.00 0.00,72.00 20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,60.00 -41.57,72.00 -20.78,84.00 0.00,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-41.57,72.00 -62.35,84.00 -41.57,96.00 -20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-62.35,84.00 -83.14,96.00 -62.35,108.00 -41.57,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="5" data-value="15" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 2, Row 5: 15</title>
+      <polygon class="iso-face-left" points="-80.54,56.00 -62.35,66.50 -62.35,106.50 -80.54,96.00" fill="#0270a9" stroke="#0270a9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-62.35,66.50 -44.17,56.00 -44.17,96.00 -62.35,106.50" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-62.35,45.50 -80.54,56.00 -62.35,66.50 -44.17,56.00" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-83.14,96.00 -103.92,108.00 -83.14,120.00 -62.35,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="6" data-value="-6" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 2, Row 6: -6</title>
+      <polygon class="iso-face-left" points="-101.32,108.00 -83.14,118.50 -83.14,134.50 -101.32,124.00" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-83.14,118.50 -64.95,108.00 -64.95,124.00 -83.14,134.50" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-83.14,97.50 -101.32,108.00 -83.14,118.50 -64.95,108.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-103.92,108.00 -124.71,120.00 -103.92,132.00 -83.14,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="7" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 2, Row 7: 0</title>
+        <polygon points="-103.92,109.50 -122.11,120.00 -103.92,130.50 -85.74,120.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="62.35,36.00 41.57,48.00 62.35,60.00 83.14,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 3, Row 0: 0</title>
+        <polygon points="62.35,37.50 44.17,48.00 62.35,58.50 80.54,48.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="41.57,48.00 20.78,60.00 41.57,72.00 62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 3, Row 1: 12</title>
+      <polygon class="iso-face-left" points="23.38,28.00 41.57,38.50 41.57,70.50 23.38,60.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="41.57,38.50 59.76,28.00 59.76,60.00 41.57,70.50" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="41.57,17.50 23.38,28.00 41.57,38.50 59.76,28.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,60.00 0.00,72.00 20.78,84.00 41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="-5" style="animation-delay: 75ms; transform-origin: top;">
+      <title>Col 3, Row 2: -5</title>
+      <polygon class="iso-face-left" points="2.60,72.00 20.78,82.50 20.78,95.83 2.60,85.33" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="20.78,82.50 38.97,72.00 38.97,85.33 20.78,95.83" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="20.78,61.50 2.60,72.00 20.78,82.50 38.97,72.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,72.00 -20.78,84.00 0.00,96.00 20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 3, Row 3: 0</title>
+        <polygon points="0.00,73.50 -18.19,84.00 0.00,94.50 18.19,84.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-20.78,84.00 -41.57,96.00 -20.78,108.00 0.00,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="12" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 3, Row 4: 12</title>
+      <polygon class="iso-face-left" points="-38.97,64.00 -20.78,74.50 -20.78,106.50 -38.97,96.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-20.78,74.50 -2.60,64.00 -2.60,96.00 -20.78,106.50" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-20.78,53.50 -38.97,64.00 -20.78,74.50 -2.60,64.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-41.57,96.00 -62.35,108.00 -41.57,120.00 -20.78,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="5" data-value="2" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Col 3, Row 5: 2</title>
+      <polygon class="iso-face-left" points="-59.76,102.67 -41.57,113.17 -41.57,118.50 -59.76,108.00" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-41.57,113.17 -23.38,102.67 -23.38,108.00 -41.57,118.50" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-41.57,92.17 -59.76,102.67 -41.57,113.17 -23.38,102.67" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,108.00 -83.14,120.00 -62.35,132.00 -41.57,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="6" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 3, Row 6: 0</title>
+        <polygon points="-62.35,109.50 -80.54,120.00 -62.35,130.50 -44.17,120.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-83.14,120.00 -103.92,132.00 -83.14,144.00 -62.35,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="7" data-value="12" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Col 3, Row 7: 12</title>
+      <polygon class="iso-face-left" points="-101.32,100.00 -83.14,110.50 -83.14,142.50 -101.32,132.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-83.14,110.50 -64.95,100.00 -64.95,132.00 -83.14,142.50" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-83.14,89.50 -101.32,100.00 -83.14,110.50 -64.95,100.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="83.14,48.00 62.35,60.00 83.14,72.00 103.92,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="4" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 4, Row 0: 4</title>
+      <polygon class="iso-face-left" points="64.95,49.33 83.14,59.83 83.14,70.50 64.95,60.00" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="83.14,59.83 101.32,49.33 101.32,60.00 83.14,70.50" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="83.14,38.83 64.95,49.33 83.14,59.83 101.32,49.33" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="62.35,60.00 41.57,72.00 62.35,84.00 83.14,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="-12" style="animation-delay: 75ms; transform-origin: top;">
+      <title>Col 4, Row 1: -12</title>
+      <polygon class="iso-face-left" points="44.17,72.00 62.35,82.50 62.35,114.50 44.17,104.00" fill="#a5370a" stroke="#a5370a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="62.35,82.50 80.54,72.00 80.54,104.00 62.35,114.50" fill="#882e08" stroke="#882e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="62.35,61.50 44.17,72.00 62.35,82.50 80.54,72.00" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,72.00 20.78,84.00 41.57,96.00 62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="2" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 4, Row 2: 0</title>
+        <polygon points="41.57,73.50 23.38,84.00 41.57,94.50 59.76,84.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="20.78,84.00 0.00,96.00 20.78,108.00 41.57,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="3" data-value="4" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 4, Row 3: 4</title>
+      <polygon class="iso-face-left" points="2.60,85.33 20.78,95.83 20.78,106.50 2.60,96.00" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="20.78,95.83 38.97,85.33 38.97,96.00 20.78,106.50" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="20.78,74.83 2.60,85.33 20.78,95.83 38.97,85.33" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,96.00 -20.78,108.00 0.00,120.00 20.78,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,108.00 -41.57,120.00 -20.78,132.00 0.00,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-41.57,120.00 -62.35,132.00 -41.57,144.00 -20.78,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="6" data-value="4" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Col 4, Row 6: 4</title>
+      <polygon class="iso-face-left" points="-59.76,121.33 -41.57,131.83 -41.57,142.50 -59.76,132.00" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-41.57,131.83 -23.38,121.33 -23.38,132.00 -41.57,142.50" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-41.57,110.83 -59.76,121.33 -41.57,131.83 -23.38,121.33" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,132.00 -83.14,144.00 -62.35,156.00 -41.57,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="7" data-value="-13" style="animation-delay: 165ms; transform-origin: top;">
+      <title>Col 4, Row 7: -13</title>
+      <polygon class="iso-face-left" points="-80.54,144.00 -62.35,154.50 -62.35,189.17 -80.54,178.67" fill="#832c0f" stroke="#832c0f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-62.35,154.50 -44.17,144.00 -44.17,178.67 -62.35,189.17" fill="#6c240d" stroke="#6c240d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-62.35,133.50 -80.54,144.00 -62.35,154.50 -44.17,144.00" fill="#9a3412" stroke="#9a3412" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="103.92,60.00 83.14,72.00 103.92,84.00 124.71,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="0" data-value="-15" style="animation-delay: 75ms; transform-origin: top;">
+      <title>Col 5, Row 0: -15</title>
+      <polygon class="iso-face-left" points="85.74,72.00 103.92,82.50 103.92,122.50 85.74,112.00" fill="#832c0f" stroke="#832c0f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="103.92,82.50 122.11,72.00 122.11,112.00 103.92,122.50" fill="#6c240d" stroke="#6c240d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="103.92,61.50 85.74,72.00 103.92,82.50 122.11,72.00" fill="#9a3412" stroke="#9a3412" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="83.14,72.00 62.35,84.00 83.14,96.00 103.92,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="1" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 5, Row 1: 0</title>
+        <polygon points="83.14,73.50 64.95,84.00 83.14,94.50 101.32,84.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="62.35,84.00 41.57,96.00 62.35,108.00 83.14,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="2" data-value="-3" style="animation-delay: 105ms; transform-origin: top;">
+      <title>Col 5, Row 2: -3</title>
+      <polygon class="iso-face-left" points="44.17,96.00 62.35,106.50 62.35,114.50 44.17,104.00" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="62.35,106.50 80.54,96.00 80.54,104.00 62.35,114.50" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="62.35,85.50 44.17,96.00 62.35,106.50 80.54,96.00" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,96.00 20.78,108.00 41.57,120.00 62.35,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="3" data-value="2" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Col 5, Row 3: 2</title>
+      <polygon class="iso-face-left" points="23.38,102.67 41.57,113.17 41.57,118.50 23.38,108.00" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="41.57,113.17 59.76,102.67 59.76,108.00 41.57,118.50" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="41.57,92.17 23.38,102.67 41.57,113.17 59.76,102.67" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,108.00 0.00,120.00 20.78,132.00 41.57,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="4" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 5, Row 4: 0</title>
+        <polygon points="20.78,109.50 2.60,120.00 20.78,130.50 38.97,120.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,120.00 -20.78,132.00 0.00,144.00 20.78,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,132.00 -41.57,144.00 -20.78,156.00 0.00,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="6" data-value="-6" style="animation-delay: 165ms; transform-origin: top;">
+      <title>Col 5, Row 6: -6</title>
+      <polygon class="iso-face-left" points="-38.97,144.00 -20.78,154.50 -20.78,170.50 -38.97,160.00" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-20.78,154.50 -2.60,144.00 -2.60,160.00 -20.78,170.50" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-20.78,133.50 -38.97,144.00 -20.78,154.50 -2.60,144.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-41.57,144.00 -62.35,156.00 -41.57,168.00 -20.78,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="7" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Col 5, Row 7: 0</title>
+        <polygon points="-41.57,145.50 -59.76,156.00 -41.57,166.50 -23.38,156.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="124.71,72.00 103.92,84.00 124.71,96.00 145.49,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="0" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 6, Row 0: 0</title>
+        <polygon points="124.71,73.50 106.52,84.00 124.71,94.50 142.89,84.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="103.92,84.00 83.14,96.00 103.92,108.00 124.71,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="1" data-value="-5" style="animation-delay: 105ms; transform-origin: top;">
+      <title>Col 6, Row 1: -5</title>
+      <polygon class="iso-face-left" points="85.74,96.00 103.92,106.50 103.92,119.83 85.74,109.33" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="103.92,106.50 122.11,96.00 122.11,109.33 103.92,119.83" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="103.92,85.50 85.74,96.00 103.92,106.50 122.11,96.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="83.14,96.00 62.35,108.00 83.14,120.00 103.92,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="2" data-value="-5" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 6, Row 2: -5</title>
+      <polygon class="iso-face-left" points="64.95,108.00 83.14,118.50 83.14,131.83 64.95,121.33" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="83.14,118.50 101.32,108.00 101.32,121.33 83.14,131.83" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="83.14,97.50 64.95,108.00 83.14,118.50 101.32,108.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="62.35,108.00 41.57,120.00 62.35,132.00 83.14,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="3" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 6, Row 3: 0</title>
+        <polygon points="62.35,109.50 44.17,120.00 62.35,130.50 80.54,120.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="41.57,120.00 20.78,132.00 41.57,144.00 62.35,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="4" data-value="-5" style="animation-delay: 150ms; transform-origin: top;">
+      <title>Col 6, Row 4: -5</title>
+      <polygon class="iso-face-left" points="23.38,132.00 41.57,142.50 41.57,155.83 23.38,145.33" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="41.57,142.50 59.76,132.00 59.76,145.33 41.57,155.83" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="41.57,121.50 23.38,132.00 41.57,142.50 59.76,132.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,132.00 0.00,144.00 20.78,156.00 41.57,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="5" data-value="2" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Col 6, Row 5: 2</title>
+      <polygon class="iso-face-left" points="2.60,138.67 20.78,149.17 20.78,154.50 2.60,144.00" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="20.78,149.17 38.97,138.67 38.97,144.00 20.78,154.50" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="20.78,128.17 2.60,138.67 20.78,149.17 38.97,138.67" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,144.00 -20.78,156.00 0.00,168.00 20.78,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="6" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Col 6, Row 6: 0</title>
+        <polygon points="0.00,145.50 -18.19,156.00 0.00,166.50 18.19,156.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-20.78,156.00 -41.57,168.00 -20.78,180.00 0.00,168.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="7" data-value="-5" style="animation-delay: 195ms; transform-origin: top;">
+      <title>Col 6, Row 7: -5</title>
+      <polygon class="iso-face-left" points="-38.97,168.00 -20.78,178.50 -20.78,191.83 -38.97,181.33" fill="#d46213" stroke="#d46213" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-20.78,178.50 -2.60,168.00 -2.60,181.33 -20.78,191.83" fill="#ae510f" stroke="#ae510f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-20.78,157.50 -38.97,168.00 -20.78,178.50 -2.60,168.00" fill="#f97316" stroke="#f97316" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="145.49,84.00 124.71,96.00 145.49,108.00 166.28,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="124.71,96.00 103.92,108.00 124.71,120.00 145.49,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="1" data-value="-12" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 7, Row 1: -12</title>
+      <polygon class="iso-face-left" points="106.52,108.00 124.71,118.50 124.71,150.50 106.52,140.00" fill="#a5370a" stroke="#a5370a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="124.71,118.50 142.89,108.00 142.89,140.00 124.71,150.50" fill="#882e08" stroke="#882e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="124.71,97.50 106.52,108.00 124.71,118.50 142.89,108.00" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="103.92,108.00 83.14,120.00 103.92,132.00 124.71,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="2" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 7, Row 2: 0</title>
+        <polygon points="103.92,109.50 85.74,120.00 103.92,130.50 122.11,120.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="83.14,120.00 62.35,132.00 83.14,144.00 103.92,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="3" data-value="-1" style="animation-delay: 150ms; transform-origin: top;">
+      <title>Col 7, Row 3: -1</title>
+      <polygon class="iso-face-left" points="64.95,132.00 83.14,142.50 83.14,145.17 64.95,134.67" fill="#d9c9b5" stroke="#d9c9b5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="83.14,142.50 101.32,132.00 101.32,134.67 83.14,145.17" fill="#b3a695" stroke="#b3a695" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="83.14,121.50 64.95,132.00 83.14,142.50 101.32,132.00" fill="#ffedd5" stroke="#ffedd5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="62.35,132.00 41.57,144.00 62.35,156.00 83.14,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="4" data-value="5" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Col 7, Row 4: 5</title>
+      <polygon class="iso-face-left" points="44.17,130.67 62.35,141.17 62.35,154.50 44.17,144.00" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="62.35,141.17 80.54,130.67 80.54,144.00 62.35,154.50" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="62.35,120.17 44.17,130.67 62.35,141.17 80.54,130.67" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,144.00 20.78,156.00 41.57,168.00 62.35,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="5" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Col 7, Row 5: 0</title>
+        <polygon points="41.57,145.50 23.38,156.00 41.57,166.50 59.76,156.00" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="20.78,156.00 0.00,168.00 20.78,180.00 41.57,168.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="6" data-value="-1" style="animation-delay: 195ms; transform-origin: top;">
+      <title>Col 7, Row 6: -1</title>
+      <polygon class="iso-face-left" points="2.60,168.00 20.78,178.50 20.78,181.17 2.60,170.67" fill="#d9c9b5" stroke="#d9c9b5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="20.78,178.50 38.97,168.00 38.97,170.67 20.78,181.17" fill="#b3a695" stroke="#b3a695" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="20.78,157.50 2.60,168.00 20.78,178.50 38.97,168.00" fill="#ffedd5" stroke="#ffedd5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,168.00 -20.78,180.00 0.00,192.00 20.78,180.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="7" data-value="-13" style="animation-delay: 210ms; transform-origin: top;">
+      <title>Col 7, Row 7: -13</title>
+      <polygon class="iso-face-left" points="-18.19,180.00 0.00,190.50 0.00,225.17 -18.19,214.67" fill="#832c0f" stroke="#832c0f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,190.50 18.19,180.00 18.19,214.67 0.00,225.17" fill="#6c240d" stroke="#6c240d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,169.50 -18.19,180.00 0.00,190.50 18.19,180.00" fill="#9a3412" stroke="#9a3412" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+    </g>
+  </svg>

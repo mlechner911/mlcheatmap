@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-149.07 -79.70 288.15 209.70" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>June 2026 Workweek Activity — (Mon-Fri Preset)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    
+    <text x="-5.00" y="-65.70" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">June 2026 Workweek</text>
+<text x="-5.00" y="-47.70" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Activity</text>
+<text x="-5.00" y="-29.70" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">(Mon-Fri Preset)</text>
+    <g>
+      <g class="iso-col-labels"><text x="22.86" y="-11.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W1</text>
+<text x="41.92" y="-0.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W2</text>
+<text x="60.97" y="10.30" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W3</text>
+<text x="80.02" y="21.30" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W4</text>
+<text x="99.07" y="32.30" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W5</text></g>
+<g class="iso-row-labels"><text x="-28.86" y="-9.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Mon</text>
+<text x="-47.92" y="2.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Tue</text>
+<text x="-66.97" y="13.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Wed</text>
+<text x="-86.02" y="24.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Thu</text>
+<text x="-105.07" y="35.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Fri</text></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -19.05,11.00 0.00,22.00 19.05,11.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
+        <title>2026-06-01 — 0 units</title>
+        <polygon points="0.00,1.50 -16.45,11.00 0.00,20.50 16.45,11.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-19.05,11.00 -38.11,22.00 -19.05,33.00 0.00,22.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="12" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>2026-06-02 — 12 units</title>
+      <polygon class="iso-face-left" points="-35.51,-4.67 -19.05,4.83 -19.05,31.50 -35.51,22.00" fill="#d54646" stroke="#d54646" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-19.05,4.83 -2.60,-4.67 -2.60,22.00 -19.05,31.50" fill="#af3939" stroke="#af3939" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-19.05,-14.17 -35.51,-4.67 -19.05,4.83 -2.60,-4.67" fill="#fa5252" stroke="#fa5252" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-38.11,22.00 -57.16,33.00 -38.11,44.00 -19.05,33.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>2026-06-03 — 0 units</title>
+        <polygon points="-38.11,23.50 -54.56,33.00 -38.11,42.50 -21.65,33.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-57.16,33.00 -76.21,44.00 -57.16,55.00 -38.11,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="12" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-04 — 12 units</title>
+      <polygon class="iso-face-left" points="-73.61,17.33 -57.16,26.83 -57.16,53.50 -73.61,44.00" fill="#d54646" stroke="#d54646" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-57.16,26.83 -40.70,17.33 -40.70,44.00 -57.16,53.50" fill="#af3939" stroke="#af3939" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-57.16,7.83 -73.61,17.33 -57.16,26.83 -40.70,17.33" fill="#fa5252" stroke="#fa5252" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-76.21,44.00 -95.26,55.00 -76.21,66.00 -57.16,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-05 — 0 units</title>
+        <polygon points="-76.21,45.50 -92.66,55.00 -76.21,64.50 -59.76,55.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="19.05,11.00 0.00,22.00 19.05,33.00 38.11,22.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="6" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>2026-06-08 — 6 units</title>
+      <polygon class="iso-face-left" points="2.60,8.67 19.05,18.17 19.05,31.50 2.60,22.00" fill="#d98f8f" stroke="#d98f8f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="19.05,18.17 35.51,8.67 35.51,22.00 19.05,31.50" fill="#b37676" stroke="#b37676" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="19.05,-0.83 2.60,8.67 19.05,18.17 35.51,8.67" fill="#ffa8a8" stroke="#ffa8a8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,22.00 -19.05,33.00 0.00,44.00 19.05,33.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="18" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>2026-06-09 — 18 units</title>
+      <polygon class="iso-face-left" points="-16.45,-7.00 0.00,2.50 0.00,42.50 -16.45,33.00" fill="#cc3535" stroke="#cc3535" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,2.50 16.45,-7.00 16.45,33.00 0.00,42.50" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,-16.50 -16.45,-7.00 0.00,2.50 16.45,-7.00" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-19.05,33.00 -38.11,44.00 -19.05,55.00 0.00,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="6" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-10 — 6 units</title>
+      <polygon class="iso-face-left" points="-35.51,30.67 -19.05,40.17 -19.05,53.50 -35.51,44.00" fill="#d98f8f" stroke="#d98f8f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-19.05,40.17 -2.60,30.67 -2.60,44.00 -19.05,53.50" fill="#b37676" stroke="#b37676" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-19.05,21.17 -35.51,30.67 -19.05,40.17 -2.60,30.67" fill="#ffa8a8" stroke="#ffa8a8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-38.11,44.00 -57.16,55.00 -38.11,66.00 -19.05,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-06-11 — 12 units</title>
+      <polygon class="iso-face-left" points="-54.56,28.33 -38.11,37.83 -38.11,64.50 -54.56,55.00" fill="#d54646" stroke="#d54646" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-38.11,37.83 -21.65,28.33 -21.65,55.00 -38.11,64.50" fill="#af3939" stroke="#af3939" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-38.11,18.83 -54.56,28.33 -38.11,37.83 -21.65,28.33" fill="#fa5252" stroke="#fa5252" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-57.16,55.00 -76.21,66.00 -57.16,77.00 -38.11,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="6" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-12 — 6 units</title>
+      <polygon class="iso-face-left" points="-73.61,52.67 -57.16,62.17 -57.16,75.50 -73.61,66.00" fill="#d98f8f" stroke="#d98f8f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-57.16,62.17 -40.70,52.67 -40.70,66.00 -57.16,75.50" fill="#b37676" stroke="#b37676" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-57.16,43.17 -73.61,52.67 -57.16,62.17 -40.70,52.67" fill="#ffa8a8" stroke="#ffa8a8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="38.11,22.00 19.05,33.00 38.11,44.00 57.16,33.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>2026-06-15 — 0 units</title>
+        <polygon points="38.11,23.50 21.65,33.00 38.11,42.50 54.56,33.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="19.05,33.00 0.00,44.00 19.05,55.00 38.11,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="12" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-16 — 12 units</title>
+      <polygon class="iso-face-left" points="2.60,17.33 19.05,26.83 19.05,53.50 2.60,44.00" fill="#d54646" stroke="#d54646" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="19.05,26.83 35.51,17.33 35.51,44.00 19.05,53.50" fill="#af3939" stroke="#af3939" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="19.05,7.83 2.60,17.33 19.05,26.83 35.51,17.33" fill="#fa5252" stroke="#fa5252" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,44.00 -19.05,55.00 0.00,66.00 19.05,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="2" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-17 — 0 units</title>
+        <polygon points="0.00,45.50 -16.45,55.00 0.00,64.50 16.45,55.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-19.05,55.00 -38.11,66.00 -19.05,77.00 0.00,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="3" data-value="18" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-18 — 18 units</title>
+      <polygon class="iso-face-left" points="-35.51,26.00 -19.05,35.50 -19.05,75.50 -35.51,66.00" fill="#cc3535" stroke="#cc3535" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-19.05,35.50 -2.60,26.00 -2.60,66.00 -19.05,75.50" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-19.05,16.50 -35.51,26.00 -19.05,35.50 -2.60,26.00" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-38.11,66.00 -57.16,77.00 -38.11,88.00 -19.05,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>2026-06-19 — 0 units</title>
+        <polygon points="-38.11,67.50 -54.56,77.00 -38.11,86.50 -21.65,77.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="57.16,33.00 38.11,44.00 57.16,55.00 76.21,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="6" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-22 — 6 units</title>
+      <polygon class="iso-face-left" points="40.70,30.67 57.16,40.17 57.16,53.50 40.70,44.00" fill="#d98f8f" stroke="#d98f8f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="57.16,40.17 73.61,30.67 73.61,44.00 57.16,53.50" fill="#b37676" stroke="#b37676" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="57.16,21.17 40.70,30.67 57.16,40.17 73.61,30.67" fill="#ffa8a8" stroke="#ffa8a8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="38.11,44.00 19.05,55.00 38.11,66.00 57.16,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-06-23 — 12 units</title>
+      <polygon class="iso-face-left" points="21.65,28.33 38.11,37.83 38.11,64.50 21.65,55.00" fill="#d54646" stroke="#d54646" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="38.11,37.83 54.56,28.33 54.56,55.00 38.11,64.50" fill="#af3939" stroke="#af3939" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="38.11,18.83 21.65,28.33 38.11,37.83 54.56,28.33" fill="#fa5252" stroke="#fa5252" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="19.05,55.00 0.00,66.00 19.05,77.00 38.11,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="6" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-24 — 6 units</title>
+      <polygon class="iso-face-left" points="2.60,52.67 19.05,62.17 19.05,75.50 2.60,66.00" fill="#d98f8f" stroke="#d98f8f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="19.05,62.17 35.51,52.67 35.51,66.00 19.05,75.50" fill="#b37676" stroke="#b37676" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="19.05,43.17 2.60,52.67 19.05,62.17 35.51,52.67" fill="#ffa8a8" stroke="#ffa8a8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,66.00 -19.05,77.00 0.00,88.00 19.05,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="12" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-06-25 — 12 units</title>
+      <polygon class="iso-face-left" points="-16.45,50.33 0.00,59.83 0.00,86.50 -16.45,77.00" fill="#d54646" stroke="#d54646" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,59.83 16.45,50.33 16.45,77.00 0.00,86.50" fill="#af3939" stroke="#af3939" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,40.83 -16.45,50.33 0.00,59.83 16.45,50.33" fill="#fa5252" stroke="#fa5252" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-19.05,77.00 -38.11,88.00 -19.05,99.00 0.00,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="6" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>2026-06-26 — 6 units</title>
+      <polygon class="iso-face-left" points="-35.51,74.67 -19.05,84.17 -19.05,97.50 -35.51,88.00" fill="#d98f8f" stroke="#d98f8f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-19.05,84.17 -2.60,74.67 -2.60,88.00 -19.05,97.50" fill="#b37676" stroke="#b37676" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-19.05,65.17 -35.51,74.67 -19.05,84.17 -2.60,74.67" fill="#ffa8a8" stroke="#ffa8a8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="76.21,44.00 57.16,55.00 76.21,66.00 95.26,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-29 — 0 units</title>
+        <polygon points="76.21,45.50 59.76,55.00 76.21,64.50 92.66,55.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="57.16,55.00 38.11,66.00 57.16,77.00 76.21,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="18" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-30 — 18 units</title>
+      <polygon class="iso-face-left" points="40.70,26.00 57.16,35.50 57.16,75.50 40.70,66.00" fill="#cc3535" stroke="#cc3535" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="57.16,35.50 73.61,26.00 73.61,66.00 57.16,75.50" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="57.16,16.50 40.70,26.00 57.16,35.50 73.61,26.00" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="38.11,66.00 19.05,77.00 38.11,88.00 57.16,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="2" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>2026-07-01 (Outside Month) — 0 units</title>
+        <polygon points="38.11,67.50 21.65,77.00 38.11,86.50 54.56,77.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="19.05,77.00 0.00,88.00 19.05,99.00 38.11,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="3" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>2026-07-02 (Outside Month) — 0 units</title>
+        <polygon points="19.05,78.50 2.60,88.00 19.05,97.50 35.51,88.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,88.00 -19.05,99.00 0.00,110.00 19.05,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="4" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>2026-07-03 (Outside Month) — 0 units</title>
+        <polygon points="0.00,89.50 -16.45,99.00 0.00,108.50 16.45,99.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+    </g>
+  </svg>

@@ -1,0 +1,925 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-233.45 -38.06 763.46 234.57" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    <defs><linearGradient id="cyl-grad-eef8ff" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#cad3d9" stop-opacity="1" />
+          <stop offset="35%" stop-color="#eef8ff" stop-opacity="1" />
+          <stop offset="75%" stop-color="#a7aeb3" stop-opacity="1" />
+          <stop offset="100%" stop-color="#777c80" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-e9f6ff" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c6d1d9" stop-opacity="1" />
+          <stop offset="35%" stop-color="#e9f6ff" stop-opacity="1" />
+          <stop offset="75%" stop-color="#a3acb3" stop-opacity="1" />
+          <stop offset="100%" stop-color="#757b80" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-e2f3fe" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c0cfd8" stop-opacity="1" />
+          <stop offset="35%" stop-color="#e2f3fe" stop-opacity="1" />
+          <stop offset="75%" stop-color="#9eaab2" stop-opacity="1" />
+          <stop offset="100%" stop-color="#717a7f" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-cdecfe" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#aec9d8" stop-opacity="1" />
+          <stop offset="35%" stop-color="#cdecfe" stop-opacity="1" />
+          <stop offset="75%" stop-color="#90a5b2" stop-opacity="1" />
+          <stop offset="100%" stop-color="#67767f" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-ade2fd" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#93c0d7" stop-opacity="1" />
+          <stop offset="35%" stop-color="#ade2fd" stop-opacity="1" />
+          <stop offset="75%" stop-color="#799eb1" stop-opacity="1" />
+          <stop offset="100%" stop-color="#57717f" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-7dd3fc" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#6ab3d6" stop-opacity="1" />
+          <stop offset="35%" stop-color="#7dd3fc" stop-opacity="1" />
+          <stop offset="75%" stop-color="#5894b0" stop-opacity="1" />
+          <stop offset="100%" stop-color="#3f6a7e" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-47c2f9" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#3ca5d4" stop-opacity="1" />
+          <stop offset="35%" stop-color="#47c2f9" stop-opacity="1" />
+          <stop offset="75%" stop-color="#3288ae" stop-opacity="1" />
+          <stop offset="100%" stop-color="#24617d" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-23b1f1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#1e96cd" stop-opacity="1" />
+          <stop offset="35%" stop-color="#23b1f1" stop-opacity="1" />
+          <stop offset="75%" stop-color="#197ca9" stop-opacity="1" />
+          <stop offset="100%" stop-color="#125979" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0da2e6" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0b8ac4" stop-opacity="1" />
+          <stop offset="35%" stop-color="#0da2e6" stop-opacity="1" />
+          <stop offset="75%" stop-color="#0971a1" stop-opacity="1" />
+          <stop offset="100%" stop-color="#075173" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0792d5" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#067cb5" stop-opacity="1" />
+          <stop offset="35%" stop-color="#0792d5" stop-opacity="1" />
+          <stop offset="75%" stop-color="#056695" stop-opacity="1" />
+          <stop offset="100%" stop-color="#04496b" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0388cb" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0374ad" stop-opacity="1" />
+          <stop offset="35%" stop-color="#0388cb" stop-opacity="1" />
+          <stop offset="75%" stop-color="#025f8e" stop-opacity="1" />
+          <stop offset="100%" stop-color="#024466" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0284c7" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0270a9" stop-opacity="1" />
+          <stop offset="35%" stop-color="#0284c7" stop-opacity="1" />
+          <stop offset="75%" stop-color="#015c8b" stop-opacity="1" />
+          <stop offset="100%" stop-color="#014264" stop-opacity="1" />
+        </linearGradient></defs>
+    <text x="148.28" y="-24.06" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)</text>
+    <g>
+      <g class="iso-col-labels"><text x="25.50" y="-6.06" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12AM</text>
+<text x="153.00" y="28.11" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6AM</text>
+<text x="280.50" y="62.27" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12PM</text>
+<text x="408.01" y="96.44" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6PM</text></g>
+<g class="iso-row-labels"><text x="-31.50" y="-3.36" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Flat Ribbon</text>
+<text x="-74.00" y="8.03" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Continuous Ribbon</text>
+<text x="-116.50" y="19.42" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Cylinder</text>
+<text x="-159.00" y="30.81" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Prism (Box)</text></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -21.25,5.69 0.00,11.39 21.25,5.69" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
+                <title>Flat Ribbon, 00:00 — Value: 0</title>
+                <polygon points="0.00,0.78 -18.35,5.69 0.00,10.61 18.35,5.69" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+              </g>
+<polygon class="iso-grid-cell" points="-21.25,5.69 -42.50,11.39 -21.25,17.08 0.00,11.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-42.50,11.39 -63.75,17.08 -42.50,22.78 -21.25,17.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
+                <title>Continuous Ribbon, 00:00 — Value: 0</title>
+                <polygon points="-42.50,12.16 -60.85,17.08 -42.50,22.00 -24.15,17.08" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+              </g>
+<polygon class="iso-grid-cell" points="-63.75,17.08 -85.00,22.78 -63.75,28.47 -42.50,22.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-85.00,22.78 -106.25,28.47 -85.00,34.16 -63.75,28.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Cylinder, 00:00 — Value: 0</title>
+        <ellipse cx="-85.00" cy="28.47" rx="9.18" ry="2.46" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-106.25,28.47 -127.50,34.16 -106.25,39.86 -85.00,34.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-127.50,34.16 -148.75,39.86 -127.50,45.55 -106.25,39.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="6" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Prism (Box), 00:00 — Value: 0</title>
+        <polygon points="-127.50,34.94 -145.85,39.86 -127.50,44.78 -109.15,39.86" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="21.25,5.69 0.00,11.39 21.25,17.08 42.50,11.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="0.2" style="animation-delay: 15ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 01:00 — Value: 0.2</title>
+        <polygon class="iso-face-left" points="19.80,6.08 1.45,11.00 1.45,16.00 19.80,11.08" fill="#cad3d9" stroke="#cad3d9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 1.45,11.00 C 4.99,11.78 8.53,11.90 12.07,12.85 L 30.43,7.93 C 26.88,6.98 23.34,6.86 19.80,6.08 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 1.45,16.00 L 1.45,11.00 C 4.99,11.78 8.53,11.90 12.07,12.85 L 12.07,17.85 C 8.53,16.90 4.99,16.78 1.45,16.00 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 12.07,12.85 C 15.62,13.80 19.16,13.91 22.70,14.44 L 41.05,9.53 C 37.51,8.99 33.97,8.88 30.43,7.93 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 12.07,17.85 L 12.07,12.85 C 15.62,13.80 19.16,13.91 22.70,14.44 L 22.70,19.44 C 19.16,18.91 15.62,18.80 12.07,17.85 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,11.39 -21.25,17.08 0.00,22.78 21.25,17.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-21.25,17.08 -42.50,22.78 -21.25,28.47 0.00,22.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="0.2" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 01:00 — Value: 0.2</title>
+        <polygon class="iso-face-left" points="-22.70,17.47 -41.05,22.39 -41.05,22.39 -22.70,17.47" fill="#cad3d9" stroke="#cad3d9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -41.05,22.39 C -37.51,23.17 -33.97,23.29 -30.43,24.23 L -12.07,19.32 C -15.62,18.37 -19.16,18.25 -22.70,17.47 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -41.05,22.39 L -41.05,22.39 C -37.51,23.17 -33.97,23.29 -30.43,24.23 L -30.43,25.23 C -33.97,24.29 -37.51,23.34 -41.05,22.39 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -30.43,24.23 C -26.88,25.18 -23.34,25.30 -19.80,25.83 L -1.45,20.91 C -4.99,20.38 -8.53,20.27 -12.07,19.32 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -30.43,25.23 L -30.43,24.23 C -26.88,25.18 -23.34,25.30 -19.80,25.83 L -19.80,28.08 C -23.34,27.13 -26.88,26.18 -30.43,25.23 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-42.50,22.78 -63.75,28.47 -42.50,34.16 -21.25,28.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-63.75,28.47 -85.00,34.16 -63.75,39.86 -42.50,34.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="0.2" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Cylinder, 01:00 — Value: 0.2</title>
+      <path d="M -72.93,33.16 L -72.93,34.16 A 9.18,2.46 0 0,0 -54.57,34.16 L -54.57,33.16 A 9.18,2.46 0 0,1 -72.93,33.16 Z" fill="url(#cyl-grad-eef8ff)" stroke="#b3babf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-63.75" cy="33.16" rx="9.18" ry="2.46" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-85.00,34.16 -106.25,39.86 -85.00,45.55 -63.75,39.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-106.25,39.86 -127.50,45.55 -106.25,51.25 -85.00,45.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="6" data-value="0.2" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Prism (Box), 01:00 — Value: 0.2</title>
+      <polygon class="iso-face-left" points="-124.60,44.55 -106.25,49.47 -106.25,50.47 -124.60,45.55" fill="#cad3d9" stroke="#cad3d9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-106.25,49.47 -87.90,44.55 -87.90,45.55 -106.25,50.47" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-106.25,39.63 -124.60,44.55 -106.25,49.47 -87.90,44.55" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="42.50,11.39 21.25,17.08 42.50,22.78 63.75,17.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="0.7" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 02:00 — Value: 0.7</title>
+        
+        <path class="iso-face-top" d="M 22.70,14.44 C 26.24,14.98 29.78,15.09 33.32,16.04 L 51.68,11.12 C 48.14,10.17 44.59,10.06 41.05,9.53 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 22.70,19.44 L 22.70,14.44 C 26.24,14.98 29.78,15.09 33.32,16.04 L 33.32,21.04 C 29.78,20.09 26.24,19.98 22.70,19.44 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 33.32,16.04 C 36.87,16.99 40.41,16.61 43.95,16.89 L 62.30,11.97 C 58.76,11.69 55.22,12.07 51.68,11.12 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 33.32,21.04 L 33.32,16.04 C 36.87,16.99 40.41,16.61 43.95,16.89 L 43.95,21.89 C 40.41,21.61 36.87,21.99 33.32,21.04 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="21.25,17.08 0.00,22.78 21.25,28.47 42.50,22.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,22.78 -21.25,28.47 0.00,34.16 21.25,28.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="2" data-value="0.7" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 02:00 — Value: 0.7</title>
+        
+        <path class="iso-face-top" d="M -19.80,25.83 C -16.26,26.36 -12.72,26.48 -9.18,27.43 L 9.18,22.51 C 5.63,21.56 2.09,21.45 -1.45,20.91 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -19.80,28.08 L -19.80,25.83 C -16.26,26.36 -12.72,26.48 -9.18,27.43 L -9.18,30.93 C -12.72,29.98 -16.26,29.03 -19.80,28.08 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -9.18,27.43 C -5.63,28.38 -2.09,27.99 1.45,28.28 L 19.80,23.36 C 16.26,23.08 12.72,23.46 9.18,22.51 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -9.18,30.93 L -9.18,27.43 C -5.63,28.38 -2.09,27.99 1.45,28.28 L 1.45,33.78 C -2.09,32.83 -5.63,31.88 -9.18,30.93 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-21.25,28.47 -42.50,34.16 -21.25,39.86 0.00,34.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-42.50,34.16 -63.75,39.86 -42.50,45.55 -21.25,39.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="0.7" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>Cylinder, 02:00 — Value: 0.7</title>
+      <path d="M -51.68,36.36 L -51.68,39.86 A 9.18,2.46 0 0,0 -33.32,39.86 L -33.32,36.36 A 9.18,2.46 0 0,1 -51.68,36.36 Z" fill="url(#cyl-grad-e9f6ff)" stroke="#afb9bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-42.50" cy="36.36" rx="9.18" ry="2.46" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-63.75,39.86 -85.00,45.55 -63.75,51.25 -42.50,45.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-85.00,45.55 -106.25,51.25 -85.00,56.94 -63.75,51.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="6" data-value="0.7" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Prism (Box), 02:00 — Value: 0.7</title>
+      <polygon class="iso-face-left" points="-103.35,47.75 -85.00,52.66 -85.00,56.16 -103.35,51.25" fill="#c6d1d9" stroke="#c6d1d9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-85.00,52.66 -66.65,47.75 -66.65,51.25 -85.00,56.16" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-85.00,42.83 -103.35,47.75 -85.00,52.66 -66.65,47.75" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="63.75,17.08 42.50,22.78 63.75,28.47 85.00,22.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="1.5" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 03:00 — Value: 1.5</title>
+        
+        <path class="iso-face-top" d="M 43.95,16.89 C 47.49,17.17 51.03,16.79 54.57,17.73 L 72.93,12.82 C 69.39,11.87 65.84,12.25 62.30,11.97 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 43.95,21.89 L 43.95,16.89 C 47.49,17.17 51.03,16.79 54.57,17.73 L 54.57,22.73 C 51.03,21.79 47.49,22.17 43.95,21.89 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 54.57,17.73 C 58.12,18.68 61.66,17.97 65.20,18.08 L 83.55,13.16 C 80.01,13.05 76.47,13.77 72.93,12.82 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 54.57,22.73 L 54.57,17.73 C 58.12,18.68 61.66,17.97 65.20,18.08 L 65.20,23.08 C 61.66,22.97 58.12,23.68 54.57,22.73 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="42.50,22.78 21.25,28.47 42.50,34.16 63.75,28.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="21.25,28.47 0.00,34.16 21.25,39.86 42.50,34.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="1.5" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 03:00 — Value: 1.5</title>
+        
+        <path class="iso-face-top" d="M 1.45,28.28 C 4.99,28.56 8.53,28.17 12.07,29.12 L 30.43,24.21 C 26.88,23.26 23.34,23.64 19.80,23.36 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 1.45,33.78 L 1.45,28.28 C 4.99,28.56 8.53,28.17 12.07,29.12 L 12.07,36.62 C 8.53,35.67 4.99,34.72 1.45,33.78 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 12.07,29.12 C 15.62,30.07 19.16,29.35 22.70,29.47 L 41.05,24.55 C 37.51,24.44 33.97,25.15 30.43,24.21 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 12.07,36.62 L 12.07,29.12 C 15.62,30.07 19.16,29.35 22.70,29.47 L 22.70,39.47 C 19.16,38.52 15.62,37.57 12.07,36.62 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,34.16 -21.25,39.86 0.00,45.55 21.25,39.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-21.25,39.86 -42.50,45.55 -21.25,51.25 0.00,45.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="1.5" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Cylinder, 03:00 — Value: 1.5</title>
+      <path d="M -30.43,38.05 L -30.43,45.55 A 9.18,2.46 0 0,0 -12.07,45.55 L -12.07,38.05 A 9.18,2.46 0 0,1 -30.43,38.05 Z" fill="url(#cyl-grad-e2f3fe)" stroke="#aab6bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-21.25" cy="38.05" rx="9.18" ry="2.46" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-42.50,45.55 -63.75,51.25 -42.50,56.94 -21.25,51.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-63.75,51.25 -85.00,56.94 -63.75,62.63 -42.50,56.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="6" data-value="1.5" style="animation-delay: 135ms; transform-origin: bottom;">
+      <title>Prism (Box), 03:00 — Value: 1.5</title>
+      <polygon class="iso-face-left" points="-82.10,49.44 -63.75,54.36 -63.75,61.86 -82.10,56.94" fill="#c0cfd8" stroke="#c0cfd8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-63.75,54.36 -45.40,49.44 -45.40,56.94 -63.75,61.86" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-63.75,44.52 -82.10,49.44 -63.75,54.36 -45.40,49.44" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="85.00,22.78 63.75,28.47 85.00,34.16 106.25,28.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="2.5" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 04:00 — Value: 2.5</title>
+        
+        <path class="iso-face-top" d="M 65.20,18.08 C 68.74,18.20 72.28,17.48 75.83,18.43 L 94.18,13.51 C 90.64,12.56 87.09,13.28 83.55,13.16 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 65.20,23.08 L 65.20,18.08 C 68.74,18.20 72.28,17.48 75.83,18.43 L 75.83,23.43 C 72.28,22.48 68.74,23.20 65.20,23.08 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 75.83,18.43 C 79.37,19.38 82.91,18.33 86.45,18.28 L 104.80,13.36 C 101.26,13.41 97.72,14.46 94.18,13.51 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 75.83,23.43 L 75.83,18.43 C 79.37,19.38 82.91,18.33 86.45,18.28 L 86.45,23.28 C 82.91,23.33 79.37,24.38 75.83,23.43 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="63.75,28.47 42.50,34.16 63.75,39.86 85.00,34.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="42.50,34.16 21.25,39.86 42.50,45.55 63.75,39.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="2" data-value="2.5" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 04:00 — Value: 2.5</title>
+        
+        <path class="iso-face-top" d="M 22.70,29.47 C 26.24,29.59 29.78,28.87 33.32,29.82 L 51.68,24.90 C 48.14,23.95 44.59,24.67 41.05,24.55 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 22.70,39.47 L 22.70,29.47 C 26.24,29.59 29.78,28.87 33.32,29.82 L 33.32,42.32 C 29.78,41.37 26.24,40.42 22.70,39.47 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 33.32,29.82 C 36.87,30.77 40.41,29.71 43.95,29.66 L 62.30,24.75 C 58.76,24.80 55.22,25.85 51.68,24.90 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 33.32,42.32 L 33.32,29.82 C 36.87,30.77 40.41,29.71 43.95,29.66 L 43.95,45.16 C 40.41,44.21 36.87,43.27 33.32,42.32 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="21.25,39.86 0.00,45.55 21.25,51.25 42.50,45.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,45.55 -21.25,51.25 0.00,56.94 21.25,51.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="4" data-value="2.5" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Cylinder, 04:00 — Value: 2.5</title>
+      <path d="M -9.18,38.75 L -9.18,51.25 A 9.18,2.46 0 0,0 9.18,51.25 L 9.18,38.75 A 9.18,2.46 0 0,1 -9.18,38.75 Z" fill="url(#cyl-grad-cdecfe)" stroke="#9ab1bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="0.00" cy="38.75" rx="9.18" ry="2.46" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-21.25,51.25 -42.50,56.94 -21.25,62.63 0.00,56.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-42.50,56.94 -63.75,62.63 -42.50,68.33 -21.25,62.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="6" data-value="2.5" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Prism (Box), 04:00 — Value: 2.5</title>
+      <polygon class="iso-face-left" points="-60.85,50.13 -42.50,55.05 -42.50,67.55 -60.85,62.63" fill="#aec9d8" stroke="#aec9d8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-42.50,55.05 -24.15,50.13 -24.15,62.63 -42.50,67.55" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-42.50,45.22 -60.85,50.13 -42.50,55.05 -24.15,50.13" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="106.25,28.47 85.00,34.16 106.25,39.86 127.50,34.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="0" data-value="3.7" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 05:00 — Value: 3.7</title>
+        
+        <path class="iso-face-top" d="M 86.45,18.28 C 89.99,18.22 93.53,17.17 97.08,18.12 L 115.43,13.21 C 111.89,12.26 108.34,13.31 104.80,13.36 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 86.45,23.28 L 86.45,18.28 C 89.99,18.22 93.53,17.17 97.08,18.12 L 97.08,23.12 C 93.53,22.17 89.99,23.22 86.45,23.28 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 97.08,18.12 C 100.62,19.07 104.16,17.85 107.70,17.72 L 126.05,12.80 C 122.51,12.94 118.97,14.15 115.43,13.21 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 97.08,23.12 L 97.08,18.12 C 100.62,19.07 104.16,17.85 107.70,17.72 L 107.70,22.72 C 104.16,22.85 100.62,24.07 97.08,23.12 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="85.00,34.16 63.75,39.86 85.00,45.55 106.25,39.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="63.75,39.86 42.50,45.55 63.75,51.25 85.00,45.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="2" data-value="3.7" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 05:00 — Value: 3.7</title>
+        
+        <path class="iso-face-top" d="M 43.95,29.66 C 47.49,29.61 51.03,28.56 54.57,29.51 L 72.93,24.59 C 69.39,23.64 65.84,24.70 62.30,24.75 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 43.95,45.16 L 43.95,29.66 C 47.49,29.61 51.03,28.56 54.57,29.51 L 54.57,48.01 C 51.03,47.06 47.49,46.11 43.95,45.16 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 54.57,29.51 C 58.12,30.46 61.66,29.24 65.20,29.11 L 83.55,24.19 C 80.01,24.32 76.47,25.54 72.93,24.59 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 54.57,48.01 L 54.57,29.51 C 58.12,30.46 61.66,29.24 65.20,29.11 L 65.20,50.86 C 61.66,49.91 58.12,48.96 54.57,48.01 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="42.50,45.55 21.25,51.25 42.50,56.94 63.75,51.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="21.25,51.25 0.00,56.94 21.25,62.63 42.50,56.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="4" data-value="3.7" style="animation-delay: 135ms; transform-origin: bottom;">
+      <title>Cylinder, 05:00 — Value: 3.7</title>
+      <path d="M 12.07,38.44 L 12.07,56.94 A 9.18,2.46 0 0,0 30.43,56.94 L 30.43,38.44 A 9.18,2.46 0 0,1 12.07,38.44 Z" fill="url(#cyl-grad-ade2fd)" stroke="#82aabe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="21.25" cy="38.44" rx="9.18" ry="2.46" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,56.94 -21.25,62.63 0.00,68.33 21.25,62.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-21.25,62.63 -42.50,68.33 -21.25,74.02 0.00,68.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="6" data-value="3.7" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Prism (Box), 05:00 — Value: 3.7</title>
+      <polygon class="iso-face-left" points="-39.60,49.83 -21.25,54.75 -21.25,73.25 -39.60,68.33" fill="#93c0d7" stroke="#93c0d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-21.25,54.75 -2.90,49.83 -2.90,68.33 -21.25,73.25" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-21.25,44.91 -39.60,49.83 -21.25,54.75 -2.90,49.83" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="127.50,34.16 106.25,39.86 127.50,45.55 148.75,39.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="0" data-value="5" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 06:00 — Value: 5</title>
+        
+        <path class="iso-face-top" d="M 107.70,17.72 C 111.24,17.59 114.78,16.37 118.33,17.32 L 136.68,12.40 C 133.14,11.45 129.60,12.67 126.05,12.80 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 107.70,22.72 L 107.70,17.72 C 111.24,17.59 114.78,16.37 118.33,17.32 L 118.33,22.32 C 114.78,21.37 111.24,22.59 107.70,22.72 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 118.33,17.32 C 121.87,18.27 125.41,17.05 128.95,16.91 L 147.30,12.00 C 143.76,12.13 140.22,13.35 136.68,12.40 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 118.33,22.32 L 118.33,17.32 C 121.87,18.27 125.41,17.05 128.95,16.91 L 128.95,21.91 C 125.41,22.05 121.87,23.27 118.33,22.32 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="106.25,39.86 85.00,45.55 106.25,51.25 127.50,45.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="85.00,45.55 63.75,51.25 85.00,56.94 106.25,51.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="2" data-value="5" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 06:00 — Value: 5</title>
+        
+        <path class="iso-face-top" d="M 65.20,29.11 C 68.74,28.97 72.28,27.76 75.83,28.70 L 94.18,23.79 C 90.64,22.84 87.09,24.06 83.55,24.19 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 65.20,50.86 L 65.20,29.11 C 68.74,28.97 72.28,27.76 75.83,28.70 L 75.83,53.70 C 72.28,52.76 68.74,51.81 65.20,50.86 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 75.83,28.70 C 79.37,29.65 82.91,28.44 86.45,28.30 L 104.80,23.38 C 101.26,23.52 97.72,24.74 94.18,23.79 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 75.83,53.70 L 75.83,28.70 C 79.37,29.65 82.91,28.44 86.45,28.30 L 86.45,56.55 C 82.91,55.60 79.37,54.65 75.83,53.70 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="63.75,51.25 42.50,56.94 63.75,62.63 85.00,56.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="42.50,56.94 21.25,62.63 42.50,68.33 63.75,62.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="4" data-value="5" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Cylinder, 06:00 — Value: 5</title>
+      <path d="M 33.32,37.63 L 33.32,62.63 A 9.18,2.46 0 0,0 51.68,62.63 L 51.68,37.63 A 9.18,2.46 0 0,1 33.32,37.63 Z" fill="url(#cyl-grad-7dd3fc)" stroke="#5e9ebd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="42.50" cy="37.63" rx="9.18" ry="2.46" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="21.25,62.63 0.00,68.33 21.25,74.02 42.50,68.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,68.33 -21.25,74.02 0.00,79.72 21.25,74.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="6" data-value="5" style="animation-delay: 180ms; transform-origin: bottom;">
+      <title>Prism (Box), 06:00 — Value: 5</title>
+      <polygon class="iso-face-left" points="-18.35,49.02 0.00,53.94 0.00,78.94 -18.35,74.02" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,53.94 18.35,49.02 18.35,74.02 0.00,78.94" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,44.10 -18.35,49.02 0.00,53.94 18.35,49.02" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="148.75,39.86 127.50,45.55 148.75,51.25 170.00,45.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="0" data-value="6.3" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 07:00 — Value: 6.3</title>
+        
+        <path class="iso-face-top" d="M 128.95,16.91 C 132.49,16.78 136.03,15.56 139.58,16.51 L 157.93,11.59 C 154.39,10.64 150.85,11.86 147.30,12.00 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 128.95,21.91 L 128.95,16.91 C 132.49,16.78 136.03,15.56 139.58,16.51 L 139.58,21.51 C 136.03,20.56 132.49,21.78 128.95,21.91 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 139.58,16.51 C 143.12,17.46 146.66,16.41 150.20,16.36 L 168.55,11.44 C 165.01,11.49 161.47,12.54 157.93,11.59 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 139.58,21.51 L 139.58,16.51 C 143.12,17.46 146.66,16.41 150.20,16.36 L 150.20,21.36 C 146.66,21.41 143.12,22.46 139.58,21.51 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="127.50,45.55 106.25,51.25 127.50,56.94 148.75,51.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="106.25,51.25 85.00,56.94 106.25,62.63 127.50,56.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="2" data-value="6.3" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 07:00 — Value: 6.3</title>
+        
+        <path class="iso-face-top" d="M 86.45,28.30 C 89.99,28.17 93.53,26.95 97.08,27.90 L 115.43,22.98 C 111.89,22.03 108.34,23.25 104.80,23.38 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 86.45,56.55 L 86.45,28.30 C 89.99,28.17 93.53,26.95 97.08,27.90 L 97.08,59.40 C 93.53,58.45 89.99,57.50 86.45,56.55 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 97.08,27.90 C 100.62,28.85 104.16,27.80 107.70,27.75 L 126.05,22.83 C 122.51,22.88 118.97,23.93 115.43,22.98 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 97.08,59.40 L 97.08,27.90 C 100.62,28.85 104.16,27.80 107.70,27.75 L 107.70,62.25 C 104.16,61.30 100.62,60.35 97.08,59.40 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="85.00,56.94 63.75,62.63 85.00,68.33 106.25,62.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="63.75,62.63 42.50,68.33 63.75,74.02 85.00,68.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="4" data-value="6.3" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Cylinder, 07:00 — Value: 6.3</title>
+      <path d="M 54.57,36.83 L 54.57,68.33 A 9.18,2.46 0 0,0 72.93,68.33 L 72.93,36.83 A 9.18,2.46 0 0,1 54.57,36.83 Z" fill="url(#cyl-grad-47c2f9)" stroke="#3592bb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="63.75" cy="36.83" rx="9.18" ry="2.46" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="42.50,68.33 21.25,74.02 42.50,79.72 63.75,74.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="21.25,74.02 0.00,79.72 21.25,85.41 42.50,79.72" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="6" data-value="6.3" style="animation-delay: 195ms; transform-origin: bottom;">
+      <title>Prism (Box), 07:00 — Value: 6.3</title>
+      <polygon class="iso-face-left" points="2.90,48.22 21.25,53.13 21.25,84.63 2.90,79.72" fill="#3ca5d4" stroke="#3ca5d4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="21.25,53.13 39.60,48.22 39.60,79.72 21.25,84.63" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="21.25,43.30 2.90,48.22 21.25,53.13 39.60,48.22" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="170.00,45.55 148.75,51.25 170.00,56.94 191.25,51.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="0" data-value="7.5" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 08:00 — Value: 7.5</title>
+        
+        <path class="iso-face-top" d="M 150.20,16.36 C 153.74,16.31 157.28,15.26 160.83,16.20 L 179.18,11.29 C 175.64,10.34 172.10,11.39 168.55,11.44 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 150.20,21.36 L 150.20,16.36 C 153.74,16.31 157.28,15.26 160.83,16.20 L 160.83,21.20 C 157.28,20.26 153.74,21.31 150.20,21.36 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 160.83,16.20 C 164.37,17.15 167.91,16.44 171.45,16.55 L 189.80,11.63 C 186.26,11.52 182.72,12.24 179.18,11.29 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 160.83,21.20 L 160.83,16.20 C 164.37,17.15 167.91,16.44 171.45,16.55 L 171.45,21.55 C 167.91,21.44 164.37,22.15 160.83,21.20 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="148.75,51.25 127.50,56.94 148.75,62.63 170.00,56.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="127.50,56.94 106.25,62.63 127.50,68.33 148.75,62.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="2" data-value="7.5" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 08:00 — Value: 7.5</title>
+        
+        <path class="iso-face-top" d="M 107.70,27.75 C 111.24,27.69 114.78,26.64 118.33,27.59 L 136.68,22.68 C 133.14,21.73 129.60,22.78 126.05,22.83 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 107.70,62.25 L 107.70,27.75 C 111.24,27.69 114.78,26.64 118.33,27.59 L 118.33,65.09 C 114.78,64.14 111.24,63.19 107.70,62.25 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 118.33,27.59 C 121.87,28.54 125.41,27.82 128.95,27.94 L 147.30,23.02 C 143.76,22.91 140.22,23.62 136.68,22.68 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 118.33,65.09 L 118.33,27.59 C 121.87,28.54 125.41,27.82 128.95,27.94 L 128.95,67.94 C 125.41,66.99 121.87,66.04 118.33,65.09 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="106.25,62.63 85.00,68.33 106.25,74.02 127.50,68.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="85.00,68.33 63.75,74.02 85.00,79.72 106.25,74.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="4" data-value="7.5" style="animation-delay: 180ms; transform-origin: bottom;">
+      <title>Cylinder, 08:00 — Value: 7.5</title>
+      <path d="M 75.83,36.52 L 75.83,74.02 A 9.18,2.46 0 0,0 94.18,74.02 L 94.18,36.52 A 9.18,2.46 0 0,1 75.83,36.52 Z" fill="url(#cyl-grad-23b1f1)" stroke="#1a85b5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="85.00" cy="36.52" rx="9.18" ry="2.46" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="63.75,74.02 42.50,79.72 63.75,85.41 85.00,79.72" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="42.50,79.72 21.25,85.41 42.50,91.10 63.75,85.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="6" data-value="7.5" style="animation-delay: 210ms; transform-origin: bottom;">
+      <title>Prism (Box), 08:00 — Value: 7.5</title>
+      <polygon class="iso-face-left" points="24.15,47.91 42.50,52.83 42.50,90.33 24.15,85.41" fill="#1e96cd" stroke="#1e96cd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="42.50,52.83 60.85,47.91 60.85,85.41 42.50,90.33" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="42.50,42.99 24.15,47.91 42.50,52.83 60.85,47.91" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="191.25,51.25 170.00,56.94 191.25,62.63 212.50,56.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="0" data-value="8.5" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 09:00 — Value: 8.5</title>
+        
+        <path class="iso-face-top" d="M 171.45,16.55 C 174.99,16.67 178.54,15.95 182.08,16.90 L 200.43,11.98 C 196.89,11.03 193.35,11.75 189.80,11.63 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 171.45,21.55 L 171.45,16.55 C 174.99,16.67 178.54,15.95 182.08,16.90 L 182.08,21.90 C 178.54,20.95 174.99,21.67 171.45,21.55 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 182.08,16.90 C 185.62,17.85 189.16,17.46 192.70,17.75 L 211.05,12.83 C 207.51,12.55 203.97,12.93 200.43,11.98 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 182.08,21.90 L 182.08,16.90 C 185.62,17.85 189.16,17.46 192.70,17.75 L 192.70,22.75 C 189.16,22.46 185.62,22.85 182.08,21.90 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="170.00,56.94 148.75,62.63 170.00,68.33 191.25,62.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="148.75,62.63 127.50,68.33 148.75,74.02 170.00,68.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="2" data-value="8.5" style="animation-delay: 165ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 09:00 — Value: 8.5</title>
+        
+        <path class="iso-face-top" d="M 128.95,27.94 C 132.49,28.06 136.03,27.34 139.58,28.29 L 157.93,23.37 C 154.39,22.42 150.85,23.14 147.30,23.02 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 128.95,67.94 L 128.95,27.94 C 132.49,28.06 136.03,27.34 139.58,28.29 L 139.58,70.79 C 136.03,69.84 132.49,68.89 128.95,67.94 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 139.58,28.29 C 143.12,29.24 146.66,28.85 150.20,29.13 L 168.55,24.22 C 165.01,23.93 161.47,24.32 157.93,23.37 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 139.58,70.79 L 139.58,28.29 C 143.12,29.24 146.66,28.85 150.20,29.13 L 150.20,73.63 C 146.66,72.69 143.12,71.74 139.58,70.79 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="127.50,68.33 106.25,74.02 127.50,79.72 148.75,74.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="106.25,74.02 85.00,79.72 106.25,85.41 127.50,79.72" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="4" data-value="8.5" style="animation-delay: 195ms; transform-origin: bottom;">
+      <title>Cylinder, 09:00 — Value: 8.5</title>
+      <path d="M 97.08,37.22 L 97.08,79.72 A 9.18,2.46 0 0,0 115.43,79.72 L 115.43,37.22 A 9.18,2.46 0 0,1 97.08,37.22 Z" fill="url(#cyl-grad-0da2e6)" stroke="#0a7aad" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="106.25" cy="37.22" rx="9.18" ry="2.46" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="85.00,79.72 63.75,85.41 85.00,91.10 106.25,85.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="63.75,85.41 42.50,91.10 63.75,96.80 85.00,91.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="6" data-value="8.5" style="animation-delay: 225ms; transform-origin: bottom;">
+      <title>Prism (Box), 09:00 — Value: 8.5</title>
+      <polygon class="iso-face-left" points="45.40,48.60 63.75,53.52 63.75,96.02 45.40,91.10" fill="#0b8ac4" stroke="#0b8ac4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="63.75,53.52 82.10,48.60 82.10,91.10 63.75,96.02" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="63.75,43.69 45.40,48.60 63.75,53.52 82.10,48.60" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="212.50,56.94 191.25,62.63 212.50,68.33 233.75,62.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="0" data-value="9.3" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 10:00 — Value: 9.3</title>
+        
+        <path class="iso-face-top" d="M 192.70,17.75 C 196.24,18.03 199.79,17.64 203.33,18.59 L 221.68,13.68 C 218.14,12.73 214.60,13.11 211.05,12.83 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 192.70,22.75 L 192.70,17.75 C 196.24,18.03 199.79,17.64 203.33,18.59 L 203.33,23.59 C 199.79,22.64 196.24,23.03 192.70,22.75 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 203.33,18.59 C 206.87,19.54 210.41,19.66 213.95,20.19 L 232.31,15.27 C 228.76,14.74 225.22,14.62 221.68,13.68 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 203.33,23.59 L 203.33,18.59 C 206.87,19.54 210.41,19.66 213.95,20.19 L 213.95,25.19 C 210.41,24.66 206.87,24.54 203.33,23.59 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="191.25,62.63 170.00,68.33 191.25,74.02 212.50,68.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="170.00,68.33 148.75,74.02 170.00,79.72 191.25,74.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="2" data-value="9.3" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 10:00 — Value: 9.3</title>
+        
+        <path class="iso-face-top" d="M 150.20,29.13 C 153.74,29.42 157.28,29.03 160.83,29.98 L 179.18,25.06 C 175.64,24.11 172.10,24.50 168.55,24.22 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 150.20,73.63 L 150.20,29.13 C 153.74,29.42 157.28,29.03 160.83,29.98 L 160.83,76.48 C 157.28,75.53 153.74,74.58 150.20,73.63 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 160.83,29.98 C 164.37,30.93 167.91,31.05 171.45,31.58 L 189.80,26.66 C 186.26,26.13 182.72,26.01 179.18,25.06 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 160.83,76.48 L 160.83,29.98 C 164.37,30.93 167.91,31.05 171.45,31.58 L 171.45,79.33 C 167.91,78.38 164.37,77.43 160.83,76.48 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="148.75,74.02 127.50,79.72 148.75,85.41 170.00,79.72" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="127.50,79.72 106.25,85.41 127.50,91.10 148.75,85.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="4" data-value="9.3" style="animation-delay: 210ms; transform-origin: bottom;">
+      <title>Cylinder, 10:00 — Value: 9.3</title>
+      <path d="M 118.33,38.91 L 118.33,85.41 A 9.18,2.46 0 0,0 136.68,85.41 L 136.68,38.91 A 9.18,2.46 0 0,1 118.33,38.91 Z" fill="url(#cyl-grad-0792d5)" stroke="#056ea0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="127.50" cy="38.91" rx="9.18" ry="2.46" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="106.25,85.41 85.00,91.10 106.25,96.80 127.50,91.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="85.00,91.10 63.75,96.80 85.00,102.49 106.25,96.80" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="6" data-value="9.3" style="animation-delay: 240ms; transform-origin: bottom;">
+      <title>Prism (Box), 10:00 — Value: 9.3</title>
+      <polygon class="iso-face-left" points="66.65,50.30 85.00,55.22 85.00,101.72 66.65,96.80" fill="#067cb5" stroke="#067cb5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="85.00,55.22 103.35,50.30 103.35,96.80 85.00,101.72" fill="#056695" stroke="#056695" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="85.00,45.38 66.65,50.30 85.00,55.22 103.35,50.30" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="233.75,62.63 212.50,68.33 233.75,74.02 255.00,68.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="0" data-value="9.8" style="animation-delay: 165ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 11:00 — Value: 9.8</title>
+        
+        <path class="iso-face-top" d="M 213.95,20.19 C 217.49,20.72 221.04,20.84 224.58,21.79 L 242.93,16.87 C 239.39,15.92 235.85,15.80 232.31,15.27 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 213.95,25.19 L 213.95,20.19 C 217.49,20.72 221.04,20.84 224.58,21.79 L 224.58,26.79 C 221.04,25.84 217.49,25.72 213.95,25.19 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 224.58,21.79 C 228.12,22.74 231.66,23.35 235.20,24.13 L 253.56,19.22 C 250.01,18.43 246.47,17.82 242.93,16.87 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 224.58,26.79 L 224.58,21.79 C 228.12,22.74 231.66,23.35 235.20,24.13 L 235.20,29.13 C 231.66,28.35 228.12,27.74 224.58,26.79 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="212.50,68.33 191.25,74.02 212.50,79.72 233.75,74.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="191.25,74.02 170.00,79.72 191.25,85.41 212.50,79.72" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="2" data-value="9.8" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 11:00 — Value: 9.8</title>
+        
+        <path class="iso-face-top" d="M 171.45,31.58 C 174.99,32.11 178.54,32.23 182.08,33.18 L 200.43,28.26 C 196.89,27.31 193.35,27.19 189.80,26.66 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 171.45,79.33 L 171.45,31.58 C 174.99,32.11 178.54,32.23 182.08,33.18 L 182.08,82.18 C 178.54,81.23 174.99,80.28 171.45,79.33 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 182.08,33.18 C 185.62,34.12 189.16,34.74 192.70,35.52 L 211.05,30.60 C 207.51,29.82 203.97,29.21 200.43,28.26 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 182.08,82.18 L 182.08,33.18 C 185.62,34.12 189.16,34.74 192.70,35.52 L 192.70,85.02 C 189.16,84.07 185.62,83.12 182.08,82.18 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="170.00,79.72 148.75,85.41 170.00,91.10 191.25,85.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="148.75,85.41 127.50,91.10 148.75,96.80 170.00,91.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="4" data-value="9.8" style="animation-delay: 225ms; transform-origin: bottom;">
+      <title>Cylinder, 11:00 — Value: 9.8</title>
+      <path d="M 139.58,42.10 L 139.58,91.10 A 9.18,2.46 0 0,0 157.93,91.10 L 157.93,42.10 A 9.18,2.46 0 0,1 139.58,42.10 Z" fill="url(#cyl-grad-0388cb)" stroke="#026698" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="148.75" cy="42.10" rx="9.18" ry="2.46" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="127.50,91.10 106.25,96.80 127.50,102.49 148.75,96.80" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="106.25,96.80 85.00,102.49 106.25,108.19 127.50,102.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="6" data-value="9.8" style="animation-delay: 255ms; transform-origin: bottom;">
+      <title>Prism (Box), 11:00 — Value: 9.8</title>
+      <polygon class="iso-face-left" points="87.90,53.49 106.25,58.41 106.25,107.41 87.90,102.49" fill="#0374ad" stroke="#0374ad" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="106.25,58.41 124.60,53.49 124.60,102.49 106.25,107.41" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="106.25,48.57 87.90,53.49 106.25,58.41 124.60,53.49" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="255.00,68.33 233.75,74.02 255.00,79.72 276.25,74.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="0" data-value="10" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 12:00 — Value: 10</title>
+        
+        <path class="iso-face-top" d="M 235.20,24.13 C 238.74,24.92 242.29,25.53 245.83,26.48 L 264.18,21.56 C 260.64,20.61 257.10,20.00 253.56,19.22 Z" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 235.20,29.13 L 235.20,24.13 C 238.74,24.92 242.29,25.53 245.83,26.48 L 245.83,31.48 C 242.29,30.53 238.74,29.92 235.20,29.13 Z" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 245.83,26.48 C 249.37,27.43 252.91,28.71 256.45,29.83 L 274.81,24.91 C 271.26,23.79 267.72,22.51 264.18,21.56 Z" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 245.83,31.48 L 245.83,26.48 C 249.37,27.43 252.91,28.71 256.45,29.83 L 256.45,34.83 C 252.91,33.71 249.37,32.43 245.83,31.48 Z" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="233.75,74.02 212.50,79.72 233.75,85.41 255.00,79.72" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="212.50,79.72 191.25,85.41 212.50,91.10 233.75,85.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="2" data-value="10" style="animation-delay: 210ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 12:00 — Value: 10</title>
+        
+        <path class="iso-face-top" d="M 192.70,35.52 C 196.24,36.30 199.79,36.92 203.33,37.87 L 221.68,32.95 C 218.14,32.00 214.60,31.39 211.05,30.60 Z" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 192.70,85.02 L 192.70,35.52 C 196.24,36.30 199.79,36.92 203.33,37.87 L 203.33,87.87 C 199.79,86.92 196.24,85.97 192.70,85.02 Z" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 203.33,37.87 C 206.87,38.82 210.41,40.10 213.95,41.22 L 232.31,36.30 C 228.76,35.18 225.22,33.90 221.68,32.95 Z" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 203.33,87.87 L 203.33,37.87 C 206.87,38.82 210.41,40.10 213.95,41.22 L 213.95,90.72 C 210.41,89.77 206.87,88.82 203.33,87.87 Z" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="191.25,85.41 170.00,91.10 191.25,96.80 212.50,91.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="170.00,91.10 148.75,96.80 170.00,102.49 191.25,96.80" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="4" data-value="10" style="animation-delay: 240ms; transform-origin: bottom;">
+      <title>Cylinder, 12:00 — Value: 10</title>
+      <path d="M 160.83,46.80 L 160.83,96.80 A 9.18,2.46 0 0,0 179.18,96.80 L 179.18,46.80 A 9.18,2.46 0 0,1 160.83,46.80 Z" fill="url(#cyl-grad-0284c7)" stroke="#026395" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="170.00" cy="46.80" rx="9.18" ry="2.46" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="148.75,96.80 127.50,102.49 148.75,108.19 170.00,102.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="127.50,102.49 106.25,108.19 127.50,113.88 148.75,108.19" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="6" data-value="10" style="animation-delay: 270ms; transform-origin: bottom;">
+      <title>Prism (Box), 12:00 — Value: 10</title>
+      <polygon class="iso-face-left" points="109.15,58.19 127.50,63.10 127.50,113.10 109.15,108.19" fill="#0270a9" stroke="#0270a9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="127.50,63.10 145.85,58.19 145.85,108.19 127.50,113.10" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="127.50,53.27 109.15,58.19 127.50,63.10 145.85,58.19" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="276.25,74.02 255.00,79.72 276.25,85.41 297.51,79.72" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="0" data-value="9.8" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 13:00 — Value: 9.8</title>
+        
+        <path class="iso-face-top" d="M 256.45,29.83 C 260.00,30.94 263.54,32.23 267.08,33.18 L 285.43,28.26 C 281.89,27.31 278.35,26.03 274.81,24.91 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 256.45,34.83 L 256.45,29.83 C 260.00,30.94 263.54,32.23 267.08,33.18 L 267.08,38.18 C 263.54,37.23 260.00,35.94 256.45,34.83 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 267.08,33.18 C 270.62,34.12 274.16,35.91 277.70,37.27 L 296.06,32.35 C 292.51,30.99 288.97,29.21 285.43,28.26 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 267.08,38.18 L 267.08,33.18 C 270.62,34.12 274.16,35.91 277.70,37.27 L 277.70,42.27 C 274.16,40.91 270.62,39.12 267.08,38.18 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="255.00,79.72 233.75,85.41 255.00,91.10 276.25,85.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="233.75,85.41 212.50,91.10 233.75,96.80 255.00,91.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="2" data-value="9.8" style="animation-delay: 225ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 13:00 — Value: 9.8</title>
+        
+        <path class="iso-face-top" d="M 213.95,41.22 C 217.49,42.33 221.04,43.61 224.58,44.56 L 242.93,39.65 C 239.39,38.70 235.85,37.41 232.31,36.30 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 213.95,90.72 L 213.95,41.22 C 217.49,42.33 221.04,43.61 224.58,44.56 L 224.58,93.56 C 221.04,92.61 217.49,91.67 213.95,90.72 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 224.58,44.56 C 228.12,45.51 231.66,47.29 235.20,48.66 L 253.56,43.74 C 250.01,42.38 246.47,40.59 242.93,39.65 Z" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 224.58,93.56 L 224.58,44.56 C 228.12,45.51 231.66,47.29 235.20,48.66 L 235.20,96.41 C 231.66,95.46 228.12,94.51 224.58,93.56 Z" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="212.50,91.10 191.25,96.80 212.50,102.49 233.75,96.80" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="191.25,96.80 170.00,102.49 191.25,108.19 212.50,102.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="4" data-value="9.8" style="animation-delay: 255ms; transform-origin: bottom;">
+      <title>Cylinder, 13:00 — Value: 9.8</title>
+      <path d="M 182.08,53.49 L 182.08,102.49 A 9.18,2.46 0 0,0 200.43,102.49 L 200.43,53.49 A 9.18,2.46 0 0,1 182.08,53.49 Z" fill="url(#cyl-grad-0388cb)" stroke="#026698" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="191.25" cy="53.49" rx="9.18" ry="2.46" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="170.00,102.49 148.75,108.19 170.00,113.88 191.25,108.19" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="148.75,108.19 127.50,113.88 148.75,119.57 170.00,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="6" data-value="9.8" style="animation-delay: 285ms; transform-origin: bottom;">
+      <title>Prism (Box), 13:00 — Value: 9.8</title>
+      <polygon class="iso-face-left" points="130.40,64.88 148.75,69.80 148.75,118.80 130.40,113.88" fill="#0374ad" stroke="#0374ad" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="148.75,69.80 167.11,64.88 167.11,113.88 148.75,118.80" fill="#025f8e" stroke="#025f8e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="148.75,59.96 130.40,64.88 148.75,69.80 167.11,64.88" fill="#0388cb" stroke="#0388cb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="297.51,79.72 276.25,85.41 297.51,91.10 318.76,85.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="0" data-value="9.3" style="animation-delay: 210ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 14:00 — Value: 9.3</title>
+        
+        <path class="iso-face-top" d="M 277.70,37.27 C 281.25,38.64 284.79,40.42 288.33,41.37 L 306.68,36.45 C 303.14,35.50 299.60,33.72 296.06,32.35 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 277.70,42.27 L 277.70,37.27 C 281.25,38.64 284.79,40.42 288.33,41.37 L 288.33,46.37 C 284.79,45.42 281.25,43.64 277.70,42.27 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 288.33,41.37 C 291.87,42.32 295.41,44.60 298.95,46.22 L 317.31,41.30 C 313.76,39.68 310.22,37.40 306.68,36.45 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 288.33,46.37 L 288.33,41.37 C 291.87,42.32 295.41,44.60 298.95,46.22 L 298.95,51.22 C 295.41,49.60 291.87,47.32 288.33,46.37 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="276.25,85.41 255.00,91.10 276.25,96.80 297.51,91.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="255.00,91.10 233.75,96.80 255.00,102.49 276.25,96.80" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="2" data-value="9.3" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 14:00 — Value: 9.3</title>
+        
+        <path class="iso-face-top" d="M 235.20,48.66 C 238.74,50.03 242.29,51.81 245.83,52.76 L 264.18,47.84 C 260.64,46.89 257.10,45.11 253.56,43.74 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 235.20,96.41 L 235.20,48.66 C 238.74,50.03 242.29,51.81 245.83,52.76 L 245.83,99.26 C 242.29,98.31 238.74,97.36 235.20,96.41 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 245.83,52.76 C 249.37,53.71 252.91,55.99 256.45,57.60 L 274.81,52.69 C 271.26,51.07 267.72,48.79 264.18,47.84 Z" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 245.83,99.26 L 245.83,52.76 C 249.37,53.71 252.91,55.99 256.45,57.60 L 256.45,102.10 C 252.91,101.16 249.37,100.21 245.83,99.26 Z" fill="#056695" stroke="#056695" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="233.75,96.80 212.50,102.49 233.75,108.19 255.00,102.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="212.50,102.49 191.25,108.19 212.50,113.88 233.75,108.19" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="4" data-value="9.3" style="animation-delay: 270ms; transform-origin: bottom;">
+      <title>Cylinder, 14:00 — Value: 9.3</title>
+      <path d="M 203.33,61.69 L 203.33,108.19 A 9.18,2.46 0 0,0 221.68,108.19 L 221.68,61.69 A 9.18,2.46 0 0,1 203.33,61.69 Z" fill="url(#cyl-grad-0792d5)" stroke="#056ea0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="212.50" cy="61.69" rx="9.18" ry="2.46" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="191.25,108.19 170.00,113.88 191.25,119.57 212.50,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="170.00,113.88 148.75,119.57 170.00,125.27 191.25,119.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="6" data-value="9.3" style="animation-delay: 300ms; transform-origin: bottom;">
+      <title>Prism (Box), 14:00 — Value: 9.3</title>
+      <polygon class="iso-face-left" points="151.65,73.07 170.00,77.99 170.00,124.49 151.65,119.57" fill="#067cb5" stroke="#067cb5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="170.00,77.99 188.36,73.07 188.36,119.57 170.00,124.49" fill="#056695" stroke="#056695" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="170.00,68.16 151.65,73.07 170.00,77.99 188.36,73.07" fill="#0792d5" stroke="#0792d5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="318.76,85.41 297.51,91.10 318.76,96.80 340.01,91.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="0" data-value="8.5" style="animation-delay: 225ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 15:00 — Value: 8.5</title>
+        
+        <path class="iso-face-top" d="M 298.95,46.22 C 302.50,47.83 306.04,50.11 309.58,51.06 L 327.93,46.15 C 324.39,45.20 320.85,42.91 317.31,41.30 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 298.95,51.22 L 298.95,46.22 C 302.50,47.83 306.04,50.11 309.58,51.06 L 309.58,56.06 C 306.04,55.11 302.50,52.83 298.95,51.22 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 309.58,51.06 C 313.12,52.01 316.66,54.63 320.20,56.41 L 338.56,51.49 C 335.02,49.71 331.47,47.09 327.93,46.15 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 309.58,56.06 L 309.58,51.06 C 313.12,52.01 316.66,54.63 320.20,56.41 L 320.20,61.41 C 316.66,59.63 313.12,57.01 309.58,56.06 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="297.51,91.10 276.25,96.80 297.51,102.49 318.76,96.80" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="276.25,96.80 255.00,102.49 276.25,108.19 297.51,102.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="2" data-value="8.5" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 15:00 — Value: 8.5</title>
+        
+        <path class="iso-face-top" d="M 256.45,57.60 C 260.00,59.22 263.54,61.50 267.08,62.45 L 285.43,57.53 C 281.89,56.58 278.35,54.30 274.81,52.69 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 256.45,102.10 L 256.45,57.60 C 260.00,59.22 263.54,61.50 267.08,62.45 L 267.08,104.95 C 263.54,104.00 260.00,103.05 256.45,102.10 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 267.08,62.45 C 270.62,63.40 274.16,66.02 277.70,67.80 L 296.06,62.88 C 292.51,61.10 288.97,58.48 285.43,57.53 Z" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 267.08,104.95 L 267.08,62.45 C 270.62,63.40 274.16,66.02 277.70,67.80 L 277.70,107.80 C 274.16,106.85 270.62,105.90 267.08,104.95 Z" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="255.00,102.49 233.75,108.19 255.00,113.88 276.25,108.19" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="233.75,108.19 212.50,113.88 233.75,119.57 255.00,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="4" data-value="8.5" style="animation-delay: 285ms; transform-origin: bottom;">
+      <title>Cylinder, 15:00 — Value: 8.5</title>
+      <path d="M 224.58,71.38 L 224.58,113.88 A 9.18,2.46 0 0,0 242.93,113.88 L 242.93,71.38 A 9.18,2.46 0 0,1 224.58,71.38 Z" fill="url(#cyl-grad-0da2e6)" stroke="#0a7aad" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="233.75" cy="71.38" rx="9.18" ry="2.46" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="212.50,113.88 191.25,119.57 212.50,125.27 233.75,119.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="191.25,119.57 170.00,125.27 191.25,130.96 212.50,125.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="6" data-value="8.5" style="animation-delay: 315ms; transform-origin: bottom;">
+      <title>Prism (Box), 15:00 — Value: 8.5</title>
+      <polygon class="iso-face-left" points="172.90,82.77 191.25,87.69 191.25,130.19 172.90,125.27" fill="#0b8ac4" stroke="#0b8ac4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="191.25,87.69 209.61,82.77 209.61,125.27 191.25,130.19" fill="#0971a1" stroke="#0971a1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="191.25,77.85 172.90,82.77 191.25,87.69 209.61,82.77" fill="#0da2e6" stroke="#0da2e6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="340.01,91.10 318.76,96.80 340.01,102.49 361.26,96.80" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="0" data-value="7.5" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 16:00 — Value: 7.5</title>
+        
+        <path class="iso-face-top" d="M 320.20,56.41 C 323.75,58.19 327.29,60.81 330.83,61.76 L 349.18,56.84 C 345.64,55.89 342.10,53.27 338.56,51.49 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 320.20,61.41 L 320.20,56.41 C 323.75,58.19 327.29,60.81 330.83,61.76 L 330.83,66.76 C 327.29,65.81 323.75,63.19 320.20,61.41 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 330.83,61.76 C 334.37,62.71 337.91,65.66 341.45,67.60 L 359.81,62.69 C 356.27,60.74 352.72,57.79 349.18,56.84 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 330.83,66.76 L 330.83,61.76 C 334.37,62.71 337.91,65.66 341.45,67.60 L 341.45,72.60 C 337.91,70.66 334.37,67.71 330.83,66.76 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="318.76,96.80 297.51,102.49 318.76,108.19 340.01,102.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="297.51,102.49 276.25,108.19 297.51,113.88 318.76,108.19" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="2" data-value="7.5" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 16:00 — Value: 7.5</title>
+        
+        <path class="iso-face-top" d="M 277.70,67.80 C 281.25,69.58 284.79,72.20 288.33,73.15 L 306.68,68.23 C 303.14,67.28 299.60,64.66 296.06,62.88 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 277.70,107.80 L 277.70,67.80 C 281.25,69.58 284.79,72.20 288.33,73.15 L 288.33,110.65 C 284.79,109.70 281.25,108.75 277.70,107.80 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 288.33,73.15 C 291.87,74.09 295.41,77.04 298.95,78.99 L 317.31,74.07 C 313.76,72.13 310.22,69.18 306.68,68.23 Z" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 288.33,110.65 L 288.33,73.15 C 291.87,74.09 295.41,77.04 298.95,78.99 L 298.95,113.49 C 295.41,112.54 291.87,111.59 288.33,110.65 Z" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="276.25,108.19 255.00,113.88 276.25,119.57 297.51,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="255.00,113.88 233.75,119.57 255.00,125.27 276.25,119.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="4" data-value="7.5" style="animation-delay: 300ms; transform-origin: bottom;">
+      <title>Cylinder, 16:00 — Value: 7.5</title>
+      <path d="M 245.83,82.07 L 245.83,119.57 A 9.18,2.46 0 0,0 264.18,119.57 L 264.18,82.07 A 9.18,2.46 0 0,1 245.83,82.07 Z" fill="url(#cyl-grad-23b1f1)" stroke="#1a85b5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="255.00" cy="82.07" rx="9.18" ry="2.46" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="233.75,119.57 212.50,125.27 233.75,130.96 255.00,125.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="212.50,125.27 191.25,130.96 212.50,136.66 233.75,130.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="6" data-value="7.5" style="animation-delay: 330ms; transform-origin: bottom;">
+      <title>Prism (Box), 16:00 — Value: 7.5</title>
+      <polygon class="iso-face-left" points="194.15,93.46 212.50,98.38 212.50,135.88 194.15,130.96" fill="#1e96cd" stroke="#1e96cd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="212.50,98.38 230.86,93.46 230.86,130.96 212.50,135.88" fill="#197ca9" stroke="#197ca9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="212.50,88.54 194.15,93.46 212.50,98.38 230.86,93.46" fill="#23b1f1" stroke="#23b1f1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="361.26,96.80 340.01,102.49 361.26,108.19 382.51,102.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="0" data-value="6.3" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 17:00 — Value: 6.3</title>
+        
+        <path class="iso-face-top" d="M 341.45,67.60 C 345.00,69.55 348.54,72.50 352.08,73.45 L 370.43,68.53 C 366.89,67.58 363.35,64.64 359.81,62.69 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 341.45,72.60 L 341.45,67.60 C 345.00,69.55 348.54,72.50 352.08,73.45 L 352.08,78.45 C 348.54,77.50 345.00,74.55 341.45,72.60 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 352.08,73.45 C 355.62,74.40 359.16,77.52 362.71,79.55 L 381.06,74.63 C 377.52,72.60 373.97,69.48 370.43,68.53 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 352.08,78.45 L 352.08,73.45 C 355.62,74.40 359.16,77.52 362.71,79.55 L 362.71,84.55 C 359.16,82.52 355.62,79.40 352.08,78.45 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="340.01,102.49 318.76,108.19 340.01,113.88 361.26,108.19" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="318.76,108.19 297.51,113.88 318.76,119.57 340.01,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="2" data-value="6.3" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 17:00 — Value: 6.3</title>
+        
+        <path class="iso-face-top" d="M 298.95,78.99 C 302.50,80.94 306.04,83.89 309.58,84.84 L 327.93,79.92 C 324.39,78.97 320.85,76.02 317.31,74.07 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 298.95,113.49 L 298.95,78.99 C 302.50,80.94 306.04,83.89 309.58,84.84 L 309.58,116.34 C 306.04,115.39 302.50,114.44 298.95,113.49 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 309.58,84.84 C 313.12,85.79 316.66,88.90 320.20,90.94 L 338.56,86.02 C 335.02,83.99 331.47,80.87 327.93,79.92 Z" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 309.58,116.34 L 309.58,84.84 C 313.12,85.79 316.66,88.90 320.20,90.94 L 320.20,119.19 C 316.66,118.24 313.12,117.29 309.58,116.34 Z" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="297.51,113.88 276.25,119.57 297.51,125.27 318.76,119.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="276.25,119.57 255.00,125.27 276.25,130.96 297.51,125.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="4" data-value="6.3" style="animation-delay: 315ms; transform-origin: bottom;">
+      <title>Cylinder, 17:00 — Value: 6.3</title>
+      <path d="M 267.08,93.77 L 267.08,125.27 A 9.18,2.46 0 0,0 285.43,125.27 L 285.43,93.77 A 9.18,2.46 0 0,1 267.08,93.77 Z" fill="url(#cyl-grad-47c2f9)" stroke="#3592bb" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="276.25" cy="93.77" rx="9.18" ry="2.46" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="255.00,125.27 233.75,130.96 255.00,136.66 276.25,130.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="233.75,130.96 212.50,136.66 233.75,142.35 255.00,136.66" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="6" data-value="6.3" style="animation-delay: 345ms; transform-origin: bottom;">
+      <title>Prism (Box), 17:00 — Value: 6.3</title>
+      <polygon class="iso-face-left" points="215.40,105.16 233.75,110.07 233.75,141.57 215.40,136.66" fill="#3ca5d4" stroke="#3ca5d4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="233.75,110.07 252.11,105.16 252.11,136.66 233.75,141.57" fill="#3288ae" stroke="#3288ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="233.75,100.24 215.40,105.16 233.75,110.07 252.11,105.16" fill="#47c2f9" stroke="#47c2f9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="382.51,102.49 361.26,108.19 382.51,113.88 403.76,108.19" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="0" data-value="5" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 18:00 — Value: 5</title>
+        
+        <path class="iso-face-top" d="M 362.71,79.55 C 366.25,81.58 369.79,84.70 373.33,85.65 L 391.68,80.73 C 388.14,79.78 384.60,76.66 381.06,74.63 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 362.71,84.55 L 362.71,79.55 C 366.25,81.58 369.79,84.70 373.33,85.65 L 373.33,90.65 C 369.79,89.70 366.25,86.58 362.71,84.55 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 373.33,85.65 C 376.87,86.59 380.41,89.71 383.96,91.74 L 402.31,86.82 C 398.77,84.79 395.22,81.68 391.68,80.73 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 373.33,90.65 L 373.33,85.65 C 376.87,86.59 380.41,89.71 383.96,91.74 L 383.96,96.74 C 380.41,94.71 376.87,91.59 373.33,90.65 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="361.26,108.19 340.01,113.88 361.26,119.57 382.51,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="340.01,113.88 318.76,119.57 340.01,125.27 361.26,119.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="2" data-value="5" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 18:00 — Value: 5</title>
+        
+        <path class="iso-face-top" d="M 320.20,90.94 C 323.75,92.97 327.29,96.08 330.83,97.03 L 349.18,92.12 C 345.64,91.17 342.10,88.05 338.56,86.02 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 320.20,119.19 L 320.20,90.94 C 323.75,92.97 327.29,96.08 330.83,97.03 L 330.83,122.03 C 327.29,121.08 323.75,120.14 320.20,119.19 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 330.83,97.03 C 334.37,97.98 337.91,101.10 341.45,103.13 L 359.81,98.21 C 356.27,96.18 352.72,93.06 349.18,92.12 Z" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 330.83,122.03 L 330.83,97.03 C 334.37,97.98 337.91,101.10 341.45,103.13 L 341.45,124.88 C 337.91,123.93 334.37,122.98 330.83,122.03 Z" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="318.76,119.57 297.51,125.27 318.76,130.96 340.01,125.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="297.51,125.27 276.25,130.96 297.51,136.66 318.76,130.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="4" data-value="5" style="animation-delay: 330ms; transform-origin: bottom;">
+      <title>Cylinder, 18:00 — Value: 5</title>
+      <path d="M 288.33,105.96 L 288.33,130.96 A 9.18,2.46 0 0,0 306.68,130.96 L 306.68,105.96 A 9.18,2.46 0 0,1 288.33,105.96 Z" fill="url(#cyl-grad-7dd3fc)" stroke="#5e9ebd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="297.51" cy="105.96" rx="9.18" ry="2.46" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="276.25,130.96 255.00,136.66 276.25,142.35 297.51,136.66" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="255.00,136.66 233.75,142.35 255.00,148.04 276.25,142.35" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="6" data-value="5" style="animation-delay: 360ms; transform-origin: bottom;">
+      <title>Prism (Box), 18:00 — Value: 5</title>
+      <polygon class="iso-face-left" points="236.65,117.35 255.00,122.27 255.00,147.27 236.65,142.35" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="255.00,122.27 273.36,117.35 273.36,142.35 255.00,147.27" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="255.00,112.43 236.65,117.35 255.00,122.27 273.36,117.35" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="403.76,108.19 382.51,113.88 403.76,119.57 425.01,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="0" data-value="3.7" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 19:00 — Value: 3.7</title>
+        
+        <path class="iso-face-top" d="M 383.96,91.74 C 387.50,93.77 391.04,96.89 394.58,97.84 L 412.93,92.92 C 409.39,91.97 405.85,88.86 402.31,86.82 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 383.96,96.74 L 383.96,91.74 C 387.50,93.77 391.04,96.89 394.58,97.84 L 394.58,102.84 C 391.04,101.89 387.50,98.77 383.96,96.74 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 394.58,97.84 C 398.12,98.79 401.66,101.74 405.21,103.69 L 423.56,98.77 C 420.02,96.82 416.48,93.87 412.93,92.92 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 394.58,102.84 L 394.58,97.84 C 398.12,98.79 401.66,101.74 405.21,103.69 L 405.21,108.69 C 401.66,106.74 398.12,103.79 394.58,102.84 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="382.51,113.88 361.26,119.57 382.51,125.27 403.76,119.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="361.26,119.57 340.01,125.27 361.26,130.96 382.51,125.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="2" data-value="3.7" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 19:00 — Value: 3.7</title>
+        
+        <path class="iso-face-top" d="M 341.45,103.13 C 345.00,105.16 348.54,108.28 352.08,109.23 L 370.43,104.31 C 366.89,103.36 363.35,100.24 359.81,98.21 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 341.45,124.88 L 341.45,103.13 C 345.00,105.16 348.54,108.28 352.08,109.23 L 352.08,127.73 C 348.54,126.78 345.00,125.83 341.45,124.88 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 352.08,109.23 C 355.62,110.18 359.16,113.13 362.71,115.07 L 381.06,110.16 C 377.52,108.21 373.97,105.26 370.43,104.31 Z" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 352.08,127.73 L 352.08,109.23 C 355.62,110.18 359.16,113.13 362.71,115.07 L 362.71,130.57 C 359.16,129.63 355.62,128.68 352.08,127.73 Z" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="340.01,125.27 318.76,130.96 340.01,136.66 361.26,130.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="318.76,130.96 297.51,136.66 318.76,142.35 340.01,136.66" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="4" data-value="3.7" style="animation-delay: 345ms; transform-origin: bottom;">
+      <title>Cylinder, 19:00 — Value: 3.7</title>
+      <path d="M 309.58,118.16 L 309.58,136.66 A 9.18,2.46 0 0,0 327.93,136.66 L 327.93,118.16 A 9.18,2.46 0 0,1 309.58,118.16 Z" fill="url(#cyl-grad-ade2fd)" stroke="#82aabe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="318.76" cy="118.16" rx="9.18" ry="2.46" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="297.51,136.66 276.25,142.35 297.51,148.04 318.76,142.35" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="276.25,142.35 255.00,148.04 276.25,153.74 297.51,148.04" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="6" data-value="3.7" style="animation-delay: 375ms; transform-origin: bottom;">
+      <title>Prism (Box), 19:00 — Value: 3.7</title>
+      <polygon class="iso-face-left" points="257.90,129.54 276.25,134.46 276.25,152.96 257.90,148.04" fill="#93c0d7" stroke="#93c0d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="276.25,134.46 294.61,129.54 294.61,148.04 276.25,152.96" fill="#799eb1" stroke="#799eb1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="276.25,124.63 257.90,129.54 276.25,134.46 294.61,129.54" fill="#ade2fd" stroke="#ade2fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="425.01,113.88 403.76,119.57 425.01,125.27 446.26,119.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="0" data-value="2.5" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 20:00 — Value: 2.5</title>
+        
+        <path class="iso-face-top" d="M 405.21,103.69 C 408.75,105.64 412.29,108.58 415.83,109.53 L 434.18,104.62 C 430.64,103.67 427.10,100.72 423.56,98.77 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 405.21,108.69 L 405.21,103.69 C 408.75,105.64 412.29,108.58 415.83,109.53 L 415.83,114.53 C 412.29,113.58 408.75,110.64 405.21,108.69 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 415.83,109.53 C 419.37,110.48 422.91,113.10 426.46,114.88 L 444.81,109.96 C 441.27,108.18 437.73,105.56 434.18,104.62 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 415.83,114.53 L 415.83,109.53 C 419.37,110.48 422.91,113.10 426.46,114.88 L 426.46,119.88 C 422.91,118.10 419.37,115.48 415.83,114.53 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="403.76,119.57 382.51,125.27 403.76,130.96 425.01,125.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="382.51,125.27 361.26,130.96 382.51,136.66 403.76,130.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="2" data-value="2.5" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 20:00 — Value: 2.5</title>
+        
+        <path class="iso-face-top" d="M 362.71,115.07 C 366.25,117.02 369.79,119.97 373.33,120.92 L 391.68,116.00 C 388.14,115.05 384.60,112.11 381.06,110.16 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 362.71,130.57 L 362.71,115.07 C 366.25,117.02 369.79,119.97 373.33,120.92 L 373.33,133.42 C 369.79,132.47 366.25,131.52 362.71,130.57 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 373.33,120.92 C 376.87,121.87 380.41,124.49 383.96,126.27 L 402.31,121.35 C 398.77,119.57 395.22,116.95 391.68,116.00 Z" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 373.33,133.42 L 373.33,120.92 C 376.87,121.87 380.41,124.49 383.96,126.27 L 383.96,136.27 C 380.41,135.32 376.87,134.37 373.33,133.42 Z" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="361.26,130.96 340.01,136.66 361.26,142.35 382.51,136.66" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="340.01,136.66 318.76,142.35 340.01,148.04 361.26,142.35" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="4" data-value="2.5" style="animation-delay: 360ms; transform-origin: bottom;">
+      <title>Cylinder, 20:00 — Value: 2.5</title>
+      <path d="M 330.83,129.85 L 330.83,142.35 A 9.18,2.46 0 0,0 349.18,142.35 L 349.18,129.85 A 9.18,2.46 0 0,1 330.83,129.85 Z" fill="url(#cyl-grad-cdecfe)" stroke="#9ab1bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="340.01" cy="129.85" rx="9.18" ry="2.46" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="318.76,142.35 297.51,148.04 318.76,153.74 340.01,148.04" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="297.51,148.04 276.25,153.74 297.51,159.43 318.76,153.74" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="6" data-value="2.5" style="animation-delay: 390ms; transform-origin: bottom;">
+      <title>Prism (Box), 20:00 — Value: 2.5</title>
+      <polygon class="iso-face-left" points="279.15,141.24 297.51,146.16 297.51,158.66 279.15,153.74" fill="#aec9d8" stroke="#aec9d8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="297.51,146.16 315.86,141.24 315.86,153.74 297.51,158.66" fill="#90a5b2" stroke="#90a5b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="297.51,136.32 279.15,141.24 297.51,146.16 315.86,141.24" fill="#cdecfe" stroke="#cdecfe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="446.26,119.57 425.01,125.27 446.26,130.96 467.51,125.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="0" data-value="1.5" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 21:00 — Value: 1.5</title>
+        
+        <path class="iso-face-top" d="M 426.46,114.88 C 430.00,116.66 433.54,119.28 437.08,120.23 L 455.43,115.31 C 451.89,114.36 448.35,111.74 444.81,109.96 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 426.46,119.88 L 426.46,114.88 C 430.00,116.66 433.54,119.28 437.08,120.23 L 437.08,125.23 C 433.54,124.28 430.00,121.66 426.46,119.88 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 437.08,120.23 C 440.62,121.18 444.16,123.46 447.71,125.07 L 466.06,120.16 C 462.52,118.54 458.98,116.26 455.43,115.31 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 437.08,125.23 L 437.08,120.23 C 440.62,121.18 444.16,123.46 447.71,125.07 L 447.71,130.07 C 444.16,128.46 440.62,126.18 437.08,125.23 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="425.01,125.27 403.76,130.96 425.01,136.66 446.26,130.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="403.76,130.96 382.51,136.66 403.76,142.35 425.01,136.66" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="2" data-value="1.5" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 21:00 — Value: 1.5</title>
+        
+        <path class="iso-face-top" d="M 383.96,126.27 C 387.50,128.05 391.04,130.67 394.58,131.62 L 412.93,126.70 C 409.39,125.75 405.85,123.13 402.31,121.35 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 383.96,136.27 L 383.96,126.27 C 387.50,128.05 391.04,130.67 394.58,131.62 L 394.58,139.12 C 391.04,138.17 387.50,137.22 383.96,136.27 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 394.58,131.62 C 398.12,132.56 401.66,134.85 405.21,136.46 L 423.56,131.54 C 420.02,129.93 416.48,127.65 412.93,126.70 Z" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 394.58,139.12 L 394.58,131.62 C 398.12,132.56 401.66,134.85 405.21,136.46 L 405.21,141.96 C 401.66,141.01 398.12,140.06 394.58,139.12 Z" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="382.51,136.66 361.26,142.35 382.51,148.04 403.76,142.35" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="361.26,142.35 340.01,148.04 361.26,153.74 382.51,148.04" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="4" data-value="1.5" style="animation-delay: 375ms; transform-origin: bottom;">
+      <title>Cylinder, 21:00 — Value: 1.5</title>
+      <path d="M 352.08,140.54 L 352.08,148.04 A 9.18,2.46 0 0,0 370.43,148.04 L 370.43,140.54 A 9.18,2.46 0 0,1 352.08,140.54 Z" fill="url(#cyl-grad-e2f3fe)" stroke="#aab6bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="361.26" cy="140.54" rx="9.18" ry="2.46" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="340.01,148.04 318.76,153.74 340.01,159.43 361.26,153.74" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="318.76,153.74 297.51,159.43 318.76,165.13 340.01,159.43" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="6" data-value="1.5" style="animation-delay: 405ms; transform-origin: bottom;">
+      <title>Prism (Box), 21:00 — Value: 1.5</title>
+      <polygon class="iso-face-left" points="300.40,151.93 318.76,156.85 318.76,164.35 300.40,159.43" fill="#c0cfd8" stroke="#c0cfd8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="318.76,156.85 337.11,151.93 337.11,159.43 318.76,164.35" fill="#9eaab2" stroke="#9eaab2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="318.76,147.01 300.40,151.93 318.76,156.85 337.11,151.93" fill="#e2f3fe" stroke="#e2f3fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="467.51,125.27 446.26,130.96 467.51,136.66 488.76,130.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="0" data-value="0.7" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 22:00 — Value: 0.7</title>
+        
+        <path class="iso-face-top" d="M 447.71,125.07 C 451.25,126.69 454.79,128.97 458.33,129.92 L 476.68,125.00 C 473.14,124.05 469.60,121.77 466.06,120.16 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 447.71,130.07 L 447.71,125.07 C 451.25,126.69 454.79,128.97 458.33,129.92 L 458.33,134.92 C 454.79,133.97 451.25,131.69 447.71,130.07 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 458.33,129.92 C 461.87,130.87 465.42,132.65 468.96,134.02 L 487.31,129.10 C 483.77,127.73 480.23,125.95 476.68,125.00 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 458.33,134.92 L 458.33,129.92 C 461.87,130.87 465.42,132.65 468.96,134.02 L 468.96,139.02 C 465.42,137.65 461.87,135.87 458.33,134.92 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="446.26,130.96 425.01,136.66 446.26,142.35 467.51,136.66" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="425.01,136.66 403.76,142.35 425.01,148.04 446.26,142.35" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="2" data-value="0.7" style="animation-delay: 360ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 22:00 — Value: 0.7</title>
+        
+        <path class="iso-face-top" d="M 405.21,136.46 C 408.75,138.08 412.29,140.36 415.83,141.31 L 434.18,136.39 C 430.64,135.44 427.10,133.16 423.56,131.54 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 405.21,141.96 L 405.21,136.46 C 408.75,138.08 412.29,140.36 415.83,141.31 L 415.83,144.81 C 412.29,143.86 408.75,142.91 405.21,141.96 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 415.83,141.31 C 419.37,142.26 422.91,144.04 426.46,145.41 L 444.81,140.49 C 441.27,139.12 437.73,137.34 434.18,136.39 Z" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 415.83,144.81 L 415.83,141.31 C 419.37,142.26 422.91,144.04 426.46,145.41 L 426.46,147.66 C 422.91,146.71 419.37,145.76 415.83,144.81 Z" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="403.76,142.35 382.51,148.04 403.76,153.74 425.01,148.04" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="382.51,148.04 361.26,153.74 382.51,159.43 403.76,153.74" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="4" data-value="0.7" style="animation-delay: 390ms; transform-origin: bottom;">
+      <title>Cylinder, 22:00 — Value: 0.7</title>
+      <path d="M 373.33,150.24 L 373.33,153.74 A 9.18,2.46 0 0,0 391.68,153.74 L 391.68,150.24 A 9.18,2.46 0 0,1 373.33,150.24 Z" fill="url(#cyl-grad-e9f6ff)" stroke="#afb9bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="382.51" cy="150.24" rx="9.18" ry="2.46" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="361.26,153.74 340.01,159.43 361.26,165.13 382.51,159.43" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="340.01,159.43 318.76,165.13 340.01,170.82 361.26,165.13" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="6" data-value="0.7" style="animation-delay: 420ms; transform-origin: bottom;">
+      <title>Prism (Box), 22:00 — Value: 0.7</title>
+      <polygon class="iso-face-left" points="321.65,161.63 340.01,166.54 340.01,170.04 321.65,165.13" fill="#c6d1d9" stroke="#c6d1d9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="340.01,166.54 358.36,161.63 358.36,165.13 340.01,170.04" fill="#a3acb3" stroke="#a3acb3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="340.01,156.71 321.65,161.63 340.01,166.54 358.36,161.63" fill="#e9f6ff" stroke="#e9f6ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="488.76,130.96 467.51,136.66 488.76,142.35 510.01,136.66" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="0" data-value="0.2" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Flat Ribbon, 23:00 — Value: 0.2</title>
+        <polygon class="iso-face-right" points="508.56,137.04 490.21,141.96 490.21,146.96 508.56,142.04" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 468.96,134.02 C 472.50,135.38 476.04,137.17 479.58,138.12 L 497.93,133.20 C 494.39,132.25 490.85,130.47 487.31,129.10 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 468.96,139.02 L 468.96,134.02 C 472.50,135.38 476.04,137.17 479.58,138.12 L 479.58,143.12 C 476.04,142.17 472.50,140.38 468.96,139.02 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 479.58,138.12 C 483.12,139.06 486.67,140.85 490.21,141.96 L 508.56,137.04 C 505.02,135.93 501.48,134.15 497.93,133.20 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 479.58,143.12 L 479.58,138.12 C 483.12,139.06 486.67,140.85 490.21,141.96 L 490.21,146.96 C 486.67,145.85 483.12,144.06 479.58,143.12 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="467.51,136.66 446.26,142.35 467.51,148.04 488.76,142.35" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="446.26,142.35 425.01,148.04 446.26,153.74 467.51,148.04" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="2" data-value="0.2" style="animation-delay: 375ms; transform-origin: bottom;">
+        <title>Continuous Ribbon, 23:00 — Value: 0.2</title>
+        <polygon class="iso-face-right" points="466.06,148.43 447.71,153.35 447.71,153.35 466.06,148.43" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 426.46,145.41 C 430.00,146.77 433.54,148.55 437.08,149.50 L 455.43,144.59 C 451.89,143.64 448.35,141.85 444.81,140.49 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 426.46,147.66 L 426.46,145.41 C 430.00,146.77 433.54,148.55 437.08,149.50 L 437.08,150.50 C 433.54,149.55 430.00,148.61 426.46,147.66 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 437.08,149.50 C 440.62,150.45 444.16,152.23 447.71,153.35 L 466.06,148.43 C 462.52,147.32 458.98,145.53 455.43,144.59 Z" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 437.08,150.50 L 437.08,149.50 C 440.62,150.45 444.16,152.23 447.71,153.35 L 447.71,153.35 C 444.16,152.40 440.62,151.45 437.08,150.50 Z" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="425.01,148.04 403.76,153.74 425.01,159.43 446.26,153.74" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="403.76,153.74 382.51,159.43 403.76,165.13 425.01,159.43" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="4" data-value="0.2" style="animation-delay: 405ms; transform-origin: bottom;">
+      <title>Cylinder, 23:00 — Value: 0.2</title>
+      <path d="M 394.58,158.43 L 394.58,159.43 A 9.18,2.46 0 0,0 412.93,159.43 L 412.93,158.43 A 9.18,2.46 0 0,1 394.58,158.43 Z" fill="url(#cyl-grad-eef8ff)" stroke="#b3babf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="403.76" cy="158.43" rx="9.18" ry="2.46" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="382.51,159.43 361.26,165.13 382.51,170.82 403.76,165.13" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="361.26,165.13 340.01,170.82 361.26,176.51 382.51,170.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="6" data-value="0.2" style="animation-delay: 435ms; transform-origin: bottom;">
+      <title>Prism (Box), 23:00 — Value: 0.2</title>
+      <polygon class="iso-face-left" points="342.90,169.82 361.26,174.74 361.26,175.74 342.90,170.82" fill="#cad3d9" stroke="#cad3d9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="361.26,174.74 379.61,169.82 379.61,170.82 361.26,175.74" fill="#a7aeb3" stroke="#a7aeb3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="361.26,164.90 342.90,169.82 361.26,174.74 379.61,169.82" fill="#eef8ff" stroke="#eef8ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+    </g>
+  </svg>

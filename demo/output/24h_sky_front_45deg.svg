@@ -1,0 +1,1013 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-124.85 -28.24 452.04 406.72" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>Hourly User Load (24h Preset)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    
+    <text x="101.17" y="-14.24" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Hourly User Load (24h Preset)</text>
+    <g>
+      <polygon class="iso-grid-cell" points="0.00,0.00 -11.31,11.31 0.00,22.63 11.31,11.31" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="7" style="animation-delay: 0ms; transform-origin: bottom;">
+      <title>Mon, 00:00 — 7 events</title>
+      <polygon class="iso-face-left" points="-9.90,1.66 0.00,11.56 0.00,21.21 -9.90,11.31" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,11.56 9.90,1.66 9.90,11.31 0.00,21.21" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,-8.24 -9.90,1.66 0.00,11.56 9.90,1.66" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-11.31,11.31 -22.63,22.63 -11.31,33.94 0.00,22.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="6" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>Tue, 00:00 — 6 events</title>
+      <polygon class="iso-face-left" points="-21.21,14.35 -11.31,24.25 -11.31,32.53 -21.21,22.63" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-11.31,24.25 -1.41,14.35 -1.41,22.63 -11.31,32.53" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-11.31,4.45 -21.21,14.35 -11.31,24.25 -1.41,14.35" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-22.63,22.63 -33.94,33.94 -22.63,45.25 -11.31,33.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="1" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>Wed, 00:00 — 1 events</title>
+      <polygon class="iso-face-left" points="-32.53,32.56 -22.63,42.46 -22.63,43.84 -32.53,33.94" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-22.63,42.46 -12.73,32.56 -12.73,33.94 -22.63,43.84" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-22.63,22.66 -32.53,32.56 -22.63,42.46 -12.73,32.56" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-33.94,33.94 -45.25,45.25 -33.94,56.57 -22.63,45.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="1" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>Thu, 00:00 — 1 events</title>
+      <polygon class="iso-face-left" points="-43.84,43.88 -33.94,53.78 -33.94,55.15 -43.84,45.25" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-33.94,53.78 -24.04,43.88 -24.04,45.25 -33.94,55.15" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-33.94,33.98 -43.84,43.88 -33.94,53.78 -24.04,43.88" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-45.25,45.25 -56.57,56.57 -45.25,67.88 -33.94,56.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="6" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Fri, 00:00 — 6 events</title>
+      <polygon class="iso-face-left" points="-55.15,48.29 -45.25,58.19 -45.25,66.47 -55.15,56.57" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-45.25,58.19 -35.36,48.29 -35.36,56.57 -45.25,66.47" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-45.25,38.39 -55.15,48.29 -45.25,58.19 -35.36,48.29" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-56.57,56.57 -67.88,67.88 -56.57,79.20 -45.25,67.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="5" data-value="5" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Sat, 00:00 — 5 events</title>
+      <polygon class="iso-face-left" points="-66.47,60.99 -56.57,70.89 -56.57,77.78 -66.47,67.88" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-56.57,70.89 -46.67,60.99 -46.67,67.88 -56.57,77.78" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-56.57,51.09 -66.47,60.99 -56.57,70.89 -46.67,60.99" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-67.88,67.88 -79.20,79.20 -67.88,90.51 -56.57,79.20" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="6" data-value="1" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>Sun, 00:00 — 1 events</title>
+      <polygon class="iso-face-left" points="-77.78,77.82 -67.88,87.72 -67.88,89.10 -77.78,79.20" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-67.88,87.72 -57.98,77.82 -57.98,79.20 -67.88,89.10" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-67.88,67.92 -77.78,77.82 -67.88,87.72 -57.98,77.82" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="11.31,11.31 0.00,22.63 11.31,33.94 22.63,22.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="0" style="animation-delay: 15ms; transform-origin: bottom;">
+        <title>Mon, 01:00 — 0 events</title>
+        <polygon points="11.31,12.73 1.41,22.63 11.31,32.53 21.21,22.63" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,22.63 -11.31,33.94 0.00,45.25 11.31,33.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>Tue, 01:00 — 0 events</title>
+        <polygon points="0.00,24.04 -9.90,33.94 0.00,43.84 9.90,33.94" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-11.31,33.94 -22.63,45.25 -11.31,56.57 0.00,45.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Wed, 01:00 — 0 events</title>
+        <polygon points="-11.31,35.36 -21.21,45.25 -11.31,55.15 -1.41,45.25" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-22.63,45.25 -33.94,56.57 -22.63,67.88 -11.31,56.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Thu, 01:00 — 0 events</title>
+        <polygon points="-22.63,46.67 -32.53,56.57 -22.63,66.47 -12.73,56.57" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-33.94,56.57 -45.25,67.88 -33.94,79.20 -22.63,67.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="0" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>Fri, 01:00 — 0 events</title>
+        <polygon points="-33.94,57.98 -43.84,67.88 -33.94,77.78 -24.04,67.88" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-45.25,67.88 -56.57,79.20 -45.25,90.51 -33.94,79.20" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="5" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Sat, 01:00 — 0 events</title>
+        <polygon points="-45.25,69.30 -55.15,79.20 -45.25,89.10 -35.36,79.20" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-56.57,79.20 -67.88,90.51 -56.57,101.82 -45.25,90.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="6" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Sun, 01:00 — 0 events</title>
+        <polygon points="-56.57,80.61 -66.47,90.51 -56.57,100.41 -46.67,90.51" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="22.63,22.63 11.31,33.94 22.63,45.25 33.94,33.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>Mon, 02:00 — 0 events</title>
+        <polygon points="22.63,24.04 12.73,33.94 22.63,43.84 32.53,33.94" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="11.31,33.94 0.00,45.25 11.31,56.57 22.63,45.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Tue, 02:00 — 0 events</title>
+        <polygon points="11.31,35.36 1.41,45.25 11.31,55.15 21.21,45.25" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,45.25 -11.31,56.57 0.00,67.88 11.31,56.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="2" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Wed, 02:00 — 0 events</title>
+        <polygon points="0.00,46.67 -9.90,56.57 0.00,66.47 9.90,56.57" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-11.31,56.57 -22.63,67.88 -11.31,79.20 0.00,67.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="3" data-value="0" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>Thu, 02:00 — 0 events</title>
+        <polygon points="-11.31,57.98 -21.21,67.88 -11.31,77.78 -1.41,67.88" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-22.63,67.88 -33.94,79.20 -22.63,90.51 -11.31,79.20" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Fri, 02:00 — 0 events</title>
+        <polygon points="-22.63,69.30 -32.53,79.20 -22.63,89.10 -12.73,79.20" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-33.94,79.20 -45.25,90.51 -33.94,101.82 -22.63,90.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="5" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Sat, 02:00 — 0 events</title>
+        <polygon points="-33.94,80.61 -43.84,90.51 -33.94,100.41 -24.04,90.51" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-45.25,90.51 -56.57,101.82 -45.25,113.14 -33.94,101.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="6" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Sun, 02:00 — 0 events</title>
+        <polygon points="-45.25,91.92 -55.15,101.82 -45.25,111.72 -35.36,101.82" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="33.94,33.94 22.63,45.25 33.94,56.57 45.25,45.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="3" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>Mon, 03:00 — 3 events</title>
+      <polygon class="iso-face-left" points="24.04,41.12 33.94,51.02 33.94,55.15 24.04,45.25" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="33.94,51.02 43.84,41.12 43.84,45.25 33.94,55.15" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="33.94,31.22 24.04,41.12 33.94,51.02 43.84,41.12" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="22.63,45.25 11.31,56.57 22.63,67.88 33.94,56.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="6" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Tue, 03:00 — 6 events</title>
+      <polygon class="iso-face-left" points="12.73,48.29 22.63,58.19 22.63,66.47 12.73,56.57" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="22.63,58.19 32.53,48.29 32.53,56.57 22.63,66.47" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="22.63,38.39 12.73,48.29 22.63,58.19 32.53,48.29" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="11.31,56.57 0.00,67.88 11.31,79.20 22.63,67.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="2" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Wed, 03:00 — 2 events</title>
+      <polygon class="iso-face-left" points="1.41,65.12 11.31,75.02 11.31,77.78 1.41,67.88" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="11.31,75.02 21.21,65.12 21.21,67.88 11.31,77.78" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="11.31,55.22 1.41,65.12 11.31,75.02 21.21,65.12" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,67.88 -11.31,79.20 0.00,90.51 11.31,79.20" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="3" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>Thu, 03:00 — 3 events</title>
+      <polygon class="iso-face-left" points="-9.90,75.06 0.00,84.96 0.00,89.10 -9.90,79.20" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,84.96 9.90,75.06 9.90,79.20 0.00,89.10" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,65.16 -9.90,75.06 0.00,84.96 9.90,75.06" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-11.31,79.20 -22.63,90.51 -11.31,101.82 0.00,90.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="1" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Fri, 03:00 — 1 events</title>
+      <polygon class="iso-face-left" points="-21.21,89.13 -11.31,99.03 -11.31,100.41 -21.21,90.51" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-11.31,99.03 -1.41,89.13 -1.41,90.51 -11.31,100.41" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-11.31,79.23 -21.21,89.13 -11.31,99.03 -1.41,89.13" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-22.63,90.51 -33.94,101.82 -22.63,113.14 -11.31,101.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="5" data-value="4" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Sat, 03:00 — 4 events</title>
+      <polygon class="iso-face-left" points="-32.53,96.31 -22.63,106.21 -22.63,111.72 -32.53,101.82" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-22.63,106.21 -12.73,96.31 -12.73,101.82 -22.63,111.72" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-22.63,86.41 -32.53,96.31 -22.63,106.21 -12.73,96.31" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-33.94,101.82 -45.25,113.14 -33.94,124.45 -22.63,113.14" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="6" data-value="1" style="animation-delay: 135ms; transform-origin: bottom;">
+      <title>Sun, 03:00 — 1 events</title>
+      <polygon class="iso-face-left" points="-43.84,111.76 -33.94,121.66 -33.94,123.04 -43.84,113.14" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-33.94,121.66 -24.04,111.76 -24.04,113.14 -33.94,123.04" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-33.94,101.86 -43.84,111.76 -33.94,121.66 -24.04,111.76" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="45.25,45.25 33.94,56.57 45.25,67.88 56.57,56.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Mon, 04:00 — 0 events</title>
+        <polygon points="45.25,46.67 35.36,56.57 45.25,66.47 55.15,56.57" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="33.94,56.57 22.63,67.88 33.94,79.20 45.25,67.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="0" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>Tue, 04:00 — 0 events</title>
+        <polygon points="33.94,57.98 24.04,67.88 33.94,77.78 43.84,67.88" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="22.63,67.88 11.31,79.20 22.63,90.51 33.94,79.20" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="2" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Wed, 04:00 — 0 events</title>
+        <polygon points="22.63,69.30 12.73,79.20 22.63,89.10 32.53,79.20" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="11.31,79.20 0.00,90.51 11.31,101.82 22.63,90.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="3" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Thu, 04:00 — 0 events</title>
+        <polygon points="11.31,80.61 1.41,90.51 11.31,100.41 21.21,90.51" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,90.51 -11.31,101.82 0.00,113.14 11.31,101.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="4" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Fri, 04:00 — 0 events</title>
+        <polygon points="0.00,91.92 -9.90,101.82 0.00,111.72 9.90,101.82" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-11.31,101.82 -22.63,113.14 -11.31,124.45 0.00,113.14" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="5" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Sat, 04:00 — 0 events</title>
+        <polygon points="-11.31,103.24 -21.21,113.14 -11.31,123.04 -1.41,113.14" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-22.63,113.14 -33.94,124.45 -22.63,135.76 -11.31,124.45" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="6" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Sun, 04:00 — 0 events</title>
+        <polygon points="-22.63,114.55 -32.53,124.45 -22.63,134.35 -12.73,124.45" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="56.57,56.57 45.25,67.88 56.57,79.20 67.88,67.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="0" data-value="0" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>Mon, 05:00 — 0 events</title>
+        <polygon points="56.57,57.98 46.67,67.88 56.57,77.78 66.47,67.88" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="45.25,67.88 33.94,79.20 45.25,90.51 56.57,79.20" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="1" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Tue, 05:00 — 0 events</title>
+        <polygon points="45.25,69.30 35.36,79.20 45.25,89.10 55.15,79.20" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="33.94,79.20 22.63,90.51 33.94,101.82 45.25,90.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="2" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Wed, 05:00 — 0 events</title>
+        <polygon points="33.94,80.61 24.04,90.51 33.94,100.41 43.84,90.51" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="22.63,90.51 11.31,101.82 22.63,113.14 33.94,101.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="3" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Thu, 05:00 — 0 events</title>
+        <polygon points="22.63,91.92 12.73,101.82 22.63,111.72 32.53,101.82" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="11.31,101.82 0.00,113.14 11.31,124.45 22.63,113.14" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="4" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Fri, 05:00 — 0 events</title>
+        <polygon points="11.31,103.24 1.41,113.14 11.31,123.04 21.21,113.14" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,113.14 -11.31,124.45 0.00,135.76 11.31,124.45" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="5" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Sat, 05:00 — 0 events</title>
+        <polygon points="0.00,114.55 -9.90,124.45 0.00,134.35 9.90,124.45" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-11.31,124.45 -22.63,135.76 -11.31,147.08 0.00,135.76" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="6" data-value="0" style="animation-delay: 165ms; transform-origin: bottom;">
+        <title>Sun, 05:00 — 0 events</title>
+        <polygon points="-11.31,125.87 -21.21,135.76 -11.31,145.66 -1.41,135.76" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="67.88,67.88 56.57,79.20 67.88,90.51 79.20,79.20" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="0" data-value="3" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>Mon, 06:00 — 3 events</title>
+      <polygon class="iso-face-left" points="57.98,75.06 67.88,84.96 67.88,89.10 57.98,79.20" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="67.88,84.96 77.78,75.06 77.78,79.20 67.88,89.10" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="67.88,65.16 57.98,75.06 67.88,84.96 77.78,75.06" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="56.57,79.20 45.25,90.51 56.57,101.82 67.88,90.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="1" data-value="1" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Tue, 06:00 — 1 events</title>
+      <polygon class="iso-face-left" points="46.67,89.13 56.57,99.03 56.57,100.41 46.67,90.51" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="56.57,99.03 66.47,89.13 66.47,90.51 56.57,100.41" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="56.57,79.23 46.67,89.13 56.57,99.03 66.47,89.13" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="45.25,90.51 33.94,101.82 45.25,113.14 56.57,101.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="2" data-value="6" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Wed, 06:00 — 6 events</title>
+      <polygon class="iso-face-left" points="35.36,93.55 45.25,103.45 45.25,111.72 35.36,101.82" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="45.25,103.45 55.15,93.55 55.15,101.82 45.25,111.72" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="45.25,83.65 35.36,93.55 45.25,103.45 55.15,93.55" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="33.94,101.82 22.63,113.14 33.94,124.45 45.25,113.14" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="3" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Thu, 06:00 — 0 events</title>
+        <polygon points="33.94,103.24 24.04,113.14 33.94,123.04 43.84,113.14" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="22.63,113.14 11.31,124.45 22.63,135.76 33.94,124.45" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="4" data-value="6" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Fri, 06:00 — 6 events</title>
+      <polygon class="iso-face-left" points="12.73,116.17 22.63,126.07 22.63,134.35 12.73,124.45" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="22.63,126.07 32.53,116.17 32.53,124.45 22.63,134.35" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="22.63,106.28 12.73,116.17 22.63,126.07 32.53,116.17" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="11.31,124.45 0.00,135.76 11.31,147.08 22.63,135.76" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="5" data-value="6" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Sat, 06:00 — 6 events</title>
+      <polygon class="iso-face-left" points="1.41,127.49 11.31,137.39 11.31,145.66 1.41,135.76" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="11.31,137.39 21.21,127.49 21.21,135.76 11.31,145.66" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="11.31,117.59 1.41,127.49 11.31,137.39 21.21,127.49" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,135.76 -11.31,147.08 0.00,158.39 11.31,147.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="6" data-value="4" style="animation-delay: 180ms; transform-origin: bottom;">
+      <title>Sun, 06:00 — 4 events</title>
+      <polygon class="iso-face-left" points="-9.90,141.56 0.00,151.46 0.00,156.98 -9.90,147.08" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,151.46 9.90,141.56 9.90,147.08 0.00,156.98" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,131.66 -9.90,141.56 0.00,151.46 9.90,141.56" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="79.20,79.20 67.88,90.51 79.20,101.82 90.51,90.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="0" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Mon, 07:00 — 0 events</title>
+        <polygon points="79.20,80.61 69.30,90.51 79.20,100.41 89.10,90.51" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="67.88,90.51 56.57,101.82 67.88,113.14 79.20,101.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="1" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Tue, 07:00 — 0 events</title>
+        <polygon points="67.88,91.92 57.98,101.82 67.88,111.72 77.78,101.82" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="56.57,101.82 45.25,113.14 56.57,124.45 67.88,113.14" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="2" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Wed, 07:00 — 0 events</title>
+        <polygon points="56.57,103.24 46.67,113.14 56.57,123.04 66.47,113.14" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="45.25,113.14 33.94,124.45 45.25,135.76 56.57,124.45" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="3" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Thu, 07:00 — 0 events</title>
+        <polygon points="45.25,114.55 35.36,124.45 45.25,134.35 55.15,124.45" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="33.94,124.45 22.63,135.76 33.94,147.08 45.25,135.76" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="4" data-value="0" style="animation-delay: 165ms; transform-origin: bottom;">
+        <title>Fri, 07:00 — 0 events</title>
+        <polygon points="33.94,125.87 24.04,135.76 33.94,145.66 43.84,135.76" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="22.63,135.76 11.31,147.08 22.63,158.39 33.94,147.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="5" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Sat, 07:00 — 0 events</title>
+        <polygon points="22.63,137.18 12.73,147.08 22.63,156.98 32.53,147.08" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="11.31,147.08 0.00,158.39 11.31,169.71 22.63,158.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="6" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Sun, 07:00 — 0 events</title>
+        <polygon points="11.31,148.49 1.41,158.39 11.31,168.29 21.21,158.39" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="90.51,90.51 79.20,101.82 90.51,113.14 101.82,101.82" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="0" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Mon, 08:00 — 0 events</title>
+        <polygon points="90.51,91.92 80.61,101.82 90.51,111.72 100.41,101.82" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="79.20,101.82 67.88,113.14 79.20,124.45 90.51,113.14" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="1" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Tue, 08:00 — 0 events</title>
+        <polygon points="79.20,103.24 69.30,113.14 79.20,123.04 89.10,113.14" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="67.88,113.14 56.57,124.45 67.88,135.76 79.20,124.45" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="2" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Wed, 08:00 — 0 events</title>
+        <polygon points="67.88,114.55 57.98,124.45 67.88,134.35 77.78,124.45" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="56.57,124.45 45.25,135.76 56.57,147.08 67.88,135.76" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="3" data-value="0" style="animation-delay: 165ms; transform-origin: bottom;">
+        <title>Thu, 08:00 — 0 events</title>
+        <polygon points="56.57,125.87 46.67,135.76 56.57,145.66 66.47,135.76" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="45.25,135.76 33.94,147.08 45.25,158.39 56.57,147.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="4" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Fri, 08:00 — 0 events</title>
+        <polygon points="45.25,137.18 35.36,147.08 45.25,156.98 55.15,147.08" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="33.94,147.08 22.63,158.39 33.94,169.71 45.25,158.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="5" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Sat, 08:00 — 0 events</title>
+        <polygon points="33.94,148.49 24.04,158.39 33.94,168.29 43.84,158.39" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="22.63,158.39 11.31,169.71 22.63,181.02 33.94,169.71" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="6" data-value="0" style="animation-delay: 210ms; transform-origin: bottom;">
+        <title>Sun, 08:00 — 0 events</title>
+        <polygon points="22.63,159.81 12.73,169.71 22.63,179.61 32.53,169.71" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="101.82,101.82 90.51,113.14 101.82,124.45 113.14,113.14" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="0" data-value="5" style="animation-delay: 135ms; transform-origin: bottom;">
+      <title>Mon, 09:00 — 5 events</title>
+      <polygon class="iso-face-left" points="91.92,106.24 101.82,116.14 101.82,123.04 91.92,113.14" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="101.82,116.14 111.72,106.24 111.72,113.14 101.82,123.04" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="101.82,96.34 91.92,106.24 101.82,116.14 111.72,106.24" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="90.51,113.14 79.20,124.45 90.51,135.76 101.82,124.45" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="1" data-value="1" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Tue, 09:00 — 1 events</title>
+      <polygon class="iso-face-left" points="80.61,123.07 90.51,132.97 90.51,134.35 80.61,124.45" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="90.51,132.97 100.41,123.07 100.41,124.45 90.51,134.35" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="90.51,113.17 80.61,123.07 90.51,132.97 100.41,123.07" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="79.20,124.45 67.88,135.76 79.20,147.08 90.51,135.76" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="2" data-value="3" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Wed, 09:00 — 3 events</title>
+      <polygon class="iso-face-left" points="69.30,131.63 79.20,141.53 79.20,145.66 69.30,135.76" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="79.20,141.53 89.10,131.63 89.10,135.76 79.20,145.66" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="79.20,121.73 69.30,131.63 79.20,141.53 89.10,131.63" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="67.88,135.76 56.57,147.08 67.88,158.39 79.20,147.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="3" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Thu, 09:00 — 0 events</title>
+        <polygon points="67.88,137.18 57.98,147.08 67.88,156.98 77.78,147.08" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="56.57,147.08 45.25,158.39 56.57,169.71 67.88,158.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="4" data-value="4" style="animation-delay: 195ms; transform-origin: bottom;">
+      <title>Fri, 09:00 — 4 events</title>
+      <polygon class="iso-face-left" points="46.67,152.87 56.57,162.77 56.57,168.29 46.67,158.39" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="56.57,162.77 66.47,152.87 66.47,158.39 56.57,168.29" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="56.57,142.98 46.67,152.87 56.57,162.77 66.47,152.87" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="45.25,158.39 33.94,169.71 45.25,181.02 56.57,169.71" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="5" data-value="1" style="animation-delay: 210ms; transform-origin: bottom;">
+      <title>Sat, 09:00 — 1 events</title>
+      <polygon class="iso-face-left" points="35.36,168.33 45.25,178.23 45.25,179.61 35.36,169.71" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="45.25,178.23 55.15,168.33 55.15,169.71 45.25,179.61" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="45.25,158.43 35.36,168.33 45.25,178.23 55.15,168.33" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="33.94,169.71 22.63,181.02 33.94,192.33 45.25,181.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="6" data-value="5" style="animation-delay: 225ms; transform-origin: bottom;">
+      <title>Sun, 09:00 — 5 events</title>
+      <polygon class="iso-face-left" points="24.04,174.12 33.94,184.02 33.94,190.92 24.04,181.02" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="33.94,184.02 43.84,174.12 43.84,181.02 33.94,190.92" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="33.94,164.22 24.04,174.12 33.94,184.02 43.84,174.12" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="113.14,113.14 101.82,124.45 113.14,135.76 124.45,124.45" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="0" data-value="19" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Mon, 10:00 — 19 events</title>
+      <polygon class="iso-face-left" points="103.24,98.24 113.14,108.14 113.14,134.35 103.24,124.45" fill="#30a1d3" stroke="#30a1d3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="113.14,108.14 123.04,98.24 123.04,124.45 113.14,134.35" fill="#2784ae" stroke="#2784ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="113.14,88.34 103.24,98.24 113.14,108.14 123.04,98.24" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="101.82,124.45 90.51,135.76 101.82,147.08 113.14,135.76" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="1" data-value="13" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Tue, 10:00 — 13 events</title>
+      <polygon class="iso-face-left" points="91.92,117.83 101.82,127.73 101.82,145.66 91.92,135.76" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="101.82,127.73 111.72,117.83 111.72,135.76 101.82,145.66" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="101.82,107.93 91.92,117.83 101.82,127.73 111.72,117.83" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="90.51,135.76 79.20,147.08 90.51,158.39 101.82,147.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="2" data-value="23" style="animation-delay: 180ms; transform-origin: bottom;">
+      <title>Wed, 10:00 — 23 events</title>
+      <polygon class="iso-face-left" points="80.61,115.35 90.51,125.25 90.51,156.98 80.61,147.08" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="90.51,125.25 100.41,115.35 100.41,147.08 90.51,156.98" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="90.51,105.45 80.61,115.35 90.51,125.25 100.41,115.35" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="79.20,147.08 67.88,158.39 79.20,169.71 90.51,158.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="3" data-value="25" style="animation-delay: 195ms; transform-origin: bottom;">
+      <title>Thu, 10:00 — 25 events</title>
+      <polygon class="iso-face-left" points="69.30,123.91 79.20,133.81 79.20,168.29 69.30,158.39" fill="#0270a9" stroke="#0270a9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="79.20,133.81 89.10,123.91 89.10,158.39 79.20,168.29" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="79.20,114.01 69.30,123.91 79.20,133.81 89.10,123.91" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="67.88,158.39 56.57,169.71 67.88,181.02 79.20,169.71" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="4" data-value="12" style="animation-delay: 210ms; transform-origin: bottom;">
+      <title>Fri, 10:00 — 12 events</title>
+      <polygon class="iso-face-left" points="57.98,153.15 67.88,163.05 67.88,179.61 57.98,169.71" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="67.88,163.05 77.78,153.15 77.78,169.71 67.88,179.61" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="67.88,143.25 57.98,153.15 67.88,163.05 77.78,153.15" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="56.57,169.71 45.25,181.02 56.57,192.33 67.88,181.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="5" data-value="17" style="animation-delay: 225ms; transform-origin: bottom;">
+      <title>Sat, 10:00 — 17 events</title>
+      <polygon class="iso-face-left" points="46.67,157.57 56.57,167.47 56.57,190.92 46.67,181.02" fill="#30a1d3" stroke="#30a1d3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="56.57,167.47 66.47,157.57 66.47,181.02 56.57,190.92" fill="#2784ae" stroke="#2784ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="56.57,147.67 46.67,157.57 56.57,167.47 66.47,157.57" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="45.25,181.02 33.94,192.33 45.25,203.65 56.57,192.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="6" data-value="29" style="animation-delay: 240ms; transform-origin: bottom;">
+      <title>Sun, 10:00 — 29 events</title>
+      <polygon class="iso-face-left" points="35.36,152.33 45.25,162.23 45.25,202.23 35.36,192.33" fill="#0270a9" stroke="#0270a9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="45.25,162.23 55.15,152.33 55.15,192.33 45.25,202.23" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="45.25,142.43 35.36,152.33 45.25,162.23 55.15,152.33" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="124.45,124.45 113.14,135.76 124.45,147.08 135.76,135.76" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="0" data-value="0" style="animation-delay: 165ms; transform-origin: bottom;">
+        <title>Mon, 11:00 — 0 events</title>
+        <polygon points="124.45,125.87 114.55,135.76 124.45,145.66 134.35,135.76" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="113.14,135.76 101.82,147.08 113.14,158.39 124.45,147.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="1" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Tue, 11:00 — 0 events</title>
+        <polygon points="113.14,137.18 103.24,147.08 113.14,156.98 123.04,147.08" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="101.82,147.08 90.51,158.39 101.82,169.71 113.14,158.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="2" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Wed, 11:00 — 0 events</title>
+        <polygon points="101.82,148.49 91.92,158.39 101.82,168.29 111.72,158.39" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="90.51,158.39 79.20,169.71 90.51,181.02 101.82,169.71" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="3" data-value="0" style="animation-delay: 210ms; transform-origin: bottom;">
+        <title>Thu, 11:00 — 0 events</title>
+        <polygon points="90.51,159.81 80.61,169.71 90.51,179.61 100.41,169.71" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="79.20,169.71 67.88,181.02 79.20,192.33 90.51,181.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="4" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
+        <title>Fri, 11:00 — 0 events</title>
+        <polygon points="79.20,171.12 69.30,181.02 79.20,190.92 89.10,181.02" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="67.88,181.02 56.57,192.33 67.88,203.65 79.20,192.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="5" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Sat, 11:00 — 0 events</title>
+        <polygon points="67.88,182.43 57.98,192.33 67.88,202.23 77.78,192.33" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="56.57,192.33 45.25,203.65 56.57,214.96 67.88,203.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="6" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Sun, 11:00 — 0 events</title>
+        <polygon points="56.57,193.75 46.67,203.65 56.57,213.55 66.47,203.65" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="135.76,135.76 124.45,147.08 135.76,158.39 147.08,147.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="0" data-value="1" style="animation-delay: 180ms; transform-origin: bottom;">
+      <title>Mon, 12:00 — 1 events</title>
+      <polygon class="iso-face-left" points="125.87,145.70 135.76,155.60 135.76,156.98 125.87,147.08" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="135.76,155.60 145.66,145.70 145.66,147.08 135.76,156.98" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="135.76,135.80 125.87,145.70 135.76,155.60 145.66,145.70" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="124.45,147.08 113.14,158.39 124.45,169.71 135.76,158.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="1" data-value="2" style="animation-delay: 195ms; transform-origin: bottom;">
+      <title>Tue, 12:00 — 2 events</title>
+      <polygon class="iso-face-left" points="114.55,155.63 124.45,165.53 124.45,168.29 114.55,158.39" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="124.45,165.53 134.35,155.63 134.35,158.39 124.45,168.29" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="124.45,145.73 114.55,155.63 124.45,165.53 134.35,155.63" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="113.14,158.39 101.82,169.71 113.14,181.02 124.45,169.71" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="2" data-value="5" style="animation-delay: 210ms; transform-origin: bottom;">
+      <title>Wed, 12:00 — 5 events</title>
+      <polygon class="iso-face-left" points="103.24,162.81 113.14,172.71 113.14,179.61 103.24,169.71" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="113.14,172.71 123.04,162.81 123.04,169.71 113.14,179.61" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="113.14,152.91 103.24,162.81 113.14,172.71 123.04,162.81" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="101.82,169.71 90.51,181.02 101.82,192.33 113.14,181.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="3" data-value="5" style="animation-delay: 225ms; transform-origin: bottom;">
+      <title>Thu, 12:00 — 5 events</title>
+      <polygon class="iso-face-left" points="91.92,174.12 101.82,184.02 101.82,190.92 91.92,181.02" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="101.82,184.02 111.72,174.12 111.72,181.02 101.82,190.92" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="101.82,164.22 91.92,174.12 101.82,184.02 111.72,174.12" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="90.51,181.02 79.20,192.33 90.51,203.65 101.82,192.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="4" data-value="6" style="animation-delay: 240ms; transform-origin: bottom;">
+      <title>Fri, 12:00 — 6 events</title>
+      <polygon class="iso-face-left" points="80.61,184.06 90.51,193.96 90.51,202.23 80.61,192.33" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="90.51,193.96 100.41,184.06 100.41,192.33 90.51,202.23" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="90.51,174.16 80.61,184.06 90.51,193.96 100.41,184.06" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="79.20,192.33 67.88,203.65 79.20,214.96 90.51,203.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="5" data-value="2" style="animation-delay: 255ms; transform-origin: bottom;">
+      <title>Sat, 12:00 — 2 events</title>
+      <polygon class="iso-face-left" points="69.30,200.89 79.20,210.79 79.20,213.55 69.30,203.65" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="79.20,210.79 89.10,200.89 89.10,203.65 79.20,213.55" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="79.20,190.99 69.30,200.89 79.20,210.79 89.10,200.89" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="67.88,203.65 56.57,214.96 67.88,226.27 79.20,214.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="6" data-value="3" style="animation-delay: 270ms; transform-origin: bottom;">
+      <title>Sun, 12:00 — 3 events</title>
+      <polygon class="iso-face-left" points="57.98,210.82 67.88,220.72 67.88,224.86 57.98,214.96" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="67.88,220.72 77.78,210.82 77.78,214.96 67.88,224.86" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="67.88,200.92 57.98,210.82 67.88,220.72 77.78,210.82" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="147.08,147.08 135.76,158.39 147.08,169.71 158.39,158.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="0" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Mon, 13:00 — 0 events</title>
+        <polygon points="147.08,148.49 137.18,158.39 147.08,168.29 156.98,158.39" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="135.76,158.39 124.45,169.71 135.76,181.02 147.08,169.71" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="1" data-value="0" style="animation-delay: 210ms; transform-origin: bottom;">
+        <title>Tue, 13:00 — 0 events</title>
+        <polygon points="135.76,159.81 125.87,169.71 135.76,179.61 145.66,169.71" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="124.45,169.71 113.14,181.02 124.45,192.33 135.76,181.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="2" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
+        <title>Wed, 13:00 — 0 events</title>
+        <polygon points="124.45,171.12 114.55,181.02 124.45,190.92 134.35,181.02" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="113.14,181.02 101.82,192.33 113.14,203.65 124.45,192.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="3" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Thu, 13:00 — 0 events</title>
+        <polygon points="113.14,182.43 103.24,192.33 113.14,202.23 123.04,192.33" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="101.82,192.33 90.51,203.65 101.82,214.96 113.14,203.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="4" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Fri, 13:00 — 0 events</title>
+        <polygon points="101.82,193.75 91.92,203.65 101.82,213.55 111.72,203.65" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="90.51,203.65 79.20,214.96 90.51,226.27 101.82,214.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="5" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Sat, 13:00 — 0 events</title>
+        <polygon points="90.51,205.06 80.61,214.96 90.51,224.86 100.41,214.96" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="79.20,214.96 67.88,226.27 79.20,237.59 90.51,226.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="6" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Sun, 13:00 — 0 events</title>
+        <polygon points="79.20,216.37 69.30,226.27 79.20,236.17 89.10,226.27" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="158.39,158.39 147.08,169.71 158.39,181.02 169.71,169.71" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="0" data-value="0" style="animation-delay: 210ms; transform-origin: bottom;">
+        <title>Mon, 14:00 — 0 events</title>
+        <polygon points="158.39,159.81 148.49,169.71 158.39,179.61 168.29,169.71" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="147.08,169.71 135.76,181.02 147.08,192.33 158.39,181.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="1" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
+        <title>Tue, 14:00 — 0 events</title>
+        <polygon points="147.08,171.12 137.18,181.02 147.08,190.92 156.98,181.02" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="135.76,181.02 124.45,192.33 135.76,203.65 147.08,192.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="2" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Wed, 14:00 — 0 events</title>
+        <polygon points="135.76,182.43 125.87,192.33 135.76,202.23 145.66,192.33" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="124.45,192.33 113.14,203.65 124.45,214.96 135.76,203.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="3" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Thu, 14:00 — 0 events</title>
+        <polygon points="124.45,193.75 114.55,203.65 124.45,213.55 134.35,203.65" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="113.14,203.65 101.82,214.96 113.14,226.27 124.45,214.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="4" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Fri, 14:00 — 0 events</title>
+        <polygon points="113.14,205.06 103.24,214.96 113.14,224.86 123.04,214.96" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="101.82,214.96 90.51,226.27 101.82,237.59 113.14,226.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="5" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Sat, 14:00 — 0 events</title>
+        <polygon points="101.82,216.37 91.92,226.27 101.82,236.17 111.72,226.27" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="90.51,226.27 79.20,237.59 90.51,248.90 101.82,237.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="6" data-value="0" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Sun, 14:00 — 0 events</title>
+        <polygon points="90.51,227.69 80.61,237.59 90.51,247.49 100.41,237.59" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="169.71,169.71 158.39,181.02 169.71,192.33 181.02,181.02" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="0" data-value="26" style="animation-delay: 225ms; transform-origin: bottom;">
+      <title>Mon, 15:00 — 26 events</title>
+      <polygon class="iso-face-left" points="159.81,145.16 169.71,155.06 169.71,190.92 159.81,181.02" fill="#0270a9" stroke="#0270a9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="169.71,155.06 179.61,145.16 179.61,181.02 169.71,190.92" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="169.71,135.26 159.81,145.16 169.71,155.06 179.61,145.16" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="158.39,181.02 147.08,192.33 158.39,203.65 169.71,192.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="1" data-value="11" style="animation-delay: 240ms; transform-origin: bottom;">
+      <title>Tue, 15:00 — 11 events</title>
+      <polygon class="iso-face-left" points="148.49,177.16 158.39,187.06 158.39,202.23 148.49,192.33" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="158.39,187.06 168.29,177.16 168.29,192.33 158.39,202.23" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="158.39,167.26 148.49,177.16 158.39,187.06 168.29,177.16" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="147.08,192.33 135.76,203.65 147.08,214.96 158.39,203.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="2" data-value="16" style="animation-delay: 255ms; transform-origin: bottom;">
+      <title>Wed, 15:00 — 16 events</title>
+      <polygon class="iso-face-left" points="137.18,181.58 147.08,191.48 147.08,213.55 137.18,203.65" fill="#30a1d3" stroke="#30a1d3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="147.08,191.48 156.98,181.58 156.98,203.65 147.08,213.55" fill="#2784ae" stroke="#2784ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="147.08,171.68 137.18,181.58 147.08,191.48 156.98,181.58" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="135.76,203.65 124.45,214.96 135.76,226.27 147.08,214.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="3" data-value="11" style="animation-delay: 270ms; transform-origin: bottom;">
+      <title>Thu, 15:00 — 11 events</title>
+      <polygon class="iso-face-left" points="125.87,199.79 135.76,209.69 135.76,224.86 125.87,214.96" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="135.76,209.69 145.66,199.79 145.66,214.96 135.76,224.86" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="135.76,189.89 125.87,199.79 135.76,209.69 145.66,199.79" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="124.45,214.96 113.14,226.27 124.45,237.59 135.76,226.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="4" data-value="15" style="animation-delay: 285ms; transform-origin: bottom;">
+      <title>Fri, 15:00 — 15 events</title>
+      <polygon class="iso-face-left" points="114.55,205.58 124.45,215.48 124.45,236.17 114.55,226.27" fill="#30a1d3" stroke="#30a1d3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="124.45,215.48 134.35,205.58 134.35,226.27 124.45,236.17" fill="#2784ae" stroke="#2784ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="124.45,195.69 114.55,205.58 124.45,215.48 134.35,205.58" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="113.14,226.27 101.82,237.59 113.14,248.90 124.45,237.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="5" data-value="12" style="animation-delay: 300ms; transform-origin: bottom;">
+      <title>Sat, 15:00 — 12 events</title>
+      <polygon class="iso-face-left" points="103.24,221.04 113.14,230.94 113.14,247.49 103.24,237.59" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="113.14,230.94 123.04,221.04 123.04,237.59 113.14,247.49" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="113.14,211.14 103.24,221.04 113.14,230.94 123.04,221.04" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="101.82,237.59 90.51,248.90 101.82,260.22 113.14,248.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="6" data-value="17" style="animation-delay: 315ms; transform-origin: bottom;">
+      <title>Sun, 15:00 — 17 events</title>
+      <polygon class="iso-face-left" points="91.92,225.45 101.82,235.35 101.82,258.80 91.92,248.90" fill="#30a1d3" stroke="#30a1d3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="101.82,235.35 111.72,225.45 111.72,248.90 101.82,258.80" fill="#2784ae" stroke="#2784ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="101.82,215.55 91.92,225.45 101.82,235.35 111.72,225.45" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="181.02,181.02 169.71,192.33 181.02,203.65 192.33,192.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="0" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Mon, 16:00 — 0 events</title>
+        <polygon points="181.02,182.43 171.12,192.33 181.02,202.23 190.92,192.33" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="169.71,192.33 158.39,203.65 169.71,214.96 181.02,203.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="1" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Tue, 16:00 — 0 events</title>
+        <polygon points="169.71,193.75 159.81,203.65 169.71,213.55 179.61,203.65" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="158.39,203.65 147.08,214.96 158.39,226.27 169.71,214.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="2" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Wed, 16:00 — 0 events</title>
+        <polygon points="158.39,205.06 148.49,214.96 158.39,224.86 168.29,214.96" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="147.08,214.96 135.76,226.27 147.08,237.59 158.39,226.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="3" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Thu, 16:00 — 0 events</title>
+        <polygon points="147.08,216.37 137.18,226.27 147.08,236.17 156.98,226.27" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="135.76,226.27 124.45,237.59 135.76,248.90 147.08,237.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="4" data-value="0" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Fri, 16:00 — 0 events</title>
+        <polygon points="135.76,227.69 125.87,237.59 135.76,247.49 145.66,237.59" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="124.45,237.59 113.14,248.90 124.45,260.22 135.76,248.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="5" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Sat, 16:00 — 0 events</title>
+        <polygon points="124.45,239.00 114.55,248.90 124.45,258.80 134.35,248.90" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="113.14,248.90 101.82,260.22 113.14,271.53 124.45,260.22" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="6" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Sun, 16:00 — 0 events</title>
+        <polygon points="113.14,250.32 103.24,260.22 113.14,270.11 123.04,260.22" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="192.33,192.33 181.02,203.65 192.33,214.96 203.65,203.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="0" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Mon, 17:00 — 0 events</title>
+        <polygon points="192.33,193.75 182.43,203.65 192.33,213.55 202.23,203.65" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="181.02,203.65 169.71,214.96 181.02,226.27 192.33,214.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="1" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Tue, 17:00 — 0 events</title>
+        <polygon points="181.02,205.06 171.12,214.96 181.02,224.86 190.92,214.96" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="169.71,214.96 158.39,226.27 169.71,237.59 181.02,226.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="2" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Wed, 17:00 — 0 events</title>
+        <polygon points="169.71,216.37 159.81,226.27 169.71,236.17 179.61,226.27" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="158.39,226.27 147.08,237.59 158.39,248.90 169.71,237.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="3" data-value="0" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Thu, 17:00 — 0 events</title>
+        <polygon points="158.39,227.69 148.49,237.59 158.39,247.49 168.29,237.59" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="147.08,237.59 135.76,248.90 147.08,260.22 158.39,248.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="4" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Fri, 17:00 — 0 events</title>
+        <polygon points="147.08,239.00 137.18,248.90 147.08,258.80 156.98,248.90" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="135.76,248.90 124.45,260.22 135.76,271.53 147.08,260.22" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="5" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Sat, 17:00 — 0 events</title>
+        <polygon points="135.76,250.32 125.87,260.22 135.76,270.11 145.66,260.22" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="124.45,260.22 113.14,271.53 124.45,282.84 135.76,271.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="6" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Sun, 17:00 — 0 events</title>
+        <polygon points="124.45,261.63 114.55,271.53 124.45,281.43 134.35,271.53" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="203.65,203.65 192.33,214.96 203.65,226.27 214.96,214.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="0" data-value="1" style="animation-delay: 270ms; transform-origin: bottom;">
+      <title>Mon, 18:00 — 1 events</title>
+      <polygon class="iso-face-left" points="193.75,213.58 203.65,223.48 203.65,224.86 193.75,214.96" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="203.65,223.48 213.55,213.58 213.55,214.96 203.65,224.86" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="203.65,203.68 193.75,213.58 203.65,223.48 213.55,213.58" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="192.33,214.96 181.02,226.27 192.33,237.59 203.65,226.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="1" data-value="2" style="animation-delay: 285ms; transform-origin: bottom;">
+      <title>Tue, 18:00 — 2 events</title>
+      <polygon class="iso-face-left" points="182.43,223.52 192.33,233.42 192.33,236.17 182.43,226.27" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="192.33,233.42 202.23,223.52 202.23,226.27 192.33,236.17" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="192.33,213.62 182.43,223.52 192.33,233.42 202.23,223.52" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="181.02,226.27 169.71,237.59 181.02,248.90 192.33,237.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="2" data-value="2" style="animation-delay: 300ms; transform-origin: bottom;">
+      <title>Wed, 18:00 — 2 events</title>
+      <polygon class="iso-face-left" points="171.12,234.83 181.02,244.73 181.02,247.49 171.12,237.59" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="181.02,244.73 190.92,234.83 190.92,237.59 181.02,247.49" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="181.02,224.93 171.12,234.83 181.02,244.73 190.92,234.83" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="169.71,237.59 158.39,248.90 169.71,260.22 181.02,248.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="3" data-value="3" style="animation-delay: 315ms; transform-origin: bottom;">
+      <title>Thu, 18:00 — 3 events</title>
+      <polygon class="iso-face-left" points="159.81,244.76 169.71,254.66 169.71,258.80 159.81,248.90" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="169.71,254.66 179.61,244.76 179.61,248.90 169.71,258.80" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="169.71,234.86 159.81,244.76 169.71,254.66 179.61,244.76" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="158.39,248.90 147.08,260.22 158.39,271.53 169.71,260.22" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="4" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Fri, 18:00 — 0 events</title>
+        <polygon points="158.39,250.32 148.49,260.22 158.39,270.11 168.29,260.22" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="147.08,260.22 135.76,271.53 147.08,282.84 158.39,271.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="5" data-value="4" style="animation-delay: 345ms; transform-origin: bottom;">
+      <title>Sat, 18:00 — 4 events</title>
+      <polygon class="iso-face-left" points="137.18,266.01 147.08,275.91 147.08,281.43 137.18,271.53" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="147.08,275.91 156.98,266.01 156.98,271.53 147.08,281.43" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="147.08,256.11 137.18,266.01 147.08,275.91 156.98,266.01" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="135.76,271.53 124.45,282.84 135.76,294.16 147.08,282.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="6" data-value="6" style="animation-delay: 360ms; transform-origin: bottom;">
+      <title>Sun, 18:00 — 6 events</title>
+      <polygon class="iso-face-left" points="125.87,274.57 135.76,284.47 135.76,292.74 125.87,282.84" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="135.76,284.47 145.66,274.57 145.66,282.84 135.76,292.74" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="135.76,264.67 125.87,274.57 135.76,284.47 145.66,274.57" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="214.96,214.96 203.65,226.27 214.96,237.59 226.27,226.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="0" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Mon, 19:00 — 0 events</title>
+        <polygon points="214.96,216.37 205.06,226.27 214.96,236.17 224.86,226.27" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="203.65,226.27 192.33,237.59 203.65,248.90 214.96,237.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="1" data-value="0" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Tue, 19:00 — 0 events</title>
+        <polygon points="203.65,227.69 193.75,237.59 203.65,247.49 213.55,237.59" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="192.33,237.59 181.02,248.90 192.33,260.22 203.65,248.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="2" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Wed, 19:00 — 0 events</title>
+        <polygon points="192.33,239.00 182.43,248.90 192.33,258.80 202.23,248.90" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="181.02,248.90 169.71,260.22 181.02,271.53 192.33,260.22" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="3" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Thu, 19:00 — 0 events</title>
+        <polygon points="181.02,250.32 171.12,260.22 181.02,270.11 190.92,260.22" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="169.71,260.22 158.39,271.53 169.71,282.84 181.02,271.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="4" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Fri, 19:00 — 0 events</title>
+        <polygon points="169.71,261.63 159.81,271.53 169.71,281.43 179.61,271.53" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="158.39,271.53 147.08,282.84 158.39,294.16 169.71,282.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="5" data-value="0" style="animation-delay: 360ms; transform-origin: bottom;">
+        <title>Sat, 19:00 — 0 events</title>
+        <polygon points="158.39,272.94 148.49,282.84 158.39,292.74 168.29,282.84" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="147.08,282.84 135.76,294.16 147.08,305.47 158.39,294.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="6" data-value="0" style="animation-delay: 375ms; transform-origin: bottom;">
+        <title>Sun, 19:00 — 0 events</title>
+        <polygon points="147.08,284.26 137.18,294.16 147.08,304.06 156.98,294.16" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="226.27,226.27 214.96,237.59 226.27,248.90 237.59,237.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="0" data-value="0" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Mon, 20:00 — 0 events</title>
+        <polygon points="226.27,227.69 216.37,237.59 226.27,247.49 236.17,237.59" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="214.96,237.59 203.65,248.90 214.96,260.22 226.27,248.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="1" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Tue, 20:00 — 0 events</title>
+        <polygon points="214.96,239.00 205.06,248.90 214.96,258.80 224.86,248.90" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="203.65,248.90 192.33,260.22 203.65,271.53 214.96,260.22" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="2" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Wed, 20:00 — 0 events</title>
+        <polygon points="203.65,250.32 193.75,260.22 203.65,270.11 213.55,260.22" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="192.33,260.22 181.02,271.53 192.33,282.84 203.65,271.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="3" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Thu, 20:00 — 0 events</title>
+        <polygon points="192.33,261.63 182.43,271.53 192.33,281.43 202.23,271.53" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="181.02,271.53 169.71,282.84 181.02,294.16 192.33,282.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="4" data-value="0" style="animation-delay: 360ms; transform-origin: bottom;">
+        <title>Fri, 20:00 — 0 events</title>
+        <polygon points="181.02,272.94 171.12,282.84 181.02,292.74 190.92,282.84" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="169.71,282.84 158.39,294.16 169.71,305.47 181.02,294.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="5" data-value="0" style="animation-delay: 375ms; transform-origin: bottom;">
+        <title>Sat, 20:00 — 0 events</title>
+        <polygon points="169.71,284.26 159.81,294.16 169.71,304.06 179.61,294.16" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="158.39,294.16 147.08,305.47 158.39,316.78 169.71,305.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="6" data-value="0" style="animation-delay: 390ms; transform-origin: bottom;">
+        <title>Sun, 20:00 — 0 events</title>
+        <polygon points="158.39,295.57 148.49,305.47 158.39,315.37 168.29,305.47" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="237.59,237.59 226.27,248.90 237.59,260.22 248.90,248.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="0" data-value="4" style="animation-delay: 315ms; transform-origin: bottom;">
+      <title>Mon, 21:00 — 4 events</title>
+      <polygon class="iso-face-left" points="227.69,243.38 237.59,253.28 237.59,258.80 227.69,248.90" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="237.59,253.28 247.49,243.38 247.49,248.90 237.59,258.80" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="237.59,233.48 227.69,243.38 237.59,253.28 247.49,243.38" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="226.27,248.90 214.96,260.22 226.27,271.53 237.59,260.22" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="1" data-value="4" style="animation-delay: 330ms; transform-origin: bottom;">
+      <title>Tue, 21:00 — 4 events</title>
+      <polygon class="iso-face-left" points="216.37,254.70 226.27,264.60 226.27,270.11 216.37,260.22" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="226.27,264.60 236.17,254.70 236.17,260.22 226.27,270.11" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="226.27,244.80 216.37,254.70 226.27,264.60 236.17,254.70" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="214.96,260.22 203.65,271.53 214.96,282.84 226.27,271.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="2" data-value="1" style="animation-delay: 345ms; transform-origin: bottom;">
+      <title>Wed, 21:00 — 1 events</title>
+      <polygon class="iso-face-left" points="205.06,270.15 214.96,280.05 214.96,281.43 205.06,271.53" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="214.96,280.05 224.86,270.15 224.86,271.53 214.96,281.43" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="214.96,260.25 205.06,270.15 214.96,280.05 224.86,270.15" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="203.65,271.53 192.33,282.84 203.65,294.16 214.96,282.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="3" data-value="6" style="animation-delay: 360ms; transform-origin: bottom;">
+      <title>Thu, 21:00 — 6 events</title>
+      <polygon class="iso-face-left" points="193.75,274.57 203.65,284.47 203.65,292.74 193.75,282.84" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="203.65,284.47 213.55,274.57 213.55,282.84 203.65,292.74" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="203.65,264.67 193.75,274.57 203.65,284.47 213.55,274.57" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="192.33,282.84 181.02,294.16 192.33,305.47 203.65,294.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="4" data-value="6" style="animation-delay: 375ms; transform-origin: bottom;">
+      <title>Fri, 21:00 — 6 events</title>
+      <polygon class="iso-face-left" points="182.43,285.88 192.33,295.78 192.33,304.06 182.43,294.16" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="192.33,295.78 202.23,285.88 202.23,294.16 192.33,304.06" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="192.33,275.98 182.43,285.88 192.33,295.78 202.23,285.88" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="181.02,294.16 169.71,305.47 181.02,316.78 192.33,305.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="5" data-value="2" style="animation-delay: 390ms; transform-origin: bottom;">
+      <title>Sat, 21:00 — 2 events</title>
+      <polygon class="iso-face-left" points="171.12,302.71 181.02,312.61 181.02,315.37 171.12,305.47" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="181.02,312.61 190.92,302.71 190.92,305.47 181.02,315.37" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="181.02,292.81 171.12,302.71 181.02,312.61 190.92,302.71" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="169.71,305.47 158.39,316.78 169.71,328.10 181.02,316.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="6" data-value="7" style="animation-delay: 405ms; transform-origin: bottom;">
+      <title>Sun, 21:00 — 7 events</title>
+      <polygon class="iso-face-left" points="159.81,307.13 169.71,317.03 169.71,326.68 159.81,316.78" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="169.71,317.03 179.61,307.13 179.61,316.78 169.71,326.68" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="169.71,297.23 159.81,307.13 169.71,317.03 179.61,307.13" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="248.90,248.90 237.59,260.22 248.90,271.53 260.22,260.22" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="0" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Mon, 22:00 — 0 events</title>
+        <polygon points="248.90,250.32 239.00,260.22 248.90,270.11 258.80,260.22" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="237.59,260.22 226.27,271.53 237.59,282.84 248.90,271.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="1" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Tue, 22:00 — 0 events</title>
+        <polygon points="237.59,261.63 227.69,271.53 237.59,281.43 247.49,271.53" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="226.27,271.53 214.96,282.84 226.27,294.16 237.59,282.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="2" data-value="0" style="animation-delay: 360ms; transform-origin: bottom;">
+        <title>Wed, 22:00 — 0 events</title>
+        <polygon points="226.27,272.94 216.37,282.84 226.27,292.74 236.17,282.84" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="214.96,282.84 203.65,294.16 214.96,305.47 226.27,294.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="3" data-value="0" style="animation-delay: 375ms; transform-origin: bottom;">
+        <title>Thu, 22:00 — 0 events</title>
+        <polygon points="214.96,284.26 205.06,294.16 214.96,304.06 224.86,294.16" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="203.65,294.16 192.33,305.47 203.65,316.78 214.96,305.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="4" data-value="0" style="animation-delay: 390ms; transform-origin: bottom;">
+        <title>Fri, 22:00 — 0 events</title>
+        <polygon points="203.65,295.57 193.75,305.47 203.65,315.37 213.55,305.47" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="192.33,305.47 181.02,316.78 192.33,328.10 203.65,316.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="5" data-value="0" style="animation-delay: 405ms; transform-origin: bottom;">
+        <title>Sat, 22:00 — 0 events</title>
+        <polygon points="192.33,306.88 182.43,316.78 192.33,326.68 202.23,316.78" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="181.02,316.78 169.71,328.10 181.02,339.41 192.33,328.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="6" data-value="0" style="animation-delay: 420ms; transform-origin: bottom;">
+        <title>Sun, 22:00 — 0 events</title>
+        <polygon points="181.02,318.20 171.12,328.10 181.02,338.00 190.92,328.10" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="260.22,260.22 248.90,271.53 260.22,282.84 271.53,271.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="0" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Mon, 23:00 — 0 events</title>
+        <polygon points="260.22,261.63 250.32,271.53 260.22,281.43 270.11,271.53" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="248.90,271.53 237.59,282.84 248.90,294.16 260.22,282.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="1" data-value="0" style="animation-delay: 360ms; transform-origin: bottom;">
+        <title>Tue, 23:00 — 0 events</title>
+        <polygon points="248.90,272.94 239.00,282.84 248.90,292.74 258.80,282.84" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="237.59,282.84 226.27,294.16 237.59,305.47 248.90,294.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="2" data-value="0" style="animation-delay: 375ms; transform-origin: bottom;">
+        <title>Wed, 23:00 — 0 events</title>
+        <polygon points="237.59,284.26 227.69,294.16 237.59,304.06 247.49,294.16" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="226.27,294.16 214.96,305.47 226.27,316.78 237.59,305.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="3" data-value="0" style="animation-delay: 390ms; transform-origin: bottom;">
+        <title>Thu, 23:00 — 0 events</title>
+        <polygon points="226.27,295.57 216.37,305.47 226.27,315.37 236.17,305.47" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="214.96,305.47 203.65,316.78 214.96,328.10 226.27,316.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="4" data-value="0" style="animation-delay: 405ms; transform-origin: bottom;">
+        <title>Fri, 23:00 — 0 events</title>
+        <polygon points="214.96,306.88 205.06,316.78 214.96,326.68 224.86,316.78" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="203.65,316.78 192.33,328.10 203.65,339.41 214.96,328.10" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="5" data-value="0" style="animation-delay: 420ms; transform-origin: bottom;">
+        <title>Sat, 23:00 — 0 events</title>
+        <polygon points="203.65,318.20 193.75,328.10 203.65,338.00 213.55,328.10" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="192.33,328.10 181.02,339.41 192.33,350.72 203.65,339.41" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="6" data-value="0" style="animation-delay: 435ms; transform-origin: bottom;">
+        <title>Sun, 23:00 — 0 events</title>
+        <polygon points="192.33,329.51 182.43,339.41 192.33,349.31 202.23,339.41" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<g class="iso-col-labels"><text x="-84.85" y="96.27" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12AM</text>
+<text x="-50.91" y="130.21" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">3AM</text>
+<text x="-16.97" y="164.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6AM</text>
+<text x="16.97" y="198.09" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">9AM</text>
+<text x="50.91" y="232.03" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12PM</text>
+<text x="84.85" y="265.97" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">3PM</text>
+<text x="118.79" y="299.91" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6PM</text>
+<text x="152.74" y="333.85" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">9PM</text></g>
+<g class="iso-row-labels"><text x="283.19" y="281.30" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Mon</text>
+<text x="260.56" y="303.93" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Wed</text>
+<text x="237.93" y="326.55" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Fri</text>
+<text x="215.30" y="349.18" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Sun</text></g>
+    </g>
+  </svg>

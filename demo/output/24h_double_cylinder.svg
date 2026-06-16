@@ -1,0 +1,330 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-83.30 -20.00 573.25 308.50" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>24h Dual-Series Timeline (2 Rows × 24 Hours)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    <defs><linearGradient id="cyl-grad-e0f2fe" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#beced8" stop-opacity="0.9" />
+          <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.9" />
+          <stop offset="75%" stop-color="#9da9b2" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#70797f" stop-opacity="0.9" />
+        </linearGradient>
+<linearGradient id="cyl-grad-bae6fd" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#9ec4d7" stop-opacity="0.9" />
+          <stop offset="35%" stop-color="#bae6fd" stop-opacity="0.9" />
+          <stop offset="75%" stop-color="#82a1b1" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#5d737f" stop-opacity="0.9" />
+        </linearGradient>
+<linearGradient id="cyl-grad-7dd3fc" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#6ab3d6" stop-opacity="0.9" />
+          <stop offset="35%" stop-color="#7dd3fc" stop-opacity="0.9" />
+          <stop offset="75%" stop-color="#5894b0" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#3f6a7e" stop-opacity="0.9" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0ea5e9" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0c8cc6" stop-opacity="0.9" />
+          <stop offset="35%" stop-color="#0ea5e9" stop-opacity="0.9" />
+          <stop offset="75%" stop-color="#0a73a3" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#075375" stop-opacity="0.9" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0284c7" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0270a9" stop-opacity="0.9" />
+          <stop offset="35%" stop-color="#0284c7" stop-opacity="0.9" />
+          <stop offset="75%" stop-color="#015c8b" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#014264" stop-opacity="0.9" />
+        </linearGradient>
+<linearGradient id="cyl-grad-38bdf8" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#30a1d3" stop-opacity="0.9" />
+          <stop offset="35%" stop-color="#38bdf8" stop-opacity="0.9" />
+          <stop offset="75%" stop-color="#2784ae" stop-opacity="0.9" />
+          <stop offset="100%" stop-color="#1c5f7c" stop-opacity="0.9" />
+        </linearGradient></defs>
+    <text x="203.33" y="-6.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Dual-Series Timeline (2 Rows × 24 Hours)</text>
+    <g>
+      <polygon class="iso-grid-cell" points="0.00,0.00 -17.32,10.00 0.00,20.00 17.32,10.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
+        <title>Series A, 00:00 — Value: 0</title>
+        <ellipse cx="0.00" cy="10.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="-17.32,10.00 -34.64,20.00 -17.32,30.00 0.00,20.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="0" style="animation-delay: 15ms; transform-origin: bottom;">
+        <title>Series B, 00:00 — Value: 0</title>
+        <ellipse cx="-17.32" cy="20.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="17.32,10.00 0.00,20.00 17.32,30.00 34.64,20.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="0" style="animation-delay: 15ms; transform-origin: bottom;">
+        <title>Series A, 01:00 — Value: 0</title>
+        <ellipse cx="17.32" cy="20.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,20.00 -17.32,30.00 0.00,40.00 17.32,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>Series B, 01:00 — Value: 0</title>
+        <ellipse cx="0.00" cy="30.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="34.64,20.00 17.32,30.00 34.64,40.00 51.96,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>Series A, 02:00 — Value: 12</title>
+      <path d="M 27.28,23.33 L 27.28,30.00 A 7.36,4.25 0 0,0 42.00,30.00 L 42.00,23.33 A 7.36,4.25 0 0,1 27.28,23.33 Z" fill="url(#cyl-grad-e0f2fe)" stroke="#a8b6bf" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="34.64" cy="23.33" rx="7.36" ry="4.25" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="17.32,30.00 0.00,40.00 17.32,50.00 34.64,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Series B, 02:00 — Value: 0</title>
+        <ellipse cx="17.32" cy="40.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="51.96,30.00 34.64,40.00 51.96,50.00 69.28,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Series A, 03:00 — Value: 0</title>
+        <ellipse cx="51.96" cy="40.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="34.64,40.00 17.32,50.00 34.64,60.00 51.96,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Series B, 03:00 — Value: 0</title>
+        <ellipse cx="34.64" cy="50.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="69.28,40.00 51.96,50.00 69.28,60.00 86.60,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>Series A, 04:00 — Value: 0</title>
+        <ellipse cx="69.28" cy="50.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="51.96,50.00 34.64,60.00 51.96,70.00 69.28,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="25" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Series B, 04:00 — Value: 25</title>
+      <path d="M 44.60,46.11 L 44.60,60.00 A 7.36,4.25 0 0,0 59.32,60.00 L 59.32,46.11 A 7.36,4.25 0 0,1 44.60,46.11 Z" fill="url(#cyl-grad-bae6fd)" stroke="#8cadbe" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="51.96" cy="46.11" rx="7.36" ry="4.25" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="86.60,50.00 69.28,60.00 86.60,70.00 103.92,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="0" data-value="0" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>Series A, 05:00 — Value: 0</title>
+        <ellipse cx="86.60" cy="60.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="69.28,60.00 51.96,70.00 69.28,80.00 86.60,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="1" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Series B, 05:00 — Value: 0</title>
+        <ellipse cx="69.28" cy="70.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="103.92,60.00 86.60,70.00 103.92,80.00 121.24,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="0" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Series A, 06:00 — Value: 0</title>
+        <ellipse cx="103.92" cy="70.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="86.60,70.00 69.28,80.00 86.60,90.00 103.92,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="1" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Series B, 06:00 — Value: 0</title>
+        <ellipse cx="86.60" cy="80.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="121.24,70.00 103.92,80.00 121.24,90.00 138.56,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="0" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>Series A, 07:00 — Value: 0</title>
+        <ellipse cx="121.24" cy="80.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="103.92,80.00 86.60,90.00 103.92,100.00 121.24,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="1" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>Series B, 07:00 — Value: 0</title>
+        <ellipse cx="103.92" cy="90.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="138.56,80.00 121.24,90.00 138.56,100.00 155.88,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="0" data-value="42" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Series A, 08:00 — Value: 42</title>
+      <path d="M 131.20,66.67 L 131.20,90.00 A 7.36,4.25 0 0,0 145.93,90.00 L 145.93,66.67 A 7.36,4.25 0 0,1 131.20,66.67 Z" fill="url(#cyl-grad-7dd3fc)" stroke="#5e9ebd" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="138.56" cy="66.67" rx="7.36" ry="4.25" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="121.24,90.00 103.92,100.00 121.24,110.00 138.56,100.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="1" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Series B, 08:00 — Value: 0</title>
+        <ellipse cx="121.24" cy="100.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="155.88,90.00 138.56,100.00 155.88,110.00 173.21,100.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="0" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Series A, 09:00 — Value: 0</title>
+        <ellipse cx="155.88" cy="100.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="138.56,100.00 121.24,110.00 138.56,120.00 155.88,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="9" data-row="1" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Series B, 09:00 — Value: 0</title>
+        <ellipse cx="138.56" cy="110.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="173.21,100.00 155.88,110.00 173.21,120.00 190.53,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="0" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
+        <title>Series A, 10:00 — Value: 0</title>
+        <ellipse cx="173.21" cy="110.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="155.88,110.00 138.56,120.00 155.88,130.00 173.21,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="10" data-row="1" data-value="60" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Series B, 10:00 — Value: 60</title>
+      <path d="M 148.52,86.67 L 148.52,120.00 A 7.36,4.25 0 0,0 163.25,120.00 L 163.25,86.67 A 7.36,4.25 0 0,1 148.52,86.67 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="155.88" cy="86.67" rx="7.36" ry="4.25" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="190.53,110.00 173.21,120.00 190.53,130.00 207.85,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="0" data-value="0" style="animation-delay: 165ms; transform-origin: bottom;">
+        <title>Series A, 11:00 — Value: 0</title>
+        <ellipse cx="190.53" cy="120.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="173.21,120.00 155.88,130.00 173.21,140.00 190.53,130.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="11" data-row="1" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Series B, 11:00 — Value: 0</title>
+        <ellipse cx="173.21" cy="130.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="207.85,120.00 190.53,130.00 207.85,140.00 225.17,130.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="0" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Series A, 12:00 — Value: 0</title>
+        <ellipse cx="207.85" cy="130.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="190.53,130.00 173.21,140.00 190.53,150.00 207.85,140.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="12" data-row="1" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Series B, 12:00 — Value: 0</title>
+        <ellipse cx="190.53" cy="140.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="225.17,130.00 207.85,140.00 225.17,150.00 242.49,140.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="0" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
+        <title>Series A, 13:00 — Value: 0</title>
+        <ellipse cx="225.17" cy="140.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="207.85,140.00 190.53,150.00 207.85,160.00 225.17,150.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="13" data-row="1" data-value="0" style="animation-delay: 210ms; transform-origin: bottom;">
+        <title>Series B, 13:00 — Value: 0</title>
+        <ellipse cx="207.85" cy="150.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="242.49,140.00 225.17,150.00 242.49,160.00 259.81,150.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="0" data-value="85" style="animation-delay: 210ms; transform-origin: bottom;">
+      <title>Series A, 14:00 — Value: 85</title>
+      <path d="M 235.13,102.78 L 235.13,150.00 A 7.36,4.25 0 0,0 249.85,150.00 L 249.85,102.78 A 7.36,4.25 0 0,1 235.13,102.78 Z" fill="url(#cyl-grad-0284c7)" stroke="#026395" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="242.49" cy="102.78" rx="7.36" ry="4.25" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="225.17,150.00 207.85,160.00 225.17,170.00 242.49,160.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="14" data-row="1" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
+        <title>Series B, 14:00 — Value: 0</title>
+        <ellipse cx="225.17" cy="160.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="259.81,150.00 242.49,160.00 259.81,170.00 277.13,160.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="0" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
+        <title>Series A, 15:00 — Value: 0</title>
+        <ellipse cx="259.81" cy="160.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="242.49,160.00 225.17,170.00 242.49,180.00 259.81,170.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="15" data-row="1" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Series B, 15:00 — Value: 0</title>
+        <ellipse cx="242.49" cy="170.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="277.13,160.00 259.81,170.00 277.13,180.00 294.45,170.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="0" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
+        <title>Series A, 16:00 — Value: 0</title>
+        <ellipse cx="277.13" cy="170.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="259.81,170.00 242.49,180.00 259.81,190.00 277.13,180.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="16" data-row="1" data-value="90" style="animation-delay: 255ms; transform-origin: bottom;">
+      <title>Series B, 16:00 — Value: 90</title>
+      <path d="M 252.45,130.00 L 252.45,180.00 A 7.36,4.25 0 0,0 267.17,180.00 L 267.17,130.00 A 7.36,4.25 0 0,1 252.45,130.00 Z" fill="url(#cyl-grad-0284c7)" stroke="#026395" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="259.81" cy="130.00" rx="7.36" ry="4.25" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="294.45,170.00 277.13,180.00 294.45,190.00 311.77,180.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="0" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
+        <title>Series A, 17:00 — Value: 0</title>
+        <ellipse cx="294.45" cy="180.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="277.13,180.00 259.81,190.00 277.13,200.00 294.45,190.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="17" data-row="1" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Series B, 17:00 — Value: 0</title>
+        <ellipse cx="277.13" cy="190.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="311.77,180.00 294.45,190.00 311.77,200.00 329.09,190.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="0" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
+        <title>Series A, 18:00 — Value: 0</title>
+        <ellipse cx="311.77" cy="190.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="294.45,190.00 277.13,200.00 294.45,210.00 311.77,200.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="18" data-row="1" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Series B, 18:00 — Value: 0</title>
+        <ellipse cx="294.45" cy="200.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="329.09,190.00 311.77,200.00 329.09,210.00 346.41,200.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="0" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
+        <title>Series A, 19:00 — Value: 0</title>
+        <ellipse cx="329.09" cy="200.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="311.77,200.00 294.45,210.00 311.77,220.00 329.09,210.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="19" data-row="1" data-value="0" style="animation-delay: 300ms; transform-origin: bottom;">
+        <title>Series B, 19:00 — Value: 0</title>
+        <ellipse cx="311.77" cy="210.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="346.41,200.00 329.09,210.00 346.41,220.00 363.73,210.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="0" data-value="32" style="animation-delay: 300ms; transform-origin: bottom;">
+      <title>Series A, 20:00 — Value: 32</title>
+      <path d="M 339.05,192.22 L 339.05,210.00 A 7.36,4.25 0 0,0 353.77,210.00 L 353.77,192.22 A 7.36,4.25 0 0,1 339.05,192.22 Z" fill="url(#cyl-grad-7dd3fc)" stroke="#5e9ebd" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="346.41" cy="192.22" rx="7.36" ry="4.25" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="329.09,210.00 311.77,220.00 329.09,230.00 346.41,220.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="20" data-row="1" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Series B, 20:00 — Value: 0</title>
+        <ellipse cx="329.09" cy="220.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="363.73,210.00 346.41,220.00 363.73,230.00 381.05,220.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="0" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
+        <title>Series A, 21:00 — Value: 0</title>
+        <ellipse cx="363.73" cy="220.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="346.41,220.00 329.09,230.00 346.41,240.00 363.73,230.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="21" data-row="1" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Series B, 21:00 — Value: 0</title>
+        <ellipse cx="346.41" cy="230.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="381.05,220.00 363.73,230.00 381.05,240.00 398.37,230.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="0" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
+        <title>Series A, 22:00 — Value: 0</title>
+        <ellipse cx="381.05" cy="230.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="363.73,230.00 346.41,240.00 363.73,250.00 381.05,240.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="22" data-row="1" data-value="45" style="animation-delay: 345ms; transform-origin: bottom;">
+      <title>Series B, 22:00 — Value: 45</title>
+      <path d="M 356.37,215.00 L 356.37,240.00 A 7.36,4.25 0 0,0 371.09,240.00 L 371.09,215.00 A 7.36,4.25 0 0,1 356.37,215.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      <ellipse cx="363.73" cy="215.00" rx="7.36" ry="4.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+    </g>
+<polygon class="iso-grid-cell" points="398.37,230.00 381.05,240.00 398.37,250.00 415.69,240.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="0" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
+        <title>Series A, 23:00 — Value: 0</title>
+        <ellipse cx="398.37" cy="240.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<polygon class="iso-grid-cell" points="381.05,240.00 363.73,250.00 381.05,260.00 398.37,250.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="23" data-row="1" data-value="0" style="animation-delay: 360ms; transform-origin: bottom;">
+        <title>Series B, 23:00 — Value: 0</title>
+        <ellipse cx="381.05" cy="250.00" rx="7.36" ry="4.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" fill-opacity="0.9" stroke-opacity="0.9" />
+      </g>
+<g class="iso-col-labels"><text x="-43.30" y="36.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12AM</text>
+<text x="60.62" y="96.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6AM</text>
+<text x="164.54" y="156.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12PM</text>
+<text x="268.47" y="216.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6PM</text></g>
+<g class="iso-row-labels"><text x="430.35" y="249.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Series A</text>
+<text x="413.03" y="259.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Series B</text></g>
+    </g>
+  </svg>

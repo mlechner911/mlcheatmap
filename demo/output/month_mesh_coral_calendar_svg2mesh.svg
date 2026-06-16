@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-210.49 -88.00 374.81 258.00" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>June 2026 — 3D Surface Mesh Calendar (With Missing Data Holes)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    
+    <text x="-23.09" y="-74.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">June 2026 — 3D Surface Mesh Calendar</text>
+<text x="-23.09" y="-56.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">(With Missing Data Holes)</text>
+    <g>
+      <polygon points="0.00,-50.00 -145.49,34.00 -145.49,84.00 0.00,0.00" fill="rgba(241, 245, 249, 0.7)" stroke="none" />
+<line x1="0.00" y1="0.00" x2="0.00" y2="-50.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-20.78" y1="12.00" x2="-20.78" y2="-38.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-41.57" y1="24.00" x2="-41.57" y2="-26.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-62.35" y1="36.00" x2="-62.35" y2="-14.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-83.14" y1="48.00" x2="-83.14" y2="-2.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-103.92" y1="60.00" x2="-103.92" y2="10.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-124.71" y1="72.00" x2="-124.71" y2="22.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-145.49" y1="84.00" x2="-145.49" y2="34.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="0.00" y1="0.00" x2="-145.49" y2="84.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-153.49" y="87.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">0</text>
+<line x1="0.00" y1="-12.50" x2="-145.49" y2="71.50" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-153.49" y="74.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">5.5</text>
+<line x1="0.00" y1="-25.00" x2="-145.49" y2="59.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-153.49" y="62.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">11</text>
+<line x1="0.00" y1="-37.50" x2="-145.49" y2="46.50" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-153.49" y="49.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">16.5</text>
+<line x1="0.00" y1="-50.00" x2="-145.49" y2="34.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-153.49" y="37.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">22</text>
+<g class="iso-col-labels"><text x="24.94" y="-14.40" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W1</text>
+<text x="45.73" y="-2.40" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W2</text>
+<text x="66.51" y="9.60" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W3</text>
+<text x="87.30" y="21.60" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W4</text>
+<text x="108.08" y="33.60" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W5</text></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -20.78,12.00 0.00,24.00 20.78,12.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="8.25" style="animation-delay: 0ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 0-1: Avg Value 8.3</title>
+              <defs>
+  <meshGradient id="mesh-grad-0-0" x="0.0" y="-4.5">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 20.8,-17.5" stop-color="#ec8b8b" />
+        <stop path="L 0.0,-10.1" stop-color="#ec7878" />
+        <stop path="L -20.8,5.2" stop-color="#ecd5d5" />
+        <stop path="Z" stop-color="#ecd9d9" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="0.0,-4.5 20.8,-17.5 0.0,-10.1 -20.8,5.2" fill="url(#mesh-grad-0-0)" stroke="url(#mesh-grad-0-0)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-20.78,12.00 -41.57,24.00 -20.78,36.00 0.00,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="9.75" style="animation-delay: 15ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 1-2: Avg Value 9.8</title>
+              <defs>
+  <meshGradient id="mesh-grad-0-1" x="-20.8" y="5.2">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 0.0,-10.1" stop-color="#e97777" />
+        <stop path="L -20.8,-2.6" stop-color="#e65c5c" />
+        <stop path="L -41.6,14.9" stop-color="#e9cece" />
+        <stop path="Z" stop-color="#e9d2d2" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="-20.8,5.2 0.0,-10.1 -20.8,-2.6 -41.6,14.9" fill="url(#mesh-grad-0-1)" stroke="url(#mesh-grad-0-1)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-41.57,24.00 -62.35,36.00 -41.57,48.00 -20.78,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="11.25" style="animation-delay: 30ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 2-3: Avg Value 11.3</title>
+              <defs>
+  <meshGradient id="mesh-grad-0-2" x="-41.6" y="14.9">
+    <meshRow>
+      <meshPatch>
+        <stop path="L -20.8,-2.6" stop-color="#e45b5b" />
+        <stop path="L -41.6,4.8" stop-color="#e14747" />
+        <stop path="L -62.4,24.6" stop-color="#e7c5c5" />
+        <stop path="Z" stop-color="#e7cccc" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="-41.6,14.9 -20.8,-2.6 -41.6,4.8 -62.4,24.6" fill="url(#mesh-grad-0-2)" stroke="url(#mesh-grad-0-2)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-62.35,36.00 -83.14,48.00 -62.35,60.00 -41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-83.14,48.00 -103.92,60.00 -83.14,72.00 -62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-103.92,60.00 -124.71,72.00 -103.92,84.00 -83.14,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-124.71,72.00 -145.49,84.00 -124.71,96.00 -103.92,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="20.78,12.00 0.00,24.00 20.78,36.00 41.57,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="18.00" style="animation-delay: 15ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 0-1: Avg Value 18.0</title>
+              <defs>
+  <meshGradient id="mesh-grad-1-0" x="20.8" y="-17.5">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 41.6,-26.0" stop-color="#e53b3b" />
+        <stop path="L 20.8,-14.0" stop-color="#e53b3b" />
+        <stop path="L 0.0,-10.1" stop-color="#f37c7c" />
+        <stop path="Z" stop-color="#f38f8f" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="20.8,-17.5 41.6,-26.0 20.8,-14.0 0.0,-10.1" fill="url(#mesh-grad-1-0)" stroke="url(#mesh-grad-1-0)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,24.00 -20.78,36.00 0.00,48.00 20.78,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="18.75" style="animation-delay: 30ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 1-2: Avg Value 18.8</title>
+              <defs>
+  <meshGradient id="mesh-grad-1-1" x="0.0" y="-10.1">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 20.8,-14.0" stop-color="#eb3d3d" />
+        <stop path="L 0.0,0.3" stop-color="#ee4242" />
+        <stop path="L -20.8,-2.6" stop-color="#f76363" />
+        <stop path="Z" stop-color="#f97f7f" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="0.0,-10.1 20.8,-14.0 0.0,0.3 -20.8,-2.6" fill="url(#mesh-grad-1-1)" stroke="url(#mesh-grad-1-1)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-20.78,36.00 -41.57,48.00 -20.78,60.00 0.00,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="19.25" style="animation-delay: 45ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 2-3: Avg Value 19.3</title>
+              <defs>
+  <meshGradient id="mesh-grad-1-2" x="-20.8" y="-2.6">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 0.0,0.3" stop-color="#f84444" />
+        <stop path="L -20.8,14.5" stop-color="#fa4a4a" />
+        <stop path="L -41.6,4.8" stop-color="#fd5050" />
+        <stop path="Z" stop-color="#ff6767" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="-20.8,-2.6 0.0,0.3 -20.8,14.5 -41.6,4.8" fill="url(#mesh-grad-1-2)" stroke="url(#mesh-grad-1-2)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-41.57,48.00 -62.35,60.00 -41.57,72.00 -20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-62.35,60.00 -83.14,72.00 -62.35,84.00 -41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-83.14,72.00 -103.92,84.00 -83.14,96.00 -62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-103.92,84.00 -124.71,96.00 -103.92,108.00 -83.14,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="41.57,24.00 20.78,36.00 41.57,48.00 62.35,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="17.00" style="animation-delay: 30ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 0-1: Avg Value 17.0</title>
+              <defs>
+  <meshGradient id="mesh-grad-2-0" x="41.6" y="-26.0">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 62.4,6.5" stop-color="#ffa1a1" />
+        <stop path="L 41.6,23.0" stop-color="#ffb4b4" />
+        <stop path="L 20.8,-14.0" stop-color="#ff4242" />
+        <stop path="Z" stop-color="#ff4242" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="41.6,-26.0 62.4,6.5 41.6,23.0 20.8,-14.0" fill="url(#mesh-grad-2-0)" stroke="url(#mesh-grad-2-0)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="20.78,36.00 0.00,48.00 20.78,60.00 41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,48.00 -20.78,60.00 0.00,72.00 20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,60.00 -41.57,72.00 -20.78,84.00 0.00,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="3" data-value="12.75" style="animation-delay: 75ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 3-4: Avg Value 12.8</title>
+              <defs>
+  <meshGradient id="mesh-grad-2-3" x="-20.8" y="14.5">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 0.0,56.1" stop-color="#ffd5d5" />
+        <stop path="L -20.8,72.6" stop-color="#ffe5e5" />
+        <stop path="L -41.6,28.8" stop-color="#ff5252" />
+        <stop path="Z" stop-color="#ff4d4d" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="-20.8,14.5 0.0,56.1 -20.8,72.6 -41.6,28.8" fill="url(#mesh-grad-2-3)" stroke="url(#mesh-grad-2-3)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-41.57,72.00 -62.35,84.00 -41.57,96.00 -20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="11.25" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 4-5: Avg Value 11.3</title>
+              <defs>
+  <meshGradient id="mesh-grad-2-4" x="-41.6" y="28.8">
+    <meshRow>
+      <meshPatch>
+        <stop path="L -20.8,72.6" stop-color="#ffe3e3" />
+        <stop path="L -41.6,86.9" stop-color="#ffeaea" />
+        <stop path="L -62.4,45.4" stop-color="#ff6969" />
+        <stop path="Z" stop-color="#ff5151" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="-41.6,28.8 -20.8,72.6 -41.6,86.9 -62.4,45.4" fill="url(#mesh-grad-2-4)" stroke="url(#mesh-grad-2-4)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-62.35,84.00 -83.14,96.00 -62.35,108.00 -41.57,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="5" data-value="9.75" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 5-6: Avg Value 9.8</title>
+              <defs>
+  <meshGradient id="mesh-grad-2-5" x="-62.4" y="45.4">
+    <meshRow>
+      <meshPatch>
+        <stop path="L -41.6,86.9" stop-color="#ffebeb" />
+        <stop path="L -62.4,101.2" stop-color="#fff0f0" />
+        <stop path="L -83.1,61.9" stop-color="#ff8888" />
+        <stop path="Z" stop-color="#ff6969" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="-62.4,45.4 -41.6,86.9 -62.4,101.2 -83.1,61.9" fill="url(#mesh-grad-2-5)" stroke="url(#mesh-grad-2-5)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-83.14,96.00 -103.92,108.00 -83.14,120.00 -62.35,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="62.35,36.00 41.57,48.00 62.35,60.00 83.14,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="7.00" style="animation-delay: 45ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 0-1: Avg Value 7.0</title>
+              <defs>
+  <meshGradient id="mesh-grad-3-0" x="62.4" y="6.5">
+    <meshRow>
+      <meshPatch>
+        <stop path="L 83.1,43.5" stop-color="#fff7f7" />
+        <stop path="L 62.4,55.5" stop-color="#fff7f7" />
+        <stop path="L 41.6,23.0" stop-color="#ffb0b0" />
+        <stop path="Z" stop-color="#ff9d9d" />
+      </meshPatch>
+    </meshRow>
+  </meshGradient>
+</defs>
+<polygon points="62.4,6.5 83.1,43.5 62.4,55.5 41.6,23.0" fill="url(#mesh-grad-3-0)" stroke="url(#mesh-grad-3-0)"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="41.57,48.00 20.78,60.00 41.57,72.00 62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="20.78,60.00 0.00,72.00 20.78,84.00 41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,72.00 -20.78,84.00 0.00,96.00 20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,84.00 -41.57,96.00 -20.78,108.00 0.00,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-41.57,96.00 -62.35,108.00 -41.57,120.00 -20.78,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-62.35,108.00 -83.14,120.00 -62.35,132.00 -41.57,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="83.14,48.00 62.35,60.00 83.14,72.00 103.92,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="62.35,60.00 41.57,72.00 62.35,84.00 83.14,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="41.57,72.00 20.78,84.00 41.57,96.00 62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="20.78,84.00 0.00,96.00 20.78,108.00 41.57,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,96.00 -20.78,108.00 0.00,120.00 20.78,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,108.00 -41.57,120.00 -20.78,132.00 0.00,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-41.57,120.00 -62.35,132.00 -41.57,144.00 -20.78,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-row-labels"><text x="120.32" y="68.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Mon</text>
+<text x="99.53" y="80.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Tue</text>
+<text x="78.75" y="92.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Wed</text>
+<text x="57.96" y="104.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Thu</text>
+<text x="37.18" y="116.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Fri</text>
+<text x="16.39" y="128.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Sat</text>
+<text x="-4.39" y="140.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Sun</text></g>
+    </g>
+  </svg>
