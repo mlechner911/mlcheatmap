@@ -29,6 +29,7 @@ const heightSolid = args['height-solid'] !== 'false' && args['height-solid'] !==
 const interpolateColors = args['interpolate-colors'] === true || args['interpolate-colors'] === 'true' || args['interpolate-colors'] === '1' || args.gradient === true || args.gradient === 'true' || args.gradient === '1';
 const triangulateMesh = args.triangulate !== 'false' && args.triangulate !== '0' && args['no-triangulate'] === undefined;
 const useSvg2Mesh = args.svg2mesh === true || args.svg2mesh === 'true' || args.svg2mesh === '1';
+const shading = args.shading !== 'false' && args.shading !== '0' && args['no-shading'] === undefined;
 
 const outFile = args.out || 'output.svg';
 
@@ -38,7 +39,7 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
 
-console.log(`Generating heatmap: preset=${presetType}, color=${colorScheme}, angle=${angle}°, label-pos=${labelPosition}, shape=${shape}, opacity=${opacity}, animated=${animated}, flat-zero=${renderFlatZero}, height-ticks=${heightTicks}, height-solid=${heightSolid}, interpolate-colors=${interpolateColors}, triangulate=${triangulateMesh}, svg2mesh=${useSvg2Mesh}...`);
+console.log(`Generating heatmap: preset=${presetType}, color=${colorScheme}, angle=${angle}°, label-pos=${labelPosition}, shape=${shape}, opacity=${opacity}, animated=${animated}, flat-zero=${renderFlatZero}, height-ticks=${heightTicks}, height-solid=${heightSolid}, interpolate-colors=${interpolateColors}, triangulate=${triangulateMesh}, svg2mesh=${useSvg2Mesh}, shading=${shading}...`);
 
 let dataPoints = [];
 let options = {
@@ -53,6 +54,7 @@ let options = {
   interpolateColors,
   triangulateMesh,
   useSvg2Mesh,
+  shading,
   gridSize: 16,
   gap: 2,
   maxHeight: 40,

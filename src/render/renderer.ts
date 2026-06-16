@@ -303,7 +303,8 @@ export function renderHeatmap(
               titleTag: '',
               inlineStyle: '',
               triangulateMesh: options.triangulateMesh,
-              useSvg2Mesh: options.useSvg2Mesh
+              useSvg2Mesh: options.useSvg2Mesh,
+              shading: options.shading
             });
 
             barSvg = `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${avgVal.toFixed(2)}"${inlineStyle}>

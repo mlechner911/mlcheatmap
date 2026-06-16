@@ -342,6 +342,7 @@ const interpolateColorsSwitch = document.getElementById('interpolateColorsSwitch
 
 const triangulateMeshSwitch = document.getElementById('triangulateMeshSwitch') as HTMLInputElement;
 const useSvg2MeshSwitch = document.getElementById('useSvg2MeshSwitch') as HTMLInputElement;
+const meshShadingSwitch = document.getElementById('meshShadingSwitch') as HTMLInputElement;
 const meshOptionsGroup = document.getElementById('meshOptionsGroup') as HTMLDivElement;
 
 const heightGridSwitch = document.getElementById('heightGridSwitch') as HTMLInputElement;
@@ -405,6 +406,7 @@ function updateHeatmap() {
   const interpolateColors = interpolateColorsSwitch.checked;
   const triangulateMesh = triangulateMeshSwitch.checked;
   const useSvg2Mesh = useSvg2MeshSwitch.checked;
+  const shading = meshShadingSwitch.checked;
 
   meshOptionsGroup.style.display = (shape === 'mesh') ? 'block' : 'none';
 
@@ -463,6 +465,7 @@ function updateHeatmap() {
     interpolateColors,
     triangulateMesh,
     useSvg2Mesh,
+    shading,
     showRowLabels,
     rowLabelStyle: {
       fontSize: rowLabelFontSize,
@@ -846,6 +849,7 @@ const controls = [
   interpolateColorsSwitch,
   triangulateMeshSwitch,
   useSvg2MeshSwitch,
+  meshShadingSwitch,
   showRowLabelsSwitch,
   rowLabelFontSizeInput,
   rowLabelBgSelect,

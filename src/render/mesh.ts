@@ -53,6 +53,7 @@ export interface RenderMeshParams {
   inlineStyle?: string;
   triangulateMesh?: boolean; // Decompose quad into planar triangles (default: true)
   useSvg2Mesh?: boolean;     // Experimental: use SVG 2.0 meshGradient (default: false)
+  shading?: boolean;         // Toggle 3D light shading on the mesh terrain (default: true)
 }
 
 /**
@@ -80,7 +81,8 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     titleTag,
     inlineStyle,
     triangulateMesh = true,
-    useSvg2Mesh = false
+    useSvg2Mesh = false,
+    shading = true
   } = params;
 
   const { gridSize } = geometryConfig;
@@ -113,7 +115,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     const length = Math.sqrt(nx * nx + ny * ny + nz * nz);
     const dot = (nx / length) * lx + (ny / length) * ly + (nz / length) * lz;
     const intensity = Math.max(-1, Math.min(1, dot));
-    const shadowCoef = 0.85 + 0.25 * intensity;
+    const shadowCoef = shading ? (0.85 + 0.25 * intensity) : 1.0;
 
     // Resolve individual corner colors and apply shadow
     const col0 = shadeHex(getColorForValue(v0, maxAbsValue, theme, negativeTheme, interpolateColors), shadowCoef);
@@ -154,7 +156,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     const len_A = Math.sqrt(nx_A * nx_A + ny_A * ny_A + nz_A * nz_A);
     const dot_A = (nx_A / len_A) * lx + (ny_A / len_A) * ly + (nz_A / len_A) * lz;
     const intensity_A = Math.max(-1, Math.min(1, dot_A));
-    const shadowCoef_A = 0.85 + 0.25 * intensity_A;
+    const shadowCoef_A = shading ? (0.85 + 0.25 * intensity_A) : 1.0;
 
     const avgVal_A = (v0 + v1 + v2) / 3;
     const baseColor_A = getColorForValue(avgVal_A, maxAbsValue, theme, negativeTheme, interpolateColors);
@@ -170,7 +172,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     const len_B = Math.sqrt(nx_B * nx_B + ny_B * ny_B + nz_B * nz_B);
     const dot_B = (nx_B / len_B) * lx + (ny_B / len_B) * ly + (nz_B / len_B) * lz;
     const intensity_B = Math.max(-1, Math.min(1, dot_B));
-    const shadowCoef_B = 0.85 + 0.25 * intensity_B;
+    const shadowCoef_B = shading ? (0.85 + 0.25 * intensity_B) : 1.0;
 
     const avgVal_B = (v0 + v2 + v3) / 3;
     const baseColor_B = getColorForValue(avgVal_B, maxAbsValue, theme, negativeTheme, interpolateColors);
@@ -197,7 +199,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
   const length = Math.sqrt(nx * nx + ny * ny + nz * nz);
   const dot = (nx / length) * lx + (ny / length) * ly + (nz / length) * lz;
   const intensity = Math.max(-1, Math.min(1, dot));
-  const shadowCoef = 0.85 + 0.25 * intensity;
+  const shadowCoef = shading ? (0.85 + 0.25 * intensity) : 1.0;
   const fill = shadeHex(baseColor, shadowCoef);
   const stroke = shadeHex(fill, 0.85);
 
