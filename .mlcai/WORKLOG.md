@@ -169,6 +169,7 @@
   14. Added a 3D Surface Mesh version of the workweek calendar month data as Example 42 in `demo/generate.sh` and successfully validated its generation.
   15. Implemented `shading?: boolean` option for mesh terrain rendering to optionally toggle 3D Lambertian light shading, returning flat base colors mapping directly to data values. Integrated the control checkbox in `index.html` / `demo/demo.ts`, parsed the `--shading` option in the CLI generator `demo/generator.js`, and bumped the library package version to `v1.2.0`.
   16. Removed `demo/output/` from `.gitignore` to track all generated SVG examples, committed them, and bumped the version to `v1.2.1` to publish package updates cleanly.
+  17. Updated unpkg.com CDN links from `@1.0.0` to `@1.2.1` in `README.md` and `README.de.md` to ensure they point to the correct release.
 
 
 
