@@ -402,6 +402,15 @@ node "$SCRIPT_DIR/generator.js" \
   --angle=30 \
   --out="$OUTPUT_DIR/month_workweek_mon_fri_calendar.svg"
 
+# Example 42: Workweek Calendar Month (Mon-Fri rows) as 3D Surface Mesh, Coral Theme
+node "$SCRIPT_DIR/generator.js" \
+  --preset=month-workweek \
+  --shape=mesh \
+  --gap=0 \
+  --color=coral \
+  --angle=30 \
+  --out="$OUTPUT_DIR/month_workweek_mon_fri_calendar_mesh.svg"
+
 
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
