@@ -1,7 +1,5 @@
 # MLC Isometric 3D Heatmap Library
 
-[Deutsche Version / German version](README.de.md)
-
 A lightweight, reusable TypeScript library to render high-quality, interactive 3D isometric heatmaps as pure vector SVG graphics.
 
 Unlike traditional 2D grid heatmaps, this library projects data points into isometric space using customizable 3D shapes (Prisms, Cylinders, and Continuous Ribbons), supporting load animations, diverging color schemes, negative sinking values, and transparent representation of null (missing) data.
@@ -192,13 +190,13 @@ Customize row/series text annotations using the `rowLabelStyle` configuration ob
 Here are some pre-rendered SVG examples demonstrating the library's capabilities:
 
 *   **24h Timeline Gradient Demo (4 Shapes & Continuous Gradient)**:
-    ![24h Timeline Gradient Demo](demo/output/24h_gradient_sky_flatribbon.svg)
+  ![24h Timeline Gradient Demo](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/24h_gradient_sky_flatribbon.svg)
 *   **6-Month Split Timeline (Smooth Gradients)**:
-    ![6-Month Split Timeline (Smooth Gradients)](demo/output/sixmonths_split_smooth_gradient.svg)
+  ![6-Month Split Timeline (Smooth Gradients)](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/sixmonths_split_smooth_gradient.svg)
 *   **24h Double-Row Timeline**:
-    *   ![24h Double-Row Timeline](demo/output/24h_double_row_timeline.svg)
+  *   ![24h Double-Row Timeline](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/24h_double_row_timeline.svg)
 *   **3D Surface Mesh Terrain (Rolling Hills)** *(Note: The circular hole in the center represents a "lake" of intentional `null` values, demonstrating how missing/outage data is rendered as a clean gap in the terrain)*:
-    *   ![3D Surface Mesh Terrain](demo/output/mesh_terrain_sunset_hills.svg)
+  *   ![3D Surface Mesh Terrain](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/mesh_terrain_sunset_hills.svg)
 
 ## AI-Assisted Development (Claude, Cursor, Antigravity)
 

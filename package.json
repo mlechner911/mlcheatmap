@@ -1,6 +1,6 @@
 {
   "name": "mlc-isometric-heatmap",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A reusable TypeScript library to render high-quality isometric 3D heatmaps in SVG.",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -36,7 +36,7 @@
     "github-contributions",
     "calendar"
   ],
-  "author": "Antigravity",
+  "author": "Michael Lechner",
   "license": "MIT",
   "devDependencies": {
     "typescript": "^5.4.5",
