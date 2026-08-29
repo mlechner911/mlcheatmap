@@ -10,3 +10,9 @@ dist-demo/
 # Logs & OS temporary files
 *.log
 .DS_Store
+
+# Projektdokumentation. Eigenes Repo mit privatem Remote auf nas.local
+# (siehe Doc-Hub-Registry, Feld mlcai_remote). Bewusst NICHT als Submodul:
+# dieses Repo ist oeffentlich, ein .gitmodules wuerde die interne Adresse
+# weltweit lesbar machen und `git clone --recursive` bei Fremden brechen.
+.mlcai/
