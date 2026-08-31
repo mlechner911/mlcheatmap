@@ -5,5 +5,7 @@ author:   Michael Lechner
 lang:     de
 accent:   "#f97316"
 cover_image: mesh_terrain_sunset_hills.svg
+license:     CC BY-NC 4.0
+license_url: https://creativecommons.org/licenses/by-nc/4.0/
 
 # Kapitel werden in Dateinamen-Sortierung aus chapters/ geladen.
