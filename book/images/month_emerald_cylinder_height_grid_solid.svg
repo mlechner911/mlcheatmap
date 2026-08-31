@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-186.24 -78.00 331.51 226.50" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>June 2026 Activity (Month Preset)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    <defs><linearGradient id="cyl-grad-86efac" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#72cb92" stop-opacity="1" />
+          <stop offset="35%" stop-color="#86efac" stop-opacity="1" />
+          <stop offset="75%" stop-color="#5ea778" stop-opacity="1" />
+          <stop offset="100%" stop-color="#437856" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-15803d" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#126d34" stop-opacity="1" />
+          <stop offset="35%" stop-color="#15803d" stop-opacity="1" />
+          <stop offset="75%" stop-color="#0f5a2b" stop-opacity="1" />
+          <stop offset="100%" stop-color="#0b401f" stop-opacity="1" />
+        </linearGradient></defs>
+    <text x="-20.49" y="-64.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">June 2026 Activity (Month</text>
+<text x="-20.49" y="-46.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Preset)</text>
+    <g>
+      <polygon points="0.00,-40.00 -121.24,30.00 -121.24,70.00 0.00,0.00" fill="rgba(241, 245, 249, 0.7)" stroke="none" />
+<line x1="0.00" y1="0.00" x2="0.00" y2="-40.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-17.32" y1="10.00" x2="-17.32" y2="-30.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-34.64" y1="20.00" x2="-34.64" y2="-20.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-51.96" y1="30.00" x2="-51.96" y2="-10.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-69.28" y1="40.00" x2="-69.28" y2="-0.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-86.60" y1="50.00" x2="-86.60" y2="10.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-103.92" y1="60.00" x2="-103.92" y2="20.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="-121.24" y1="70.00" x2="-121.24" y2="30.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
+<line x1="0.00" y1="0.00" x2="-121.24" y2="70.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-129.24" y="73.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">0</text>
+<line x1="0.00" y1="-10.00" x2="-121.24" y2="60.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-129.24" y="63.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">3</text>
+<line x1="0.00" y1="-20.00" x2="-121.24" y2="50.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-129.24" y="53.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">6</text>
+<line x1="0.00" y1="-30.00" x2="-121.24" y2="40.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-129.24" y="43.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">9</text>
+<line x1="0.00" y1="-40.00" x2="-121.24" y2="30.00" stroke="#e1e4e8" stroke-width="0.5" />
+<text x="-129.24" y="33.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">12</text>
+<g class="iso-col-labels"><text x="20.78" y="-10.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W1</text>
+<text x="38.11" y="-0.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W2</text>
+<text x="55.43" y="9.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W3</text>
+<text x="72.75" y="19.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W4</text>
+<text x="90.07" y="29.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W5</text></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -17.32,10.00 0.00,20.00 17.32,10.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="2" style="animation-delay: 0ms; transform-origin: bottom;">
+      <title>2026-06-01 — 2 units</title>
+      <path d="M -7.36,3.33 L -7.36,10.00 A 7.36,4.25 0 0,0 7.36,10.00 L 7.36,3.33 A 7.36,4.25 0 0,1 -7.36,3.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="0.00" cy="3.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-17.32,10.00 -34.64,20.00 -17.32,30.00 0.00,20.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="2" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>2026-06-02 — 2 units</title>
+      <path d="M -24.68,13.33 L -24.68,20.00 A 7.36,4.25 0 0,0 -9.96,20.00 L -9.96,13.33 A 7.36,4.25 0 0,1 -24.68,13.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-17.32" cy="13.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-34.64,20.00 -51.96,30.00 -34.64,40.00 -17.32,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>2026-06-03 — 12 units</title>
+      <path d="M -42.00,-10.00 L -42.00,30.00 A 7.36,4.25 0 0,0 -27.28,30.00 L -27.28,-10.00 A 7.36,4.25 0 0,1 -42.00,-10.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-34.64" cy="-10.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-51.96,30.00 -69.28,40.00 -51.96,50.00 -34.64,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-04 — 2 units</title>
+      <path d="M -59.32,33.33 L -59.32,40.00 A 7.36,4.25 0 0,0 -44.60,40.00 L -44.60,33.33 A 7.36,4.25 0 0,1 -59.32,33.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-51.96" cy="33.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-69.28,40.00 -86.60,50.00 -69.28,60.00 -51.96,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-06-05 — 2 units</title>
+      <path d="M -76.64,43.33 L -76.64,50.00 A 7.36,4.25 0 0,0 -61.92,50.00 L -61.92,43.33 A 7.36,4.25 0 0,1 -76.64,43.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-69.28" cy="43.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-86.60,50.00 -103.92,60.00 -86.60,70.00 -69.28,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="5" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-06 — 12 units</title>
+      <path d="M -93.96,20.00 L -93.96,60.00 A 7.36,4.25 0 0,0 -79.24,60.00 L -79.24,20.00 A 7.36,4.25 0 0,1 -93.96,20.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-86.60" cy="20.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-103.92,60.00 -121.24,70.00 -103.92,80.00 -86.60,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="6" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>2026-06-07 — 0 units</title>
+        <ellipse cx="-103.92" cy="70.00" rx="7.36" ry="4.25" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="17.32,10.00 0.00,20.00 17.32,30.00 34.64,20.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="2" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>2026-06-08 — 2 units</title>
+      <path d="M 9.96,13.33 L 9.96,20.00 A 7.36,4.25 0 0,0 24.68,20.00 L 24.68,13.33 A 7.36,4.25 0 0,1 9.96,13.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="17.32" cy="13.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,20.00 -17.32,30.00 0.00,40.00 17.32,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>2026-06-09 — 12 units</title>
+      <path d="M -7.36,-10.00 L -7.36,30.00 A 7.36,4.25 0 0,0 7.36,30.00 L 7.36,-10.00 A 7.36,4.25 0 0,1 -7.36,-10.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="0.00" cy="-10.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-17.32,30.00 -34.64,40.00 -17.32,50.00 0.00,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-10 — 2 units</title>
+      <path d="M -24.68,33.33 L -24.68,40.00 A 7.36,4.25 0 0,0 -9.96,40.00 L -9.96,33.33 A 7.36,4.25 0 0,1 -24.68,33.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-17.32" cy="33.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-34.64,40.00 -51.96,50.00 -34.64,60.00 -17.32,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-06-11 — 2 units</title>
+      <path d="M -42.00,43.33 L -42.00,50.00 A 7.36,4.25 0 0,0 -27.28,50.00 L -27.28,43.33 A 7.36,4.25 0 0,1 -42.00,43.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-34.64" cy="43.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-51.96,50.00 -69.28,60.00 -51.96,70.00 -34.64,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-12 — 12 units</title>
+      <path d="M -59.32,20.00 L -59.32,60.00 A 7.36,4.25 0 0,0 -44.60,60.00 L -44.60,20.00 A 7.36,4.25 0 0,1 -59.32,20.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-51.96" cy="20.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-69.28,60.00 -86.60,70.00 -69.28,80.00 -51.96,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="5" data-value="2" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-06-13 — 2 units</title>
+      <path d="M -76.64,63.33 L -76.64,70.00 A 7.36,4.25 0 0,0 -61.92,70.00 L -61.92,63.33 A 7.36,4.25 0 0,1 -76.64,63.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-69.28" cy="63.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-86.60,70.00 -103.92,80.00 -86.60,90.00 -69.28,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="6" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>2026-06-14 — 0 units</title>
+        <ellipse cx="-86.60" cy="80.00" rx="7.36" ry="4.25" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="34.64,20.00 17.32,30.00 34.64,40.00 51.96,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>2026-06-15 — 12 units</title>
+      <path d="M 27.28,-10.00 L 27.28,30.00 A 7.36,4.25 0 0,0 42.00,30.00 L 42.00,-10.00 A 7.36,4.25 0 0,1 27.28,-10.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="34.64" cy="-10.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="17.32,30.00 0.00,40.00 17.32,50.00 34.64,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-16 — 2 units</title>
+      <path d="M 9.96,33.33 L 9.96,40.00 A 7.36,4.25 0 0,0 24.68,40.00 L 24.68,33.33 A 7.36,4.25 0 0,1 9.96,33.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="17.32" cy="33.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,40.00 -17.32,50.00 0.00,60.00 17.32,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="2" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-06-17 — 2 units</title>
+      <path d="M -7.36,43.33 L -7.36,50.00 A 7.36,4.25 0 0,0 7.36,50.00 L 7.36,43.33 A 7.36,4.25 0 0,1 -7.36,43.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="0.00" cy="43.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-17.32,50.00 -34.64,60.00 -17.32,70.00 0.00,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="3" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-18 — 12 units</title>
+      <path d="M -24.68,20.00 L -24.68,60.00 A 7.36,4.25 0 0,0 -9.96,60.00 L -9.96,20.00 A 7.36,4.25 0 0,1 -24.68,20.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-17.32" cy="20.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-34.64,60.00 -51.96,70.00 -34.64,80.00 -17.32,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="2" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-06-19 — 2 units</title>
+      <path d="M -42.00,63.33 L -42.00,70.00 A 7.36,4.25 0 0,0 -27.28,70.00 L -27.28,63.33 A 7.36,4.25 0 0,1 -42.00,63.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-34.64" cy="63.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-51.96,70.00 -69.28,80.00 -51.96,90.00 -34.64,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="5" data-value="2" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>2026-06-20 — 2 units</title>
+      <path d="M -59.32,73.33 L -59.32,80.00 A 7.36,4.25 0 0,0 -44.60,80.00 L -44.60,73.33 A 7.36,4.25 0 0,1 -59.32,73.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-51.96" cy="73.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-69.28,80.00 -86.60,90.00 -69.28,100.00 -51.96,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="6" data-value="12" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>2026-06-21 — 12 units</title>
+      <path d="M -76.64,50.00 L -76.64,90.00 A 7.36,4.25 0 0,0 -61.92,90.00 L -61.92,50.00 A 7.36,4.25 0 0,1 -76.64,50.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-69.28" cy="50.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="51.96,30.00 34.64,40.00 51.96,50.00 69.28,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-06-22 — 2 units</title>
+      <path d="M 44.60,33.33 L 44.60,40.00 A 7.36,4.25 0 0,0 59.32,40.00 L 59.32,33.33 A 7.36,4.25 0 0,1 44.60,33.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="51.96" cy="33.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="34.64,40.00 17.32,50.00 34.64,60.00 51.96,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-06-23 — 2 units</title>
+      <path d="M 27.28,43.33 L 27.28,50.00 A 7.36,4.25 0 0,0 42.00,50.00 L 42.00,43.33 A 7.36,4.25 0 0,1 27.28,43.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="34.64" cy="43.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="17.32,50.00 0.00,60.00 17.32,70.00 34.64,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-24 — 12 units</title>
+      <path d="M 9.96,20.00 L 9.96,60.00 A 7.36,4.25 0 0,0 24.68,60.00 L 24.68,20.00 A 7.36,4.25 0 0,1 9.96,20.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="17.32" cy="20.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,60.00 -17.32,70.00 0.00,80.00 17.32,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="2" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-06-25 — 2 units</title>
+      <path d="M -7.36,63.33 L -7.36,70.00 A 7.36,4.25 0 0,0 7.36,70.00 L 7.36,63.33 A 7.36,4.25 0 0,1 -7.36,63.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="0.00" cy="63.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-17.32,70.00 -34.64,80.00 -17.32,90.00 0.00,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="2" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>2026-06-26 — 2 units</title>
+      <path d="M -24.68,73.33 L -24.68,80.00 A 7.36,4.25 0 0,0 -9.96,80.00 L -9.96,73.33 A 7.36,4.25 0 0,1 -24.68,73.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-17.32" cy="73.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-34.64,80.00 -51.96,90.00 -34.64,100.00 -17.32,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="5" data-value="12" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>2026-06-27 — 12 units</title>
+      <path d="M -42.00,50.00 L -42.00,90.00 A 7.36,4.25 0 0,0 -27.28,90.00 L -27.28,50.00 A 7.36,4.25 0 0,1 -42.00,50.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-34.64" cy="50.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-51.96,90.00 -69.28,100.00 -51.96,110.00 -34.64,100.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="6" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>2026-06-28 — 0 units</title>
+        <ellipse cx="-51.96" cy="100.00" rx="7.36" ry="4.25" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="69.28,40.00 51.96,50.00 69.28,60.00 86.60,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-06-29 — 2 units</title>
+      <path d="M 61.92,43.33 L 61.92,50.00 A 7.36,4.25 0 0,0 76.64,50.00 L 76.64,43.33 A 7.36,4.25 0 0,1 61.92,43.33 Z" fill="url(#cyl-grad-86efac)" stroke="#65b381" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="69.28" cy="43.33" rx="7.36" ry="4.25" fill="#86efac" stroke="#86efac" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="51.96,50.00 34.64,60.00 51.96,70.00 69.28,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-06-30 — 12 units</title>
+      <path d="M 44.60,20.00 L 44.60,60.00 A 7.36,4.25 0 0,0 59.32,60.00 L 59.32,20.00 A 7.36,4.25 0 0,1 44.60,20.00 Z" fill="url(#cyl-grad-15803d)" stroke="#10602e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="51.96" cy="20.00" rx="7.36" ry="4.25" fill="#15803d" stroke="#15803d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="34.64,60.00 17.32,70.00 34.64,80.00 51.96,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="17.32,70.00 0.00,80.00 17.32,90.00 34.64,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,80.00 -17.32,90.00 0.00,100.00 17.32,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-17.32,90.00 -34.64,100.00 -17.32,110.00 0.00,100.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-34.64,100.00 -51.96,110.00 -34.64,120.00 -17.32,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-row-labels"><text x="101.26" y="59.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Mon</text>
+<text x="83.94" y="69.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Tue</text>
+<text x="66.62" y="79.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Wed</text>
+<text x="49.30" y="89.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Thu</text>
+<text x="31.98" y="99.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Fri</text>
+<text x="14.66" y="109.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Sat</text>
+<text x="-2.66" y="119.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Sun</text></g>
+    </g>
+  </svg>

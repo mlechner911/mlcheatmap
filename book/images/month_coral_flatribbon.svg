@@ -1,0 +1,317 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-174.71 -60.50 304.77 200.50" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>June 2026 Activity (Month Preset)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    
+    <text x="-22.32" y="-46.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">June 2026 Activity (Month</text>
+<text x="-22.32" y="-28.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Preset)</text>
+    <g>
+      <g class="iso-col-labels"><text x="20.78" y="-10.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W1</text>
+<text x="38.11" y="-0.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W2</text>
+<text x="55.43" y="9.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W3</text>
+<text x="72.75" y="19.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W4</text>
+<text x="90.07" y="29.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W5</text></g>
+<g class="iso-row-labels"><text x="-26.78" y="-7.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Mon</text>
+<text x="-44.11" y="2.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Tue</text>
+<text x="-61.43" y="12.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Wed</text>
+<text x="-78.75" y="22.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Thu</text>
+<text x="-96.07" y="32.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Fri</text>
+<text x="-113.39" y="42.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Sat</text>
+<text x="-130.71" y="52.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Sun</text></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -17.32,10.00 0.00,20.00 17.32,10.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="2" style="animation-delay: 0ms; transform-origin: bottom;">
+        <title>2026-06-01 — 2 units</title>
+        <polygon class="iso-face-left" points="-1.30,0.75 -16.02,9.25 -16.02,13.25 -1.30,4.75" fill="#d9abab" stroke="#d9abab" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -16.02,9.25 C -13.13,9.81 -10.25,5.92 -7.36,7.58 L 7.36,-0.92 C 4.47,-2.58 1.59,1.31 -1.30,0.75 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -16.02,13.25 L -16.02,9.25 C -13.13,9.81 -10.25,5.92 -7.36,7.58 L -7.36,11.58 C -10.25,9.92 -13.13,13.81 -16.02,13.25 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -7.36,7.58 C -4.47,9.25 -1.59,10.92 1.30,12.58 L 16.02,4.08 C 13.13,2.42 10.25,0.75 7.36,-0.92 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -7.36,11.58 L -7.36,7.58 C -4.47,9.25 -1.59,10.92 1.30,12.58 L 1.30,16.58 C -1.59,14.92 -4.47,13.25 -7.36,11.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-17.32,10.00 -34.64,20.00 -17.32,30.00 0.00,20.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="2" style="animation-delay: 15ms; transform-origin: bottom;">
+        <title>2026-06-02 — 2 units</title>
+        <polygon class="iso-face-left" points="-18.62,10.75 -33.34,19.25 -33.34,23.25 -18.62,14.75" fill="#d9abab" stroke="#d9abab" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -33.34,19.25 C -30.46,19.81 -27.57,15.92 -24.68,17.58 L -9.96,9.08 C -12.85,7.42 -15.73,11.31 -18.62,10.75 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -33.34,23.25 L -33.34,19.25 C -30.46,19.81 -27.57,15.92 -24.68,17.58 L -24.68,21.58 C -27.57,19.92 -30.46,23.81 -33.34,23.25 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -24.68,17.58 C -21.79,19.25 -18.91,9.81 -16.02,5.92 L -1.30,-2.58 C -4.19,1.31 -7.07,10.75 -9.96,9.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -24.68,21.58 L -24.68,17.58 C -21.79,19.25 -18.91,9.81 -16.02,5.92 L -16.02,9.92 C -18.91,13.81 -21.79,23.25 -24.68,21.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-34.64,20.00 -51.96,30.00 -34.64,40.00 -17.32,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>2026-06-03 — 12 units</title>
+        <polygon class="iso-face-left" points="-35.94,20.75 -50.66,29.25 -50.66,33.25 -35.94,24.75" fill="#cc3535" stroke="#cc3535" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -50.66,29.25 C -47.78,24.25 -44.89,-7.42 -42.00,-5.75 L -27.28,-14.25 C -30.17,-15.92 -33.05,15.75 -35.94,20.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -50.66,33.25 L -50.66,29.25 C -47.78,24.25 -44.89,-7.42 -42.00,-5.75 L -42.00,-1.75 C -44.89,-3.42 -47.78,28.25 -50.66,33.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -42.00,-5.75 C -39.12,-4.08 -36.23,8.69 -33.34,15.92 L -18.62,7.42 C -21.51,0.19 -24.39,-12.58 -27.28,-14.25 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -42.00,-1.75 L -42.00,-5.75 C -39.12,-4.08 -36.23,8.69 -33.34,15.92 L -33.34,19.92 C -36.23,12.69 -39.12,-0.08 -42.00,-1.75 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-51.96,30.00 -69.28,40.00 -51.96,50.00 -34.64,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>2026-06-04 — 2 units</title>
+        <polygon class="iso-face-left" points="-53.26,30.75 -67.98,39.25 -67.98,43.25 -53.26,34.75" fill="#d9abab" stroke="#d9abab" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -67.98,39.25 C -65.10,39.81 -62.21,35.92 -59.32,37.58 L -44.60,29.08 C -47.49,27.42 -50.37,31.31 -53.26,30.75 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -67.98,43.25 L -67.98,39.25 C -65.10,39.81 -62.21,35.92 -59.32,37.58 L -59.32,41.58 C -62.21,39.92 -65.10,43.81 -67.98,43.25 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -59.32,37.58 C -56.44,39.25 -53.55,40.92 -50.66,42.58 L -35.94,34.08 C -38.83,32.42 -41.71,30.75 -44.60,29.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -59.32,41.58 L -59.32,37.58 C -56.44,39.25 -53.55,40.92 -50.66,42.58 L -50.66,46.58 C -53.55,44.92 -56.44,43.25 -59.32,41.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-69.28,40.00 -86.60,50.00 -69.28,60.00 -51.96,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-05 — 2 units</title>
+        <polygon class="iso-face-left" points="-70.58,40.75 -85.30,49.25 -85.30,53.25 -70.58,44.75" fill="#d9abab" stroke="#d9abab" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -85.30,49.25 C -82.42,49.81 -79.53,45.92 -76.64,47.58 L -61.92,39.08 C -64.81,37.42 -67.69,41.31 -70.58,40.75 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -85.30,53.25 L -85.30,49.25 C -82.42,49.81 -79.53,45.92 -76.64,47.58 L -76.64,51.58 C -79.53,49.92 -82.42,53.81 -85.30,53.25 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -76.64,47.58 C -73.76,49.25 -70.87,39.81 -67.98,35.92 L -53.26,27.42 C -56.15,31.31 -59.03,40.75 -61.92,39.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -76.64,51.58 L -76.64,47.58 C -73.76,49.25 -70.87,39.81 -67.98,35.92 L -67.98,39.92 C -70.87,43.81 -73.76,53.25 -76.64,51.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-86.60,50.00 -103.92,60.00 -86.60,70.00 -69.28,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="5" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>2026-06-06 — 12 units</title>
+        <polygon class="iso-face-left" points="-87.90,50.75 -102.62,59.25 -102.62,63.25 -87.90,54.75" fill="#cc3535" stroke="#cc3535" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -102.62,59.25 C -99.74,54.25 -96.85,22.58 -93.96,24.25 L -79.24,15.75 C -82.13,14.08 -85.01,45.75 -87.90,50.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -102.62,63.25 L -102.62,59.25 C -99.74,54.25 -96.85,22.58 -93.96,24.25 L -93.96,28.25 C -96.85,26.58 -99.74,58.25 -102.62,63.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -93.96,24.25 C -91.08,25.92 -88.19,38.69 -85.30,45.92 L -70.58,37.42 C -73.47,30.19 -76.35,17.42 -79.24,15.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -93.96,28.25 L -93.96,24.25 C -91.08,25.92 -88.19,38.69 -85.30,45.92 L -85.30,49.92 C -88.19,42.69 -91.08,29.92 -93.96,28.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-103.92,60.00 -121.24,70.00 -103.92,80.00 -86.60,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="6" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+                <title>2026-06-07 — 0 units</title>
+                <polygon points="-103.92,61.50 -118.65,70.00 -103.92,78.50 -89.20,70.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+              </g>
+<polygon class="iso-grid-cell" points="17.32,10.00 0.00,20.00 17.32,30.00 34.64,20.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="2" style="animation-delay: 15ms; transform-origin: bottom;">
+        <title>2026-06-08 — 2 units</title>
+        
+        <path class="iso-face-top" d="M 1.30,12.58 C 4.19,14.25 7.07,15.92 9.96,17.58 L 24.68,9.08 C 21.79,7.42 18.91,5.75 16.02,4.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 1.30,16.58 L 1.30,12.58 C 4.19,14.25 7.07,15.92 9.96,17.58 L 9.96,21.58 C 7.07,19.92 4.19,18.25 1.30,16.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 9.96,17.58 C 12.85,19.25 15.73,9.81 18.62,5.92 L 33.34,-2.58 C 30.46,1.31 27.57,10.75 24.68,9.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 9.96,21.58 L 9.96,17.58 C 12.85,19.25 15.73,9.81 18.62,5.92 L 18.62,9.92 C 15.73,13.81 12.85,23.25 9.96,21.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,20.00 -17.32,30.00 0.00,40.00 17.32,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>2026-06-09 — 12 units</title>
+        
+        <path class="iso-face-top" d="M -16.02,5.92 C -13.13,2.03 -10.25,-7.42 -7.36,-5.75 L 7.36,-14.25 C 4.47,-15.92 1.59,-6.47 -1.30,-2.58 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -16.02,9.92 L -16.02,5.92 C -13.13,2.03 -10.25,-7.42 -7.36,-5.75 L -7.36,-1.75 C -10.25,-3.42 -13.13,6.03 -16.02,9.92 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -7.36,-5.75 C -4.47,-4.08 -1.59,8.69 1.30,15.92 L 16.02,7.42 C 13.13,0.19 10.25,-12.58 7.36,-14.25 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -7.36,-1.75 L -7.36,-5.75 C -4.47,-4.08 -1.59,8.69 1.30,15.92 L 1.30,19.92 C -1.59,12.69 -4.47,-0.08 -7.36,-1.75 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-17.32,30.00 -34.64,40.00 -17.32,50.00 0.00,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>2026-06-10 — 2 units</title>
+        
+        <path class="iso-face-top" d="M -33.34,15.92 C -30.46,23.14 -27.57,35.92 -24.68,37.58 L -9.96,29.08 C -12.85,27.42 -15.73,14.64 -18.62,7.42 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -33.34,19.92 L -33.34,15.92 C -30.46,23.14 -27.57,35.92 -24.68,37.58 L -24.68,41.58 C -27.57,39.92 -30.46,27.14 -33.34,19.92 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -24.68,37.58 C -21.79,39.25 -18.91,40.92 -16.02,42.58 L -1.30,34.08 C -4.19,32.42 -7.07,30.75 -9.96,29.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -24.68,41.58 L -24.68,37.58 C -21.79,39.25 -18.91,40.92 -16.02,42.58 L -16.02,46.58 C -18.91,44.92 -21.79,43.25 -24.68,41.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-34.64,40.00 -51.96,50.00 -34.64,60.00 -17.32,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-11 — 2 units</title>
+        
+        <path class="iso-face-top" d="M -50.66,42.58 C -47.78,44.25 -44.89,45.92 -42.00,47.58 L -27.28,39.08 C -30.17,37.42 -33.05,35.75 -35.94,34.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -50.66,46.58 L -50.66,42.58 C -47.78,44.25 -44.89,45.92 -42.00,47.58 L -42.00,51.58 C -44.89,49.92 -47.78,48.25 -50.66,46.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -42.00,47.58 C -39.12,49.25 -36.23,39.81 -33.34,35.92 L -18.62,27.42 C -21.51,31.31 -24.39,40.75 -27.28,39.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -42.00,51.58 L -42.00,47.58 C -39.12,49.25 -36.23,39.81 -33.34,35.92 L -33.34,39.92 C -36.23,43.81 -39.12,53.25 -42.00,51.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-51.96,50.00 -69.28,60.00 -51.96,70.00 -34.64,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>2026-06-12 — 12 units</title>
+        
+        <path class="iso-face-top" d="M -67.98,35.92 C -65.10,32.03 -62.21,22.58 -59.32,24.25 L -44.60,15.75 C -47.49,14.08 -50.37,23.53 -53.26,27.42 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -67.98,39.92 L -67.98,35.92 C -65.10,32.03 -62.21,22.58 -59.32,24.25 L -59.32,28.25 C -62.21,26.58 -65.10,36.03 -67.98,39.92 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -59.32,24.25 C -56.44,25.92 -53.55,38.69 -50.66,45.92 L -35.94,37.42 C -38.83,30.19 -41.71,17.42 -44.60,15.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -59.32,28.25 L -59.32,24.25 C -56.44,25.92 -53.55,38.69 -50.66,45.92 L -50.66,49.92 C -53.55,42.69 -56.44,29.92 -59.32,28.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-69.28,60.00 -86.60,70.00 -69.28,80.00 -51.96,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="5" data-value="2" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>2026-06-13 — 2 units</title>
+        
+        <path class="iso-face-top" d="M -85.30,45.92 C -82.42,53.14 -79.53,65.92 -76.64,67.58 L -61.92,59.08 C -64.81,57.42 -67.69,44.64 -70.58,37.42 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -85.30,49.92 L -85.30,45.92 C -82.42,53.14 -79.53,65.92 -76.64,67.58 L -76.64,71.58 C -79.53,69.92 -82.42,57.14 -85.30,49.92 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -76.64,67.58 C -73.76,69.25 -70.87,70.92 -67.98,72.58 L -53.26,64.08 C -56.15,62.42 -59.03,60.75 -61.92,59.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -76.64,71.58 L -76.64,67.58 C -73.76,69.25 -70.87,70.92 -67.98,72.58 L -67.98,76.58 C -70.87,74.92 -73.76,73.25 -76.64,71.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-86.60,70.00 -103.92,80.00 -86.60,90.00 -69.28,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="6" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
+                <title>2026-06-14 — 0 units</title>
+                <polygon points="-86.60,71.50 -101.32,80.00 -86.60,88.50 -71.88,80.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+              </g>
+<polygon class="iso-grid-cell" points="34.64,20.00 17.32,30.00 34.64,40.00 51.96,30.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
+        <title>2026-06-15 — 12 units</title>
+        
+        <path class="iso-face-top" d="M 18.62,5.92 C 21.51,2.03 24.39,-7.42 27.28,-5.75 L 42.00,-14.25 C 39.12,-15.92 36.23,-6.47 33.34,-2.58 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 18.62,9.92 L 18.62,5.92 C 21.51,2.03 24.39,-7.42 27.28,-5.75 L 27.28,-1.75 C 24.39,-3.42 21.51,6.03 18.62,9.92 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 27.28,-5.75 C 30.17,-4.08 33.05,8.69 35.94,15.92 L 50.66,7.42 C 47.78,0.19 44.89,-12.58 42.00,-14.25 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 27.28,-1.75 L 27.28,-5.75 C 30.17,-4.08 33.05,8.69 35.94,15.92 L 35.94,19.92 C 33.05,12.69 30.17,-0.08 27.28,-1.75 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="17.32,30.00 0.00,40.00 17.32,50.00 34.64,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>2026-06-16 — 2 units</title>
+        
+        <path class="iso-face-top" d="M 1.30,15.92 C 4.19,23.14 7.07,35.92 9.96,37.58 L 24.68,29.08 C 21.79,27.42 18.91,14.64 16.02,7.42 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 1.30,19.92 L 1.30,15.92 C 4.19,23.14 7.07,35.92 9.96,37.58 L 9.96,41.58 C 7.07,39.92 4.19,27.14 1.30,19.92 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 9.96,37.58 C 12.85,39.25 15.73,40.92 18.62,42.58 L 33.34,34.08 C 30.46,32.42 27.57,30.75 24.68,29.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 9.96,41.58 L 9.96,37.58 C 12.85,39.25 15.73,40.92 18.62,42.58 L 18.62,46.58 C 15.73,44.92 12.85,43.25 9.96,41.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,40.00 -17.32,50.00 0.00,60.00 17.32,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="2" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-17 — 2 units</title>
+        
+        <path class="iso-face-top" d="M -16.02,42.58 C -13.13,44.25 -10.25,45.92 -7.36,47.58 L 7.36,39.08 C 4.47,37.42 1.59,35.75 -1.30,34.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -16.02,46.58 L -16.02,42.58 C -13.13,44.25 -10.25,45.92 -7.36,47.58 L -7.36,51.58 C -10.25,49.92 -13.13,48.25 -16.02,46.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -7.36,47.58 C -4.47,49.25 -1.59,39.81 1.30,35.92 L 16.02,27.42 C 13.13,31.31 10.25,40.75 7.36,39.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -7.36,51.58 L -7.36,47.58 C -4.47,49.25 -1.59,39.81 1.30,35.92 L 1.30,39.92 C -1.59,43.81 -4.47,53.25 -7.36,51.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-17.32,50.00 -34.64,60.00 -17.32,70.00 0.00,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="3" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>2026-06-18 — 12 units</title>
+        
+        <path class="iso-face-top" d="M -33.34,35.92 C -30.46,32.03 -27.57,22.58 -24.68,24.25 L -9.96,15.75 C -12.85,14.08 -15.73,23.53 -18.62,27.42 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -33.34,39.92 L -33.34,35.92 C -30.46,32.03 -27.57,22.58 -24.68,24.25 L -24.68,28.25 C -27.57,26.58 -30.46,36.03 -33.34,39.92 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -24.68,24.25 C -21.79,25.92 -18.91,38.69 -16.02,45.92 L -1.30,37.42 C -4.19,30.19 -7.07,17.42 -9.96,15.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -24.68,28.25 L -24.68,24.25 C -21.79,25.92 -18.91,38.69 -16.02,45.92 L -16.02,49.92 C -18.91,42.69 -21.79,29.92 -24.68,28.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-34.64,60.00 -51.96,70.00 -34.64,80.00 -17.32,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="2" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>2026-06-19 — 2 units</title>
+        
+        <path class="iso-face-top" d="M -50.66,45.92 C -47.78,53.14 -44.89,65.92 -42.00,67.58 L -27.28,59.08 C -30.17,57.42 -33.05,44.64 -35.94,37.42 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -50.66,49.92 L -50.66,45.92 C -47.78,53.14 -44.89,65.92 -42.00,67.58 L -42.00,71.58 C -44.89,69.92 -47.78,57.14 -50.66,49.92 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -42.00,67.58 C -39.12,69.25 -36.23,70.92 -33.34,72.58 L -18.62,64.08 C -21.51,62.42 -24.39,60.75 -27.28,59.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -42.00,71.58 L -42.00,67.58 C -39.12,69.25 -36.23,70.92 -33.34,72.58 L -33.34,76.58 C -36.23,74.92 -39.12,73.25 -42.00,71.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-51.96,70.00 -69.28,80.00 -51.96,90.00 -34.64,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="5" data-value="2" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>2026-06-20 — 2 units</title>
+        
+        <path class="iso-face-top" d="M -67.98,72.58 C -65.10,74.25 -62.21,75.92 -59.32,77.58 L -44.60,69.08 C -47.49,67.42 -50.37,65.75 -53.26,64.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -67.98,76.58 L -67.98,72.58 C -65.10,74.25 -62.21,75.92 -59.32,77.58 L -59.32,81.58 C -62.21,79.92 -65.10,78.25 -67.98,76.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -59.32,77.58 C -56.44,79.25 -53.55,69.81 -50.66,65.92 L -35.94,57.42 C -38.83,61.31 -41.71,70.75 -44.60,69.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -59.32,81.58 L -59.32,77.58 C -56.44,79.25 -53.55,69.81 -50.66,65.92 L -50.66,69.92 C -53.55,73.81 -56.44,83.25 -59.32,81.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-69.28,80.00 -86.60,90.00 -69.28,100.00 -51.96,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="6" data-value="12" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>2026-06-21 — 12 units</title>
+        <polygon class="iso-face-left" points="-70.58,80.75 -85.30,89.25 -85.30,93.25 -70.58,84.75" fill="#cc3535" stroke="#cc3535" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" /><polygon class="iso-face-right" points="-53.26,90.75 -67.98,99.25 -67.98,103.25 -53.26,94.75" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -85.30,89.25 C -82.42,84.25 -79.53,52.58 -76.64,54.25 L -61.92,45.75 C -64.81,44.08 -67.69,75.75 -70.58,80.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -85.30,93.25 L -85.30,89.25 C -82.42,84.25 -79.53,52.58 -76.64,54.25 L -76.64,58.25 C -79.53,56.58 -82.42,88.25 -85.30,93.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -76.64,54.25 C -73.76,55.92 -70.87,90.92 -67.98,99.25 L -53.26,90.75 C -56.15,82.42 -59.03,47.42 -61.92,45.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -76.64,58.25 L -76.64,54.25 C -73.76,55.92 -70.87,90.92 -67.98,99.25 L -67.98,103.25 C -70.87,94.92 -73.76,59.92 -76.64,58.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="51.96,30.00 34.64,40.00 51.96,50.00 69.28,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="2" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>2026-06-22 — 2 units</title>
+        
+        <path class="iso-face-top" d="M 35.94,15.92 C 38.83,23.14 41.71,35.92 44.60,37.58 L 59.32,29.08 C 56.44,27.42 53.55,14.64 50.66,7.42 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 35.94,19.92 L 35.94,15.92 C 38.83,23.14 41.71,35.92 44.60,37.58 L 44.60,41.58 C 41.71,39.92 38.83,27.14 35.94,19.92 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 44.60,37.58 C 47.49,39.25 50.37,40.92 53.26,42.58 L 67.98,34.08 C 65.10,32.42 62.21,30.75 59.32,29.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 44.60,41.58 L 44.60,37.58 C 47.49,39.25 50.37,40.92 53.26,42.58 L 53.26,46.58 C 50.37,44.92 47.49,43.25 44.60,41.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="34.64,40.00 17.32,50.00 34.64,60.00 51.96,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-23 — 2 units</title>
+        
+        <path class="iso-face-top" d="M 18.62,42.58 C 21.51,44.25 24.39,45.92 27.28,47.58 L 42.00,39.08 C 39.12,37.42 36.23,35.75 33.34,34.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 18.62,46.58 L 18.62,42.58 C 21.51,44.25 24.39,45.92 27.28,47.58 L 27.28,51.58 C 24.39,49.92 21.51,48.25 18.62,46.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 27.28,47.58 C 30.17,49.25 33.05,39.81 35.94,35.92 L 50.66,27.42 C 47.78,31.31 44.89,40.75 42.00,39.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 27.28,51.58 L 27.28,47.58 C 30.17,49.25 33.05,39.81 35.94,35.92 L 35.94,39.92 C 33.05,43.81 30.17,53.25 27.28,51.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="17.32,50.00 0.00,60.00 17.32,70.00 34.64,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>2026-06-24 — 12 units</title>
+        <polygon class="iso-face-right" points="33.34,60.75 18.62,69.25 18.62,73.25 33.34,64.75" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 1.30,35.92 C 4.19,32.03 7.07,22.58 9.96,24.25 L 24.68,15.75 C 21.79,14.08 18.91,23.53 16.02,27.42 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 1.30,39.92 L 1.30,35.92 C 4.19,32.03 7.07,22.58 9.96,24.25 L 9.96,28.25 C 7.07,26.58 4.19,36.03 1.30,39.92 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 9.96,24.25 C 12.85,25.92 15.73,60.92 18.62,69.25 L 33.34,60.75 C 30.46,52.42 27.57,17.42 24.68,15.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 9.96,28.25 L 9.96,24.25 C 12.85,25.92 15.73,60.92 18.62,69.25 L 18.62,73.25 C 15.73,64.92 12.85,29.92 9.96,28.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,60.00 -17.32,70.00 0.00,80.00 17.32,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="2" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>2026-06-25 — 2 units</title>
+        <polygon class="iso-face-right" points="16.02,70.75 1.30,79.25 1.30,83.25 16.02,74.75" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -16.02,45.92 C -13.13,53.14 -10.25,65.92 -7.36,67.58 L 7.36,59.08 C 4.47,57.42 1.59,44.64 -1.30,37.42 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -16.02,49.92 L -16.02,45.92 C -13.13,53.14 -10.25,65.92 -7.36,67.58 L -7.36,71.58 C -10.25,69.92 -13.13,57.14 -16.02,49.92 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -7.36,67.58 C -4.47,69.25 -1.59,76.47 1.30,79.25 L 16.02,70.75 C 13.13,67.97 10.25,60.75 7.36,59.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -7.36,71.58 L -7.36,67.58 C -4.47,69.25 -1.59,76.47 1.30,79.25 L 1.30,83.25 C -1.59,80.47 -4.47,73.25 -7.36,71.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-17.32,70.00 -34.64,80.00 -17.32,90.00 0.00,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="2" style="animation-delay: 105ms; transform-origin: bottom;">
+        <title>2026-06-26 — 2 units</title>
+        <polygon class="iso-face-right" points="-1.30,80.75 -16.02,89.25 -16.02,93.25 -1.30,84.75" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -33.34,72.58 C -30.46,74.25 -27.57,75.92 -24.68,77.58 L -9.96,69.08 C -12.85,67.42 -15.73,65.75 -18.62,64.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -33.34,76.58 L -33.34,72.58 C -30.46,74.25 -27.57,75.92 -24.68,77.58 L -24.68,81.58 C -27.57,79.92 -30.46,78.25 -33.34,76.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -24.68,77.58 C -21.79,79.25 -18.91,86.47 -16.02,89.25 L -1.30,80.75 C -4.19,77.97 -7.07,70.75 -9.96,69.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -24.68,81.58 L -24.68,77.58 C -21.79,79.25 -18.91,86.47 -16.02,89.25 L -16.02,93.25 C -18.91,90.47 -21.79,83.25 -24.68,81.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-34.64,80.00 -51.96,90.00 -34.64,100.00 -17.32,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="5" data-value="12" style="animation-delay: 120ms; transform-origin: bottom;">
+        <title>2026-06-27 — 12 units</title>
+        <polygon class="iso-face-right" points="-18.62,90.75 -33.34,99.25 -33.34,103.25 -18.62,94.75" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -50.66,65.92 C -47.78,62.03 -44.89,52.58 -42.00,54.25 L -27.28,45.75 C -30.17,44.08 -33.05,53.53 -35.94,57.42 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -50.66,69.92 L -50.66,65.92 C -47.78,62.03 -44.89,52.58 -42.00,54.25 L -42.00,58.25 C -44.89,56.58 -47.78,66.03 -50.66,69.92 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M -42.00,54.25 C -39.12,55.92 -36.23,90.92 -33.34,99.25 L -18.62,90.75 C -21.51,82.42 -24.39,47.42 -27.28,45.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M -42.00,58.25 L -42.00,54.25 C -39.12,55.92 -36.23,90.92 -33.34,99.25 L -33.34,103.25 C -36.23,94.92 -39.12,59.92 -42.00,58.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-51.96,90.00 -69.28,100.00 -51.96,110.00 -34.64,100.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="6" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+                <title>2026-06-28 — 0 units</title>
+                <polygon points="-51.96,91.50 -66.68,100.00 -51.96,108.50 -37.24,100.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+              </g>
+<polygon class="iso-grid-cell" points="69.28,40.00 51.96,50.00 69.28,60.00 86.60,50.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="2" style="animation-delay: 60ms; transform-origin: bottom;">
+        <title>2026-06-29 — 2 units</title>
+        <polygon class="iso-face-right" points="85.30,50.75 70.58,59.25 70.58,63.25 85.30,54.75" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 53.26,42.58 C 56.15,44.25 59.03,45.92 61.92,47.58 L 76.64,39.08 C 73.76,37.42 70.87,35.75 67.98,34.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 53.26,46.58 L 53.26,42.58 C 56.15,44.25 59.03,45.92 61.92,47.58 L 61.92,51.58 C 59.03,49.92 56.15,48.25 53.26,46.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 61.92,47.58 C 64.81,49.25 67.69,56.47 70.58,59.25 L 85.30,50.75 C 82.42,47.97 79.53,40.75 76.64,39.08 Z" fill="#ffc9c9" stroke="#ffc9c9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 61.92,51.58 L 61.92,47.58 C 64.81,49.25 67.69,56.47 70.58,59.25 L 70.58,63.25 C 67.69,60.47 64.81,53.25 61.92,51.58 Z" fill="#b38d8d" stroke="#b38d8d" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="51.96,50.00 34.64,60.00 51.96,70.00 69.28,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+        <title>2026-06-30 — 12 units</title>
+        <polygon class="iso-face-right" points="67.98,60.75 53.26,69.25 53.26,73.25 67.98,64.75" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 35.94,35.92 C 38.83,32.03 41.71,22.58 44.60,24.25 L 59.32,15.75 C 56.44,14.08 53.55,23.53 50.66,27.42 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 35.94,39.92 L 35.94,35.92 C 38.83,32.03 41.71,22.58 44.60,24.25 L 44.60,28.25 C 41.71,26.58 38.83,36.03 35.94,39.92 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-top" d="M 44.60,24.25 C 47.49,25.92 50.37,60.92 53.26,69.25 L 67.98,60.75 C 65.10,52.42 62.21,17.42 59.32,15.75 Z" fill="#f03e3e" stroke="#f03e3e" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+        <path class="iso-face-right" d="M 44.60,28.25 L 44.60,24.25 C 47.49,25.92 50.37,60.92 53.26,69.25 L 53.26,73.25 C 50.37,64.92 47.49,29.92 44.60,28.25 Z" fill="#a82b2b" stroke="#a82b2b" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="34.64,60.00 17.32,70.00 34.64,80.00 51.96,70.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="17.32,70.00 0.00,80.00 17.32,90.00 34.64,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,80.00 -17.32,90.00 0.00,100.00 17.32,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-17.32,90.00 -34.64,100.00 -17.32,110.00 0.00,100.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-34.64,100.00 -51.96,110.00 -34.64,120.00 -17.32,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+    </g>
+  </svg>

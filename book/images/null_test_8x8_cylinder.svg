@@ -1,0 +1,442 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-220.43 -62.90 430.87 308.07" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-06-16</dc:date>
+        <dc:title>8x8 Grid with Explicit Null Values (No Data)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    <defs><linearGradient id="cyl-grad-fdba74" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d79e63" stop-opacity="1" />
+          <stop offset="35%" stop-color="#fdba74" stop-opacity="1" />
+          <stop offset="75%" stop-color="#b18251" stop-opacity="1" />
+          <stop offset="100%" stop-color="#7f5d3a" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-38bdf8" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#30a1d3" stop-opacity="1" />
+          <stop offset="35%" stop-color="#38bdf8" stop-opacity="1" />
+          <stop offset="75%" stop-color="#2784ae" stop-opacity="1" />
+          <stop offset="100%" stop-color="#1c5f7c" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-ffedd5" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d9c9b5" stop-opacity="1" />
+          <stop offset="35%" stop-color="#ffedd5" stop-opacity="1" />
+          <stop offset="75%" stop-color="#b3a695" stop-opacity="1" />
+          <stop offset="100%" stop-color="#80776b" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-ea580c" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c74b0a" stop-opacity="1" />
+          <stop offset="35%" stop-color="#ea580c" stop-opacity="1" />
+          <stop offset="75%" stop-color="#a43e08" stop-opacity="1" />
+          <stop offset="100%" stop-color="#752c06" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0284c7" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#0270a9" stop-opacity="1" />
+          <stop offset="35%" stop-color="#0284c7" stop-opacity="1" />
+          <stop offset="75%" stop-color="#015c8b" stop-opacity="1" />
+          <stop offset="100%" stop-color="#014264" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-0369a1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#035989" stop-opacity="1" />
+          <stop offset="35%" stop-color="#0369a1" stop-opacity="1" />
+          <stop offset="75%" stop-color="#024a71" stop-opacity="1" />
+          <stop offset="100%" stop-color="#023551" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-c2410c" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#a5370a" stop-opacity="1" />
+          <stop offset="35%" stop-color="#c2410c" stop-opacity="1" />
+          <stop offset="75%" stop-color="#882e08" stop-opacity="1" />
+          <stop offset="100%" stop-color="#612106" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-fed7aa" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#d8b791" stop-opacity="1" />
+          <stop offset="35%" stop-color="#fed7aa" stop-opacity="1" />
+          <stop offset="75%" stop-color="#b29777" stop-opacity="1" />
+          <stop offset="100%" stop-color="#7f6c55" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-bae6fd" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#9ec4d7" stop-opacity="1" />
+          <stop offset="35%" stop-color="#bae6fd" stop-opacity="1" />
+          <stop offset="75%" stop-color="#82a1b1" stop-opacity="1" />
+          <stop offset="100%" stop-color="#5d737f" stop-opacity="1" />
+        </linearGradient>
+<linearGradient id="cyl-grad-e0f2fe" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#beced8" stop-opacity="1" />
+          <stop offset="35%" stop-color="#e0f2fe" stop-opacity="1" />
+          <stop offset="75%" stop-color="#9da9b2" stop-opacity="1" />
+          <stop offset="100%" stop-color="#70797f" stop-opacity="1" />
+        </linearGradient></defs>
+    <text x="-5.00" y="-48.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">8x8 Grid with Explicit Null Values (No</text>
+<text x="-5.00" y="-30.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Data)</text>
+    <g>
+      <g class="iso-col-labels"><text x="24.94" y="-12.90" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C0</text>
+<text x="45.73" y="-0.90" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C1</text>
+<text x="66.51" y="11.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C2</text>
+<text x="87.30" y="23.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C3</text>
+<text x="108.08" y="35.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C4</text>
+<text x="128.86" y="47.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C5</text>
+<text x="149.65" y="59.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C6</text>
+<text x="170.43" y="71.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C7</text></g>
+<g class="iso-row-labels"><text x="-30.94" y="-10.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R0</text>
+<text x="-51.73" y="1.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R1</text>
+<text x="-72.51" y="13.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R2</text>
+<text x="-93.30" y="25.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R3</text>
+<text x="-114.08" y="37.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R4</text>
+<text x="-134.86" y="49.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R5</text>
+<text x="-155.65" y="61.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R6</text>
+<text x="-176.43" y="73.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R7</text></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -20.78,12.00 0.00,24.00 20.78,12.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
+        <title>Col 0, Row 0: 0</title>
+        <ellipse cx="0.00" cy="12.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-20.78,12.00 -41.57,24.00 -20.78,36.00 0.00,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="5" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>Col 0, Row 1: 5</title>
+      <path d="M -29.88,10.67 L -29.88,24.00 A 9.09,5.25 0 0,0 -11.69,24.00 L -11.69,10.67 A 9.09,5.25 0 0,1 -29.88,10.67 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-20.78" cy="10.67" rx="9.09" ry="5.25" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-41.57,24.00 -62.35,36.00 -41.57,48.00 -20.78,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="-5" style="animation-delay: 30ms; transform-origin: top;">
+      <title>Col 0, Row 2: -5</title>
+      <path d="M -50.66,36.00 L -50.66,49.33 A 9.09,5.25 0 0,0 -32.48,49.33 L -32.48,36.00 A 9.09,5.25 0 0,1 -50.66,36.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-41.57" cy="36.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,36.00 -83.14,48.00 -62.35,60.00 -41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 0, Row 3: 0</title>
+        <ellipse cx="-62.35" cy="48.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-83.14,48.00 -103.92,60.00 -83.14,72.00 -62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 0, Row 4: 5</title>
+      <path d="M -92.23,46.67 L -92.23,60.00 A 9.09,5.25 0 0,0 -74.05,60.00 L -74.05,46.67 A 9.09,5.25 0 0,1 -92.23,46.67 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-83.14" cy="46.67" rx="9.09" ry="5.25" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-103.92,60.00 -124.71,72.00 -103.92,84.00 -83.14,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="5" data-value="2" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Col 0, Row 5: 2</title>
+      <path d="M -113.02,66.67 L -113.02,72.00 A 9.09,5.25 0 0,0 -94.83,72.00 L -94.83,66.67 A 9.09,5.25 0 0,1 -113.02,66.67 Z" fill="url(#cyl-grad-ffedd5)" stroke="#bfb2a0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-103.92" cy="66.67" rx="9.09" ry="5.25" fill="#ffedd5" stroke="#ffedd5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-124.71,72.00 -145.49,84.00 -124.71,96.00 -103.92,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="6" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 0, Row 6: 0</title>
+        <ellipse cx="-124.71" cy="84.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-145.49,84.00 -166.28,96.00 -145.49,108.00 -124.71,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="20.78,12.00 0.00,24.00 20.78,36.00 41.57,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="12" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>Col 1, Row 0: 12</title>
+      <path d="M 11.69,-8.00 L 11.69,24.00 A 9.09,5.25 0 0,0 29.88,24.00 L 29.88,-8.00 A 9.09,5.25 0 0,1 11.69,-8.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="20.78" cy="-8.00" rx="9.09" ry="5.25" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,24.00 -20.78,36.00 0.00,48.00 20.78,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="-12" style="animation-delay: 30ms; transform-origin: top;">
+      <title>Col 1, Row 1: -12</title>
+      <path d="M -9.09,36.00 L -9.09,68.00 A 9.09,5.25 0 0,0 9.09,68.00 L 9.09,36.00 A 9.09,5.25 0 0,1 -9.09,36.00 Z" fill="url(#cyl-grad-0284c7)" stroke="#026395" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="0.00" cy="36.00" rx="9.09" ry="5.25" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-20.78,36.00 -41.57,48.00 -20.78,60.00 0.00,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 1, Row 2: 0</title>
+        <ellipse cx="-20.78" cy="48.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-41.57,48.00 -62.35,60.00 -41.57,72.00 -20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 1, Row 3: 12</title>
+      <path d="M -50.66,28.00 L -50.66,60.00 A 9.09,5.25 0 0,0 -32.48,60.00 L -32.48,28.00 A 9.09,5.25 0 0,1 -50.66,28.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-41.57" cy="28.00" rx="9.09" ry="5.25" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,60.00 -83.14,72.00 -62.35,84.00 -41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="5" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>Col 1, Row 4: 5</title>
+      <path d="M -71.45,58.67 L -71.45,72.00 A 9.09,5.25 0 0,0 -53.26,72.00 L -53.26,58.67 A 9.09,5.25 0 0,1 -71.45,58.67 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-62.35" cy="58.67" rx="9.09" ry="5.25" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-83.14,72.00 -103.92,84.00 -83.14,96.00 -62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="5" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 1, Row 5: 0</title>
+        <ellipse cx="-83.14" cy="84.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-103.92,84.00 -124.71,96.00 -103.92,108.00 -83.14,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="6" data-value="12" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 1, Row 6: 12</title>
+      <path d="M -113.02,64.00 L -113.02,96.00 A 9.09,5.25 0 0,0 -94.83,96.00 L -94.83,64.00 A 9.09,5.25 0 0,1 -113.02,64.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-103.92" cy="64.00" rx="9.09" ry="5.25" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-124.71,96.00 -145.49,108.00 -124.71,120.00 -103.92,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="7" data-value="-13" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 1, Row 7: -13</title>
+      <path d="M -133.80,108.00 L -133.80,142.67 A 9.09,5.25 0 0,0 -115.61,142.67 L -115.61,108.00 A 9.09,5.25 0 0,1 -133.80,108.00 Z" fill="url(#cyl-grad-0369a1)" stroke="#024f79" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-124.71" cy="108.00" rx="9.09" ry="5.25" fill="#0369a1" stroke="#0369a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,24.00 20.78,36.00 41.57,48.00 62.35,36.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="-15" style="animation-delay: 30ms; transform-origin: top;">
+      <title>Col 2, Row 0: -15</title>
+      <path d="M 32.48,36.00 L 32.48,76.00 A 9.09,5.25 0 0,0 50.66,76.00 L 50.66,36.00 A 9.09,5.25 0 0,1 32.48,36.00 Z" fill="url(#cyl-grad-0369a1)" stroke="#024f79" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="41.57" cy="36.00" rx="9.09" ry="5.25" fill="#0369a1" stroke="#0369a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,36.00 0.00,48.00 20.78,60.00 41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 2, Row 1: 0</title>
+        <ellipse cx="20.78" cy="48.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,48.00 -20.78,60.00 0.00,72.00 20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,60.00 -41.57,72.00 -20.78,84.00 0.00,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-41.57,72.00 -62.35,84.00 -41.57,96.00 -20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-62.35,84.00 -83.14,96.00 -62.35,108.00 -41.57,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="5" data-value="15" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 2, Row 5: 15</title>
+      <path d="M -71.45,56.00 L -71.45,96.00 A 9.09,5.25 0 0,0 -53.26,96.00 L -53.26,56.00 A 9.09,5.25 0 0,1 -71.45,56.00 Z" fill="url(#cyl-grad-c2410c)" stroke="#923109" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-62.35" cy="56.00" rx="9.09" ry="5.25" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-83.14,96.00 -103.92,108.00 -83.14,120.00 -62.35,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="6" data-value="-6" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 2, Row 6: -6</title>
+      <path d="M -92.23,108.00 L -92.23,124.00 A 9.09,5.25 0 0,0 -74.05,124.00 L -74.05,108.00 A 9.09,5.25 0 0,1 -92.23,108.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-83.14" cy="108.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-103.92,108.00 -124.71,120.00 -103.92,132.00 -83.14,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="7" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 2, Row 7: 0</title>
+        <ellipse cx="-103.92" cy="120.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="62.35,36.00 41.57,48.00 62.35,60.00 83.14,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
+        <title>Col 3, Row 0: 0</title>
+        <ellipse cx="62.35" cy="48.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="41.57,48.00 20.78,60.00 41.57,72.00 62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 3, Row 1: 12</title>
+      <path d="M 32.48,28.00 L 32.48,60.00 A 9.09,5.25 0 0,0 50.66,60.00 L 50.66,28.00 A 9.09,5.25 0 0,1 32.48,28.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="41.57" cy="28.00" rx="9.09" ry="5.25" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,60.00 0.00,72.00 20.78,84.00 41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="-5" style="animation-delay: 75ms; transform-origin: top;">
+      <title>Col 3, Row 2: -5</title>
+      <path d="M 11.69,72.00 L 11.69,85.33 A 9.09,5.25 0 0,0 29.88,85.33 L 29.88,72.00 A 9.09,5.25 0 0,1 11.69,72.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="20.78" cy="72.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,72.00 -20.78,84.00 0.00,96.00 20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 3, Row 3: 0</title>
+        <ellipse cx="0.00" cy="84.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-20.78,84.00 -41.57,96.00 -20.78,108.00 0.00,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="12" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 3, Row 4: 12</title>
+      <path d="M -29.88,64.00 L -29.88,96.00 A 9.09,5.25 0 0,0 -11.69,96.00 L -11.69,64.00 A 9.09,5.25 0 0,1 -29.88,64.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-20.78" cy="64.00" rx="9.09" ry="5.25" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-41.57,96.00 -62.35,108.00 -41.57,120.00 -20.78,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="5" data-value="2" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Col 3, Row 5: 2</title>
+      <path d="M -50.66,102.67 L -50.66,108.00 A 9.09,5.25 0 0,0 -32.48,108.00 L -32.48,102.67 A 9.09,5.25 0 0,1 -50.66,102.67 Z" fill="url(#cyl-grad-ffedd5)" stroke="#bfb2a0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-41.57" cy="102.67" rx="9.09" ry="5.25" fill="#ffedd5" stroke="#ffedd5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,108.00 -83.14,120.00 -62.35,132.00 -41.57,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="6" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 3, Row 6: 0</title>
+        <ellipse cx="-62.35" cy="120.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-83.14,120.00 -103.92,132.00 -83.14,144.00 -62.35,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="7" data-value="12" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Col 3, Row 7: 12</title>
+      <path d="M -92.23,100.00 L -92.23,132.00 A 9.09,5.25 0 0,0 -74.05,132.00 L -74.05,100.00 A 9.09,5.25 0 0,1 -92.23,100.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-83.14" cy="100.00" rx="9.09" ry="5.25" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="83.14,48.00 62.35,60.00 83.14,72.00 103.92,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="4" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>Col 4, Row 0: 4</title>
+      <path d="M 74.05,49.33 L 74.05,60.00 A 9.09,5.25 0 0,0 92.23,60.00 L 92.23,49.33 A 9.09,5.25 0 0,1 74.05,49.33 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="83.14" cy="49.33" rx="9.09" ry="5.25" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="62.35,60.00 41.57,72.00 62.35,84.00 83.14,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="-12" style="animation-delay: 75ms; transform-origin: top;">
+      <title>Col 4, Row 1: -12</title>
+      <path d="M 53.26,72.00 L 53.26,104.00 A 9.09,5.25 0 0,0 71.45,104.00 L 71.45,72.00 A 9.09,5.25 0 0,1 53.26,72.00 Z" fill="url(#cyl-grad-0284c7)" stroke="#026395" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="62.35" cy="72.00" rx="9.09" ry="5.25" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,72.00 20.78,84.00 41.57,96.00 62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="2" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 4, Row 2: 0</title>
+        <ellipse cx="41.57" cy="84.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="20.78,84.00 0.00,96.00 20.78,108.00 41.57,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="3" data-value="4" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>Col 4, Row 3: 4</title>
+      <path d="M 11.69,85.33 L 11.69,96.00 A 9.09,5.25 0 0,0 29.88,96.00 L 29.88,85.33 A 9.09,5.25 0 0,1 11.69,85.33 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="20.78" cy="85.33" rx="9.09" ry="5.25" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,96.00 -20.78,108.00 0.00,120.00 20.78,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,108.00 -41.57,120.00 -20.78,132.00 0.00,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-41.57,120.00 -62.35,132.00 -41.57,144.00 -20.78,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="6" data-value="4" style="animation-delay: 150ms; transform-origin: bottom;">
+      <title>Col 4, Row 6: 4</title>
+      <path d="M -50.66,121.33 L -50.66,132.00 A 9.09,5.25 0 0,0 -32.48,132.00 L -32.48,121.33 A 9.09,5.25 0 0,1 -50.66,121.33 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-41.57" cy="121.33" rx="9.09" ry="5.25" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-62.35,132.00 -83.14,144.00 -62.35,156.00 -41.57,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="7" data-value="-13" style="animation-delay: 165ms; transform-origin: top;">
+      <title>Col 4, Row 7: -13</title>
+      <path d="M -71.45,144.00 L -71.45,178.67 A 9.09,5.25 0 0,0 -53.26,178.67 L -53.26,144.00 A 9.09,5.25 0 0,1 -71.45,144.00 Z" fill="url(#cyl-grad-0369a1)" stroke="#024f79" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-62.35" cy="144.00" rx="9.09" ry="5.25" fill="#0369a1" stroke="#0369a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="103.92,60.00 83.14,72.00 103.92,84.00 124.71,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="0" data-value="-15" style="animation-delay: 75ms; transform-origin: top;">
+      <title>Col 5, Row 0: -15</title>
+      <path d="M 94.83,72.00 L 94.83,112.00 A 9.09,5.25 0 0,0 113.02,112.00 L 113.02,72.00 A 9.09,5.25 0 0,1 94.83,72.00 Z" fill="url(#cyl-grad-0369a1)" stroke="#024f79" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="103.92" cy="72.00" rx="9.09" ry="5.25" fill="#0369a1" stroke="#0369a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="83.14,72.00 62.35,84.00 83.14,96.00 103.92,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="1" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 5, Row 1: 0</title>
+        <ellipse cx="83.14" cy="84.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="62.35,84.00 41.57,96.00 62.35,108.00 83.14,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="2" data-value="-3" style="animation-delay: 105ms; transform-origin: top;">
+      <title>Col 5, Row 2: -3</title>
+      <path d="M 53.26,96.00 L 53.26,104.00 A 9.09,5.25 0 0,0 71.45,104.00 L 71.45,96.00 A 9.09,5.25 0 0,1 53.26,96.00 Z" fill="url(#cyl-grad-bae6fd)" stroke="#8cadbe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="62.35" cy="96.00" rx="9.09" ry="5.25" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,96.00 20.78,108.00 41.57,120.00 62.35,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="3" data-value="2" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>Col 5, Row 3: 2</title>
+      <path d="M 32.48,102.67 L 32.48,108.00 A 9.09,5.25 0 0,0 50.66,108.00 L 50.66,102.67 A 9.09,5.25 0 0,1 32.48,102.67 Z" fill="url(#cyl-grad-ffedd5)" stroke="#bfb2a0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="41.57" cy="102.67" rx="9.09" ry="5.25" fill="#ffedd5" stroke="#ffedd5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,108.00 0.00,120.00 20.78,132.00 41.57,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="4" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 5, Row 4: 0</title>
+        <ellipse cx="20.78" cy="120.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="0.00,120.00 -20.78,132.00 0.00,144.00 20.78,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="-20.78,132.00 -41.57,144.00 -20.78,156.00 0.00,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="6" data-value="-6" style="animation-delay: 165ms; transform-origin: top;">
+      <title>Col 5, Row 6: -6</title>
+      <path d="M -29.88,144.00 L -29.88,160.00 A 9.09,5.25 0 0,0 -11.69,160.00 L -11.69,144.00 A 9.09,5.25 0 0,1 -29.88,144.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-20.78" cy="144.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="-41.57,144.00 -62.35,156.00 -41.57,168.00 -20.78,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="7" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Col 5, Row 7: 0</title>
+        <ellipse cx="-41.57" cy="156.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="124.71,72.00 103.92,84.00 124.71,96.00 145.49,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="0" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
+        <title>Col 6, Row 0: 0</title>
+        <ellipse cx="124.71" cy="84.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="103.92,84.00 83.14,96.00 103.92,108.00 124.71,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="1" data-value="-5" style="animation-delay: 105ms; transform-origin: top;">
+      <title>Col 6, Row 1: -5</title>
+      <path d="M 94.83,96.00 L 94.83,109.33 A 9.09,5.25 0 0,0 113.02,109.33 L 113.02,96.00 A 9.09,5.25 0 0,1 94.83,96.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="103.92" cy="96.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="83.14,96.00 62.35,108.00 83.14,120.00 103.92,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="2" data-value="-5" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 6, Row 2: -5</title>
+      <path d="M 74.05,108.00 L 74.05,121.33 A 9.09,5.25 0 0,0 92.23,121.33 L 92.23,108.00 A 9.09,5.25 0 0,1 74.05,108.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="83.14" cy="108.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="62.35,108.00 41.57,120.00 62.35,132.00 83.14,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="3" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 6, Row 3: 0</title>
+        <ellipse cx="62.35" cy="120.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="41.57,120.00 20.78,132.00 41.57,144.00 62.35,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="4" data-value="-5" style="animation-delay: 150ms; transform-origin: top;">
+      <title>Col 6, Row 4: -5</title>
+      <path d="M 32.48,132.00 L 32.48,145.33 A 9.09,5.25 0 0,0 50.66,145.33 L 50.66,132.00 A 9.09,5.25 0 0,1 32.48,132.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="41.57" cy="132.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="20.78,132.00 0.00,144.00 20.78,156.00 41.57,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="5" data-value="2" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Col 6, Row 5: 2</title>
+      <path d="M 11.69,138.67 L 11.69,144.00 A 9.09,5.25 0 0,0 29.88,144.00 L 29.88,138.67 A 9.09,5.25 0 0,1 11.69,138.67 Z" fill="url(#cyl-grad-ffedd5)" stroke="#bfb2a0" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="20.78" cy="138.67" rx="9.09" ry="5.25" fill="#ffedd5" stroke="#ffedd5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,144.00 -20.78,156.00 0.00,168.00 20.78,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="6" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Col 6, Row 6: 0</title>
+        <ellipse cx="0.00" cy="156.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="-20.78,156.00 -41.57,168.00 -20.78,180.00 0.00,168.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="7" data-value="-5" style="animation-delay: 195ms; transform-origin: top;">
+      <title>Col 6, Row 7: -5</title>
+      <path d="M -29.88,168.00 L -29.88,181.33 A 9.09,5.25 0 0,0 -11.69,181.33 L -11.69,168.00 A 9.09,5.25 0 0,1 -29.88,168.00 Z" fill="url(#cyl-grad-38bdf8)" stroke="#2a8eba" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="-20.78" cy="168.00" rx="9.09" ry="5.25" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="145.49,84.00 124.71,96.00 145.49,108.00 166.28,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="124.71,96.00 103.92,108.00 124.71,120.00 145.49,108.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="1" data-value="-12" style="animation-delay: 120ms; transform-origin: top;">
+      <title>Col 7, Row 1: -12</title>
+      <path d="M 115.61,108.00 L 115.61,140.00 A 9.09,5.25 0 0,0 133.80,140.00 L 133.80,108.00 A 9.09,5.25 0 0,1 115.61,108.00 Z" fill="url(#cyl-grad-0284c7)" stroke="#026395" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="124.71" cy="108.00" rx="9.09" ry="5.25" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="103.92,108.00 83.14,120.00 103.92,132.00 124.71,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="2" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
+        <title>Col 7, Row 2: 0</title>
+        <ellipse cx="103.92" cy="120.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="83.14,120.00 62.35,132.00 83.14,144.00 103.92,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="3" data-value="-1" style="animation-delay: 150ms; transform-origin: top;">
+      <title>Col 7, Row 3: -1</title>
+      <path d="M 74.05,132.00 L 74.05,134.67 A 9.09,5.25 0 0,0 92.23,134.67 L 92.23,132.00 A 9.09,5.25 0 0,1 74.05,132.00 Z" fill="url(#cyl-grad-e0f2fe)" stroke="#a8b6bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="83.14" cy="132.00" rx="9.09" ry="5.25" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="62.35,132.00 41.57,144.00 62.35,156.00 83.14,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="4" data-value="5" style="animation-delay: 165ms; transform-origin: bottom;">
+      <title>Col 7, Row 4: 5</title>
+      <path d="M 53.26,130.67 L 53.26,144.00 A 9.09,5.25 0 0,0 71.45,144.00 L 71.45,130.67 A 9.09,5.25 0 0,1 53.26,130.67 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="62.35" cy="130.67" rx="9.09" ry="5.25" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="41.57,144.00 20.78,156.00 41.57,168.00 62.35,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="5" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
+        <title>Col 7, Row 5: 0</title>
+        <ellipse cx="41.57" cy="156.00" rx="9.09" ry="5.25" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      </g>
+<polygon class="iso-grid-cell" points="20.78,156.00 0.00,168.00 20.78,180.00 41.57,168.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="6" data-value="-1" style="animation-delay: 195ms; transform-origin: top;">
+      <title>Col 7, Row 6: -1</title>
+      <path d="M 11.69,168.00 L 11.69,170.67 A 9.09,5.25 0 0,0 29.88,170.67 L 29.88,168.00 A 9.09,5.25 0 0,1 11.69,168.00 Z" fill="url(#cyl-grad-e0f2fe)" stroke="#a8b6bf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="20.78" cy="168.00" rx="9.09" ry="5.25" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+<polygon class="iso-grid-cell" points="0.00,168.00 -20.78,180.00 0.00,192.00 20.78,180.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="7" data-value="-13" style="animation-delay: 210ms; transform-origin: top;">
+      <title>Col 7, Row 7: -13</title>
+      <path d="M -9.09,180.00 L -9.09,214.67 A 9.09,5.25 0 0,0 9.09,214.67 L 9.09,180.00 A 9.09,5.25 0 0,1 -9.09,180.00 Z" fill="url(#cyl-grad-0369a1)" stroke="#024f79" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+      <ellipse cx="0.00" cy="180.00" rx="9.09" ry="5.25" fill="#0369a1" stroke="#0369a1" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
+    </g>
+    </g>
+  </svg>

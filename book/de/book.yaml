@@ -1,0 +1,9 @@
+id:       mlcheatmap
+title:    MLC Isometric Heatmap
+subtitle: Zeitreihen als isometrische 3D-Landschaft — ein Handbuch zur SVG-Bibliothek
+author:   Michael Lechner
+lang:     de
+accent:   "#f97316"
+cover_image: mesh_terrain_sunset_hills.svg
+
+# Kapitel werden in Dateinamen-Sortierung aus chapters/ geladen.
