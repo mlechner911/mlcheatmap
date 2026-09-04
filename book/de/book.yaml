@@ -8,4 +8,10 @@ cover_image: mesh_terrain_sunset_hills.svg
 license:     CC BY-NC 4.0
 license_url: https://creativecommons.org/licenses/by-nc/4.0/
 
+# Quellcode und Paket der beschriebenen Bibliothek — die Produktseite ist
+# disabled, das Handbuch ist der Auftritt, also stehen die Wege hier.
+source: https://github.com/mlechner911/mlcheatmap
+npm:
+  - mlc-isometric-heatmap
+
 # Kapitel werden in Dateinamen-Sortierung aus chapters/ geladen.
