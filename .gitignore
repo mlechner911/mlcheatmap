@@ -16,3 +16,5 @@ dist-demo/
 # dieses Repo ist oeffentlich, ein .gitmodules wuerde die interne Adresse
 # weltweit lesbar machen und `git clone --recursive` bei Fremden brechen.
 .mlcai/
+.mcp.json
+
