@@ -6,11 +6,20 @@
 
 import { HeatmapGrid } from './data/grid';
 
+/**
+ * Single calendar-day measurement for {@link presets.aggregateMonth},
+ * {@link presets.aggregateYear} and {@link presets.aggregateSixMonthsDouble}.
+ * Events on the same day accumulate (values are summed).
+ */
 export interface DateEvent {
   date: Date | string;
   value: number;
 }
 
+/**
+ * Single timestamped measurement for {@link presets.aggregate24h}.
+ * Events in the same hour of the same weekday accumulate.
+ */
 export interface HourEvent {
   timestamp: Date | string;
   value: number;
@@ -58,12 +67,25 @@ export interface DualMeasurementEvent {
   measurement?: 'AM' | 'PM' | 0 | 1;
 }
 
+/**
+ * Options for {@link presets.aggregateSixMonthsDouble}: a fixed 6-month window
+ * starting at `startMonth` of `year`, with two sub-rows (AM/PM) per weekday.
+ */
 export interface Preset6MonthDoubleOptions {
   year: number;
   startMonth: number; // 0-indexed (0 = Jan, 11 = Dec)
   startOfWeek?: number; // 0 = Sunday, 1 = Monday (default: 1)
 }
 
+/**
+ * Calendar aggregation helpers (optional `mlc-isometric-heatmap/presets`
+ * entrypoint). Each aggregator folds raw event lists into a ready-to-render
+ * {@link HeatmapGrid} with labels and tooltips attached:
+ * - `aggregate24h`: 24 hour-columns x 7 weekdays.
+ * - `aggregateMonth`: week-columns x 7 weekdays for one month.
+ * - `aggregateYear`: 53 week-columns x 7 weekdays, GitHub-style.
+ * - `aggregateSixMonthsDouble`: 6 months with AM/PM sub-rows (14 rows).
+ */
 export const presets = {
   /**
    * Aggregates events over a 24-hour daily grid or 24h x 7-day weekly grid.

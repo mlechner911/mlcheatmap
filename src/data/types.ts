@@ -12,6 +12,12 @@ export interface HeatmapDataPoint {
   color?: string; // Optional specific color override for this data point
 }
 
+/**
+ * Named color palette for bars and terrain.
+ * Eight built-in sequential/diverging themes; pass a {@link CustomColorScheme}
+ * object instead for full control. Pair with `interpolateColors` for smooth
+ * gradients between stops.
+ */
 export type ColorSchemeType =
   | 'github'
   | 'emerald'
@@ -22,13 +28,33 @@ export type ColorSchemeType =
   | 'sunset'
   | 'grayscale';
 
+/**
+ * 3D geometry used for data cells.
+ * - `prism`: sharp rectangular columns (default).
+ * - `cylinder`: smooth pillars with gradient shading.
+ * - `ribbon`: continuous spline band along each row.
+ * - `flatribbon`: floating band of constant thickness.
+ * - `mesh`: contiguous terrain surface with Lambertian shading; cells with a
+ *   `null` corner are skipped, leaving holes for missing data.
+ */
 export type HeatmapShape = 'prism' | 'cylinder' | 'ribbon' | 'flatribbon' | 'mesh';
 
+/**
+ * User-defined palette: a flat `empty` color for zero values plus an ordered
+ * `steps` ramp from low to high magnitudes. Negative values reuse the ramp
+ * hue-rotated by 150 degrees unless a diverging theme provides its own.
+ */
 export interface CustomColorScheme {
   empty: string; // Color for zero value
   steps: string[]; // Progression of colors from low to high
 }
 
+/**
+ * Vertical reference wall drawn along the back-left grid edge.
+ * Shows horizontal scale lines (`ticks`) with data-value labels and optional
+ * vertical row guides, either solid-filled or wireframe. Moves row labels to
+ * the front side while active.
+ */
 export interface HeightGridOptions {
   ticks: number;
   solid?: boolean;
@@ -37,6 +63,11 @@ export interface HeightGridOptions {
   labelColor?: string;
 }
 
+/**
+ * Styling for row (series) text annotations. A `backgroundColor` adds a pill
+ * backdrop behind each label (auto-contrasting text unless `color` is set);
+ * combine with `rowLabelAngle: -90` for vertical, overlap-free day labels.
+ */
 export interface RowLabelStyle {
   show?: boolean;            // Easily turn off (default: true)
   fontSize?: number;         // Font size in px (default: 9)
@@ -48,11 +79,24 @@ export interface RowLabelStyle {
   borderRadius?: number;     // Border radius of the background box (optional, default: 2)
 }
 
+/**
+ * Fixed data domain for height/color scaling. Overrides the per-grid data
+ * min/max — pass the same domain to every block of a composite (e.g. monthly
+ * grids in one SVG) so identical heights always mean identical values.
+ */
 export interface ValueDomain {
   min: number; // Fixed data minimum for height/color scaling
   max: number; // Fixed data maximum for height/color scaling
 }
 
+/**
+ * Rendering configuration for {@link renderHeatmap} and `HeatmapGrid.render`.
+ * All fields optional except `cols`/`rows`. Notable interactions:
+ * - `valueDomain` keeps composite grids on a shared scale.
+ * - `wrapper: 'g'` returns a translatable group for multi-gridSVG canvases.
+ * - `showRowLabels: false` hides labels inherited from a `HeatmapGrid`
+ *   (`rowLabels: undefined` alone falls back to them).
+ */
 export interface HeatmapOptions {
   cols: number;
   rows: number;
