@@ -32,6 +32,10 @@ export function calculateBounds(params: {
   geometryConfig: GeometryConfig;
   getPoint: (col: number, row: number) => HeatmapDataPoint;
   heightGrid?: HeightGridOptions;
+  axisWallHeight?: number;
+  colLabelAngle?: number;
+  rowLabelAngle?: number;
+  labelLift?: number;
 }): Bounds {
   const {
     cols,
@@ -50,7 +54,11 @@ export function calculateBounds(params: {
     labelPosition,
     geometryConfig,
     getPoint,
-    heightGrid
+    heightGrid,
+    axisWallHeight,
+    colLabelAngle,
+    rowLabelAngle,
+    labelLift
   } = params;
 
 
@@ -186,6 +194,17 @@ export function calculateBounds(params: {
   const cosA = geometryConfig.cosAngle;
   const sinA = geometryConfig.sinAngle;
   const gSize = geometryConfig.gridSize;
+  const lift = labelLift ?? 0;
+
+  // Half-extents of a (possibly rotated) label box around its anchor point
+  function labelMargins(textLen: number, fontSize: number, angleDeg: number | undefined, pad: number): [number, number] {
+    const w = textLen * fontSize * 0.55 + pad;
+    const h = fontSize + pad;
+    const a = Math.abs(((angleDeg ?? 0) * Math.PI) / 180);
+    const hw = Math.max(20, (w * Math.abs(Math.cos(a)) + h * Math.abs(Math.sin(a))) / 2 + 4);
+    const hh = Math.max(10, (w * Math.abs(Math.sin(a)) + h * Math.abs(Math.cos(a))) / 2 + 4);
+    return [hw, hh];
+  }
 
   // 3. Column labels bounds
   if (colLabels) {
@@ -195,9 +214,10 @@ export function calculateBounds(params: {
       if (colLabels[c]) {
         const xStart = c * gSize + offset;
         const x = (xStart - yStart) * cosA;
-        const y = (xStart + yStart) * sinA;
-        updateBounds(x - 20, y - 10);
-        updateBounds(x + 20, y + 10);
+        const y = (xStart + yStart) * sinA - lift;
+        const [hw, hh] = labelMargins(colLabels[c].length, 9, colLabelAngle, 0);
+        updateBounds(x - hw, y - hh);
+        updateBounds(x + hw, y + hh);
       }
     }
   }
@@ -215,12 +235,13 @@ export function calculateBounds(params: {
       if (label) {
         const yStart = r * gSize + offset;
         const x = (xStart - yStart) * cosA;
-        const y = (xStart + yStart) * sinA;
+        const y = (xStart + yStart) * sinA - lift;
 
         // Approximate width based on font size and text length, then add padding and safety margins
-        const labelWidth = label.length * styleFontSize * 0.55;
-        const horizontalMargin = Math.max(30, labelWidth + padding + 6);
-        const verticalMargin = Math.max(10, styleFontSize + padding + 3);
+        // Approximate width based on font size and text length, then add padding and safety margins
+        const [rotW, rotH] = labelMargins(label.length, styleFontSize, rowLabelAngle, padding);
+        const horizontalMargin = Math.max(30, rotW);
+        const verticalMargin = Math.max(10, rotH);
 
         updateBounds(x - horizontalMargin, y - verticalMargin);
         updateBounds(x + horizontalMargin, y + verticalMargin);
@@ -244,6 +265,16 @@ export function calculateBounds(params: {
     // Labels are on the left, offset by about 45px for safety
     updateBounds(ptR_floor.x - 45, ptR_floor.y - heightMax);
     updateBounds(ptR_floor.x - 45, ptR_floor.y - heightMin);
+  }
+
+  // 6. Axis back walls (rise above the floor along both rear edges)
+  if (axisWallHeight && axisWallHeight > 0) {
+    const pt0 = getGridIntersection(0, 0, geometryConfig);
+    const ptC = getGridIntersection(cols, 0, geometryConfig);
+    const ptR = getGridIntersection(0, rows, geometryConfig);
+    updateBounds(pt0.x, pt0.y - axisWallHeight);
+    updateBounds(ptC.x, ptC.y - axisWallHeight);
+    updateBounds(ptR.x, ptR.y - axisWallHeight);
   }
 
   return { minX, maxX, minY, maxY };

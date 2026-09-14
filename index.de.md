@@ -156,6 +156,11 @@ Du kannst die Darstellung anpassen, indem du diese Einstellungen an `.render()` 
 | `shape` | `'prism' \| 'cylinder' \| 'ribbon' \| 'flatribbon' \| 'mesh'` | `'prism'` | Layout-Form. |
 | `opacity` | `number` | `1.0` | Deckkraft der 3D-Objektkörper (0.1 bis 1.0). |
 | `showGrid` | `boolean` | `true` | Zeigt die Boden-Gitterlinien im isometrischen Raum. |
+| `valueDomain` | `{ min, max }` | Daten-Min/Max | Feste Werteskala für Höhen/Farben — dieselbe Domain für alle Composite-Blöcke hält Höhen vergleichbar. |
+| `showAxis` | `boolean` | `false` | Basis-Achsenlinien mit Tick-Markierungen an den Label-Kanten. |
+| `axisColor` / `axisWidth` / `axisTickLength` | `string` / `number` / `number` | Labelfarbe / `1` / `5` | Styling der Achsenlinien und Ticks. |
+| `showAxisWalls` | `boolean` | `false` | Transluzente Rückwände (links + hinten) als Label-Hintergrund; Labels dahinter rendern dann im Vordergrund. |
+| `axisWallHeight` / `axisWallColor` | `number` / `string` | `maxHeight` / Wand-Default | Wandhöhe und Füllfarbe. |
 | `zeroColor` | `string` | `undefined` | Eigene Farbe für Elemente mit dem Wert 0. |
 | `renderFlatZero` | `boolean` | `true` | Rendert eine flache 2D-Fliese für Nullwerte anstelle einer leeren Stelle. |
 | `interactive` | `boolean` | `true` | Bettet mouseover Title-Tags für Tooltips ein. |
@@ -164,6 +169,7 @@ Du kannst die Darstellung anpassen, indem du diese Einstellungen an `.render()` 
 | `labelPosition` | `'behind' \| 'front'` | `'behind'` | Position der Achsenbeschriftungen relativ zum Gitter. |
 | `interpolateColors` | `boolean` | `false` | Aktiviert stufenlose Farbverläufe (RGB-Farbinterpolation). |
 | `showRowLabels` | `boolean` | `true` | Schaltet die Sichtbarkeit der Zeilenbeschriftungen (Serientext) ein/aus. |
+| `colLabelAngle` / `rowLabelAngle` | `number` | `0` | Drehung der Beschriftungen in Grad um den Ankerpunkt. Label-Anhebung: `labelLift` (px, Default `0`) setzt Labels auf die Wandoberkante; die Wand zieht Führungslinien zu jeder Gitterlinie. `rowLabelAngle: -30` richtet Tageslabels bei 30°-Projektion an der Zeilenachse aus. |
 | `rowLabelStyle` | `RowLabelStyle` | `undefined` | Eigene Formatierung der Zeilenbeschriftungen (Hintergrund-Boxen, Farben, Padding, Schriftgröße). |
 
 ---
@@ -183,6 +189,35 @@ Passe die Zeilentexte mithilfe des Konfigurationsobjekts `rowLabelStyle` detaill
 
 ---
 
+### ML-Showcase: 3D-Loss-Landscape
+
+Unsere isometrische Engine spielt ihre Stärke bei kontinuierlichen mathematischen Flächen aus. Ein Beispiel ist das `loss-landscape`-Preset, das eine Optimierungsfläche modelliert, wie sie beim Training neuronaler Netze erkundet wird.
+
+Mit `shape: 'mesh'` und `interpolateColors` rendert die Library eine parabelförmige 3D-Schüssel (Optimierungstal) direkt als pures SVG:
+
+*   **Das Tal (Mitte):** optimaler Modellzustand, Loss nahe `0.0` (kühle, ruhige Farben).
+*   **Die Hügel (Ränder):** Hochfehler-Zonen Richtung `1.0` (warme Farben).
+
+```typescript
+// Auszug aus dem demo/generator.js-Preset
+{
+  shape: 'mesh',
+  interpolateColors: true,
+  colorScheme: 'sunset', // kühle Mitte zu warmem Rand
+  gridSize: 22,
+  gap: 0,
+  maxHeight: 60,
+}
+```
+
+Vorschau neu erzeugen mit:
+
+```bash
+node demo/generator.js --preset=loss-landscape --color=sunset --angle=30 \
+  --interpolate-colors --out=demo/output/loss_landscape_bowl_sunset_mesh.svg
+# ... oder komplett: bash demo/generate.sh
+```
+
 ## Visuelle Beispiele
 
 Hier sind einige im Ordner `demo/output` vorgenerierte SVG-Grafiken, die die Features der Bibliothek demonstrieren:
@@ -195,6 +230,8 @@ Hier sind einige im Ordner `demo/output` vorgenerierte SVG-Grafiken, die die Fea
   *   ![24h Double-Row Timeline](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/24h_double_row_timeline.svg)
 *   **3D-Oberflächennetz-Gelände (Hügellandschaft)** *(Hinweis: Das kreisförmige Loch in der Mitte stellt einen "See" aus absichtlichen `null`-Werten dar und demonstriert, wie fehlende Messdaten/Ausfälle als saubere Lücke im Gelände gerendert werden)*:
   *   ![3D Surface Mesh Terrain](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/mesh_terrain_sunset_hills.svg)
+*   **Loss Landscape Bowl (10x10 ML optimization surface)**:
+  *   ![Loss Landscape Bowl](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/loss_landscape_bowl_sunset_mesh.svg)
 
 ---
 

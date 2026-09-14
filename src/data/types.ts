@@ -48,20 +48,36 @@ export interface RowLabelStyle {
   borderRadius?: number;     // Border radius of the background box (optional, default: 2)
 }
 
+export interface ValueDomain {
+  min: number; // Fixed data minimum for height/color scaling
+  max: number; // Fixed data maximum for height/color scaling
+}
+
 export interface HeatmapOptions {
   cols: number;
   rows: number;
   gridSize?: number;       // Size of each grid cell in pixels (default: 16)
   gap?: number;            // Gap between cells in pixels (default: 2)
   maxHeight?: number;      // Maximum height of a bar for max value in pixels (default: 40)
+  valueDomain?: ValueDomain; // Fixed value domain for height/color scaling. Overrides the per-grid data min/max — use this to keep several composite grids (e.g. monthly blocks) on a shared scale.
   colorScheme?: ColorSchemeType | CustomColorScheme; // Preset or custom colors
   showGrid?: boolean;      // Show isometric bottom grid lines (default: true)
   gridColor?: string;      // Color of grid lines (default: '#e1e4e8' or dark equivalent)
+  showAxis?: boolean;      // Draw baseline axis rules with tick marks along the label edges (default: false)
+  axisColor?: string;      // Color of axis rules and ticks (default: theme labelColor)
+  axisWidth?: number;      // Stroke width of axis rules in px (default: 1)
+  axisTickLength?: number; // Length of axis tick marks in px (default: 5)
+  showAxisWalls?: boolean; // Translucent back walls along both rear floor edges as label backdrop (default: false)
+  axisWallHeight?: number; // Wall height in px (default: maxHeight)
+  axisWallColor?: string;  // Wall fill color (default: height-grid wall default)
   colLabels?: string[];    // Column labels (e.g. Months or Hours)
   colLabelInterval?: number; // Label interval for columns (default: 1)
+  colLabelAngle?: number;  // Column label rotation in degrees about the anchor (default: 0). ~projectionAngle aligns labels with the column axis.
   rowLabels?: string[];    // Row labels (e.g. Days of the week)
   rowLabelInterval?: number; // Label interval for rows (default: 1)
-  showRowLabels?: boolean; // Toggle visibility of row labels (default: true)
+  rowLabelAngle?: number;
+  labelLift?: number;        // Vertical uplift in px for all axis labels (default: 0). Set to wall height to seat labels on top of axis walls.  // Row label rotation in degrees about the anchor (default: 0). ~-projectionAngle aligns labels with the row axis.
+  showRowLabels?: boolean; // Toggle visibility of row labels (default: true). NOTE: pass false to hide labels inherited from a HeatmapGrid — passing rowLabels: undefined falls back to the grid's own labels.
   rowLabelStyle?: RowLabelStyle; // Styling options for row labels
   interactive?: boolean;   // Enable SVG hover effects & tooltips (default: true)
   dark?: boolean;          // Toggle dark mode presets (default: false)
@@ -84,5 +100,3 @@ export interface HeatmapOptions {
   creator?: string;        // Creator name for SVG RDF metadata (default: 'Michael Lechner')
   generatorComment?: string;// Custom XML generator comment string (default: 'Generated with MLC Isometric 3D Heatmap Library')
 }
-
-

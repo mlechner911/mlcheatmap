@@ -16,6 +16,7 @@ process.argv.slice(2).forEach(val => {
 });
 
 const presetType = args.preset || 'year';
+const positiveOnly = args.positive === true || args.positive === 'true' || args.positive === '1';
 const colorScheme = args.color || 'emerald';
 const zeroColor = args['zero-color'] || undefined;
 const angle = args.angle ? parseInt(args.angle, 10) : 30;
@@ -543,7 +544,7 @@ if (presetType === '24h') {
   const months = [0, 1, 2, 3, 4, 5];
   const groups = [];
   let accumulatedCols = 0;
-  const spacerCols = 1;
+  const spacerCols = 2; // extra air so back labels of block N+1 clear block N
 
   const gridSize = options.gridSize || 11;
   const gap = options.gap || 1;
@@ -618,7 +619,116 @@ if (presetType === '24h') {
     console.error('Failed to write combined split SVG:', err.message);
     process.exit(1);
   }
-} else if (presetType === 'mesh-terrain') {
+} else if (presetType === 'three-months') {
+  const year = 2026;
+  const startOfWeek = 1;
+  const months = [3, 4, 5]; // Apr - Jun 2026 (0-indexed)
+
+  // Deterministic sine mock events for the quarter (Apr 1 - Jun 30)
+  const mockQuarter = [];
+  const D_start = new Date(year, 3, 1);
+  const D_end = new Date(year, 6, 0);
+  const cur = new Date(D_start);
+  let dayIndex = 0;
+  while (cur <= D_end) {
+    const angle = (dayIndex / 91) * 4 * Math.PI;
+    let val;
+    if (positiveOnly) {
+      // Standard look: activity counts, all >= 0, single-hue colors
+      val = Math.round(12 + Math.sin(angle) * 8 + Math.random() * 6);
+      if (val < 0) val = 0;
+    } else {
+      val = Math.round(Math.sin(angle) * 15);
+      val += Math.floor(Math.random() * 11) - 5;
+      if (val < -20) val = -20;
+      if (val > 20) val = 20;
+    }
+    mockQuarter.push({ date: new Date(cur), value: val });
+    cur.setDate(cur.getDate() + 1);
+    dayIndex++;
+  }
+
+  const groups = [];
+  let accumulatedCols = 0;
+  const spacerCols = 1;
+  const gridSize = options.gridSize || 16;
+  const gap = options.gap || 2;
+  const rad = ((options.projectionAngle || 30) * Math.PI) / 180;
+  const stepX = (gridSize + gap) * Math.cos(rad);
+  const stepY = (gridSize + gap) * Math.sin(rad);
+  let overallMinX = Infinity, overallMaxX = -Infinity;
+  let overallMinY = Infinity, overallMaxY = -Infinity;
+
+  // Shared value domain so identical heights mean identical values in every block.
+  // (Without this each month would normalize to its own max and lie visually.)
+  let domainMin = Infinity, domainMax = -Infinity;
+  for (const ev of mockQuarter) {
+    if (ev.value < domainMin) domainMin = ev.value;
+    if (ev.value > domainMax) domainMax = ev.value;
+  }
+  const valueDomain = { min: domainMin, max: domainMax };
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  for (let i = 0; i < months.length; i++) {
+    const m = months[i];
+    const mEvents = mockQuarter.filter(ev => ev.date.getMonth() === m);
+    const gridModel = presets.aggregateMonth(mEvents, { year, month: m, startOfWeek });
+    // NOTE: rowLabels: undefined would fall back to the grid's own labels —
+    // visibility is controlled via showRowLabels instead.
+    // Month name as first column label (year-preset convention: the label
+    // sits at the block's back-left corner, no separate title needed that
+    // would collide with the neighbouring block in diagonal packing).
+    const blockColLabels = gridModel.colLabels.map((w, ci) => (ci === 0 ? monthNames[m] : w));
+    const mSvg = gridModel.render({
+      ...options,
+      wrapper: 'g',
+      valueDomain,
+      showAxis: true,
+      showAxisWalls: true,
+      axisWallHeight: 28,
+      labelLift: 28, // seat labels on wall top
+      showRowLabels: i === 0,
+      rowLabelAngle: -90, // vertical day labels: zero overlap
+      rowLabelStyle: { backgroundColor: "#ffffff", backgroundOpacity: 0.85, padding: 3, borderRadius: 3 },
+      colLabels: blockColLabels,
+      title: undefined
+    });
+    const colOffset = accumulatedCols + i * spacerCols;
+    const dx = colOffset * stepX;
+    const dy = colOffset * stepY;
+    const mMatch = mSvg.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
+    groups.push('<g class="iso-month-block" data-month="' + m + '" transform="translate(' + dx.toFixed(2) + ', ' + dy.toFixed(2) + ')">' + mSvg + '</g>');
+    const match = mMatch;
+    if (match) {
+      const minX = parseFloat(match[1]) + dx;
+      const minY = parseFloat(match[2]) + dy;
+      const maxX = minX + parseFloat(match[3]);
+      const maxY = parseFloat(match[2]) + dy + parseFloat(match[4]);
+      if (minX < overallMinX) overallMinX = minX;
+      if (maxX > overallMaxX) overallMaxX = maxX;
+      if (minY < overallMinY) overallMinY = minY;
+      if (maxY > overallMaxY) overallMaxY = maxY;
+    }
+    accumulatedCols += gridModel.cols;
+  }
+
+  const padding = options.padding || 20;
+  const combinedWidth = (overallMaxX - overallMinX) + 2 * padding;
+  const combinedHeight = (overallMaxY - overallMinY) + 2 * padding;
+  const viewX = overallMinX - padding;
+  const viewY = overallMinY - padding;
+  const combinedSvg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="' + viewX.toFixed(2) + ' ' + viewY.toFixed(2) + ' ' + combinedWidth.toFixed(2) + ' ' + combinedHeight.toFixed(2) + '" width="100%" height="100%">'
+    + '<text x="' + (viewX + combinedWidth / 2).toFixed(2) + '" y="' + (viewY + padding * 0.7).toFixed(2) + '" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Apr - Jun 2026 — 3-Month Composite (Quarter View, One SVG)</text>'
+    + groups.join('\n') + '</svg>';
+  try {
+    fs.writeFileSync(outFile, combinedSvg);
+    console.log('Successfully wrote 3-month composite SVG to: ' + outFile);
+    process.exit(0);
+  } catch (err) {
+    console.error('Failed to write 3-month composite SVG:', err.message);
+    process.exit(1);
+  }
+ } else if (presetType === 'mesh-terrain') {
   const cols = 24;
   const rows = 24;
   dataPoints = [];
@@ -655,7 +765,44 @@ if (presetType === '24h') {
     interpolateColors: true,
     title: '3D Contiguous Surface Mesh Terrain (Rolling Hills with Lake Hole)'
   };
-} else if (presetType === 'nulls') {
+} else if (presetType === 'loss-landscape') {
+  // 10x10 ML loss landscape bowl: high rim (1.0) sloping to a global
+  // minimum at the center (~0.0). Procedural quadratic falloff — the same
+  // shape as a 100-line literal grid, in 5 lines.
+  const cols = 10;
+  const rows = 10;
+  dataPoints = [];
+  for (let x = 0; x < cols; x++) {
+    for (let y = 0; y < rows; y++) {
+      const dx = x - (cols - 1) / 2;
+      const dy = y - (rows - 1) / 2;
+      const raw = (dx * dx + dy * dy) / (2 * Math.pow((cols - 1) / 2, 2));
+      const val = parseFloat(Math.min(1, Math.max(0, raw)).toFixed(3));
+      dataPoints.push({
+        col: x,
+        row: y,
+        value: val,
+        label: `Loss [${x}, ${y}]: ${val.toFixed(3)}`
+      });
+    }
+  }
+  options = {
+    ...options,
+    cols,
+    rows,
+    colLabels: Array.from({ length: cols }, (_, i) => `x${i}`),
+    rowLabels: Array.from({ length: rows }, (_, i) => `y${i}`),
+    shape: 'mesh',
+    gridSize: 22,
+    gap: 0,
+    maxHeight: 60,
+    interpolateColors: true,
+    showAxisWalls: true,
+    axisWallHeight: 60,
+    labelLift: 60, // labels ride above the high rim, tied down by wall ruling lines
+    title: 'Loss Landscape Bowl (10x10 Mesh Terrain, Min at Center)'
+  };
+ } else if (presetType === 'nulls') {
   const p = presets.nullsExample8x8();
   dataPoints = p.data;
   options = {

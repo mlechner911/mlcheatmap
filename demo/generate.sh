@@ -440,6 +440,29 @@ node "$SCRIPT_DIR/generator.js" \
   --out="$OUTPUT_DIR/year_emerald_mesh_terrain.svg"
 
 
+# Example 46: 3-Month Composite (Apr - Jun 2026, Quarter View in One SVG), Emerald Theme
+node "$SCRIPT_DIR/generator.js" \
+  --preset=three-months \
+  --color=emerald \
+  --angle=30 \
+  --out="$OUTPUT_DIR/three_months_q2_2026_emerald.svg"
+
+# Example 47: 3-Month Composite, positive values only (standard single-hue look)
+node "$SCRIPT_DIR/generator.js" \\
+  --preset=three-months \\
+  --positive \\
+  --color=emerald \\
+  --angle=30 \\
+  --out="$OUTPUT_DIR/three_months_q2_2026_positive.svg"
+
+# Example 48: 10x10 Loss Landscape Bowl as 3D Surface Mesh, Sunset Theme, smooth gradients
+node "$SCRIPT_DIR/generator.js" \\
+  --preset=loss-landscape \\
+  --color=sunset \\
+  --angle=30 \\
+  --interpolate-colors \\
+  --out="$OUTPUT_DIR/loss_landscape_bowl_sunset_mesh.svg"
+
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"
 

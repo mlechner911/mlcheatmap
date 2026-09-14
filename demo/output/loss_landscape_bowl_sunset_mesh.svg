@@ -1,0 +1,589 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-244.34 -121.20 478.67 361.20" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-09-14</dc:date>
+        <dc:title>Loss Landscape Bowl (10x10 Mesh Terrain, Min at Center)</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    
+    <text x="-5.00" y="-107.20" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Loss Landscape Bowl (10x10 Mesh Terrain, Min at</text>
+<text x="-5.00" y="-89.20" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Center)</text>
+    <g>
+      <g class="iso-axis-walls"><polygon class="iso-axis-wall" points="0.00,0.00 190.53,110.00 190.53,50.00 0.00,-60.00" fill="rgba(241, 245, 249, 0.7)" stroke="none" />
+<polygon class="iso-axis-wall" points="0.00,0.00 -190.53,110.00 -190.53,50.00 0.00,-60.00" fill="rgba(241, 245, 249, 0.7)" stroke="none" />
+<line class="iso-axis-wall-rule" x1="0.00" y1="0.00" x2="0.00" y2="-60.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="19.05" y1="11.00" x2="19.05" y2="-49.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="38.11" y1="22.00" x2="38.11" y2="-38.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="57.16" y1="33.00" x2="57.16" y2="-27.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="76.21" y1="44.00" x2="76.21" y2="-16.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="95.26" y1="55.00" x2="95.26" y2="-5.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="114.32" y1="66.00" x2="114.32" y2="6.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="133.37" y1="77.00" x2="133.37" y2="17.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="152.42" y1="88.00" x2="152.42" y2="28.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="171.47" y1="99.00" x2="171.47" y2="39.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="0.00" y1="0.00" x2="0.00" y2="-60.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-19.05" y1="11.00" x2="-19.05" y2="-49.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-38.11" y1="22.00" x2="-38.11" y2="-38.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-57.16" y1="33.00" x2="-57.16" y2="-27.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-76.21" y1="44.00" x2="-76.21" y2="-16.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-95.26" y1="55.00" x2="-95.26" y2="-5.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-114.32" y1="66.00" x2="-114.32" y2="6.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-133.37" y1="77.00" x2="-133.37" y2="17.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-152.42" y1="88.00" x2="-152.42" y2="28.00" stroke="#57606a" stroke-width="0.5" />
+<line class="iso-axis-wall-rule" x1="-171.47" y1="99.00" x2="-171.47" y2="39.00" stroke="#57606a" stroke-width="0.5" /></g>
+<polygon class="iso-grid-cell" points="0.00,0.00 -19.05,11.00 0.00,22.00 19.05,11.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="0" data-value="0.80" style="animation-delay: 0ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 0-1: Avg Value 0.8</title>
+              <polygon points="0.0,-60.0 19.1,-37.1 0.0,-14.3" fill="#f05e0e" stroke="#cc500c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,-60.0 0.0,-14.3 -19.1,-37.1" fill="#f05e0e" stroke="#cc500c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,11.00 -38.11,22.00 -19.05,33.00 0.00,22.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="0.63" style="animation-delay: 15ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 1-2: Avg Value 0.6</title>
+              <polygon points="-19.1,-37.1 0.0,-14.3 -19.1,5.6" fill="#ff8a31" stroke="#d9752a" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,-37.1 -19.1,5.6 -38.1,-17.2" fill="#ff8327" stroke="#d96f21" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,22.00 -57.16,33.00 -38.11,44.00 -19.05,33.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="0.51" style="animation-delay: 30ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 2-3: Avg Value 0.5</title>
+              <polygon points="-38.1,-17.2 -19.1,5.6 -38.1,22.5" fill="#ffc57d" stroke="#d9a76a" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-38.1,-17.2 -38.1,22.5 -57.2,-0.4" fill="#ffb96c" stroke="#d99d5c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-57.16,33.00 -76.21,44.00 -57.16,55.00 -38.11,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="0.43" style="animation-delay: 45ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 3-4: Avg Value 0.4</title>
+              <polygon points="-57.2,-0.4 -38.1,22.5 -57.2,36.5" fill="#ffd79b" stroke="#d9b784" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-57.2,-0.4 -57.2,36.5 -76.2,13.6" fill="#ffcd8a" stroke="#d9ae75" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-76.21,44.00 -95.26,55.00 -76.21,66.00 -57.16,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="0.41" style="animation-delay: 60ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 4-5: Avg Value 0.4</title>
+              <polygon points="-76.2,13.6 -57.2,36.5 -76.2,47.5" fill="#ffe0a9" stroke="#d9be90" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-76.2,13.6 -76.2,47.5 -95.3,24.6" fill="#ffd392" stroke="#d9b37c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-95.26,55.00 -114.32,66.00 -95.26,77.00 -76.21,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="5" data-value="0.43" style="animation-delay: 75ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 5-6: Avg Value 0.4</title>
+              <polygon points="-95.3,24.6 -76.2,47.5 -95.3,55.5" fill="#ffdfa4" stroke="#d9be8b" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-95.3,24.6 -95.3,55.5 -114.3,32.6" fill="#ffd088" stroke="#d9b174" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-114.32,66.00 -133.37,77.00 -114.32,88.00 -95.26,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="6" data-value="0.51" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 6-7: Avg Value 0.5</title>
+              <polygon points="-114.3,32.6 -95.3,55.5 -114.3,60.6" fill="#ffd38e" stroke="#d9b379" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-114.3,32.6 -114.3,60.6 -133.4,37.8" fill="#ffb15d" stroke="#d9964f" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-133.37,77.00 -152.42,88.00 -133.37,99.00 -114.32,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="7" data-value="0.63" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 7-8: Avg Value 0.6</title>
+              <polygon points="-133.4,37.8 -114.3,60.6 -133.4,62.7" fill="#ffaa52" stroke="#d99146" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-133.4,37.8 -133.4,62.7 -152.4,39.9" fill="#ff7b17" stroke="#d96914" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-152.42,88.00 -171.47,99.00 -152.42,110.00 -133.37,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="8" data-value="0.80" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 0-1, Rows 8-9: Avg Value 0.8</title>
+              <polygon points="-152.4,39.9 -133.4,62.7 -152.4,61.9" fill="#ff7214" stroke="#d96111" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-152.4,39.9 -152.4,61.9 -171.5,39.0" fill="#f95b0d" stroke="#d44d0b" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-171.47,99.00 -190.53,110.00 -171.47,121.00 -152.42,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="19.05,11.00 0.00,22.00 19.05,33.00 38.11,22.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="0" data-value="0.63" style="animation-delay: 15ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 0-1: Avg Value 0.6</title>
+              <polygon points="19.1,-37.1 38.1,-17.2 19.1,5.6" fill="#fc8026" stroke="#d66d20" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,-37.1 19.1,5.6 0.0,-14.3" fill="#fc8730" stroke="#d67329" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,22.00 -19.05,33.00 0.00,44.00 19.05,33.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="0.46" style="animation-delay: 30ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 1-2: Avg Value 0.5</title>
+              <polygon points="0.0,-14.3 19.1,5.6 0.0,25.5" fill="#ffc686" stroke="#d9a872" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,-14.3 0.0,25.5 -19.1,5.6" fill="#ffc686" stroke="#d9a872" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,33.00 -38.11,44.00 -19.05,55.00 0.00,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="0.33" style="animation-delay: 45ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 2-3: Avg Value 0.3</title>
+              <polygon points="-19.1,5.6 0.0,25.5 -19.1,42.4" fill="#ffe2b4" stroke="#d9c099" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,5.6 -19.1,42.4 -38.1,22.5" fill="#ffe0af" stroke="#d9be95" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,44.00 -57.16,55.00 -38.11,66.00 -19.05,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="0.26" style="animation-delay: 60ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 3-4: Avg Value 0.3</title>
+              <polygon points="-38.1,22.5 -19.1,42.4 -38.1,56.4" fill="#fff1cd" stroke="#d9cdae" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-38.1,22.5 -38.1,56.4 -57.2,36.5" fill="#ffedc5" stroke="#d9c9a7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-57.16,55.00 -76.21,66.00 -57.16,77.00 -38.11,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="0.23" style="animation-delay: 75ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 4-5: Avg Value 0.2</title>
+              <polygon points="-57.2,36.5 -38.1,56.4 -57.2,67.4" fill="#fff9da" stroke="#d9d4b9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-57.2,36.5 -57.2,67.4 -76.2,47.5" fill="#fff2cc" stroke="#d9cead" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-76.21,66.00 -95.26,77.00 -76.21,88.00 -57.16,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="5" data-value="0.26" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 5-6: Avg Value 0.3</title>
+              <polygon points="-76.2,47.5 -57.2,67.4 -76.2,75.4" fill="#fff9d7" stroke="#d9d4b7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-76.2,47.5 -76.2,75.4 -95.3,55.5" fill="#ffefc5" stroke="#d9cba7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-95.26,77.00 -114.32,88.00 -95.26,99.00 -76.21,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="6" data-value="0.33" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 6-7: Avg Value 0.3</title>
+              <polygon points="-95.3,55.5 -76.2,75.4 -95.3,80.5" fill="#fff1c6" stroke="#d9cda8" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-95.3,55.5 -95.3,80.5 -114.3,60.6" fill="#ffe4ac" stroke="#d9c292" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-114.32,88.00 -133.37,99.00 -114.32,110.00 -95.26,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="7" data-value="0.46" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 7-8: Avg Value 0.5</title>
+              <polygon points="-114.3,60.6 -95.3,80.5 -114.3,82.6" fill="#ffdea0" stroke="#d9bd88" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-114.3,60.6 -114.3,82.6 -133.4,62.7" fill="#ffc97b" stroke="#d9ab69" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-133.37,99.00 -152.42,110.00 -133.37,121.00 -114.32,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="8" data-value="0.63" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 1-2, Rows 8-9: Avg Value 0.6</title>
+              <polygon points="-133.4,62.7 -114.3,82.6 -133.4,81.8" fill="#ffaa52" stroke="#d99146" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-133.4,62.7 -133.4,81.8 -152.4,61.9" fill="#ff7b17" stroke="#d96914" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-152.42,110.00 -171.47,121.00 -152.42,132.00 -133.37,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="38.11,22.00 19.05,33.00 38.11,44.00 57.16,33.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="0" data-value="0.51" style="animation-delay: 30ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 0-1: Avg Value 0.5</title>
+              <polygon points="38.1,-17.2 57.2,-0.4 38.1,22.5" fill="#fcb067" stroke="#d69658" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="38.1,-17.2 38.1,22.5 19.1,5.6" fill="#fdbc77" stroke="#d7a065" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="19.05,33.00 0.00,44.00 19.05,55.00 38.11,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="0.33" style="animation-delay: 45ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 1-2: Avg Value 0.3</title>
+              <polygon points="19.1,5.6 38.1,22.5 19.1,42.4" fill="#ffdbab" stroke="#d9ba91" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,5.6 19.1,42.4 0.0,25.5" fill="#ffddb0" stroke="#d9bc96" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,44.00 -19.05,55.00 0.00,66.00 19.05,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="2" data-value="0.21" style="animation-delay: 60ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 2-3: Avg Value 0.2</title>
+              <polygon points="0.0,25.5 19.1,42.4 0.0,59.3" fill="#fff0d2" stroke="#d9ccb3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,25.5 0.0,59.3 -19.1,42.4" fill="#fff0d2" stroke="#d9ccb3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,55.00 -38.11,66.00 -19.05,77.00 0.00,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="3" data-value="0.14" style="animation-delay: 75ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 3-4: Avg Value 0.1</title>
+              <polygon points="-19.1,42.4 0.0,59.3 -19.1,73.3" fill="#fffde9" stroke="#d9d7c6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,42.4 -19.1,73.3 -38.1,56.4" fill="#fffce6" stroke="#d9d6c4" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,66.00 -57.16,77.00 -38.11,88.00 -19.05,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="0.11" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 4-5: Avg Value 0.1</title>
+              <polygon points="-38.1,56.4 -19.1,73.3 -38.1,84.3" fill="#fffff4" stroke="#d9d9cf" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-38.1,56.4 -38.1,84.3 -57.2,67.4" fill="#ffffed" stroke="#d9d9c9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-57.16,77.00 -76.21,88.00 -57.16,99.00 -38.11,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="5" data-value="0.14" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 5-6: Avg Value 0.1</title>
+              <polygon points="-57.2,67.4 -38.1,84.3 -57.2,92.3" fill="#fffff3" stroke="#d9d9cf" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-57.2,67.4 -57.2,92.3 -76.2,75.4" fill="#ffffe8" stroke="#d9d9c5" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-76.21,88.00 -95.26,99.00 -76.21,110.00 -57.16,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="6" data-value="0.21" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 6-7: Avg Value 0.2</title>
+              <polygon points="-76.2,75.4 -57.2,92.3 -76.2,97.4" fill="#ffffe5" stroke="#d9d9c3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-76.2,75.4 -76.2,97.4 -95.3,80.5" fill="#fff8d3" stroke="#d9d3b3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-95.26,99.00 -114.32,110.00 -95.26,121.00 -76.21,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="7" data-value="0.33" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 7-8: Avg Value 0.3</title>
+              <polygon points="-95.3,80.5 -76.2,97.4 -95.3,99.5" fill="#fff1c6" stroke="#d9cda8" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-95.3,80.5 -95.3,99.5 -114.3,82.6" fill="#ffe4ac" stroke="#d9c292" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-114.32,110.00 -133.37,121.00 -114.32,132.00 -95.26,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="8" data-value="0.51" style="animation-delay: 150ms; transform-origin: bottom;">
+              <title>Cols 2-3, Rows 8-9: Avg Value 0.5</title>
+              <polygon points="-114.3,82.6 -95.3,99.5 -114.3,98.6" fill="#ffd38e" stroke="#d9b379" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-114.3,82.6 -114.3,98.6 -133.4,81.8" fill="#ffb15d" stroke="#d9964f" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-133.37,121.00 -152.42,132.00 -133.37,143.00 -114.32,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="57.16,33.00 38.11,44.00 57.16,55.00 76.21,44.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="0.43" style="animation-delay: 45ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 0-1: Avg Value 0.4</title>
+              <polygon points="57.2,-0.4 76.2,13.6 57.2,36.5" fill="#fbc081" stroke="#d5a36e" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="57.2,-0.4 57.2,36.5 38.1,22.5" fill="#fcc891" stroke="#d6aa7b" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="38.11,44.00 19.05,55.00 38.11,66.00 57.16,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="0.26" style="animation-delay: 60ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 1-2: Avg Value 0.3</title>
+              <polygon points="38.1,22.5 57.2,36.5 38.1,56.4" fill="#ffe2bb" stroke="#d9c09f" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="38.1,22.5 38.1,56.4 19.1,42.4" fill="#ffe6c3" stroke="#d9c4a6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="19.05,55.00 0.00,66.00 19.05,77.00 38.11,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="0.14" style="animation-delay: 75ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 2-3: Avg Value 0.1</title>
+              <polygon points="19.1,42.4 38.1,56.4 19.1,73.3" fill="#fff6e0" stroke="#d9d1be" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,42.4 19.1,73.3 0.0,59.3" fill="#fff7e3" stroke="#d9d2c1" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,66.00 -19.05,77.00 0.00,88.00 19.05,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="0.06" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 3-4: Avg Value 0.1</title>
+              <polygon points="0.0,59.3 19.1,73.3 0.0,87.3" fill="#fffef5" stroke="#d9d8d0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,59.3 0.0,87.3 -19.1,73.3" fill="#fffef5" stroke="#d9d8d0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,77.00 -38.11,88.00 -19.05,99.00 0.00,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="0.04" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 4-5: Avg Value 0.0</title>
+              <polygon points="-19.1,73.3 0.0,87.3 -19.1,98.3" fill="#ffffff" stroke="#d9d9d9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,73.3 -19.1,98.3 -38.1,84.3" fill="#fffffc" stroke="#d9d9d6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,88.00 -57.16,99.00 -38.11,110.00 -19.05,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="5" data-value="0.06" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 5-6: Avg Value 0.1</title>
+              <polygon points="-38.1,84.3 -19.1,98.3 -38.1,106.3" fill="#fffffe" stroke="#d9d9d8" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-38.1,84.3 -38.1,106.3 -57.2,92.3" fill="#fffff8" stroke="#d9d9d3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-57.16,99.00 -76.21,110.00 -57.16,121.00 -38.11,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="6" data-value="0.14" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 6-7: Avg Value 0.1</title>
+              <polygon points="-57.2,92.3 -38.1,106.3 -57.2,111.4" fill="#fffff3" stroke="#d9d9cf" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-57.2,92.3 -57.2,111.4 -76.2,97.4" fill="#ffffe8" stroke="#d9d9c5" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-76.21,110.00 -95.26,121.00 -76.21,132.00 -57.16,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="7" data-value="0.26" style="animation-delay: 150ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 7-8: Avg Value 0.3</title>
+              <polygon points="-76.2,97.4 -57.2,111.4 -76.2,113.5" fill="#fff9d7" stroke="#d9d4b7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-76.2,97.4 -76.2,113.5 -95.3,99.5" fill="#ffefc5" stroke="#d9cba7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-95.26,121.00 -114.32,132.00 -95.26,143.00 -76.21,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="8" data-value="0.43" style="animation-delay: 165ms; transform-origin: bottom;">
+              <title>Cols 3-4, Rows 8-9: Avg Value 0.4</title>
+              <polygon points="-95.3,99.5 -76.2,113.5 -95.3,112.6" fill="#ffdfa4" stroke="#d9be8b" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-95.3,99.5 -95.3,112.6 -114.3,98.6" fill="#ffd088" stroke="#d9b174" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-114.32,132.00 -133.37,143.00 -114.32,154.00 -95.26,143.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="76.21,44.00 57.16,55.00 76.21,66.00 95.26,55.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="0.41" style="animation-delay: 60ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 0-1: Avg Value 0.4</title>
+              <polygon points="76.2,13.6 95.3,24.6 76.2,47.5" fill="#f8c084" stroke="#d3a370" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="76.2,13.6 76.2,47.5 57.2,36.5" fill="#f9cc9a" stroke="#d4ad83" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="57.16,55.00 38.11,66.00 57.16,77.00 76.21,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="0.23" style="animation-delay: 75ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 1-2: Avg Value 0.2</title>
+              <polygon points="57.2,36.5 76.2,47.5 57.2,67.4" fill="#fee1bd" stroke="#d8bfa1" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="57.2,36.5 57.2,67.4 38.1,56.4" fill="#ffe7ca" stroke="#d9c4ac" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="38.11,66.00 19.05,77.00 38.11,88.00 57.16,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="2" data-value="0.11" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 2-3: Avg Value 0.1</title>
+              <polygon points="38.1,56.4 57.2,67.4 38.1,84.3" fill="#fff4e2" stroke="#d9cfc0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="38.1,56.4 38.1,84.3 19.1,73.3" fill="#fff5e8" stroke="#d9d0c5" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="19.05,77.00 0.00,88.00 19.05,99.00 38.11,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="3" data-value="0.04" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 3-4: Avg Value 0.0</title>
+              <polygon points="19.1,73.3 38.1,84.3 19.1,98.3" fill="#fffcf5" stroke="#d9d6d0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,73.3 19.1,98.3 0.0,87.3" fill="#fffdf8" stroke="#d9d7d3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,88.00 -19.05,99.00 0.00,110.00 19.05,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="4" data-value="0.01" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 4-5: Avg Value 0.0</title>
+              <polygon points="0.0,87.3 19.1,98.3 0.0,109.3" fill="#ffffff" stroke="#d9d9d9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,87.3 0.0,109.3 -19.1,98.3" fill="#ffffff" stroke="#d9d9d9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,99.00 -38.11,110.00 -19.05,121.00 0.00,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="5" data-value="0.04" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 5-6: Avg Value 0.0</title>
+              <polygon points="-19.1,98.3 0.0,109.3 -19.1,117.3" fill="#ffffff" stroke="#d9d9d9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,98.3 -19.1,117.3 -38.1,106.3" fill="#fffffc" stroke="#d9d9d6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,110.00 -57.16,121.00 -38.11,132.00 -19.05,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="6" data-value="0.11" style="animation-delay: 150ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 6-7: Avg Value 0.1</title>
+              <polygon points="-38.1,106.3 -19.1,117.3 -38.1,122.4" fill="#fffff4" stroke="#d9d9cf" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-38.1,106.3 -38.1,122.4 -57.2,111.4" fill="#ffffed" stroke="#d9d9c9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-57.16,121.00 -76.21,132.00 -57.16,143.00 -38.11,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="7" data-value="0.23" style="animation-delay: 165ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 7-8: Avg Value 0.2</title>
+              <polygon points="-57.2,111.4 -38.1,122.4 -57.2,124.5" fill="#fff9da" stroke="#d9d4b9" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-57.2,111.4 -57.2,124.5 -76.2,113.5" fill="#fff2cc" stroke="#d9cead" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-76.21,132.00 -95.26,143.00 -76.21,154.00 -57.16,143.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="8" data-value="0.41" style="animation-delay: 180ms; transform-origin: bottom;">
+              <title>Cols 4-5, Rows 8-9: Avg Value 0.4</title>
+              <polygon points="-76.2,113.5 -57.2,124.5 -76.2,123.6" fill="#ffe0a9" stroke="#d9be90" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-76.2,113.5 -76.2,123.6 -95.3,112.6" fill="#ffd392" stroke="#d9b37c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-95.26,143.00 -114.32,154.00 -95.26,165.00 -76.21,154.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="95.26,55.00 76.21,66.00 95.26,77.00 114.32,66.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="0" data-value="0.43" style="animation-delay: 75ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 0-1: Avg Value 0.4</title>
+              <polygon points="95.3,24.6 114.3,32.6 95.3,55.5" fill="#f5b979" stroke="#d09d67" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="95.3,24.6 95.3,55.5 76.2,47.5" fill="#f6c792" stroke="#d1a97c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="76.21,66.00 57.16,77.00 76.21,88.00 95.26,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="1" data-value="0.26" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 1-2: Avg Value 0.3</title>
+              <polygon points="76.2,47.5 95.3,55.5 76.2,75.4" fill="#fbd9b3" stroke="#d5b898" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="76.2,47.5 76.2,75.4 57.2,67.4" fill="#fce2c3" stroke="#d6c0a6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="57.16,77.00 38.11,88.00 57.16,99.00 76.21,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="2" data-value="0.14" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 2-3: Avg Value 0.1</title>
+              <polygon points="57.2,67.4 76.2,75.4 57.2,92.3" fill="#ffeed7" stroke="#d9cab7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="57.2,67.4 57.2,92.3 38.1,84.3" fill="#fff2e1" stroke="#d9cebf" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="38.11,88.00 19.05,99.00 38.11,110.00 57.16,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="3" data-value="0.06" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 3-4: Avg Value 0.1</title>
+              <polygon points="38.1,84.3 57.2,92.3 38.1,106.3" fill="#fff7eb" stroke="#d9d2c8" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="38.1,84.3 38.1,106.3 19.1,98.3" fill="#fff9f1" stroke="#d9d4cd" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="19.05,99.00 0.00,110.00 19.05,121.00 38.11,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="4" data-value="0.04" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 4-5: Avg Value 0.0</title>
+              <polygon points="19.1,98.3 38.1,106.3 19.1,117.3" fill="#fffcf5" stroke="#d9d6d0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,98.3 19.1,117.3 0.0,109.3" fill="#fffdf8" stroke="#d9d7d3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,110.00 -19.05,121.00 0.00,132.00 19.05,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="5" data-value="0.06" style="animation-delay: 150ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 5-6: Avg Value 0.1</title>
+              <polygon points="0.0,109.3 19.1,117.3 0.0,125.3" fill="#fffef5" stroke="#d9d8d0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,109.3 0.0,125.3 -19.1,117.3" fill="#fffef5" stroke="#d9d8d0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,121.00 -38.11,132.00 -19.05,143.00 0.00,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="6" data-value="0.14" style="animation-delay: 165ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 6-7: Avg Value 0.1</title>
+              <polygon points="-19.1,117.3 0.0,125.3 -19.1,130.4" fill="#fffde9" stroke="#d9d7c6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,117.3 -19.1,130.4 -38.1,122.4" fill="#fffce6" stroke="#d9d6c4" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,132.00 -57.16,143.00 -38.11,154.00 -19.05,143.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="7" data-value="0.26" style="animation-delay: 180ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 7-8: Avg Value 0.3</title>
+              <polygon points="-38.1,122.4 -19.1,130.4 -38.1,132.5" fill="#fff1cd" stroke="#d9cdae" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-38.1,122.4 -38.1,132.5 -57.2,124.5" fill="#ffedc5" stroke="#d9c9a7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-57.16,143.00 -76.21,154.00 -57.16,165.00 -38.11,154.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="8" data-value="0.43" style="animation-delay: 195ms; transform-origin: bottom;">
+              <title>Cols 5-6, Rows 8-9: Avg Value 0.4</title>
+              <polygon points="-57.2,124.5 -38.1,132.5 -57.2,131.6" fill="#ffd79b" stroke="#d9b784" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-57.2,124.5 -57.2,131.6 -76.2,123.6" fill="#ffcd8a" stroke="#d9ae75" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-76.21,154.00 -95.26,165.00 -76.21,176.00 -57.16,165.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="114.32,66.00 95.26,77.00 114.32,88.00 133.37,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="0" data-value="0.51" style="animation-delay: 90ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 0-1: Avg Value 0.5</title>
+              <polygon points="114.3,32.6 133.4,37.8 114.3,60.6" fill="#f19b51" stroke="#cd8445" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="114.3,32.6 114.3,60.6 95.3,55.5" fill="#f1b87c" stroke="#cd9c69" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="95.26,77.00 76.21,88.00 95.26,99.00 114.32,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="1" data-value="0.33" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 1-2: Avg Value 0.3</title>
+              <polygon points="95.3,55.5 114.3,60.6 95.3,80.5" fill="#f7ca99" stroke="#d2ac82" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="95.3,55.5 95.3,80.5 76.2,75.4" fill="#f7d6b0" stroke="#d2b696" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="76.21,88.00 57.16,99.00 76.21,110.00 95.26,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="2" data-value="0.21" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 2-3: Avg Value 0.2</title>
+              <polygon points="76.2,75.4 95.3,80.5 76.2,97.4" fill="#fce1bf" stroke="#d6bfa2" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="76.2,75.4 76.2,97.4 57.2,92.3" fill="#fce9d0" stroke="#d6c6b1" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="57.16,99.00 38.11,110.00 57.16,121.00 76.21,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="3" data-value="0.14" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 3-4: Avg Value 0.1</title>
+              <polygon points="57.2,92.3 76.2,97.4 57.2,111.4" fill="#ffeed7" stroke="#d9cab7" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="57.2,92.3 57.2,111.4 38.1,106.3" fill="#fff2e1" stroke="#d9cebf" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="38.11,110.00 19.05,121.00 38.11,132.00 57.16,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="4" data-value="0.11" style="animation-delay: 150ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 4-5: Avg Value 0.1</title>
+              <polygon points="38.1,106.3 57.2,111.4 38.1,122.4" fill="#fff4e2" stroke="#d9cfc0" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="38.1,106.3 38.1,122.4 19.1,117.3" fill="#fff5e8" stroke="#d9d0c5" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="19.05,121.00 0.00,132.00 19.05,143.00 38.11,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="5" data-value="0.14" style="animation-delay: 165ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 5-6: Avg Value 0.1</title>
+              <polygon points="19.1,117.3 38.1,122.4 19.1,130.4" fill="#fff6e0" stroke="#d9d1be" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,117.3 19.1,130.4 0.0,125.3" fill="#fff7e3" stroke="#d9d2c1" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,132.00 -19.05,143.00 0.00,154.00 19.05,143.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="6" data-value="0.21" style="animation-delay: 180ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 6-7: Avg Value 0.2</title>
+              <polygon points="0.0,125.3 19.1,130.4 0.0,135.5" fill="#fff0d2" stroke="#d9ccb3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,125.3 0.0,135.5 -19.1,130.4" fill="#fff0d2" stroke="#d9ccb3" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,143.00 -38.11,154.00 -19.05,165.00 0.00,154.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="7" data-value="0.33" style="animation-delay: 195ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 7-8: Avg Value 0.3</title>
+              <polygon points="-19.1,130.4 0.0,135.5 -19.1,137.6" fill="#ffe2b4" stroke="#d9c099" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,130.4 -19.1,137.6 -38.1,132.5" fill="#ffe0af" stroke="#d9be95" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,154.00 -57.16,165.00 -38.11,176.00 -19.05,165.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="8" data-value="0.51" style="animation-delay: 210ms; transform-origin: bottom;">
+              <title>Cols 6-7, Rows 8-9: Avg Value 0.5</title>
+              <polygon points="-38.1,132.5 -19.1,137.6 -38.1,136.8" fill="#ffc57d" stroke="#d9a76a" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-38.1,132.5 -38.1,136.8 -57.2,131.6" fill="#ffb96c" stroke="#d99d5c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-57.16,165.00 -76.21,176.00 -57.16,187.00 -38.11,176.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="133.37,77.00 114.32,88.00 133.37,99.00 152.42,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="0" data-value="0.63" style="animation-delay: 105ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 0-1: Avg Value 0.6</title>
+              <polygon points="133.4,37.8 152.4,39.9 133.4,62.7" fill="#e86914" stroke="#c55911" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="133.4,37.8 133.4,62.7 114.3,60.6" fill="#ec9246" stroke="#c97c3c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="114.32,88.00 95.26,99.00 114.32,110.00 133.37,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="1" data-value="0.46" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 1-2: Avg Value 0.5</title>
+              <polygon points="114.3,60.6 133.4,62.7 114.3,82.6" fill="#f2af6b" stroke="#ce955b" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="114.3,60.6 114.3,82.6 95.3,80.5" fill="#f3c18c" stroke="#cfa477" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="95.26,99.00 76.21,110.00 95.26,121.00 114.32,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="2" data-value="0.33" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 2-3: Avg Value 0.3</title>
+              <polygon points="95.3,80.5 114.3,82.6 95.3,99.5" fill="#f7ca99" stroke="#d2ac82" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="95.3,80.5 95.3,99.5 76.2,97.4" fill="#f7d6b0" stroke="#d2b696" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="76.21,110.00 57.16,121.00 76.21,132.00 95.26,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="3" data-value="0.26" style="animation-delay: 150ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 3-4: Avg Value 0.3</title>
+              <polygon points="76.2,97.4 95.3,99.5 76.2,113.5" fill="#fbd9b3" stroke="#d5b898" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="76.2,97.4 76.2,113.5 57.2,111.4" fill="#fce2c3" stroke="#d6c0a6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="57.16,121.00 38.11,132.00 57.16,143.00 76.21,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="4" data-value="0.23" style="animation-delay: 165ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 4-5: Avg Value 0.2</title>
+              <polygon points="57.2,111.4 76.2,113.5 57.2,124.5" fill="#fee1bd" stroke="#d8bfa1" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="57.2,111.4 57.2,124.5 38.1,122.4" fill="#ffe7ca" stroke="#d9c4ac" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="38.11,132.00 19.05,143.00 38.11,154.00 57.16,143.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="5" data-value="0.26" style="animation-delay: 180ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 5-6: Avg Value 0.3</title>
+              <polygon points="38.1,122.4 57.2,124.5 38.1,132.5" fill="#ffe2bb" stroke="#d9c09f" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="38.1,122.4 38.1,132.5 19.1,130.4" fill="#ffe6c3" stroke="#d9c4a6" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="19.05,143.00 0.00,154.00 19.05,165.00 38.11,154.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="6" data-value="0.33" style="animation-delay: 195ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 6-7: Avg Value 0.3</title>
+              <polygon points="19.1,130.4 38.1,132.5 19.1,137.6" fill="#ffdbab" stroke="#d9ba91" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,130.4 19.1,137.6 0.0,135.5" fill="#ffddb0" stroke="#d9bc96" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,154.00 -19.05,165.00 0.00,176.00 19.05,165.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="7" data-value="0.46" style="animation-delay: 210ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 7-8: Avg Value 0.5</title>
+              <polygon points="0.0,135.5 19.1,137.6 0.0,139.7" fill="#ffc686" stroke="#d9a872" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,135.5 0.0,139.7 -19.1,137.6" fill="#ffc686" stroke="#d9a872" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,165.00 -38.11,176.00 -19.05,187.00 0.00,176.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="7" data-row="8" data-value="0.63" style="animation-delay: 225ms; transform-origin: bottom;">
+              <title>Cols 7-8, Rows 8-9: Avg Value 0.6</title>
+              <polygon points="-19.1,137.6 0.0,139.7 -19.1,138.9" fill="#ff8a31" stroke="#d9752a" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="-19.1,137.6 -19.1,138.9 -38.1,136.8" fill="#ff8327" stroke="#d96f21" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-38.11,176.00 -57.16,187.00 -38.11,198.00 -19.05,187.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="152.42,88.00 133.37,99.00 152.42,110.00 171.47,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="0" data-value="0.80" style="animation-delay: 120ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 0-1: Avg Value 0.8</title>
+              <polygon points="152.4,39.9 171.5,39.0 152.4,61.9" fill="#d14d0b" stroke="#b24109" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="152.4,39.9 152.4,61.9 133.4,62.7" fill="#e16011" stroke="#bf520e" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="133.37,99.00 114.32,110.00 133.37,121.00 152.42,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="1" data-value="0.63" style="animation-delay: 135ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 1-2: Avg Value 0.6</title>
+              <polygon points="133.4,62.7 152.4,61.9 133.4,81.8" fill="#e86914" stroke="#c55911" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="133.4,62.7 133.4,81.8 114.3,82.6" fill="#ec9246" stroke="#c97c3c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="114.32,110.00 95.26,121.00 114.32,132.00 133.37,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="2" data-value="0.51" style="animation-delay: 150ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 2-3: Avg Value 0.5</title>
+              <polygon points="114.3,82.6 133.4,81.8 114.3,98.6" fill="#f19b51" stroke="#cd8445" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="114.3,82.6 114.3,98.6 95.3,99.5" fill="#f1b87c" stroke="#cd9c69" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="95.26,121.00 76.21,132.00 95.26,143.00 114.32,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="3" data-value="0.43" style="animation-delay: 165ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 3-4: Avg Value 0.4</title>
+              <polygon points="95.3,99.5 114.3,98.6 95.3,112.6" fill="#f5b979" stroke="#d09d67" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="95.3,99.5 95.3,112.6 76.2,113.5" fill="#f6c792" stroke="#d1a97c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="76.21,132.00 57.16,143.00 76.21,154.00 95.26,143.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="4" data-value="0.41" style="animation-delay: 180ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 4-5: Avg Value 0.4</title>
+              <polygon points="76.2,113.5 95.3,112.6 76.2,123.6" fill="#f8c084" stroke="#d3a370" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="76.2,113.5 76.2,123.6 57.2,124.5" fill="#f9cc9a" stroke="#d4ad83" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="57.16,143.00 38.11,154.00 57.16,165.00 76.21,154.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="5" data-value="0.43" style="animation-delay: 195ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 5-6: Avg Value 0.4</title>
+              <polygon points="57.2,124.5 76.2,123.6 57.2,131.6" fill="#fbc081" stroke="#d5a36e" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="57.2,124.5 57.2,131.6 38.1,132.5" fill="#fcc891" stroke="#d6aa7b" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="38.11,154.00 19.05,165.00 38.11,176.00 57.16,165.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="6" data-value="0.51" style="animation-delay: 210ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 6-7: Avg Value 0.5</title>
+              <polygon points="38.1,132.5 57.2,131.6 38.1,136.8" fill="#fcb067" stroke="#d69658" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="38.1,132.5 38.1,136.8 19.1,137.6" fill="#fdbc77" stroke="#d7a065" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="19.05,165.00 0.00,176.00 19.05,187.00 38.11,176.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="7" data-value="0.63" style="animation-delay: 225ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 7-8: Avg Value 0.6</title>
+              <polygon points="19.1,137.6 38.1,136.8 19.1,138.9" fill="#fc8026" stroke="#d66d20" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="19.1,137.6 19.1,138.9 0.0,139.7" fill="#fc8730" stroke="#d67329" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="0.00,176.00 -19.05,187.00 0.00,198.00 19.05,187.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="8" data-row="8" data-value="0.80" style="animation-delay: 240ms; transform-origin: bottom;">
+              <title>Cols 8-9, Rows 8-9: Avg Value 0.8</title>
+              <polygon points="0.0,139.7 19.1,138.9 0.0,138.0" fill="#f05e0e" stroke="#cc500c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+<polygon points="0.0,139.7 0.0,138.0 -19.1,138.9" fill="#f05e0e" stroke="#cc500c" stroke-width="0.3" stroke-linejoin="round"></polygon>
+            </g>
+<polygon class="iso-grid-cell" points="-19.05,187.00 -38.11,198.00 -19.05,209.00 0.00,198.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="171.47,99.00 152.42,110.00 171.47,121.00 190.53,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="152.42,110.00 133.37,121.00 152.42,132.00 171.47,121.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="133.37,121.00 114.32,132.00 133.37,143.00 152.42,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="114.32,132.00 95.26,143.00 114.32,154.00 133.37,143.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="95.26,143.00 76.21,154.00 95.26,165.00 114.32,154.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="76.21,154.00 57.16,165.00 76.21,176.00 95.26,165.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="57.16,165.00 38.11,176.00 57.16,187.00 76.21,176.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="38.11,176.00 19.05,187.00 38.11,198.00 57.16,187.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="19.05,187.00 0.00,198.00 19.05,209.00 38.11,198.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="0.00,198.00 -19.05,209.00 0.00,220.00 19.05,209.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-col-labels"><text x="22.86" y="-73.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x0</text>
+<text x="41.92" y="-62.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x1</text>
+<text x="60.97" y="-51.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x2</text>
+<text x="80.02" y="-40.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x3</text>
+<text x="99.07" y="-29.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x4</text>
+<text x="118.13" y="-18.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x5</text>
+<text x="137.18" y="-7.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x6</text>
+<text x="156.23" y="3.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x7</text>
+<text x="175.28" y="14.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x8</text>
+<text x="194.34" y="25.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">x9</text></g>
+<g class="iso-row-labels"><text x="-28.86" y="-70.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y0</text>
+<text x="-47.92" y="-59.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y1</text>
+<text x="-66.97" y="-48.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y2</text>
+<text x="-86.02" y="-37.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y3</text>
+<text x="-105.07" y="-26.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y4</text>
+<text x="-124.13" y="-15.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y5</text>
+<text x="-143.18" y="-4.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y6</text>
+<text x="-162.23" y="6.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y7</text>
+<text x="-181.28" y="17.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y8</text>
+<text x="-200.34" y="28.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">y9</text></g>
+    </g>
+  </svg>

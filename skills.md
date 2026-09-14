@@ -43,13 +43,24 @@ interface HeatmapOptions {
   gridSize?: number;                 // Size of each grid cell in pixels (default: 16)
   gap?: number;                      // Gap between cells in pixels (default: 2)
   maxHeight?: number;                // Maximum 3D column height in pixels (default: 40)
+   valueDomain?: { min: number; max: number }; // Fixed value domain for height/color scaling (default: per-grid data min/max). Pass the same domain to every block of a composite so heights stay comparable.
   colorScheme?: ColorSchemeType | CustomColorScheme; // Theme preset or custom colors
   showGrid?: boolean;                // Show bottom grid lines (default: true)
+   showAxis?: boolean;                // Baseline axis rules + tick marks along label edges (default: false)
+   axisColor?: string;                // Axis rule/tick color (default: theme label color)
+   axisWidth?: number;                // Axis rule stroke width in px (default: 1)
+   axisTickLength?: number;           // Axis tick length in px (default: 5)
+   showAxisWalls?: boolean;            // Translucent back walls along both rear floor edges as label backdrop (default: false)
+   axisWallHeight?: number;            // Wall height in px (default: maxHeight)
+   axisWallColor?: string;             // Wall fill color (default: height-grid wall default)
   gridColor?: string;                // Custom grid line color (default: #e1e4e8)
   colLabels?: string[];              // Text labels for columns
   colLabelInterval?: number;         // Label rendering frequency for columns (default: 1)
+   colLabelAngle?: number;              // Column label rotation in degrees about the anchor (default: 0). Positive = clockwise.
   rowLabels?: string[];              // Text labels for rows
   rowLabelInterval?: number;         // Label rendering frequency for rows (default: 1)
+   rowLabelAngle?: number; At +/-90 the anchor auto-centers (middle) so the pill straddles the iso edge line of its row.
+   labelLift?: number;                    // Vertical uplift in px for all axis labels (default: 0). Wall height seats labels on wall top.              // Row label rotation in degrees about the anchor (default: 0). ~-projectionAngle aligns labels with the row axis.
   interactive?: boolean;             // Embed title tags and hover dataset hooks (default: true)
   dark?: boolean;                    // Enable dark-theme color mappings (default: false)
   padding?: number;                  // Padding around drawing boundaries (default: 20)
@@ -61,7 +72,7 @@ interface HeatmapOptions {
   opacity?: number;                  // Elements opacity: 0.1 to 1.0 (default: 1.0)
   animated?: boolean;                // Staggered coordinate-delay transition (default: true)
   renderFlatZero?: boolean;          // Render a flat 2D tile for zero values (default: true)
-  showRowLabels?: boolean;           // Toggle visibility of row labels (default: true)
+  showRowLabels?: boolean;           // Toggle visibility of row labels (default: true) Use false to hide grid-inherited labels — rowLabels: undefined falls back to them.
   rowLabelStyle?: RowLabelStyle;     // Custom styling for row labels
   heightGrid?: HeightGridOptions;    // Reference vertical wall ticks (default: none)
   wrapper?: 'svg' | 'g';             // Output element tag: 'svg' or 'g' (default: 'svg')

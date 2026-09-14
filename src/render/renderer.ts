@@ -66,6 +66,7 @@ export function renderHeatmap(
   const opacity = options.opacity ?? 1.0;
   const animated = options.animated ?? true;
   const renderFlatZero = options.renderFlatZero ?? true;
+  const labelLift = options.labelLift ?? 0;
 
   // Calculate angle constants dynamically
   const rad = (projectionAngle * Math.PI) / 180;
@@ -115,6 +116,12 @@ export function renderHeatmap(
       }
     }
   }
+  // Fixed value domain overrides the per-grid data min/max so that
+  // composite grids (e.g. monthly blocks in one SVG) share one scale.
+  if (options.valueDomain) {
+    maxValue = options.valueDomain.max;
+    minValue = options.valueDomain.min;
+  }
   const maxAbsValue = Math.max(Math.abs(maxValue), Math.abs(minValue));
 
   // Helper to get point at col, row
@@ -152,7 +159,11 @@ export function renderHeatmap(
     labelPosition,
     geometryConfig,
     getPoint,
-    heightGrid: options.heightGrid
+    heightGrid: options.heightGrid,
+    axisWallHeight: (options.showAxisWalls ?? false) ? (options.axisWallHeight ?? maxHeight) : undefined,
+    colLabelAngle: options.colLabelAngle ?? 0,
+    rowLabelAngle: options.rowLabelAngle ?? 0,
+    labelLift
   });
 
 
@@ -342,6 +353,36 @@ export function renderHeatmap(
     }
   }
 
+  // Render translucent back walls along both rear floor edges.
+  // They act as a visual anchor and a calm backdrop for the axis labels.
+  const showAxisWalls = options.showAxisWalls ?? false;
+  if (showAxisWalls) {
+    const wallH = options.axisWallHeight ?? maxHeight;
+    const wallFill = options.axisWallColor ?? (isDark ? 'rgba(30, 41, 59, 0.7)' : 'rgba(241, 245, 249, 0.7)');
+    const wOrigin = getGridIntersection(0, 0, geometryConfig);
+    const wColEnd = getGridIntersection(cols, 0, geometryConfig);
+    const wRowEnd = getGridIntersection(0, rows, geometryConfig);
+    const wallBack = `<polygon class="iso-axis-wall" points="${wOrigin.x.toFixed(2)},${wOrigin.y.toFixed(2)} ${wColEnd.x.toFixed(2)},${wColEnd.y.toFixed(2)} ${(wColEnd.x).toFixed(2)},${(wColEnd.y - wallH).toFixed(2)} ${(wOrigin.x).toFixed(2)},${(wOrigin.y - wallH).toFixed(2)}" fill="${wallFill}" stroke="none" />`;
+    const wallLeft = `<polygon class="iso-axis-wall" points="${wOrigin.x.toFixed(2)},${wOrigin.y.toFixed(2)} ${wRowEnd.x.toFixed(2)},${wRowEnd.y.toFixed(2)} ${(wRowEnd.x).toFixed(2)},${(wRowEnd.y - wallH).toFixed(2)} ${(wOrigin.x).toFixed(2)},${(wOrigin.y - wallH).toFixed(2)}" fill="${wallFill}" stroke="none" />`;
+    const ruleColor = options.axisColor ?? labelColor;
+    const wallRules: string[] = [];
+    if (colLabels) {
+      for (let c = 0; c < cols; c += colLabelInterval) {
+        if (!colLabels[c]) continue;
+        const gp = getGridIntersection(c, 0, geometryConfig);
+        wallRules.push(`<line class="iso-axis-wall-rule" x1="${gp.x.toFixed(2)}" y1="${gp.y.toFixed(2)}" x2="${gp.x.toFixed(2)}" y2="${(gp.y - wallH).toFixed(2)}" stroke="${ruleColor}" stroke-width="0.5" />`);
+      }
+    }
+    if (rowLabels && showRowLabels !== false) {
+      for (let r = 0; r < rows; r += rowLabelInterval) {
+        if (!rowLabels[r]) continue;
+        const gp = getGridIntersection(0, r, geometryConfig);
+        wallRules.push(`<line class="iso-axis-wall-rule" x1="${gp.x.toFixed(2)}" y1="${gp.y.toFixed(2)}" x2="${gp.x.toFixed(2)}" y2="${(gp.y - wallH).toFixed(2)}" stroke="${ruleColor}" stroke-width="0.5" />`);
+      }
+    }
+    backgroundElements.push(`<g class="iso-axis-walls">${wallBack}\n${wallLeft}\n${wallRules.join('\n')}</g>`);
+  }
+
   // Render Column labels
   const rLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
   if (colLabels) {
@@ -353,9 +394,11 @@ export function renderHeatmap(
       geometryConfig,
       labelColor,
       labelFontSize,
-      escapeHtml
+      escapeHtml,
+      labelAngle: options.colLabelAngle ?? 0,
+      labelLift
     });
-    if (labelPosition === 'front') {
+    if (labelPosition === 'front' || showAxisWalls) {
       foregroundElements.push(colLabelsSvg);
     } else {
       backgroundElements.push(colLabelsSvg);
@@ -376,15 +419,78 @@ export function renderHeatmap(
       labelFontSize,
       labelPosition: (labelPosition === 'front' || hasHeightGrid) ? 'front' : 'behind',
       escapeHtml,
-      rowLabelStyle
+      rowLabelStyle,
+      labelAngle: options.rowLabelAngle ?? 0,
+      labelLift
     });
-    if (labelPosition === 'front' || hasHeightGrid) {
+    if (labelPosition === 'front' || hasHeightGrid || showAxisWalls) {
       foregroundElements.push(rowLabelsSvg);
     } else {
       backgroundElements.push(rowLabelsSvg);
     }
   }
 
+
+  // Render baseline axes with tick marks along the label edges.
+  // Rules sit at floor level (drawn into the background layer); ticks point
+  // toward the label side and follow col/row label intervals and visibility.
+  const showAxis = options.showAxis ?? false;
+  if (showAxis) {
+    const axisColor = options.axisColor ?? labelColor;
+    const axisWidth = options.axisWidth ?? 1;
+    const tickLen = options.axisTickLength ?? 5;
+    const axisParts: string[] = [];
+
+    const originPt = getGridIntersection(0, 0, geometryConfig);
+    const colEndPt = getGridIntersection(cols, 0, geometryConfig);
+    const rowEndPt = getGridIntersection(0, rows, geometryConfig);
+    axisParts.push(
+      `<line class="iso-axis-rule" x1="${originPt.x.toFixed(2)}" y1="${originPt.y.toFixed(2)}" x2="${colEndPt.x.toFixed(2)}" y2="${colEndPt.y.toFixed(2)}" stroke="${axisColor}" stroke-width="${axisWidth}" />`
+    );
+    axisParts.push(
+      `<line class="iso-axis-rule" x1="${originPt.x.toFixed(2)}" y1="${originPt.y.toFixed(2)}" x2="${rowEndPt.x.toFixed(2)}" y2="${rowEndPt.y.toFixed(2)}" stroke="${axisColor}" stroke-width="${axisWidth}" />`
+    );
+
+    const tickTowards = (
+      gx: number, gy: number, lx: number, ly: number
+    ): string => {
+      const dx = lx - gx;
+      const dy = ly - gy;
+      const len = Math.hypot(dx, dy);
+      if (len < 1e-9) return '';
+      const ex = gx + (dx / len) * tickLen;
+      const ey = gy + (dy / len) * tickLen;
+      return `<line class="iso-axis-tick" x1="${gx.toFixed(2)}" y1="${gy.toFixed(2)}" x2="${ex.toFixed(2)}" y2="${ey.toFixed(2)}" stroke="${axisColor}" stroke-width="${axisWidth}" />`;
+    };
+
+    // Column ticks (toward the column-label side)
+    if (colLabels) {
+      const axisRLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
+      for (let c = 0; c < cols; c += colLabelInterval) {
+        if (!colLabels[c]) continue;
+        const gp = getGridIntersection(c, 0, geometryConfig);
+        const lx = (c * gridSize + offset - (axisRLabel * gridSize + offset)) * cosAngle;
+        const ly = (c * gridSize + offset + (axisRLabel * gridSize + offset)) * sinAngle;
+        const tick = tickTowards(gp.x, gp.y, lx, ly);
+        if (tick) axisParts.push(tick);
+      }
+    }
+
+    // Row ticks (toward the row-label side; hidden when row labels are off)
+    if (rowLabels && showRowLabels !== false) {
+      const axisCLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
+      for (let r = 0; r < rows; r += rowLabelInterval) {
+        if (!rowLabels[r]) continue;
+        const gp = getGridIntersection(0, r, geometryConfig);
+        const lx = (axisCLabel * gridSize + offset - (r * gridSize + offset)) * cosAngle;
+        const ly = (axisCLabel * gridSize + offset + (r * gridSize + offset)) * sinAngle;
+        const tick = tickTowards(gp.x, gp.y, lx, ly);
+        if (tick) axisParts.push(tick);
+      }
+    }
+
+    backgroundElements.push(`<g class="iso-axis">${axisParts.join('\n')}</g>`);
+  }
 
   // Assemble final SVG
   const width = (bounds.maxX - bounds.minX) + 2 * padding;

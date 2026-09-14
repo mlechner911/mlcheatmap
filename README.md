@@ -159,6 +159,11 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 | `shape` | `'prism' \| 'cylinder' \| 'ribbon' \| 'flatribbon' \| 'mesh'` | `'prism'` | Visual layout style. |
 | `opacity` | `number` | `1.0` | Opacity value from `0.1` to `1.0`. |
 | `showGrid` | `boolean` | `true` | Show isometric grid floor layout lines. |
+| `valueDomain` | `{ min, max }` | data min/max | Fixed value domain for height/color scaling — same domain for every composite block keeps heights comparable. |
+| `showAxis` | `boolean` | `false` | Baseline axis rules with tick marks along the label edges. |
+| `axisColor` / `axisWidth` / `axisTickLength` | `string` / `number` / `number` | label color / `1` / `5` | Axis rule/tick styling. |
+| `showAxisWalls` | `boolean` | `false` | Translucent back walls (left + behind) as label backdrop; behind-labels render in foreground when on. |
+| `axisWallHeight` / `axisWallColor` | `number` / `string` | `maxHeight` / wall default | Wall height and fill color. |
 | `zeroColor` | `string` | `undefined` | Override color of zero-value cells. |
 | `renderFlatZero` | `boolean` | `true` | Renders a flat 2D plate for zero values instead of a blank space. |
 | `interactive` | `boolean` | `true` | Embed interactive tooltips and hover scaling. |
@@ -166,6 +171,7 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 | `projectionAngle` | `number` | `30` | Isometric camera angle in degrees (10° to 60°). |
 | `labelPosition` | `'behind' \| 'front'` | `'behind'` | Render row/column labels at the back or front of the grid projection. |
 | `showRowLabels` | `boolean` | `true` | Toggle visibility of row labels (series annotations). |
+| `colLabelAngle` / `rowLabelAngle` | `number` | `0` | Label rotation in degrees about the anchor. Label uplift: `labelLift` (px, default `0`) seats labels on top of axis walls; walls draw ruling lines from each label down to its grid line. `rowLabelAngle: -30` aligns day labels with the row axis at 30° projection. |
 | `rowLabelStyle` | `RowLabelStyle` | `undefined` | Custom styling for row labels (colors, background boxes, padding, radius, font size). |
 
 ---
@@ -188,6 +194,35 @@ Customize row/series text annotations using the `rowLabelStyle` configuration ob
 
 ---
 
+### ML Showcase: 3D Loss Landscape
+
+Our isometric engine shines when visualizing continuous mathematical surfaces. A prime example is the `loss-landscape` preset, which models an optimization surface typically explored during neural network training.
+
+Using `shape: 'mesh'` combined with `interpolateColors`, the library renders a 3D parabolic bowl (optimization valley) directly into pure SVG:
+
+*   **The Valley (Center):** the optimal model state with a loss value near `0.0` (cool, calm colors).
+*   **The Hills (Edges):** high-error zones approaching `1.0` (warm colors).
+
+```typescript
+// Excerpt from the demo/generator.js preset
+{
+  shape: 'mesh',
+  interpolateColors: true,
+  colorScheme: 'sunset', // cool center to warm rim
+  gridSize: 22,
+  gap: 0,
+  maxHeight: 60,
+}
+```
+
+Regenerate the preview with:
+
+```bash
+node demo/generator.js --preset=loss-landscape --color=sunset --angle=30 \
+  --interpolate-colors --out=demo/output/loss_landscape_bowl_sunset_mesh.svg
+# ... or the full batch: bash demo/generate.sh
+```
+
 ## Visual Examples
 
 Here are some pre-rendered SVG examples demonstrating the library's capabilities:
@@ -200,6 +235,8 @@ Here are some pre-rendered SVG examples demonstrating the library's capabilities
   *   ![24h Double-Row Timeline](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/24h_double_row_timeline.svg)
 *   **3D Surface Mesh Terrain (Rolling Hills)** *(Note: The circular hole in the center represents a "lake" of intentional `null` values, demonstrating how missing/outage data is rendered as a clean gap in the terrain)*:
   *   ![3D Surface Mesh Terrain](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/mesh_terrain_sunset_hills.svg)
+*   **Loss Landscape Bowl (10x10 ML optimization surface)**:
+  *   ![Loss Landscape Bowl](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/loss_landscape_bowl_sunset_mesh.svg)
 
 ## AI-Assisted Development (Claude, Cursor, Antigravity)
 
