@@ -119,8 +119,8 @@ export interface HeatmapOptions {
   colLabelAngle?: number;  // Column label rotation in degrees about the anchor (default: 0). ~projectionAngle aligns labels with the column axis.
   rowLabels?: string[];    // Row labels (e.g. Days of the week)
   rowLabelInterval?: number; // Label interval for rows (default: 1)
-  rowLabelAngle?: number;
-  labelLift?: number;        // Vertical uplift in px for all axis labels (default: 0). Set to wall height to seat labels on top of axis walls.  // Row label rotation in degrees about the anchor (default: 0). ~-projectionAngle aligns labels with the row axis.
+  rowLabelAngle?: number;  // Row label rotation in degrees about the anchor (default: 0). ~-projectionAngle aligns labels with the row axis.
+  labelLift?: number;        // Vertical uplift in px for all axis labels (default: 0). Set to wall height to seat labels on top of axis walls.
   showRowLabels?: boolean; // Toggle visibility of row labels (default: true). NOTE: pass false to hide labels inherited from a HeatmapGrid — passing rowLabels: undefined falls back to the grid's own labels.
   rowLabelStyle?: RowLabelStyle; // Styling options for row labels
   interactive?: boolean;   // Enable SVG hover effects & tooltips (default: true)

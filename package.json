@@ -25,6 +25,7 @@
     "build": "tsc && vite build && vite build --config vite.presets.config.ts",
     "build:demo": "vite build --config vite.demo.config.ts",
     "preview": "vite preview",
+    "test": "vitest run",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -41,6 +42,7 @@
   "devDependencies": {
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
-    "vite-plugin-dts": "^3.9.1"
+    "vite-plugin-dts": "^3.9.1",
+    "vitest": "^3.2.7"
   }
 }
