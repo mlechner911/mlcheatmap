@@ -1,0 +1,15 @@
+id:       mlcheatmap
+title:    MLC Isometric Heatmap
+subtitle: Time series as isometric 3D terrain — a manual for the SVG library
+author:   Michael Lechner
+lang:     en
+accent:   "#f97316"
+cover_image: mesh_terrain_sunset_hills.svg
+license:     CC BY-NC 4.0
+license_url: https://creativecommons.org/licenses/by-nc/4.0/
+
+source: https://github.com/mlechner911/mlcheatmap
+npm:
+  - mlc-isometric-heatmap
+
+# Chapters are loaded in filename order from chapters/.
