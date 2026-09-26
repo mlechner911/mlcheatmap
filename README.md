@@ -257,3 +257,10 @@ This project is licensed under the terms of the **MIT License**.
 Copyright (c) 2026 Michael Lechner
 
 You are free to use, modify, and distribute this software, provided that the above copyright notice and this permission notice are included in all copies or substantial portions of the software. For more details, see the full [LICENSE](LICENSE) file.
+
+## Who is "Claude" in the commits?
+
+Some commits in this repository are co-authored by Claude, Anthropic's AI
+model. It helps write code, keeps our documentation and backlog up to date and
+digs through failing builds — every change is reviewed before it is merged.
+We don't hide it: [how we work with Claude](https://mlcgo.eu/ai/en.html).
