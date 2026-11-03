@@ -191,17 +191,17 @@
     </g>
 <polygon class="iso-grid-cell" points="38.11,66.00 19.05,77.00 38.11,88.00 57.16,77.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="4" data-row="2" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>2026-07-01 (Outside Month) — 0 units</title>
+        <title>2026-07-01 (Outside Month): 0</title>
         <polygon points="38.11,67.50 21.65,77.00 38.11,86.50 54.56,77.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
 <polygon class="iso-grid-cell" points="19.05,77.00 0.00,88.00 19.05,99.00 38.11,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="4" data-row="3" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
-        <title>2026-07-02 (Outside Month) — 0 units</title>
+        <title>2026-07-02 (Outside Month): 0</title>
         <polygon points="19.05,78.50 2.60,88.00 19.05,97.50 35.51,88.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
 <polygon class="iso-grid-cell" points="0.00,88.00 -19.05,99.00 0.00,110.00 19.05,99.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="4" data-row="4" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
-        <title>2026-07-03 (Outside Month) — 0 units</title>
+        <title>2026-07-03 (Outside Month): 0</title>
         <polygon points="0.00,89.50 -16.45,99.00 0.00,108.50 16.45,99.00" fill="#fff5f5" stroke="#fff5f5" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
     </g>
