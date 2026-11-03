@@ -210,6 +210,7 @@ function blockBounds(svg, dx, dy) {
 
 /** Wraps rendered blocks in one SVG whose viewBox covers them all. */
 function compositeSvg(blocks, title, options) {
+  if (options.noTitle) title = undefined;
   const minX = Math.min(...blocks.map((b) => b.bounds.minX));
   const maxX = Math.max(...blocks.map((b) => b.bounds.maxX));
   const minY = Math.min(...blocks.map((b) => b.bounds.minY));
@@ -221,7 +222,7 @@ function compositeSvg(blocks, title, options) {
   const viewY = minY - padding;
   const titleColor = options.dark ? '#f0f6fc' : '#24292f';
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${width.toFixed(2)} ${height.toFixed(2)}" width="100%" height="100%">
-    <text x="${(viewX + width / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">${title}</text>
+    ${title ? `<text x="${(viewX + width / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">${title}</text>` : ''}
     ${blocks.map((b) => b.svg).join('\n')}
   </svg>`;
 }
@@ -247,7 +248,7 @@ export function renderMonthBlocks({ presets, year, months, events, options, titl
     const mSvg = grid.render({
       ...blockOptions,
       showRowLabels: i === 0,
-      colLabels: grid.colLabels.map((w, ci) => (ci === 0 ? MONTH_NAMES[m] : w)),
+      colLabels: grid.colLabels.map((w, ci) => (ci === 0 ? MONTH_NAMES[m] : options.monthLabelsOnly ? '' : w)),
       title: undefined,
     });
     const colOffset = accumulatedCols + i * spacerCols;

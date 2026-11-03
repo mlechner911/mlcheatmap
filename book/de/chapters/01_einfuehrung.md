@@ -12,11 +12,13 @@ Ein Ausreisser ragt heraus, bevor man ihn sucht.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_double_ribbon.svg" style="width:100%;aspect-ratio:3.813;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_double_ribbon.svg" style="width:100%;aspect-ratio:2.219;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Zwei Messreihen über 24 Stunden. Der Ausschlag am Nachmittag ist als Höhe sofort sichtbar — in der Fläche wäre er ein etwas kräftigeres Grün.</figcaption>
 </figure>
 
+
+> ✏️ Am besten liest sich jedes Kapitel mit den Händen am Code: Im [Playground](https://play.mlcgo.eu/isometric-heatmap) lassen sich die Beispiele direkt im Browser ändern, mit Autovervollständigung und ohne Installation.
 
 ## Was die Bibliothek ist
 
@@ -64,7 +66,7 @@ isometrische Ansicht mehr als eine Linie.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.466;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.200;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Ein ganzes Jahr, 53 Wochen gegen 7 Wochentage. Das Muster der Wochenenden liegt offen, ohne dass es jemand hervorheben musste.</figcaption>
 </figure>

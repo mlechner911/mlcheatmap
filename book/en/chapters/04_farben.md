@@ -12,14 +12,14 @@ A color scheme directly governs which nuances become visible. `grayscale` sounds
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_grayscale_front_35deg.svg" style="width:100%;aspect-ratio:1.441;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_grayscale_front_35deg.svg" style="width:100%;aspect-ratio:1.377;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">A full year in grayscale. Height carries the visual statement entirely on its own — and succeeds.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/month_coral_behind.svg" style="width:100%;aspect-ratio:1.52;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/month_coral_behind.svg" style="width:100%;aspect-ratio:1.380;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">The same principle in Coral: color reinforces what height already communicates.</figcaption>
 </figure>
@@ -30,7 +30,7 @@ By default, every cell is filled with a discrete color. For `ribbon` and `flatri
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_smooth_gradient.svg" style="width:100%;aspect-ratio:1.627;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_smooth_gradient.svg" style="width:100%;aspect-ratio:1.492;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Six months with smooth color gradients. Transitions are as seamless as the physical metrics they represent.</figcaption>
 </figure>
@@ -41,7 +41,7 @@ By default, every cell is filled with a discrete color. For `ribbon` and `flatri
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.466;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.200;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Zero values are highlighted in green, clearly distinguishing them as active measurements.</figcaption>
 </figure>
@@ -52,7 +52,7 @@ Setting `opacity` below 1.0 lets floor grid lines and rows in the background shi
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_emerald_transparent.svg" style="width:100%;aspect-ratio:1.666;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_emerald_transparent.svg" style="width:100%;aspect-ratio:1.628;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Semi-transparent columns: the underlying grid remains visible, anchoring spatial orientation.</figcaption>
 </figure>

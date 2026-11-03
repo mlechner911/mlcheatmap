@@ -44,14 +44,14 @@ const svg = grid.render({ shape: 'prism', colorScheme: 'emerald' });
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_double_low_profile.svg" style="width:100%;aspect-ratio:3.813;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_double_low_profile.svg" style="width:100%;aspect-ratio:2.219;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Low profile: distribution throughout the day remains the primary focus.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_sky_front_45deg.svg" style="width:100%;aspect-ratio:1.127;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_sky_front_45deg.svg" style="width:100%;aspect-ratio:1.026;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Steep angle with labels in front: individual values are legible while the overall pattern recedes.</figcaption>
 </figure>
@@ -77,7 +77,7 @@ If you specify a background color without a text color, the library calculates c
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_sky_styled_labels_slate_bg.svg" style="width:100%;aspect-ratio:1.592;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_sky_styled_labels_slate_bg.svg" style="width:100%;aspect-ratio:1.793;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Badged labels: row names stay clearly legible even when tall columns rise directly behind them.</figcaption>
 </figure>

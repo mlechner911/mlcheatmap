@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-63.48 -24.39 497.66 138.51" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50.43 -20.00 446.65 202.61" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
-        <dc:title>24h Single-Day Timeline (4 Measurements)</dc:title>
+        <dc:date>2026-11-03</dc:date>
+        <dc:title>MLC Isometric 3D Heatmap</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
     </rdf:RDF>
@@ -35,140 +35,140 @@
         }
       </style>
     
-    <text x="185.35" y="-10.39" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Single-Day Timeline (4 Measurements)</text>
+    
     <g>
-      <polygon class="iso-grid-cell" points="0.00,0.00 -15.65,3.33 0.00,6.65 15.65,3.33" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+      <polygon class="iso-grid-cell" points="0.00,0.00 -14.83,5.99 0.00,11.99 14.83,5.99" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
         <title>00:00 — Value: 0</title>
-        <polygon points="0.00,0.62 -12.72,3.33 0.00,6.03 12.72,3.33" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="0.00,1.12 -12.05,5.99 0.00,10.86 12.05,5.99" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="15.65,3.33 0.00,6.65 15.65,9.98 31.30,6.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="14.83,5.99 0.00,11.99 14.83,17.98 29.67,11.99" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="1" data-row="0" data-value="0" style="animation-delay: 15ms; transform-origin: bottom;">
         <title>01:00 — Value: 0</title>
-        <polygon points="15.65,3.95 2.93,6.65 15.65,9.36 28.37,6.65" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="14.83,7.12 2.78,11.99 14.83,16.86 26.89,11.99" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="31.30,6.65 15.65,9.98 31.30,13.31 46.95,9.98" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="29.67,11.99 14.83,17.98 29.67,23.97 44.50,17.98" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="2" data-row="0" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
       <title>02:00 — Value: 12</title>
-      <polygon class="iso-face-left" points="18.58,8.57 31.30,11.27 31.30,12.68 18.58,9.98" fill="#d8cfa9" stroke="#d8cfa9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="31.30,11.27 44.02,8.57 44.02,9.98 31.30,12.68" fill="#b2aa8b" stroke="#b2aa8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="31.30,5.87 18.58,8.57 31.30,11.27 44.02,8.57" fill="#fef3c7" stroke="#fef3c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-left" points="17.62,16.57 29.67,21.44 29.67,22.85 17.62,17.98" fill="#d8cfa9" stroke="#d8cfa9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="29.67,21.44 41.72,16.57 41.72,17.98 29.67,22.85" fill="#b2aa8b" stroke="#b2aa8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="29.67,11.70 17.62,16.57 29.67,21.44 41.72,16.57" fill="#fef3c7" stroke="#fef3c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
     </g>
-<polygon class="iso-grid-cell" points="46.95,9.98 31.30,13.31 46.95,16.63 62.60,13.31" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="44.50,17.98 29.67,23.97 44.50,29.97 59.34,23.97" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="3" data-row="0" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
         <title>03:00 — Value: 0</title>
-        <polygon points="46.95,10.60 34.24,13.31 46.95,16.01 59.67,13.31" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="44.50,19.10 32.45,23.97 44.50,28.84 56.56,23.97" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="62.60,13.31 46.95,16.63 62.60,19.96 78.25,16.63" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="59.34,23.97 44.50,29.97 59.34,35.96 74.17,29.97" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="4" data-row="0" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
         <title>04:00 — Value: 0</title>
-        <polygon points="62.60,13.93 49.89,16.63 62.60,19.34 75.32,16.63" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="59.34,25.10 47.29,29.97 59.34,34.84 71.39,29.97" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="78.25,16.63 62.60,19.96 78.25,23.29 93.90,19.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="74.17,29.97 59.34,35.96 74.17,41.96 89.01,35.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="5" data-row="0" data-value="0" style="animation-delay: 75ms; transform-origin: bottom;">
         <title>05:00 — Value: 0</title>
-        <polygon points="78.25,17.26 65.54,19.96 78.25,22.66 90.97,19.96" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="74.17,31.09 62.12,35.96 74.17,40.83 86.23,35.96" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="93.90,19.96 78.25,23.29 93.90,26.61 109.55,23.29" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="89.01,35.96 74.17,41.96 89.01,47.95 103.84,41.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="6" data-row="0" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
         <title>06:00 — Value: 0</title>
-        <polygon points="93.90,20.58 81.19,23.29 93.90,25.99 106.62,23.29" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="89.01,37.09 76.96,41.96 89.01,46.83 101.06,41.96" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="109.55,23.29 93.90,26.61 109.55,29.94 125.20,26.61" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="103.84,41.96 89.01,47.95 103.84,53.94 118.68,47.95" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="7" data-row="0" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
         <title>07:00 — Value: 0</title>
-        <polygon points="109.55,23.91 96.84,26.61 109.55,29.32 122.27,26.61" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="103.84,43.08 91.79,47.95 103.84,52.82 115.90,47.95" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="125.20,26.61 109.55,29.94 125.20,33.27 140.85,29.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="118.68,47.95 103.84,53.94 118.68,59.94 133.51,53.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="8" data-row="0" data-value="42" style="animation-delay: 120ms; transform-origin: bottom;">
       <title>08:00 — Value: 42</title>
-      <polygon class="iso-face-left" points="112.49,25.00 125.20,27.70 125.20,32.64 112.49,29.94" fill="#d6b341" stroke="#d6b341" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="125.20,27.70 137.92,25.00 137.92,29.94 125.20,32.64" fill="#b09436" stroke="#b09436" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="125.20,22.30 112.49,25.00 125.20,27.70 137.92,25.00" fill="#fcd34d" stroke="#fcd34d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-left" points="106.63,49.00 118.68,53.87 118.68,58.81 106.63,53.94" fill="#d6b341" stroke="#d6b341" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="118.68,53.87 130.73,49.00 130.73,53.94 118.68,58.81" fill="#b09436" stroke="#b09436" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="118.68,44.13 106.63,49.00 118.68,53.87 130.73,49.00" fill="#fcd34d" stroke="#fcd34d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
     </g>
-<polygon class="iso-grid-cell" points="140.85,29.94 125.20,33.27 140.85,36.59 156.50,33.27" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="133.51,53.94 118.68,59.94 133.51,65.93 148.35,59.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="9" data-row="0" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
         <title>09:00 — Value: 0</title>
-        <polygon points="140.85,30.56 128.14,33.27 140.85,35.97 153.57,33.27" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="133.51,55.07 121.46,59.94 133.51,64.81 145.57,59.94" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="156.50,33.27 140.85,36.59 156.50,39.92 172.15,36.59" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="148.35,59.94 133.51,65.93 148.35,71.92 163.18,65.93" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="10" data-row="0" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
         <title>10:00 — Value: 0</title>
-        <polygon points="156.50,33.89 143.79,36.59 156.50,39.30 169.22,36.59" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="148.35,61.06 136.30,65.93 148.35,70.80 160.40,65.93" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="172.15,36.59 156.50,39.92 172.15,43.25 187.80,39.92" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="163.18,65.93 148.35,71.92 163.18,77.92 178.02,71.92" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="11" data-row="0" data-value="0" style="animation-delay: 165ms; transform-origin: bottom;">
         <title>11:00 — Value: 0</title>
-        <polygon points="172.15,37.22 159.44,39.92 172.15,42.62 184.87,39.92" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="163.18,67.05 151.13,71.92 163.18,76.79 175.24,71.92" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="187.80,39.92 172.15,43.25 187.80,46.57 203.45,43.25" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="178.02,71.92 163.18,77.92 178.02,83.91 192.85,77.92" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="12" data-row="0" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
         <title>12:00 — Value: 0</title>
-        <polygon points="187.80,40.54 175.09,43.25 187.80,45.95 200.52,43.25" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="178.02,73.05 165.97,77.92 178.02,82.79 190.07,77.92" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="203.45,43.25 187.80,46.57 203.45,49.90 219.11,46.57" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="192.85,77.92 178.02,83.91 192.85,89.91 207.69,83.91" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="13" data-row="0" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
         <title>13:00 — Value: 0</title>
-        <polygon points="203.45,43.87 190.74,46.57 203.45,49.28 216.17,46.57" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="192.85,79.04 180.80,83.91 192.85,88.78 204.91,83.91" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="219.11,46.57 203.45,49.90 219.11,53.23 234.76,49.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="207.69,83.91 192.85,89.91 207.69,95.90 222.52,89.91" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="14" data-row="0" data-value="85" style="animation-delay: 210ms; transform-origin: bottom;">
       <title>14:00 — Value: 85</title>
-      <polygon class="iso-face-left" points="206.39,39.90 219.11,42.60 219.11,52.60 206.39,49.90" fill="#b86505" stroke="#b86505" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="219.11,42.60 231.82,39.90 231.82,49.90 219.11,52.60" fill="#985304" stroke="#985304" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="219.11,37.20 206.39,39.90 219.11,42.60 231.82,39.90" fill="#d97706" stroke="#d97706" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-left" points="195.64,79.91 207.69,84.78 207.69,94.78 195.64,89.91" fill="#b86505" stroke="#b86505" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="207.69,84.78 219.74,79.91 219.74,89.91 207.69,94.78" fill="#985304" stroke="#985304" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="207.69,75.04 195.64,79.91 207.69,84.78 219.74,79.91" fill="#d97706" stroke="#d97706" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
     </g>
-<polygon class="iso-grid-cell" points="234.76,49.90 219.11,53.23 234.76,56.55 250.41,53.23" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="222.52,89.91 207.69,95.90 222.52,101.89 237.36,95.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="15" data-row="0" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
         <title>15:00 — Value: 0</title>
-        <polygon points="234.76,50.52 222.04,53.23 234.76,55.93 247.47,53.23" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="222.52,91.03 210.47,95.90 222.52,100.77 234.58,95.90" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="250.41,53.23 234.76,56.55 250.41,59.88 266.06,56.55" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="237.36,95.90 222.52,101.89 237.36,107.89 252.19,101.89" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="16" data-row="0" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
         <title>16:00 — Value: 0</title>
-        <polygon points="250.41,53.85 237.69,56.55 250.41,59.25 263.12,56.55" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="237.36,97.02 225.31,101.89 237.36,106.76 249.41,101.89" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="266.06,56.55 250.41,59.88 266.06,63.21 281.71,59.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="252.19,101.89 237.36,107.89 252.19,113.88 267.03,107.89" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="17" data-row="0" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
         <title>17:00 — Value: 0</title>
-        <polygon points="266.06,57.18 253.34,59.88 266.06,62.58 278.77,59.88" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="252.19,103.02 240.14,107.89 252.19,112.76 264.25,107.89" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="281.71,59.88 266.06,63.21 281.71,66.53 297.36,63.21" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="267.03,107.89 252.19,113.88 267.03,119.87 281.86,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="18" data-row="0" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
         <title>18:00 — Value: 0</title>
-        <polygon points="281.71,60.50 268.99,63.21 281.71,65.91 294.42,63.21" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="267.03,109.01 254.98,113.88 267.03,118.75 279.08,113.88" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="297.36,63.21 281.71,66.53 297.36,69.86 313.01,66.53" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="281.86,113.88 267.03,119.87 281.86,125.87 296.70,119.87" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="19" data-row="0" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
         <title>19:00 — Value: 0</title>
-        <polygon points="297.36,63.83 284.64,66.53 297.36,69.23 310.07,66.53" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="281.86,115.00 269.81,119.87 281.86,124.74 293.92,119.87" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="313.01,66.53 297.36,69.86 313.01,73.18 328.66,69.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="296.70,119.87 281.86,125.87 296.70,131.86 311.53,125.87" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="20" data-row="0" data-value="32" style="animation-delay: 300ms; transform-origin: bottom;">
       <title>20:00 — Value: 32</title>
-      <polygon class="iso-face-left" points="300.29,66.09 313.01,68.80 313.01,72.56 300.29,69.86" fill="#d6b341" stroke="#d6b341" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="313.01,68.80 325.72,66.09 325.72,69.86 313.01,72.56" fill="#b09436" stroke="#b09436" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="313.01,63.39 300.29,66.09 313.01,68.80 325.72,66.09" fill="#fcd34d" stroke="#fcd34d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-left" points="284.65,122.10 296.70,126.97 296.70,130.74 284.65,125.87" fill="#d6b341" stroke="#d6b341" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="296.70,126.97 308.75,122.10 308.75,125.87 296.70,130.74" fill="#b09436" stroke="#b09436" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="296.70,117.23 284.65,122.10 296.70,126.97 308.75,122.10" fill="#fcd34d" stroke="#fcd34d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
     </g>
-<polygon class="iso-grid-cell" points="328.66,69.86 313.01,73.18 328.66,76.51 344.31,73.18" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="311.53,125.87 296.70,131.86 311.53,137.86 326.37,131.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="21" data-row="0" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
         <title>21:00 — Value: 0</title>
-        <polygon points="328.66,70.48 315.94,73.18 328.66,75.89 341.37,73.18" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="311.53,126.99 299.48,131.86 311.53,136.73 323.59,131.86" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="344.31,73.18 328.66,76.51 344.31,79.84 359.96,76.51" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="326.37,131.86 311.53,137.86 326.37,143.85 341.20,137.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="22" data-row="0" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
         <title>22:00 — Value: 0</title>
-        <polygon points="344.31,73.81 331.59,76.51 344.31,79.21 357.02,76.51" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="326.37,132.99 314.32,137.86 326.37,142.73 338.42,137.86" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<polygon class="iso-grid-cell" points="359.96,76.51 344.31,79.84 359.96,83.16 375.61,79.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<polygon class="iso-grid-cell" points="341.20,137.86 326.37,143.85 341.20,149.84 356.04,143.85" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="23" data-row="0" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
         <title>23:00 — Value: 0</title>
-        <polygon points="359.96,77.14 347.24,79.84 359.96,82.54 372.67,79.84" fill="#1e293b" stroke="#1e293b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+        <polygon points="341.20,138.98 329.15,143.85 341.20,148.72 353.26,143.85" fill="#fffbeb" stroke="#fffbeb" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       </g>
-<g class="iso-col-labels"><text x="-23.48" y="15.61" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12AM</text>
-<text x="70.43" y="35.57" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6AM</text>
-<text x="164.33" y="55.53" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12PM</text>
-<text x="258.23" y="75.49" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6PM</text></g>
-<g class="iso-row-labels"><text x="389.43" y="84.83" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Today</text></g>
+<g class="iso-col-labels"><g transform="translate(-10.38 11.31) rotate(-22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">12AM</text></g>
+<g transform="translate(78.63 47.28) rotate(-22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">6AM</text></g>
+<g transform="translate(167.63 83.24) rotate(-22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">12PM</text></g>
+<g transform="translate(256.64 119.20) rotate(-22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">6PM</text></g></g>
+<g class="iso-row-labels"><g transform="translate(351.59 149.17) rotate(22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Today</text></g></g>
     </g>
   </svg>

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-102.47 -38.66 746.92 388.30" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-124.54 -38.66 768.99 388.30" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
-        <dc:title>Contributions Calendar (Year Preset)</dc:title>
+        <dc:date>2026-11-03</dc:date>
+        <dc:title>MLC Isometric 3D Heatmap</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
     </rdf:RDF>
@@ -35,21 +35,9 @@
         }
       </style>
     
-    <text x="270.99" y="-24.66" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Contributions Calendar (Year Preset)</text>
+    
     <g>
-      <g class="iso-col-labels"><text x="14.14" y="-5.75" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Jan</text>
-<text x="61.27" y="16.23" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Feb</text>
-<text x="108.39" y="38.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Mar</text>
-<text x="167.30" y="65.67" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Apr</text>
-<text x="214.43" y="87.65" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">May</text>
-<text x="273.34" y="115.12" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Jun</text>
-<text x="320.47" y="137.10" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Jul</text>
-<text x="367.60" y="159.07" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Aug</text>
-<text x="426.51" y="186.54" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Sep</text>
-<text x="473.64" y="208.52" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Oct</text>
-<text x="520.76" y="230.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Nov</text>
-<text x="579.67" y="257.97" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">Dec</text></g>
-<polygon class="iso-grid-cell" points="0.00,0.00 -11.78,5.49 0.00,10.99 11.78,5.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+      <polygon class="iso-grid-cell" points="0.00,0.00 -11.78,5.49 0.00,10.99 11.78,5.49" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-11.78,5.49 -23.56,10.99 -11.78,16.48 0.00,10.99" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-23.56,10.99 -35.35,16.48 -23.56,21.98 -11.78,16.48" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-35.35,16.48 -47.13,21.98 -35.35,27.47 -23.56,21.98" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
@@ -2186,5 +2174,17 @@
 <polygon class="iso-grid-cell" points="565.54,307.67 553.75,313.16 565.54,318.65 577.32,313.16" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="553.75,313.16 541.97,318.65 553.75,324.15 565.54,318.65" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="541.97,318.65 530.19,324.15 541.97,329.64 553.75,324.15" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-col-labels"><g transform="translate(-78.94 43.15) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Jan</text></g>
+<g transform="translate(-31.81 65.13) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Feb</text></g>
+<g transform="translate(15.32 87.10) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Mar</text></g>
+<g transform="translate(74.23 114.57) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Apr</text></g>
+<g transform="translate(121.35 136.55) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">May</text></g>
+<g transform="translate(180.26 164.02) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Jun</text></g>
+<g transform="translate(227.39 185.99) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Jul</text></g>
+<g transform="translate(274.52 207.97) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Aug</text></g>
+<g transform="translate(333.43 235.44) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Sep</text></g>
+<g transform="translate(380.56 257.42) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Oct</text></g>
+<g transform="translate(427.69 279.39) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Nov</text></g>
+<g transform="translate(486.60 306.86) rotate(-25)"><text x="0" y="5.25" fill="#57606a" font-size="15" font-family="sans-serif" text-anchor="end">Dec</text></g></g>
     </g>
   </svg>

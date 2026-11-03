@@ -61,6 +61,10 @@ console.log(`Generating heatmap: preset=${presetType}, color=${colorScheme}, ang
 
 let dataPoints = [];
 let options = {
+  ...(args['label-font-size'] ? { labelFontSize: parseInt(args['label-font-size'], 10) } : {}),
+  ...(args['label-mode'] ? { labelMode: args['label-mode'] } : {}),
+  ...(args['month-labels-only'] ? { monthLabelsOnly: true } : {}),
+  ...(args['no-title'] ? { noTitle: true } : {}),
   colorScheme,
   zeroColor,
   projectionAngle: angle,
@@ -495,7 +499,10 @@ if (presetType === '24h') {
 if (args['grid-size']) options.gridSize = parseInt(args['grid-size'], 10);
 if (args.gap) options.gap = parseInt(args.gap, 10);
 if (args['max-height']) options.maxHeight = parseInt(args['max-height'], 10);
-if (args['label-mode']) options.labelMode = args['label-mode'];
+if (args['col-label-interval']) {
+  const interval = args['col-label-interval'];
+  options.colLabelInterval = interval === 'auto' ? 'auto' : parseInt(interval, 10);
+}
 if (args['label-interval']) {
   const interval = args['label-interval'] === 'auto' ? 'auto' : parseInt(args['label-interval'], 10);
   options.colLabelInterval = interval;
@@ -524,6 +531,8 @@ if (Object.keys(rowLabelStyle).length > 0) {
   options.rowLabelStyle = rowLabelStyle;
 }
 
+
+if (args['no-title']) options.title = undefined;
 
 // Render SVG and write to file
 try {
