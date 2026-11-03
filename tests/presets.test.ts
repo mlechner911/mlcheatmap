@@ -93,3 +93,17 @@ describe('tooltip labels', () => {
     }
   });
 });
+
+describe('tooltipFormatter', () => {
+  const grid = presets.aggregateMonth([{ date: '2026-03-02', value: 7 }], { year: 2026, month: 2 });
+
+  it('replaces the tooltip of a preset', () => {
+    const svg = grid.render({ tooltipFormatter: (point) => `${point.value} kWh` });
+    expect(svg).toContain('<title>7 kWh</title>');
+    expect(svg).not.toContain('<title>2026-03-02: 7</title>');
+  });
+
+  it('leaves the label in place without a formatter', () => {
+    expect(grid.render()).toContain('<title>2026-03-02: 7</title>');
+  });
+});
