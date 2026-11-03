@@ -36,6 +36,7 @@ By introducing **3D height and perspective**:
     *   `mesh`: 3D contiguous surface mesh (terrain) with Lambertian diffuse shading.
 *   **Model-View Separation**: Clean OOP coordinate space data model (`HeatmapGrid`) separate from the rendering engine.
 *   **Flexible Axis Labels**: Automatic centering, alignment, and spacing of row/column labels with support for front/back positioning.
+*   **Comparable Composites**: `valueDomain` keeps multiple grids on a shared scale; `showAxisWalls` + `labelLift` render translucent back walls so labels sit on wall tops; `rowLabelAngle`/`colLabelAngle` rotate labels to follow the isometric axes.
 *   **Negative Values (Valleys & Trenches)**: Full projection support for negative heights sinking below the grid floor with diverging color themes.
 *   **Null Value Concept**: Transparent/empty rendering for `null` cells, showing only grid floor lines, with smooth boundary slope-downs for continuous ribbons.
 *   **Interactive Features**: Built-in CSS load animations (staggered delay transitions) and hover title/tooltip hooks.

@@ -436,31 +436,50 @@ if (presetType === '24h') {
   const shapes = ['prism', 'cylinder', 'ribbon', 'flatribbon'];
   const shapeFn = (r) => shapes[r % shapes.length];
 
+  // Shared domain so May and June heights are comparable.
+  const allMulti = mockMay.concat(mockJune);
+  let dMin = Infinity, dMax = -Infinity;
+  for (const ev of allMulti) {
+    if (ev.value < dMin) dMin = ev.value;
+    if (ev.value > dMax) dMax = ev.value;
+  }
+
+  // NOTE: [] (not undefined) suppresses labels — undefined would fall back
+  // to the grid's own labels via `??`.
   const groupOptions = {
     ...options,
     shape: shapeFn,
     wrapper: 'g',
+    valueDomain: { min: dMin, max: dMax },
+    showAxis: true,
+    showAxisWalls: true,
+    axisWallHeight: 28,
+    labelLift: 28,
+    rowLabelAngle: -90,
+    rowLabelStyle: { backgroundColor: '#ffffff', backgroundOpacity: 0.85, padding: 3, borderRadius: 3 },
   };
 
   // Render May (with row labels, no col labels)
   const svgMayG = gridMay.render({
     ...groupOptions,
-    rowLabels: gridMay.rowLabels,
-    colLabels: undefined,
+    showRowLabels: true,
+    colLabels: [],
   });
 
-  // Render June (no row labels, with col labels)
+  // Render June (no row labels, with col labels, month-first convention)
+  const juneCols = gridJune.colLabels.map((w, ci) => (ci === 0 ? 'Jun' : w));
   const svgJuneG = gridJune.render({
     ...groupOptions,
-    rowLabels: undefined,
-    colLabels: gridJune.colLabels,
+    showRowLabels: false,
+    colLabels: juneCols,
   });
 
-  // Calculate translation offset for June based on May columns
+  // Calculate translation offset for June based on May columns + 1 spacer col
   const colsMay = gridMay.cols;
+  const spacerCols = 1;
   const rad = ((options.projectionAngle || 30) * Math.PI) / 180;
-  const dx = colsMay * ((options.gridSize || 20) + (options.gap || 3)) * Math.cos(rad);
-  const dy = colsMay * ((options.gridSize || 20) + (options.gap || 3)) * Math.sin(rad);
+  const dx = (colsMay + spacerCols) * ((options.gridSize || 20) + (options.gap || 3)) * Math.cos(rad);
+  const dy = (colsMay + spacerCols) * ((options.gridSize || 20) + (options.gap || 3)) * Math.sin(rad);
 
   // Wrap June in a translated group
   const translatedJune = `<g transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">
@@ -504,7 +523,7 @@ if (presetType === '24h') {
   const viewY = minY - padding;
 
   const combinedSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
-    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May &amp; June 2026 — Combined Multi-Month (Mixed Shapes &amp; G-Group Integration)</text>
+    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May &amp; June 2026 — Mixed Shapes Composite</text>
     ${svgMayG}
     ${translatedJune}
   </svg>`;
@@ -557,18 +576,35 @@ if (presetType === '24h') {
   let overallMinY = Infinity;
   let overallMaxY = -Infinity;
 
+  // Shared domain over all six months so heights stay comparable.
+  let splitMin = Infinity, splitMax = -Infinity;
+  for (const ev of mockSixMonthsSingle) {
+    if (ev.value < splitMin) splitMin = ev.value;
+    if (ev.value > splitMax) splitMax = ev.value;
+  }
+  const splitDomain = { min: splitMin, max: splitMax };
+  const splitMonthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'];
+
   for (let i = 0; i < months.length; i++) {
     const m = months[i];
     const mEvents = mockSixMonthsSingle.filter(ev => ev.date.getMonth() === m);
     const gridModel = presets.aggregateMonth(mEvents, { year, month: m, startOfWeek });
 
-    const rowLabels = i === 0 ? gridModel.rowLabels : undefined;
-    const colLabels = gridModel.colLabels;
+    // NOTE: showRowLabels (not rowLabels: undefined) controls visibility —
+    // undefined would fall back to the grid's own labels.
+    const colLabels = gridModel.colLabels.map((w, ci) => (ci === 0 ? splitMonthNames[m] : w));
 
     const mSvg = gridModel.render({
       ...options,
       wrapper: 'g',
-      rowLabels,
+      valueDomain: splitDomain,
+      showAxis: true,
+      showAxisWalls: true,
+      axisWallHeight: 28,
+      labelLift: 28,
+      showRowLabels: i === 0,
+      rowLabelAngle: -90,
+      rowLabelStyle: { backgroundColor: '#ffffff', backgroundOpacity: 0.85, padding: 3, borderRadius: 3 },
       colLabels,
       title: undefined
     });
@@ -650,7 +686,7 @@ if (presetType === '24h') {
 
   const groups = [];
   let accumulatedCols = 0;
-  const spacerCols = 1;
+  const spacerCols = 2; // extra air so back labels of block N+1 clear block N
   const gridSize = options.gridSize || 16;
   const gap = options.gap || 2;
   const rad = ((options.projectionAngle || 30) * Math.PI) / 180;

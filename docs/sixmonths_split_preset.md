@@ -24,8 +24,9 @@ To render this combined SVG:
     $$dx = (C_{\text{cumulative}} + i \cdot \text{spacer}) \cdot (\text{gridSize} + \text{gap}) \cdot \cos(\theta)$$
     $$dy = (C_{\text{cumulative}} + i \cdot \text{spacer}) \cdot (\text{gridSize} + \text{gap}) \cdot \sin(\theta)$$
     
-    where $C_{\text{cumulative}}$ is the total columns of preceding months, $i$ is the month index ($0$ to $5$), and $\text{spacer}$ is the column spacer width (set to $1$ column).
-4.  **Clean Labels**: Only the first month (January) draws the row labels (Mon-Sun) to keep the left-hand axis clean.
+    where $C_{\text{cumulative}}$ is the total columns of preceding months, $i$ is the month index ($0$ to $5$), and $\text{spacer}$ is the column spacer width ($2$ columns, so back labels of block $i+1$ clear block $i$).
+4.  **Clean Labels**: Only the first month (January) draws the row labels (Mon-Sun) via `showRowLabels`, keeps its own `rowLabels`, and uses vertical pills (`rowLabelAngle: -90` + `rowLabelStyle` background). Column labels use the month-first convention (`Jan`, `W2`, …).
+5.  All blocks share one `valueDomain` (min/max over all six months) plus `showAxisWalls`/`labelLift` so heights stay comparable and labels sit on the wall tops.
 5.  All month groups are nested inside a single parent `<svg>` with a dynamically calculated overall viewBox size to avoid clipping.
 
 ---

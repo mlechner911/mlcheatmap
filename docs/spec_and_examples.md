@@ -99,32 +99,73 @@ export type ColorSchemePreset =
   | 'sunset'
   | 'grayscale';
 
-export interface CustomColorScheme {
-  empty: string;
-  steps: string[];
-}
+ export interface CustomColorScheme {
+   empty: string;
+   steps: string[];
+ }
 
-export interface HeatmapOptions {
-  cols: number;
-  rows: number;
-  gridSize?: number;       // Spacing (default: 16)
-  gap?: number;            // Cell spacing (default: 2)
-  maxHeight?: number;      // Height scale of highest bar (default: 40)
-  colorScheme?: ColorSchemePreset | CustomColorScheme;
-  showGrid?: boolean;
-  gridColor?: string;
-  colLabels?: string[];
-  colLabelInterval?: number;
-  rowLabels?: string[];
-  rowLabelInterval?: number;
-  interactive?: boolean;   // Enable mouse hover lifting & tooltips
-  dark?: boolean;          // Use dark mode theme palettes
-  padding?: number;        // Canvas margin (default: 20)
-  title?: string;
-  projectionAngle?: number; // Tilt angle in degrees (default: 30)
-  labelPosition?: 'behind' | 'front'; // Place labels at the back or front of grid (default: 'behind')
-  zeroColor?: string;      // Custom color override for zero value cells
-}
+ export interface ValueDomain {
+   min: number; // Fixed data minimum for height/color scaling
+   max: number; // Fixed data maximum for height/color scaling
+ }
+
+ export interface RowLabelStyle {
+   show?: boolean;
+   fontSize?: number;
+   fontFamily?: string;
+   color?: string;
+   backgroundColor?: string;
+   backgroundOpacity?: number;
+   padding?: number;
+   borderRadius?: number;
+ }
+
+ export interface HeatmapOptions {
+   cols: number;
+   rows: number;
+   gridSize?: number;       // Spacing (default: 16)
+   gap?: number;            // Cell spacing (default: 2)
+   maxHeight?: number;      // Height scale of highest bar (default: 40)
+   valueDomain?: ValueDomain; // Fixed value domain for height/color scaling. Overrides per-grid min/max — use for composites (e.g. monthly blocks) so identical heights mean identical values.
+   colorScheme?: ColorSchemePreset | CustomColorScheme;
+   showGrid?: boolean;
+   gridColor?: string;
+   showAxis?: boolean;      // Draw baseline axis rules with tick marks along the label edges (default: false)
+   axisColor?: string;      // Color of axis rules and ticks (default: theme labelColor)
+   axisWidth?: number;      // Stroke width of axis rules in px (default: 1)
+   axisTickLength?: number; // Length of axis tick marks in px (default: 5)
+   showAxisWalls?: boolean; // Translucent back walls along both rear floor edges as label backdrop (default: false)
+   axisWallHeight?: number; // Wall height in px (default: maxHeight)
+   axisWallColor?: string;  // Wall fill color (default: height-grid wall default)
+   colLabels?: string[];
+   colLabelInterval?: number;
+   colLabelAngle?: number;  // Column label rotation in degrees (default: 0). ~projectionAngle aligns labels with the column axis.
+   rowLabels?: string[];
+   rowLabelInterval?: number;
+   rowLabelAngle?: number;  // Row label rotation in degrees (default: 0). ~-projectionAngle aligns labels with the row axis.
+   labelLift?: number;      // Vertical uplift in px for all axis labels (default: 0). Set to wall height to seat labels on top of axis walls.
+   showRowLabels?: boolean; // Toggle row label visibility (default: true). NOTE: passing rowLabels: undefined falls back to the grid's own labels.
+   rowLabelStyle?: RowLabelStyle; // Background pill / styling for row labels
+   interactive?: boolean;
+   dark?: boolean;
+   padding?: number;
+   title?: string;
+   projectionAngle?: number; // Tilt angle in degrees (default: 30)
+   labelPosition?: 'behind' | 'front'; // Place labels at the back or front of grid (default: 'behind')
+   zeroColor?: string;      // Custom color for zero value cells
+   shape?: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape);
+   opacity?: number;
+   animated?: boolean;
+   renderFlatZero?: boolean;
+   heightGrid?: HeightGridOptions;
+   wrapper?: 'svg' | 'g';   // Output wrapper element ('svg' or 'g', default: 'svg')
+   interpolateColors?: boolean;
+   triangulateMesh?: boolean;
+   useSvg2Mesh?: boolean;
+   shading?: boolean;
+   creator?: string;
+   generatorComment?: string;
+ }
 ```
 
 ---
