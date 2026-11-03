@@ -140,7 +140,7 @@ export function workweekDemo() {
       cellDate.setDate(startMonday.getDate() + c * 7 + r);
       const inMonth = cellDate.getFullYear() === year && cellDate.getMonth() === month;
       const value = inMonth ? valueOf(cellDate) : 0;
-      const label = inMonth ? `${isoDate(cellDate)} — ${value} units` : `${isoDate(cellDate)} (Outside Month) — 0 units`;
+      const label = inMonth ? `${isoDate(cellDate)}: ${value}` : `${isoDate(cellDate)} (Outside Month) — 0 units`;
       data.push({ col: c, row: r, value, label });
     }
   }

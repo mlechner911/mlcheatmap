@@ -73,3 +73,23 @@ describe('aggregate24h', () => {
     expect(presets.aggregate24h([], { rowStyle: 'none' }).rowLabels).toBeUndefined();
   });
 });
+
+describe('tooltip labels', () => {
+  const days = [{ date: '2026-03-02', value: 7 }];
+
+  it('name no unit, because the presets do not know what the values mean', () => {
+    const grids = [
+      presets.aggregate24h([{ timestamp: '2026-03-02T12:00:00', value: 7 }]),
+      presets.aggregateMonth(days, { year: 2026, month: 2 }),
+      presets.aggregateYear(days, { year: 2026 }),
+      presets.aggregateSixMonthsDouble(days, { year: 2026, startMonth: 2 }),
+    ];
+    for (const grid of grids) {
+      const labels = grid.getData().map((point) => point.label ?? '');
+      expect(labels.some((label) => label.endsWith(': 7'))).toBe(true);
+      for (const label of labels) {
+        expect(label).not.toMatch(/events|units|contributions/);
+      }
+    }
+  });
+});
