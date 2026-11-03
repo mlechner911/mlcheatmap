@@ -16,7 +16,7 @@ wird oder wenn Farbe bereits eine andere Bedeutung trägt.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_grayscale_front_35deg.svg" style="width:100%;aspect-ratio:1.441;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_grayscale_front_35deg.svg" style="width:100%;aspect-ratio:1.377;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Ein Jahr in Graustufen. Die Höhe trägt die Aussage allein — und trägt sie.</figcaption>
 </figure>
@@ -24,7 +24,7 @@ wird oder wenn Farbe bereits eine andere Bedeutung trägt.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/month_coral_behind.svg" style="width:100%;aspect-ratio:1.52;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/month_coral_behind.svg" style="width:100%;aspect-ratio:1.380;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Dasselbe Prinzip in Coral: die Farbe verstärkt, was die Höhe schon sagt.</figcaption>
 </figure>
@@ -39,7 +39,7 @@ Stufen — richtig für Grössen, die sich tatsächlich stetig ändern.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_smooth_gradient.svg" style="width:100%;aspect-ratio:1.627;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_smooth_gradient.svg" style="width:100%;aspect-ratio:1.492;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Sechs Monate mit stetigem Farbverlauf. Die Übergänge sind so glatt wie die Grösse, die sie zeigen.</figcaption>
 </figure>
@@ -54,7 +54,7 @@ Grafik, die eine Lücke als Ruhe ausgibt.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.466;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.200;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Die Nullwerte sind grün eingefärbt und dadurch als gemessen erkennbar.</figcaption>
 </figure>
@@ -67,7 +67,7 @@ Bei dicht gestellten Reihen ist das oft der Unterschied zwischen Tiefe und Brei.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_emerald_transparent.svg" style="width:100%;aspect-ratio:1.666;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_emerald_transparent.svg" style="width:100%;aspect-ratio:1.628;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Teiltransparente Säulen: das Raster darunter bleibt sichtbar und gibt Orientierung.</figcaption>
 </figure>

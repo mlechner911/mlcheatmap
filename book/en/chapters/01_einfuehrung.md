@@ -6,10 +6,12 @@ This library gives each value a second expressive channel: **height**. Color and
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_double_ribbon.svg" style="width:100%;aspect-ratio:3.813;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_double_ribbon.svg" style="width:100%;aspect-ratio:2.219;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Two measurement series over 24 hours. The afternoon spike is immediately visible as height — on a flat heatmap it would only be a slightly richer green.</figcaption>
 </figure>
+
+> ✏️ Every chapter works best with your hands on it: in the [playground](https://play.mlcgo.eu/isometric-heatmap) you can change the examples in the browser, with autocompletion and nothing to install.
 
 ## What the Library Is
 
@@ -44,7 +46,7 @@ The library originated from sensor telemetry: measurements over time with a natu
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.466;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/year_sunset_greenzero_20deg.svg" style="width:100%;aspect-ratio:2.200;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">A full year: 53 weeks against 7 weekdays. The weekend patterns are obvious without anyone having to explicitly highlight them.</figcaption>
 </figure>

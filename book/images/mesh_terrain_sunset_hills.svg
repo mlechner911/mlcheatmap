@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-439.12 -80.00 871.04 532.00" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-439.12 -80.00 847.81 532.00" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
-        <dc:title>3D Contiguous Surface Mesh Terrain (Rolling Hills with Lake Hole)</dc:title>
+        <dc:date>2026-11-03</dc:date>
+        <dc:title>MLC Isometric 3D Heatmap</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
     </rdf:RDF>
@@ -35,7 +35,7 @@
         }
       </style>
     
-    <text x="-3.60" y="-66.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">3D Contiguous Surface Mesh Terrain (Rolling Hills with Lake Hole)</text>
+    
     <g>
       <polygon points="0.00,-60.00 -374.12,156.00 -374.12,276.00 0.00,60.00" fill="rgba(241, 245, 249, 0.7)" stroke="none" />
 <line x1="0.00" y1="60.00" x2="0.00" y2="-60.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
@@ -64,21 +64,21 @@
 <line x1="-358.53" y1="267.00" x2="-358.53" y2="147.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
 <line x1="-374.12" y1="276.00" x2="-374.12" y2="156.00" stroke="#e1e4e8" stroke-width="0.5" stroke-dasharray="2,2" />
 <line x1="0.00" y1="60.00" x2="-374.12" y2="276.00" stroke="#e1e4e8" stroke-width="0.5" />
-<text x="-382.12" y="279.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">-12</text>
+<text x="-382.12" y="279.00" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="end">-12</text>
 <line x1="0.00" y1="30.00" x2="-374.12" y2="246.00" stroke="#e1e4e8" stroke-width="0.5" />
-<text x="-382.12" y="249.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">-6</text>
+<text x="-382.12" y="249.00" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="end">-6</text>
 <line x1="0.00" y1="0.00" x2="-374.12" y2="216.00" stroke="#e1e4e8" stroke-width="0.5" />
-<text x="-382.12" y="219.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">0</text>
+<text x="-382.12" y="219.00" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="end">0</text>
 <line x1="0.00" y1="-30.00" x2="-374.12" y2="186.00" stroke="#e1e4e8" stroke-width="0.5" />
-<text x="-382.12" y="189.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">6</text>
+<text x="-382.12" y="189.00" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="end">6</text>
 <line x1="0.00" y1="-60.00" x2="-374.12" y2="156.00" stroke="#e1e4e8" stroke-width="0.5" />
-<text x="-382.12" y="159.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">12</text>
-<g class="iso-col-labels"><text x="18.71" y="-10.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C0</text>
-<text x="81.06" y="25.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C4</text>
-<text x="143.41" y="61.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C8</text>
-<text x="205.77" y="97.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C12</text>
-<text x="268.12" y="133.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C16</text>
-<text x="330.48" y="169.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C20</text></g>
+<text x="-382.12" y="159.00" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="end">12</text>
+<g class="iso-col-labels"><g transform="translate(10.91 2.70) rotate(-30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">C0</text></g>
+<g transform="translate(73.27 38.70) rotate(-30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">C4</text></g>
+<g transform="translate(135.62 74.70) rotate(-30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">C8</text></g>
+<g transform="translate(197.97 110.70) rotate(-30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">C12</text></g>
+<g transform="translate(260.33 146.70) rotate(-30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">C16</text></g>
+<g transform="translate(322.68 182.70) rotate(-30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">C20</text></g></g>
 <polygon class="iso-grid-cell" points="0.00,0.00 -15.59,9.00 0.00,18.00 15.59,9.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="-3.85" style="animation-delay: 0ms; transform-origin: top;">
               <title>Cols 0-1, Rows 0-1: Avg Value -3.9</title>
@@ -3040,11 +3040,11 @@
 <polygon class="iso-grid-cell" points="31.18,396.00 15.59,405.00 31.18,414.00 46.77,405.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="15.59,405.00 0.00,414.00 15.59,423.00 31.18,414.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="0.00,414.00 -15.59,423.00 0.00,432.00 15.59,423.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-row-labels"><text x="387.92" y="223.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">R0</text>
-<text x="325.56" y="259.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">R4</text>
-<text x="263.21" y="295.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">R8</text>
-<text x="200.86" y="331.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">R12</text>
-<text x="138.50" y="367.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">R16</text>
-<text x="76.15" y="403.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">R20</text></g>
+<g class="iso-row-labels"><g transform="translate(369.45 222.30) rotate(30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">R0</text></g>
+<g transform="translate(307.09 258.30) rotate(30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">R4</text></g>
+<g transform="translate(244.74 294.30) rotate(30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">R8</text></g>
+<g transform="translate(182.38 330.30) rotate(30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">R12</text></g>
+<g transform="translate(120.03 366.30) rotate(30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">R16</text></g>
+<g transform="translate(57.68 402.30) rotate(30)"><text x="0" y="5.60" fill="#57606a" font-size="16" font-family="sans-serif" text-anchor="start">R20</text></g></g>
     </g>
   </svg>

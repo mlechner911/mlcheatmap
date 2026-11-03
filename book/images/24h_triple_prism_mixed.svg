@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-94.56 -20.50 556.19 305.00" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-83.64 -20.50 526.68 316.88" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
-        <dc:title>24h Triple-Series Timeline (3 Rows × 24 Hours)</dc:title>
+        <dc:date>2026-11-03</dc:date>
+        <dc:title>MLC Isometric 3D Heatmap</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
     </rdf:RDF>
@@ -35,7 +35,7 @@
         }
       </style>
     
-    <text x="183.53" y="-6.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Triple-Series Timeline (3 Rows × 24 Hours)</text>
+    
     <g>
       <polygon class="iso-grid-cell" points="0.00,0.00 -15.59,9.00 0.00,18.00 15.59,9.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="-20" style="animation-delay: 0ms; transform-origin: top;">
@@ -519,12 +519,12 @@
       <polygon class="iso-face-right" points="327.36,213.50 340.35,206.00 340.35,234.00 327.36,241.50" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       <polygon class="iso-face-top" points="327.36,198.50 314.37,206.00 327.36,213.50 340.35,206.00" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
     </g>
-<g class="iso-col-labels"><text x="-54.56" y="43.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12AM</text>
-<text x="38.97" y="97.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6AM</text>
-<text x="132.50" y="151.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12PM</text>
-<text x="226.03" y="205.00" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6PM</text></g>
-<g class="iso-row-labels"><text x="387.92" y="224.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Users (A)</text>
-<text x="372.33" y="233.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Background (B)</text>
-<text x="356.74" y="242.70" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="start">Network (C)</text></g>
+<g class="iso-col-labels"><g transform="translate(-42.09 34.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">12AM</text></g>
+<g transform="translate(51.44 88.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">6AM</text></g>
+<g transform="translate(144.97 142.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">12PM</text></g>
+<g transform="translate(238.50 196.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">6PM</text></g></g>
+<g class="iso-row-labels"><g transform="translate(369.45 223.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Users (A)</text></g>
+<g transform="translate(353.86 232.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Background (B)</text></g>
+<g transform="translate(338.27 241.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Network (C)</text></g></g>
     </g>
   </svg>

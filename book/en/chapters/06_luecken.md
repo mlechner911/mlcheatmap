@@ -16,28 +16,28 @@ That a `null` cell receives **no tooltip** is deliberate: there is nothing to re
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_prism.svg" style="width:100%;aspect-ratio:1.399;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_prism.svg" style="width:100%;aspect-ratio:1.329;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">prism: the gap is an empty slot in the grid, unmistakable.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_cylinder.svg" style="width:100%;aspect-ratio:1.399;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_cylinder.svg" style="width:100%;aspect-ratio:1.329;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">cylinder: identical semantics with cylindrical geometry.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_ribbon.svg" style="width:100%;aspect-ratio:1.423;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_ribbon.svg" style="width:100%;aspect-ratio:1.380;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">ribbon: the curve breaks and restarts cleanly rather than interpolating across the void.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_flatribbon.svg" style="width:100%;aspect-ratio:1.404;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/null_test_8x8_flatribbon.svg" style="width:100%;aspect-ratio:1.360;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">flatribbon: the floating ribbon also pauses — drawing a continuous line would invent fictitious telemetry.</figcaption>
 </figure>
@@ -50,7 +50,7 @@ In a 3D terrain mesh, missing values create clear voids in the surface. This is 
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/mesh_terrain_sunset_hills_flat.svg" style="width:100%;aspect-ratio:1.593;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/mesh_terrain_sunset_hills_flat.svg" style="width:100%;aspect-ratio:1.628;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">A terrain relief with a cut-out. The edges remain clean because no polygons are stretched across missing data points.</figcaption>
 </figure>

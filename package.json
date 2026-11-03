@@ -26,6 +26,7 @@
     "dev": "vite --host",
     "build": "vite build && vite build --config vite.presets.config.mts && tsc",
     "build:demo": "vite build --config vite.demo.config.mts",
+    "book:images": "node book/generate-images.mjs",
     "preview": "vite preview",
     "test": "vitest run",
     "prepublishOnly": "node scripts/check-release.mjs && npm run build"

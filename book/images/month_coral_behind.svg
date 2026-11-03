@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-174.71 -60.50 304.77 200.50" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-143.26 -38.50 254.74 184.55" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
-        <dc:title>June 2026 Activity (Month Preset)</dc:title>
+        <dc:date>2026-11-03</dc:date>
+        <dc:title>MLC Isometric 3D Heatmap</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
     </rdf:RDF>
@@ -35,22 +35,9 @@
         }
       </style>
     
-    <text x="-22.32" y="-46.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">June 2026 Activity (Month</text>
-<text x="-22.32" y="-28.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Preset)</text>
+    
     <g>
-      <g class="iso-col-labels"><text x="20.78" y="-10.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W1</text>
-<text x="38.11" y="-0.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W2</text>
-<text x="55.43" y="9.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W3</text>
-<text x="72.75" y="19.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W4</text>
-<text x="90.07" y="29.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W5</text></g>
-<g class="iso-row-labels"><text x="-26.78" y="-7.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Mon</text>
-<text x="-44.11" y="2.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Tue</text>
-<text x="-61.43" y="12.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Wed</text>
-<text x="-78.75" y="22.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Thu</text>
-<text x="-96.07" y="32.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Fri</text>
-<text x="-113.39" y="42.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Sat</text>
-<text x="-130.71" y="52.20" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Sun</text></g>
-<polygon class="iso-grid-cell" points="0.00,0.00 -17.32,10.00 0.00,20.00 17.32,10.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+      <polygon class="iso-grid-cell" points="0.00,0.00 -17.32,10.00 0.00,20.00 17.32,10.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="2" style="animation-delay: 0ms; transform-origin: bottom;">
       <title>2026-06-01: 2</title>
       <polygon class="iso-face-left" points="-14.72,3.33 0.00,11.83 0.00,18.50 -14.72,10.00" fill="#d9abab" stroke="#d9abab" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
@@ -259,5 +246,17 @@
 <polygon class="iso-grid-cell" points="0.00,80.00 -17.32,90.00 0.00,100.00 17.32,90.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-17.32,90.00 -34.64,100.00 -17.32,110.00 0.00,100.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-34.64,100.00 -51.96,110.00 -34.64,120.00 -17.32,110.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-col-labels"><g transform="translate(-116.05 78.50) rotate(-30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="end">W1</text></g>
+<g transform="translate(-98.73 88.50) rotate(-30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="end">W2</text></g>
+<g transform="translate(-81.41 98.50) rotate(-30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="end">W3</text></g>
+<g transform="translate(-64.09 108.50) rotate(-30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="end">W4</text></g>
+<g transform="translate(-46.77 118.50) rotate(-30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="end">W5</text></g></g>
+<g class="iso-row-labels"><g transform="translate(81.41 58.50) rotate(30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="start">Mon</text></g>
+<g transform="translate(64.09 68.50) rotate(30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="start">Tue</text></g>
+<g transform="translate(46.77 78.50) rotate(30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="start">Wed</text></g>
+<g transform="translate(29.44 88.50) rotate(30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="start">Thu</text></g>
+<g transform="translate(12.12 98.50) rotate(30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="start">Fri</text></g>
+<g transform="translate(-5.20 108.50) rotate(30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="start">Sat</text></g>
+<g transform="translate(-22.52 118.50) rotate(30)"><text x="0" y="2.10" fill="#57606a" font-size="6" font-family="sans-serif" text-anchor="start">Sun</text></g></g>
     </g>
   </svg>
