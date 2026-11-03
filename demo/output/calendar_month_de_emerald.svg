@@ -1,0 +1,270 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-171.62 -6.17 417.85 246.45" width="100%" height="100%">
+    <!-- Generated with MLC Isometric 3D Heatmap Library -->
+    <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/">
+      <rdf:Description rdf:about="">
+        <dc:creator>Michael Lechner</dc:creator>
+        <dc:date>2026-11-03</dc:date>
+        <dc:title>Oktober 2026</dc:title>
+        <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
+      </rdf:Description>
+    </rdf:RDF>
+  </metadata>
+    <style>
+        @keyframes iso-grow {
+          from {
+            transform: scaleY(0);
+          }
+          to {
+            transform: scaleY(1);
+          }
+        }
+        .iso-bar {
+          transform-box: fill-box;
+          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-bar:hover {
+          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+          transform: translateY(-3px) scaleY(1);
+        }
+        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
+          transition: fill 0.2s ease;
+        }
+      </style>
+    
+    <text x="37.30" y="7.83" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Oktober 2026</text>
+    <g>
+      <polygon class="iso-grid-cell" points="-29.44,17.00 -58.89,34.00 -29.44,51.00 0.00,34.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="1" data-value="4" style="animation-delay: 15ms; transform-origin: bottom;">
+      <title>2026-10-05: 4</title>
+      <polygon class="iso-face-left" points="-56.29,29.33 -29.44,44.83 -29.44,49.50 -56.29,34.00" fill="#3fbd6d" stroke="#3fbd6d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-29.44,44.83 -2.60,29.33 -2.60,34.00 -29.44,49.50" fill="#349b5a" stroke="#349b5a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-29.44,13.83 -56.29,29.33 -29.44,44.83 -2.60,29.33" fill="#4ade80" stroke="#4ade80" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -29.44 29.33)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">5</text></g>
+<polygon class="iso-grid-cell" points="-58.89,34.00 -88.33,51.00 -58.89,68.00 -29.44,51.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="2" data-value="9" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>2026-10-12: 9</title>
+      <polygon class="iso-face-left" points="-85.74,40.50 -58.89,56.00 -58.89,66.50 -85.74,51.00" fill="#138b3f" stroke="#138b3f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-58.89,56.00 -32.04,40.50 -32.04,51.00 -58.89,66.50" fill="#0f7234" stroke="#0f7234" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-58.89,25.00 -85.74,40.50 -58.89,56.00 -32.04,40.50" fill="#16a34a" stroke="#16a34a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -58.89 40.50)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">12</text></g>
+<polygon class="iso-grid-cell" points="-88.33,51.00 -117.78,68.00 -88.33,85.00 -58.89,68.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="3" data-value="3" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-10-19: 3</title>
+      <polygon class="iso-face-left" points="-115.18,64.50 -88.33,80.00 -88.33,83.50 -115.18,68.00" fill="#72cb92" stroke="#72cb92" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-88.33,80.00 -61.49,64.50 -61.49,68.00 -88.33,83.50" fill="#5ea778" stroke="#5ea778" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-88.33,49.00 -115.18,64.50 -88.33,80.00 -61.49,64.50" fill="#86efac" stroke="#86efac" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -88.33 64.50)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">19</text></g>
+<polygon class="iso-grid-cell" points="-117.78,68.00 -147.22,85.00 -117.78,102.00 -88.33,85.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="0" data-row="4" data-value="8" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-10-26: 8</title>
+      <polygon class="iso-face-left" points="-144.63,75.67 -117.78,91.17 -117.78,100.50 -144.63,85.00" fill="#138b3f" stroke="#138b3f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-117.78,91.17 -90.93,75.67 -90.93,85.00 -117.78,100.50" fill="#0f7234" stroke="#0f7234" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-117.78,60.17 -144.63,75.67 -117.78,91.17 -90.93,75.67" fill="#16a34a" stroke="#16a34a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -117.78 75.67)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">26</text></g>
+<polygon class="iso-grid-cell" points="0.00,34.00 -29.44,51.00 0.00,68.00 29.44,51.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="1" data-value="11" style="animation-delay: 30ms; transform-origin: bottom;">
+      <title>2026-10-06: 11</title>
+      <polygon class="iso-face-left" points="-26.85,38.17 0.00,53.67 0.00,66.50 -26.85,51.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,53.67 26.85,38.17 26.85,51.00 0.00,66.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,22.67 -26.85,38.17 0.00,53.67 26.85,38.17" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 38.17)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">6</text></g>
+<polygon class="iso-grid-cell" points="-29.44,51.00 -58.89,68.00 -29.44,85.00 0.00,68.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="2" data-value="5" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-10-13: 5</title>
+      <polygon class="iso-face-left" points="-56.29,62.17 -29.44,77.67 -29.44,83.50 -56.29,68.00" fill="#3fbd6d" stroke="#3fbd6d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-29.44,77.67 -2.60,62.17 -2.60,68.00 -29.44,83.50" fill="#349b5a" stroke="#349b5a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-29.44,46.67 -56.29,62.17 -29.44,77.67 -2.60,62.17" fill="#4ade80" stroke="#4ade80" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -29.44 62.17)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">13</text></g>
+<polygon class="iso-grid-cell" points="-58.89,68.00 -88.33,85.00 -58.89,102.00 -29.44,85.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="3" data-value="10" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-10-20: 10</title>
+      <polygon class="iso-face-left" points="-85.74,73.33 -58.89,88.83 -58.89,100.50 -85.74,85.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-58.89,88.83 -32.04,73.33 -32.04,85.00 -58.89,100.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-58.89,57.83 -85.74,73.33 -58.89,88.83 -32.04,73.33" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -58.89 73.33)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">20</text></g>
+<polygon class="iso-grid-cell" points="-88.33,85.00 -117.78,102.00 -88.33,119.00 -58.89,102.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="1" data-row="4" data-value="4" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-10-27: 4</title>
+      <polygon class="iso-face-left" points="-115.18,97.33 -88.33,112.83 -88.33,117.50 -115.18,102.00" fill="#3fbd6d" stroke="#3fbd6d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-88.33,112.83 -61.49,97.33 -61.49,102.00 -88.33,117.50" fill="#349b5a" stroke="#349b5a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-88.33,81.83 -115.18,97.33 -88.33,112.83 -61.49,97.33" fill="#4ade80" stroke="#4ade80" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -88.33 97.33)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">27</text></g>
+<polygon class="iso-grid-cell" points="29.44,51.00 0.00,68.00 29.44,85.00 58.89,68.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="1" data-value="7" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-10-07: 7</title>
+      <polygon class="iso-face-left" points="2.60,59.83 29.44,75.33 29.44,83.50 2.60,68.00" fill="#1da750" stroke="#1da750" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="29.44,75.33 56.29,59.83 56.29,68.00 29.44,83.50" fill="#188a42" stroke="#188a42" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="29.44,44.33 2.60,59.83 29.44,75.33 56.29,59.83" fill="#22c55e" stroke="#22c55e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 29.44 59.83)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">7</text></g>
+<polygon class="iso-grid-cell" points="0.00,68.00 -29.44,85.00 0.00,102.00 29.44,85.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="2" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-10-14: 12</title>
+      <polygon class="iso-face-left" points="-26.85,71.00 0.00,86.50 0.00,100.50 -26.85,85.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,86.50 26.85,71.00 26.85,85.00 0.00,100.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,55.50 -26.85,71.00 0.00,86.50 26.85,71.00" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 71.00)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">14</text></g>
+<polygon class="iso-grid-cell" points="-29.44,85.00 -58.89,102.00 -29.44,119.00 0.00,102.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="3" data-value="6" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-10-21: 6</title>
+      <polygon class="iso-face-left" points="-56.29,95.00 -29.44,110.50 -29.44,117.50 -56.29,102.00" fill="#1da750" stroke="#1da750" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-29.44,110.50 -2.60,95.00 -2.60,102.00 -29.44,117.50" fill="#188a42" stroke="#188a42" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-29.44,79.50 -56.29,95.00 -29.44,110.50 -2.60,95.00" fill="#22c55e" stroke="#22c55e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -29.44 95.00)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">21</text></g>
+<polygon class="iso-grid-cell" points="-58.89,102.00 -88.33,119.00 -58.89,136.00 -29.44,119.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="2" data-row="4" data-value="11" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-10-28: 11</title>
+      <polygon class="iso-face-left" points="-85.74,106.17 -58.89,121.67 -58.89,134.50 -85.74,119.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-58.89,121.67 -32.04,106.17 -32.04,119.00 -58.89,134.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-58.89,90.67 -85.74,106.17 -58.89,121.67 -32.04,106.17" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -58.89 106.17)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">28</text></g>
+<polygon class="iso-grid-cell" points="88.33,51.00 58.89,68.00 88.33,85.00 117.78,68.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="0" data-value="9" style="animation-delay: 45ms; transform-origin: bottom;">
+      <title>2026-10-01: 9</title>
+      <polygon class="iso-face-left" points="61.49,57.50 88.33,73.00 88.33,83.50 61.49,68.00" fill="#138b3f" stroke="#138b3f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="88.33,73.00 115.18,57.50 115.18,68.00 88.33,83.50" fill="#0f7234" stroke="#0f7234" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="88.33,42.00 61.49,57.50 88.33,73.00 115.18,57.50" fill="#16a34a" stroke="#16a34a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 88.33 57.50)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">1</text></g>
+<polygon class="iso-grid-cell" points="58.89,68.00 29.44,85.00 58.89,102.00 88.33,85.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="1" data-value="3" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-10-08: 3</title>
+      <polygon class="iso-face-left" points="32.04,81.50 58.89,97.00 58.89,100.50 32.04,85.00" fill="#72cb92" stroke="#72cb92" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="58.89,97.00 85.74,81.50 85.74,85.00 58.89,100.50" fill="#5ea778" stroke="#5ea778" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="58.89,66.00 32.04,81.50 58.89,97.00 85.74,81.50" fill="#86efac" stroke="#86efac" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 58.89 81.50)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">8</text></g>
+<polygon class="iso-grid-cell" points="29.44,85.00 0.00,102.00 29.44,119.00 58.89,102.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="2" data-value="8" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-10-15: 8</title>
+      <polygon class="iso-face-left" points="2.60,92.67 29.44,108.17 29.44,117.50 2.60,102.00" fill="#138b3f" stroke="#138b3f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="29.44,108.17 56.29,92.67 56.29,102.00 29.44,117.50" fill="#0f7234" stroke="#0f7234" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="29.44,77.17 2.60,92.67 29.44,108.17 56.29,92.67" fill="#16a34a" stroke="#16a34a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 29.44 92.67)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">15</text></g>
+<polygon class="iso-grid-cell" points="0.00,102.00 -29.44,119.00 0.00,136.00 29.44,119.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="3" data-value="2" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-10-22: 2</title>
+      <polygon class="iso-face-left" points="-26.85,116.67 0.00,132.17 0.00,134.50 -26.85,119.00" fill="#72cb92" stroke="#72cb92" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,132.17 26.85,116.67 26.85,119.00 0.00,134.50" fill="#5ea778" stroke="#5ea778" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,101.17 -26.85,116.67 0.00,132.17 26.85,116.67" fill="#86efac" stroke="#86efac" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 116.67)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">22</text></g>
+<polygon class="iso-grid-cell" points="-29.44,119.00 -58.89,136.00 -29.44,153.00 0.00,136.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="3" data-row="4" data-value="7" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>2026-10-29: 7</title>
+      <polygon class="iso-face-left" points="-56.29,127.83 -29.44,143.33 -29.44,151.50 -56.29,136.00" fill="#1da750" stroke="#1da750" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="-29.44,143.33 -2.60,127.83 -2.60,136.00 -29.44,151.50" fill="#188a42" stroke="#188a42" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="-29.44,112.33 -56.29,127.83 -29.44,143.33 -2.60,127.83" fill="#22c55e" stroke="#22c55e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 -29.44 127.83)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">29</text></g>
+<polygon class="iso-grid-cell" points="117.78,68.00 88.33,85.00 117.78,102.00 147.22,85.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="0" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
+      <title>2026-10-02: 5</title>
+      <polygon class="iso-face-left" points="90.93,79.17 117.78,94.67 117.78,100.50 90.93,85.00" fill="#3fbd6d" stroke="#3fbd6d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="117.78,94.67 144.63,79.17 144.63,85.00 117.78,100.50" fill="#349b5a" stroke="#349b5a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="117.78,63.67 90.93,79.17 117.78,94.67 144.63,79.17" fill="#4ade80" stroke="#4ade80" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 117.78 79.17)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">2</text></g>
+<polygon class="iso-grid-cell" points="88.33,85.00 58.89,102.00 88.33,119.00 117.78,102.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="1" data-value="10" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-10-09: 10</title>
+      <polygon class="iso-face-left" points="61.49,90.33 88.33,105.83 88.33,117.50 61.49,102.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="88.33,105.83 115.18,90.33 115.18,102.00 88.33,117.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="88.33,74.83 61.49,90.33 88.33,105.83 115.18,90.33" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 88.33 90.33)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">9</text></g>
+<polygon class="iso-grid-cell" points="58.89,102.00 29.44,119.00 58.89,136.00 88.33,119.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="2" data-value="4" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-10-16: 4</title>
+      <polygon class="iso-face-left" points="32.04,114.33 58.89,129.83 58.89,134.50 32.04,119.00" fill="#3fbd6d" stroke="#3fbd6d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="58.89,129.83 85.74,114.33 85.74,119.00 58.89,134.50" fill="#349b5a" stroke="#349b5a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="58.89,98.83 32.04,114.33 58.89,129.83 85.74,114.33" fill="#4ade80" stroke="#4ade80" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 58.89 114.33)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">16</text></g>
+<polygon class="iso-grid-cell" points="29.44,119.00 0.00,136.00 29.44,153.00 58.89,136.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="3" data-value="9" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>2026-10-23: 9</title>
+      <polygon class="iso-face-left" points="2.60,125.50 29.44,141.00 29.44,151.50 2.60,136.00" fill="#138b3f" stroke="#138b3f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="29.44,141.00 56.29,125.50 56.29,136.00 29.44,151.50" fill="#0f7234" stroke="#0f7234" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="29.44,110.00 2.60,125.50 29.44,141.00 56.29,125.50" fill="#16a34a" stroke="#16a34a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 29.44 125.50)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">23</text></g>
+<polygon class="iso-grid-cell" points="0.00,136.00 -29.44,153.00 0.00,170.00 29.44,153.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="4" data-row="4" data-value="3" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>2026-10-30: 3</title>
+      <polygon class="iso-face-left" points="-26.85,149.50 0.00,165.00 0.00,168.50 -26.85,153.00" fill="#72cb92" stroke="#72cb92" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="0.00,165.00 26.85,149.50 26.85,153.00 0.00,168.50" fill="#5ea778" stroke="#5ea778" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="0.00,134.00 -26.85,149.50 0.00,165.00 26.85,149.50" fill="#86efac" stroke="#86efac" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 0.00 149.50)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">30</text></g>
+<polygon class="iso-grid-cell" points="147.22,85.00 117.78,102.00 147.22,119.00 176.67,102.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="0" data-value="12" style="animation-delay: 75ms; transform-origin: bottom;">
+      <title>2026-10-03: 12</title>
+      <polygon class="iso-face-left" points="120.38,88.00 147.22,103.50 147.22,117.50 120.38,102.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="147.22,103.50 174.07,88.00 174.07,102.00 147.22,117.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="147.22,72.50 120.38,88.00 147.22,103.50 174.07,88.00" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 147.22 88.00)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">3</text></g>
+<polygon class="iso-grid-cell" points="117.78,102.00 88.33,119.00 117.78,136.00 147.22,119.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="1" data-value="6" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-10-10: 6</title>
+      <polygon class="iso-face-left" points="90.93,112.00 117.78,127.50 117.78,134.50 90.93,119.00" fill="#1da750" stroke="#1da750" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="117.78,127.50 144.63,112.00 144.63,119.00 117.78,134.50" fill="#188a42" stroke="#188a42" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="117.78,96.50 90.93,112.00 117.78,127.50 144.63,112.00" fill="#22c55e" stroke="#22c55e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 117.78 112.00)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">10</text></g>
+<polygon class="iso-grid-cell" points="88.33,119.00 58.89,136.00 88.33,153.00 117.78,136.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="2" data-value="11" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>2026-10-17: 11</title>
+      <polygon class="iso-face-left" points="61.49,123.17 88.33,138.67 88.33,151.50 61.49,136.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="88.33,138.67 115.18,123.17 115.18,136.00 88.33,151.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="88.33,107.67 61.49,123.17 88.33,138.67 115.18,123.17" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 88.33 123.17)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">17</text></g>
+<polygon class="iso-grid-cell" points="58.89,136.00 29.44,153.00 58.89,170.00 88.33,153.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="3" data-value="5" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>2026-10-24: 5</title>
+      <polygon class="iso-face-left" points="32.04,147.17 58.89,162.67 58.89,168.50 32.04,153.00" fill="#3fbd6d" stroke="#3fbd6d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="58.89,162.67 85.74,147.17 85.74,153.00 58.89,168.50" fill="#349b5a" stroke="#349b5a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="58.89,131.67 32.04,147.17 58.89,162.67 85.74,147.17" fill="#4ade80" stroke="#4ade80" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 58.89 147.17)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">24</text></g>
+<polygon class="iso-grid-cell" points="29.44,153.00 0.00,170.00 29.44,187.00 58.89,170.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="5" data-row="4" data-value="10" style="animation-delay: 135ms; transform-origin: bottom;">
+      <title>2026-10-31: 10</title>
+      <polygon class="iso-face-left" points="2.60,158.33 29.44,173.83 29.44,185.50 2.60,170.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="29.44,173.83 56.29,158.33 56.29,170.00 29.44,185.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="29.44,142.83 2.60,158.33 29.44,173.83 56.29,158.33" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 29.44 158.33)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">31</text></g>
+<polygon class="iso-grid-cell" points="176.67,102.00 147.22,119.00 176.67,136.00 206.11,119.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="0" data-value="8" style="animation-delay: 90ms; transform-origin: bottom;">
+      <title>2026-10-04: 8</title>
+      <polygon class="iso-face-left" points="149.82,109.67 176.67,125.17 176.67,134.50 149.82,119.00" fill="#138b3f" stroke="#138b3f" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="176.67,125.17 203.52,109.67 203.52,119.00 176.67,134.50" fill="#0f7234" stroke="#0f7234" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="176.67,94.17 149.82,109.67 176.67,125.17 203.52,109.67" fill="#16a34a" stroke="#16a34a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 176.67 109.67)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">4</text></g>
+<polygon class="iso-grid-cell" points="147.22,119.00 117.78,136.00 147.22,153.00 176.67,136.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="1" data-value="2" style="animation-delay: 105ms; transform-origin: bottom;">
+      <title>2026-10-11: 2</title>
+      <polygon class="iso-face-left" points="120.38,133.67 147.22,149.17 147.22,151.50 120.38,136.00" fill="#72cb92" stroke="#72cb92" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="147.22,149.17 174.07,133.67 174.07,136.00 147.22,151.50" fill="#5ea778" stroke="#5ea778" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="147.22,118.17 120.38,133.67 147.22,149.17 174.07,133.67" fill="#86efac" stroke="#86efac" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 147.22 133.67)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">11</text></g>
+<polygon class="iso-grid-cell" points="117.78,136.00 88.33,153.00 117.78,170.00 147.22,153.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="2" data-value="7" style="animation-delay: 120ms; transform-origin: bottom;">
+      <title>2026-10-18: 7</title>
+      <polygon class="iso-face-left" points="90.93,144.83 117.78,160.33 117.78,168.50 90.93,153.00" fill="#1da750" stroke="#1da750" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="117.78,160.33 144.63,144.83 144.63,153.00 117.78,168.50" fill="#188a42" stroke="#188a42" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="117.78,129.33 90.93,144.83 117.78,160.33 144.63,144.83" fill="#22c55e" stroke="#22c55e" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 117.78 144.83)" y="4.52" fill="#1e293b" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">18</text></g>
+<polygon class="iso-grid-cell" points="88.33,153.00 58.89,170.00 88.33,187.00 117.78,170.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
+<g class="iso-bar" data-col="6" data-row="3" data-value="12" style="animation-delay: 135ms; transform-origin: bottom;">
+      <title>2026-10-25: 12</title>
+      <polygon class="iso-face-left" points="61.49,156.00 88.33,171.50 88.33,185.50 61.49,170.00" fill="#126d34" stroke="#126d34" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-right" points="88.33,171.50 115.18,156.00 115.18,170.00 88.33,185.50" fill="#0f5a2b" stroke="#0f5a2b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      <polygon class="iso-face-top" points="88.33,140.50 61.49,156.00 88.33,171.50 115.18,156.00" fill="#15803d" stroke="#15803d" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+    <text class="iso-face-text" transform="matrix(0.8660 0.5000 -0.8660 0.5000 88.33 156.00)" y="4.52" fill="#ffffff" font-size="12.92" font-weight="600" font-family="sans-serif" text-anchor="middle">25</text></g>
+<g class="iso-col-labels"><g transform="translate(-138.39 98.40) rotate(-30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="end">Mo</text></g>
+<g transform="translate(-108.95 115.40) rotate(-30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="end">Di</text></g>
+<g transform="translate(-79.50 132.40) rotate(-30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="end">Mi</text></g>
+<g transform="translate(-50.06 149.40) rotate(-30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="end">Do</text></g>
+<g transform="translate(-20.61 166.40) rotate(-30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="end">Fr</text></g>
+<g transform="translate(8.83 183.40) rotate(-30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="end">Sa</text></g>
+<g transform="translate(38.28 200.40) rotate(-30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="end">So</text></g></g>
+<g class="iso-row-labels"><g transform="translate(197.28 132.40) rotate(30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="start">KW 40</text></g>
+<g transform="translate(167.84 149.40) rotate(30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="start">KW 41</text></g>
+<g transform="translate(138.39 166.40) rotate(30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="start">KW 42</text></g>
+<g transform="translate(108.95 183.40) rotate(30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="start">KW 43</text></g>
+<g transform="translate(79.50 200.40) rotate(30)"><text x="0" y="3.85" fill="#57606a" font-size="11" font-family="sans-serif" text-anchor="start">KW 44</text></g></g>
+    </g>
+  </svg>

@@ -150,6 +150,9 @@
                 <button class="nav-link" id="preset-month-tab" data-preset="month" type="button">Month</button>
               </li>
               <li class="nav-item" role="presentation">
+                <button class="nav-link" id="preset-calendar-tab" data-preset="calendar" type="button">Calendar</button>
+              </li>
+              <li class="nav-item" role="presentation">
                 <button class="nav-link" id="preset-month-mesh-tab" data-preset="month-mesh" type="button">Month Mesh</button>
               </li>
               <li class="nav-item" role="presentation">
@@ -226,7 +229,7 @@
               <span>Grid Spacing:</span>
               <span id="gridSizeVal" class="text-muted">16px</span>
             </label>
-            <input type="range" class="form-range" id="gridSize" min="10" max="30" step="1" value="16">
+            <input type="range" class="form-range" id="gridSize" min="10" max="40" step="1" value="16">
           </div>
 
           <div class="mb-3">
@@ -256,8 +259,16 @@
           <div class="mb-3">
             <label for="labelPosition" class="form-label">Axis Labels Position</label>
             <select id="labelPosition" class="form-select">
-              <option value="behind" selected>Behind Grid (Back)</option>
-              <option value="front">In Front of Grid (Front)</option>
+              <option value="front" selected>In Front of Grid (Front)</option>
+              <option value="behind">Behind Grid (Back)</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="labelMode" class="form-label">Axis Labels Orientation</label>
+            <select id="labelMode" class="form-select">
+              <option value="screen" selected>Horizontal</option>
+              <option value="axis">Along the Grid Axes (No Overlaps)</option>
             </select>
           </div>
 

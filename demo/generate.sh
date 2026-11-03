@@ -448,20 +448,36 @@ node "$SCRIPT_DIR/generator.js" \
   --out="$OUTPUT_DIR/three_months_q2_2026_emerald.svg"
 
 # Example 47: 3-Month Composite, positive values only (standard single-hue look)
-node "$SCRIPT_DIR/generator.js" \\
-  --preset=three-months \\
-  --positive \\
-  --color=emerald \\
-  --angle=30 \\
+node "$SCRIPT_DIR/generator.js" \
+  --preset=three-months \
+  --positive \
+  --color=emerald \
+  --angle=30 \
   --out="$OUTPUT_DIR/three_months_q2_2026_positive.svg"
 
 # Example 48: 10x10 Loss Landscape Bowl as 3D Surface Mesh, Sunset Theme, smooth gradients
-node "$SCRIPT_DIR/generator.js" \\
-  --preset=loss-landscape \\
-  --color=sunset \\
-  --angle=30 \\
-  --interpolate-colors \\
+node "$SCRIPT_DIR/generator.js" \
+  --preset=loss-landscape \
+  --color=sunset \
+  --angle=30 \
+  --interpolate-colors \
   --out="$OUTPUT_DIR/loss_landscape_bowl_sunset_mesh.svg"
+
+# Example 49: Calendar Month (weekdays as columns, weeks as rows), German labels, Emerald Theme
+node "$SCRIPT_DIR/generator.js" \
+  --preset=calendar-month \
+  --locale=de-DE \
+  --color=emerald \
+  --out="$OUTPUT_DIR/calendar_month_de_emerald.svg"
+
+# Example 50: 24h Grid with labels along the axes, thinned automatically where they would overlap
+node "$SCRIPT_DIR/generator.js" \
+  --preset=24h \
+  --color=sky \
+  --label-pos=front \
+  --label-mode=axis \
+  --label-interval=auto \
+  --out="$OUTPUT_DIR/24h_sky_axis_labels.svg"
 
 echo "========================================="
 echo "Done! The following SVG files were generated in $OUTPUT_DIR:"

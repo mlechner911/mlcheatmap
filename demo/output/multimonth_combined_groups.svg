@@ -317,7 +317,7 @@
 <g transform="rotate(-90 -91.91 6.10)"><rect x="-102.33" y="-5.00" width="20.85" height="15.00" rx="3" fill="#ffffff" opacity="0.85" /><text x="-91.91" y="6.10" fill="#1e293b" font-size="9" font-family="sans-serif" text-anchor="middle">Sat</text></g>
 <g transform="rotate(-90 -105.77 14.10)"><rect x="-116.19" y="3.00" width="20.85" height="15.00" rx="3" fill="#ffffff" opacity="0.85" /><text x="-105.77" y="14.10" fill="#1e293b" font-size="9" font-family="sans-serif" text-anchor="middle">Sun</text></g></g>
     </g>
-    <g transform="translate(93.53, 54.00)">
+<g transform="translate(93.53, 54.00)">
     <g class="iso-heatmap-group" data-min-x="-116.99" data-min-y="-66.60" data-width="229.05" data-height="189.60">
       <!-- Generated with MLC Isometric 3D Heatmap Library -->
       <style>

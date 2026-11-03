@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-220.43 -62.90 430.87 302.82" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-220.43 -60.90 430.87 300.82" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
+        <dc:date>2026-11-03</dc:date>
         <dc:title>8x8 Grid with Explicit Null Values (No Data)</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
@@ -35,8 +35,8 @@
         }
       </style>
     
-    <text x="-5.00" y="-48.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">8x8 Grid with Explicit Null Values (No</text>
-<text x="-5.00" y="-30.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Data)</text>
+    <text x="-5.00" y="-46.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">8x8 Grid with Explicit Null Values (No</text>
+<text x="-5.00" y="-28.90" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Data)</text>
     <g>
       <g class="iso-col-labels"><text x="24.94" y="-12.90" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C0</text>
 <text x="45.73" y="-0.90" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">C1</text>
@@ -56,9 +56,9 @@
 <text x="-176.43" y="73.80" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">R7</text></g>
 <polygon class="iso-grid-cell" points="0.00,0.00 -20.78,12.00 0.00,24.00 20.78,12.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
-                <title>Col 0, Row 0: 0</title>
-                <polygon points="0.00,1.50 -18.19,12.00 0.00,22.50 18.19,12.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 0, Row 0: 0</title>
+        <polygon points="0.00,1.50 -18.19,12.00 0.00,22.50 18.19,12.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-20.78,12.00 -41.57,24.00 -20.78,36.00 0.00,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="1" data-value="5" style="animation-delay: 15ms; transform-origin: bottom;">
         <title>Col 0, Row 1: 5</title>
@@ -83,9 +83,9 @@
       </g>
 <polygon class="iso-grid-cell" points="-62.35,36.00 -83.14,48.00 -62.35,60.00 -41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="3" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
-                <title>Col 0, Row 3: 0</title>
-                <polygon points="-62.35,37.50 -80.54,48.00 -62.35,58.50 -44.17,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 0, Row 3: 0</title>
+        <polygon points="-62.35,37.50 -80.54,48.00 -62.35,58.50 -44.17,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-83.14,48.00 -103.92,60.00 -83.14,72.00 -62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="4" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
         <title>Col 0, Row 4: 5</title>
@@ -106,9 +106,9 @@
       </g>
 <polygon class="iso-grid-cell" points="-124.71,72.00 -145.49,84.00 -124.71,96.00 -103.92,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="6" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-                <title>Col 0, Row 6: 0</title>
-                <polygon points="-124.71,73.50 -142.89,84.00 -124.71,94.50 -106.52,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 0, Row 6: 0</title>
+        <polygon points="-124.71,73.50 -142.89,84.00 -124.71,94.50 -106.52,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-145.49,84.00 -166.28,96.00 -145.49,108.00 -124.71,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="20.78,12.00 0.00,24.00 20.78,36.00 41.57,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="1" data-row="0" data-value="12" style="animation-delay: 15ms; transform-origin: bottom;">
@@ -134,9 +134,9 @@
       </g>
 <polygon class="iso-grid-cell" points="-20.78,36.00 -41.57,48.00 -20.78,60.00 0.00,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="1" data-row="2" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
-                <title>Col 1, Row 2: 0</title>
-                <polygon points="-20.78,37.50 -38.97,48.00 -20.78,58.50 -2.60,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 1, Row 2: 0</title>
+        <polygon points="-20.78,37.50 -38.97,48.00 -20.78,58.50 -2.60,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-41.57,48.00 -62.35,60.00 -41.57,72.00 -20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="1" data-row="3" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
         <title>Col 1, Row 3: 12</title>
@@ -157,9 +157,9 @@
       </g>
 <polygon class="iso-grid-cell" points="-83.14,72.00 -103.92,84.00 -83.14,96.00 -62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="1" data-row="5" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-                <title>Col 1, Row 5: 0</title>
-                <polygon points="-83.14,73.50 -101.32,84.00 -83.14,94.50 -64.95,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 1, Row 5: 0</title>
+        <polygon points="-83.14,73.50 -101.32,84.00 -83.14,94.50 -64.95,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-103.92,84.00 -124.71,96.00 -103.92,108.00 -83.14,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="1" data-row="6" data-value="12" style="animation-delay: 105ms; transform-origin: bottom;">
         <title>Col 1, Row 6: 12</title>
@@ -197,9 +197,9 @@
       </g>
 <polygon class="iso-grid-cell" points="20.78,36.00 0.00,48.00 20.78,60.00 41.57,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="2" data-row="1" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
-                <title>Col 2, Row 1: 0</title>
-                <polygon points="20.78,37.50 2.60,48.00 20.78,58.50 38.97,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 2, Row 1: 0</title>
+        <polygon points="20.78,37.50 2.60,48.00 20.78,58.50 38.97,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="0.00,48.00 -20.78,60.00 0.00,72.00 20.78,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-20.78,60.00 -41.57,72.00 -20.78,84.00 0.00,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-41.57,72.00 -62.35,84.00 -41.57,96.00 -20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
@@ -227,14 +227,14 @@
       </g>
 <polygon class="iso-grid-cell" points="-103.92,108.00 -124.71,120.00 -103.92,132.00 -83.14,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="2" data-row="7" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
-                <title>Col 2, Row 7: 0</title>
-                <polygon points="-103.92,109.50 -122.11,120.00 -103.92,130.50 -85.74,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 2, Row 7: 0</title>
+        <polygon points="-103.92,109.50 -122.11,120.00 -103.92,130.50 -85.74,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="62.35,36.00 41.57,48.00 62.35,60.00 83.14,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="3" data-row="0" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
-                <title>Col 3, Row 0: 0</title>
-                <polygon points="62.35,37.50 44.17,48.00 62.35,58.50 80.54,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 3, Row 0: 0</title>
+        <polygon points="62.35,37.50 44.17,48.00 62.35,58.50 80.54,48.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="41.57,48.00 20.78,60.00 41.57,72.00 62.35,60.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="3" data-row="1" data-value="12" style="animation-delay: 60ms; transform-origin: bottom;">
         <title>Col 3, Row 1: 12</title>
@@ -259,9 +259,9 @@
       </g>
 <polygon class="iso-grid-cell" points="0.00,72.00 -20.78,84.00 0.00,96.00 20.78,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="3" data-row="3" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-                <title>Col 3, Row 3: 0</title>
-                <polygon points="0.00,73.50 -18.19,84.00 0.00,94.50 18.19,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 3, Row 3: 0</title>
+        <polygon points="0.00,73.50 -18.19,84.00 0.00,94.50 18.19,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-20.78,84.00 -41.57,96.00 -20.78,108.00 0.00,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="3" data-row="4" data-value="12" style="animation-delay: 105ms; transform-origin: bottom;">
         <title>Col 3, Row 4: 12</title>
@@ -282,9 +282,9 @@
       </g>
 <polygon class="iso-grid-cell" points="-62.35,108.00 -83.14,120.00 -62.35,132.00 -41.57,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="3" data-row="6" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
-                <title>Col 3, Row 6: 0</title>
-                <polygon points="-62.35,109.50 -80.54,120.00 -62.35,130.50 -44.17,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 3, Row 6: 0</title>
+        <polygon points="-62.35,109.50 -80.54,120.00 -62.35,130.50 -44.17,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-83.14,120.00 -103.92,132.00 -83.14,144.00 -62.35,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="3" data-row="7" data-value="12" style="animation-delay: 150ms; transform-origin: bottom;">
         <title>Col 3, Row 7: 12</title>
@@ -318,9 +318,9 @@
       </g>
 <polygon class="iso-grid-cell" points="41.57,72.00 20.78,84.00 41.57,96.00 62.35,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="4" data-row="2" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-                <title>Col 4, Row 2: 0</title>
-                <polygon points="41.57,73.50 23.38,84.00 41.57,94.50 59.76,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 4, Row 2: 0</title>
+        <polygon points="41.57,73.50 23.38,84.00 41.57,94.50 59.76,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="20.78,84.00 0.00,96.00 20.78,108.00 41.57,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="4" data-row="3" data-value="4" style="animation-delay: 105ms; transform-origin: bottom;">
         <title>Col 4, Row 3: 4</title>
@@ -369,9 +369,9 @@
       </g>
 <polygon class="iso-grid-cell" points="83.14,72.00 62.35,84.00 83.14,96.00 103.92,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="5" data-row="1" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-                <title>Col 5, Row 1: 0</title>
-                <polygon points="83.14,73.50 64.95,84.00 83.14,94.50 101.32,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 5, Row 1: 0</title>
+        <polygon points="83.14,73.50 64.95,84.00 83.14,94.50 101.32,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="62.35,84.00 41.57,96.00 62.35,108.00 83.14,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="5" data-row="2" data-value="-3" style="animation-delay: 105ms; transform-origin: top;">
         <title>Col 5, Row 2: -3</title>
@@ -396,9 +396,9 @@
       </g>
 <polygon class="iso-grid-cell" points="20.78,108.00 0.00,120.00 20.78,132.00 41.57,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="5" data-row="4" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
-                <title>Col 5, Row 4: 0</title>
-                <polygon points="20.78,109.50 2.60,120.00 20.78,130.50 38.97,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 5, Row 4: 0</title>
+        <polygon points="20.78,109.50 2.60,120.00 20.78,130.50 38.97,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="0.00,120.00 -20.78,132.00 0.00,144.00 20.78,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-20.78,132.00 -41.57,144.00 -20.78,156.00 0.00,144.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="5" data-row="6" data-value="-6" style="animation-delay: 165ms; transform-origin: top;">
@@ -415,14 +415,14 @@
       </g>
 <polygon class="iso-grid-cell" points="-41.57,144.00 -62.35,156.00 -41.57,168.00 -20.78,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="5" data-row="7" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
-                <title>Col 5, Row 7: 0</title>
-                <polygon points="-41.57,145.50 -59.76,156.00 -41.57,166.50 -23.38,156.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 5, Row 7: 0</title>
+        <polygon points="-41.57,145.50 -59.76,156.00 -41.57,166.50 -23.38,156.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="124.71,72.00 103.92,84.00 124.71,96.00 145.49,84.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="6" data-row="0" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-                <title>Col 6, Row 0: 0</title>
-                <polygon points="124.71,73.50 106.52,84.00 124.71,94.50 142.89,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 6, Row 0: 0</title>
+        <polygon points="124.71,73.50 106.52,84.00 124.71,94.50 142.89,84.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="103.92,84.00 83.14,96.00 103.92,108.00 124.71,96.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="6" data-row="1" data-value="-5" style="animation-delay: 105ms; transform-origin: top;">
         <title>Col 6, Row 1: -5</title>
@@ -451,9 +451,9 @@
       </g>
 <polygon class="iso-grid-cell" points="62.35,108.00 41.57,120.00 62.35,132.00 83.14,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="6" data-row="3" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
-                <title>Col 6, Row 3: 0</title>
-                <polygon points="62.35,109.50 44.17,120.00 62.35,130.50 80.54,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 6, Row 3: 0</title>
+        <polygon points="62.35,109.50 44.17,120.00 62.35,130.50 80.54,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="41.57,120.00 20.78,132.00 41.57,144.00 62.35,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="6" data-row="4" data-value="-5" style="animation-delay: 150ms; transform-origin: top;">
         <title>Col 6, Row 4: -5</title>
@@ -478,9 +478,9 @@
       </g>
 <polygon class="iso-grid-cell" points="0.00,144.00 -20.78,156.00 0.00,168.00 20.78,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="6" data-row="6" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
-                <title>Col 6, Row 6: 0</title>
-                <polygon points="0.00,145.50 -18.19,156.00 0.00,166.50 18.19,156.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 6, Row 6: 0</title>
+        <polygon points="0.00,145.50 -18.19,156.00 0.00,166.50 18.19,156.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-20.78,156.00 -41.57,168.00 -20.78,180.00 0.00,168.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="6" data-row="7" data-value="-5" style="animation-delay: 195ms; transform-origin: top;">
         <title>Col 6, Row 7: -5</title>
@@ -510,9 +510,9 @@
       </g>
 <polygon class="iso-grid-cell" points="103.92,108.00 83.14,120.00 103.92,132.00 124.71,120.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="7" data-row="2" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
-                <title>Col 7, Row 2: 0</title>
-                <polygon points="103.92,109.50 85.74,120.00 103.92,130.50 122.11,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 7, Row 2: 0</title>
+        <polygon points="103.92,109.50 85.74,120.00 103.92,130.50 122.11,120.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="83.14,120.00 62.35,132.00 83.14,144.00 103.92,132.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="7" data-row="3" data-value="-1" style="animation-delay: 150ms; transform-origin: top;">
         <title>Col 7, Row 3: -1</title>
@@ -537,9 +537,9 @@
       </g>
 <polygon class="iso-grid-cell" points="41.57,144.00 20.78,156.00 41.57,168.00 62.35,156.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="7" data-row="5" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
-                <title>Col 7, Row 5: 0</title>
-                <polygon points="41.57,145.50 23.38,156.00 41.57,166.50 59.76,156.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Col 7, Row 5: 0</title>
+        <polygon points="41.57,145.50 23.38,156.00 41.57,166.50 59.76,156.00" fill="#f0fdf4" stroke="#f0fdf4" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="20.78,156.00 0.00,168.00 20.78,180.00 41.57,168.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="7" data-row="6" data-value="-1" style="animation-delay: 195ms; transform-origin: top;">
         <title>Col 7, Row 6: -1</title>

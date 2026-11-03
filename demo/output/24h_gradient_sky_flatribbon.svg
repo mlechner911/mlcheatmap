@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-233.45 -38.06 763.46 234.57" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-204.23 -36.06 734.24 232.57" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
+        <dc:date>2026-11-03</dc:date>
         <dc:title>24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
@@ -106,7 +106,7 @@
           <stop offset="75%" stop-color="#015c8b" stop-opacity="1" />
           <stop offset="100%" stop-color="#014264" stop-opacity="1" />
         </linearGradient></defs>
-    <text x="148.28" y="-24.06" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)</text>
+    <text x="162.89" y="-22.06" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)</text>
     <g>
       <g class="iso-col-labels"><text x="25.50" y="-6.06" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">12AM</text>
 <text x="153.00" y="28.11" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">6AM</text>
@@ -118,15 +118,15 @@
 <text x="-159.00" y="30.81" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">Prism (Box)</text></g>
 <polygon class="iso-grid-cell" points="0.00,0.00 -21.25,5.69 0.00,11.39 21.25,5.69" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
-                <title>Flat Ribbon, 00:00 — Value: 0</title>
-                <polygon points="0.00,0.78 -18.35,5.69 0.00,10.61 18.35,5.69" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Flat Ribbon, 00:00 — Value: 0</title>
+        <polygon points="0.00,0.78 -18.35,5.69 0.00,10.61 18.35,5.69" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-21.25,5.69 -42.50,11.39 -21.25,17.08 0.00,11.39" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-42.50,11.39 -63.75,17.08 -42.50,22.78 -21.25,17.08" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="2" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
-                <title>Continuous Ribbon, 00:00 — Value: 0</title>
-                <polygon points="-42.50,12.16 -60.85,17.08 -42.50,22.00 -24.15,17.08" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-              </g>
+        <title>Continuous Ribbon, 00:00 — Value: 0</title>
+        <polygon points="-42.50,12.16 -60.85,17.08 -42.50,22.00 -24.15,17.08" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
+      </g>
 <polygon class="iso-grid-cell" points="-63.75,17.08 -85.00,22.78 -63.75,28.47 -42.50,22.78" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-85.00,22.78 -106.25,28.47 -85.00,34.16 -63.75,28.47" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="4" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">

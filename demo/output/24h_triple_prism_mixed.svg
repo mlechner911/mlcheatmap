@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-94.56 -20.50 556.19 305.00" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-94.56 -20.50 526.48 305.00" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
+        <dc:date>2026-11-03</dc:date>
         <dc:title>24h Triple-Series Timeline (3 Rows × 24 Hours)</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
@@ -35,7 +35,7 @@
         }
       </style>
     
-    <text x="183.53" y="-6.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Triple-Series Timeline (3 Rows × 24 Hours)</text>
+    <text x="168.68" y="-6.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">24h Triple-Series Timeline (3 Rows × 24 Hours)</text>
     <g>
       <polygon class="iso-grid-cell" points="0.00,0.00 -15.59,9.00 0.00,18.00 15.59,9.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="-20" style="animation-delay: 0ms; transform-origin: top;">

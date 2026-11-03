@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-174.71 -66.50 304.77 206.50" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-174.71 -60.00 304.77 200.00" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-06-16</dc:date>
+        <dc:date>2026-11-03</dc:date>
         <dc:title>June 2026 Activity (Month Preset)</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
@@ -35,28 +35,21 @@
         }
       </style>
     
-    <text x="-22.32" y="-52.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">June 2026 Activity (Month</text>
-<text x="-22.32" y="-34.50" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Preset)</text>
+    <text x="-22.32" y="-46.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">June 2026 Activity (Month</text>
+<text x="-22.32" y="-28.00" fill="#24292f" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Preset)</text>
     <g>
       <g class="iso-col-labels"><text x="20.78" y="-10.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W1</text>
 <text x="38.11" y="-0.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W2</text>
 <text x="55.43" y="9.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W3</text>
 <text x="72.75" y="19.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W4</text>
 <text x="90.07" y="29.50" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="middle">W5</text></g>
-<g class="iso-row-labels"><rect x="-48.93" y="-21.10" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" />
-<text x="-26.78" y="-7.20" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Mon</text>
-<rect x="-66.26" y="-11.10" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" />
-<text x="-44.11" y="2.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Tue</text>
-<rect x="-83.58" y="-1.10" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" />
-<text x="-61.43" y="12.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Wed</text>
-<rect x="-100.90" y="8.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" />
-<text x="-78.75" y="22.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Thu</text>
-<rect x="-118.22" y="18.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" />
-<text x="-96.07" y="32.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Fri</text>
-<rect x="-135.54" y="28.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" />
-<text x="-113.39" y="42.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Sat</text>
-<rect x="-152.86" y="38.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" />
-<text x="-130.71" y="52.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Sun</text></g>
+<g class="iso-row-labels"><rect x="-48.93" y="-21.10" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" /><text x="-26.78" y="-7.20" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Mon</text>
+<rect x="-66.26" y="-11.10" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" /><text x="-44.11" y="2.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Tue</text>
+<rect x="-83.58" y="-1.10" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" /><text x="-61.43" y="12.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Wed</text>
+<rect x="-100.90" y="8.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" /><text x="-78.75" y="22.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Thu</text>
+<rect x="-118.22" y="18.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" /><text x="-96.07" y="32.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Fri</text>
+<rect x="-135.54" y="28.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" /><text x="-113.39" y="42.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Sat</text>
+<rect x="-152.86" y="38.90" width="26.15" height="19.00" rx="3" fill="#ff5500" opacity="0.25" /><text x="-130.71" y="52.80" fill="#ff5500" font-size="11" font-family="monospace" text-anchor="end">Sun</text></g>
 <polygon class="iso-grid-cell" points="0.00,0.00 -17.32,10.00 0.00,20.00 17.32,10.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <g class="iso-bar" data-col="0" data-row="0" data-value="2" style="animation-delay: 0ms; transform-origin: bottom;">
       <title>2026-06-01 — 2 units</title>

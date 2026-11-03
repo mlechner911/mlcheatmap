@@ -6,321 +6,72 @@
 
 import { renderHeatmap, ColorSchemeType } from '../src/index';
 import { presets } from '../src/presets';
+import {
+  calendarMonthEvents,
+  createRandom,
+  forEachDay,
+  gradient24hDemo,
+  meshTerrainDemo,
+  monthMeshGrid,
+  noisyWave,
+  renderMonthBlocks,
+  renderMultiMonth,
+  sixMonthsDailyEvents,
+  sixMonthsDualEvents,
+  workweekDemo,
+} from './shared.mjs';
 
 // ==========================================
 // 1. Mock Data Generators
 // ==========================================
 
 function generate24hMockEvents() {
+  const random = createRandom();
   const events = [];
-  const now = new Date();
-  // Generate events for the last 7 days to get a good distribution
+  // One fixed week: with today's date the picture would change every day
+  const lastDay = new Date(2026, 5, 9);
   for (let dayOffset = 0; dayOffset < 7; dayOffset++) {
     for (let hour = 0; hour < 24; hour++) {
-      const date = new Date(now.getFullYear(), now.getMonth(), now.getDate() - dayOffset, hour, 15);
-      const angle = (hour / 24) * 2 * Math.PI;
-      let val = Math.round(Math.sin(angle) * 15);
-      val += Math.floor(Math.random() * 11) - 5;
-      if (val < -20) val = -20;
-      if (val > 20) val = 20;
-      events.push({ timestamp: date, value: val });
+      const timestamp = new Date(lastDay.getFullYear(), lastDay.getMonth(), lastDay.getDate() - dayOffset, hour, 15);
+      events.push({ timestamp, value: noisyWave((hour / 24) * 2 * Math.PI, random) });
     }
   }
   return events;
 }
 
 function generateMonthMockEvents() {
-  const events = [];
-  const year = 2026;
-  const month = 5; // June (0-indexed: Jan=0, June=5)
-  // Generate daily events for June 2026
-  for (let d = 1; d <= 30; d++) {
-    const date = new Date(year, month, d);
-    const angle = (d / 30) * 2 * Math.PI;
-    let val = Math.round(Math.sin(angle) * 15);
-    val += Math.floor(Math.random() * 11) - 5;
-    if (val < -20) val = -20;
-    if (val > 20) val = 20;
-    events.push({ date, value: val });
-  }
+  const random = createRandom();
+  const events: { date: Date; value: number }[] = [];
+  forEachDay(new Date(2026, 5, 1), new Date(2026, 5, 30), (date: Date, dayIndex: number) => {
+    events.push({ date, value: noisyWave(((dayIndex + 1) / 30) * 2 * Math.PI, random) });
+  });
   return events;
 }
 
 function generateYearMockEvents() {
-  const events = [];
-  const year = 2026;
-  const start = new Date(year, 0, 1);
-  const end = new Date(year, 11, 31);
-
-  // Iterate through all 365 days
-  const current = new Date(start);
-  let dayIndex = 0;
-  while (current <= end) {
-    const angle = (dayIndex / 365) * 4 * Math.PI;
-    let val = Math.round(Math.sin(angle) * 15);
-    val += Math.floor(Math.random() * 11) - 5;
-    if (val < -20) val = -20;
-    if (val > 20) val = 20;
-
-    events.push({ date: new Date(current), value: val });
-    current.setDate(current.getDate() + 1);
-    dayIndex++;
-  }
-  return events;
-}
-
-function generateSixMonthsMockEvents() {
-  const events = [];
-  const year = 2026;
-  const startMonth = 0; // January
-  const D_start = new Date(year, startMonth, 1);
-  const D_end = new Date(year, startMonth + 6, 0); // End of June
-
-  const current = new Date(D_start);
-  let dayIndex = 0;
-  while (current <= D_end) {
-    for (let m = 0; m < 2; m++) {
-      const angle = (dayIndex / 181) * 6 * Math.PI + (m * Math.PI / 4);
-      let val = Math.round(Math.sin(angle) * 15);
-      val += Math.floor(Math.random() * 11) - 5;
-      if (val < -20) val = -20;
-      if (val > 20) val = 20;
-
-      const date = new Date(current);
-      date.setHours(m === 0 ? 8 : 16);
-      events.push({ date, value: val, measurement: m as 0 | 1 });
-    }
-    current.setDate(current.getDate() + 1);
-    dayIndex++;
-  }
-  return events;
-}
-
-function renderCombinedMultiMonth(commonOptions: any): string {
-  const year = 2026;
-  const startOfWeek = 1;
-  const isDark = commonOptions.dark;
-  const titleColor = isDark ? '#f0f6fc' : '#24292f';
-
-  // 1. Generate May 2026 events
-  const mockMay = [];
-  for (let d = 1; d <= 31; d++) {
-    const date = new Date(year, 4, d); // May
-    const val = d % 3 === 0 ? 15 : (d % 5 === 0 ? -10 : 5);
-    mockMay.push({ date, value: val });
-  }
-
-  // 2. Generate June 2026 events
-  const mockJune = [];
-  for (let d = 1; d <= 30; d++) {
-    const date = new Date(year, 5, d); // June
-    const val = d % 4 === 0 ? 20 : (d % 3 === 0 ? -12 : 8);
-    mockJune.push({ date, value: val });
-  }
-
-  // 3. Aggregate
-  const gridMay = presets.aggregateMonth(mockMay, { year, month: 4, startOfWeek });
-  const gridJune = presets.aggregateMonth(mockJune, { year, month: 5, startOfWeek });
-
-  // Mixed shapes per row/series: Mon=prism, Tue=cylinder, Wed=ribbon, Thu=flatribbon...
-  const shapes = ['prism', 'cylinder', 'ribbon', 'flatribbon'];
-  const shapeFn = (r: number) => shapes[r % shapes.length] as any;
-
-  const groupOptions = {
-    ...commonOptions,
-    shape: shapeFn,
-    wrapper: 'g' as const,
-  };
-
-  // Render May (with row labels, no col labels)
-  const svgMayG = gridMay.render({
-    ...groupOptions,
-    rowLabels: gridMay.rowLabels,
-    colLabels: undefined,
+  const random = createRandom();
+  const events: { date: Date; value: number }[] = [];
+  forEachDay(new Date(2026, 0, 1), new Date(2026, 11, 31), (date: Date, dayIndex: number) => {
+    events.push({ date, value: noisyWave((dayIndex / 365) * 4 * Math.PI, random) });
   });
-
-  // Render June (no row labels, with col labels)
-  const svgJuneG = gridJune.render({
-    ...groupOptions,
-    rowLabels: undefined,
-    colLabels: gridJune.colLabels,
-  });
-
-  // Calculate translation offset for June based on May columns
-  const colsMay = gridMay.cols;
-  const rad = ((commonOptions.projectionAngle ?? 30) * Math.PI) / 180;
-  const dx = colsMay * ((commonOptions.gridSize ?? 20) + (commonOptions.gap ?? 3)) * Math.cos(rad);
-  const dy = colsMay * ((commonOptions.gridSize ?? 20) + (commonOptions.gap ?? 3)) * Math.sin(rad);
-
-  // Wrap June in a translated group
-  const translatedJune = `<g transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">
-    ${svgJuneG}
-  </g>`;
-
-  // Parse bounds from the rendered G elements to construct parent viewBox
-  const matchMay = svgMayG.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
-  const matchJune = svgJuneG.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
-
-  let minX = -100;
-  let maxX = 500;
-  let minY = -100;
-  let maxY = 400;
-
-  if (matchMay && matchJune) {
-    const minX_1 = parseFloat(matchMay[1]);
-    const minY_1 = parseFloat(matchMay[2]);
-    const width_1 = parseFloat(matchMay[3]);
-    const height_1 = parseFloat(matchMay[4]);
-    const maxX_1 = minX_1 + width_1;
-    const maxY_1 = minY_1 + height_1;
-
-    const minX_2 = parseFloat(matchJune[1]) + dx;
-    const minY_2 = parseFloat(matchJune[2]) + dy;
-    const width_2 = parseFloat(matchJune[3]);
-    const height_2 = parseFloat(matchJune[4]);
-    const maxX_2 = minX_2 + width_2;
-    const maxY_2 = minY_2 + height_2;
-
-    minX = Math.min(minX_1, minX_2);
-    maxX = Math.max(maxX_1, maxX_2);
-    minY = Math.min(minY_1, minY_2);
-    maxY = Math.max(maxY_1, maxY_2);
-  }
-
-  const padding = commonOptions.padding ?? 20;
-  const combinedWidth = (maxX - minX) + 2 * padding;
-  const combinedHeight = (maxY - minY) + 2 * padding;
-  const viewX = minX - padding;
-  const viewY = minY - padding;
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
-    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">May &amp; June 2026 — Combined Multi-Month (Mixed Shapes &amp; G-Group Integration)</text>
-    ${svgMayG}
-    ${translatedJune}
-  </svg>`;
-}
-
-function generateSixMonthsSingleMockEvents() {
-  const events = [];
-  const year = 2026;
-  const startMonth = 0; // January
-  const D_start = new Date(year, startMonth, 1);
-  const D_end = new Date(year, startMonth + 6, 0); // End of June
-
-  const current = new Date(D_start);
-  let dayIndex = 0;
-  while (current <= D_end) {
-    const angle = (dayIndex / 181) * 4 * Math.PI;
-    let val = Math.round(Math.sin(angle) * 15);
-    val += Math.floor(Math.random() * 11) - 5;
-    if (val < -20) val = -20;
-    if (val > 20) val = 20;
-
-    events.push({ date: new Date(current), value: val });
-    current.setDate(current.getDate() + 1);
-    dayIndex++;
-  }
   return events;
-}
-
-function renderSixMonthsSplit(commonOptions: any, events: any[]): string {
-  const year = 2026;
-  const startOfWeek = 1;
-  const isDark = commonOptions.dark;
-  const titleColor = isDark ? '#f0f6fc' : '#24292f';
-
-  const months = [0, 1, 2, 3, 4, 5]; // Jan to Jun
-  const groups: string[] = [];
-  
-  let accumulatedCols = 0;
-  const spacerCols = 1;
-
-  const gridSize = commonOptions.gridSize ?? 11;
-  const gap = commonOptions.gap ?? 1;
-  const rad = ((commonOptions.projectionAngle ?? 30) * Math.PI) / 180;
-  const stepX = (gridSize + gap) * Math.cos(rad);
-  const stepY = (gridSize + gap) * Math.sin(rad);
-
-  let overallMinX = Infinity;
-  let overallMaxX = -Infinity;
-  let overallMinY = Infinity;
-  let overallMaxY = -Infinity;
-
-  for (let i = 0; i < months.length; i++) {
-    const m = months[i];
-    // Filter events for this month
-    const mEvents = events.filter(ev => {
-      const d = typeof ev.date === 'string' ? new Date(ev.date) : ev.date;
-      return d.getFullYear() === year && d.getMonth() === m;
-    });
-
-    const gridModel = presets.aggregateMonth(mEvents, { year, month: m, startOfWeek });
-    
-    // Only the first month gets row labels
-    const rowLabels = i === 0 ? gridModel.rowLabels : undefined;
-    const colLabels = gridModel.colLabels;
-
-    const mSvg = gridModel.render({
-      ...commonOptions,
-      wrapper: 'g',
-      rowLabels,
-      colLabels,
-      title: undefined, // no individual title
-    });
-
-    const colOffset = accumulatedCols + i * spacerCols;
-    const dx = colOffset * stepX;
-    const dy = colOffset * stepY;
-
-    // Wrap in translated group
-    const groupElement = `<g class="iso-month-block" data-month="${m}" transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">
-      ${mSvg}
-    </g>`;
-    groups.push(groupElement);
-
-    // Parse bounds to compute combined viewBox
-    const match = mSvg.match(/data-min-x="([^"]+)" data-min-y="([^"]+)" data-width="([^"]+)" data-height="([^"]+)"/);
-    if (match) {
-      const minX = parseFloat(match[1]) + dx;
-      const minY = parseFloat(match[2]) + dy;
-      const width = parseFloat(match[3]);
-      const height = parseFloat(match[4]);
-      const maxX = minX + width;
-      const maxY = minY + height;
-
-      if (minX < overallMinX) overallMinX = minX;
-      if (maxX > overallMaxX) overallMaxX = maxX;
-      if (minY < overallMinY) overallMinY = minY;
-      if (maxY > overallMaxY) overallMaxY = maxY;
-    }
-
-    accumulatedCols += gridModel.cols;
-  }
-
-  const padding = commonOptions.padding ?? 20;
-  const combinedWidth = (overallMaxX - overallMinX) + 2 * padding;
-  const combinedHeight = (overallMaxY - overallMinY) + 2 * padding;
-  const viewX = overallMinX - padding;
-  const viewY = overallMinY - padding;
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${combinedWidth.toFixed(2)} ${combinedHeight.toFixed(2)}" width="100%" height="100%">
-    <text x="${(viewX + combinedWidth / 2).toFixed(2)}" y="${(viewY + padding * 0.7).toFixed(2)}" fill="${titleColor}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">Jan - Jun 2026 — 6-Month Split Timeline (1 Value/Day with Monthly Spacers)</text>
-    ${groups.join('\n')}
-  </svg>`;
 }
 
 // Generate static sets of mock data
 const mockData24h = generate24hMockEvents();
 const mockDataMonth = generateMonthMockEvents();
 const mockDataYear = generateYearMockEvents();
-const mockDataSixMonths = generateSixMonthsMockEvents();
-const mockDataSixMonthsSingle = generateSixMonthsSingleMockEvents();
+const mockDataSixMonths = sixMonthsDualEvents(createRandom());
+const mockDataSixMonthsSingle = sixMonthsDailyEvents(createRandom());
+const mockDataCalendar = calendarMonthEvents();
 
 // ==========================================
 // 2. DOM Elements & State Management
 // ==========================================
 
-let activePreset: '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh' | 'month-workweek' = '24h';
+type DemoPreset = '24h' | 'month' | 'calendar' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh' | 'month-workweek';
+
+let activePreset: DemoPreset = '24h';
 
 // Inputs
 const colorSchemeSelect = document.getElementById('colorScheme') as HTMLSelectElement;
@@ -330,6 +81,7 @@ const gapInput = document.getElementById('gap') as HTMLInputElement;
 const maxHeightInput = document.getElementById('maxHeight') as HTMLInputElement;
 const projectionAngleInput = document.getElementById('projectionAngle') as HTMLInputElement;
 const labelPositionSelect = document.getElementById('labelPosition') as HTMLSelectElement;
+const labelModeSelect = document.getElementById('labelMode') as HTMLSelectElement;
 const shapeSelect = document.getElementById('shapeSelect') as HTMLSelectElement;
 const opacityInput = document.getElementById('opacity') as HTMLInputElement;
 const zeroColorSelect = document.getElementById('zeroColorSelect') as HTMLSelectElement;
@@ -397,6 +149,7 @@ function updateHeatmap() {
   const maxHeight = parseInt(maxHeightInput.value, 10);
   const projectionAngle = parseInt(projectionAngleInput.value, 10);
   const labelPosition = labelPositionSelect.value as 'behind' | 'front';
+  const labelMode = labelModeSelect.value as 'screen' | 'axis';
   const showGrid = showGridSwitch.checked;
   const interactive = interactiveSwitch.checked;
   const shape = shapeSelect.value as 'prism' | 'cylinder' | 'ribbon' | 'flatribbon' | 'mesh';
@@ -453,6 +206,7 @@ function updateHeatmap() {
     maxHeight,
     projectionAngle,
     labelPosition,
+    labelMode,
     zeroColor,
     colorScheme,
     showGrid,
@@ -484,47 +238,9 @@ function updateHeatmap() {
   // Aggregate and render based on active preset
   let svg = '';
   if (activePreset === '24h-gradient') {
-    // Generate 24 columns (hours), 4 rows (separated by empty rows for spacing)
-    const data = [];
-    const rowsToUse = [0, 2, 4, 6];
-    for (const r of rowsToUse) {
-      const labelPrefix = r === 0 ? 'Flat Ribbon' : r === 2 ? 'Continuous Ribbon' : r === 4 ? 'Cylinder' : 'Prism (Box)';
-      for (let h = 0; h < 24; h++) {
-        const angle = (h / 24) * 2 * Math.PI - Math.PI / 2;
-        const val = parseFloat((Math.sin(angle) * 5 + 5).toFixed(1));
-        data.push({
-          col: h,
-          row: r,
-          value: val,
-          label: `${labelPrefix}, ${h.toString().padStart(2, '0')}:00 — Value: ${val}`
-        });
-      }
-    }
-    const colLabels = Array.from({ length: 24 }, (_, i) => {
-      if (i % 6 === 0) {
-        const suffix = i >= 12 ? 'PM' : 'AM';
-        const hr = i % 12 === 0 ? 12 : i % 12;
-        return `${hr}${suffix}`;
-      }
-      return '';
-    });
+    const demo = gradient24hDemo();
     dimensionsBadge.textContent = `24 cols × 7 rows`;
-    svg = renderHeatmap(data, {
-      ...commonOptions,
-      cols: 24,
-      rows: 7,
-      colLabels,
-      colLabelInterval: 1,
-      rowLabels: ['Flat Ribbon', '', 'Continuous Ribbon', '', 'Cylinder', '', 'Prism (Box)'],
-      rowLabelInterval: 1,
-      shape: (row) => {
-        if (row === 0) return 'flatribbon';
-        if (row === 2) return 'ribbon';
-        if (row === 4) return 'cylinder';
-        return 'prism';
-      },
-      title: '24h Timeline Gradient Demo (4 Shapes, Values 0 to 10)',
-    });
+    svg = renderHeatmap(demo.data, { ...commonOptions, ...demo.options });
   } else if (activePreset === '24h') {
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregate24h(mockData24h, {
       startOfWeek: 1, // Start on Monday
@@ -546,7 +262,7 @@ function updateHeatmap() {
       month: 5, // June
       startOfWeek: 1,
     });
-    dimensionsBadge.textContent = `${cols} cols (days) × ${rows} rows (weeks)`;
+    dimensionsBadge.textContent = `${cols} cols (weeks) × ${rows} rows (days)`;
     svg = renderHeatmap(data, {
       ...commonOptions,
       cols,
@@ -555,29 +271,12 @@ function updateHeatmap() {
       rowLabels,
       title: 'June 2026 — Calendar Activity Tracker',
     });
+  } else if (activePreset === 'calendar') {
+    const grid = presets.aggregateCalendarMonth(mockDataCalendar, { year: 2026, month: 9, startOfWeek: 1 });
+    dimensionsBadge.textContent = `${grid.cols} cols (weekdays) × ${grid.rows} rows (weeks)`;
+    svg = grid.render(commonOptions);
   } else if (activePreset === 'month-mesh') {
-    const mockEvents = [];
-    const year = 2026;
-    const month = 5; // June
-    for (let d = 1; d <= 30; d++) {
-      const date = new Date(year, month, d);
-      const val = Math.round(12 + 10 * Math.sin((d / 30) * Math.PI * 2 - Math.PI / 2));
-      mockEvents.push({ date, value: val });
-    }
-    const gridMonth = presets.aggregateMonth(mockEvents, { year, month, startOfWeek: 1 });
-    
-    // Inject null values
-    const firstDay = new Date(year, month, 1);
-    const firstDayIndex = (firstDay.getDay() - 1 + 7) % 7;
-    const nullDays = [12, 13, 14, 24];
-    for (const d of nullDays) {
-      const cellIndex = firstDayIndex + d - 1;
-      const c = Math.floor(cellIndex / 7);
-      const r = cellIndex % 7;
-      const dateStr = `2026-06-${d.toString().padStart(2, '0')}`;
-      gridMonth.setCell(c, r, null, `${dateStr} — No Data (Outage)`);
-    }
-
+    const gridMonth = monthMeshGrid(presets);
     dimensionsBadge.textContent = `${gridMonth.cols} cols × ${gridMonth.rows} rows (Month Mesh)`;
     svg = gridMonth.render({
       ...commonOptions,
@@ -587,76 +286,9 @@ function updateHeatmap() {
       title: 'June 2026 — 3D Surface Mesh Calendar (With Missing Data Holes)',
     });
   } else if (activePreset === 'month-workweek') {
-    // Mon-Fri Workweek Calendar Month (e.g., June 2026)
-    const year = 2026;
-    const month = 5; // June (0-indexed: Jan=0, June=5)
-    const firstDay = new Date(year, month, 1);
-    const lastDay = new Date(year, month + 1, 0);
-    const totalDays = lastDay.getDate();
-
-    // Find Monday of the first week (could be in the previous month)
-    const firstDayDay = firstDay.getDay(); // 0-6 (Sun-Sat)
-    const daysToMonday = (firstDayDay === 0 ? -6 : 1 - firstDayDay);
-    const startMonday = new Date(year, month, 1 + daysToMonday);
-
-    // Map values for each day of the month
-    const valuesMap = new Map<number, number>();
-    for (let d = 1; d <= totalDays; d++) {
-      let val = 0;
-      const date = new Date(year, month, d);
-      const day = date.getDay();
-      if (day !== 0 && day !== 6) { // Weekdays only
-        if (day === 2 || day === 4) val = (d % 3 === 0 ? 18 : 12);
-        else val = (d % 2 === 0 ? 6 : 0);
-      }
-      valuesMap.set(d, val);
-    }
-
-    // Count columns (weeks)
-    const lastDayDay = lastDay.getDay();
-    const lastDaysToMonday = (lastDayDay === 0 ? -6 : 1 - lastDayDay);
-    const lastMonday = new Date(year, month, totalDays + lastDaysToMonday);
-    const diffTime = lastMonday.getTime() - startMonday.getTime();
-    const cols = Math.round(diffTime / (1000 * 60 * 60 * 24 * 7)) + 1;
-    const rows = 5; // Mon-Fri
-
-    const data: any[] = [];
-    // Initialize all grid cells with 0 values (for padding days)
-    for (let c = 0; c < cols; c++) {
-      for (let r = 0; r < rows; r++) {
-        const cellDate = new Date(startMonday);
-        cellDate.setDate(startMonday.getDate() + c * 7 + r);
-        
-        let val = 0;
-        let label = '';
-        if (cellDate.getFullYear() === year && cellDate.getMonth() === month) {
-          val = valuesMap.get(cellDate.getDate()) ?? 0;
-          const dateStr = `${year}-${(month + 1).toString().padStart(2, '0')}-${cellDate.getDate().toString().padStart(2, '0')}`;
-          label = `${dateStr} — ${val} units`;
-        } else {
-          // Outside the month (padding days) - set value to 0
-          const dateStr = `${cellDate.getFullYear()}-${(cellDate.getMonth() + 1).toString().padStart(2, '0')}-${cellDate.getDate().toString().padStart(2, '0')}`;
-          label = `${dateStr} (Outside Month) — 0 units`;
-        }
-
-        data.push({
-          col: c,
-          row: r,
-          value: val,
-          label: label
-        });
-      }
-    }
-
-    dimensionsBadge.textContent = `${cols} cols (weeks) × ${rows} rows (Mon-Fri)`;
-    svg = renderHeatmap(data, {
-      ...commonOptions,
-      cols,
-      rows,
-      colLabels: Array.from({ length: cols }, (_, i) => `W${i + 1}`),
-      rowLabels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-      title: 'June 2026 Workweek Activity\n(Mon-Fri Preset)',
-    });
+    const demo = workweekDemo();
+    dimensionsBadge.textContent = `${demo.options.cols} cols (weeks) × ${demo.options.rows} rows (Mon-Fri)`;
+    svg = renderHeatmap(demo.data, { ...commonOptions, ...demo.options });
   } else if (activePreset === 'sixmonths') {
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregateSixMonthsDouble(mockDataSixMonths, {
       year: 2026,
@@ -675,10 +307,17 @@ function updateHeatmap() {
     });
   } else if (activePreset === 'mixed') {
     dimensionsBadge.textContent = `2 groups (May + June) × mixed shapes per row`;
-    svg = renderCombinedMultiMonth(commonOptions);
+    svg = renderMultiMonth({ presets, options: commonOptions });
   } else if (activePreset === 'sixmonths-split') {
     dimensionsBadge.textContent = `6 groups (Months) × 7 rows (days)`;
-    svg = renderSixMonthsSplit(commonOptions, mockDataSixMonthsSingle);
+    svg = renderMonthBlocks({
+      presets,
+      year: 2026,
+      months: [0, 1, 2, 3, 4, 5],
+      events: mockDataSixMonthsSingle,
+      options: commonOptions,
+      title: 'Jan - Jun 2026 — 6-Month Split Timeline (1 Value/Day with Monthly Spacers)',
+    });
   } else if (activePreset === 'nulls') {
     const gridModel = presets.nullsExample8x8();
     dimensionsBadge.textContent = `${gridModel.cols} cols × ${gridModel.rows} rows`;
@@ -687,42 +326,9 @@ function updateHeatmap() {
       title: '8x8 Grid with Explicit Null Values (No Data)',
     });
   } else if (activePreset === 'mesh-terrain') {
-    const cols = 24;
-    const rows = 24;
-    const data = [];
-    for (let c = 0; c < cols; c++) {
-      for (let r = 0; r < rows; r++) {
-        const cx = c - 11.5;
-        const cy = r - 11.5;
-        const dist = Math.sqrt(cx * cx + cy * cy);
-        const val = parseFloat((Math.sin(dist / 2.5) * 8 + Math.cos(cx / 3.0) * 4).toFixed(1));
-        
-        // Define a "lake" / null hole in the terrain
-        const lakeDist = Math.sqrt(Math.pow(c - 16, 2) + Math.pow(r - 8, 2));
-        const isLake = lakeDist < 3.5;
-        
-        data.push({
-          col: c,
-          row: r,
-          value: isLake ? null : val,
-          label: `Terrain [${c}, ${r}]: ${isLake ? 'Lake (No Data)' : val.toFixed(1)}`
-        });
-      }
-    }
-    dimensionsBadge.textContent = `${cols} cols × ${rows} rows (Terrain)`;
-    
-    const colLabels = Array.from({ length: cols }, (_, i) => i % 4 === 0 ? `C${i}` : '');
-    const rowLabels = Array.from({ length: rows }, (_, i) => i % 4 === 0 ? `R${i}` : '');
-
-    svg = renderHeatmap(data, {
-      ...commonOptions,
-      cols,
-      rows,
-      colLabels,
-      rowLabels,
-      shape: 'mesh',
-      title: '3D Contiguous Surface Mesh Terrain (Rolling Hills with Lake Hole)',
-    });
+    const demo = meshTerrainDemo();
+    dimensionsBadge.textContent = `${demo.options.cols} cols × ${demo.options.rows} rows (Terrain)`;
+    svg = renderHeatmap(demo.data, { ...commonOptions, ...demo.options });
   } else {
     // Year
     const { data, cols, rows, colLabels, rowLabels } = presets.aggregateYear(mockDataYear, {
@@ -766,10 +372,20 @@ presetTabs.forEach(tab => {
     button.classList.add('active');
 
     // Update preset state
-    activePreset = button.getAttribute('data-preset') as '24h' | 'month' | 'year' | 'nulls' | 'sixmonths' | 'mixed' | 'sixmonths-split' | '24h-gradient' | 'mesh-terrain' | 'month-mesh' | 'month-workweek';
+    activePreset = button.getAttribute('data-preset') as DemoPreset;
+
+    labelModeSelect.value = 'screen';
 
     // Update geometry defaults depending on preset for best visual representation
-    if (activePreset === '24h-gradient') {
+    if (activePreset === 'calendar') {
+      shapeSelect.value = 'prism';
+      gridSizeInput.value = '34';
+      gapInput.value = '3';
+      maxHeightInput.value = '14';
+      labelPositionSelect.value = 'front';
+      labelModeSelect.value = 'axis';
+      interpolateColorsSwitch.checked = false;
+    } else if (activePreset === '24h-gradient') {
       gridSizeInput.value = '22';
       gapInput.value = '3';
       maxHeightInput.value = '50';
@@ -790,10 +406,12 @@ presetTabs.forEach(tab => {
       gridSizeInput.value = '11';
       gapInput.value = '1';
       maxHeightInput.value = '25';
+      labelPositionSelect.value = 'behind'; // composites seat their labels on the walls
     } else if (activePreset === 'mixed') {
       gridSizeInput.value = '18';
       gapInput.value = '2';
       maxHeightInput.value = '35';
+      labelPositionSelect.value = 'behind'; // composites seat their labels on the walls
     } else if (activePreset === 'year') {
       gridSizeInput.value = '13';
       gapInput.value = '2';
@@ -835,6 +453,7 @@ const controls = [
   maxHeightInput,
   projectionAngleInput,
   labelPositionSelect,
+  labelModeSelect,
   shapeSelect,
   opacityInput,
   animationSwitch,
