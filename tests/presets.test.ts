@@ -1,7 +1,7 @@
 /**
  * Calendar presets: grid geometry and aggregation behavior.
  */
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 import { presets } from '../src/presets';
 
 describe('aggregateMonth', () => {
@@ -105,5 +105,42 @@ describe('tooltipFormatter', () => {
 
   it('leaves the label in place without a formatter', () => {
     expect(grid.render()).toContain('<title>2026-03-02: 7</title>');
+  });
+});
+
+describe('dates', () => {
+  const zones = ['America/Los_Angeles', 'America/New_York', 'Europe/Berlin', 'Asia/Tokyo', 'Pacific/Auckland'];
+  const original = process.env.TZ;
+  afterEach(() => {
+    process.env.TZ = original;
+  });
+
+  it.each(zones)('keeps a plain date on its calendar day in %s', (zone) => {
+    process.env.TZ = zone;
+    const days = [{ date: '2026-09-01', value: 5 }];
+    for (const grid of [
+      presets.aggregateCalendarMonth(days, { year: 2026, month: 8 }),
+      presets.aggregateMonth(days, { year: 2026, month: 8 }),
+      presets.aggregateYear(days, { year: 2026 }),
+    ]) {
+      const hit = grid.getData().filter((point) => point.value);
+      expect(hit.map((point) => point.label)).toEqual(['2026-09-01: 5']);
+    }
+  });
+
+  it.each(zones)('reads a timestamp with an offset as local time in %s', (zone) => {
+    process.env.TZ = zone;
+    const when = '2026-06-09T22:30:00Z';
+    const expected = new Date(when).getHours();
+    const [hit] = presets.aggregate24h([{ timestamp: when, value: 5 }]).getData().filter((p) => p.value);
+    expect(hit.col).toBe(expected);
+  });
+
+  it('accepts Date objects, strings and milliseconds alike', () => {
+    const inputs = ['2026-06-09T12:30:00', new Date(2026, 5, 9, 12, 30), new Date(2026, 5, 9, 12, 30).getTime()];
+    for (const timestamp of inputs) {
+      const [hit] = presets.aggregate24h([{ timestamp, value: 5 }]).getData().filter((p) => p.value);
+      expect(hit.col).toBe(12);
+    }
   });
 });

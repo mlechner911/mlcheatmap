@@ -6,9 +6,18 @@
 
 const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-/** Parses any date input to a Date object. */
-export function toDate(d: Date | string): Date {
-  return typeof d === 'string' ? new Date(d) : d;
+/** A point in time: a Date, a date or ISO string, or milliseconds since the epoch. */
+export type DateInput = Date | string | number;
+
+/**
+ * Parses any date input to a Date object. A plain `YYYY-MM-DD` means that calendar day where
+ * the code runs: `new Date()` would read it as midnight UTC, which is the previous day west of UTC.
+ */
+export function toDate(d: DateInput): Date {
+  if (d instanceof Date) return d;
+  if (typeof d === 'number') return new Date(d);
+  const day = /^(\d{4})-(\d{2})-(\d{2})$/.exec(d);
+  return day ? new Date(Number(day[1]), Number(day[2]) - 1, Number(day[3])) : new Date(d);
 }
 
 /** Local calendar date as YYYY-MM-DD. */
