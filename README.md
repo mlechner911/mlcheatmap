@@ -31,9 +31,9 @@ By introducing **3D height and perspective**:
 
 ## Features
 
+*   **Calendars from Dates**: Pass events with a date or timestamp instead of working out columns and rows. Presets place them by weekday and week, sum what falls together and label the axes.
 *   **Pure Vector Graphics (SVG)**: Renders directly as SVG code. Fully responsive, lightweight, scalable, and easy to embed or style.
 *   **Multiple 3D Shapes**:
-*   **Agent Skill**: Ships a tested `SKILL.md` for AI coding assistants, see [AI-Assisted Development](#ai-assisted-development).
     *   `prism`: Sharp 3D rectangular columns.
     *   `cylinder`: Smooth 3D cylindrical pillars with shading gradients.
     *   `ribbon`: Continuous flowing 3D bands (curves) using cubic splines, with closed side-caps.
@@ -46,6 +46,7 @@ By introducing **3D height and perspective**:
 *   **Negative Values (Valleys & Trenches)**: Full projection support for negative heights sinking below the grid floor with diverging color themes.
 *   **Null Value Concept**: Transparent/empty rendering for `null` cells, showing only grid floor lines, with smooth boundary slope-downs for continuous ribbons.
 *   **Interactive Features**: Built-in CSS load animations (staggered delay transitions) and hover title/tooltip hooks.
+*   **Agent Skill**: Ships a tested `SKILL.md` for AI coding assistants, see [AI-Assisted Development](#ai-assisted-development).
 
 ---
 
@@ -63,7 +64,7 @@ Load the rendering engine directly in modern browsers without build tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -75,10 +76,10 @@ Load scripts synchronously using standard HTML `<script>` tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.umd.js"></script>
 
 <script>
   // Access elements on global window variables:
@@ -100,7 +101,7 @@ The recommended approach is to use the `HeatmapGrid` class to define grid dimens
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Or Browser-Native ES6 Module CDN Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
 
 // Create an 8x8 coordinate grid
 const grid = new HeatmapGrid(8, 8);
@@ -124,9 +125,35 @@ const svg = grid.render({
 });
 ```
 
-### 2. Using Predefined Layout Aggregators
+### 2. Calendars from Dates
 
-We provide built-in presets to automatically aggregate timeseries lists into calendar structures. Since these are optional, they are imported from a separate subpath:
+You don't have to work out columns and rows. Pass your events with a date or timestamp, and the presets place them by weekday and week, sum what falls together and label the axes:
+
+```typescript
+import { presets } from 'mlc-isometric-heatmap/presets';
+
+const svg = presets
+  .aggregateCalendarMonth(
+    [
+      { date: '2026-09-01', value: 12 },
+      { date: '2026-09-02', value: 7 },
+    ],
+    { year: 2026, month: 8 }, // months count from 0, so this is September
+  )
+  .render({ colorScheme: 'emerald' });
+```
+
+`date` and `timestamp` take a `Date`, a string like `'2026-09-01'` or `'2026-09-01T14:30:00Z'`, or milliseconds since the epoch. Cells follow local time. [Try the calendar in the playground](https://play.mlcgo.eu/isometric-heatmap/calendar-month).
+
+| Preset | Shows | Events |
+|---|---|---|
+| `aggregateCalendarMonth` | One month like a wall calendar | `{ date, value }` |
+| `aggregateMonth` | One month, weeks as columns | `{ date, value }` |
+| `aggregateYear` | One year, GitHub style | `{ date, value }` |
+| `aggregate24h` | Hours per weekday | `{ timestamp, value }` |
+| `aggregateSixMonthsDouble` | Six months, two rows per weekday | `{ date, value, measurement? }` |
+
+All presets at a glance. They are optional, so they come from a separate subpath:
 
 ```typescript
 // ES6 Module Imports (Node/Bundlers):
@@ -134,8 +161,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Or Browser-Native ES6 Module CDN Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.es.js';
 
 // 1. Weekly 24h Grid (24 columns x 7 days)
 const events = [
@@ -146,15 +173,19 @@ const weeklyGrid = presets.aggregate24h(events, { startOfWeek: 1 });
 const weeklySvg = weeklyGrid.render({ colorScheme: 'sky' });
 
 // 2. Monthly Calendar Grid (5 columns of weeks x 7 days of week)
-const monthlyGrid = presets.aggregateMonth(events, { year: 2026, month: 5 }); // June
+const days = [
+  { date: '2026-06-09', value: 5 },
+  { date: '2026-06-10', value: 20 }
+];
+const monthlyGrid = presets.aggregateMonth(days, { year: 2026, month: 5 }); // June
 
 // 3. GitHub Contribution Grid (53 columns of weeks x 7 days of week)
-const yearlyGrid = presets.aggregateYear(events, { year: 2026 });
+const yearlyGrid = presets.aggregateYear(days, { year: 2026 });
 
 // 4. Wall-Calendar Month (7 weekday columns x week rows, day numbers on the bars)
-const calendar = presets.aggregateCalendarMonth(events, {
+const calendar = presets.aggregateCalendarMonth(days, {
   year: 2026,
-  month: 9,
+  month: 5, // months count from 0, so this is June
   locale: 'de-DE',
   weekLabel: (week) => `KW ${week}`
 });

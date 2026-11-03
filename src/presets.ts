@@ -8,7 +8,7 @@ import { HeatmapGrid } from './data/grid';
 import { aggregateCalendarMonth } from './calendar-month';
 import { aggregateSixMonthsDouble } from './aggregate-six-months';
 import { aggregateYear } from './aggregate-year';
-import { dateKey, toDate, weekdayNames } from './date-utils';
+import { type DateInput, dateKey, toDate, weekdayNames } from './date-utils';
 import { nullsExample8x8 } from './nulls-example';
 
 export type { PresetCalendarMonthOptions } from './calendar-month';
@@ -19,7 +19,7 @@ export type { PresetCalendarMonthOptions } from './calendar-month';
  * Events on the same day accumulate (values are summed).
  */
 export interface DateEvent {
-  date: Date | string;
+  date: DateInput;
   value: number;
 }
 
@@ -28,7 +28,7 @@ export interface DateEvent {
  * Events in the same hour of the same weekday accumulate.
  */
 export interface HourEvent {
-  timestamp: Date | string;
+  timestamp: DateInput;
   value: number;
 }
 
@@ -62,7 +62,7 @@ export interface PresetYearOptions {
  * 6-Month Dual Measurement Preset Options
  */
 export interface DualMeasurementEvent {
-  date: Date | string;
+  date: DateInput;
   value: number;
   measurement?: 'AM' | 'PM' | 0 | 1;
 }

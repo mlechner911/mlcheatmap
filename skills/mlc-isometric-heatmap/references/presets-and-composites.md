@@ -12,7 +12,7 @@ Import presets from `mlc-isometric-heatmap/presets`. Each one returns a `Heatmap
 | `aggregateYear` | 53 weeks × 7 weekdays | `{ date, value }` | none |
 | `aggregateSixMonthsDouble` | 6 months, two rows per weekday (AM/PM) | `{ date, value, measurement? }` | `year`, `startMonth` |
 
-`month` and `startMonth` count from 0. `date` and `timestamp` take a `Date` or a string. `startOfWeek` sets the first weekday, `0` is Sunday and `1` is Monday, the default.
+`month` and `startMonth` count from 0. `date` and `timestamp` take a `Date`, a string or milliseconds since the epoch. `startOfWeek` sets the first weekday, `0` is Sunday and `1` is Monday, the default.
 
 ```ts
 import { presets } from "mlc-isometric-heatmap/presets";
@@ -30,7 +30,7 @@ const svg = week.render({ colorScheme: "sky", shape: "flatribbon", interpolateCo
 
 `aggregateCalendarMonth` brings its own defaults: flat relief, a floor only under real days and labels along the axes. It also takes `locale` and `weekLabel`.
 
-Hours and days are read in local time, so a timestamp ending in `Z` can land in another cell than it says.
+Cells follow local time where the code runs. A plain `"2026-09-01"` stays on that calendar day everywhere. A timestamp with a time zone, such as one ending in `Z`, is converted, so it can land on another hour or day. An unreadable date is skipped without an error.
 
 ## Comparing several grids
 

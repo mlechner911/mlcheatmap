@@ -28,9 +28,9 @@ Durch **3D-Höhe und Perspektive**:
 
 ## Features
 
+*   **Kalender aus Datumswerten**: Du übergibst Ereignisse mit Datum oder Zeitstempel, statt Spalten und Zeilen auszurechnen. Die Presets ordnen sie nach Wochentag und Woche, summieren, was zusammenfällt, und beschriften die Achsen.
 *   **Reine Vektorgrafik (SVG)**: Wird direkt als SVG-String generiert. Extrem leichtgewichtig, unendlich skalierbar und einfach in HTML einzubetten oder per CSS zu stylen.
 *   **Fünf 3D-Formen**:
-*   **Agent-Skill**: Bringt eine getestete `SKILL.md` für KI-Assistenten mit, siehe [KI-Unterstützte Entwicklung](#ki-unterstützte-entwicklung).
     *   `prism`: Kantige, dreidimensionale Quadersäulen.
     *   `cylinder`: Runde 3D-Zylinder mit feinen Verläufen und Schattierungen.
     *   `ribbon`: Fließende, kontinuierliche 3D-Bänder (Kurven) mittels kubischer Splines.
@@ -41,6 +41,7 @@ Durch **3D-Höhe und Perspektive**:
 *   **Negative Werte (Täler & Gräben)**: Volle Unterstützung für negative Werte, die sich unter den Grid-Boden absenken, inklusive kontrastierender Divergenzfarben.
 *   **Null-Wert-Transparenz**: Zellen mit `null` (fehlende Messdaten) werden als leerer Raum (nur Gitterlinien) dargestellt. Bänder sinken davor sanft ab und enden sauber.
 *   **Interaktivität**: CSS-Load-Animationen mit staggered Delay (zeitlich versetzt nach Koordinaten) und integrierte Mouseover-Title-Tags für Tooltips.
+*   **Agent-Skill**: Bringt eine getestete `SKILL.md` für KI-Assistenten mit, siehe [KI-Unterstützte Entwicklung](#ki-unterstützte-entwicklung).
 
 ---
 
@@ -58,7 +59,7 @@ Lade die Rendering-Engine direkt in modernen Browsern ohne Build-Tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -70,10 +71,10 @@ Lade die Skripte synchron über Standard-HTML-Tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.umd.js"></script>
 
 <script>
   // Zugriff über globale Variablen:
@@ -94,7 +95,7 @@ Instanziere ein Grid, fülle Koordinaten aus und rendere das SVG:
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Oder Browser-native ES6-Modul-CDN-Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
 
 // 1. Grid erstellen (8 Spalten x 8 Zeilen)
 const grid = new HeatmapGrid(8, 8);
@@ -118,8 +119,35 @@ const svg = grid.render({
 });
 ```
 
-### 2. Nutzung vordefinierter Kalender-Presets
-Verwende Aggregations-Presets, um zeitbasierte Listen automatisch in Kalender-Layouts zu überführen. Diese werden aus einem eigenen npm-Subpfad geladen:
+### 2. Kalender aus Datumswerten
+
+Du musst keine Spalten und Zeilen ausrechnen. Übergib deine Ereignisse mit Datum oder Zeitstempel, und die Presets ordnen sie nach Wochentag und Woche, summieren, was zusammenfällt, und beschriften die Achsen:
+
+```typescript
+import { presets } from 'mlc-isometric-heatmap/presets';
+
+const svg = presets
+  .aggregateCalendarMonth(
+    [
+      { date: '2026-09-01', value: 12 },
+      { date: '2026-09-02', value: 7 },
+    ],
+    { year: 2026, month: 8 }, // Monate zählen ab 0, das ist also September
+  )
+  .render({ colorScheme: 'emerald' });
+```
+
+`date` und `timestamp` nehmen ein `Date`, einen Text wie `'2026-09-01'` oder `'2026-09-01T14:30:00Z'` oder Millisekunden seit 1970. Die Zellen folgen der Ortszeit. [Den Kalender im Playground ausprobieren](https://play.mlcgo.eu/isometric-heatmap/calendar-month).
+
+| Preset | Zeigt | Ereignisse |
+|---|---|---|
+| `aggregateCalendarMonth` | Einen Monat wie ein Wandkalender | `{ date, value }` |
+| `aggregateMonth` | Einen Monat, Wochen als Spalten | `{ date, value }` |
+| `aggregateYear` | Ein Jahr, wie bei GitHub | `{ date, value }` |
+| `aggregate24h` | Stunden je Wochentag | `{ timestamp, value }` |
+| `aggregateSixMonthsDouble` | Sechs Monate, zwei Zeilen je Wochentag | `{ date, value, measurement? }` |
+
+Alle Presets im Überblick. Sie sind optional und liegen deshalb in einem eigenen Unterpfad:
 
 ```typescript
 // ES6-Modul-Imports (Node/Bundler):
@@ -127,8 +155,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Oder Browser-native ES6-Modul-CDN-Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.es.js';
 
 // 1. Wöchentliche 24h-Ansicht (24 Spalten für Stunden x 7 Zeilen für Tage)
 const events = [
@@ -139,10 +167,14 @@ const weeklyGrid = presets.aggregate24h(events, { startOfWeek: 1 });
 const weeklySvg = weeklyGrid.render({ colorScheme: 'sky' });
 
 // 2. Monatskalender (5 Wochen-Spalten x 7 Wochentage)
-const monthlyGrid = presets.aggregateMonth(events, { year: 2026, month: 5 }); // Juni
+const days = [
+  { date: '2026-06-09', value: 5 },
+  { date: '2026-06-10', value: 20 }
+];
+const monthlyGrid = presets.aggregateMonth(days, { year: 2026, month: 5 }); // Juni
 
 // 3. Jahresbeitrags-Grid (53 Wochen-Spalten x 7 Wochentage)
-const yearlyGrid = presets.aggregateYear(events, { year: 2026 });
+const yearlyGrid = presets.aggregateYear(days, { year: 2026 });
 ```
 
 ---
