@@ -99,7 +99,7 @@ export function renderCell(pt: HeatmapDataPoint, c: number, r: number, ctx: Cell
     right: shadeHex(baseColor, 0.70)
   };
 
-  const titleText = pt.label ?? `Col ${c}, Row ${r}: ${pt.value}`;
+  const titleText = options.tooltipFormatter?.(pt) ?? pt.label ?? `Col ${c}, Row ${r}: ${pt.value}`;
   const titleTag = interactive ? `<title>${escapeHtml(titleText)}</title>` : '';
   const delay = (c + r) * 15;
   const origin = pt.value < 0 ? 'top' : 'bottom';

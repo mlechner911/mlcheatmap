@@ -2,6 +2,10 @@
 
 [English Version / Englische Version](README.md)
 
+> 🤖 **Du arbeitest mit einem KI-Assistenten?** Das Paket bringt einen Agent-Skill mit,
+> **[SKILL.md](https://github.com/mlechner911/mlcheatmap/blob/main/skills/mlc-isometric-heatmap/SKILL.md)**, mit API, Stolperfallen und getesteten Beispielen, damit der Assistent
+> mit dieser Bibliothek funktionierenden Code schreibt. Die Installation steht unter [KI-Unterstützte Entwicklung](#ki-unterstützte-entwicklung).
+
 Eine leichtgewichtige, wiederverwendbare TypeScript-Bibliothek zur Erstellung hochwertiger, interaktiver isometrischer 3D-Heatmaps als reine Vektorgrafiken (SVG).
 
 Im Gegensatz zu klassischen flachen 2D-Heatmaps projiziert diese Bibliothek Datenpunkte in den isometrischen Raum. Dabei werden anpassbare 3D-Formen (Quader, Zylinder und fließende Bänder) verwendet. Sie unterstützt Ladeanimationen, divergierende Farbschemata, absinkende negative Werte sowie die transparente Darstellung von Null-Werten (fehlenden Messdaten).
@@ -26,6 +30,7 @@ Durch **3D-Höhe und Perspektive**:
 
 *   **Reine Vektorgrafik (SVG)**: Wird direkt als SVG-String generiert. Extrem leichtgewichtig, unendlich skalierbar und einfach in HTML einzubetten oder per CSS zu stylen.
 *   **Fünf 3D-Formen**:
+*   **Agent-Skill**: Bringt eine getestete `SKILL.md` für KI-Assistenten mit, siehe [KI-Unterstützte Entwicklung](#ki-unterstützte-entwicklung).
     *   `prism`: Kantige, dreidimensionale Quadersäulen.
     *   `cylinder`: Runde 3D-Zylinder mit feinen Verläufen und Schattierungen.
     *   `ribbon`: Fließende, kontinuierliche 3D-Bänder (Kurven) mittels kubischer Splines.
@@ -53,7 +58,7 @@ Lade die Rendering-Engine direkt in modernen Browsern ohne Build-Tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -65,10 +70,10 @@ Lade die Skripte synchron über Standard-HTML-Tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.umd.js"></script>
 
 <script>
   // Zugriff über globale Variablen:
@@ -89,7 +94,7 @@ Instanziere ein Grid, fülle Koordinaten aus und rendere das SVG:
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Oder Browser-native ES6-Modul-CDN-Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
 
 // 1. Grid erstellen (8 Spalten x 8 Zeilen)
 const grid = new HeatmapGrid(8, 8);
@@ -122,8 +127,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Oder Browser-native ES6-Modul-CDN-Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.es.js';
 
 // 1. Wöchentliche 24h-Ansicht (24 Spalten für Stunden x 7 Zeilen für Tage)
 const events = [
@@ -239,15 +244,17 @@ Hier sind einige im Ordner `demo/output` vorgenerierte SVG-Grafiken, die die Fea
 
 ---
 
-## KI-Unterstützte Entwicklung (Claude, Cursor, Antigravity)
+## KI-Unterstützte Entwicklung
 
-Diese Bibliothek enthält die Datei [skills.md](skills.md), die speziell dafür konzipiert wurde, KI-Assistenten (wie Claude, Cursor, ChatGPT oder Antigravity/Agy) dabei zu helfen, fehlerfreien Integrationscode zu schreiben.
+Das Paket bringt unter `skills/mlc-isometric-heatmap/` einen Agent-Skill im Standardformat `SKILL.md` mit: ein kurzer Kern mit den Stolperfallen und Referenzdateien je Aufgabe. Er hilft Coding-Assistenten, mit dieser Bibliothek korrekten Code zu schreiben.
 
-### Kurzanleitung für KI-Tools:
-1.  **Für Antigravity (Agy) / Claude**: Weise den Assistenten im Prompt an, zuerst die Datei `skills.md` zu lesen:
-    > "Lies bitte die Datei `skills.md` im Projekt-Root-Verzeichnis, um das API-Design und die Code-Rezepte dieser Library zu verstehen."
-2.  **Für Cursor**: Referenziere die Datei in deinem Chat oder Composer einfach mittels `@skills.md`.
-3.  **Für Custom GPTs/Claude Projects**: Lade die `skills.md` als Referenz-Dokument in deine Wissensdatenbank (Knowledge Base) hoch.
+Bei Assistenten, die Skills unterstützen, etwa Claude Code, kopierst du den Ordner in deren Skill-Verzeichnis:
+
+```sh
+cp -r node_modules/mlc-isometric-heatmap/skills/mlc-isometric-heatmap .claude/skills/
+```
+
+Andere Werkzeuge können [SKILL.md](https://github.com/mlechner911/mlcheatmap/blob/main/skills/mlc-isometric-heatmap/SKILL.md) als normales Markdown lesen.
 
 ---
 

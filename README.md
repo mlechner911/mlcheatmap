@@ -5,6 +5,10 @@
 
 > ✏️ **[Edit and run it: playground](https://play.mlcgo.eu/isometric-heatmap)** — change an example in the browser, with autocompletion and type checks, and share the result as a link.
 
+> 🤖 **Working with an AI coding assistant?** The package ships an agent skill,
+> **[SKILL.md](https://github.com/mlechner911/mlcheatmap/blob/main/skills/mlc-isometric-heatmap/SKILL.md)**, with the API, the traps and tested examples, so that the assistant
+> writes working code with this library. See [AI-Assisted Development](#ai-assisted-development) to install it.
+
 A lightweight, reusable TypeScript library to render high-quality, interactive 3D isometric heatmaps as pure vector SVG graphics.
 
 Unlike traditional 2D grid heatmaps, this library projects data points into isometric space using customizable 3D shapes (Prisms, Cylinders, and Continuous Ribbons), supporting load animations, diverging color schemes, negative sinking values, and transparent representation of null (missing) data.
@@ -29,6 +33,7 @@ By introducing **3D height and perspective**:
 
 *   **Pure Vector Graphics (SVG)**: Renders directly as SVG code. Fully responsive, lightweight, scalable, and easy to embed or style.
 *   **Multiple 3D Shapes**:
+*   **Agent Skill**: Ships a tested `SKILL.md` for AI coding assistants, see [AI-Assisted Development](#ai-assisted-development).
     *   `prism`: Sharp 3D rectangular columns.
     *   `cylinder`: Smooth 3D cylindrical pillars with shading gradients.
     *   `ribbon`: Continuous flowing 3D bands (curves) using cubic splines, with closed side-caps.
@@ -58,7 +63,7 @@ Load the rendering engine directly in modern browsers without build tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -70,10 +75,10 @@ Load scripts synchronously using standard HTML `<script>` tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.umd.js"></script>
 
 <script>
   // Access elements on global window variables:
@@ -95,7 +100,7 @@ The recommended approach is to use the `HeatmapGrid` class to define grid dimens
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Or Browser-Native ES6 Module CDN Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
 
 // Create an 8x8 coordinate grid
 const grid = new HeatmapGrid(8, 8);
@@ -129,8 +134,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Or Browser-Native ES6 Module CDN Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.2/dist/presets.es.js';
 
 // 1. Weekly 24h Grid (24 columns x 7 days)
 const events = [
@@ -257,15 +262,17 @@ Here are some pre-rendered SVG examples demonstrating the library's capabilities
 *   **Loss Landscape Bowl (10x10 ML optimization surface)**:
   *   ![Loss Landscape Bowl](https://raw.githubusercontent.com/mlechner911/mlcheatmap/main/demo/output/loss_landscape_bowl_sunset_mesh.svg)
 
-## AI-Assisted Development (Claude, Cursor, Antigravity)
+## AI-Assisted Development
 
-This library includes a dedicated [skills.md](skills.md) file designed to help AI coding assistants (like Claude, Cursor, ChatGPT, or Antigravity/Agy) write clean, correct integration code.
+The package ships an agent skill at `skills/mlc-isometric-heatmap/`, in the standard `SKILL.md` format: a short core with the traps, plus reference files for each task. It helps coding assistants write correct code with this library.
 
-### Quick Start Guide for AI Tools:
-1.  **For Antigravity (Agy) / Claude**: Prompt the agent to look up the `skills.md` file first before generating code:
-    > "Lies bitte die Datei `skills.md` im Projekt-Root-Verzeichnis, um das API-Design und die Code-Rezepte dieser Library zu verstehen."
-2.  **For Cursor**: Reference the file directly in your chat panel or composer using `@skills.md` to feed the context to the model.
-3.  **For Custom GPTs/Claude Projects**: Upload the `skills.md` file as part of the project knowledge base to get instant, highly accurate coding assistance.
+To use it with an assistant that supports skills, such as Claude Code, copy the folder into its skills directory:
+
+```sh
+cp -r node_modules/mlc-isometric-heatmap/skills/mlc-isometric-heatmap .claude/skills/
+```
+
+Other tools can read [SKILL.md](https://github.com/mlechner911/mlcheatmap/blob/main/skills/mlc-isometric-heatmap/SKILL.md) as plain Markdown.
 
 ---
 
