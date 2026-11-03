@@ -34,7 +34,7 @@ const svg = grid.render({ shape: 'prism', colorScheme: 'emerald' });
 | `projectionAngle` | `30` | Viewing angle in degrees, recommended between 10 and 60 |
 | `opacity` | `1.0` | Opacity of the columns |
 | `showGrid` | `true` | Base grid lines on the floor |
-| `labelPosition` | `'behind'` | Place labels behind or in front of the grid |
+| `labelPosition` | `'front'` | Place labels in front of or behind the grid |
 | `interactive` | `true` | Tooltips and hover highlights |
 | `animated` | `true` | Staggered entrance animation upon loading |
 

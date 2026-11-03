@@ -17,6 +17,29 @@ interface Vertices {
   right: { x: number; y: number };
 }
 
+/** A flat plate on the floor for a zero-value cell. */
+export function renderFlatCell(
+  c: number,
+  r: number,
+  value: number,
+  color: string,
+  vertices: Vertices,
+  opacity: number,
+  titleTag: string,
+  inlineStyle: string
+): string {
+  const t = vertices.top;
+  const l = vertices.left;
+  const f = vertices.front;
+  const rg = vertices.right;
+  const points = `${t.x.toFixed(2)},${t.y.toFixed(2)} ${l.x.toFixed(2)},${l.y.toFixed(2)} ${f.x.toFixed(2)},${f.y.toFixed(2)} ${rg.x.toFixed(2)},${rg.y.toFixed(2)}`;
+
+  return `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${value}"${inlineStyle}>
+        ${titleTag}
+        <polygon points="${points}" fill="${color}" stroke="${color}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
+      </g>`;
+}
+
 /**
  * Renders a 3D rectangular prism (or flat zero cell) for a cell.
  */
@@ -34,19 +57,7 @@ export function renderPrism(
   inlineStyle: string
 ): string {
   if (h === 0) {
-    if (!renderFlatZero) {
-      return '';
-    }
-    const t = verticesTop.top;
-    const l = verticesTop.left;
-    const f = verticesTop.front;
-    const rg = verticesTop.right;
-    const points = `${t.x.toFixed(2)},${t.y.toFixed(2)} ${l.x.toFixed(2)},${l.y.toFixed(2)} ${f.x.toFixed(2)},${f.y.toFixed(2)} ${rg.x.toFixed(2)},${rg.y.toFixed(2)}`;
-
-    return `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${value}"${inlineStyle}>
-        ${titleTag}
-        <polygon points="${points}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-      </g>`;
+    return renderFlatZero ? renderFlatCell(c, r, value, colors.top, verticesTop, opacity, titleTag, inlineStyle) : '';
   }
 
   const t = verticesTop.top;

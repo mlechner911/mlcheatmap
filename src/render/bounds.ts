@@ -5,7 +5,10 @@
  */
 
 import { HeatmapDataPoint, HeightGridOptions, HeatmapShape, RowLabelStyle } from '../data/types';
-import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
+import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints, shapeForRow } from './geometry';
+import type { LabelMode } from '../data/types';
+import type { LabelLines } from './label-layout';
+import { visitLabelBounds } from './label-bounds';
 
 export interface Bounds {
   minX: number;
@@ -28,7 +31,10 @@ export function calculateBounds(params: {
   rowLabelInterval: number;
   showRowLabels?: boolean;
   rowLabelStyle?: RowLabelStyle;
-  labelPosition: 'behind' | 'front';
+  lines: LabelLines;
+  labelMode: LabelMode;
+  labelFontSize: number;
+  gridCells: 'all' | 'data';
   geometryConfig: GeometryConfig;
   getPoint: (col: number, row: number) => HeatmapDataPoint;
   heightGrid?: HeightGridOptions;
@@ -51,7 +57,10 @@ export function calculateBounds(params: {
     rowLabelInterval,
     showRowLabels,
     rowLabelStyle,
-    labelPosition,
+    lines,
+    labelMode,
+    labelFontSize,
+    gridCells,
     geometryConfig,
     getPoint,
     heightGrid,
@@ -75,15 +84,12 @@ export function calculateBounds(params: {
     if (y > maxY) maxY = y;
   }
 
-  const getShapeForRow = (rowIdx: number): HeatmapShape => {
-    if (typeof shape === 'function') {
-      return shape(rowIdx);
+  function updateRibbon(...sections: { back: { x: number; y: number }; front: { x: number; y: number } }[]) {
+    for (const { back, front } of sections) {
+      updateBounds(back.x, back.y);
+      updateBounds(front.x, front.y);
     }
-    if (Array.isArray(shape)) {
-      return shape[rowIdx] ?? 'prism';
-    }
-    return shape ?? 'prism';
-  };
+  }
 
   // Vorberechnete Konstanten auslagern
   const hasMaxAbsValue = maxAbsValue > 0;
@@ -91,16 +97,23 @@ export function calculateBounds(params: {
   const thickness = Math.max(3, maxHeight * 0.1);
 
   // 1. Grid intersection bounds
-  for (let c = 0; c <= cols; c++) {
-    for (let r = 0; r <= rows; r++) {
-      const pt = getGridIntersection(c, r, geometryConfig);
-      updateBounds(pt.x, pt.y);
+  // With floor lines only under data, an empty corner must not widen the picture.
+  for (let c = 0; c < cols; c++) {
+    for (let r = 0; r < rows; r++) {
+      if (gridCells === 'data' && getPoint(c, r).value === null) continue;
+      for (const [dc, dr] of [[0, 0], [1, 0], [0, 1], [1, 1]]) {
+        const pt = getGridIntersection(c + dc, r + dr, geometryConfig);
+        updateBounds(pt.x, pt.y);
+      }
     }
+  }
+  if (minX === Infinity) {
+    updateBounds(0, 0);
   }
 
   // 2. Bar height bounds
   for (let r = 0; r < rows; r++) {
-    const rShape = getShapeForRow(r);
+    const rShape = shapeForRow(shape, r);
     const isRibbonShape = rShape === 'ribbon' || rShape === 'flatribbon';
     const isMeshShape = rShape === 'mesh';
     const isFlatBand = rShape === 'flatribbon';
@@ -142,12 +155,7 @@ export function calculateBounds(params: {
           const ptsMid = getRibbonPoints(c + 0.5, r, h, geometryConfig);
           const ptsEnd = getRibbonPoints(c + 1, r, h_end, geometryConfig);
 
-          updateBounds(ptsStart.back.x, ptsStart.back.y);
-          updateBounds(ptsStart.front.x, ptsStart.front.y);
-          updateBounds(ptsMid.back.x, ptsMid.back.y);
-          updateBounds(ptsMid.front.x, ptsMid.front.y);
-          updateBounds(ptsEnd.back.x, ptsEnd.back.y);
-          updateBounds(ptsEnd.front.x, ptsEnd.front.y);
+          updateRibbon(ptsStart, ptsMid, ptsEnd);
 
           // Floor/Bottom bounds
           const h_start_bottom = isFlatBand ? (h_start - thickness) : 0;
@@ -158,12 +166,7 @@ export function calculateBounds(params: {
           const ptsMidFloor = getRibbonPoints(c + 0.5, r, h_mid_bottom, geometryConfig);
           const ptsEndFloor = getRibbonPoints(c + 1, r, h_end_bottom, geometryConfig);
 
-          updateBounds(ptsStartFloor.back.x, ptsStartFloor.back.y);
-          updateBounds(ptsStartFloor.front.x, ptsStartFloor.front.y);
-          updateBounds(ptsMidFloor.back.x, ptsMidFloor.back.y);
-          updateBounds(ptsMidFloor.front.x, ptsMidFloor.front.y);
-          updateBounds(ptsEndFloor.back.x, ptsEndFloor.back.y);
-          updateBounds(ptsEndFloor.front.x, ptsEndFloor.front.y);
+          updateRibbon(ptsStartFloor, ptsMidFloor, ptsEndFloor);
         } else {
           const vertices = getBarVertices(c, r, 0, geometryConfig);
           updateBounds(vertices.top.x, vertices.top.y);
@@ -189,68 +192,27 @@ export function calculateBounds(params: {
     }
   }
 
-  // Gemeinsame Variablen für Labels vorbereiten
-  const offset = geometryConfig.gap * 0.5;
-  const cosA = geometryConfig.cosAngle;
-  const sinA = geometryConfig.sinAngle;
-  const gSize = geometryConfig.gridSize;
-  const lift = labelLift ?? 0;
+  // 3. Label bounds
+  visitLabelBounds({
+    cols,
+    rows,
+    colLabels,
+    rowLabels,
+    colLabelInterval,
+    rowLabelInterval,
+    showRowLabels,
+    rowLabelStyle,
+    lines,
+    labelMode,
+    labelFontSize,
+    geometryConfig,
+    colLabelAngle,
+    rowLabelAngle,
+    labelLift,
+    visit: updateBounds,
+  });
 
-  // Half-extents of a (possibly rotated) label box around its anchor point
-  function labelMargins(textLen: number, fontSize: number, angleDeg: number | undefined, pad: number): [number, number] {
-    const w = textLen * fontSize * 0.55 + pad;
-    const h = fontSize + pad;
-    const a = Math.abs(((angleDeg ?? 0) * Math.PI) / 180);
-    const hw = Math.max(20, (w * Math.abs(Math.cos(a)) + h * Math.abs(Math.sin(a))) / 2 + 4);
-    const hh = Math.max(10, (w * Math.abs(Math.sin(a)) + h * Math.abs(Math.cos(a))) / 2 + 4);
-    return [hw, hh];
-  }
-
-  // 3. Column labels bounds
-  if (colLabels) {
-    const rLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
-    const yStart = rLabel * gSize + offset;
-    for (let c = 0; c < cols; c += colLabelInterval) {
-      if (colLabels[c]) {
-        const xStart = c * gSize + offset;
-        const x = (xStart - yStart) * cosA;
-        const y = (xStart + yStart) * sinA - lift;
-        const [hw, hh] = labelMargins(colLabels[c].length, 9, colLabelAngle, 0);
-        updateBounds(x - hw, y - hh);
-        updateBounds(x + hw, y + hh);
-      }
-    }
-  }
-
-  // 4. Row labels bounds
-  if (rowLabels && showRowLabels !== false) {
-    const hasHeightGrid = heightGrid && heightGrid.ticks > 0;
-    const cLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
-    const xStart = cLabel * gSize + offset;
-    const styleFontSize = rowLabelStyle?.fontSize ?? 9;
-    const padding = rowLabelStyle?.backgroundColor ? (rowLabelStyle.padding ?? 4) : 0;
-
-    for (let r = 0; r < rows; r += rowLabelInterval) {
-      const label = rowLabels[r];
-      if (label) {
-        const yStart = r * gSize + offset;
-        const x = (xStart - yStart) * cosA;
-        const y = (xStart + yStart) * sinA - lift;
-
-        // Approximate width based on font size and text length, then add padding and safety margins
-        // Approximate width based on font size and text length, then add padding and safety margins
-        const [rotW, rotH] = labelMargins(label.length, styleFontSize, rowLabelAngle, padding);
-        const horizontalMargin = Math.max(30, rotW);
-        const verticalMargin = Math.max(10, rotH);
-
-        updateBounds(x - horizontalMargin, y - verticalMargin);
-        updateBounds(x + horizontalMargin, y + verticalMargin);
-      }
-    }
-  }
-
-
-  // 5. Height grid bounds
+  // 4. Height grid bounds
   if (heightGrid && heightGrid.ticks > 0) {
     const pt0_floor = getGridIntersection(0, 0, geometryConfig);
     const ptR_floor = getGridIntersection(0, rows, geometryConfig);
@@ -267,7 +229,7 @@ export function calculateBounds(params: {
     updateBounds(ptR_floor.x - 45, ptR_floor.y - heightMin);
   }
 
-  // 6. Axis back walls (rise above the floor along both rear edges)
+  // 5. Axis back walls (rise above the floor along both rear edges)
   if (axisWallHeight && axisWallHeight > 0) {
     const pt0 = getGridIntersection(0, 0, geometryConfig);
     const ptC = getGridIntersection(cols, 0, geometryConfig);

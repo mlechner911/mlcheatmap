@@ -4,15 +4,54 @@
  * Licensed under the MIT License.
  */
 
-import { HeatmapDataPoint, HeatmapOptions, CustomColorScheme, HeatmapShape } from '../data/types';
-import { LIGHT_THEMES, DARK_THEMES, NEGATIVE_LIGHT_THEMES, NEGATIVE_DARK_THEMES, getColorForValue, shadeHex, rotateHue } from './color';
-import { renderPrism } from './prism';
-import { renderCylinder } from './cylinder';
-import { renderRibbon } from './ribbon';
-import { renderMeshQuad } from './mesh';
-import { GeometryConfig, getGridIntersection, getBarVertices, getRibbonPoints } from './geometry';
+import type { HeatmapDataPoint, HeatmapOptions, CustomColorScheme, RenderDefaults } from '../data/types';
+import { LIGHT_THEMES, DARK_THEMES, NEGATIVE_LIGHT_THEMES, NEGATIVE_DARK_THEMES, rotateHue } from './color';
+import { type GeometryConfig, getGridIntersection, shapeForRow } from './geometry';
 import { calculateBounds } from './bounds';
 import { renderColLabels, renderRowLabels } from './labels';
+import { getLabelLines, requiredLabelStep, thinLabels } from './label-layout';
+import { renderAxis, renderAxisWalls, renderHeightGridWall } from './axes';
+import { renderCell } from './cell';
+import { escapeHtml, renderCylinderDefs, renderMetadata, renderStyleTag, renderTitle, wrapTitle } from './svg-document';
+
+/** A grid model that brings its own points, size and labels. */
+interface GridModel {
+  getData(): HeatmapDataPoint[];
+  cols: number;
+  rows: number;
+  colLabels?: string[];
+  rowLabels?: string[];
+  title?: string;
+  renderDefaults?: RenderDefaults;
+}
+
+const TITLE_LINE_HEIGHT = 18;
+const WALL_FILL_DARK = 'rgba(30, 41, 59, 0.7)';
+const WALL_FILL_LIGHT = 'rgba(241, 245, 249, 0.7)';
+
+function isGridModel(data: HeatmapDataPoint[] | GridModel): data is GridModel {
+  return !Array.isArray(data) && typeof data?.getData === 'function';
+}
+
+function resolveThemes(options: HeatmapOptions, isDark: boolean): { theme: CustomColorScheme; negativeTheme: CustomColorScheme } {
+  if (typeof options.colorScheme === 'object') {
+    const theme = options.colorScheme;
+    return {
+      theme,
+      negativeTheme: {
+        empty: theme.empty,
+        steps: theme.steps.map(step => rotateHue(step, 150))
+      }
+    };
+  }
+  const themes = isDark ? DARK_THEMES : LIGHT_THEMES;
+  const negThemes = isDark ? NEGATIVE_DARK_THEMES : NEGATIVE_LIGHT_THEMES;
+  const schemeKey = options.colorScheme ?? 'github';
+  return {
+    theme: themes[schemeKey] || themes.github,
+    negativeTheme: negThemes[schemeKey] || negThemes.github
+  };
+}
 
 /**
  * Renders an isometric heatmap SVG.
@@ -21,7 +60,7 @@ import { renderColLabels, renderRowLabels } from './labels';
  * @returns SVG string
  */
 export function renderHeatmap(
-  data: HeatmapDataPoint[] | { getData(): HeatmapDataPoint[]; cols: number; rows: number; colLabels?: string[]; rowLabels?: string[]; title?: string },
+  data: HeatmapDataPoint[] | GridModel,
   options: HeatmapOptions
 ): string {
   // 1. Resolve parameters from data model vs raw options
@@ -32,16 +71,16 @@ export function renderHeatmap(
   let rowLabels = options.rowLabels;
   let title = options.title;
 
-  if (data && typeof (data as any).getData === 'function') {
-    const gridModel = data as any;
-    points = gridModel.getData();
-    cols = cols ?? gridModel.cols;
-    rows = rows ?? gridModel.rows;
-    colLabels = colLabels ?? gridModel.colLabels;
-    rowLabels = rowLabels ?? gridModel.rowLabels;
-    title = title ?? gridModel.title;
+  if (isGridModel(data)) {
+    options = { ...data.renderDefaults, ...options };
+    points = data.getData();
+    cols = cols ?? data.cols;
+    rows = rows ?? data.rows;
+    colLabels = options.colLabels ?? data.colLabels;
+    rowLabels = options.rowLabels ?? data.rowLabels;
+    title = options.title ?? data.title;
   } else {
-    points = data as HeatmapDataPoint[];
+    points = data;
   }
 
   // 2. Resolve default options
@@ -53,16 +92,9 @@ export function renderHeatmap(
   const isDark = options.dark ?? false;
   const padding = options.padding ?? 20;
   const projectionAngle = options.projectionAngle ?? 30;
-  const labelPosition = options.labelPosition ?? 'behind';
-  const getShapeForRow = (rowIdx: number): HeatmapShape => {
-    if (typeof options.shape === 'function') {
-      return options.shape(rowIdx);
-    }
-    if (Array.isArray(options.shape)) {
-      return options.shape[rowIdx] ?? 'prism';
-    }
-    return options.shape ?? 'prism';
-  };
+  const labelPosition = options.labelPosition ?? 'front';
+  const labelMode = options.labelMode ?? 'screen';
+  const gridCells = options.gridCells ?? 'all';
   const opacity = options.opacity ?? 1.0;
   const animated = options.animated ?? true;
   const renderFlatZero = options.renderFlatZero ?? true;
@@ -73,32 +105,11 @@ export function renderHeatmap(
   const cosAngle = Math.cos(rad);
   const sinAngle = Math.sin(rad);
 
-  // Resolve color scheme
-  const themes = isDark ? DARK_THEMES : LIGHT_THEMES;
-  const negThemes = isDark ? NEGATIVE_DARK_THEMES : NEGATIVE_LIGHT_THEMES;
-  const defaultScheme = 'github';
-
-  let theme: CustomColorScheme;
-  let negativeTheme: CustomColorScheme;
-
-  if (typeof options.colorScheme === 'object') {
-    theme = options.colorScheme;
-    negativeTheme = {
-      empty: theme.empty,
-      steps: theme.steps.map(step => rotateHue(step, 150))
-    };
-  } else {
-    const schemeKey = options.colorScheme ?? defaultScheme;
-    theme = themes[schemeKey] || themes[defaultScheme];
-    negativeTheme = negThemes[schemeKey] || negThemes[defaultScheme];
-  }
-
+  const { theme, negativeTheme } = resolveThemes(options, isDark);
   const gridColor = options.gridColor ?? (isDark ? '#2f3542' : '#e1e4e8');
   const labelColor = isDark ? '#8b949e' : '#57606a';
-  const labelFontSize = 9;
-
-  // Track unique colors for cylinder gradients
-  const uniqueColors = new Set<string>();
+  const labelFontSize = options.labelFontSize ?? 9;
+  const wallFill = isDark ? WALL_FILL_DARK : WALL_FILL_LIGHT;
 
   // Find max value for height and color scaling
   let maxValue = 0;
@@ -124,24 +135,46 @@ export function renderHeatmap(
   }
   const maxAbsValue = Math.max(Math.abs(maxValue), Math.abs(minValue));
 
-  // Helper to get point at col, row
   const getPoint = (col: number, row: number): HeatmapDataPoint => {
     return dataMap.get(`${col},${row}`) ?? { col, row, value: null };
   };
 
-  const geometryConfig: GeometryConfig = {
-    gridSize,
-    gap,
-    cosAngle,
-    sinAngle
-  };
+  const geometryConfig: GeometryConfig = { gridSize, gap, cosAngle, sinAngle };
 
-  const colLabelInterval = options.colLabelInterval ?? 1;
-  const rowLabelInterval = options.rowLabelInterval ?? 1;
   const showRowLabels = options.showRowLabels ?? options.rowLabelStyle?.show ?? true;
   const rowLabelStyle = options.rowLabelStyle;
+  const hasHeightGrid = (options.heightGrid?.ticks ?? 0) > 0;
+  const labelLines = getLabelLines({ cols, rows, labelPosition, hasHeightGrid, labelMode });
+  const colLabelAngle = labelMode === 'axis' ? -projectionAngle : options.colLabelAngle ?? 0;
+  const rowLabelAngle = labelMode === 'axis' ? projectionAngle : options.rowLabelAngle ?? 0;
+
+  // 'auto' thins the labels themselves; every later pass then visits all cells and skips blanks.
+  if (colLabels && options.colLabelInterval === 'auto') {
+    colLabels = thinLabels(colLabels, requiredLabelStep({
+      labels: colLabels,
+      axis: 'col',
+      fontSize: labelFontSize,
+      padding: 0,
+      angleDeg: colLabelAngle,
+      config: geometryConfig
+    }));
+  }
+  if (rowLabels && options.rowLabelInterval === 'auto') {
+    rowLabels = thinLabels(rowLabels, requiredLabelStep({
+      labels: rowLabels,
+      axis: 'row',
+      fontSize: rowLabelStyle?.fontSize ?? labelFontSize,
+      padding: rowLabelStyle?.backgroundColor ? rowLabelStyle.padding ?? 4 : 0,
+      angleDeg: rowLabelAngle,
+      config: geometryConfig
+    }));
+  }
+  const colLabelInterval = typeof options.colLabelInterval === 'number' ? options.colLabelInterval : 1;
+  const rowLabelInterval = typeof options.rowLabelInterval === 'number' ? options.rowLabelInterval : 1;
+  const visibleRowLabels = showRowLabels !== false ? rowLabels : undefined;
 
   // Pre-calculate bounds
+  const showAxisWalls = options.showAxisWalls ?? false;
   const bounds = calculateBounds({
     cols,
     rows,
@@ -156,442 +189,171 @@ export function renderHeatmap(
     rowLabelInterval,
     showRowLabels,
     rowLabelStyle,
-    labelPosition,
+    lines: labelLines,
+    labelMode,
+    labelFontSize,
+    gridCells,
     geometryConfig,
     getPoint,
     heightGrid: options.heightGrid,
-    axisWallHeight: (options.showAxisWalls ?? false) ? (options.axisWallHeight ?? maxHeight) : undefined,
-    colLabelAngle: options.colLabelAngle ?? 0,
-    rowLabelAngle: options.rowLabelAngle ?? 0,
+    axisWallHeight: showAxisWalls ? (options.axisWallHeight ?? maxHeight) : undefined,
+    colLabelAngle,
+    rowLabelAngle,
     labelLift
   });
-
-
-  const barSize = gridSize - gap;
-  const offset = gap / 2;
 
   // Generate SVG elements cell-by-cell
   const backgroundElements: string[] = [];
   const elements: string[] = [];
   const foregroundElements: string[] = [];
 
-  // Render Height Grid Wall if specified
-  if (options.heightGrid && options.heightGrid.ticks > 0) {
-    const ticksCount = options.heightGrid.ticks;
-    const isSolid = options.heightGrid.solid !== false; // default to true
-    
-    // Resolve colors
-    const wallColor = options.heightGrid.wallColor ?? (isDark ? 'rgba(30, 41, 59, 0.7)' : 'rgba(241, 245, 249, 0.7)');
-    const wallGridColor = options.heightGrid.gridColor ?? gridColor;
-    const wallLabelColor = options.heightGrid.labelColor ?? labelColor;
-
-    const heightMin = minValue < 0 ? -maxHeight : 0;
-    const heightMax = maxHeight;
-    
-    const pt0_floor = getGridIntersection(0, 0, geometryConfig);
-    const ptR_floor = getGridIntersection(0, rows, geometryConfig);
-
-    // 1. Draw solid wall background if requested
-    if (isSolid) {
-      const p0_top = `${pt0_floor.x.toFixed(2)},${(pt0_floor.y - heightMax).toFixed(2)}`;
-      const pR_top = `${ptR_floor.x.toFixed(2)},${(ptR_floor.y - heightMax).toFixed(2)}`;
-      const pR_bottom = `${ptR_floor.x.toFixed(2)},${(ptR_floor.y - heightMin).toFixed(2)}`;
-      const p0_bottom = `${pt0_floor.x.toFixed(2)},${(pt0_floor.y - heightMin).toFixed(2)}`;
-      
-      const wallPolygon = `<polygon points="${p0_top} ${pR_top} ${pR_bottom} ${p0_bottom}" fill="${wallColor}" stroke="none" />`;
-      backgroundElements.push(wallPolygon);
-    }
-
-    // 2. Draw vertical grid lines standing on the back-left edge (aligning with rows)
-    for (let r = 0; r <= rows; r++) {
-      const pt = getGridIntersection(0, r, geometryConfig);
-      const xStr = pt.x.toFixed(2);
-      const yMinStr = (pt.y - heightMin).toFixed(2);
-      const yMaxStr = (pt.y - heightMax).toFixed(2);
-      
-      const verticalLine = `<line x1="${xStr}" y1="${yMinStr}" x2="${xStr}" y2="${yMaxStr}" stroke="${wallGridColor}" stroke-width="0.5" stroke-dasharray="2,2" />`;
-      backgroundElements.push(verticalLine);
-    }
-
-    // 3. Draw horizontal grid lines and scale labels
-    for (let i = 0; i < ticksCount; i++) {
-      const t = ticksCount > 1 ? i / (ticksCount - 1) : 1;
-      const h = heightMin + t * (heightMax - heightMin);
-      
-      // Calculate value corresponding to this height
-      const tickVal = maxAbsValue > 0 ? (h / maxHeight) * maxAbsValue : 0;
-      
-      const pt0_h = { x: pt0_floor.x, y: pt0_floor.y - h };
-      const ptR_h = { x: ptR_floor.x, y: ptR_floor.y - h };
-      
-      // Horizontal grid line across the wall
-      const horizontalLine = `<line x1="${pt0_h.x.toFixed(2)}" y1="${pt0_h.y.toFixed(2)}" x2="${ptR_h.x.toFixed(2)}" y2="${ptR_h.y.toFixed(2)}" stroke="${wallGridColor}" stroke-width="0.5" />`;
-      backgroundElements.push(horizontalLine);
-
-      // Label on the left of the left corner (ptR_h)
-      const labelText = Number(tickVal.toFixed(2)).toString();
-      const textX = (ptR_h.x - 8).toFixed(2);
-      const textY = (ptR_h.y + 3).toFixed(2);
-      
-      const textElement = `<text x="${textX}" y="${textY}" fill="${wallLabelColor}" font-size="${labelFontSize}" font-family="sans-serif" text-anchor="end">${labelText}</text>`;
-      backgroundElements.push(textElement);
-    }
+  if (options.heightGrid && hasHeightGrid) {
+    backgroundElements.push(...renderHeightGridWall({
+      heightGrid: options.heightGrid,
+      rows,
+      minValue,
+      maxHeight,
+      maxAbsValue,
+      wallFill,
+      gridColor,
+      labelColor,
+      labelFontSize,
+      geometryConfig
+    }));
   }
+
+  // Track unique colors for cylinder gradients
+  const uniqueColors = new Set<string>();
+  const cellContext = {
+    options,
+    cols,
+    rows,
+    maxAbsValue,
+    maxHeight,
+    theme,
+    negativeTheme,
+    opacity,
+    renderFlatZero,
+    interactive,
+    animated,
+    geometryConfig,
+    getPoint,
+    uniqueColors
+  };
 
   for (let c = 0; c < cols; c++) {
     for (let r = 0; r < rows; r++) {
-      // 1. Draw grid cell polygon if showGrid is true
-      if (showGrid) {
-        const p0 = getGridIntersection(c, r, geometryConfig);
-        const p1 = getGridIntersection(c, r + 1, geometryConfig);
-        const p2 = getGridIntersection(c + 1, r + 1, geometryConfig);
-        const p3 = getGridIntersection(c + 1, r, geometryConfig);
-        const gridPolygon = `<polygon class="iso-grid-cell" points="${p0.x.toFixed(2)},${p0.y.toFixed(2)} ${p1.x.toFixed(2)},${p1.y.toFixed(2)} ${p2.x.toFixed(2)},${p2.y.toFixed(2)} ${p3.x.toFixed(2)},${p3.y.toFixed(2)}" fill="none" stroke="${gridColor}" stroke-width="0.5" />`;
-        elements.push(gridPolygon);
-      }
-
       const pt = getPoint(c, r);
-      if (pt.value === null) {
-        continue;
+      if (showGrid && (gridCells === 'all' || pt.value !== null)) {
+        const corners = [[c, r], [c, r + 1], [c + 1, r + 1], [c + 1, r]]
+          .map(([gc, gr]) => getGridIntersection(gc, gr, geometryConfig))
+          .map(p => `${p.x.toFixed(2)},${p.y.toFixed(2)}`)
+          .join(' ');
+        elements.push(`<polygon class="iso-grid-cell" points="${corners}" fill="none" stroke="${gridColor}" stroke-width="0.5" />`);
       }
-      const h = maxAbsValue > 0 ? (pt.value / maxAbsValue) * maxHeight : 0;
-      const h_top = Math.max(0, h);
-      const h_bottom = Math.min(0, h);
-      const verticesTop = getBarVertices(c, r, h_top, geometryConfig);
-      const verticesBottom = getBarVertices(c, r, h_bottom, geometryConfig);
-
-      // Determine base color
-      const baseColor = pt.color ?? (pt.value === 0 && options.zeroColor ? options.zeroColor : getColorForValue(pt.value, maxAbsValue, theme, negativeTheme, options.interpolateColors));
-
-      // Shaded faces
-      const colors = {
-        top: baseColor,
-        left: shadeHex(baseColor, 0.85),
-        right: shadeHex(baseColor, 0.70)
-      };
-
-      const titleText = pt.label ?? `Col ${c}, Row ${r}: ${pt.value}`;
-      const titleTag = interactive ? `<title>${escapeHtml(titleText)}</title>` : '';
-      const delay = (c + r) * 15;
-      const origin = pt.value < 0 ? 'top' : 'bottom';
-      const inlineStyle = (interactive && animated) ? ` style="animation-delay: ${delay}ms; transform-origin: ${origin};"` : '';
-
-      const rShape = getShapeForRow(r);
-      let barSvg = '';
-      if (rShape === 'mesh') {
-        if (c < cols - 1 && r < rows - 1) {
-          const pt1 = getPoint(c + 1, r);
-          const pt2 = getPoint(c + 1, r + 1);
-          const pt3 = getPoint(c, r + 1);
-
-          if (pt1.value !== null && pt2.value !== null && pt3.value !== null) {
-            const h0 = h;
-            const h1 = maxAbsValue > 0 ? (pt1.value / maxAbsValue) * maxHeight : 0;
-            const h2 = maxAbsValue > 0 ? (pt2.value / maxAbsValue) * maxHeight : 0;
-            const h3 = maxAbsValue > 0 ? (pt3.value / maxAbsValue) * maxHeight : 0;
-
-            const avgVal = (pt.value + pt1.value + pt2.value + pt3.value) / 4;
-            const titleText = `Cols ${c}-${c+1}, Rows ${r}-${r+1}: Avg Value ${avgVal.toFixed(1)}`;
-            const titleTagMesh = interactive ? `<title>${escapeHtml(titleText)}</title>` : '';
-
-            const quadPolygon = renderMeshQuad({
-              c,
-              r,
-              h0,
-              h1,
-              h2,
-              h3,
-              v0: pt.value,
-              v1: pt1.value,
-              v2: pt2.value,
-              v3: pt3.value,
-              maxAbsValue,
-              theme,
-              negativeTheme,
-              interpolateColors: options.interpolateColors,
-              geometryConfig,
-              opacity,
-              titleTag: '',
-              inlineStyle: '',
-              triangulateMesh: options.triangulateMesh,
-              useSvg2Mesh: options.useSvg2Mesh,
-              shading: options.shading
-            });
-
-            barSvg = `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${avgVal.toFixed(2)}"${inlineStyle}>
-              ${titleTagMesh}
-              ${quadPolygon}
-            </g>`;
-          }
-        }
-      } else if (rShape === 'cylinder') {
-        barSvg = renderCylinder(c, r, pt.value, h, baseColor, colors, verticesTop, verticesBottom, barSize, cosAngle, sinAngle, opacity, renderFlatZero, titleTag, inlineStyle, uniqueColors);
-      } else if (rShape === 'ribbon' || rShape === 'flatribbon') {
-        if (h === 0) {
-          if (renderFlatZero) {
-            // Draw flat polygon for zero ribbon cells
-            const t = verticesTop.top;
-            const l = verticesTop.left;
-            const f = verticesTop.front;
-            const rg = verticesTop.right;
-            const points = `${t.x.toFixed(2)},${t.y.toFixed(2)} ${l.x.toFixed(2)},${l.y.toFixed(2)} ${f.x.toFixed(2)},${f.y.toFixed(2)} ${rg.x.toFixed(2)},${rg.y.toFixed(2)}`;
-            barSvg = `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${pt.value}"${inlineStyle}>
-                ${titleTag}
-                <polygon points="${points}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-              </g>`;
-          }
-        } else {
-          barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig), rShape === 'flatribbon');
-        }
-      } else {
-        barSvg = renderPrism(c, r, pt.value, h, colors, verticesTop, verticesBottom, opacity, renderFlatZero, titleTag, inlineStyle);
-      }
-
+      const barSvg = renderCell(pt, c, r, cellContext);
       if (barSvg) {
         elements.push(barSvg);
       }
     }
   }
 
-  // Render translucent back walls along both rear floor edges.
-  // They act as a visual anchor and a calm backdrop for the axis labels.
-  const showAxisWalls = options.showAxisWalls ?? false;
   if (showAxisWalls) {
-    const wallH = options.axisWallHeight ?? maxHeight;
-    const wallFill = options.axisWallColor ?? (isDark ? 'rgba(30, 41, 59, 0.7)' : 'rgba(241, 245, 249, 0.7)');
-    const wOrigin = getGridIntersection(0, 0, geometryConfig);
-    const wColEnd = getGridIntersection(cols, 0, geometryConfig);
-    const wRowEnd = getGridIntersection(0, rows, geometryConfig);
-    const wallBack = `<polygon class="iso-axis-wall" points="${wOrigin.x.toFixed(2)},${wOrigin.y.toFixed(2)} ${wColEnd.x.toFixed(2)},${wColEnd.y.toFixed(2)} ${(wColEnd.x).toFixed(2)},${(wColEnd.y - wallH).toFixed(2)} ${(wOrigin.x).toFixed(2)},${(wOrigin.y - wallH).toFixed(2)}" fill="${wallFill}" stroke="none" />`;
-    const wallLeft = `<polygon class="iso-axis-wall" points="${wOrigin.x.toFixed(2)},${wOrigin.y.toFixed(2)} ${wRowEnd.x.toFixed(2)},${wRowEnd.y.toFixed(2)} ${(wRowEnd.x).toFixed(2)},${(wRowEnd.y - wallH).toFixed(2)} ${(wOrigin.x).toFixed(2)},${(wOrigin.y - wallH).toFixed(2)}" fill="${wallFill}" stroke="none" />`;
-    const ruleColor = options.axisColor ?? labelColor;
-    const wallRules: string[] = [];
-    if (colLabels) {
-      for (let c = 0; c < cols; c += colLabelInterval) {
-        if (!colLabels[c]) continue;
-        const gp = getGridIntersection(c, 0, geometryConfig);
-        wallRules.push(`<line class="iso-axis-wall-rule" x1="${gp.x.toFixed(2)}" y1="${gp.y.toFixed(2)}" x2="${gp.x.toFixed(2)}" y2="${(gp.y - wallH).toFixed(2)}" stroke="${ruleColor}" stroke-width="0.5" />`);
-      }
-    }
-    if (rowLabels && showRowLabels !== false) {
-      for (let r = 0; r < rows; r += rowLabelInterval) {
-        if (!rowLabels[r]) continue;
-        const gp = getGridIntersection(0, r, geometryConfig);
-        wallRules.push(`<line class="iso-axis-wall-rule" x1="${gp.x.toFixed(2)}" y1="${gp.y.toFixed(2)}" x2="${gp.x.toFixed(2)}" y2="${(gp.y - wallH).toFixed(2)}" stroke="${ruleColor}" stroke-width="0.5" />`);
-      }
-    }
-    backgroundElements.push(`<g class="iso-axis-walls">${wallBack}\n${wallLeft}\n${wallRules.join('\n')}</g>`);
+    backgroundElements.push(renderAxisWalls({
+      cols,
+      rows,
+      wallHeight: options.axisWallHeight ?? maxHeight,
+      wallFill: options.axisWallColor ?? wallFill,
+      ruleColor: options.axisColor ?? labelColor,
+      colLabels,
+      rowLabels: visibleRowLabels,
+      colLabelInterval,
+      rowLabelInterval,
+      geometryConfig
+    }));
   }
 
-  // Render Column labels
-  const rLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
   if (colLabels) {
     const colLabelsSvg = renderColLabels({
       colLabels,
       colLabelInterval,
       cols,
-      rLabel,
+      lines: labelLines,
+      labelMode,
       geometryConfig,
       labelColor,
       labelFontSize,
       escapeHtml,
-      labelAngle: options.colLabelAngle ?? 0,
+      labelAngle: colLabelAngle,
       labelLift
     });
-    if (labelPosition === 'front' || showAxisWalls) {
-      foregroundElements.push(colLabelsSvg);
-    } else {
-      backgroundElements.push(colLabelsSvg);
-    }
+    const target = labelPosition === 'front' || showAxisWalls ? foregroundElements : backgroundElements;
+    target.push(colLabelsSvg);
   }
 
-  // Render Row labels
-  const hasHeightGrid = options.heightGrid && options.heightGrid.ticks > 0;
-  const cLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
-  if (rowLabels && showRowLabels !== false) {
+  if (visibleRowLabels) {
     const rowLabelsSvg = renderRowLabels({
-      rowLabels,
+      rowLabels: visibleRowLabels,
       rowLabelInterval,
       rows,
-      cLabel,
+      lines: labelLines,
+      labelMode,
       geometryConfig,
       labelColor,
       labelFontSize,
-      labelPosition: (labelPosition === 'front' || hasHeightGrid) ? 'front' : 'behind',
       escapeHtml,
       rowLabelStyle,
-      labelAngle: options.rowLabelAngle ?? 0,
+      labelAngle: rowLabelAngle,
       labelLift
     });
-    if (labelPosition === 'front' || hasHeightGrid || showAxisWalls) {
-      foregroundElements.push(rowLabelsSvg);
-    } else {
-      backgroundElements.push(rowLabelsSvg);
-    }
+    const target = labelPosition === 'front' || hasHeightGrid || showAxisWalls ? foregroundElements : backgroundElements;
+    target.push(rowLabelsSvg);
   }
 
-
-  // Render baseline axes with tick marks along the label edges.
-  // Rules sit at floor level (drawn into the background layer); ticks point
-  // toward the label side and follow col/row label intervals and visibility.
-  const showAxis = options.showAxis ?? false;
-  if (showAxis) {
-    const axisColor = options.axisColor ?? labelColor;
-    const axisWidth = options.axisWidth ?? 1;
-    const tickLen = options.axisTickLength ?? 5;
-    const axisParts: string[] = [];
-
-    const originPt = getGridIntersection(0, 0, geometryConfig);
-    const colEndPt = getGridIntersection(cols, 0, geometryConfig);
-    const rowEndPt = getGridIntersection(0, rows, geometryConfig);
-    axisParts.push(
-      `<line class="iso-axis-rule" x1="${originPt.x.toFixed(2)}" y1="${originPt.y.toFixed(2)}" x2="${colEndPt.x.toFixed(2)}" y2="${colEndPt.y.toFixed(2)}" stroke="${axisColor}" stroke-width="${axisWidth}" />`
-    );
-    axisParts.push(
-      `<line class="iso-axis-rule" x1="${originPt.x.toFixed(2)}" y1="${originPt.y.toFixed(2)}" x2="${rowEndPt.x.toFixed(2)}" y2="${rowEndPt.y.toFixed(2)}" stroke="${axisColor}" stroke-width="${axisWidth}" />`
-    );
-
-    const tickTowards = (
-      gx: number, gy: number, lx: number, ly: number
-    ): string => {
-      const dx = lx - gx;
-      const dy = ly - gy;
-      const len = Math.hypot(dx, dy);
-      if (len < 1e-9) return '';
-      const ex = gx + (dx / len) * tickLen;
-      const ey = gy + (dy / len) * tickLen;
-      return `<line class="iso-axis-tick" x1="${gx.toFixed(2)}" y1="${gy.toFixed(2)}" x2="${ex.toFixed(2)}" y2="${ey.toFixed(2)}" stroke="${axisColor}" stroke-width="${axisWidth}" />`;
-    };
-
-    // Column ticks (toward the column-label side)
-    if (colLabels) {
-      const axisRLabel = labelPosition === 'front' ? rows + 0.5 : -1.2;
-      for (let c = 0; c < cols; c += colLabelInterval) {
-        if (!colLabels[c]) continue;
-        const gp = getGridIntersection(c, 0, geometryConfig);
-        const lx = (c * gridSize + offset - (axisRLabel * gridSize + offset)) * cosAngle;
-        const ly = (c * gridSize + offset + (axisRLabel * gridSize + offset)) * sinAngle;
-        const tick = tickTowards(gp.x, gp.y, lx, ly);
-        if (tick) axisParts.push(tick);
-      }
-    }
-
-    // Row ticks (toward the row-label side; hidden when row labels are off)
-    if (rowLabels && showRowLabels !== false) {
-      const axisCLabel = (labelPosition === 'front' || hasHeightGrid) ? cols + 0.5 : -1.2;
-      for (let r = 0; r < rows; r += rowLabelInterval) {
-        if (!rowLabels[r]) continue;
-        const gp = getGridIntersection(0, r, geometryConfig);
-        const lx = (axisCLabel * gridSize + offset - (r * gridSize + offset)) * cosAngle;
-        const ly = (axisCLabel * gridSize + offset + (r * gridSize + offset)) * sinAngle;
-        const tick = tickTowards(gp.x, gp.y, lx, ly);
-        if (tick) axisParts.push(tick);
-      }
-    }
-
-    backgroundElements.push(`<g class="iso-axis">${axisParts.join('\n')}</g>`);
+  if (options.showAxis) {
+    backgroundElements.push(renderAxis({
+      cols,
+      rows,
+      axisColor: options.axisColor ?? labelColor,
+      axisWidth: options.axisWidth ?? 1,
+      tickLength: options.axisTickLength ?? 5,
+      colLabels,
+      rowLabels: visibleRowLabels,
+      colLabelInterval,
+      rowLabelInterval,
+      lines: labelLines,
+      geometryConfig
+    }));
   }
 
   // Assemble final SVG
   const width = (bounds.maxX - bounds.minX) + 2 * padding;
   const titleLines = wrapTitle(title, width);
-  const titleLineHeight = 18; // 18px line height
-  const titleOffset = titleLines.length > 1 ? (titleLines.length - 1) * titleLineHeight : 0;
-
+  const titleOffset = titleLines.length > 1 ? (titleLines.length - 1) * TITLE_LINE_HEIGHT : 0;
   const height = (bounds.maxY - bounds.minY) + 2 * padding + titleOffset;
   const viewX = bounds.minX - padding;
   const viewY = bounds.minY - padding - titleOffset;
 
-  const styleTag = interactive
-    ? `<style>
-        ${animated ? `@keyframes iso-grow {
-          from {
-            transform: scaleY(0);
-          }
-          to {
-            transform: scaleY(1);
-          }
-        }` : ''}
-        .iso-bar {
-          ${animated ? `transform-box: fill-box;
-          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;` : ''}
-          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
-          cursor: pointer;
-        }
-        .iso-bar:hover {
-          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-          transform: translateY(-3px)${animated ? ' scaleY(1)' : ''};
-        }
-        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
-          transition: fill 0.2s ease;
-        }
-      </style>`
-    : '';
-
-  // Generate defs for cylinder gradients
-  let defsSvg = '';
-  let hasCylinder = false;
-  for (let r = 0; r < rows; r++) {
-    if (getShapeForRow(r) === 'cylinder') {
-      hasCylinder = true;
-      break;
-    }
-  }
-  if (hasCylinder && uniqueColors.size > 0) {
-    const gradients: string[] = [];
-    uniqueColors.forEach(color => {
-      const gradId = 'cyl-grad-' + color.replace('#', '');
-      gradients.push(
-        `<linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="${shadeHex(color, 0.85)}" stop-opacity="${opacity}" />
-          <stop offset="35%" stop-color="${color}" stop-opacity="${opacity}" />
-          <stop offset="75%" stop-color="${shadeHex(color, 0.70)}" stop-opacity="${opacity}" />
-          <stop offset="100%" stop-color="${shadeHex(color, 0.50)}" stop-opacity="${opacity}" />
-        </linearGradient>`
-      );
-    });
-    defsSvg = `<defs>${gradients.join('\n')}</defs>`;
-  }
-
-  // Generate multi-line title
-  let titleSvg = '';
-  if (titleLines.length > 0) {
-    titleSvg = titleLines.map((line, idx) => {
-      const y = viewY + padding * 0.7 + idx * titleLineHeight;
-      return `<text x="${(viewX + width / 2).toFixed(2)}" y="${y.toFixed(2)}" fill="${isDark ? '#f0f6fc' : '#24292f'}" font-size="14" font-weight="bold" font-family="sans-serif" text-anchor="middle">${escapeHtml(line)}</text>`;
-    }).join('\n');
-  }
-
-  const wrapper = options.wrapper ?? 'svg';
+  const styleTag = interactive ? renderStyleTag(animated) : '';
+  const hasCylinder = Array.from({ length: rows }, (_, r) => shapeForRow(options.shape, r)).includes('cylinder');
+  const defsSvg = hasCylinder ? renderCylinderDefs(uniqueColors, opacity) : '';
+  const titleSvg = renderTitle({ lines: titleLines, viewX, viewY, width, padding, lineHeight: TITLE_LINE_HEIGHT, isDark });
 
   const customCommentText = options.generatorComment ?? 'Generated with MLC Isometric 3D Heatmap Library';
   const generatorComment = `<!-- ${customCommentText} -->`;
-  const creatorName = options.creator ?? 'Michael Lechner';
-  const currentDate = new Date().toISOString().split('T')[0];
-  const metadataSvg = `<metadata>
-    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-             xmlns:dc="http://purl.org/dc/elements/1.1/">
-      <rdf:Description rdf:about="">
-        <dc:creator>${escapeHtml(creatorName)}</dc:creator>
-        <dc:date>${currentDate}</dc:date>
-        <dc:title>${title ? escapeHtml(title.replace(/\n/g, ' — ')) : 'MLC Isometric 3D Heatmap'}</dc:title>
-        <dc:description>${escapeHtml(customCommentText)}</dc:description>
-      </rdf:Description>
-    </rdf:RDF>
-  </metadata>`;
+  const body = [...backgroundElements, ...elements, ...foregroundElements].join('\n');
 
-
-
-  if (wrapper === 'g') {
+  if ((options.wrapper ?? 'svg') === 'g') {
     return `<g class="iso-heatmap-group" data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
       ${generatorComment}
       ${styleTag}
       ${defsSvg}
       ${titleSvg}
-      ${[...backgroundElements, ...elements, ...foregroundElements].join('\n')}
+      ${body}
     </g>`;
   }
 
+  const metadataSvg = renderMetadata(options.creator ?? 'Michael Lechner', title, customCommentText);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${width.toFixed(2)} ${height.toFixed(2)}" width="100%" height="100%">
     ${generatorComment}
     ${metadataSvg}
@@ -599,54 +361,7 @@ export function renderHeatmap(
     ${defsSvg}
     ${titleSvg}
     <g>
-      ${[...backgroundElements, ...elements, ...foregroundElements].join('\n')}
+      ${body}
     </g>
   </svg>`;
-
-
-}
-
-function escapeHtml(str: string): string {
-  return str
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;');
-}
-
-function wrapText(text: string, maxCharsPerLine: number): string[] {
-  const words = text.split(/\s+/).filter(w => w.length > 0);
-  const lines: string[] = [];
-  let currentLine = '';
-
-  for (const word of words) {
-    if (!currentLine) {
-      currentLine = word;
-    } else if ((currentLine + ' ' + word).length <= maxCharsPerLine) {
-      currentLine += ' ' + word;
-    } else {
-      lines.push(currentLine);
-      currentLine = word;
-    }
-  }
-  if (currentLine) {
-    lines.push(currentLine);
-  }
-  return lines;
-}
-
-function wrapTitle(title: string | undefined, svgWidth: number): string[] {
-  if (!title) return [];
-  const manualLines = title.split('\n');
-  const maxChars = Math.max(25, Math.floor((svgWidth - 60) / 8.5));
-  const finalLines: string[] = [];
-  for (const line of manualLines) {
-    if (line.length > maxChars) {
-      finalLines.push(...wrapText(line, maxChars));
-    } else {
-      finalLines.push(line);
-    }
-  }
-  return finalLines;
 }

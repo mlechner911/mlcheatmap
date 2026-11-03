@@ -53,7 +53,7 @@ Load the rendering engine directly in modern browsers without build tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -65,10 +65,10 @@ Load scripts synchronously using standard HTML `<script>` tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.umd.js"></script>
 
 <script>
   // Access elements on global window variables:
@@ -90,7 +90,7 @@ The recommended approach is to use the `HeatmapGrid` class to define grid dimens
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Or Browser-Native ES6 Module CDN Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
 
 // Create an 8x8 coordinate grid
 const grid = new HeatmapGrid(8, 8);
@@ -124,8 +124,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Or Browser-Native ES6 Module CDN Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.es.js';
 
 // 1. Weekly 24h Grid (24 columns x 7 days)
 const events = [
@@ -168,7 +168,11 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 | `interactive` | `boolean` | `true` | Embed interactive tooltips and hover scaling. |
 | `animated` | `boolean` | `true` | Enables staggered load animations. |
 | `projectionAngle` | `number` | `30` | Isometric camera angle in degrees (10° to 60°). |
-| `labelPosition` | `'behind' \| 'front'` | `'behind'` | Render row/column labels at the back or front of the grid projection. |
+| `labelPosition` | `'behind' \| 'front'` | `'front'` | Render row/column labels at the back or front of the grid projection. Rear labels can be hidden by tall bars. |
+| `labelMode` | `'screen' \| 'axis'` | `'screen'` | `'axis'` rotates labels to run along the neighbouring grid axis, so parallel labels stay clear of each other while `gridSize * sin(2 * projectionAngle)` exceeds the font size. |
+| `colLabelInterval` / `rowLabelInterval` | `number \| 'auto'` | `1` | Label every nth cell. `'auto'` drops as many labels as needed to avoid overlaps. |
+| `labelFontSize` | `number` | `9` | Font size of axis labels in px. |
+| `gridCells` | `'all' \| 'data'` | `'all'` | Draw floor lines for every cell or only under cells with a value. |
 | `showRowLabels` | `boolean` | `true` | Toggle visibility of row labels (series annotations). |
 | `colLabelAngle` / `rowLabelAngle` | `number` | `0` | Label rotation in degrees about the anchor. Label uplift: `labelLift` (px, default `0`) seats labels on top of axis walls; walls draw ruling lines from each label down to its grid line. `rowLabelAngle: -30` aligns day labels with the row axis at 30° projection. |
 | `rowLabelStyle` | `RowLabelStyle` | `undefined` | Custom styling for row labels (colors, background boxes, padding, radius, font size). |

@@ -4,11 +4,27 @@
  * Licensed under the MIT License.
  */
 
+import type { HeatmapShape } from '../data/types';
+
 export interface GeometryConfig {
   gridSize: number;
   gap: number;
   cosAngle: number;
   sinAngle: number;
+}
+
+/** Resolves the `shape` option (single value, per-row array or mapper) for one row. */
+export function shapeForRow(
+  shape: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape) | undefined,
+  row: number
+): HeatmapShape {
+  if (typeof shape === 'function') {
+    return shape(row);
+  }
+  if (Array.isArray(shape)) {
+    return shape[row] ?? 'prism';
+  }
+  return shape ?? 'prism';
 }
 
 /**

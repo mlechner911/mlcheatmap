@@ -7,6 +7,9 @@ dist-demo/
 
 
 
+# Ausgabe von demo/generator.js ohne --out
+/output.svg
+
 # Logs & OS temporary files
 *.log
 .DS_Store

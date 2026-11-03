@@ -38,7 +38,7 @@ ergeben ein brauchbares Bild.
 | `projectionAngle` | `30` | Blickwinkel in Grad, sinnvoll zwischen 10 und 60 |
 | `opacity` | `1.0` | Deckkraft der Säulen |
 | `showGrid` | `true` | Rasterlinien auf dem Boden |
-| `labelPosition` | `'behind'` | Beschriftung hinter oder vor dem Raster |
+| `labelPosition` | `'front'` | Beschriftung vor oder hinter dem Raster |
 | `interactive` | `true` | Tooltips und Hervorhebung beim Überfahren |
 | `animated` | `true` | Gestaffelter Aufbau beim Laden |
 

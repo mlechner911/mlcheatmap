@@ -138,10 +138,10 @@ export type ColorSchemePreset =
    axisWallHeight?: number; // Wall height in px (default: maxHeight)
    axisWallColor?: string;  // Wall fill color (default: height-grid wall default)
    colLabels?: string[];
-   colLabelInterval?: number;
+   colLabelInterval?: number | 'auto'; // 'auto' drops as many labels as needed to avoid overlaps
    colLabelAngle?: number;  // Column label rotation in degrees (default: 0). ~projectionAngle aligns labels with the column axis.
    rowLabels?: string[];
-   rowLabelInterval?: number;
+   rowLabelInterval?: number | 'auto'; // 'auto' drops as many labels as needed to avoid overlaps
    rowLabelAngle?: number;  // Row label rotation in degrees (default: 0). ~-projectionAngle aligns labels with the row axis.
    labelLift?: number;      // Vertical uplift in px for all axis labels (default: 0). Set to wall height to seat labels on top of axis walls.
    showRowLabels?: boolean; // Toggle row label visibility (default: true). NOTE: passing rowLabels: undefined falls back to the grid's own labels.
@@ -151,7 +151,10 @@ export type ColorSchemePreset =
    padding?: number;
    title?: string;
    projectionAngle?: number; // Tilt angle in degrees (default: 30)
-   labelPosition?: 'behind' | 'front'; // Place labels at the back or front of grid (default: 'behind')
+   labelPosition?: 'behind' | 'front'; // Place labels at the back or front of grid (default: 'front')
+   labelMode?: 'screen' | 'axis'; // 'axis' rotates labels along the neighbouring grid axis (default: 'screen')
+   labelFontSize?: number; // Axis label font size in px (default: 9)
+   gridCells?: 'all' | 'data'; // Floor lines for every cell or only under cells with a value (default: 'all')
    zeroColor?: string;      // Custom color for zero value cells
    shape?: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape);
    opacity?: number;

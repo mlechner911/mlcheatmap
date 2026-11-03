@@ -4,19 +4,42 @@
  * Licensed under the MIT License.
  */
 
-import { GeometryConfig } from './geometry';
+import type { GeometryConfig } from './geometry';
+import type { LabelMode, RowLabelStyle } from '../data/types';
+import { contrastingTextColor } from './color';
+import { axisLabelAnchor, estimateTextWidth, labelGridPoint, type LabelLines } from './label-layout';
 
 export interface ColLabelParams {
   colLabels: string[];
   colLabelInterval: number;
   cols: number;
-  rLabel: number;
+  lines: LabelLines;
+  labelMode: LabelMode;
   geometryConfig: GeometryConfig;
   labelColor: string;
   labelFontSize: number;
   escapeHtml: (str: string) => string;
   labelAngle?: number; // Rotation in degrees about the label anchor (default: 0). Positive = clockwise.
-  labelLift?: number; // Vertical uplift in px for every label (default: 0). Wall height seats labels on wall top. Use ~projectionAngle to align labels with the column axis.
+  labelLift?: number; // Vertical uplift in px for every label (default: 0). Wall height seats labels on the wall top.
+}
+
+interface AxisLabelParams {
+  x: number;
+  y: number;
+  angle: number;
+  textAnchor: 'start' | 'end';
+  text: string;
+  color: string;
+  fontSize: number;
+  fontFamily: string;
+  background: string;
+}
+
+/** A label rotated about its anchor; `background` is drawn in the same rotated frame. */
+function renderAxisLabel(params: AxisLabelParams): string {
+  const { x, y, angle, textAnchor, text, color, fontSize, fontFamily, background } = params;
+  const baseline = (fontSize * 0.35).toFixed(2);
+  return `<g transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${angle})">${background}<text x="0" y="${baseline}" fill="${color}" font-size="${fontSize}" font-family="${fontFamily}" text-anchor="${textAnchor}">${text}</text></g>`;
 }
 
 export function renderColLabels(params: ColLabelParams): string {
@@ -24,75 +47,63 @@ export function renderColLabels(params: ColLabelParams): string {
     colLabels,
     colLabelInterval,
     cols,
-    rLabel,
+    lines,
+    labelMode,
     geometryConfig,
     labelColor,
     labelFontSize,
     escapeHtml
   } = params;
 
-  const { gridSize, gap, cosAngle, sinAngle } = geometryConfig;
-  const offset = gap / 2;
   const colLabelsGroup: string[] = [];
-  const colAnchor = 'middle';
   const colAngle = params.labelAngle ?? 0;
   const colLift = params.labelLift ?? 0;
 
   for (let c = 0; c < cols; c += colLabelInterval) {
     const label = colLabels[c];
-    if (label) {
-      const xStart = c * gridSize + offset;
-      const yStart = rLabel * gridSize + offset;
-      const x = (xStart - yStart) * cosAngle;
-      const y = (xStart + yStart) * sinAngle;
+    if (!label) continue;
 
-      const adjustedX = x;
-      // Offset if front-side
-      const adjustedY = (rLabel > 0 ? y + 10 : y) - colLift;
-
-      const rotate = colAngle !== 0 ? ` transform="rotate(${colAngle} ${adjustedX.toFixed(2)} ${adjustedY.toFixed(2)})"` : '';
-      colLabelsGroup.push(
-        `<text x="${adjustedX.toFixed(2)}" y="${adjustedY.toFixed(2)}" fill="${labelColor}" font-size="${labelFontSize}" font-family="sans-serif" text-anchor="${colAnchor}"${rotate}>${escapeHtml(label)}</text>`
-      );
+    if (labelMode === 'axis') {
+      const anchor = axisLabelAnchor('col', c, lines, geometryConfig);
+      colLabelsGroup.push(renderAxisLabel({
+        x: anchor.x,
+        y: anchor.y - colLift,
+        angle: colAngle,
+        textAnchor: anchor.textAnchor,
+        text: escapeHtml(label),
+        color: labelColor,
+        fontSize: labelFontSize,
+        fontFamily: 'sans-serif',
+        background: ''
+      }));
+      continue;
     }
+
+    const { x, y } = labelGridPoint(c, lines.rLabel, geometryConfig);
+    // Offset if front-side
+    const adjustedY = (lines.rLabel > 0 ? y + 10 : y) - colLift;
+    const rotate = colAngle !== 0 ? ` transform="rotate(${colAngle} ${x.toFixed(2)} ${adjustedY.toFixed(2)})"` : '';
+    colLabelsGroup.push(
+      `<text x="${x.toFixed(2)}" y="${adjustedY.toFixed(2)}" fill="${labelColor}" font-size="${labelFontSize}" font-family="sans-serif" text-anchor="middle"${rotate}>${escapeHtml(label)}</text>`
+    );
   }
 
   return `<g class="iso-col-labels">${colLabelsGroup.join('\n')}</g>`;
-}
-
-import { RowLabelStyle } from '../data/types';
-
-function getContrastingColor(hex: string): string {
-  const cleanHex = hex.replace('#', '');
-  if (cleanHex.length === 3) {
-    const r = parseInt(cleanHex[0] + cleanHex[0], 16);
-    const g = parseInt(cleanHex[1] + cleanHex[1], 16);
-    const b = parseInt(cleanHex[2] + cleanHex[2], 16);
-    const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-    return yiq >= 128 ? '#1e293b' : '#ffffff';
-  } else if (cleanHex.length === 6) {
-    const r = parseInt(cleanHex.substring(0, 2), 16);
-    const g = parseInt(cleanHex.substring(2, 4), 16);
-    const b = parseInt(cleanHex.substring(4, 6), 16);
-    const yiq = (r * 299 + g * 587 + b * 114) / 1000;
-    return yiq >= 128 ? '#1e293b' : '#ffffff';
-  }
-  return '#ffffff';
 }
 
 export interface RowLabelParams {
   rowLabels: string[];
   rowLabelInterval: number;
   rows: number;
-  cLabel: number;
+  lines: LabelLines;
+  labelMode: LabelMode;
   geometryConfig: GeometryConfig;
   labelColor: string;
   labelFontSize: number;
-  labelPosition: 'behind' | 'front';
   escapeHtml: (str: string) => string;
   rowLabelStyle?: RowLabelStyle;
-  labelAngle?: number; // Rotation in degrees about the label anchor (default: 0). Use ~-projectionAngle
-  labelLift?: number; // Vertical uplift in px for every label (default: 0). Wall height seats labels on wall top. to align labels with the row axis.
+  labelAngle?: number; // Rotation in degrees about the label anchor (default: 0). Positive = clockwise.
+  labelLift?: number; // Vertical uplift in px for every label (default: 0). Wall height seats labels on the wall top.
 }
 
 export function renderRowLabels(params: RowLabelParams): string {
@@ -100,19 +111,17 @@ export function renderRowLabels(params: RowLabelParams): string {
     rowLabels,
     rowLabelInterval,
     rows,
-    cLabel,
+    lines,
+    labelMode,
     geometryConfig,
     labelColor,
     labelFontSize,
-    labelPosition,
     escapeHtml,
     rowLabelStyle
   } = params;
 
-  const { gridSize, gap, cosAngle, sinAngle } = geometryConfig;
-  const offset = gap / 2;
   const rowLabelsGroup: string[] = [];
-  const rowAnchor = labelPosition === 'front' ? 'start' : 'end';
+  const rowAnchor = lines.rowSide === 'front' ? 'start' : 'end';
   const rowAngle = params.labelAngle ?? 0;
   const rowLift = params.labelLift ?? 0;
   // At +/-90 degrees the text runs perpendicular to the anchor direction, so an
@@ -125,57 +134,91 @@ export function renderRowLabels(params: RowLabelParams): string {
   const styleFontSize = rowLabelStyle?.fontSize ?? labelFontSize;
   const styleFontFamily = rowLabelStyle?.fontFamily ?? 'sans-serif';
   const padding = rowLabelStyle?.padding ?? 4;
-  
+  const rx = rowLabelStyle?.borderRadius ?? 2;
+  const bgOpacity = rowLabelStyle?.backgroundOpacity ?? 0.8;
+
   let styleColor = rowLabelStyle?.color;
   if (!styleColor) {
-    if (rowLabelStyle?.backgroundColor) {
-      styleColor = getContrastingColor(rowLabelStyle.backgroundColor);
-    } else {
-      styleColor = labelColor;
-    }
+    styleColor = rowLabelStyle?.backgroundColor
+      ? contrastingTextColor(rowLabelStyle.backgroundColor)
+      : labelColor;
   }
 
   for (let r = 0; r < rows; r += rowLabelInterval) {
     const label = rowLabels[r];
-    if (label) {
-      const xStart = cLabel * gridSize + offset;
-      const yStart = r * gridSize + offset;
-      const x = (xStart - yStart) * cosAngle;
-      const y = (xStart + yStart) * sinAngle;
+    if (!label) continue;
 
-      const adjustedX = labelPosition === 'front' ? x + 6 : x - 6;
-      // Adjust alignment slightly for background boxes vs plain text
-      const adjustedY = y + (styleFontSize * 0.3) - rowLift;
+    const textWidth = estimateTextWidth(label, styleFontSize);
+    const rectW = textWidth + 2 * padding;
+    const rectH = styleFontSize + 2 * padding;
 
-      const rowParts: string[] = [];
-      if (rowLabelStyle?.backgroundColor) {
-        // Estimate text width
-        const textWidth = label.length * styleFontSize * 0.55;
-        const rectX = effectiveRowAnchor === 'middle' ? adjustedX - textWidth / 2 - padding : rowAnchor === 'end' ? adjustedX - textWidth - padding : adjustedX - padding;
-        const rectY = adjustedY - styleFontSize + (styleFontSize * 0.1) - padding;
-        const rectW = textWidth + 2 * padding;
-        const rectH = styleFontSize + 2 * padding;
-        const rx = rowLabelStyle.borderRadius ?? 2;
-        const bgOpacity = rowLabelStyle.backgroundOpacity ?? 0.8;
-        
-        rowParts.push(
-          `<rect x="${rectX.toFixed(2)}" y="${rectY.toFixed(2)}" width="${rectW.toFixed(2)}" height="${rectH.toFixed(2)}" rx="${rx}" fill="${rowLabelStyle.backgroundColor}" opacity="${bgOpacity}" />`
-        );
-      }
+    if (labelMode === 'axis') {
+      const anchor = axisLabelAnchor('row', r, lines, geometryConfig);
+      const rectX = anchor.textAnchor === 'end' ? -textWidth - padding : -padding;
+      const background = rowLabelStyle?.backgroundColor
+        ? `<rect x="${rectX.toFixed(2)}" y="${(-rectH / 2).toFixed(2)}" width="${rectW.toFixed(2)}" height="${rectH.toFixed(2)}" rx="${rx}" fill="${rowLabelStyle.backgroundColor}" opacity="${bgOpacity}" />`
+        : '';
+      rowLabelsGroup.push(renderAxisLabel({
+        x: anchor.x,
+        y: anchor.y - rowLift,
+        angle: rowAngle,
+        textAnchor: anchor.textAnchor,
+        text: escapeHtml(label),
+        color: styleColor,
+        fontSize: styleFontSize,
+        fontFamily: styleFontFamily,
+        background
+      }));
+      continue;
+    }
 
+    const { x, y } = labelGridPoint(lines.cLabel, r, geometryConfig);
+    const adjustedX = lines.rowSide === 'front' ? x + 6 : x - 6;
+    // Adjust alignment slightly for background boxes vs plain text
+    const adjustedY = y + (styleFontSize * 0.3) - rowLift;
+
+    const rowParts: string[] = [];
+    if (rowLabelStyle?.backgroundColor) {
+      const rectX = effectiveRowAnchor === 'middle' ? adjustedX - textWidth / 2 - padding : rowAnchor === 'end' ? adjustedX - textWidth - padding : adjustedX - padding;
+      const rectY = adjustedY - styleFontSize + (styleFontSize * 0.1) - padding;
       rowParts.push(
-        `<text x="${adjustedX.toFixed(2)}" y="${adjustedY.toFixed(2)}" fill="${styleColor}" font-size="${styleFontSize}" font-family="${styleFontFamily}" text-anchor="${effectiveRowAnchor}">${escapeHtml(label)}</text>`
+        `<rect x="${rectX.toFixed(2)}" y="${rectY.toFixed(2)}" width="${rectW.toFixed(2)}" height="${rectH.toFixed(2)}" rx="${rx}" fill="${rowLabelStyle.backgroundColor}" opacity="${bgOpacity}" />`
       );
-      if (rowAngle !== 0) {
-        rowLabelsGroup.push(
-          `<g transform="rotate(${rowAngle} ${adjustedX.toFixed(2)} ${adjustedY.toFixed(2)})">${rowParts.join('')}</g>`
-        );
-      } else {
-        rowLabelsGroup.push(rowParts.join(''));
-      }
+    }
+
+    rowParts.push(
+      `<text x="${adjustedX.toFixed(2)}" y="${adjustedY.toFixed(2)}" fill="${styleColor}" font-size="${styleFontSize}" font-family="${styleFontFamily}" text-anchor="${effectiveRowAnchor}">${escapeHtml(label)}</text>`
+    );
+    if (rowAngle !== 0) {
+      rowLabelsGroup.push(
+        `<g transform="rotate(${rowAngle} ${adjustedX.toFixed(2)} ${adjustedY.toFixed(2)})">${rowParts.join('')}</g>`
+      );
+    } else {
+      rowLabelsGroup.push(rowParts.join(''));
     }
   }
 
   return `<g class="iso-row-labels">${rowLabelsGroup.join('\n')}</g>`;
 }
 
+/**
+ * Text lying flat on a bar's top face, sheared into the floor plane. It belongs
+ * inside the bar's group so taller bars in front paint over it like over the bar.
+ */
+export function renderFaceText(params: {
+  c: number;
+  r: number;
+  h: number;
+  text: string;
+  color: string;
+  geometryConfig: GeometryConfig;
+  escapeHtml: (str: string) => string;
+}): string {
+  const { c, r, h, text, color, geometryConfig, escapeHtml } = params;
+  const { gridSize, cosAngle, sinAngle } = geometryConfig;
+  const x = (c - r) * gridSize * cosAngle;
+  const y = (c + r + 1) * gridSize * sinAngle - h;
+  const fontSize = gridSize * 0.38;
+  const matrix = `matrix(${cosAngle.toFixed(4)} ${sinAngle.toFixed(4)} ${(-cosAngle).toFixed(4)} ${sinAngle.toFixed(4)} ${x.toFixed(2)} ${y.toFixed(2)})`;
+  return `<text class="iso-face-text" transform="${matrix}" y="${(fontSize * 0.35).toFixed(2)}" fill="${color}" font-size="${fontSize.toFixed(2)}" font-weight="600" font-family="sans-serif" text-anchor="middle">${escapeHtml(text)}</text>`;
+}

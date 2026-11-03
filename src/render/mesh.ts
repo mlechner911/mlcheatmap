@@ -4,8 +4,9 @@
  * Licensed under the MIT License.
  */
 
-import { GeometryConfig } from './geometry';
+import { type GeometryConfig, getGridIntersection } from './geometry';
 import { getColorForValue, shadeHex } from './color';
+import type { CustomColorScheme } from '../data/types';
 
 export interface MeshVertex {
   x: number;
@@ -21,15 +22,9 @@ export function projectVertex(
   h: number,
   config: GeometryConfig
 ): MeshVertex {
-  const { gridSize, cosAngle, sinAngle } = config;
   // Mesh vertices touch directly (no gap padding between polygons)
-  const xStart = col * gridSize;
-  const yStart = row * gridSize;
-
-  return {
-    x: (xStart - yStart) * cosAngle,
-    y: (xStart + yStart) * sinAngle - h
-  };
+  const floor = getGridIntersection(col, row, config);
+  return { x: floor.x, y: floor.y - h };
 }
 
 export interface RenderMeshParams {
@@ -44,8 +39,8 @@ export interface RenderMeshParams {
   v2: number; // Front value
   v3: number; // Left value
   maxAbsValue: number;
-  theme: any;
-  negativeTheme: any;
+  theme: CustomColorScheme;
+  negativeTheme: CustomColorScheme;
   interpolateColors?: boolean;
   geometryConfig: GeometryConfig;
   opacity?: number;
@@ -54,6 +49,22 @@ export interface RenderMeshParams {
   triangulateMesh?: boolean; // Decompose quad into planar triangles (default: true)
   useSvg2Mesh?: boolean;     // Experimental: use SVG 2.0 meshGradient (default: false)
   shading?: boolean;         // Toggle 3D light shading on the mesh terrain (default: true)
+}
+
+// Normalized light vector L = (1, -1, 2) / sqrt(6)
+const LIGHT_X = 0.408;
+const LIGHT_Y = -0.408;
+const LIGHT_Z = 0.816;
+
+/** Brightness factor of a surface from the height differences along its two floor axes. */
+function shadowCoefficient(dhCol: number, dhRow: number, gridSize: number, shading: boolean): number {
+  const nx = -gridSize * dhCol;
+  const ny = -gridSize * dhRow;
+  const nz = gridSize * gridSize;
+  const length = Math.sqrt(nx * nx + ny * ny + nz * nz);
+  const dot = (nx / length) * LIGHT_X + (ny / length) * LIGHT_Y + (nz / length) * LIGHT_Z;
+  const intensity = Math.max(-1, Math.min(1, dot));
+  return shading ? 0.85 + 0.25 * intensity : 1.0;
 }
 
 /**
@@ -95,27 +106,9 @@ export function renderMeshQuad(params: RenderMeshParams): string {
 
   const opacityAttr = opacity !== undefined && opacity < 1 ? ` opacity="${opacity}"` : '';
 
-  // Normalized Light Vector L = (1, -1, 2)
-  // L normalized = (1 / sqrt(6), -1 / sqrt(6), 2 / sqrt(6)) = (0.408, -0.408, 0.816)
-  const lx = 0.408;
-  const ly = -0.408;
-  const lz = 0.816;
-
   // --- OPTION A: Experimental SVG 2.0 meshGradient ---
   if (useSvg2Mesh) {
-    const avgVal = (v0 + v1 + v2 + v3) / 4;
-    const baseColor = getColorForValue(avgVal, maxAbsValue, theme, negativeTheme, interpolateColors);
-
-    // Compute surface normal for shading coefficient
-    const dh1 = h1 - h0;
-    const dh3 = h3 - h0;
-    const nx = -gridSize * dh1;
-    const ny = -gridSize * dh3;
-    const nz = gridSize * gridSize;
-    const length = Math.sqrt(nx * nx + ny * ny + nz * nz);
-    const dot = (nx / length) * lx + (ny / length) * ly + (nz / length) * lz;
-    const intensity = Math.max(-1, Math.min(1, dot));
-    const shadowCoef = shading ? (0.85 + 0.25 * intensity) : 1.0;
+    const shadowCoef = shadowCoefficient(h1 - h0, h3 - h0, gridSize, shading);
 
     // Resolve individual corner colors and apply shadow
     const col0 = shadeHex(getColorForValue(v0, maxAbsValue, theme, negativeTheme, interpolateColors), shadowCoef);
@@ -148,15 +141,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
   // --- OPTION B: Decompose Quad into Planar Triangles (Low-Poly Shading) ---
   if (triangulateMesh) {
     // Triangle A: Back (0) -> Right (1) -> Front (2)
-    const dh1_A = h1 - h0;
-    const dh2_A = h2 - h0;
-    const nx_A = -gridSize * dh1_A;
-    const ny_A = -gridSize * (dh2_A - dh1_A);
-    const nz_A = gridSize * gridSize;
-    const len_A = Math.sqrt(nx_A * nx_A + ny_A * ny_A + nz_A * nz_A);
-    const dot_A = (nx_A / len_A) * lx + (ny_A / len_A) * ly + (nz_A / len_A) * lz;
-    const intensity_A = Math.max(-1, Math.min(1, dot_A));
-    const shadowCoef_A = shading ? (0.85 + 0.25 * intensity_A) : 1.0;
+    const shadowCoef_A = shadowCoefficient(h1 - h0, h2 - h1, gridSize, shading);
 
     const avgVal_A = (v0 + v1 + v2) / 3;
     const baseColor_A = getColorForValue(avgVal_A, maxAbsValue, theme, negativeTheme, interpolateColors);
@@ -164,15 +149,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     const stroke_A = shadeHex(fill_A, 0.85);
 
     // Triangle B: Back (0) -> Front (2) -> Left (3)
-    const dh2_B = h2 - h0;
-    const dh3_B = h3 - h0;
-    const nx_B = -gridSize * (dh2_B - dh3_B);
-    const ny_B = -gridSize * dh3_B;
-    const nz_B = gridSize * gridSize;
-    const len_B = Math.sqrt(nx_B * nx_B + ny_B * ny_B + nz_B * nz_B);
-    const dot_B = (nx_B / len_B) * lx + (ny_B / len_B) * ly + (nz_B / len_B) * lz;
-    const intensity_B = Math.max(-1, Math.min(1, dot_B));
-    const shadowCoef_B = shading ? (0.85 + 0.25 * intensity_B) : 1.0;
+    const shadowCoef_B = shadowCoefficient(h2 - h3, h3 - h0, gridSize, shading);
 
     const avgVal_B = (v0 + v2 + v3) / 3;
     const baseColor_B = getColorForValue(avgVal_B, maxAbsValue, theme, negativeTheme, interpolateColors);
@@ -190,16 +167,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
   const avgVal = (v0 + v1 + v2 + v3) / 4;
   const baseColor = getColorForValue(avgVal, maxAbsValue, theme, negativeTheme, interpolateColors);
 
-  const dh1 = h1 - h0;
-  const dh3 = h3 - h0;
-  const nx = -gridSize * dh1;
-  const ny = -gridSize * dh3;
-  const nz = gridSize * gridSize;
-
-  const length = Math.sqrt(nx * nx + ny * ny + nz * nz);
-  const dot = (nx / length) * lx + (ny / length) * ly + (nz / length) * lz;
-  const intensity = Math.max(-1, Math.min(1, dot));
-  const shadowCoef = shading ? (0.85 + 0.25 * intensity) : 1.0;
+  const shadowCoef = shadowCoefficient(h1 - h0, h3 - h0, gridSize, shading);
   const fill = shadeHex(baseColor, shadowCoef);
   const stroke = shadeHex(fill, 0.85);
 

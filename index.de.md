@@ -53,7 +53,7 @@ Lade die Rendering-Engine direkt in modernen Browsern ohne Build-Tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -65,10 +65,10 @@ Lade die Skripte synchron über Standard-HTML-Tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.umd.js"></script>
 
 <script>
   // Zugriff über globale Variablen:
@@ -89,7 +89,7 @@ Instanziere ein Grid, fülle Koordinaten aus und rendere das SVG:
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Oder Browser-native ES6-Modul-CDN-Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
 
 // 1. Grid erstellen (8 Spalten x 8 Zeilen)
 const grid = new HeatmapGrid(8, 8);
@@ -122,8 +122,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Oder Browser-native ES6-Modul-CDN-Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.2.1/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.0/dist/presets.es.js';
 
 // 1. Wöchentliche 24h-Ansicht (24 Spalten für Stunden x 7 Zeilen für Tage)
 const events = [
@@ -166,7 +166,11 @@ Du kannst die Darstellung anpassen, indem du diese Einstellungen an `.render()` 
 | `interactive` | `boolean` | `true` | Bettet mouseover Title-Tags für Tooltips ein. |
 | `animated` | `boolean` | `true` | Aktiviert die zeitlich versetzten Lade-Animationen. |
 | `projectionAngle` | `number` | `30` | Isometrischer Kamerawinkel in Grad (10° bis 60°). |
-| `labelPosition` | `'behind' \| 'front'` | `'behind'` | Position der Achsenbeschriftungen relativ zum Gitter. |
+| `labelPosition` | `'behind' \| 'front'` | `'front'` | Position der Achsenbeschriftungen relativ zum Gitter. Hintere Labels können von hohen Säulen verdeckt werden. |
+| `labelMode` | `'screen' \| 'axis'` | `'screen'` | `'axis'` dreht die Labels parallel zur benachbarten Rasterachse. Sie überlappen dann nicht, solange `gridSize * sin(2 * projectionAngle)` größer als die Schrift ist. |
+| `colLabelInterval` / `rowLabelInterval` | `number \| 'auto'` | `1` | Jede n-te Zelle beschriften. `'auto'` lässt so viele Labels weg, dass keine überlappen. |
+| `labelFontSize` | `number` | `9` | Schriftgröße der Achsenbeschriftungen in px. |
+| `gridCells` | `'all' \| 'data'` | `'all'` | Bodenlinien für alle Zellen oder nur unter Zellen mit Wert. |
 | `interpolateColors` | `boolean` | `false` | Aktiviert stufenlose Farbverläufe (RGB-Farbinterpolation). |
 | `showRowLabels` | `boolean` | `true` | Schaltet die Sichtbarkeit der Zeilenbeschriftungen (Serientext) ein/aus. |
 | `colLabelAngle` / `rowLabelAngle` | `number` | `0` | Drehung der Beschriftungen in Grad um den Ankerpunkt. Label-Anhebung: `labelLift` (px, Default `0`) setzt Labels auf die Wandoberkante; die Wand zieht Führungslinien zu jeder Gitterlinie. `rowLabelAngle: -30` richtet Tageslabels bei 30°-Projektion an der Zeilenachse aus. |

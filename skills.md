@@ -55,10 +55,10 @@ interface HeatmapOptions {
    axisWallColor?: string;             // Wall fill color (default: height-grid wall default)
   gridColor?: string;                // Custom grid line color (default: #e1e4e8)
   colLabels?: string[];              // Text labels for columns
-  colLabelInterval?: number;         // Label rendering frequency for columns (default: 1)
+  colLabelInterval?: number | 'auto'; // Label rendering frequency for columns (default: 1); 'auto' avoids overlaps
    colLabelAngle?: number;              // Column label rotation in degrees about the anchor (default: 0). Positive = clockwise.
   rowLabels?: string[];              // Text labels for rows
-  rowLabelInterval?: number;         // Label rendering frequency for rows (default: 1)
+  rowLabelInterval?: number | 'auto'; // Label rendering frequency for rows (default: 1); 'auto' avoids overlaps
    rowLabelAngle?: number; At +/-90 the anchor auto-centers (middle) so the pill straddles the iso edge line of its row.
    labelLift?: number;                    // Vertical uplift in px for all axis labels (default: 0). Wall height seats labels on wall top.              // Row label rotation in degrees about the anchor (default: 0). ~-projectionAngle aligns labels with the row axis.
   interactive?: boolean;             // Embed title tags and hover dataset hooks (default: true)
@@ -66,7 +66,10 @@ interface HeatmapOptions {
   padding?: number;                  // Padding around drawing boundaries (default: 20)
   title?: string;                    // Title placed in the SVG (default: none)
   projectionAngle?: number;          // Isometric camera slant in degrees: 10 to 60 (default: 30)
-  labelPosition?: 'behind' | 'front';// Label rendering layer/location (default: 'behind')
+  labelPosition?: 'behind' | 'front';// Label rendering layer/location (default: 'front'; rear labels can be hidden by tall bars)
+  labelMode?: 'screen' | 'axis';     // 'axis' rotates labels along the neighbouring grid axis so they cannot overlap (default: 'screen')
+  labelFontSize?: number;            // Axis label font size in px (default: 9)
+  gridCells?: 'all' | 'data';        // Floor lines for every cell or only under cells with a value (default: 'all')
   zeroColor?: string;                // Custom color override for zero value cells
   shape?: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape); // Shape type
   opacity?: number;                  // Elements opacity: 0.1 to 1.0 (default: 1.0)

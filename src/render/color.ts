@@ -38,6 +38,14 @@ export function shadeHex(hex: string, factor: number): string {
   }
 }
 
+/** Readable text color on a solid background; white for anything that is not a hex color. */
+export function contrastingTextColor(background: string): string {
+  if (!/^#?([0-9a-f]{3}|[0-9a-f]{6})$/i.test(background)) return '#ffffff';
+  const { r, g, b } = parseHex(background);
+  const yiq = (r * 299 + g * 587 + b * 114) / 1000;
+  return yiq >= 128 ? '#1e293b' : '#ffffff';
+}
+
 export const LIGHT_THEMES: Record<ColorSchemeType, CustomColorScheme> = {
   github: {
     empty: '#ebedf0',

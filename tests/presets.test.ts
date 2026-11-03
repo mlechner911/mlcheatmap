@@ -68,4 +68,8 @@ describe('aggregate24h', () => {
     expect(grid.rows).toBe(7);
     expect(grid.rowLabels![0]).toBe('Mon');
   });
+
+  it('leaves out row labels with rowStyle: none', () => {
+    expect(presets.aggregate24h([], { rowStyle: 'none' }).rowLabels).toBeUndefined();
+  });
 });

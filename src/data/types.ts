@@ -10,6 +10,7 @@ export interface HeatmapDataPoint {
   value: number | null;
   label?: string;
   color?: string; // Optional specific color override for this data point
+  faceText?: string; // Short text lying on the top face of a prism or cylinder (e.g. a day number)
 }
 
 /**
@@ -64,6 +65,15 @@ export interface HeightGridOptions {
 }
 
 /**
+ * How axis labels are oriented.
+ * - `screen`: horizontal text next to the axis (default).
+ * - `axis`: text rotated to run along the neighbouring grid axis. Parallel labels
+ *   stay clear of each other as long as `gridSize * sin(2 * projectionAngle)`
+ *   exceeds the font size. Ignores `colLabelAngle` and `rowLabelAngle`.
+ */
+export type LabelMode = 'screen' | 'axis';
+
+/**
  * Styling for row (series) text annotations. A `backgroundColor` adds a pill
  * backdrop behind each label (auto-contrasting text unless `color` is set);
  * combine with `rowLabelAngle: -90` for vertical, overlap-free day labels.
@@ -106,6 +116,7 @@ export interface HeatmapOptions {
   valueDomain?: ValueDomain; // Fixed value domain for height/color scaling. Overrides the per-grid data min/max — use this to keep several composite grids (e.g. monthly blocks) on a shared scale.
   colorScheme?: ColorSchemeType | CustomColorScheme; // Preset or custom colors
   showGrid?: boolean;      // Show isometric bottom grid lines (default: true)
+  gridCells?: 'all' | 'data'; // Draw floor lines for every cell or only under cells with a value (default: 'all')
   gridColor?: string;      // Color of grid lines (default: '#e1e4e8' or dark equivalent)
   showAxis?: boolean;      // Draw baseline axis rules with tick marks along the label edges (default: false)
   axisColor?: string;      // Color of axis rules and ticks (default: theme labelColor)
@@ -115,11 +126,13 @@ export interface HeatmapOptions {
   axisWallHeight?: number; // Wall height in px (default: maxHeight)
   axisWallColor?: string;  // Wall fill color (default: height-grid wall default)
   colLabels?: string[];    // Column labels (e.g. Months or Hours)
-  colLabelInterval?: number; // Label interval for columns (default: 1)
+  colLabelInterval?: number | 'auto'; // Label interval for columns (default: 1). 'auto' drops as many labels as needed to avoid overlaps.
   colLabelAngle?: number;  // Column label rotation in degrees about the anchor (default: 0). ~projectionAngle aligns labels with the column axis.
   rowLabels?: string[];    // Row labels (e.g. Days of the week)
-  rowLabelInterval?: number; // Label interval for rows (default: 1)
+  rowLabelInterval?: number | 'auto'; // Label interval for rows (default: 1). 'auto' drops as many labels as needed to avoid overlaps.
   rowLabelAngle?: number;  // Row label rotation in degrees about the anchor (default: 0). ~-projectionAngle aligns labels with the row axis.
+  labelMode?: LabelMode;     // Orientation of axis labels (default: 'screen')
+  labelFontSize?: number;    // Font size of axis labels in px (default: 9)
   labelLift?: number;        // Vertical uplift in px for all axis labels (default: 0). Set to wall height to seat labels on top of axis walls.
   showRowLabels?: boolean; // Toggle visibility of row labels (default: true). NOTE: pass false to hide labels inherited from a HeatmapGrid — passing rowLabels: undefined falls back to the grid's own labels.
   rowLabelStyle?: RowLabelStyle; // Styling options for row labels
@@ -129,7 +142,7 @@ export interface HeatmapOptions {
   title?: string;          // Optional title for the heatmap
   tooltipFormatter?: (point: HeatmapDataPoint) => string;
   projectionAngle?: number; // Projection angle in degrees (default: 30)
-  labelPosition?: 'behind' | 'front'; // Position of axis labels relative to the grid (default: 'behind')
+  labelPosition?: 'behind' | 'front'; // Position of axis labels relative to the grid (default: 'front'; rear labels can be hidden by tall bars)
   zeroColor?: string;      // Custom color for zero value elements
   shape?: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape); // Shape of the 3D bars (default: 'prism')
   opacity?: number;        // Opacity of the 3D bars (default: 1.0)
@@ -144,3 +157,9 @@ export interface HeatmapOptions {
   creator?: string;        // Creator name for SVG RDF metadata (default: 'Michael Lechner')
   generatorComment?: string;// Custom XML generator comment string (default: 'Generated with MLC Isometric 3D Heatmap Library')
 }
+
+/**
+ * Options a {@link HeatmapOptions | grid} brings along for rendering, for example
+ * from a preset. Options passed to the render call take precedence.
+ */
+export type RenderDefaults = Partial<Omit<HeatmapOptions, 'cols' | 'rows'>>;

@@ -4,7 +4,7 @@
  * Licensed under the MIT License.
  */
 
-import { HeatmapDataPoint, HeatmapOptions } from './types';
+import { HeatmapDataPoint, HeatmapOptions, RenderDefaults } from './types';
 import { renderHeatmap } from '../render/renderer';
 
 /**
@@ -16,6 +16,7 @@ export class HeatmapGrid {
   public colLabels?: string[];
   public rowLabels?: string[];
   public title?: string;
+  public renderDefaults?: RenderDefaults;
   private cells: Map<string, HeatmapDataPoint> = new Map();
 
   constructor(cols: number, rows: number) {
@@ -26,11 +27,11 @@ export class HeatmapGrid {
   /**
    * Sets/overrides the value and options of a specific coordinate cell.
    */
-  setCell(col: number, row: number, value: number | null, label?: string, color?: string): this {
+  setCell(col: number, row: number, value: number | null, label?: string, color?: string, faceText?: string): this {
     if (col < 0 || col >= this.cols || row < 0 || row >= this.rows) {
       throw new Error(`Cell index out of bounds: col ${col}, row ${row} on a ${this.cols}x${this.rows} grid`);
     }
-    this.cells.set(`${col},${row}`, { col, row, value, label, color });
+    this.cells.set(`${col},${row}`, { col, row, value, label, color, faceText });
     return this;
   }
 
