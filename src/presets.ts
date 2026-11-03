@@ -139,7 +139,7 @@ export const presets = {
       for (let r = 0; r < rows; r++) {
         const value = grid[c][r];
         const hourLabel = c.toString().padStart(2, '0') + ':00';
-        gridModel.setCell(c, r, value, `${rowLabels[r]}, ${hourLabel} — ${value} events`);
+        gridModel.setCell(c, r, value, `${rowLabels[r]}, ${hourLabel}: ${value}`);
       }
     }
 
@@ -191,7 +191,7 @@ export const presets = {
       const r = cellIndex % 7;
       const value = valuesMap.get(d) ?? 0;
       const dateStr = dateKey(new Date(year, month, d));
-      gridModel.setCell(c, r, value, `${dateStr} — ${value} units`);
+      gridModel.setCell(c, r, value, `${dateStr}: ${value}`);
     }
 
     // Column Labels: Week indicator tags (e.g. "W1", "W2")

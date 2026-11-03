@@ -97,7 +97,7 @@ export function aggregateSixMonthsDouble(
       const value = valuesMap.get(key) ?? 0;
       const r = r_day * 2 + mIndex;
       const mLabel = mIndex === 0 ? 'AM' : 'PM';
-      gridModel.setCell(c, r, value, `${dateStr} (${mLabel}) — ${value} units`);
+      gridModel.setCell(c, r, value, `${dateStr} (${mLabel}): ${value}`);
     }
 
     current.setDate(current.getDate() + 1);

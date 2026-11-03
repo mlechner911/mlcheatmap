@@ -76,7 +76,7 @@ export function aggregateYear(
       }
     }
 
-    gridModel.setCell(c, r, value, `${key} — ${value} contributions`);
+    gridModel.setCell(c, r, value, `${key}: ${value}`);
 
     current.setDate(current.getDate() + 1);
   }
