@@ -69,7 +69,7 @@ const flat = presets
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
 <object type="image/svg+xml" data="/books/mlcheatmap/images/flat_calendar_september.svg" style="width:100%;aspect-ratio:1.390;display:block"></object>
 </div>
-<figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Derselbe September als normale Heatmap.</figcaption>
+<figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Derselbe September als normale Heatmap. <a href="https://play.mlcgo.eu/isometric-heatmap/flat">Die flache Ansicht im Playground ausprobieren</a>.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
