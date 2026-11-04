@@ -1,29 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="-151.29 -79.00 354.11 276.00" width="100%" height="100%">
     
-    <g class="iso-heatmap-group" data-min-x="-131.29" data-min-y="-59.00" data-width="220.57" data-height="175.00">
+    <g class="iso-heatmap-group iso-view-3d iso-animated" stroke-width="0.3" data-min-x="-131.29" data-min-y="-59.00" data-width="220.57" data-height="175.00">
       <!-- Generated with MLC Isometric 3D Heatmap Library -->
       <style>
-        @keyframes iso-grow {
-          from {
-            transform: scaleY(0);
-          }
-          to {
-            transform: scaleY(1);
-          }
+        @keyframes iso-grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+        .iso-view-3d .iso-bar{cursor:pointer;transition:filter .2s ease}
+        .iso-view-3d .iso-bar:hover{filter:brightness(1.1) drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+        @media (prefers-reduced-motion:no-preference){
+          .iso-view-3d .iso-bar{transition:transform .2s cubic-bezier(.25,.46,.45,.94),filter .2s ease}
+          .iso-view-3d .iso-bar:not(.iso-surface):hover{transform:translateY(-3px)}
+          .iso-view-3d.iso-animated .iso-bar{transform-box:fill-box;transform-origin:bottom;animation-name:iso-grow;animation-duration:.6s;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-fill-mode:backwards}
+          .iso-view-3d.iso-animated .iso-bar.iso-neg{transform-origin:top}
         }
-        .iso-bar {
-          transform-box: fill-box;
-          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
-          cursor: pointer;
-        }
-        .iso-bar:hover {
-          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-          transform: translateY(-3px) scaleY(1);
-        }
-        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
-          transition: fill 0.2s ease;
-        }
+        .iso-d1{animation-delay:15ms}.iso-d2{animation-delay:30ms}.iso-d3{animation-delay:45ms}.iso-d4{animation-delay:60ms}.iso-d5{animation-delay:75ms}.iso-d6{animation-delay:90ms}.iso-d7{animation-delay:105ms}.iso-d8{animation-delay:120ms}.iso-d9{animation-delay:135ms}.iso-d10{animation-delay:150ms}
       </style>
       <defs><linearGradient id="cyl-grad-fed7aa" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#d8b791" stop-opacity="1" />
@@ -61,247 +50,67 @@
 <polygon class="iso-grid-cell" points="-27.71,16.00 -41.57,24.00 -27.71,32.00 -13.86,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-41.57,24.00 -55.43,32.00 -41.57,40.00 -27.71,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="-55.43,32.00 -69.28,40.00 -55.43,48.00 -41.57,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="4" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
-      <title>2026-05-01: 5</title>
-      <polygon class="iso-face-left" points="-67.55,30.00 -55.43,37.00 -55.43,47.00 -67.55,40.00" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-55.43,37.00 -43.30,30.00 -43.30,40.00 -55.43,47.00" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-55.43,23.00 -67.55,30.00 -55.43,37.00 -43.30,30.00" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d4" data-col="0" data-row="4" data-value="5" stroke-linejoin="round"><title>2026-05-01: 5</title><polygon class="iso-face-left" points="-67.55,30.00 -55.43,37.00 -55.43,47.00 -67.55,40.00" fill="#d8b791" stroke="#d8b791" /><polygon class="iso-face-right" points="-55.43,37.00 -43.30,30.00 -43.30,40.00 -55.43,47.00" fill="#b29777" stroke="#b29777" /><polygon class="iso-face-top" points="-55.43,23.00 -67.55,30.00 -55.43,37.00 -43.30,30.00" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="-69.28,40.00 -83.14,48.00 -69.28,56.00 -55.43,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="5" data-value="5" style="animation-delay: 75ms; transform-origin: bottom;">
-      <title>2026-05-02: 5</title>
-      <path d="M -75.34,38.00 L -75.34,48.00 A 6.06,3.50 0 0,0 -63.22,48.00 L -63.22,38.00 A 6.06,3.50 0 0,1 -75.34,38.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-69.28" cy="38.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d5" data-col="0" data-row="5" data-value="5"><title>2026-05-02: 5</title><path d="M -75.34,38.00 L -75.34,48.00 A 6.06,3.50 0 0,0 -63.22,48.00 L -63.22,38.00 A 6.06,3.50 0 0,1 -75.34,38.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" /><ellipse cx="-69.28" cy="38.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="-83.14,48.00 -96.99,56.00 -83.14,64.00 -69.28,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="6" data-value="15" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>2026-05-03: 15</title>
-        <polygon class="iso-face-left" points="-84.00,48.50 -96.13,55.50 -96.13,55.50 -84.00,48.50" fill="#c74b0a" stroke="#c74b0a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -96.13,55.50 C -93.82,51.83 -91.51,28.17 -89.20,29.50 L -77.08,22.50 C -79.39,21.17 -81.70,44.83 -84.00,48.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -96.13,55.50 L -96.13,55.50 C -93.82,51.83 -91.51,28.17 -89.20,29.50 L -89.20,59.50 C -91.51,58.17 -93.82,56.83 -96.13,55.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -89.20,29.50 C -86.89,30.83 -84.58,48.83 -82.27,58.50 L -70.15,51.50 C -72.46,41.83 -74.77,23.83 -77.08,22.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -89.20,59.50 L -89.20,29.50 C -86.89,30.83 -84.58,48.83 -82.27,58.50 L -82.27,63.50 C -84.58,62.17 -86.89,60.83 -89.20,59.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d6" data-col="0" data-row="6" data-value="15"><title>2026-05-03: 15</title><polygon class="iso-face-left" points="-84.00,48.50 -96.13,55.50 -96.13,55.50 -84.00,48.50" fill="#c74b0a" stroke="#c74b0a" stroke-linejoin="round" /><path class="iso-face-top" d="M -96.13,55.50 C -93.82,51.83 -91.51,28.17 -89.20,29.50 L -77.08,22.50 C -79.39,21.17 -81.70,44.83 -84.00,48.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -96.13,55.50 L -96.13,55.50 C -93.82,51.83 -91.51,28.17 -89.20,29.50 L -89.20,59.50 C -91.51,58.17 -93.82,56.83 -96.13,55.50 Z" fill="#a43e08" stroke="#a43e08" /><path class="iso-face-top" d="M -89.20,29.50 C -86.89,30.83 -84.58,48.83 -82.27,58.50 L -70.15,51.50 C -72.46,41.83 -74.77,23.83 -77.08,22.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -89.20,59.50 L -89.20,29.50 C -86.89,30.83 -84.58,48.83 -82.27,58.50 L -82.27,63.50 C -84.58,62.17 -86.89,60.83 -89.20,59.50 Z" fill="#a43e08" stroke="#a43e08" /></g>
 <polygon class="iso-grid-cell" points="13.86,8.00 0.00,16.00 13.86,24.00 27.71,16.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="0" data-value="5" style="animation-delay: 15ms; transform-origin: bottom;">
-      <title>2026-05-04: 5</title>
-      <polygon class="iso-face-left" points="1.73,6.00 13.86,13.00 13.86,23.00 1.73,16.00" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="13.86,13.00 25.98,6.00 25.98,16.00 13.86,23.00" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="13.86,-1.00 1.73,6.00 13.86,13.00 25.98,6.00" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d1" data-col="1" data-row="0" data-value="5" stroke-linejoin="round"><title>2026-05-04: 5</title><polygon class="iso-face-left" points="1.73,6.00 13.86,13.00 13.86,23.00 1.73,16.00" fill="#d8b791" stroke="#d8b791" /><polygon class="iso-face-right" points="13.86,13.00 25.98,6.00 25.98,16.00 13.86,23.00" fill="#b29777" stroke="#b29777" /><polygon class="iso-face-top" points="13.86,-1.00 1.73,6.00 13.86,13.00 25.98,6.00" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="0.00,16.00 -13.86,24.00 0.00,32.00 13.86,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="1" data-value="-10" style="animation-delay: 30ms; transform-origin: top;">
-      <title>2026-05-05: -10</title>
-      <path d="M -6.06,24.00 L -6.06,44.00 A 6.06,3.50 0 0,0 6.06,44.00 L 6.06,24.00 A 6.06,3.50 0 0,1 -6.06,24.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="0.00" cy="24.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d2 iso-neg" data-col="1" data-row="1" data-value="-10"><title>2026-05-05: -10</title><path d="M -6.06,24.00 L -6.06,44.00 A 6.06,3.50 0 0,0 6.06,44.00 L 6.06,24.00 A 6.06,3.50 0 0,1 -6.06,24.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" /><ellipse cx="0.00" cy="24.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="-13.86,24.00 -27.71,32.00 -13.86,40.00 0.00,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="2" data-value="15" style="animation-delay: 45ms; transform-origin: bottom;">
-        <title>2026-05-06: 15</title>
-        <polygon class="iso-face-left" points="-14.72,24.50 -26.85,31.50 -26.85,31.50 -14.72,24.50" fill="#c74b0a" stroke="#c74b0a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -26.85,31.50 C -24.54,27.83 -22.23,4.17 -19.92,5.50 L -7.79,-1.50 C -10.10,-2.83 -12.41,20.83 -14.72,24.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -26.85,31.50 L -26.85,31.50 C -24.54,27.83 -22.23,4.17 -19.92,5.50 L -19.92,35.50 C -22.23,34.17 -24.54,32.83 -26.85,31.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -19.92,5.50 C -17.61,6.83 -15.30,14.83 -12.99,19.50 L -0.87,12.50 C -3.18,7.83 -5.48,-0.17 -7.79,-1.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -19.92,35.50 L -19.92,5.50 C -17.61,6.83 -15.30,14.83 -12.99,19.50 L -12.99,39.50 C -15.30,38.17 -17.61,36.83 -19.92,35.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d3" data-col="1" data-row="2" data-value="15"><title>2026-05-06: 15</title><polygon class="iso-face-left" points="-14.72,24.50 -26.85,31.50 -26.85,31.50 -14.72,24.50" fill="#c74b0a" stroke="#c74b0a" stroke-linejoin="round" /><path class="iso-face-top" d="M -26.85,31.50 C -24.54,27.83 -22.23,4.17 -19.92,5.50 L -7.79,-1.50 C -10.10,-2.83 -12.41,20.83 -14.72,24.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -26.85,31.50 L -26.85,31.50 C -24.54,27.83 -22.23,4.17 -19.92,5.50 L -19.92,35.50 C -22.23,34.17 -24.54,32.83 -26.85,31.50 Z" fill="#a43e08" stroke="#a43e08" /><path class="iso-face-top" d="M -19.92,5.50 C -17.61,6.83 -15.30,14.83 -12.99,19.50 L -0.87,12.50 C -3.18,7.83 -5.48,-0.17 -7.79,-1.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -19.92,35.50 L -19.92,5.50 C -17.61,6.83 -15.30,14.83 -12.99,19.50 L -12.99,39.50 C -15.30,38.17 -17.61,36.83 -19.92,35.50 Z" fill="#a43e08" stroke="#a43e08" /></g>
 <polygon class="iso-grid-cell" points="-27.71,32.00 -41.57,40.00 -27.71,48.00 -13.86,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="3" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
-        <title>2026-05-07: 5</title>
-        <polygon class="iso-face-left" points="-28.58,32.50 -40.70,39.50 -40.70,43.50 -28.58,36.50" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -40.70,39.50 C -38.39,39.17 -36.08,32.17 -33.77,33.50 L -21.65,26.50 C -23.96,25.17 -26.27,32.17 -28.58,32.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -40.70,43.50 L -40.70,39.50 C -38.39,39.17 -36.08,32.17 -33.77,33.50 L -33.77,37.50 C -36.08,36.17 -38.39,43.17 -40.70,43.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -33.77,33.50 C -31.47,34.83 -29.16,36.17 -26.85,37.50 L -14.72,30.50 C -17.03,29.17 -19.34,27.83 -21.65,26.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -33.77,37.50 L -33.77,33.50 C -31.47,34.83 -29.16,36.17 -26.85,37.50 L -26.85,41.50 C -29.16,40.17 -31.47,38.83 -33.77,37.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d4" data-col="1" data-row="3" data-value="5"><title>2026-05-07: 5</title><polygon class="iso-face-left" points="-28.58,32.50 -40.70,39.50 -40.70,43.50 -28.58,36.50" fill="#d8b791" stroke="#d8b791" stroke-linejoin="round" /><path class="iso-face-top" d="M -40.70,39.50 C -38.39,39.17 -36.08,32.17 -33.77,33.50 L -21.65,26.50 C -23.96,25.17 -26.27,32.17 -28.58,32.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -40.70,43.50 L -40.70,39.50 C -38.39,39.17 -36.08,32.17 -33.77,33.50 L -33.77,37.50 C -36.08,36.17 -38.39,43.17 -40.70,43.50 Z" fill="#b29777" stroke="#b29777" /><path class="iso-face-top" d="M -33.77,33.50 C -31.47,34.83 -29.16,36.17 -26.85,37.50 L -14.72,30.50 C -17.03,29.17 -19.34,27.83 -21.65,26.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -33.77,37.50 L -33.77,33.50 C -31.47,34.83 -29.16,36.17 -26.85,37.50 L -26.85,41.50 C -29.16,40.17 -31.47,38.83 -33.77,37.50 Z" fill="#b29777" stroke="#b29777" /></g>
 <polygon class="iso-grid-cell" points="-41.57,40.00 -55.43,48.00 -41.57,56.00 -27.71,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="4" data-value="5" style="animation-delay: 75ms; transform-origin: bottom;">
-      <title>2026-05-08: 5</title>
-      <polygon class="iso-face-left" points="-53.69,38.00 -41.57,45.00 -41.57,55.00 -53.69,48.00" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-41.57,45.00 -29.44,38.00 -29.44,48.00 -41.57,55.00" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-41.57,31.00 -53.69,38.00 -41.57,45.00 -29.44,38.00" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d5" data-col="1" data-row="4" data-value="5" stroke-linejoin="round"><title>2026-05-08: 5</title><polygon class="iso-face-left" points="-53.69,38.00 -41.57,45.00 -41.57,55.00 -53.69,48.00" fill="#d8b791" stroke="#d8b791" /><polygon class="iso-face-right" points="-41.57,45.00 -29.44,38.00 -29.44,48.00 -41.57,55.00" fill="#b29777" stroke="#b29777" /><polygon class="iso-face-top" points="-41.57,31.00 -53.69,38.00 -41.57,45.00 -29.44,38.00" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="-55.43,48.00 -69.28,56.00 -55.43,64.00 -41.57,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="5" data-value="15" style="animation-delay: 90ms; transform-origin: bottom;">
-      <title>2026-05-09: 15</title>
-      <path d="M -61.49,26.00 L -61.49,56.00 A 6.06,3.50 0 0,0 -49.36,56.00 L -49.36,26.00 A 6.06,3.50 0 0,1 -61.49,26.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-55.43" cy="26.00" rx="6.06" ry="3.50" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d6" data-col="1" data-row="5" data-value="15"><title>2026-05-09: 15</title><path d="M -61.49,26.00 L -61.49,56.00 A 6.06,3.50 0 0,0 -49.36,56.00 L -49.36,26.00 A 6.06,3.50 0 0,1 -61.49,26.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" /><ellipse cx="-55.43" cy="26.00" rx="6.06" ry="3.50" fill="#ea580c" stroke="#ea580c" /></g>
 <polygon class="iso-grid-cell" points="-69.28,56.00 -83.14,64.00 -69.28,72.00 -55.43,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="6" data-value="-10" style="animation-delay: 105ms; transform-origin: top;">
-        <title>2026-05-10: -10</title>
-        
-        <path class="iso-face-right" d="M -70.15,56.50 L -70.15,51.50 C -67.84,61.17 -65.53,79.17 -63.22,80.50 L -63.22,60.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -63.22,60.50 L -63.22,80.50 C -60.91,81.83 -58.60,73.17 -56.29,69.50 L -56.29,64.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -82.27,58.50 C -79.96,68.17 -77.65,86.17 -75.34,87.50 L -63.22,80.50 C -65.53,79.17 -67.84,61.17 -70.15,51.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -75.34,87.50 C -73.03,88.83 -70.73,80.17 -68.42,76.50 L -56.29,69.50 C -58.60,73.17 -60.91,81.83 -63.22,80.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -82.27,63.50 C -79.96,64.83 -77.65,66.17 -75.34,67.50 L -63.22,60.50 C -65.53,59.17 -67.84,57.83 -70.15,56.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -75.34,67.50 C -73.03,68.83 -70.73,70.17 -68.42,71.50 L -56.29,64.50 C -58.60,63.17 -60.91,61.83 -63.22,60.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -82.27,63.50 L -82.27,58.50 C -79.96,68.17 -77.65,86.17 -75.34,87.50 L -75.34,67.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -75.34,67.50 L -75.34,87.50 C -73.03,88.83 -70.73,80.17 -68.42,76.50 L -68.42,71.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d7 iso-neg" data-col="1" data-row="6" data-value="-10"><title>2026-05-10: -10</title><path class="iso-face-right" d="M -70.15,56.50 L -70.15,51.50 C -67.84,61.17 -65.53,79.17 -63.22,80.50 L -63.22,60.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M -63.22,60.50 L -63.22,80.50 C -60.91,81.83 -58.60,73.17 -56.29,69.50 L -56.29,64.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-top" d="M -82.27,58.50 C -79.96,68.17 -77.65,86.17 -75.34,87.50 L -63.22,80.50 C -65.53,79.17 -67.84,61.17 -70.15,51.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -75.34,87.50 C -73.03,88.83 -70.73,80.17 -68.42,76.50 L -56.29,69.50 C -58.60,73.17 -60.91,81.83 -63.22,80.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -82.27,63.50 C -79.96,64.83 -77.65,66.17 -75.34,67.50 L -63.22,60.50 C -65.53,59.17 -67.84,57.83 -70.15,56.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -75.34,67.50 C -73.03,68.83 -70.73,70.17 -68.42,71.50 L -56.29,64.50 C -58.60,63.17 -60.91,61.83 -63.22,60.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-right" d="M -82.27,63.50 L -82.27,58.50 C -79.96,68.17 -77.65,86.17 -75.34,87.50 L -75.34,67.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M -75.34,67.50 L -75.34,87.50 C -73.03,88.83 -70.73,80.17 -68.42,76.50 L -68.42,71.50 Z" fill="#0a73a3" stroke="#0a73a3" /></g>
 <polygon class="iso-grid-cell" points="27.71,16.00 13.86,24.00 27.71,32.00 41.57,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="0" data-value="5" style="animation-delay: 30ms; transform-origin: bottom;">
-      <title>2026-05-11: 5</title>
-      <polygon class="iso-face-left" points="15.59,14.00 27.71,21.00 27.71,31.00 15.59,24.00" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="27.71,21.00 39.84,14.00 39.84,24.00 27.71,31.00" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="27.71,7.00 15.59,14.00 27.71,21.00 39.84,14.00" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d2" data-col="2" data-row="0" data-value="5" stroke-linejoin="round"><title>2026-05-11: 5</title><polygon class="iso-face-left" points="15.59,14.00 27.71,21.00 27.71,31.00 15.59,24.00" fill="#d8b791" stroke="#d8b791" /><polygon class="iso-face-right" points="27.71,21.00 39.84,14.00 39.84,24.00 27.71,31.00" fill="#b29777" stroke="#b29777" /><polygon class="iso-face-top" points="27.71,7.00 15.59,14.00 27.71,21.00 39.84,14.00" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="13.86,24.00 0.00,32.00 13.86,40.00 27.71,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="1" data-value="15" style="animation-delay: 45ms; transform-origin: bottom;">
-      <title>2026-05-12: 15</title>
-      <path d="M 7.79,2.00 L 7.79,32.00 A 6.06,3.50 0 0,0 19.92,32.00 L 19.92,2.00 A 6.06,3.50 0 0,1 7.79,2.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="13.86" cy="2.00" rx="6.06" ry="3.50" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d3" data-col="2" data-row="1" data-value="15"><title>2026-05-12: 15</title><path d="M 7.79,2.00 L 7.79,32.00 A 6.06,3.50 0 0,0 19.92,32.00 L 19.92,2.00 A 6.06,3.50 0 0,1 7.79,2.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" /><ellipse cx="13.86" cy="2.00" rx="6.06" ry="3.50" fill="#ea580c" stroke="#ea580c" /></g>
 <polygon class="iso-grid-cell" points="0.00,32.00 -13.86,40.00 0.00,48.00 13.86,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="2" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
-        <title>2026-05-13: 5</title>
-        
-        <path class="iso-face-top" d="M -12.99,19.50 C -10.68,24.17 -8.37,32.17 -6.06,33.50 L 6.06,26.50 C 3.75,25.17 1.44,17.17 -0.87,12.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -12.99,39.50 L -12.99,19.50 C -10.68,24.17 -8.37,32.17 -6.06,33.50 L -6.06,43.50 C -8.37,42.17 -10.68,40.83 -12.99,39.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -6.06,33.50 C -3.75,34.83 -1.44,46.17 0.87,52.50 L 12.99,45.50 C 10.68,39.17 8.37,27.83 6.06,26.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -6.06,43.50 L -6.06,33.50 C -3.75,34.83 -1.44,46.17 0.87,52.50 L 0.87,47.50 C -1.44,46.17 -3.75,44.83 -6.06,43.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d4" data-col="2" data-row="2" data-value="5"><title>2026-05-13: 5</title><path class="iso-face-top" d="M -12.99,19.50 C -10.68,24.17 -8.37,32.17 -6.06,33.50 L 6.06,26.50 C 3.75,25.17 1.44,17.17 -0.87,12.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -12.99,39.50 L -12.99,19.50 C -10.68,24.17 -8.37,32.17 -6.06,33.50 L -6.06,43.50 C -8.37,42.17 -10.68,40.83 -12.99,39.50 Z" fill="#b29777" stroke="#b29777" /><path class="iso-face-top" d="M -6.06,33.50 C -3.75,34.83 -1.44,46.17 0.87,52.50 L 12.99,45.50 C 10.68,39.17 8.37,27.83 6.06,26.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -6.06,43.50 L -6.06,33.50 C -3.75,34.83 -1.44,46.17 0.87,52.50 L 0.87,47.50 C -1.44,46.17 -3.75,44.83 -6.06,43.50 Z" fill="#b29777" stroke="#b29777" /></g>
 <polygon class="iso-grid-cell" points="-13.86,40.00 -27.71,48.00 -13.86,56.00 0.00,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="3" data-value="5" style="animation-delay: 75ms; transform-origin: bottom;">
-        <title>2026-05-14: 5</title>
-        
-        <path class="iso-face-top" d="M -26.85,37.50 C -24.54,38.83 -22.23,40.17 -19.92,41.50 L -7.79,34.50 C -10.10,33.17 -12.41,31.83 -14.72,30.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -26.85,41.50 L -26.85,37.50 C -24.54,38.83 -22.23,40.17 -19.92,41.50 L -19.92,45.50 C -22.23,44.17 -24.54,42.83 -26.85,41.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -19.92,41.50 C -17.61,42.83 -15.30,37.50 -12.99,35.50 L -0.87,28.50 C -3.18,30.50 -5.48,35.83 -7.79,34.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -19.92,45.50 L -19.92,41.50 C -17.61,42.83 -15.30,37.50 -12.99,35.50 L -12.99,39.50 C -15.30,41.50 -17.61,46.83 -19.92,45.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d5" data-col="2" data-row="3" data-value="5"><title>2026-05-14: 5</title><path class="iso-face-top" d="M -26.85,37.50 C -24.54,38.83 -22.23,40.17 -19.92,41.50 L -7.79,34.50 C -10.10,33.17 -12.41,31.83 -14.72,30.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -26.85,41.50 L -26.85,37.50 C -24.54,38.83 -22.23,40.17 -19.92,41.50 L -19.92,45.50 C -22.23,44.17 -24.54,42.83 -26.85,41.50 Z" fill="#b29777" stroke="#b29777" /><path class="iso-face-top" d="M -19.92,41.50 C -17.61,42.83 -15.30,37.50 -12.99,35.50 L -0.87,28.50 C -3.18,30.50 -5.48,35.83 -7.79,34.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -19.92,45.50 L -19.92,41.50 C -17.61,42.83 -15.30,37.50 -12.99,35.50 L -12.99,39.50 C -15.30,41.50 -17.61,46.83 -19.92,45.50 Z" fill="#b29777" stroke="#b29777" /></g>
 <polygon class="iso-grid-cell" points="-27.71,48.00 -41.57,56.00 -27.71,64.00 -13.86,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="4" data-value="15" style="animation-delay: 90ms; transform-origin: bottom;">
-      <title>2026-05-15: 15</title>
-      <polygon class="iso-face-left" points="-39.84,26.00 -27.71,33.00 -27.71,63.00 -39.84,56.00" fill="#c74b0a" stroke="#c74b0a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-27.71,33.00 -15.59,26.00 -15.59,56.00 -27.71,63.00" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-27.71,19.00 -39.84,26.00 -27.71,33.00 -15.59,26.00" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d6" data-col="2" data-row="4" data-value="15" stroke-linejoin="round"><title>2026-05-15: 15</title><polygon class="iso-face-left" points="-39.84,26.00 -27.71,33.00 -27.71,63.00 -39.84,56.00" fill="#c74b0a" stroke="#c74b0a" /><polygon class="iso-face-right" points="-27.71,33.00 -15.59,26.00 -15.59,56.00 -27.71,63.00" fill="#a43e08" stroke="#a43e08" /><polygon class="iso-face-top" points="-27.71,19.00 -39.84,26.00 -27.71,33.00 -15.59,26.00" fill="#ea580c" stroke="#ea580c" /></g>
 <polygon class="iso-grid-cell" points="-41.57,56.00 -55.43,64.00 -41.57,72.00 -27.71,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="5" data-value="5" style="animation-delay: 105ms; transform-origin: bottom;">
-      <title>2026-05-16: 5</title>
-      <path d="M -47.63,54.00 L -47.63,64.00 A 6.06,3.50 0 0,0 -35.51,64.00 L -35.51,54.00 A 6.06,3.50 0 0,1 -47.63,54.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-41.57" cy="54.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d7" data-col="2" data-row="5" data-value="5"><title>2026-05-16: 5</title><path d="M -47.63,54.00 L -47.63,64.00 A 6.06,3.50 0 0,0 -35.51,64.00 L -35.51,54.00 A 6.06,3.50 0 0,1 -47.63,54.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" /><ellipse cx="-41.57" cy="54.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="-55.43,64.00 -69.28,72.00 -55.43,80.00 -41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="6" data-value="5" style="animation-delay: 120ms; transform-origin: bottom;">
-        <title>2026-05-17: 5</title>
-        
-        <path class="iso-face-top" d="M -68.42,76.50 C -66.11,72.83 -63.80,64.17 -61.49,65.50 L -49.36,58.50 C -51.67,57.17 -53.98,65.83 -56.29,69.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -68.42,71.50 L -68.42,76.50 C -66.11,72.83 -63.80,64.17 -61.49,65.50 L -61.49,75.50 C -63.80,74.17 -66.11,72.83 -68.42,71.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -61.49,65.50 C -59.18,66.83 -56.87,61.50 -54.56,59.50 L -42.44,52.50 C -44.74,54.50 -47.05,59.83 -49.36,58.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -61.49,75.50 L -61.49,65.50 C -59.18,66.83 -56.87,61.50 -54.56,59.50 L -54.56,79.50 C -56.87,78.17 -59.18,76.83 -61.49,75.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d8" data-col="2" data-row="6" data-value="5"><title>2026-05-17: 5</title><path class="iso-face-top" d="M -68.42,76.50 C -66.11,72.83 -63.80,64.17 -61.49,65.50 L -49.36,58.50 C -51.67,57.17 -53.98,65.83 -56.29,69.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -68.42,71.50 L -68.42,76.50 C -66.11,72.83 -63.80,64.17 -61.49,65.50 L -61.49,75.50 C -63.80,74.17 -66.11,72.83 -68.42,71.50 Z" fill="#b29777" stroke="#b29777" /><path class="iso-face-top" d="M -61.49,65.50 C -59.18,66.83 -56.87,61.50 -54.56,59.50 L -42.44,52.50 C -44.74,54.50 -47.05,59.83 -49.36,58.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -61.49,75.50 L -61.49,65.50 C -59.18,66.83 -56.87,61.50 -54.56,59.50 L -54.56,79.50 C -56.87,78.17 -59.18,76.83 -61.49,75.50 Z" fill="#b29777" stroke="#b29777" /></g>
 <polygon class="iso-grid-cell" points="41.57,24.00 27.71,32.00 41.57,40.00 55.43,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="0" data-value="15" style="animation-delay: 45ms; transform-origin: bottom;">
-      <title>2026-05-18: 15</title>
-      <polygon class="iso-face-left" points="29.44,2.00 41.57,9.00 41.57,39.00 29.44,32.00" fill="#c74b0a" stroke="#c74b0a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="41.57,9.00 53.69,2.00 53.69,32.00 41.57,39.00" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="41.57,-5.00 29.44,2.00 41.57,9.00 53.69,2.00" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d3" data-col="3" data-row="0" data-value="15" stroke-linejoin="round"><title>2026-05-18: 15</title><polygon class="iso-face-left" points="29.44,2.00 41.57,9.00 41.57,39.00 29.44,32.00" fill="#c74b0a" stroke="#c74b0a" /><polygon class="iso-face-right" points="41.57,9.00 53.69,2.00 53.69,32.00 41.57,39.00" fill="#a43e08" stroke="#a43e08" /><polygon class="iso-face-top" points="41.57,-5.00 29.44,2.00 41.57,9.00 53.69,2.00" fill="#ea580c" stroke="#ea580c" /></g>
 <polygon class="iso-grid-cell" points="27.71,32.00 13.86,40.00 27.71,48.00 41.57,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="1" data-value="5" style="animation-delay: 60ms; transform-origin: bottom;">
-      <title>2026-05-19: 5</title>
-      <path d="M 21.65,30.00 L 21.65,40.00 A 6.06,3.50 0 0,0 33.77,40.00 L 33.77,30.00 A 6.06,3.50 0 0,1 21.65,30.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="27.71" cy="30.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d4" data-col="3" data-row="1" data-value="5"><title>2026-05-19: 5</title><path d="M 21.65,30.00 L 21.65,40.00 A 6.06,3.50 0 0,0 33.77,40.00 L 33.77,30.00 A 6.06,3.50 0 0,1 21.65,30.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" /><ellipse cx="27.71" cy="30.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="13.86,40.00 0.00,48.00 13.86,56.00 27.71,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="2" data-value="-10" style="animation-delay: 75ms; transform-origin: top;">
-        <title>2026-05-20: -10</title>
-        
-        <path class="iso-face-right" d="M 12.99,40.50 L 12.99,45.50 C 15.30,51.83 17.61,63.17 19.92,64.50 L 19.92,44.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 19.92,44.50 L 19.92,64.50 C 22.23,65.83 24.54,50.50 26.85,43.50 L 26.85,48.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 0.87,52.50 C 3.18,58.83 5.48,70.17 7.79,71.50 L 19.92,64.50 C 17.61,63.17 15.30,51.83 12.99,45.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 7.79,71.50 C 10.10,72.83 12.41,57.50 14.72,50.50 L 26.85,43.50 C 24.54,50.50 22.23,65.83 19.92,64.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 0.87,47.50 C 3.18,48.83 5.48,50.17 7.79,51.50 L 19.92,44.50 C 17.61,43.17 15.30,41.83 12.99,40.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 7.79,51.50 C 10.10,52.83 12.41,54.17 14.72,55.50 L 26.85,48.50 C 24.54,47.17 22.23,45.83 19.92,44.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 0.87,47.50 L 0.87,52.50 C 3.18,58.83 5.48,70.17 7.79,71.50 L 7.79,51.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 7.79,51.50 L 7.79,71.50 C 10.10,72.83 12.41,57.50 14.72,50.50 L 14.72,55.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d5 iso-neg" data-col="3" data-row="2" data-value="-10"><title>2026-05-20: -10</title><path class="iso-face-right" d="M 12.99,40.50 L 12.99,45.50 C 15.30,51.83 17.61,63.17 19.92,64.50 L 19.92,44.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M 19.92,44.50 L 19.92,64.50 C 22.23,65.83 24.54,50.50 26.85,43.50 L 26.85,48.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-top" d="M 0.87,52.50 C 3.18,58.83 5.48,70.17 7.79,71.50 L 19.92,64.50 C 17.61,63.17 15.30,51.83 12.99,45.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M 7.79,71.50 C 10.10,72.83 12.41,57.50 14.72,50.50 L 26.85,43.50 C 24.54,50.50 22.23,65.83 19.92,64.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M 0.87,47.50 C 3.18,48.83 5.48,50.17 7.79,51.50 L 19.92,44.50 C 17.61,43.17 15.30,41.83 12.99,40.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M 7.79,51.50 C 10.10,52.83 12.41,54.17 14.72,55.50 L 26.85,48.50 C 24.54,47.17 22.23,45.83 19.92,44.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-right" d="M 0.87,47.50 L 0.87,52.50 C 3.18,58.83 5.48,70.17 7.79,71.50 L 7.79,51.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M 7.79,51.50 L 7.79,71.50 C 10.10,72.83 12.41,57.50 14.72,50.50 L 14.72,55.50 Z" fill="#0a73a3" stroke="#0a73a3" /></g>
 <polygon class="iso-grid-cell" points="0.00,48.00 -13.86,56.00 0.00,64.00 13.86,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="3" data-value="15" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>2026-05-21: 15</title>
-        
-        <path class="iso-face-top" d="M -12.99,35.50 C -10.68,33.50 -8.37,28.17 -6.06,29.50 L 6.06,22.50 C 3.75,21.17 1.44,26.50 -0.87,28.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -12.99,39.50 L -12.99,35.50 C -10.68,33.50 -8.37,28.17 -6.06,29.50 L -6.06,33.50 C -8.37,32.17 -10.68,37.50 -12.99,39.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -6.06,29.50 C -3.75,30.83 -1.44,38.83 0.87,43.50 L 12.99,36.50 C 10.68,31.83 8.37,23.83 6.06,22.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -6.06,33.50 L -6.06,29.50 C -3.75,30.83 -1.44,38.83 0.87,43.50 L 0.87,47.50 C -1.44,42.83 -3.75,34.83 -6.06,33.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d6" data-col="3" data-row="3" data-value="15"><title>2026-05-21: 15</title><path class="iso-face-top" d="M -12.99,35.50 C -10.68,33.50 -8.37,28.17 -6.06,29.50 L 6.06,22.50 C 3.75,21.17 1.44,26.50 -0.87,28.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -12.99,39.50 L -12.99,35.50 C -10.68,33.50 -8.37,28.17 -6.06,29.50 L -6.06,33.50 C -8.37,32.17 -10.68,37.50 -12.99,39.50 Z" fill="#a43e08" stroke="#a43e08" /><path class="iso-face-top" d="M -6.06,29.50 C -3.75,30.83 -1.44,38.83 0.87,43.50 L 12.99,36.50 C 10.68,31.83 8.37,23.83 6.06,22.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -6.06,33.50 L -6.06,29.50 C -3.75,30.83 -1.44,38.83 0.87,43.50 L 0.87,47.50 C -1.44,42.83 -3.75,34.83 -6.06,33.50 Z" fill="#a43e08" stroke="#a43e08" /></g>
 <polygon class="iso-grid-cell" points="-13.86,56.00 -27.71,64.00 -13.86,72.00 0.00,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="4" data-value="5" style="animation-delay: 105ms; transform-origin: bottom;">
-      <title>2026-05-22: 5</title>
-      <polygon class="iso-face-left" points="-25.98,54.00 -13.86,61.00 -13.86,71.00 -25.98,64.00" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-13.86,61.00 -1.73,54.00 -1.73,64.00 -13.86,71.00" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-13.86,47.00 -25.98,54.00 -13.86,61.00 -1.73,54.00" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d7" data-col="3" data-row="4" data-value="5" stroke-linejoin="round"><title>2026-05-22: 5</title><polygon class="iso-face-left" points="-25.98,54.00 -13.86,61.00 -13.86,71.00 -25.98,64.00" fill="#d8b791" stroke="#d8b791" /><polygon class="iso-face-right" points="-13.86,61.00 -1.73,54.00 -1.73,64.00 -13.86,71.00" fill="#b29777" stroke="#b29777" /><polygon class="iso-face-top" points="-13.86,47.00 -25.98,54.00 -13.86,61.00 -1.73,54.00" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="-27.71,64.00 -41.57,72.00 -27.71,80.00 -13.86,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="5" data-value="5" style="animation-delay: 120ms; transform-origin: bottom;">
-      <title>2026-05-23: 5</title>
-      <path d="M -33.77,62.00 L -33.77,72.00 A 6.06,3.50 0 0,0 -21.65,72.00 L -21.65,62.00 A 6.06,3.50 0 0,1 -33.77,62.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-27.71" cy="62.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d8" data-col="3" data-row="5" data-value="5"><title>2026-05-23: 5</title><path d="M -33.77,62.00 L -33.77,72.00 A 6.06,3.50 0 0,0 -21.65,72.00 L -21.65,62.00 A 6.06,3.50 0 0,1 -33.77,62.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" /><ellipse cx="-27.71" cy="62.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="-41.57,72.00 -55.43,80.00 -41.57,88.00 -27.71,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="6" data-value="15" style="animation-delay: 135ms; transform-origin: bottom;">
-        <title>2026-05-24: 15</title>
-        
-        <path class="iso-face-top" d="M -54.56,59.50 C -52.25,57.50 -49.94,52.17 -47.63,53.50 L -35.51,46.50 C -37.82,45.17 -40.13,50.50 -42.44,52.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -54.56,79.50 L -54.56,59.50 C -52.25,57.50 -49.94,52.17 -47.63,53.50 L -47.63,83.50 C -49.94,82.17 -52.25,80.83 -54.56,79.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -47.63,53.50 C -45.32,54.83 -43.01,62.83 -40.70,67.50 L -28.58,60.50 C -30.89,55.83 -33.20,47.83 -35.51,46.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -47.63,83.50 L -47.63,53.50 C -45.32,54.83 -43.01,62.83 -40.70,67.50 L -40.70,87.50 C -43.01,86.17 -45.32,84.83 -47.63,83.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d9" data-col="3" data-row="6" data-value="15"><title>2026-05-24: 15</title><path class="iso-face-top" d="M -54.56,59.50 C -52.25,57.50 -49.94,52.17 -47.63,53.50 L -35.51,46.50 C -37.82,45.17 -40.13,50.50 -42.44,52.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -54.56,79.50 L -54.56,59.50 C -52.25,57.50 -49.94,52.17 -47.63,53.50 L -47.63,83.50 C -49.94,82.17 -52.25,80.83 -54.56,79.50 Z" fill="#a43e08" stroke="#a43e08" /><path class="iso-face-top" d="M -47.63,53.50 C -45.32,54.83 -43.01,62.83 -40.70,67.50 L -28.58,60.50 C -30.89,55.83 -33.20,47.83 -35.51,46.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M -47.63,83.50 L -47.63,53.50 C -45.32,54.83 -43.01,62.83 -40.70,67.50 L -40.70,87.50 C -43.01,86.17 -45.32,84.83 -47.63,83.50 Z" fill="#a43e08" stroke="#a43e08" /></g>
 <polygon class="iso-grid-cell" points="55.43,32.00 41.57,40.00 55.43,48.00 69.28,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="0" data-value="-10" style="animation-delay: 60ms; transform-origin: top;">
-      <title>2026-05-25: -10</title>
-      <polygon class="iso-face-left" points="43.30,40.00 55.43,47.00 55.43,67.00 43.30,60.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="55.43,47.00 67.55,40.00 67.55,60.00 55.43,67.00" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="55.43,33.00 43.30,40.00 55.43,47.00 67.55,40.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d4 iso-neg" data-col="4" data-row="0" data-value="-10" stroke-linejoin="round"><title>2026-05-25: -10</title><polygon class="iso-face-left" points="43.30,40.00 55.43,47.00 55.43,67.00 43.30,60.00" fill="#0c8cc6" stroke="#0c8cc6" /><polygon class="iso-face-right" points="55.43,47.00 67.55,40.00 67.55,60.00 55.43,67.00" fill="#0a73a3" stroke="#0a73a3" /><polygon class="iso-face-top" points="55.43,33.00 43.30,40.00 55.43,47.00 67.55,40.00" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="41.57,40.00 27.71,48.00 41.57,56.00 55.43,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="1" data-value="5" style="animation-delay: 75ms; transform-origin: bottom;">
-      <title>2026-05-26: 5</title>
-      <path d="M 35.51,38.00 L 35.51,48.00 A 6.06,3.50 0 0,0 47.63,48.00 L 47.63,38.00 A 6.06,3.50 0 0,1 35.51,38.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="41.57" cy="38.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d5" data-col="4" data-row="1" data-value="5"><title>2026-05-26: 5</title><path d="M 35.51,38.00 L 35.51,48.00 A 6.06,3.50 0 0,0 47.63,48.00 L 47.63,38.00 A 6.06,3.50 0 0,1 35.51,38.00 Z" fill="url(#cyl-grad-fed7aa)" stroke="#bfa180" /><ellipse cx="41.57" cy="38.00" rx="6.06" ry="3.50" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="27.71,48.00 13.86,56.00 27.71,64.00 41.57,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="2" data-value="15" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>2026-05-27: 15</title>
-        <polygon class="iso-face-right" points="40.70,56.50 28.58,63.50 28.58,63.50 40.70,56.50" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 14.72,50.50 C 17.03,43.50 19.34,28.17 21.65,29.50 L 33.77,22.50 C 31.47,21.17 29.16,36.50 26.85,43.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 14.72,55.50 L 14.72,50.50 C 17.03,43.50 19.34,28.17 21.65,29.50 L 21.65,59.50 C 19.34,58.17 17.03,56.83 14.72,55.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 21.65,29.50 C 23.96,30.83 26.27,57.17 28.58,63.50 L 40.70,56.50 C 38.39,50.17 36.08,23.83 33.77,22.50 Z" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 21.65,59.50 L 21.65,29.50 C 23.96,30.83 26.27,57.17 28.58,63.50 L 28.58,63.50 C 26.27,62.17 23.96,60.83 21.65,59.50 Z" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d6" data-col="4" data-row="2" data-value="15"><title>2026-05-27: 15</title><polygon class="iso-face-right" points="40.70,56.50 28.58,63.50 28.58,63.50 40.70,56.50" fill="#a43e08" stroke="#a43e08" stroke-linejoin="round" /><path class="iso-face-top" d="M 14.72,50.50 C 17.03,43.50 19.34,28.17 21.65,29.50 L 33.77,22.50 C 31.47,21.17 29.16,36.50 26.85,43.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M 14.72,55.50 L 14.72,50.50 C 17.03,43.50 19.34,28.17 21.65,29.50 L 21.65,59.50 C 19.34,58.17 17.03,56.83 14.72,55.50 Z" fill="#a43e08" stroke="#a43e08" /><path class="iso-face-top" d="M 21.65,29.50 C 23.96,30.83 26.27,57.17 28.58,63.50 L 40.70,56.50 C 38.39,50.17 36.08,23.83 33.77,22.50 Z" fill="#ea580c" stroke="#ea580c" /><path class="iso-face-right" d="M 21.65,59.50 L 21.65,29.50 C 23.96,30.83 26.27,57.17 28.58,63.50 L 28.58,63.50 C 26.27,62.17 23.96,60.83 21.65,59.50 Z" fill="#a43e08" stroke="#a43e08" /></g>
 <polygon class="iso-grid-cell" points="13.86,56.00 0.00,64.00 13.86,72.00 27.71,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="3" data-value="5" style="animation-delay: 105ms; transform-origin: bottom;">
-        <title>2026-05-28: 5</title>
-        <polygon class="iso-face-right" points="26.85,64.50 14.72,71.50 14.72,75.50 26.85,68.50" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 0.87,43.50 C 3.18,48.17 5.48,56.17 7.79,57.50 L 19.92,50.50 C 17.61,49.17 15.30,41.17 12.99,36.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 0.87,47.50 L 0.87,43.50 C 3.18,48.17 5.48,56.17 7.79,57.50 L 7.79,61.50 C 5.48,60.17 3.18,52.17 0.87,47.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 7.79,57.50 C 10.10,58.83 12.41,68.50 14.72,71.50 L 26.85,64.50 C 24.54,61.50 22.23,51.83 19.92,50.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 7.79,61.50 L 7.79,57.50 C 10.10,58.83 12.41,68.50 14.72,71.50 L 14.72,75.50 C 12.41,72.50 10.10,62.83 7.79,61.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d7" data-col="4" data-row="3" data-value="5"><title>2026-05-28: 5</title><polygon class="iso-face-right" points="26.85,64.50 14.72,71.50 14.72,75.50 26.85,68.50" fill="#b29777" stroke="#b29777" stroke-linejoin="round" /><path class="iso-face-top" d="M 0.87,43.50 C 3.18,48.17 5.48,56.17 7.79,57.50 L 19.92,50.50 C 17.61,49.17 15.30,41.17 12.99,36.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M 0.87,47.50 L 0.87,43.50 C 3.18,48.17 5.48,56.17 7.79,57.50 L 7.79,61.50 C 5.48,60.17 3.18,52.17 0.87,47.50 Z" fill="#b29777" stroke="#b29777" /><path class="iso-face-top" d="M 7.79,57.50 C 10.10,58.83 12.41,68.50 14.72,71.50 L 26.85,64.50 C 24.54,61.50 22.23,51.83 19.92,50.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M 7.79,61.50 L 7.79,57.50 C 10.10,58.83 12.41,68.50 14.72,71.50 L 14.72,75.50 C 12.41,72.50 10.10,62.83 7.79,61.50 Z" fill="#b29777" stroke="#b29777" /></g>
 <polygon class="iso-grid-cell" points="0.00,64.00 -13.86,72.00 0.00,80.00 13.86,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="4" data-value="5" style="animation-delay: 120ms; transform-origin: bottom;">
-      <title>2026-05-29: 5</title>
-      <polygon class="iso-face-left" points="-12.12,62.00 0.00,69.00 0.00,79.00 -12.12,72.00" fill="#d8b791" stroke="#d8b791" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="0.00,69.00 12.12,62.00 12.12,72.00 0.00,79.00" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="0.00,55.00 -12.12,62.00 0.00,69.00 12.12,62.00" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d8" data-col="4" data-row="4" data-value="5" stroke-linejoin="round"><title>2026-05-29: 5</title><polygon class="iso-face-left" points="-12.12,62.00 0.00,69.00 0.00,79.00 -12.12,72.00" fill="#d8b791" stroke="#d8b791" /><polygon class="iso-face-right" points="0.00,69.00 12.12,62.00 12.12,72.00 0.00,79.00" fill="#b29777" stroke="#b29777" /><polygon class="iso-face-top" points="0.00,55.00 -12.12,62.00 0.00,69.00 12.12,62.00" fill="#fed7aa" stroke="#fed7aa" /></g>
 <polygon class="iso-grid-cell" points="-13.86,72.00 -27.71,80.00 -13.86,88.00 0.00,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="5" data-value="15" style="animation-delay: 135ms; transform-origin: bottom;">
-      <title>2026-05-30: 15</title>
-      <path d="M -19.92,50.00 L -19.92,80.00 A 6.06,3.50 0 0,0 -7.79,80.00 L -7.79,50.00 A 6.06,3.50 0 0,1 -19.92,50.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-13.86" cy="50.00" rx="6.06" ry="3.50" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d9" data-col="4" data-row="5" data-value="15"><title>2026-05-30: 15</title><path d="M -19.92,50.00 L -19.92,80.00 A 6.06,3.50 0 0,0 -7.79,80.00 L -7.79,50.00 A 6.06,3.50 0 0,1 -19.92,50.00 Z" fill="url(#cyl-grad-ea580c)" stroke="#b04209" /><ellipse cx="-13.86" cy="50.00" rx="6.06" ry="3.50" fill="#ea580c" stroke="#ea580c" /></g>
 <polygon class="iso-grid-cell" points="-27.71,80.00 -41.57,88.00 -27.71,96.00 -13.86,88.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="6" data-value="5" style="animation-delay: 150ms; transform-origin: bottom;">
-        <title>2026-05-31: 5</title>
-        <polygon class="iso-face-right" points="-14.72,88.50 -26.85,95.50 -26.85,95.50 -14.72,88.50" fill="#b29777" stroke="#b29777" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -40.70,67.50 C -38.39,72.17 -36.08,80.17 -33.77,81.50 L -21.65,74.50 C -23.96,73.17 -26.27,65.17 -28.58,60.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -40.70,87.50 L -40.70,67.50 C -38.39,72.17 -36.08,80.17 -33.77,81.50 L -33.77,91.50 C -36.08,90.17 -38.39,88.83 -40.70,87.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -33.77,81.50 C -31.47,82.83 -29.16,92.50 -26.85,95.50 L -14.72,88.50 C -17.03,85.50 -19.34,75.83 -21.65,74.50 Z" fill="#fed7aa" stroke="#fed7aa" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -33.77,91.50 L -33.77,81.50 C -31.47,82.83 -29.16,92.50 -26.85,95.50 L -26.85,95.50 C -29.16,94.17 -31.47,92.83 -33.77,91.50 Z" fill="#b29777" stroke="#b29777" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d10" data-col="4" data-row="6" data-value="5"><title>2026-05-31: 5</title><polygon class="iso-face-right" points="-14.72,88.50 -26.85,95.50 -26.85,95.50 -14.72,88.50" fill="#b29777" stroke="#b29777" stroke-linejoin="round" /><path class="iso-face-top" d="M -40.70,67.50 C -38.39,72.17 -36.08,80.17 -33.77,81.50 L -21.65,74.50 C -23.96,73.17 -26.27,65.17 -28.58,60.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -40.70,87.50 L -40.70,67.50 C -38.39,72.17 -36.08,80.17 -33.77,81.50 L -33.77,91.50 C -36.08,90.17 -38.39,88.83 -40.70,87.50 Z" fill="#b29777" stroke="#b29777" /><path class="iso-face-top" d="M -33.77,81.50 C -31.47,82.83 -29.16,92.50 -26.85,95.50 L -14.72,88.50 C -17.03,85.50 -19.34,75.83 -21.65,74.50 Z" fill="#fed7aa" stroke="#fed7aa" /><path class="iso-face-right" d="M -33.77,91.50 L -33.77,81.50 C -31.47,82.83 -29.16,92.50 -26.85,95.50 L -26.85,95.50 C -29.16,94.17 -31.47,92.83 -33.77,91.50 Z" fill="#b29777" stroke="#b29777" /></g>
 <g class="iso-col-labels"></g>
 <g class="iso-row-labels"><g transform="translate(-9.70 -24.60) rotate(30)"><rect x="-14.55" y="-6.50" width="17.55" height="13.00" rx="3" fill="#ffffff" opacity="0.85" /><text x="0" y="2.45" fill="#1e293b" font-size="7" font-family="sans-serif" text-anchor="end">Mon</text></g>
 <g transform="translate(-37.41 -8.60) rotate(30)"><rect x="-14.55" y="-6.50" width="17.55" height="13.00" rx="3" fill="#ffffff" opacity="0.85" /><text x="0" y="2.45" fill="#1e293b" font-size="7" font-family="sans-serif" text-anchor="end">Wed</text></g>
@@ -309,30 +118,19 @@
 <g transform="translate(-92.84 23.40) rotate(30)"><rect x="-14.55" y="-6.50" width="17.55" height="13.00" rx="3" fill="#ffffff" opacity="0.85" /><text x="0" y="2.45" fill="#1e293b" font-size="7" font-family="sans-serif" text-anchor="end">Sun</text></g></g>
     </g>
 <g transform="translate(93.53, 54.00)">
-    <g class="iso-heatmap-group" data-min-x="-116.99" data-min-y="-53.41" data-width="206.28" data-height="176.41">
+    <g class="iso-heatmap-group iso-view-3d iso-animated" stroke-width="0.3" data-min-x="-116.99" data-min-y="-53.41" data-width="206.28" data-height="176.41">
       <!-- Generated with MLC Isometric 3D Heatmap Library -->
       <style>
-        @keyframes iso-grow {
-          from {
-            transform: scaleY(0);
-          }
-          to {
-            transform: scaleY(1);
-          }
+        @keyframes iso-grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+        .iso-view-3d .iso-bar{cursor:pointer;transition:filter .2s ease}
+        .iso-view-3d .iso-bar:hover{filter:brightness(1.1) drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+        @media (prefers-reduced-motion:no-preference){
+          .iso-view-3d .iso-bar{transition:transform .2s cubic-bezier(.25,.46,.45,.94),filter .2s ease}
+          .iso-view-3d .iso-bar:not(.iso-surface):hover{transform:translateY(-3px)}
+          .iso-view-3d.iso-animated .iso-bar{transform-box:fill-box;transform-origin:bottom;animation-name:iso-grow;animation-duration:.6s;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-fill-mode:backwards}
+          .iso-view-3d.iso-animated .iso-bar.iso-neg{transform-origin:top}
         }
-        .iso-bar {
-          transform-box: fill-box;
-          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
-          cursor: pointer;
-        }
-        .iso-bar:hover {
-          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-          transform: translateY(-3px) scaleY(1);
-        }
-        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
-          transition: fill 0.2s ease;
-        }
+        .iso-d1{animation-delay:15ms}.iso-d2{animation-delay:30ms}.iso-d3{animation-delay:45ms}.iso-d4{animation-delay:60ms}.iso-d5{animation-delay:75ms}.iso-d6{animation-delay:90ms}.iso-d7{animation-delay:105ms}.iso-d8{animation-delay:120ms}.iso-d9{animation-delay:135ms}.iso-d10{animation-delay:150ms}
       </style>
       <defs><linearGradient id="cyl-grad-fdba74" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" stop-color="#d79e63" stop-opacity="1" />
@@ -360,238 +158,65 @@
 <line class="iso-axis-rule" x1="0.00" y1="0.00" x2="-96.99" y2="56.00" stroke="#57606a" stroke-width="1" />
 <line class="iso-axis-tick" x1="0.00" y1="0.00" x2="4.89" y2="-1.06" stroke="#57606a" stroke-width="1" /></g>
 <polygon class="iso-grid-cell" points="0.00,0.00 -13.86,8.00 0.00,16.00 13.86,8.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="0" data-value="8" style="animation-delay: 0ms; transform-origin: bottom;">
-      <title>2026-06-01: 8</title>
-      <polygon class="iso-face-left" points="-12.12,-8.00 0.00,-1.00 0.00,15.00 -12.12,8.00" fill="#d79e63" stroke="#d79e63" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="0.00,-1.00 12.12,-8.00 12.12,8.00 0.00,15.00" fill="#b18251" stroke="#b18251" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="0.00,-15.00 -12.12,-8.00 0.00,-1.00 12.12,-8.00" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar" data-col="0" data-row="0" data-value="8" stroke-linejoin="round"><title>2026-06-01: 8</title><polygon class="iso-face-left" points="-12.12,-8.00 0.00,-1.00 0.00,15.00 -12.12,8.00" fill="#d79e63" stroke="#d79e63" /><polygon class="iso-face-right" points="0.00,-1.00 12.12,-8.00 12.12,8.00 0.00,15.00" fill="#b18251" stroke="#b18251" /><polygon class="iso-face-top" points="0.00,-15.00 -12.12,-8.00 0.00,-1.00 12.12,-8.00" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="-13.86,8.00 -27.71,16.00 -13.86,24.00 0.00,16.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="1" data-value="8" style="animation-delay: 15ms; transform-origin: bottom;">
-      <title>2026-06-02: 8</title>
-      <path d="M -19.92,-0.00 L -19.92,16.00 A 6.06,3.50 0 0,0 -7.79,16.00 L -7.79,-0.00 A 6.06,3.50 0 0,1 -19.92,-0.00 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-13.86" cy="-0.00" rx="6.06" ry="3.50" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d1" data-col="0" data-row="1" data-value="8"><title>2026-06-02: 8</title><path d="M -19.92,-0.00 L -19.92,16.00 A 6.06,3.50 0 0,0 -7.79,16.00 L -7.79,-0.00 A 6.06,3.50 0 0,1 -19.92,-0.00 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" /><ellipse cx="-13.86" cy="-0.00" rx="6.06" ry="3.50" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="-27.71,16.00 -41.57,24.00 -27.71,32.00 -13.86,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="2" data-value="-12" style="animation-delay: 30ms; transform-origin: top;">
-        <title>2026-06-03: -12</title>
-        <polygon class="iso-face-left" points="-28.58,16.50 -40.70,23.50 -40.70,23.50 -28.58,16.50" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -28.58,16.50 L -28.58,16.50 C -26.27,21.83 -23.96,43.17 -21.65,44.50 L -21.65,20.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -21.65,20.50 L -21.65,44.50 C -19.34,45.83 -17.03,33.83 -14.72,28.50 L -14.72,24.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -40.70,23.50 C -38.39,28.83 -36.08,50.17 -33.77,51.50 L -21.65,44.50 C -23.96,43.17 -26.27,21.83 -28.58,16.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -33.77,51.50 C -31.47,52.83 -29.16,40.83 -26.85,35.50 L -14.72,28.50 C -17.03,33.83 -19.34,45.83 -21.65,44.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -40.70,23.50 C -38.39,24.83 -36.08,26.17 -33.77,27.50 L -21.65,20.50 C -23.96,19.17 -26.27,17.83 -28.58,16.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -33.77,27.50 C -31.47,28.83 -29.16,30.17 -26.85,31.50 L -14.72,24.50 C -17.03,23.17 -19.34,21.83 -21.65,20.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -40.70,23.50 L -40.70,23.50 C -38.39,28.83 -36.08,50.17 -33.77,51.50 L -33.77,27.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -33.77,27.50 L -33.77,51.50 C -31.47,52.83 -29.16,40.83 -26.85,35.50 L -26.85,31.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d2 iso-neg" data-col="0" data-row="2" data-value="-12"><title>2026-06-03: -12</title><polygon class="iso-face-left" points="-28.58,16.50 -40.70,23.50 -40.70,23.50 -28.58,16.50" fill="#0c8cc6" stroke="#0c8cc6" stroke-linejoin="round" /><path class="iso-face-right" d="M -28.58,16.50 L -28.58,16.50 C -26.27,21.83 -23.96,43.17 -21.65,44.50 L -21.65,20.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M -21.65,20.50 L -21.65,44.50 C -19.34,45.83 -17.03,33.83 -14.72,28.50 L -14.72,24.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-top" d="M -40.70,23.50 C -38.39,28.83 -36.08,50.17 -33.77,51.50 L -21.65,44.50 C -23.96,43.17 -26.27,21.83 -28.58,16.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -33.77,51.50 C -31.47,52.83 -29.16,40.83 -26.85,35.50 L -14.72,28.50 C -17.03,33.83 -19.34,45.83 -21.65,44.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -40.70,23.50 C -38.39,24.83 -36.08,26.17 -33.77,27.50 L -21.65,20.50 C -23.96,19.17 -26.27,17.83 -28.58,16.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -33.77,27.50 C -31.47,28.83 -29.16,30.17 -26.85,31.50 L -14.72,24.50 C -17.03,23.17 -19.34,21.83 -21.65,20.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-right" d="M -40.70,23.50 L -40.70,23.50 C -38.39,28.83 -36.08,50.17 -33.77,51.50 L -33.77,27.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M -33.77,27.50 L -33.77,51.50 C -31.47,52.83 -29.16,40.83 -26.85,35.50 L -26.85,31.50 Z" fill="#0a73a3" stroke="#0a73a3" /></g>
 <polygon class="iso-grid-cell" points="-41.57,24.00 -55.43,32.00 -41.57,40.00 -27.71,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="3" data-value="20" style="animation-delay: 45ms; transform-origin: bottom;">
-        <title>2026-06-04: 20</title>
-        <polygon class="iso-face-left" points="-42.44,24.50 -54.56,31.50 -54.56,35.50 -42.44,28.50" fill="#a5370a" stroke="#a5370a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -54.56,31.50 C -52.25,26.17 -49.94,-5.83 -47.63,-4.50 L -35.51,-11.50 C -37.82,-12.83 -40.13,19.17 -42.44,24.50 Z" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -54.56,35.50 L -54.56,31.50 C -52.25,26.17 -49.94,-5.83 -47.63,-4.50 L -47.63,-0.50 C -49.94,-1.83 -52.25,30.17 -54.56,35.50 Z" fill="#882e08" stroke="#882e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -47.63,-4.50 C -45.32,-3.17 -43.01,6.17 -40.70,11.50 L -28.58,4.50 C -30.89,-0.83 -33.20,-10.17 -35.51,-11.50 Z" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -47.63,-0.50 L -47.63,-4.50 C -45.32,-3.17 -43.01,6.17 -40.70,11.50 L -40.70,15.50 C -43.01,10.17 -45.32,0.83 -47.63,-0.50 Z" fill="#882e08" stroke="#882e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d3" data-col="0" data-row="3" data-value="20"><title>2026-06-04: 20</title><polygon class="iso-face-left" points="-42.44,24.50 -54.56,31.50 -54.56,35.50 -42.44,28.50" fill="#a5370a" stroke="#a5370a" stroke-linejoin="round" /><path class="iso-face-top" d="M -54.56,31.50 C -52.25,26.17 -49.94,-5.83 -47.63,-4.50 L -35.51,-11.50 C -37.82,-12.83 -40.13,19.17 -42.44,24.50 Z" fill="#c2410c" stroke="#c2410c" /><path class="iso-face-right" d="M -54.56,35.50 L -54.56,31.50 C -52.25,26.17 -49.94,-5.83 -47.63,-4.50 L -47.63,-0.50 C -49.94,-1.83 -52.25,30.17 -54.56,35.50 Z" fill="#882e08" stroke="#882e08" /><path class="iso-face-top" d="M -47.63,-4.50 C -45.32,-3.17 -43.01,6.17 -40.70,11.50 L -28.58,4.50 C -30.89,-0.83 -33.20,-10.17 -35.51,-11.50 Z" fill="#c2410c" stroke="#c2410c" /><path class="iso-face-right" d="M -47.63,-0.50 L -47.63,-4.50 C -45.32,-3.17 -43.01,6.17 -40.70,11.50 L -40.70,15.50 C -43.01,10.17 -45.32,0.83 -47.63,-0.50 Z" fill="#882e08" stroke="#882e08" /></g>
 <polygon class="iso-grid-cell" points="-55.43,32.00 -69.28,40.00 -55.43,48.00 -41.57,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="4" data-value="8" style="animation-delay: 60ms; transform-origin: bottom;">
-      <title>2026-06-05: 8</title>
-      <polygon class="iso-face-left" points="-67.55,24.00 -55.43,31.00 -55.43,47.00 -67.55,40.00" fill="#d79e63" stroke="#d79e63" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-55.43,31.00 -43.30,24.00 -43.30,40.00 -55.43,47.00" fill="#b18251" stroke="#b18251" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-55.43,17.00 -67.55,24.00 -55.43,31.00 -43.30,24.00" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d4" data-col="0" data-row="4" data-value="8" stroke-linejoin="round"><title>2026-06-05: 8</title><polygon class="iso-face-left" points="-67.55,24.00 -55.43,31.00 -55.43,47.00 -67.55,40.00" fill="#d79e63" stroke="#d79e63" /><polygon class="iso-face-right" points="-55.43,31.00 -43.30,24.00 -43.30,40.00 -55.43,47.00" fill="#b18251" stroke="#b18251" /><polygon class="iso-face-top" points="-55.43,17.00 -67.55,24.00 -55.43,31.00 -43.30,24.00" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="-69.28,40.00 -83.14,48.00 -69.28,56.00 -55.43,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="5" data-value="-12" style="animation-delay: 75ms; transform-origin: top;">
-      <title>2026-06-06: -12</title>
-      <path d="M -75.34,48.00 L -75.34,72.00 A 6.06,3.50 0 0,0 -63.22,72.00 L -63.22,48.00 A 6.06,3.50 0 0,1 -75.34,48.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-69.28" cy="48.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d5 iso-neg" data-col="0" data-row="5" data-value="-12"><title>2026-06-06: -12</title><path d="M -75.34,48.00 L -75.34,72.00 A 6.06,3.50 0 0,0 -63.22,72.00 L -63.22,48.00 A 6.06,3.50 0 0,1 -75.34,48.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" /><ellipse cx="-69.28" cy="48.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="-83.14,48.00 -96.99,56.00 -83.14,64.00 -69.28,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="6" data-value="8" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>2026-06-07: 8</title>
-        <polygon class="iso-face-left" points="-84.00,48.50 -96.13,55.50 -96.13,55.50 -84.00,48.50" fill="#d79e63" stroke="#d79e63" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -96.13,55.50 C -93.82,54.17 -91.51,42.17 -89.20,43.50 L -77.08,36.50 C -79.39,35.17 -81.70,47.17 -84.00,48.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -96.13,55.50 L -96.13,55.50 C -93.82,54.17 -91.51,42.17 -89.20,43.50 L -89.20,59.50 C -91.51,58.17 -93.82,56.83 -96.13,55.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -89.20,43.50 C -86.89,44.83 -84.58,46.17 -82.27,47.50 L -70.15,40.50 C -72.46,39.17 -74.77,37.83 -77.08,36.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -89.20,59.50 L -89.20,43.50 C -86.89,44.83 -84.58,46.17 -82.27,47.50 L -82.27,63.50 C -84.58,62.17 -86.89,60.83 -89.20,59.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d6" data-col="0" data-row="6" data-value="8"><title>2026-06-07: 8</title><polygon class="iso-face-left" points="-84.00,48.50 -96.13,55.50 -96.13,55.50 -84.00,48.50" fill="#d79e63" stroke="#d79e63" stroke-linejoin="round" /><path class="iso-face-top" d="M -96.13,55.50 C -93.82,54.17 -91.51,42.17 -89.20,43.50 L -77.08,36.50 C -79.39,35.17 -81.70,47.17 -84.00,48.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -96.13,55.50 L -96.13,55.50 C -93.82,54.17 -91.51,42.17 -89.20,43.50 L -89.20,59.50 C -91.51,58.17 -93.82,56.83 -96.13,55.50 Z" fill="#b18251" stroke="#b18251" /><path class="iso-face-top" d="M -89.20,43.50 C -86.89,44.83 -84.58,46.17 -82.27,47.50 L -70.15,40.50 C -72.46,39.17 -74.77,37.83 -77.08,36.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -89.20,59.50 L -89.20,43.50 C -86.89,44.83 -84.58,46.17 -82.27,47.50 L -82.27,63.50 C -84.58,62.17 -86.89,60.83 -89.20,59.50 Z" fill="#b18251" stroke="#b18251" /></g>
 <polygon class="iso-grid-cell" points="13.86,8.00 0.00,16.00 13.86,24.00 27.71,16.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="0" data-value="20" style="animation-delay: 15ms; transform-origin: bottom;">
-      <title>2026-06-08: 20</title>
-      <polygon class="iso-face-left" points="1.73,-24.00 13.86,-17.00 13.86,23.00 1.73,16.00" fill="#a5370a" stroke="#a5370a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="13.86,-17.00 25.98,-24.00 25.98,16.00 13.86,23.00" fill="#882e08" stroke="#882e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="13.86,-31.00 1.73,-24.00 13.86,-17.00 25.98,-24.00" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d1" data-col="1" data-row="0" data-value="20" stroke-linejoin="round"><title>2026-06-08: 20</title><polygon class="iso-face-left" points="1.73,-24.00 13.86,-17.00 13.86,23.00 1.73,16.00" fill="#a5370a" stroke="#a5370a" /><polygon class="iso-face-right" points="13.86,-17.00 25.98,-24.00 25.98,16.00 13.86,23.00" fill="#882e08" stroke="#882e08" /><polygon class="iso-face-top" points="13.86,-31.00 1.73,-24.00 13.86,-17.00 25.98,-24.00" fill="#c2410c" stroke="#c2410c" /></g>
 <polygon class="iso-grid-cell" points="0.00,16.00 -13.86,24.00 0.00,32.00 13.86,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="1" data-value="-12" style="animation-delay: 30ms; transform-origin: top;">
-      <title>2026-06-09: -12</title>
-      <path d="M -6.06,24.00 L -6.06,48.00 A 6.06,3.50 0 0,0 6.06,48.00 L 6.06,24.00 A 6.06,3.50 0 0,1 -6.06,24.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="0.00" cy="24.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d2 iso-neg" data-col="1" data-row="1" data-value="-12"><title>2026-06-09: -12</title><path d="M -6.06,24.00 L -6.06,48.00 A 6.06,3.50 0 0,0 6.06,48.00 L 6.06,24.00 A 6.06,3.50 0 0,1 -6.06,24.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" /><ellipse cx="0.00" cy="24.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="-13.86,24.00 -27.71,32.00 -13.86,40.00 0.00,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="2" data-value="8" style="animation-delay: 45ms; transform-origin: bottom;">
-        <title>2026-06-10: 8</title>
-        
-        <path class="iso-face-top" d="M -26.85,35.50 C -24.54,30.17 -22.23,18.17 -19.92,19.50 L -7.79,12.50 C -10.10,11.17 -12.41,23.17 -14.72,28.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -26.85,31.50 L -26.85,35.50 C -24.54,30.17 -22.23,18.17 -19.92,19.50 L -19.92,35.50 C -22.23,34.17 -24.54,32.83 -26.85,31.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -19.92,19.50 C -17.61,20.83 -15.30,22.17 -12.99,23.50 L -0.87,16.50 C -3.18,15.17 -5.48,13.83 -7.79,12.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -19.92,35.50 L -19.92,19.50 C -17.61,20.83 -15.30,22.17 -12.99,23.50 L -12.99,39.50 C -15.30,38.17 -17.61,36.83 -19.92,35.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d3" data-col="1" data-row="2" data-value="8"><title>2026-06-10: 8</title><path class="iso-face-top" d="M -26.85,35.50 C -24.54,30.17 -22.23,18.17 -19.92,19.50 L -7.79,12.50 C -10.10,11.17 -12.41,23.17 -14.72,28.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -26.85,31.50 L -26.85,35.50 C -24.54,30.17 -22.23,18.17 -19.92,19.50 L -19.92,35.50 C -22.23,34.17 -24.54,32.83 -26.85,31.50 Z" fill="#b18251" stroke="#b18251" /><path class="iso-face-top" d="M -19.92,19.50 C -17.61,20.83 -15.30,22.17 -12.99,23.50 L -0.87,16.50 C -3.18,15.17 -5.48,13.83 -7.79,12.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -19.92,35.50 L -19.92,19.50 C -17.61,20.83 -15.30,22.17 -12.99,23.50 L -12.99,39.50 C -15.30,38.17 -17.61,36.83 -19.92,35.50 Z" fill="#b18251" stroke="#b18251" /></g>
 <polygon class="iso-grid-cell" points="-27.71,32.00 -41.57,40.00 -27.71,48.00 -13.86,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="3" data-value="8" style="animation-delay: 60ms; transform-origin: bottom;">
-        <title>2026-06-11: 8</title>
-        
-        <path class="iso-face-top" d="M -40.70,11.50 C -38.39,16.83 -36.08,26.17 -33.77,27.50 L -21.65,20.50 C -23.96,19.17 -26.27,9.83 -28.58,4.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -40.70,15.50 L -40.70,11.50 C -38.39,16.83 -36.08,26.17 -33.77,27.50 L -33.77,31.50 C -36.08,30.17 -38.39,20.83 -40.70,15.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -33.77,27.50 C -31.47,28.83 -29.16,43.50 -26.85,51.50 L -14.72,44.50 C -17.03,36.50 -19.34,21.83 -21.65,20.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -33.77,31.50 L -33.77,27.50 C -31.47,28.83 -29.16,43.50 -26.85,51.50 L -26.85,55.50 C -29.16,47.50 -31.47,32.83 -33.77,31.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d4" data-col="1" data-row="3" data-value="8"><title>2026-06-11: 8</title><path class="iso-face-top" d="M -40.70,11.50 C -38.39,16.83 -36.08,26.17 -33.77,27.50 L -21.65,20.50 C -23.96,19.17 -26.27,9.83 -28.58,4.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -40.70,15.50 L -40.70,11.50 C -38.39,16.83 -36.08,26.17 -33.77,27.50 L -33.77,31.50 C -36.08,30.17 -38.39,20.83 -40.70,15.50 Z" fill="#b18251" stroke="#b18251" /><path class="iso-face-top" d="M -33.77,27.50 C -31.47,28.83 -29.16,43.50 -26.85,51.50 L -14.72,44.50 C -17.03,36.50 -19.34,21.83 -21.65,20.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -33.77,31.50 L -33.77,27.50 C -31.47,28.83 -29.16,43.50 -26.85,51.50 L -26.85,55.50 C -29.16,47.50 -31.47,32.83 -33.77,31.50 Z" fill="#b18251" stroke="#b18251" /></g>
 <polygon class="iso-grid-cell" points="-41.57,40.00 -55.43,48.00 -41.57,56.00 -27.71,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="4" data-value="20" style="animation-delay: 75ms; transform-origin: bottom;">
-      <title>2026-06-12: 20</title>
-      <polygon class="iso-face-left" points="-53.69,8.00 -41.57,15.00 -41.57,55.00 -53.69,48.00" fill="#a5370a" stroke="#a5370a" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-41.57,15.00 -29.44,8.00 -29.44,48.00 -41.57,55.00" fill="#882e08" stroke="#882e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-41.57,1.00 -53.69,8.00 -41.57,15.00 -29.44,8.00" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d5" data-col="1" data-row="4" data-value="20" stroke-linejoin="round"><title>2026-06-12: 20</title><polygon class="iso-face-left" points="-53.69,8.00 -41.57,15.00 -41.57,55.00 -53.69,48.00" fill="#a5370a" stroke="#a5370a" /><polygon class="iso-face-right" points="-41.57,15.00 -29.44,8.00 -29.44,48.00 -41.57,55.00" fill="#882e08" stroke="#882e08" /><polygon class="iso-face-top" points="-41.57,1.00 -53.69,8.00 -41.57,15.00 -29.44,8.00" fill="#c2410c" stroke="#c2410c" /></g>
 <polygon class="iso-grid-cell" points="-55.43,48.00 -69.28,56.00 -55.43,64.00 -41.57,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="5" data-value="8" style="animation-delay: 90ms; transform-origin: bottom;">
-      <title>2026-06-13: 8</title>
-      <path d="M -61.49,40.00 L -61.49,56.00 A 6.06,3.50 0 0,0 -49.36,56.00 L -49.36,40.00 A 6.06,3.50 0 0,1 -61.49,40.00 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-55.43" cy="40.00" rx="6.06" ry="3.50" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d6" data-col="1" data-row="5" data-value="8"><title>2026-06-13: 8</title><path d="M -61.49,40.00 L -61.49,56.00 A 6.06,3.50 0 0,0 -49.36,56.00 L -49.36,40.00 A 6.06,3.50 0 0,1 -61.49,40.00 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" /><ellipse cx="-55.43" cy="40.00" rx="6.06" ry="3.50" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="-69.28,56.00 -83.14,64.00 -69.28,72.00 -55.43,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="6" data-value="8" style="animation-delay: 105ms; transform-origin: bottom;">
-        <title>2026-06-14: 8</title>
-        
-        <path class="iso-face-top" d="M -82.27,47.50 C -79.96,48.83 -77.65,50.17 -75.34,51.50 L -63.22,44.50 C -65.53,43.17 -67.84,41.83 -70.15,40.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -82.27,63.50 L -82.27,47.50 C -79.96,48.83 -77.65,50.17 -75.34,51.50 L -75.34,67.50 C -77.65,66.17 -79.96,64.83 -82.27,63.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -75.34,51.50 C -73.03,52.83 -70.73,67.50 -68.42,75.50 L -56.29,68.50 C -58.60,60.50 -60.91,45.83 -63.22,44.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -75.34,67.50 L -75.34,51.50 C -73.03,52.83 -70.73,67.50 -68.42,75.50 L -68.42,71.50 C -70.73,70.17 -73.03,68.83 -75.34,67.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d7" data-col="1" data-row="6" data-value="8"><title>2026-06-14: 8</title><path class="iso-face-top" d="M -82.27,47.50 C -79.96,48.83 -77.65,50.17 -75.34,51.50 L -63.22,44.50 C -65.53,43.17 -67.84,41.83 -70.15,40.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -82.27,63.50 L -82.27,47.50 C -79.96,48.83 -77.65,50.17 -75.34,51.50 L -75.34,67.50 C -77.65,66.17 -79.96,64.83 -82.27,63.50 Z" fill="#b18251" stroke="#b18251" /><path class="iso-face-top" d="M -75.34,51.50 C -73.03,52.83 -70.73,67.50 -68.42,75.50 L -56.29,68.50 C -58.60,60.50 -60.91,45.83 -63.22,44.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -75.34,67.50 L -75.34,51.50 C -73.03,52.83 -70.73,67.50 -68.42,75.50 L -68.42,71.50 C -70.73,70.17 -73.03,68.83 -75.34,67.50 Z" fill="#b18251" stroke="#b18251" /></g>
 <polygon class="iso-grid-cell" points="27.71,16.00 13.86,24.00 27.71,32.00 41.57,24.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="0" data-value="-12" style="animation-delay: 30ms; transform-origin: top;">
-      <title>2026-06-15: -12</title>
-      <polygon class="iso-face-left" points="15.59,24.00 27.71,31.00 27.71,55.00 15.59,48.00" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="27.71,31.00 39.84,24.00 39.84,48.00 27.71,55.00" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="27.71,17.00 15.59,24.00 27.71,31.00 39.84,24.00" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d2 iso-neg" data-col="2" data-row="0" data-value="-12" stroke-linejoin="round"><title>2026-06-15: -12</title><polygon class="iso-face-left" points="15.59,24.00 27.71,31.00 27.71,55.00 15.59,48.00" fill="#0c8cc6" stroke="#0c8cc6" /><polygon class="iso-face-right" points="27.71,31.00 39.84,24.00 39.84,48.00 27.71,55.00" fill="#0a73a3" stroke="#0a73a3" /><polygon class="iso-face-top" points="27.71,17.00 15.59,24.00 27.71,31.00 39.84,24.00" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="13.86,24.00 0.00,32.00 13.86,40.00 27.71,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="1" data-value="20" style="animation-delay: 45ms; transform-origin: bottom;">
-      <title>2026-06-16: 20</title>
-      <path d="M 7.79,-8.00 L 7.79,32.00 A 6.06,3.50 0 0,0 19.92,32.00 L 19.92,-8.00 A 6.06,3.50 0 0,1 7.79,-8.00 Z" fill="url(#cyl-grad-c2410c)" stroke="#923109" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="13.86" cy="-8.00" rx="6.06" ry="3.50" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d3" data-col="2" data-row="1" data-value="20"><title>2026-06-16: 20</title><path d="M 7.79,-8.00 L 7.79,32.00 A 6.06,3.50 0 0,0 19.92,32.00 L 19.92,-8.00 A 6.06,3.50 0 0,1 7.79,-8.00 Z" fill="url(#cyl-grad-c2410c)" stroke="#923109" /><ellipse cx="13.86" cy="-8.00" rx="6.06" ry="3.50" fill="#c2410c" stroke="#c2410c" /></g>
 <polygon class="iso-grid-cell" points="0.00,32.00 -13.86,40.00 0.00,48.00 13.86,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="2" data-value="8" style="animation-delay: 60ms; transform-origin: bottom;">
-        <title>2026-06-17: 8</title>
-        
-        <path class="iso-face-top" d="M -12.99,23.50 C -10.68,24.83 -8.37,26.17 -6.06,27.50 L 6.06,20.50 C 3.75,19.17 1.44,17.83 -0.87,16.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -12.99,39.50 L -12.99,23.50 C -10.68,24.83 -8.37,26.17 -6.06,27.50 L -6.06,43.50 C -8.37,42.17 -10.68,40.83 -12.99,39.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -6.06,27.50 C -3.75,28.83 -1.44,22.17 0.87,19.50 L 12.99,12.50 C 10.68,15.17 8.37,21.83 6.06,20.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -6.06,43.50 L -6.06,27.50 C -3.75,28.83 -1.44,22.17 0.87,19.50 L 0.87,47.50 C -1.44,46.17 -3.75,44.83 -6.06,43.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d4" data-col="2" data-row="2" data-value="8"><title>2026-06-17: 8</title><path class="iso-face-top" d="M -12.99,23.50 C -10.68,24.83 -8.37,26.17 -6.06,27.50 L 6.06,20.50 C 3.75,19.17 1.44,17.83 -0.87,16.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -12.99,39.50 L -12.99,23.50 C -10.68,24.83 -8.37,26.17 -6.06,27.50 L -6.06,43.50 C -8.37,42.17 -10.68,40.83 -12.99,39.50 Z" fill="#b18251" stroke="#b18251" /><path class="iso-face-top" d="M -6.06,27.50 C -3.75,28.83 -1.44,22.17 0.87,19.50 L 12.99,12.50 C 10.68,15.17 8.37,21.83 6.06,20.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -6.06,43.50 L -6.06,27.50 C -3.75,28.83 -1.44,22.17 0.87,19.50 L 0.87,47.50 C -1.44,46.17 -3.75,44.83 -6.06,43.50 Z" fill="#b18251" stroke="#b18251" /></g>
 <polygon class="iso-grid-cell" points="-13.86,40.00 -27.71,48.00 -13.86,56.00 0.00,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="3" data-value="-12" style="animation-delay: 75ms; transform-origin: top;">
-        <title>2026-06-18: -12</title>
-        
-        <path class="iso-face-top" d="M -26.85,51.50 C -24.54,59.50 -22.23,74.17 -19.92,75.50 L -7.79,68.50 C -10.10,67.17 -12.41,52.50 -14.72,44.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -26.85,55.50 L -26.85,51.50 C -24.54,59.50 -22.23,74.17 -19.92,75.50 L -19.92,79.50 C -22.23,78.17 -24.54,63.50 -26.85,55.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -19.92,75.50 C -17.61,76.83 -15.30,64.83 -12.99,59.50 L -0.87,52.50 C -3.18,57.83 -5.48,69.83 -7.79,68.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -19.92,79.50 L -19.92,75.50 C -17.61,76.83 -15.30,64.83 -12.99,59.50 L -12.99,63.50 C -15.30,68.83 -17.61,80.83 -19.92,79.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d5 iso-neg" data-col="2" data-row="3" data-value="-12"><title>2026-06-18: -12</title><path class="iso-face-top" d="M -26.85,51.50 C -24.54,59.50 -22.23,74.17 -19.92,75.50 L -7.79,68.50 C -10.10,67.17 -12.41,52.50 -14.72,44.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-right" d="M -26.85,55.50 L -26.85,51.50 C -24.54,59.50 -22.23,74.17 -19.92,75.50 L -19.92,79.50 C -22.23,78.17 -24.54,63.50 -26.85,55.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-top" d="M -19.92,75.50 C -17.61,76.83 -15.30,64.83 -12.99,59.50 L -0.87,52.50 C -3.18,57.83 -5.48,69.83 -7.79,68.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-right" d="M -19.92,79.50 L -19.92,75.50 C -17.61,76.83 -15.30,64.83 -12.99,59.50 L -12.99,63.50 C -15.30,68.83 -17.61,80.83 -19.92,79.50 Z" fill="#0a73a3" stroke="#0a73a3" /></g>
 <polygon class="iso-grid-cell" points="-27.71,48.00 -41.57,56.00 -27.71,64.00 -13.86,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="4" data-value="8" style="animation-delay: 90ms; transform-origin: bottom;">
-      <title>2026-06-19: 8</title>
-      <polygon class="iso-face-left" points="-39.84,40.00 -27.71,47.00 -27.71,63.00 -39.84,56.00" fill="#d79e63" stroke="#d79e63" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-27.71,47.00 -15.59,40.00 -15.59,56.00 -27.71,63.00" fill="#b18251" stroke="#b18251" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-27.71,33.00 -39.84,40.00 -27.71,47.00 -15.59,40.00" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d6" data-col="2" data-row="4" data-value="8" stroke-linejoin="round"><title>2026-06-19: 8</title><polygon class="iso-face-left" points="-39.84,40.00 -27.71,47.00 -27.71,63.00 -39.84,56.00" fill="#d79e63" stroke="#d79e63" /><polygon class="iso-face-right" points="-27.71,47.00 -15.59,40.00 -15.59,56.00 -27.71,63.00" fill="#b18251" stroke="#b18251" /><polygon class="iso-face-top" points="-27.71,33.00 -39.84,40.00 -27.71,47.00 -15.59,40.00" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="-41.57,56.00 -55.43,64.00 -41.57,72.00 -27.71,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="5" data-value="20" style="animation-delay: 105ms; transform-origin: bottom;">
-      <title>2026-06-20: 20</title>
-      <path d="M -47.63,24.00 L -47.63,64.00 A 6.06,3.50 0 0,0 -35.51,64.00 L -35.51,24.00 A 6.06,3.50 0 0,1 -47.63,24.00 Z" fill="url(#cyl-grad-c2410c)" stroke="#923109" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-41.57" cy="24.00" rx="6.06" ry="3.50" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d7" data-col="2" data-row="5" data-value="20"><title>2026-06-20: 20</title><path d="M -47.63,24.00 L -47.63,64.00 A 6.06,3.50 0 0,0 -35.51,64.00 L -35.51,24.00 A 6.06,3.50 0 0,1 -47.63,24.00 Z" fill="url(#cyl-grad-c2410c)" stroke="#923109" /><ellipse cx="-41.57" cy="24.00" rx="6.06" ry="3.50" fill="#c2410c" stroke="#c2410c" /></g>
 <polygon class="iso-grid-cell" points="-55.43,64.00 -69.28,72.00 -55.43,80.00 -41.57,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="6" data-value="-12" style="animation-delay: 120ms; transform-origin: top;">
-        <title>2026-06-21: -12</title>
-        
-        <path class="iso-face-right" d="M -56.29,64.50 L -56.29,68.50 C -53.98,76.50 -51.67,91.17 -49.36,92.50 L -49.36,68.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -49.36,68.50 L -49.36,92.50 C -47.05,93.83 -44.74,73.83 -42.44,64.50 L -42.44,72.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -68.42,75.50 C -66.11,83.50 -63.80,98.17 -61.49,99.50 L -49.36,92.50 C -51.67,91.17 -53.98,76.50 -56.29,68.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -61.49,99.50 C -59.18,100.83 -56.87,80.83 -54.56,71.50 L -42.44,64.50 C -44.74,73.83 -47.05,93.83 -49.36,92.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -68.42,71.50 C -66.11,72.83 -63.80,74.17 -61.49,75.50 L -49.36,68.50 C -51.67,67.17 -53.98,65.83 -56.29,64.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -61.49,75.50 C -59.18,76.83 -56.87,78.17 -54.56,79.50 L -42.44,72.50 C -44.74,71.17 -47.05,69.83 -49.36,68.50 Z" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -68.42,71.50 L -68.42,75.50 C -66.11,83.50 -63.80,98.17 -61.49,99.50 L -61.49,75.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -61.49,75.50 L -61.49,99.50 C -59.18,100.83 -56.87,80.83 -54.56,71.50 L -54.56,79.50 Z" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d8 iso-neg" data-col="2" data-row="6" data-value="-12"><title>2026-06-21: -12</title><path class="iso-face-right" d="M -56.29,64.50 L -56.29,68.50 C -53.98,76.50 -51.67,91.17 -49.36,92.50 L -49.36,68.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M -49.36,68.50 L -49.36,92.50 C -47.05,93.83 -44.74,73.83 -42.44,64.50 L -42.44,72.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-top" d="M -68.42,75.50 C -66.11,83.50 -63.80,98.17 -61.49,99.50 L -49.36,92.50 C -51.67,91.17 -53.98,76.50 -56.29,68.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -61.49,99.50 C -59.18,100.83 -56.87,80.83 -54.56,71.50 L -42.44,64.50 C -44.74,73.83 -47.05,93.83 -49.36,92.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -68.42,71.50 C -66.11,72.83 -63.80,74.17 -61.49,75.50 L -49.36,68.50 C -51.67,67.17 -53.98,65.83 -56.29,64.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-top" d="M -61.49,75.50 C -59.18,76.83 -56.87,78.17 -54.56,79.50 L -42.44,72.50 C -44.74,71.17 -47.05,69.83 -49.36,68.50 Z" fill="#0ea5e9" stroke="#0ea5e9" /><path class="iso-face-right" d="M -68.42,71.50 L -68.42,75.50 C -66.11,83.50 -63.80,98.17 -61.49,99.50 L -61.49,75.50 Z" fill="#0a73a3" stroke="#0a73a3" /><path class="iso-face-right" d="M -61.49,75.50 L -61.49,99.50 C -59.18,100.83 -56.87,80.83 -54.56,71.50 L -54.56,79.50 Z" fill="#0a73a3" stroke="#0a73a3" /></g>
 <polygon class="iso-grid-cell" points="41.57,24.00 27.71,32.00 41.57,40.00 55.43,32.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="0" data-value="8" style="animation-delay: 45ms; transform-origin: bottom;">
-      <title>2026-06-22: 8</title>
-      <polygon class="iso-face-left" points="29.44,16.00 41.57,23.00 41.57,39.00 29.44,32.00" fill="#d79e63" stroke="#d79e63" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="41.57,23.00 53.69,16.00 53.69,32.00 41.57,39.00" fill="#b18251" stroke="#b18251" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="41.57,9.00 29.44,16.00 41.57,23.00 53.69,16.00" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d3" data-col="3" data-row="0" data-value="8" stroke-linejoin="round"><title>2026-06-22: 8</title><polygon class="iso-face-left" points="29.44,16.00 41.57,23.00 41.57,39.00 29.44,32.00" fill="#d79e63" stroke="#d79e63" /><polygon class="iso-face-right" points="41.57,23.00 53.69,16.00 53.69,32.00 41.57,39.00" fill="#b18251" stroke="#b18251" /><polygon class="iso-face-top" points="41.57,9.00 29.44,16.00 41.57,23.00 53.69,16.00" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="27.71,32.00 13.86,40.00 27.71,48.00 41.57,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="1" data-value="8" style="animation-delay: 60ms; transform-origin: bottom;">
-      <title>2026-06-23: 8</title>
-      <path d="M 21.65,24.00 L 21.65,40.00 A 6.06,3.50 0 0,0 33.77,40.00 L 33.77,24.00 A 6.06,3.50 0 0,1 21.65,24.00 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="27.71" cy="24.00" rx="6.06" ry="3.50" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d4" data-col="3" data-row="1" data-value="8"><title>2026-06-23: 8</title><path d="M 21.65,24.00 L 21.65,40.00 A 6.06,3.50 0 0,0 33.77,40.00 L 33.77,24.00 A 6.06,3.50 0 0,1 21.65,24.00 Z" fill="url(#cyl-grad-fdba74)" stroke="#be8c57" /><ellipse cx="27.71" cy="24.00" rx="6.06" ry="3.50" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="13.86,40.00 0.00,48.00 13.86,56.00 27.71,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="2" data-value="20" style="animation-delay: 75ms; transform-origin: bottom;">
-        <title>2026-06-24: 20</title>
-        <polygon class="iso-face-right" points="26.85,48.50 14.72,55.50 14.72,55.50 26.85,48.50" fill="#882e08" stroke="#882e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 0.87,19.50 C 3.18,16.83 5.48,10.17 7.79,11.50 L 19.92,4.50 C 17.61,3.17 15.30,9.83 12.99,12.50 Z" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 0.87,47.50 L 0.87,19.50 C 3.18,16.83 5.48,10.17 7.79,11.50 L 7.79,51.50 C 5.48,50.17 3.18,48.83 0.87,47.50 Z" fill="#882e08" stroke="#882e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M 7.79,11.50 C 10.10,12.83 12.41,47.50 14.72,55.50 L 26.85,48.50 C 24.54,40.50 22.23,5.83 19.92,4.50 Z" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M 7.79,51.50 L 7.79,11.50 C 10.10,12.83 12.41,47.50 14.72,55.50 L 14.72,55.50 C 12.41,54.17 10.10,52.83 7.79,51.50 Z" fill="#882e08" stroke="#882e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d5" data-col="3" data-row="2" data-value="20"><title>2026-06-24: 20</title><polygon class="iso-face-right" points="26.85,48.50 14.72,55.50 14.72,55.50 26.85,48.50" fill="#882e08" stroke="#882e08" stroke-linejoin="round" /><path class="iso-face-top" d="M 0.87,19.50 C 3.18,16.83 5.48,10.17 7.79,11.50 L 19.92,4.50 C 17.61,3.17 15.30,9.83 12.99,12.50 Z" fill="#c2410c" stroke="#c2410c" /><path class="iso-face-right" d="M 0.87,47.50 L 0.87,19.50 C 3.18,16.83 5.48,10.17 7.79,11.50 L 7.79,51.50 C 5.48,50.17 3.18,48.83 0.87,47.50 Z" fill="#882e08" stroke="#882e08" /><path class="iso-face-top" d="M 7.79,11.50 C 10.10,12.83 12.41,47.50 14.72,55.50 L 26.85,48.50 C 24.54,40.50 22.23,5.83 19.92,4.50 Z" fill="#c2410c" stroke="#c2410c" /><path class="iso-face-right" d="M 7.79,51.50 L 7.79,11.50 C 10.10,12.83 12.41,47.50 14.72,55.50 L 14.72,55.50 C 12.41,54.17 10.10,52.83 7.79,51.50 Z" fill="#882e08" stroke="#882e08" /></g>
 <polygon class="iso-grid-cell" points="0.00,48.00 -13.86,56.00 0.00,64.00 13.86,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="3" data-value="8" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>2026-06-25: 8</title>
-        <polygon class="iso-face-right" points="12.99,56.50 0.87,63.50 0.87,67.50 12.99,60.50" fill="#b18251" stroke="#b18251" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -12.99,59.50 C -10.68,54.17 -8.37,42.17 -6.06,43.50 L 6.06,36.50 C 3.75,35.17 1.44,47.17 -0.87,52.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -12.99,63.50 L -12.99,59.50 C -10.68,54.17 -8.37,42.17 -6.06,43.50 L -6.06,47.50 C -8.37,46.17 -10.68,58.17 -12.99,63.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -6.06,43.50 C -3.75,44.83 -1.44,59.50 0.87,63.50 L 12.99,56.50 C 10.68,52.50 8.37,37.83 6.06,36.50 Z" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -6.06,47.50 L -6.06,43.50 C -3.75,44.83 -1.44,59.50 0.87,63.50 L 0.87,67.50 C -1.44,63.50 -3.75,48.83 -6.06,47.50 Z" fill="#b18251" stroke="#b18251" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d6" data-col="3" data-row="3" data-value="8"><title>2026-06-25: 8</title><polygon class="iso-face-right" points="12.99,56.50 0.87,63.50 0.87,67.50 12.99,60.50" fill="#b18251" stroke="#b18251" stroke-linejoin="round" /><path class="iso-face-top" d="M -12.99,59.50 C -10.68,54.17 -8.37,42.17 -6.06,43.50 L 6.06,36.50 C 3.75,35.17 1.44,47.17 -0.87,52.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -12.99,63.50 L -12.99,59.50 C -10.68,54.17 -8.37,42.17 -6.06,43.50 L -6.06,47.50 C -8.37,46.17 -10.68,58.17 -12.99,63.50 Z" fill="#b18251" stroke="#b18251" /><path class="iso-face-top" d="M -6.06,43.50 C -3.75,44.83 -1.44,59.50 0.87,63.50 L 12.99,56.50 C 10.68,52.50 8.37,37.83 6.06,36.50 Z" fill="#fdba74" stroke="#fdba74" /><path class="iso-face-right" d="M -6.06,47.50 L -6.06,43.50 C -3.75,44.83 -1.44,59.50 0.87,63.50 L 0.87,67.50 C -1.44,63.50 -3.75,48.83 -6.06,47.50 Z" fill="#b18251" stroke="#b18251" /></g>
 <polygon class="iso-grid-cell" points="-13.86,56.00 -27.71,64.00 -13.86,72.00 0.00,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="4" data-value="8" style="animation-delay: 105ms; transform-origin: bottom;">
-      <title>2026-06-26: 8</title>
-      <polygon class="iso-face-left" points="-25.98,48.00 -13.86,55.00 -13.86,71.00 -25.98,64.00" fill="#d79e63" stroke="#d79e63" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="-13.86,55.00 -1.73,48.00 -1.73,64.00 -13.86,71.00" fill="#b18251" stroke="#b18251" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="-13.86,41.00 -25.98,48.00 -13.86,55.00 -1.73,48.00" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d7" data-col="3" data-row="4" data-value="8" stroke-linejoin="round"><title>2026-06-26: 8</title><polygon class="iso-face-left" points="-25.98,48.00 -13.86,55.00 -13.86,71.00 -25.98,64.00" fill="#d79e63" stroke="#d79e63" /><polygon class="iso-face-right" points="-13.86,55.00 -1.73,48.00 -1.73,64.00 -13.86,71.00" fill="#b18251" stroke="#b18251" /><polygon class="iso-face-top" points="-13.86,41.00 -25.98,48.00 -13.86,55.00 -1.73,48.00" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="-27.71,64.00 -41.57,72.00 -27.71,80.00 -13.86,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="5" data-value="-12" style="animation-delay: 120ms; transform-origin: top;">
-      <title>2026-06-27: -12</title>
-      <path d="M -33.77,72.00 L -33.77,96.00 A 6.06,3.50 0 0,0 -21.65,96.00 L -21.65,72.00 A 6.06,3.50 0 0,1 -33.77,72.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="-27.71" cy="72.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d8 iso-neg" data-col="3" data-row="5" data-value="-12"><title>2026-06-27: -12</title><path d="M -33.77,72.00 L -33.77,96.00 A 6.06,3.50 0 0,0 -21.65,96.00 L -21.65,72.00 A 6.06,3.50 0 0,1 -33.77,72.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" /><ellipse cx="-27.71" cy="72.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="-41.57,72.00 -55.43,80.00 -41.57,88.00 -27.71,80.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="6" data-value="20" style="animation-delay: 135ms; transform-origin: bottom;">
-        <title>2026-06-28: 20</title>
-        <polygon class="iso-face-right" points="-28.58,80.50 -40.70,87.50 -40.70,87.50 -28.58,80.50" fill="#882e08" stroke="#882e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -54.56,71.50 C -52.25,62.17 -49.94,42.17 -47.63,43.50 L -35.51,36.50 C -37.82,35.17 -40.13,55.17 -42.44,64.50 Z" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -54.56,79.50 L -54.56,71.50 C -52.25,62.17 -49.94,42.17 -47.63,43.50 L -47.63,83.50 C -49.94,82.17 -52.25,80.83 -54.56,79.50 Z" fill="#882e08" stroke="#882e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-top" d="M -47.63,43.50 C -45.32,44.83 -43.01,79.50 -40.70,87.50 L -28.58,80.50 C -30.89,72.50 -33.20,37.83 -35.51,36.50 Z" fill="#c2410c" stroke="#c2410c" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-        <path class="iso-face-right" d="M -47.63,83.50 L -47.63,43.50 C -45.32,44.83 -43.01,79.50 -40.70,87.50 L -40.70,87.50 C -43.01,86.17 -45.32,84.83 -47.63,83.50 Z" fill="#882e08" stroke="#882e08" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-surface iso-d9" data-col="3" data-row="6" data-value="20"><title>2026-06-28: 20</title><polygon class="iso-face-right" points="-28.58,80.50 -40.70,87.50 -40.70,87.50 -28.58,80.50" fill="#882e08" stroke="#882e08" stroke-linejoin="round" /><path class="iso-face-top" d="M -54.56,71.50 C -52.25,62.17 -49.94,42.17 -47.63,43.50 L -35.51,36.50 C -37.82,35.17 -40.13,55.17 -42.44,64.50 Z" fill="#c2410c" stroke="#c2410c" /><path class="iso-face-right" d="M -54.56,79.50 L -54.56,71.50 C -52.25,62.17 -49.94,42.17 -47.63,43.50 L -47.63,83.50 C -49.94,82.17 -52.25,80.83 -54.56,79.50 Z" fill="#882e08" stroke="#882e08" /><path class="iso-face-top" d="M -47.63,43.50 C -45.32,44.83 -43.01,79.50 -40.70,87.50 L -28.58,80.50 C -30.89,72.50 -33.20,37.83 -35.51,36.50 Z" fill="#c2410c" stroke="#c2410c" /><path class="iso-face-right" d="M -47.63,83.50 L -47.63,43.50 C -45.32,44.83 -43.01,79.50 -40.70,87.50 L -40.70,87.50 C -43.01,86.17 -45.32,84.83 -47.63,83.50 Z" fill="#882e08" stroke="#882e08" /></g>
 <polygon class="iso-grid-cell" points="55.43,32.00 41.57,40.00 55.43,48.00 69.28,40.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="0" data-value="8" style="animation-delay: 60ms; transform-origin: bottom;">
-      <title>2026-06-29: 8</title>
-      <polygon class="iso-face-left" points="43.30,24.00 55.43,31.00 55.43,47.00 43.30,40.00" fill="#d79e63" stroke="#d79e63" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="55.43,31.00 67.55,24.00 67.55,40.00 55.43,47.00" fill="#b18251" stroke="#b18251" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="55.43,17.00 43.30,24.00 55.43,31.00 67.55,24.00" fill="#fdba74" stroke="#fdba74" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d4" data-col="4" data-row="0" data-value="8" stroke-linejoin="round"><title>2026-06-29: 8</title><polygon class="iso-face-left" points="43.30,24.00 55.43,31.00 55.43,47.00 43.30,40.00" fill="#d79e63" stroke="#d79e63" /><polygon class="iso-face-right" points="55.43,31.00 67.55,24.00 67.55,40.00 55.43,47.00" fill="#b18251" stroke="#b18251" /><polygon class="iso-face-top" points="55.43,17.00 43.30,24.00 55.43,31.00 67.55,24.00" fill="#fdba74" stroke="#fdba74" /></g>
 <polygon class="iso-grid-cell" points="41.57,40.00 27.71,48.00 41.57,56.00 55.43,48.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="1" data-value="-12" style="animation-delay: 75ms; transform-origin: top;">
-      <title>2026-06-30: -12</title>
-      <path d="M 35.51,48.00 L 35.51,72.00 A 6.06,3.50 0 0,0 47.63,72.00 L 47.63,48.00 A 6.06,3.50 0 0,1 35.51,48.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-      <ellipse cx="41.57" cy="48.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d5 iso-neg" data-col="4" data-row="1" data-value="-12"><title>2026-06-30: -12</title><path d="M 35.51,48.00 L 35.51,72.00 A 6.06,3.50 0 0,0 47.63,72.00 L 47.63,48.00 A 6.06,3.50 0 0,1 35.51,48.00 Z" fill="url(#cyl-grad-0ea5e9)" stroke="#0b7caf" /><ellipse cx="41.57" cy="48.00" rx="6.06" ry="3.50" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="27.71,48.00 13.86,56.00 27.71,64.00 41.57,56.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="13.86,56.00 0.00,64.00 13.86,72.00 27.71,64.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <polygon class="iso-grid-cell" points="0.00,64.00 -13.86,72.00 0.00,80.00 13.86,72.00" fill="none" stroke="#e1e4e8" stroke-width="0.5" />

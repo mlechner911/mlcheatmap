@@ -5,6 +5,7 @@
  */
 
 import { HeatmapDataPoint } from '../data/types';
+import { opacityAttributes } from './svg-document';
 
 interface Colors {
   top: string;
@@ -23,7 +24,7 @@ export function renderRibbon(
   colors: Colors,
   opacity: number,
   titleTag: string,
-  inlineStyle: string,
+  barClass: string,
   cols: number,
   maxAbsValue: number,
   maxHeight: number,
@@ -71,11 +72,11 @@ export function renderRibbon(
   let capSvg = '';
   if (valPrev === 0) {
     const leftCapPoints = `${pts0.back.x.toFixed(2)},${pts0.back.y.toFixed(2)} ${pts0.front.x.toFixed(2)},${pts0.front.y.toFixed(2)} ${pts0Bottom.front.x.toFixed(2)},${pts0Bottom.front.y.toFixed(2)} ${pts0Bottom.back.x.toFixed(2)},${pts0Bottom.back.y.toFixed(2)}`;
-    capSvg += `<polygon class="iso-face-left" points="${leftCapPoints}" fill="${colors.left}" stroke="${colors.left}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />`;
+    capSvg += `<polygon class="iso-face-left" points="${leftCapPoints}" fill="${colors.left}" stroke="${colors.left}" stroke-linejoin="round"${opacityAttributes(opacity)} />`;
   }
   if (valNext === 0) {
     const rightCapPoints = `${pts1.back.x.toFixed(2)},${pts1.back.y.toFixed(2)} ${pts1.front.x.toFixed(2)},${pts1.front.y.toFixed(2)} ${pts1Bottom.front.x.toFixed(2)},${pts1Bottom.front.y.toFixed(2)} ${pts1Bottom.back.x.toFixed(2)},${pts1Bottom.back.y.toFixed(2)}`;
-    capSvg += `<polygon class="iso-face-right" points="${rightCapPoints}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />`;
+    capSvg += `<polygon class="iso-face-right" points="${rightCapPoints}" fill="${colors.right}" stroke="${colors.right}" stroke-linejoin="round"${opacityAttributes(opacity)} />`;
   }
 
   // Curve interpolation
@@ -103,14 +104,7 @@ export function renderRibbon(
         `${getRibbonPoints(c + 2/3, r, h_cp1_seg2_bottom).front.x.toFixed(2)},${getRibbonPoints(c + 2/3, r, h_cp1_seg2_bottom).front.y.toFixed(2)} ` +
         `${ptsMidBottom.front.x.toFixed(2)},${ptsMidBottom.front.y.toFixed(2)} Z`;
 
-    return `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${value}"${inlineStyle}>
-        ${titleTag}
-        ${capSvg}
-        <path class="iso-face-top" d="${seg1TopPath}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-right" d="${seg1FrontPath}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-top" d="${seg2TopPath}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-right" d="${seg2FrontPath}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-      </g>`;
+    return `<g class="${barClass}" data-col="${c}" data-row="${r}" data-value="${value}">${titleTag}${capSvg}<path class="iso-face-top" d="${seg1TopPath}" fill="${colors.top}" stroke="${colors.top}"${opacityAttributes(opacity)} /><path class="iso-face-right" d="${seg1FrontPath}" fill="${colors.right}" stroke="${colors.right}"${opacityAttributes(opacity)} /><path class="iso-face-top" d="${seg2TopPath}" fill="${colors.top}" stroke="${colors.top}"${opacityAttributes(opacity)} /><path class="iso-face-right" d="${seg2FrontPath}" fill="${colors.right}" stroke="${colors.right}"${opacityAttributes(opacity)} /></g>`;
   } else {
     const ptsC1_1_Floor = getRibbonPoints(c + 1/6, r, 0);
     const ptsC2_1_Floor = getRibbonPoints(c + 1/3, r, 0);
@@ -126,18 +120,7 @@ export function renderRibbon(
     const seg1BackPath = `M ${pts0Bottom.back.x.toFixed(2)},${pts0Bottom.back.y.toFixed(2)} L ${pts0.back.x.toFixed(2)},${pts0.back.y.toFixed(2)} C ${getRibbonPoints(c + 1/6, r, h_cp1_seg1).back.x.toFixed(2)},${getRibbonPoints(c + 1/6, r, h_cp1_seg1).back.y.toFixed(2)} ${getRibbonPoints(c + 1/3, r, h_cp2_seg1).back.x.toFixed(2)},${getRibbonPoints(c + 1/3, r, h_cp2_seg1).back.y.toFixed(2)} ${ptsMid.back.x.toFixed(2)},${ptsMid.back.y.toFixed(2)} L ${ptsMidBottom.back.x.toFixed(2)},${ptsMidBottom.back.y.toFixed(2)} Z`;
     const seg2BackPath = `M ${ptsMidBottom.back.x.toFixed(2)},${ptsMidBottom.back.y.toFixed(2)} L ${ptsMid.back.x.toFixed(2)},${ptsMid.back.y.toFixed(2)} C ${getRibbonPoints(c + 2/3, r, h_cp1_seg2).back.x.toFixed(2)},${getRibbonPoints(c + 2/3, r, h_cp1_seg2).back.y.toFixed(2)} ${getRibbonPoints(c + 5/6, r, h_cp2_seg2).back.x.toFixed(2)},${getRibbonPoints(c + 5/6, r, h_cp2_seg2).back.y.toFixed(2)} ${pts1.back.x.toFixed(2)},${pts1.back.y.toFixed(2)} L ${pts1Bottom.back.x.toFixed(2)},${pts1Bottom.back.y.toFixed(2)} Z`;
 
-    return `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${value}"${inlineStyle}>
-        ${titleTag}
-        ${capSvg}
-        <path class="iso-face-right" d="${seg1BackPath}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-right" d="${seg2BackPath}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-top" d="${seg1TopPath}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-top" d="${seg2TopPath}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-top" d="${seg1TopPathFloor}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-top" d="${seg2TopPathFloor}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-right" d="${seg1FrontPath}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-        <path class="iso-face-right" d="${seg2FrontPath}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-      </g>`;
+    return `<g class="${barClass}" data-col="${c}" data-row="${r}" data-value="${value}">${titleTag}${capSvg}<path class="iso-face-right" d="${seg1BackPath}" fill="${colors.right}" stroke="${colors.right}"${opacityAttributes(opacity)} /><path class="iso-face-right" d="${seg2BackPath}" fill="${colors.right}" stroke="${colors.right}"${opacityAttributes(opacity)} /><path class="iso-face-top" d="${seg1TopPath}" fill="${colors.top}" stroke="${colors.top}"${opacityAttributes(opacity)} /><path class="iso-face-top" d="${seg2TopPath}" fill="${colors.top}" stroke="${colors.top}"${opacityAttributes(opacity)} /><path class="iso-face-top" d="${seg1TopPathFloor}" fill="${colors.top}" stroke="${colors.top}"${opacityAttributes(opacity)} /><path class="iso-face-top" d="${seg2TopPathFloor}" fill="${colors.top}" stroke="${colors.top}"${opacityAttributes(opacity)} /><path class="iso-face-right" d="${seg1FrontPath}" fill="${colors.right}" stroke="${colors.right}"${opacityAttributes(opacity)} /><path class="iso-face-right" d="${seg2FrontPath}" fill="${colors.right}" stroke="${colors.right}"${opacityAttributes(opacity)} /></g>`;
   }
 }
 

@@ -203,7 +203,7 @@ describe('documents', () => {
 
   it('returns a placeable group with wrapper g', () => {
     const svg = grid().render({ view: 'flat', wrapper: 'g' });
-    expect(svg.startsWith('<g class="iso-heatmap-group"')).toBe(true);
+    expect(svg.startsWith('<g class="iso-heatmap-group')).toBe(true);
     expect(svg).toContain('data-width=');
   });
 

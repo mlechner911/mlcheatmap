@@ -4,7 +4,7 @@
  * Licensed under the MIT License.
  */
 
-import type { CustomColorScheme, HeatmapDataPoint, HeatmapOptions } from '../data/types';
+import type { CustomColorScheme, HeatmapDataPoint, HeatmapOptions, HeatmapShape } from '../data/types';
 import { contrastingTextColor, getColorForValue, shadeHex } from './color';
 import { type GeometryConfig, getBarVertices, getRibbonPoints, shapeForRow } from './geometry';
 import { renderFaceText } from './labels';
@@ -12,7 +12,7 @@ import { renderMeshQuad } from './mesh';
 import { renderCylinder } from './cylinder';
 import { renderFlatCell, renderPrism } from './prism';
 import { renderRibbon } from './ribbon';
-import { escapeHtml } from './svg-document';
+import { escapeHtml, staggerClass } from './svg-document';
 
 export interface CellContext {
   options: HeatmapOptions;
@@ -32,7 +32,7 @@ export interface CellContext {
 }
 
 /** One mesh patch between this cell and its three neighbours; empty at the edge or next to a gap. */
-function renderMeshCell(c: number, r: number, value: number, inlineStyle: string, ctx: CellContext): string {
+function renderMeshCell(c: number, r: number, value: number, barClass: string, ctx: CellContext): string {
   const { options, cols, rows, maxAbsValue, maxHeight, getPoint } = ctx;
   if (c >= cols - 1 || r >= rows - 1) {
     return '';
@@ -67,16 +67,12 @@ function renderMeshCell(c: number, r: number, value: number, inlineStyle: string
     geometryConfig: ctx.geometryConfig,
     opacity: ctx.opacity,
     titleTag: '',
-    inlineStyle: '',
     triangulateMesh: options.triangulateMesh,
     useSvg2Mesh: options.useSvg2Mesh,
     shading: options.shading
   });
 
-  return `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${avgVal.toFixed(2)}"${inlineStyle}>
-              ${titleTag}
-              ${quadPolygon}
-            </g>`;
+  return `<g class="${barClass}" data-col="${c}" data-row="${r}" data-value="${avgVal.toFixed(2)}">${titleTag}${quadPolygon}</g>`;
 }
 
 /** The color a value shows in, unless the point brings its own. */
@@ -93,6 +89,21 @@ export function cellColor(
 /** The tooltip of a cell: formatter first, then the label of the point. */
 export function cellTooltip(pt: HeatmapDataPoint, options: HeatmapOptions): string {
   return options.tooltipFormatter?.(pt) ?? pt.label ?? `Col ${pt.col}, Row ${pt.row}: ${pt.value}`;
+}
+
+/**
+ * The classes of a cell. Only what the chart's own style rules use: its place in the entrance
+ * animation, sinking values growing from the top, and surfaces, which would tear if a part lifted.
+ */
+function cellClass(c: number, r: number, value: number, shape: HeatmapShape, interactive: boolean, animated: boolean): string {
+  const classes = ['iso-bar'];
+  if (interactive && shape !== 'prism' && shape !== 'cylinder') classes.push('iso-surface');
+  if (interactive && animated) {
+    const stagger = staggerClass(c, r);
+    if (stagger) classes.push(stagger);
+    if (value < 0) classes.push('iso-neg');
+  }
+  return classes.join(' ');
 }
 
 /** The bar, surface or band of one cell, or an empty string when it draws nothing. */
@@ -117,24 +128,21 @@ export function renderCell(pt: HeatmapDataPoint, c: number, r: number, ctx: Cell
 
   const titleText = cellTooltip({ ...pt, col: c, row: r }, options);
   const titleTag = interactive ? `<title>${escapeHtml(titleText)}</title>` : '';
-  const delay = (c + r) * 15;
-  const origin = pt.value < 0 ? 'top' : 'bottom';
-  const inlineStyle = (interactive && animated) ? ` style="animation-delay: ${delay}ms; transform-origin: ${origin};"` : '';
-
   const shape = shapeForRow(options.shape, r);
+  const barClass = cellClass(c, r, pt.value, shape, interactive, animated);
   let barSvg = '';
   if (shape === 'mesh') {
-    barSvg = renderMeshCell(c, r, pt.value, inlineStyle, ctx);
+    barSvg = renderMeshCell(c, r, pt.value, barClass, ctx);
   } else if (shape === 'cylinder') {
-    barSvg = renderCylinder(c, r, pt.value, h, baseColor, colors, verticesTop, verticesBottom, gridSize - gap, cosAngle, sinAngle, opacity, renderFlatZero, titleTag, inlineStyle, uniqueColors);
+    barSvg = renderCylinder(c, r, pt.value, h, baseColor, colors, verticesTop, verticesBottom, gridSize - gap, cosAngle, sinAngle, opacity, renderFlatZero, titleTag, barClass, uniqueColors);
   } else if (shape === 'ribbon' || shape === 'flatribbon') {
     if (h !== 0) {
-      barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, inlineStyle, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig), shape === 'flatribbon');
+      barSvg = renderRibbon(c, r, pt.value, h, colors, opacity, titleTag, barClass, cols, maxAbsValue, maxHeight, getPoint, (cFraction, row, height) => getRibbonPoints(cFraction, row, height, geometryConfig), shape === 'flatribbon');
     } else if (renderFlatZero) {
-      barSvg = renderFlatCell(c, r, pt.value, colors.top, verticesTop, opacity, titleTag, inlineStyle);
+      barSvg = renderFlatCell(c, r, pt.value, colors.top, verticesTop, opacity, titleTag, barClass);
     }
   } else {
-    barSvg = renderPrism(c, r, pt.value, h, colors, verticesTop, verticesBottom, opacity, renderFlatZero, titleTag, inlineStyle);
+    barSvg = renderPrism(c, r, pt.value, h, colors, verticesTop, verticesBottom, opacity, renderFlatZero, titleTag, barClass);
   }
 
   if (barSvg && pt.faceText && (shape === 'prism' || shape === 'cylinder')) {

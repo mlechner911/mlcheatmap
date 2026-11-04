@@ -140,7 +140,7 @@ describe('gridCells', () => {
 describe('faceText', () => {
   it('sits inside the group of its bar', () => {
     const svg = renderHeatmap([{ col: 0, row: 0, value: 3, faceText: '<7>' }], { cols: 1, rows: 1 });
-    expect(svg).toMatch(/<g class="iso-bar"[\s\S]*iso-face-text[^>]*>&lt;7&gt;<\/text>\s*<\/g>/);
+    expect(svg).toMatch(/<g class="iso-bar[^"]*"[\s\S]*iso-face-text[^>]*>&lt;7&gt;<\/text>\s*<\/g>/);
   });
 
   it('is skipped for shapes without a top face', () => {

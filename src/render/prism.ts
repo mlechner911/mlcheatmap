@@ -4,6 +4,8 @@
  * Licensed under the MIT License.
  */
 
+import { opacityAttributes } from './svg-document';
+
 interface Colors {
   top: string;
   left: string;
@@ -26,7 +28,7 @@ export function renderFlatCell(
   vertices: Vertices,
   opacity: number,
   titleTag: string,
-  inlineStyle: string
+  barClass: string
 ): string {
   const t = vertices.top;
   const l = vertices.left;
@@ -34,10 +36,7 @@ export function renderFlatCell(
   const rg = vertices.right;
   const points = `${t.x.toFixed(2)},${t.y.toFixed(2)} ${l.x.toFixed(2)},${l.y.toFixed(2)} ${f.x.toFixed(2)},${f.y.toFixed(2)} ${rg.x.toFixed(2)},${rg.y.toFixed(2)}`;
 
-  return `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${value}"${inlineStyle}>
-        ${titleTag}
-        <polygon points="${points}" fill="${color}" stroke="${color}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-      </g>`;
+  return `<g class="${barClass}" data-col="${c}" data-row="${r}" data-value="${value}" stroke-linejoin="round">${titleTag}<polygon points="${points}" fill="${color}" stroke="${color}"${opacityAttributes(opacity)} /></g>`;
 }
 
 /**
@@ -54,10 +53,10 @@ export function renderPrism(
   opacity: number,
   renderFlatZero: boolean,
   titleTag: string,
-  inlineStyle: string
+  barClass: string
 ): string {
   if (h === 0) {
-    return renderFlatZero ? renderFlatCell(c, r, value, colors.top, verticesTop, opacity, titleTag, inlineStyle) : '';
+    return renderFlatZero ? renderFlatCell(c, r, value, colors.top, verticesTop, opacity, titleTag, barClass) : '';
   }
 
   const t = verticesTop.top;
@@ -73,10 +72,5 @@ export function renderPrism(
   const leftPoints = `${l.x.toFixed(2)},${l.y.toFixed(2)} ${f.x.toFixed(2)},${f.y.toFixed(2)} ${f_bot.x.toFixed(2)},${f_bot.y.toFixed(2)} ${l_bot.x.toFixed(2)},${l_bot.y.toFixed(2)}`;
   const rightPoints = `${f.x.toFixed(2)},${f.y.toFixed(2)} ${rg.x.toFixed(2)},${rg.y.toFixed(2)} ${rg_bot.x.toFixed(2)},${rg_bot.y.toFixed(2)} ${f_bot.x.toFixed(2)},${f_bot.y.toFixed(2)}`;
 
-  return `<g class="iso-bar" data-col="${c}" data-row="${r}" data-value="${value}"${inlineStyle}>
-      ${titleTag}
-      <polygon class="iso-face-left" points="${leftPoints}" fill="${colors.left}" stroke="${colors.left}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-      <polygon class="iso-face-right" points="${rightPoints}" fill="${colors.right}" stroke="${colors.right}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-      <polygon class="iso-face-top" points="${topPoints}" fill="${colors.top}" stroke="${colors.top}" stroke-width="0.3" stroke-linejoin="round" fill-opacity="${opacity}" stroke-opacity="${opacity}" />
-    </g>`;
+  return `<g class="${barClass}" data-col="${c}" data-row="${r}" data-value="${value}" stroke-linejoin="round">${titleTag}<polygon class="iso-face-left" points="${leftPoints}" fill="${colors.left}" stroke="${colors.left}"${opacityAttributes(opacity)} /><polygon class="iso-face-right" points="${rightPoints}" fill="${colors.right}" stroke="${colors.right}"${opacityAttributes(opacity)} /><polygon class="iso-face-top" points="${topPoints}" fill="${colors.top}" stroke="${colors.top}"${opacityAttributes(opacity)} /></g>`;
 }

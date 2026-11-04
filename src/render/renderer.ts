@@ -13,7 +13,7 @@ import { getLabelLines, requiredLabelStep, thinLabels } from './label-layout';
 import { renderAxis, renderAxisWalls, renderHeightGridWall } from './axes';
 import { renderCell } from './cell';
 import { renderFlatHeatmap } from './flat';
-import { escapeHtml, renderCylinderDefs, renderDocument, renderStyleTag } from './svg-document';
+import { escapeHtml, renderCylinderDefs, renderDocument, renderStyleTag, viewClass } from './svg-document';
 
 /** A grid model that brings its own points, size and labels. */
 interface GridModel {
@@ -349,7 +349,10 @@ export function renderHeatmap(
     padding,
     title,
     isDark,
-    styleTag: interactive ? renderStyleTag(animated) : '',
+    styleTag: interactive ? renderStyleTag(animated, cols + rows - 1) : '',
+    rootClass: viewClass('3d', interactive, animated),
+    // Set once here: nearly every face of every shape shares it.
+    rootAttributes: ' stroke-width="0.3"',
     defs: hasCylinder ? renderCylinderDefs(uniqueColors, opacity) : '',
     body: [...backgroundElements, ...elements, ...foregroundElements].join('\n'),
     wrapper: options.wrapper ?? 'svg',

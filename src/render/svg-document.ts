@@ -60,49 +60,67 @@ export function renderTitle(params: {
   }).join('\n');
 }
 
-export function renderStyleTag(animated: boolean): string {
+/** Delay between two neighbouring diagonals of the entrance animation. */
+const STAGGER_MS = 15;
+
+/** The class that delays a cell by its diagonal; none for the first one, which starts at once. */
+export function staggerClass(col: number, row: number): string {
+  return col + row > 0 ? `iso-d${col + row}` : '';
+}
+
+/** One rule per diagonal, so that cells only name their class. Identical across charts. */
+function staggerRules(diagonals: number): string {
+  const rules: string[] = [];
+  for (let d = 1; d < diagonals; d++) {
+    rules.push(`.iso-d${d}{animation-delay:${d * STAGGER_MS}ms}`);
+  }
+  return rules.join('');
+}
+
+/**
+ * The classes that switch on a chart's style rules. Inline SVG styles apply to the whole page,
+ * so every rule is scoped by them, and a chart without animation stays still next to one with.
+ */
+export function viewClass(view: '3d' | 'flat', interactive: boolean, animated: boolean): string {
+  if (!interactive) return '';
+  return animated ? `iso-view-${view} iso-animated` : `iso-view-${view}`;
+}
+
+/**
+ * The animation keeps to `backwards`: holding its end state would override the hover transform.
+ * Its parts are set one by one, as a shorthand would reset the delay from the stagger rules.
+ */
+export function renderStyleTag(animated: boolean, diagonals: number): string {
   return `<style>
-        ${animated ? `@keyframes iso-grow {
-          from {
-            transform: scaleY(0);
-          }
-          to {
-            transform: scaleY(1);
-          }
-        }` : ''}
-        .iso-bar {
-          ${animated ? `transform-box: fill-box;
-          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;` : ''}
-          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
-          cursor: pointer;
+        ${animated ? '@keyframes iso-grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}' : ''}
+        .iso-view-3d .iso-bar{cursor:pointer;transition:filter .2s ease}
+        .iso-view-3d .iso-bar:hover{filter:brightness(1.1) drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+        @media (prefers-reduced-motion:no-preference){
+          .iso-view-3d .iso-bar{transition:transform .2s cubic-bezier(.25,.46,.45,.94),filter .2s ease}
+          .iso-view-3d .iso-bar:not(.iso-surface):hover{transform:translateY(-3px)}
+          ${animated ? `.iso-view-3d.iso-animated .iso-bar{transform-box:fill-box;transform-origin:bottom;animation-name:iso-grow;animation-duration:.6s;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-fill-mode:backwards}
+          .iso-view-3d.iso-animated .iso-bar.iso-neg{transform-origin:top}` : ''}
         }
-        .iso-bar:hover {
-          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-          transform: translateY(-3px)${animated ? ' scaleY(1)' : ''};
-        }
-        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
-          transition: fill 0.2s ease;
-        }
+        ${animated ? staggerRules(diagonals) : ''}
       </style>`;
 }
 
 /** Flat cells have no height to grow from or lift, so they fade in and only brighten on hover. */
-export function renderFlatStyleTag(animated: boolean): string {
+export function renderFlatStyleTag(animated: boolean, diagonals: number): string {
   return `<style>
-        ${animated ? `@keyframes iso-flat-in {
-          from {
-            opacity: 0;
-          }
-        }` : ''}
-        .iso-flat {
-          ${animated ? 'animation: iso-flat-in 0.4s ease both;' : ''}
-          transition: filter 0.2s ease;
-          cursor: pointer;
+        ${animated ? '@keyframes iso-flat-in{from{opacity:0}}' : ''}
+        .iso-view-flat .iso-bar{cursor:pointer;transition:filter .2s ease}
+        .iso-view-flat .iso-bar:hover{filter:brightness(1.1)}
+        ${animated ? `@media (prefers-reduced-motion:no-preference){
+          .iso-view-flat.iso-animated .iso-bar{animation-name:iso-flat-in;animation-duration:.4s;animation-timing-function:ease;animation-fill-mode:backwards}
         }
-        .iso-flat:hover {
-          filter: brightness(1.1);
-        }
+        ${staggerRules(diagonals)}` : ''}
       </style>`;
+}
+
+/** Opacity of a shape; nothing at all when it is fully opaque, the SVG default. */
+export function opacityAttributes(opacity: number): string {
+  return opacity < 1 ? ` fill-opacity="${opacity}" stroke-opacity="${opacity}"` : '';
 }
 
 /** One horizontal gradient per cylinder color; empty when no cylinder was drawn. */
@@ -141,6 +159,8 @@ export function renderDocument(params: {
   title: string | undefined;
   isDark: boolean;
   styleTag: string;
+  rootClass: string;
+  rootAttributes: string;
   defs: string;
   body: string;
   wrapper: 'svg' | 'g';
@@ -148,7 +168,7 @@ export function renderDocument(params: {
   comment: string;
   fallbackTitle: string;
 }): string {
-  const { bounds, padding, title, isDark, styleTag, defs, body, wrapper, creator, comment, fallbackTitle } = params;
+  const { bounds, padding, title, isDark, styleTag, rootClass, rootAttributes, defs, body, wrapper, creator, comment, fallbackTitle } = params;
   const width = (bounds.maxX - bounds.minX) + 2 * padding;
   const titleLines = wrapTitle(title, width);
   const titleOffset = titleLines.length > 1 ? (titleLines.length - 1) * TITLE_LINE_HEIGHT : 0;
@@ -159,7 +179,7 @@ export function renderDocument(params: {
   const generatorComment = `<!-- ${comment} -->`;
 
   if (wrapper === 'g') {
-    return `<g class="iso-heatmap-group" data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
+    return `<g class="iso-heatmap-group${rootClass ? ` ${rootClass}` : ''}"${rootAttributes} data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
       ${generatorComment}
       ${styleTag}
       ${defs}
@@ -175,7 +195,7 @@ export function renderDocument(params: {
     ${styleTag}
     ${defs}
     ${titleSvg}
-    <g>
+    <g${rootClass ? ` class="${rootClass}"` : ''}${rootAttributes}>
       ${body}
     </g>
   </svg>`;

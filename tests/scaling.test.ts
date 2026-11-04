@@ -28,7 +28,7 @@ function tickLabels(svg: string): number[] {
  * comparable across SVGs with identical grid geometry. */
 function barTopY(svg: string, col: number, row: number): number {
   const group = new RegExp(
-    `<g class="iso-bar" data-col="${col}" data-row="${row}"[^>]*>[\\s\\S]*?iso-face-top" points="(-?[\\d.]+),(-?[\\d.]+)`
+    `<g class="iso-bar[^"]*" data-col="${col}" data-row="${row}"[^>]*>[\\s\\S]*?iso-face-top" points="(-?[\\d.]+),(-?[\\d.]+)`
   );
   const match = svg.match(group);
   if (!match) throw new Error(`no prism bar found at ${col},${row}`);

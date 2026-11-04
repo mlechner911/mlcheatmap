@@ -51,26 +51,28 @@ The grid background consists of lines drawn on the floor ($H=0$).
 <line x1="-13.86" y1="8.00" x2="83.14" y2="64.00" stroke="#e1e4e8" stroke-width="0.5" />
 ```
 
+All shapes inherit `stroke-width="0.3"` from the group around the chart. With animation on, a cell also has the class `iso-d<col+row>`, which sets its delay from a rule in the chart's `<style>`, and `iso-neg` for negative values.
+
 ### Flat Cell (Value = 0)
 For zero values, only the top face is drawn as a flat rhombus.
 ```xml
-<g class="iso-bar" data-col="0" data-row="0" data-value="0">
+<g class="iso-bar" data-col="0" data-row="0" data-value="0" stroke-linejoin="round">
   <title>June 1, 2026: 0 points</title>
-  <polygon points="0.00,0.00 -12.12,7.00 0.00,14.00 12.12,7.00" fill="#ebedf0" stroke="#ebedf0" stroke-width="0.3" stroke-linejoin="round" />
+  <polygon points="0.00,0.00 -12.12,7.00 0.00,14.00 12.12,7.00" fill="#ebedf0" stroke="#ebedf0" />
 </g>
 ```
 
 ### 3D Bar (Value > 0)
 For non-zero values, the bar has 3 faces drawn in order: left face, right face, top face.
 ```xml
-<g class="iso-bar" data-col="0" data-row="2" data-value="12">
+<g class="iso-bar iso-d2" data-col="0" data-row="2" data-value="12" stroke-linejoin="round">
   <title>2026-06-15 — 12 points</title>
   <!-- Left Face (darker shade: multiplier 0.85) -->
-  <polygon class="iso-face-left" points="-39.84,-2.67 -27.71,4.33 -27.71,31.00 -39.84,24.00" fill="#d54646" stroke="#d54646" stroke-width="0.3" stroke-linejoin="round" />
+  <polygon class="iso-face-left" points="-39.84,-2.67 -27.71,4.33 -27.71,31.00 -39.84,24.00" fill="#d54646" stroke="#d54646" />
   <!-- Right Face (even darker shade: multiplier 0.70) -->
-  <polygon class="iso-face-right" points="-27.71,4.33 -15.59,-2.67 -15.59,24.00 -27.71,31.00" fill="#af3939" stroke="#af3939" stroke-width="0.3" stroke-linejoin="round" />
+  <polygon class="iso-face-right" points="-27.71,4.33 -15.59,-2.67 -15.59,24.00 -27.71,31.00" fill="#af3939" stroke="#af3939" />
   <!-- Top Face (base color: multiplier 1.0) -->
-  <polygon class="iso-face-top" points="-27.71,-9.67 -39.84,-2.67 -27.71,4.33 -15.59,-2.67" fill="#fa5252" stroke="#fa5252" stroke-width="0.3" stroke-linejoin="round" />
+  <polygon class="iso-face-top" points="-27.71,-9.67 -39.84,-2.67 -27.71,4.33 -15.59,-2.67" fill="#fa5252" stroke="#fa5252" />
 </g>
 ```
 
