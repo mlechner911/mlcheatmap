@@ -10,7 +10,7 @@ import { contrastingTextColor } from './color';
 import type { GeometryConfig } from './geometry';
 import { axisLabelCorners, estimateTextWidth, requiredLabelStep, thinLabels } from './label-layout';
 import { renderAxisLabel } from './labels';
-import { escapeHtml, renderDocument, renderFlatStyleTag } from './svg-document';
+import { escapeHtml, renderDocument, renderFlatStyleTag, staggerClass, viewClass } from './svg-document';
 
 const CELL_RADIUS = 2;
 const LABEL_GAP = 5; // Space between the grid or its axis ticks and the labels.
@@ -83,12 +83,14 @@ function renderTile(pt: HeatmapDataPoint & { value: number }, size: number, para
   const y = pt.row * gridSize;
   const color = cellColor(pt, { options, maxAbsValue: params.maxAbsValue, theme: params.theme, negativeTheme: params.negativeTheme });
   const tooltip = interactive ? `<title>${escapeHtml(cellTooltip(pt, options))}</title>` : '';
-  const delay = interactive && animated ? ` style="animation-delay: ${(pt.col + pt.row) * 15}ms;"` : '';
+  const stagger = interactive && animated ? staggerClass(pt.col, pt.row) : '';
+  const opacity = options.opacity ?? 1;
+  const opacityAttribute = opacity < 1 ? ` opacity="${opacity}"` : '';
   const fontSize = gridSize * 0.38;
   const faceText = pt.faceText
     ? `<text class="iso-face-text" x="${x + size / 2}" y="${(y + size / 2 + fontSize * 0.35).toFixed(2)}" fill="${contrastingTextColor(color)}" font-size="${fontSize.toFixed(2)}" font-weight="600" font-family="sans-serif" text-anchor="middle">${escapeHtml(pt.faceText)}</text>`
     : '';
-  return `<g class="iso-bar iso-flat" data-col="${pt.col}" data-row="${pt.row}" data-value="${pt.value}"${delay}>${tooltip}<rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${CELL_RADIUS}" fill="${color}" opacity="${options.opacity ?? 1}" />${faceText}</g>`;
+  return `<g class="iso-bar iso-flat${stagger ? ` ${stagger}` : ''}" data-col="${pt.col}" data-row="${pt.row}" data-value="${pt.value}">${tooltip}<rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${CELL_RADIUS}" fill="${color}"${opacityAttribute} />${faceText}</g>`;
 }
 
 /** Renders a standard 2D heatmap: colored cells, row labels on the left, column labels above or below. */
@@ -174,12 +176,15 @@ export function renderFlatHeatmap(params: FlatHeatmapParams): string {
   }
 
   const interactive = options.interactive ?? true;
+  const animated = options.animated ?? true;
   return renderDocument({
     bounds,
     padding,
     title,
     isDark: options.dark ?? false,
-    styleTag: interactive ? renderFlatStyleTag(options.animated ?? true) : '',
+    styleTag: interactive ? renderFlatStyleTag(animated, cols + rows - 1) : '',
+    rootClass: viewClass('flat', interactive, animated),
+    rootAttributes: '',
     defs: '',
     body: [
       ...axisSvg,

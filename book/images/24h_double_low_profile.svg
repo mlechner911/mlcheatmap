@@ -5,294 +5,123 @@
              xmlns:dc="http://purl.org/dc/elements/1.1/">
       <rdf:Description rdf:about="">
         <dc:creator>Michael Lechner</dc:creator>
-        <dc:date>2026-11-03</dc:date>
+        <dc:date>2026-11-04</dc:date>
         <dc:title>MLC Isometric 3D Heatmap</dc:title>
         <dc:description>Generated with MLC Isometric 3D Heatmap Library</dc:description>
       </rdf:Description>
     </rdf:RDF>
   </metadata>
     <style>
-        @keyframes iso-grow {
-          from {
-            transform: scaleY(0);
-          }
-          to {
-            transform: scaleY(1);
-          }
+        @keyframes iso-grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+        .iso-view-3d .iso-bar{cursor:pointer;transition:filter .2s ease}
+        .iso-view-3d .iso-bar:hover{filter:brightness(1.1) drop-shadow(0 4px 6px rgba(0,0,0,.2))}
+        @media (prefers-reduced-motion:no-preference){
+          .iso-view-3d .iso-bar{transition:transform .2s cubic-bezier(.25,.46,.45,.94),filter .2s ease}
+          .iso-view-3d .iso-bar:not(.iso-surface):hover{transform:translateY(-3px)}
+          .iso-view-3d.iso-animated .iso-bar{transform-box:fill-box;transform-origin:bottom;animation-name:iso-grow;animation-duration:.6s;animation-timing-function:cubic-bezier(.16,1,.3,1);animation-fill-mode:backwards}
+          .iso-view-3d.iso-animated .iso-bar.iso-neg{transform-origin:top}
         }
-        .iso-bar {
-          transform-box: fill-box;
-          animation: iso-grow 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
-          transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.2s ease;
-          cursor: pointer;
-        }
-        .iso-bar:hover {
-          filter: brightness(1.1) drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
-          transform: translateY(-3px) scaleY(1);
-        }
-        .iso-face-top, .iso-face-left, .iso-face-right, .iso-bridge-top, .iso-bridge-front {
-          transition: fill 0.2s ease;
-        }
+        .iso-d1{animation-delay:15ms}.iso-d2{animation-delay:30ms}.iso-d3{animation-delay:45ms}.iso-d4{animation-delay:60ms}.iso-d5{animation-delay:75ms}.iso-d6{animation-delay:90ms}.iso-d7{animation-delay:105ms}.iso-d8{animation-delay:120ms}.iso-d9{animation-delay:135ms}.iso-d10{animation-delay:150ms}.iso-d11{animation-delay:165ms}.iso-d12{animation-delay:180ms}.iso-d13{animation-delay:195ms}.iso-d14{animation-delay:210ms}.iso-d15{animation-delay:225ms}.iso-d16{animation-delay:240ms}.iso-d17{animation-delay:255ms}.iso-d18{animation-delay:270ms}.iso-d19{animation-delay:285ms}.iso-d20{animation-delay:300ms}.iso-d21{animation-delay:315ms}.iso-d22{animation-delay:330ms}.iso-d23{animation-delay:345ms}.iso-d24{animation-delay:360ms}
       </style>
     
     
-    <g>
+    <g class="iso-view-3d iso-animated" stroke-width="0.3">
       <polygon class="iso-grid-cell" points="0.00,0.00 -14.83,5.99 0.00,11.99 14.83,5.99" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="0" data-value="0" style="animation-delay: 0ms; transform-origin: bottom;">
-        <title>Series A, 00:00 — Value: 0</title>
-        <polygon points="0.00,1.12 -12.05,5.99 0.00,10.86 12.05,5.99" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar" data-col="0" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 00:00 — Value: 0</title><polygon points="0.00,1.12 -12.05,5.99 0.00,10.86 12.05,5.99" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="-14.83,5.99 -29.67,11.99 -14.83,17.98 0.00,11.99" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="0" data-row="1" data-value="0" style="animation-delay: 15ms; transform-origin: bottom;">
-        <title>Series B, 00:00 — Value: 0</title>
-        <polygon points="-14.83,7.12 -26.89,11.99 -14.83,16.86 -2.78,11.99" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d1" data-col="0" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 00:00 — Value: 0</title><polygon points="-14.83,7.12 -26.89,11.99 -14.83,16.86 -2.78,11.99" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="14.83,5.99 0.00,11.99 14.83,17.98 29.67,11.99" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="0" data-value="0" style="animation-delay: 15ms; transform-origin: bottom;">
-        <title>Series A, 01:00 — Value: 0</title>
-        <polygon points="14.83,7.12 2.78,11.99 14.83,16.86 26.89,11.99" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d1" data-col="1" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 01:00 — Value: 0</title><polygon points="14.83,7.12 2.78,11.99 14.83,16.86 26.89,11.99" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="0.00,11.99 -14.83,17.98 0.00,23.97 14.83,17.98" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="1" data-row="1" data-value="0" style="animation-delay: 30ms; transform-origin: bottom;">
-        <title>Series B, 01:00 — Value: 0</title>
-        <polygon points="0.00,13.11 -12.05,17.98 0.00,22.85 12.05,17.98" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d2" data-col="1" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 01:00 — Value: 0</title><polygon points="0.00,13.11 -12.05,17.98 0.00,22.85 12.05,17.98" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="29.67,11.99 14.83,17.98 29.67,23.97 44.50,17.98" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="0" data-value="12" style="animation-delay: 30ms; transform-origin: bottom;">
-      <title>Series A, 02:00 — Value: 12</title>
-      <polygon class="iso-face-left" points="17.62,16.38 29.67,21.25 29.67,22.85 17.62,17.98" fill="#beced8" stroke="#beced8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="29.67,21.25 41.72,16.38 41.72,17.98 29.67,22.85" fill="#9da9b2" stroke="#9da9b2" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="29.67,11.51 17.62,16.38 29.67,21.25 41.72,16.38" fill="#e0f2fe" stroke="#e0f2fe" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d2" data-col="2" data-row="0" data-value="12" stroke-linejoin="round"><title>Series A, 02:00 — Value: 12</title><polygon class="iso-face-left" points="17.62,16.38 29.67,21.25 29.67,22.85 17.62,17.98" fill="#beced8" stroke="#beced8" /><polygon class="iso-face-right" points="29.67,21.25 41.72,16.38 41.72,17.98 29.67,22.85" fill="#9da9b2" stroke="#9da9b2" /><polygon class="iso-face-top" points="29.67,11.51 17.62,16.38 29.67,21.25 41.72,16.38" fill="#e0f2fe" stroke="#e0f2fe" /></g>
 <polygon class="iso-grid-cell" points="14.83,17.98 0.00,23.97 14.83,29.97 29.67,23.97" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="2" data-row="1" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
-        <title>Series B, 02:00 — Value: 0</title>
-        <polygon points="14.83,19.10 2.78,23.97 14.83,28.84 26.89,23.97" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d3" data-col="2" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 02:00 — Value: 0</title><polygon points="14.83,19.10 2.78,23.97 14.83,28.84 26.89,23.97" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="44.50,17.98 29.67,23.97 44.50,29.97 59.34,23.97" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="0" data-value="0" style="animation-delay: 45ms; transform-origin: bottom;">
-        <title>Series A, 03:00 — Value: 0</title>
-        <polygon points="44.50,19.10 32.45,23.97 44.50,28.84 56.56,23.97" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d3" data-col="3" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 03:00 — Value: 0</title><polygon points="44.50,19.10 32.45,23.97 44.50,28.84 56.56,23.97" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="29.67,23.97 14.83,29.97 29.67,35.96 44.50,29.97" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="3" data-row="1" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
-        <title>Series B, 03:00 — Value: 0</title>
-        <polygon points="29.67,25.10 17.62,29.97 29.67,34.84 41.72,29.97" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d4" data-col="3" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 03:00 — Value: 0</title><polygon points="29.67,25.10 17.62,29.97 29.67,34.84 41.72,29.97" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="59.34,23.97 44.50,29.97 59.34,35.96 74.17,29.97" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="0" data-value="0" style="animation-delay: 60ms; transform-origin: bottom;">
-        <title>Series A, 04:00 — Value: 0</title>
-        <polygon points="59.34,25.10 47.29,29.97 59.34,34.84 71.39,29.97" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d4" data-col="4" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 04:00 — Value: 0</title><polygon points="59.34,25.10 47.29,29.97 59.34,34.84 71.39,29.97" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="44.50,29.97 29.67,35.96 44.50,41.96 59.34,35.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="4" data-row="1" data-value="25" style="animation-delay: 75ms; transform-origin: bottom;">
-      <title>Series B, 04:00 — Value: 25</title>
-      <polygon class="iso-face-left" points="32.45,32.63 44.50,37.50 44.50,40.83 32.45,35.96" fill="#9ec4d7" stroke="#9ec4d7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="44.50,37.50 56.56,32.63 56.56,35.96 44.50,40.83" fill="#82a1b1" stroke="#82a1b1" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="44.50,27.76 32.45,32.63 44.50,37.50 56.56,32.63" fill="#bae6fd" stroke="#bae6fd" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d5" data-col="4" data-row="1" data-value="25" stroke-linejoin="round"><title>Series B, 04:00 — Value: 25</title><polygon class="iso-face-left" points="32.45,32.63 44.50,37.50 44.50,40.83 32.45,35.96" fill="#9ec4d7" stroke="#9ec4d7" /><polygon class="iso-face-right" points="44.50,37.50 56.56,32.63 56.56,35.96 44.50,40.83" fill="#82a1b1" stroke="#82a1b1" /><polygon class="iso-face-top" points="44.50,27.76 32.45,32.63 44.50,37.50 56.56,32.63" fill="#bae6fd" stroke="#bae6fd" /></g>
 <polygon class="iso-grid-cell" points="74.17,29.97 59.34,35.96 74.17,41.96 89.01,35.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="5" data-row="0" data-value="0" style="animation-delay: 75ms; transform-origin: bottom;">
-        <title>Series A, 05:00 — Value: 0</title>
-        <polygon points="74.17,31.09 62.12,35.96 74.17,40.83 86.23,35.96" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d5" data-col="5" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 05:00 — Value: 0</title><polygon points="74.17,31.09 62.12,35.96 74.17,40.83 86.23,35.96" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="59.34,35.96 44.50,41.96 59.34,47.95 74.17,41.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="5" data-row="1" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>Series B, 05:00 — Value: 0</title>
-        <polygon points="59.34,37.09 47.29,41.96 59.34,46.83 71.39,41.96" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d6" data-col="5" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 05:00 — Value: 0</title><polygon points="59.34,37.09 47.29,41.96 59.34,46.83 71.39,41.96" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="89.01,35.96 74.17,41.96 89.01,47.95 103.84,41.96" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="6" data-row="0" data-value="0" style="animation-delay: 90ms; transform-origin: bottom;">
-        <title>Series A, 06:00 — Value: 0</title>
-        <polygon points="89.01,37.09 76.96,41.96 89.01,46.83 101.06,41.96" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d6" data-col="6" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 06:00 — Value: 0</title><polygon points="89.01,37.09 76.96,41.96 89.01,46.83 101.06,41.96" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="74.17,41.96 59.34,47.95 74.17,53.94 89.01,47.95" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="6" data-row="1" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
-        <title>Series B, 06:00 — Value: 0</title>
-        <polygon points="74.17,43.08 62.12,47.95 74.17,52.82 86.23,47.95" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d7" data-col="6" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 06:00 — Value: 0</title><polygon points="74.17,43.08 62.12,47.95 74.17,52.82 86.23,47.95" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="103.84,41.96 89.01,47.95 103.84,53.94 118.68,47.95" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="7" data-row="0" data-value="0" style="animation-delay: 105ms; transform-origin: bottom;">
-        <title>Series A, 07:00 — Value: 0</title>
-        <polygon points="103.84,43.08 91.79,47.95 103.84,52.82 115.90,47.95" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d7" data-col="7" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 07:00 — Value: 0</title><polygon points="103.84,43.08 91.79,47.95 103.84,52.82 115.90,47.95" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="89.01,47.95 74.17,53.94 89.01,59.94 103.84,53.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="7" data-row="1" data-value="0" style="animation-delay: 120ms; transform-origin: bottom;">
-        <title>Series B, 07:00 — Value: 0</title>
-        <polygon points="89.01,49.07 76.96,53.94 89.01,58.81 101.06,53.94" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d8" data-col="7" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 07:00 — Value: 0</title><polygon points="89.01,49.07 76.96,53.94 89.01,58.81 101.06,53.94" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="118.68,47.95 103.84,53.94 118.68,59.94 133.51,53.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="8" data-row="0" data-value="42" style="animation-delay: 120ms; transform-origin: bottom;">
-      <title>Series A, 08:00 — Value: 42</title>
-      <polygon class="iso-face-left" points="106.63,48.34 118.68,53.21 118.68,58.81 106.63,53.94" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="118.68,53.21 130.73,48.34 130.73,53.94 118.68,58.81" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="118.68,43.47 106.63,48.34 118.68,53.21 130.73,48.34" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d8" data-col="8" data-row="0" data-value="42" stroke-linejoin="round"><title>Series A, 08:00 — Value: 42</title><polygon class="iso-face-left" points="106.63,48.34 118.68,53.21 118.68,58.81 106.63,53.94" fill="#6ab3d6" stroke="#6ab3d6" /><polygon class="iso-face-right" points="118.68,53.21 130.73,48.34 130.73,53.94 118.68,58.81" fill="#5894b0" stroke="#5894b0" /><polygon class="iso-face-top" points="118.68,43.47 106.63,48.34 118.68,53.21 130.73,48.34" fill="#7dd3fc" stroke="#7dd3fc" /></g>
 <polygon class="iso-grid-cell" points="103.84,53.94 89.01,59.94 103.84,65.93 118.68,59.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="8" data-row="1" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
-        <title>Series B, 08:00 — Value: 0</title>
-        <polygon points="103.84,55.07 91.79,59.94 103.84,64.81 115.90,59.94" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d9" data-col="8" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 08:00 — Value: 0</title><polygon points="103.84,55.07 91.79,59.94 103.84,64.81 115.90,59.94" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="133.51,53.94 118.68,59.94 133.51,65.93 148.35,59.94" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="9" data-row="0" data-value="0" style="animation-delay: 135ms; transform-origin: bottom;">
-        <title>Series A, 09:00 — Value: 0</title>
-        <polygon points="133.51,55.07 121.46,59.94 133.51,64.81 145.57,59.94" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d9" data-col="9" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 09:00 — Value: 0</title><polygon points="133.51,55.07 121.46,59.94 133.51,64.81 145.57,59.94" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="118.68,59.94 103.84,65.93 118.68,71.92 133.51,65.93" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="9" data-row="1" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
-        <title>Series B, 09:00 — Value: 0</title>
-        <polygon points="118.68,61.06 106.63,65.93 118.68,70.80 130.73,65.93" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d10" data-col="9" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 09:00 — Value: 0</title><polygon points="118.68,61.06 106.63,65.93 118.68,70.80 130.73,65.93" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="148.35,59.94 133.51,65.93 148.35,71.92 163.18,65.93" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="10" data-row="0" data-value="0" style="animation-delay: 150ms; transform-origin: bottom;">
-        <title>Series A, 10:00 — Value: 0</title>
-        <polygon points="148.35,61.06 136.30,65.93 148.35,70.80 160.40,65.93" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d10" data-col="10" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 10:00 — Value: 0</title><polygon points="148.35,61.06 136.30,65.93 148.35,70.80 160.40,65.93" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="133.51,65.93 118.68,71.92 133.51,77.92 148.35,71.92" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="10" data-row="1" data-value="60" style="animation-delay: 165ms; transform-origin: bottom;">
-      <title>Series B, 10:00 — Value: 60</title>
-      <polygon class="iso-face-left" points="121.46,63.92 133.51,68.79 133.51,76.79 121.46,71.92" fill="#0c8cc6" stroke="#0c8cc6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="133.51,68.79 145.57,63.92 145.57,71.92 133.51,76.79" fill="#0a73a3" stroke="#0a73a3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="133.51,59.05 121.46,63.92 133.51,68.79 145.57,63.92" fill="#0ea5e9" stroke="#0ea5e9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d11" data-col="10" data-row="1" data-value="60" stroke-linejoin="round"><title>Series B, 10:00 — Value: 60</title><polygon class="iso-face-left" points="121.46,63.92 133.51,68.79 133.51,76.79 121.46,71.92" fill="#0c8cc6" stroke="#0c8cc6" /><polygon class="iso-face-right" points="133.51,68.79 145.57,63.92 145.57,71.92 133.51,76.79" fill="#0a73a3" stroke="#0a73a3" /><polygon class="iso-face-top" points="133.51,59.05 121.46,63.92 133.51,68.79 145.57,63.92" fill="#0ea5e9" stroke="#0ea5e9" /></g>
 <polygon class="iso-grid-cell" points="163.18,65.93 148.35,71.92 163.18,77.92 178.02,71.92" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="11" data-row="0" data-value="0" style="animation-delay: 165ms; transform-origin: bottom;">
-        <title>Series A, 11:00 — Value: 0</title>
-        <polygon points="163.18,67.05 151.13,71.92 163.18,76.79 175.24,71.92" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d11" data-col="11" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 11:00 — Value: 0</title><polygon points="163.18,67.05 151.13,71.92 163.18,76.79 175.24,71.92" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="148.35,71.92 133.51,77.92 148.35,83.91 163.18,77.92" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="11" data-row="1" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
-        <title>Series B, 11:00 — Value: 0</title>
-        <polygon points="148.35,73.05 136.30,77.92 148.35,82.79 160.40,77.92" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d12" data-col="11" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 11:00 — Value: 0</title><polygon points="148.35,73.05 136.30,77.92 148.35,82.79 160.40,77.92" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="178.02,71.92 163.18,77.92 178.02,83.91 192.85,77.92" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="12" data-row="0" data-value="0" style="animation-delay: 180ms; transform-origin: bottom;">
-        <title>Series A, 12:00 — Value: 0</title>
-        <polygon points="178.02,73.05 165.97,77.92 178.02,82.79 190.07,77.92" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d12" data-col="12" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 12:00 — Value: 0</title><polygon points="178.02,73.05 165.97,77.92 178.02,82.79 190.07,77.92" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="163.18,77.92 148.35,83.91 163.18,89.91 178.02,83.91" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="12" data-row="1" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
-        <title>Series B, 12:00 — Value: 0</title>
-        <polygon points="163.18,79.04 151.13,83.91 163.18,88.78 175.24,83.91" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d13" data-col="12" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 12:00 — Value: 0</title><polygon points="163.18,79.04 151.13,83.91 163.18,88.78 175.24,83.91" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="192.85,77.92 178.02,83.91 192.85,89.91 207.69,83.91" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="13" data-row="0" data-value="0" style="animation-delay: 195ms; transform-origin: bottom;">
-        <title>Series A, 13:00 — Value: 0</title>
-        <polygon points="192.85,79.04 180.80,83.91 192.85,88.78 204.91,83.91" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d13" data-col="13" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 13:00 — Value: 0</title><polygon points="192.85,79.04 180.80,83.91 192.85,88.78 204.91,83.91" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="178.02,83.91 163.18,89.91 178.02,95.90 192.85,89.91" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="13" data-row="1" data-value="0" style="animation-delay: 210ms; transform-origin: bottom;">
-        <title>Series B, 13:00 — Value: 0</title>
-        <polygon points="178.02,85.04 165.97,89.91 178.02,94.78 190.07,89.91" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d14" data-col="13" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 13:00 — Value: 0</title><polygon points="178.02,85.04 165.97,89.91 178.02,94.78 190.07,89.91" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="207.69,83.91 192.85,89.91 207.69,95.90 222.52,89.91" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="14" data-row="0" data-value="85" style="animation-delay: 210ms; transform-origin: bottom;">
-      <title>Series A, 14:00 — Value: 85</title>
-      <polygon class="iso-face-left" points="195.64,78.57 207.69,83.44 207.69,94.78 195.64,89.91" fill="#0270a9" stroke="#0270a9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="207.69,83.44 219.74,78.57 219.74,89.91 207.69,94.78" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="207.69,73.70 195.64,78.57 207.69,83.44 219.74,78.57" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d14" data-col="14" data-row="0" data-value="85" stroke-linejoin="round"><title>Series A, 14:00 — Value: 85</title><polygon class="iso-face-left" points="195.64,78.57 207.69,83.44 207.69,94.78 195.64,89.91" fill="#0270a9" stroke="#0270a9" /><polygon class="iso-face-right" points="207.69,83.44 219.74,78.57 219.74,89.91 207.69,94.78" fill="#015c8b" stroke="#015c8b" /><polygon class="iso-face-top" points="207.69,73.70 195.64,78.57 207.69,83.44 219.74,78.57" fill="#0284c7" stroke="#0284c7" /></g>
 <polygon class="iso-grid-cell" points="192.85,89.91 178.02,95.90 192.85,101.89 207.69,95.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="14" data-row="1" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
-        <title>Series B, 14:00 — Value: 0</title>
-        <polygon points="192.85,91.03 180.80,95.90 192.85,100.77 204.91,95.90" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d15" data-col="14" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 14:00 — Value: 0</title><polygon points="192.85,91.03 180.80,95.90 192.85,100.77 204.91,95.90" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="222.52,89.91 207.69,95.90 222.52,101.89 237.36,95.90" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="15" data-row="0" data-value="0" style="animation-delay: 225ms; transform-origin: bottom;">
-        <title>Series A, 15:00 — Value: 0</title>
-        <polygon points="222.52,91.03 210.47,95.90 222.52,100.77 234.58,95.90" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d15" data-col="15" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 15:00 — Value: 0</title><polygon points="222.52,91.03 210.47,95.90 222.52,100.77 234.58,95.90" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="207.69,95.90 192.85,101.89 207.69,107.89 222.52,101.89" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="15" data-row="1" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
-        <title>Series B, 15:00 — Value: 0</title>
-        <polygon points="207.69,97.02 195.64,101.89 207.69,106.76 219.74,101.89" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d16" data-col="15" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 15:00 — Value: 0</title><polygon points="207.69,97.02 195.64,101.89 207.69,106.76 219.74,101.89" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="237.36,95.90 222.52,101.89 237.36,107.89 252.19,101.89" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="16" data-row="0" data-value="0" style="animation-delay: 240ms; transform-origin: bottom;">
-        <title>Series A, 16:00 — Value: 0</title>
-        <polygon points="237.36,97.02 225.31,101.89 237.36,106.76 249.41,101.89" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d16" data-col="16" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 16:00 — Value: 0</title><polygon points="237.36,97.02 225.31,101.89 237.36,106.76 249.41,101.89" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="222.52,101.89 207.69,107.89 222.52,113.88 237.36,107.89" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="16" data-row="1" data-value="90" style="animation-delay: 255ms; transform-origin: bottom;">
-      <title>Series B, 16:00 — Value: 90</title>
-      <polygon class="iso-face-left" points="210.47,95.89 222.52,100.76 222.52,112.76 210.47,107.89" fill="#0270a9" stroke="#0270a9" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="222.52,100.76 234.58,95.89 234.58,107.89 222.52,112.76" fill="#015c8b" stroke="#015c8b" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="222.52,91.02 210.47,95.89 222.52,100.76 234.58,95.89" fill="#0284c7" stroke="#0284c7" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d17" data-col="16" data-row="1" data-value="90" stroke-linejoin="round"><title>Series B, 16:00 — Value: 90</title><polygon class="iso-face-left" points="210.47,95.89 222.52,100.76 222.52,112.76 210.47,107.89" fill="#0270a9" stroke="#0270a9" /><polygon class="iso-face-right" points="222.52,100.76 234.58,95.89 234.58,107.89 222.52,112.76" fill="#015c8b" stroke="#015c8b" /><polygon class="iso-face-top" points="222.52,91.02 210.47,95.89 222.52,100.76 234.58,95.89" fill="#0284c7" stroke="#0284c7" /></g>
 <polygon class="iso-grid-cell" points="252.19,101.89 237.36,107.89 252.19,113.88 267.03,107.89" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="17" data-row="0" data-value="0" style="animation-delay: 255ms; transform-origin: bottom;">
-        <title>Series A, 17:00 — Value: 0</title>
-        <polygon points="252.19,103.02 240.14,107.89 252.19,112.76 264.25,107.89" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d17" data-col="17" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 17:00 — Value: 0</title><polygon points="252.19,103.02 240.14,107.89 252.19,112.76 264.25,107.89" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="237.36,107.89 222.52,113.88 237.36,119.87 252.19,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="17" data-row="1" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
-        <title>Series B, 17:00 — Value: 0</title>
-        <polygon points="237.36,109.01 225.31,113.88 237.36,118.75 249.41,113.88" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d18" data-col="17" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 17:00 — Value: 0</title><polygon points="237.36,109.01 225.31,113.88 237.36,118.75 249.41,113.88" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="267.03,107.89 252.19,113.88 267.03,119.87 281.86,113.88" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="18" data-row="0" data-value="0" style="animation-delay: 270ms; transform-origin: bottom;">
-        <title>Series A, 18:00 — Value: 0</title>
-        <polygon points="267.03,109.01 254.98,113.88 267.03,118.75 279.08,113.88" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d18" data-col="18" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 18:00 — Value: 0</title><polygon points="267.03,109.01 254.98,113.88 267.03,118.75 279.08,113.88" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="252.19,113.88 237.36,119.87 252.19,125.87 267.03,119.87" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="18" data-row="1" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
-        <title>Series B, 18:00 — Value: 0</title>
-        <polygon points="252.19,115.00 240.14,119.87 252.19,124.74 264.25,119.87" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d19" data-col="18" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 18:00 — Value: 0</title><polygon points="252.19,115.00 240.14,119.87 252.19,124.74 264.25,119.87" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="281.86,113.88 267.03,119.87 281.86,125.87 296.70,119.87" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="19" data-row="0" data-value="0" style="animation-delay: 285ms; transform-origin: bottom;">
-        <title>Series A, 19:00 — Value: 0</title>
-        <polygon points="281.86,115.00 269.81,119.87 281.86,124.74 293.92,119.87" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d19" data-col="19" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 19:00 — Value: 0</title><polygon points="281.86,115.00 269.81,119.87 281.86,124.74 293.92,119.87" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="267.03,119.87 252.19,125.87 267.03,131.86 281.86,125.87" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="19" data-row="1" data-value="0" style="animation-delay: 300ms; transform-origin: bottom;">
-        <title>Series B, 19:00 — Value: 0</title>
-        <polygon points="267.03,121.00 254.98,125.87 267.03,130.74 279.08,125.87" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d20" data-col="19" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 19:00 — Value: 0</title><polygon points="267.03,121.00 254.98,125.87 267.03,130.74 279.08,125.87" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="296.70,119.87 281.86,125.87 296.70,131.86 311.53,125.87" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="20" data-row="0" data-value="32" style="animation-delay: 300ms; transform-origin: bottom;">
-      <title>Series A, 20:00 — Value: 32</title>
-      <polygon class="iso-face-left" points="284.65,121.60 296.70,126.47 296.70,130.74 284.65,125.87" fill="#6ab3d6" stroke="#6ab3d6" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="296.70,126.47 308.75,121.60 308.75,125.87 296.70,130.74" fill="#5894b0" stroke="#5894b0" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="296.70,116.73 284.65,121.60 296.70,126.47 308.75,121.60" fill="#7dd3fc" stroke="#7dd3fc" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d20" data-col="20" data-row="0" data-value="32" stroke-linejoin="round"><title>Series A, 20:00 — Value: 32</title><polygon class="iso-face-left" points="284.65,121.60 296.70,126.47 296.70,130.74 284.65,125.87" fill="#6ab3d6" stroke="#6ab3d6" /><polygon class="iso-face-right" points="296.70,126.47 308.75,121.60 308.75,125.87 296.70,130.74" fill="#5894b0" stroke="#5894b0" /><polygon class="iso-face-top" points="296.70,116.73 284.65,121.60 296.70,126.47 308.75,121.60" fill="#7dd3fc" stroke="#7dd3fc" /></g>
 <polygon class="iso-grid-cell" points="281.86,125.87 267.03,131.86 281.86,137.86 296.70,131.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="20" data-row="1" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
-        <title>Series B, 20:00 — Value: 0</title>
-        <polygon points="281.86,126.99 269.81,131.86 281.86,136.73 293.92,131.86" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d21" data-col="20" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 20:00 — Value: 0</title><polygon points="281.86,126.99 269.81,131.86 281.86,136.73 293.92,131.86" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="311.53,125.87 296.70,131.86 311.53,137.86 326.37,131.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="21" data-row="0" data-value="0" style="animation-delay: 315ms; transform-origin: bottom;">
-        <title>Series A, 21:00 — Value: 0</title>
-        <polygon points="311.53,126.99 299.48,131.86 311.53,136.73 323.59,131.86" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d21" data-col="21" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 21:00 — Value: 0</title><polygon points="311.53,126.99 299.48,131.86 311.53,136.73 323.59,131.86" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="296.70,131.86 281.86,137.86 296.70,143.85 311.53,137.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="21" data-row="1" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
-        <title>Series B, 21:00 — Value: 0</title>
-        <polygon points="296.70,132.99 284.65,137.86 296.70,142.73 308.75,137.86" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d22" data-col="21" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 21:00 — Value: 0</title><polygon points="296.70,132.99 284.65,137.86 296.70,142.73 308.75,137.86" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="326.37,131.86 311.53,137.86 326.37,143.85 341.20,137.86" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="22" data-row="0" data-value="0" style="animation-delay: 330ms; transform-origin: bottom;">
-        <title>Series A, 22:00 — Value: 0</title>
-        <polygon points="326.37,132.99 314.32,137.86 326.37,142.73 338.42,137.86" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d22" data-col="22" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 22:00 — Value: 0</title><polygon points="326.37,132.99 314.32,137.86 326.37,142.73 338.42,137.86" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="311.53,137.86 296.70,143.85 311.53,149.84 326.37,143.85" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="22" data-row="1" data-value="45" style="animation-delay: 345ms; transform-origin: bottom;">
-      <title>Series B, 22:00 — Value: 45</title>
-      <polygon class="iso-face-left" points="299.48,137.85 311.53,142.72 311.53,148.72 299.48,143.85" fill="#30a1d3" stroke="#30a1d3" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-right" points="311.53,142.72 323.59,137.85 323.59,143.85 311.53,148.72" fill="#2784ae" stroke="#2784ae" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      <polygon class="iso-face-top" points="311.53,132.98 299.48,137.85 311.53,142.72 323.59,137.85" fill="#38bdf8" stroke="#38bdf8" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-    </g>
+<g class="iso-bar iso-d23" data-col="22" data-row="1" data-value="45" stroke-linejoin="round"><title>Series B, 22:00 — Value: 45</title><polygon class="iso-face-left" points="299.48,137.85 311.53,142.72 311.53,148.72 299.48,143.85" fill="#30a1d3" stroke="#30a1d3" /><polygon class="iso-face-right" points="311.53,142.72 323.59,137.85 323.59,143.85 311.53,148.72" fill="#2784ae" stroke="#2784ae" /><polygon class="iso-face-top" points="311.53,132.98 299.48,137.85 311.53,142.72 323.59,137.85" fill="#38bdf8" stroke="#38bdf8" /></g>
 <polygon class="iso-grid-cell" points="341.20,137.86 326.37,143.85 341.20,149.84 356.04,143.85" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="23" data-row="0" data-value="0" style="animation-delay: 345ms; transform-origin: bottom;">
-        <title>Series A, 23:00 — Value: 0</title>
-        <polygon points="341.20,138.98 329.15,143.85 341.20,148.72 353.26,143.85" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d23" data-col="23" data-row="0" data-value="0" stroke-linejoin="round"><title>Series A, 23:00 — Value: 0</title><polygon points="341.20,138.98 329.15,143.85 341.20,148.72 353.26,143.85" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <polygon class="iso-grid-cell" points="326.37,143.85 311.53,149.84 326.37,155.84 341.20,149.84" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar" data-col="23" data-row="1" data-value="0" style="animation-delay: 360ms; transform-origin: bottom;">
-        <title>Series B, 23:00 — Value: 0</title>
-        <polygon points="326.37,144.97 314.32,149.84 326.37,154.71 338.42,149.84" fill="#f0f9ff" stroke="#f0f9ff" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
-      </g>
+<g class="iso-bar iso-d24" data-col="23" data-row="1" data-value="0" stroke-linejoin="round"><title>Series B, 23:00 — Value: 0</title><polygon points="326.37,144.97 314.32,149.84 326.37,154.71 338.42,149.84" fill="#f0f9ff" stroke="#f0f9ff" /></g>
 <g class="iso-col-labels"><g transform="translate(-25.22 17.31) rotate(-22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">12AM</text></g>
 <g transform="translate(63.79 53.27) rotate(-22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">6AM</text></g>
 <g transform="translate(152.80 89.23) rotate(-22)"><text x="0" y="3.15" fill="#57606a" font-size="9" font-family="sans-serif" text-anchor="end">12PM</text></g>

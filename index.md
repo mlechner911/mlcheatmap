@@ -60,7 +60,7 @@ Load the rendering engine directly in modern browsers without build tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.1/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -72,10 +72,10 @@ Load scripts synchronously using standard HTML `<script>` tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.1/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.1/dist/presets.umd.js"></script>
 
 <script>
   // Access elements on global window variables:
@@ -97,7 +97,7 @@ The recommended approach is to use the `HeatmapGrid` class to define grid dimens
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Or Browser-Native ES6 Module CDN Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.1/dist/index.es.js';
 
 // Create an 8x8 coordinate grid
 const grid = new HeatmapGrid(8, 8);
@@ -157,8 +157,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Or Browser-Native ES6 Module CDN Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.1/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.1/dist/presets.es.js';
 
 // 1. Weekly 24h Grid (24 columns x 7 days)
 const events = [
@@ -216,7 +216,7 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 | `zeroColor` | `string` | `undefined` | Override color of zero-value cells. |
 | `renderFlatZero` | `boolean` | `true` | Renders a flat 2D plate for zero values instead of a blank space. |
 | `interactive` | `boolean` | `true` | Embed interactive tooltips and hover scaling. |
-| `animated` | `boolean` | `true` | Enables staggered load animations. |
+| `animated` | `boolean` | `true` | Enables staggered load animations; skipped when the system asks for reduced motion. |
 | `projectionAngle` | `number` | `30` | Isometric camera angle in degrees (10° to 60°). |
 | `labelPosition` | `'behind' \| 'front'` | `'front'` | Render row/column labels at the back or front of the grid projection. Rear labels can be hidden by tall bars. |
 | `labelMode` | `'screen' \| 'axis'` | `'screen'` | `'axis'` rotates labels to run along the neighbouring grid axis, so parallel labels stay clear of each other while `gridSize * sin(2 * projectionAngle)` exceeds the font size. |

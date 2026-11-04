@@ -13,386 +13,381 @@
   </metadata>
     <style>
         
-        .iso-flat {
-          
-          transition: filter 0.2s ease;
-          cursor: pointer;
-        }
-        .iso-flat:hover {
-          filter: brightness(1.1);
-        }
+        .iso-view-flat .iso-bar{cursor:pointer;transition:filter .2s ease}
+        .iso-view-flat .iso-bar:hover{filter:brightness(1.1)}
+        
       </style>
     
     
-    <g>
+    <g class="iso-view-flat">
       <rect class="iso-grid-cell" x="0" y="0" width="14" height="14" rx="2" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <rect class="iso-grid-cell" x="0" y="16" width="14" height="14" rx="2" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <rect class="iso-grid-cell" x="0" y="32" width="14" height="14" rx="2" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
-<g class="iso-bar iso-flat" data-col="0" data-row="3" data-value="8"><title>2026-01-01: 8</title><rect x="0" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="0" data-row="4" data-value="9"><title>2026-01-02: 9</title><rect x="0" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="0" data-row="5" data-value="3"><title>2026-01-03: 3</title><rect x="0" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="0" data-row="6" data-value="4"><title>2026-01-04: 4</title><rect x="0" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="1" data-row="0" data-value="11"><title>2026-01-05: 11</title><rect x="16" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="1" data-row="1" data-value="11"><title>2026-01-06: 11</title><rect x="16" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="1" data-row="2" data-value="10"><title>2026-01-07: 10</title><rect x="16" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="1" data-row="3" data-value="8"><title>2026-01-08: 8</title><rect x="16" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="1" data-row="4" data-value="7"><title>2026-01-09: 7</title><rect x="16" y="64" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="1" data-row="5" data-value="0"><title>2026-01-10: 0</title><rect x="16" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="1" data-row="6" data-value="0"><title>2026-01-11: 0</title><rect x="16" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="2" data-row="0" data-value="2"><title>2026-01-12: 2</title><rect x="32" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="2" data-row="1" data-value="1"><title>2026-01-13: 1</title><rect x="32" y="16" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="2" data-row="2" data-value="1"><title>2026-01-14: 1</title><rect x="32" y="32" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="2" data-row="3" data-value="1"><title>2026-01-15: 1</title><rect x="32" y="48" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="2" data-row="4" data-value="2"><title>2026-01-16: 2</title><rect x="32" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="2" data-row="5" data-value="0"><title>2026-01-17: 0</title><rect x="32" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="2" data-row="6" data-value="0"><title>2026-01-18: 0</title><rect x="32" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="3" data-row="0" data-value="6"><title>2026-01-19: 6</title><rect x="48" y="0" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="3" data-row="1" data-value="8"><title>2026-01-20: 8</title><rect x="48" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="3" data-row="2" data-value="9"><title>2026-01-21: 9</title><rect x="48" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="3" data-row="3" data-value="10"><title>2026-01-22: 10</title><rect x="48" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="3" data-row="4" data-value="11"><title>2026-01-23: 11</title><rect x="48" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="3" data-row="5" data-value="4"><title>2026-01-24: 4</title><rect x="48" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="3" data-row="6" data-value="3"><title>2026-01-25: 3</title><rect x="48" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="4" data-row="0" data-value="9"><title>2026-01-26: 9</title><rect x="64" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="4" data-row="1" data-value="8"><title>2026-01-27: 8</title><rect x="64" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="4" data-row="2" data-value="6"><title>2026-01-28: 6</title><rect x="64" y="32" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="4" data-row="3" data-value="5"><title>2026-01-29: 5</title><rect x="64" y="48" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="4" data-row="4" data-value="3"><title>2026-01-30: 3</title><rect x="64" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="4" data-row="5" data-value="0"><title>2026-01-31: 0</title><rect x="64" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="4" data-row="6" data-value="1"><title>2026-02-01: 1</title><rect x="64" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="5" data-row="0" data-value="9"><title>2026-02-02: 9</title><rect x="80" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="5" data-row="1" data-value="10"><title>2026-02-03: 10</title><rect x="80" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="5" data-row="2" data-value="11"><title>2026-02-04: 11</title><rect x="80" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="5" data-row="3" data-value="11"><title>2026-02-05: 11</title><rect x="80" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="5" data-row="4" data-value="11"><title>2026-02-06: 11</title><rect x="80" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="5" data-row="5" data-value="3"><title>2026-02-07: 3</title><rect x="80" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="5" data-row="6" data-value="1"><title>2026-02-08: 1</title><rect x="80" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="6" data-row="0" data-value="7"><title>2026-02-09: 7</title><rect x="96" y="0" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="6" data-row="1" data-value="5"><title>2026-02-10: 5</title><rect x="96" y="16" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="6" data-row="2" data-value="3"><title>2026-02-11: 3</title><rect x="96" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="6" data-row="3" data-value="2"><title>2026-02-12: 2</title><rect x="96" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="6" data-row="4" data-value="1"><title>2026-02-13: 1</title><rect x="96" y="64" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="6" data-row="5" data-value="0"><title>2026-02-14: 0</title><rect x="96" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="6" data-row="6" data-value="0"><title>2026-02-15: 0</title><rect x="96" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="7" data-row="0" data-value="2"><title>2026-02-16: 2</title><rect x="112" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="7" data-row="1" data-value="3"><title>2026-02-17: 3</title><rect x="112" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="7" data-row="2" data-value="5"><title>2026-02-18: 5</title><rect x="112" y="32" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="7" data-row="3" data-value="6"><title>2026-02-19: 6</title><rect x="112" y="48" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="7" data-row="4" data-value="8"><title>2026-02-20: 8</title><rect x="112" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="7" data-row="5" data-value="2"><title>2026-02-21: 2</title><rect x="112" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="7" data-row="6" data-value="3"><title>2026-02-22: 3</title><rect x="112" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="8" data-row="0" data-value="11"><title>2026-02-23: 11</title><rect x="128" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="8" data-row="1" data-value="11"><title>2026-02-24: 11</title><rect x="128" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="8" data-row="2" data-value="10"><title>2026-02-25: 10</title><rect x="128" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="8" data-row="3" data-value="9"><title>2026-02-26: 9</title><rect x="128" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="8" data-row="4" data-value="8"><title>2026-02-27: 8</title><rect x="128" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="8" data-row="5" data-value="0"><title>2026-02-28: 0</title><rect x="128" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="8" data-row="6" data-value="1"><title>2026-03-01: 1</title><rect x="128" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="9" data-row="0" data-value="9"><title>2026-03-02: 9</title><rect x="144" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="9" data-row="1" data-value="10"><title>2026-03-03: 10</title><rect x="144" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="9" data-row="2" data-value="11"><title>2026-03-04: 11</title><rect x="144" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="9" data-row="3" data-value="11"><title>2026-03-05: 11</title><rect x="144" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="9" data-row="4" data-value="11"><title>2026-03-06: 11</title><rect x="144" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="9" data-row="5" data-value="3"><title>2026-03-07: 3</title><rect x="144" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="9" data-row="6" data-value="1"><title>2026-03-08: 1</title><rect x="144" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="10" data-row="0" data-value="7"><title>2026-03-09: 7</title><rect x="160" y="0" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="10" data-row="1" data-value="5"><title>2026-03-10: 5</title><rect x="160" y="16" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="10" data-row="2" data-value="3"><title>2026-03-11: 3</title><rect x="160" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="10" data-row="3" data-value="2"><title>2026-03-12: 2</title><rect x="160" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="10" data-row="4" data-value="1"><title>2026-03-13: 1</title><rect x="160" y="64" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="10" data-row="5" data-value="0"><title>2026-03-14: 0</title><rect x="160" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="10" data-row="6" data-value="0"><title>2026-03-15: 0</title><rect x="160" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="11" data-row="0" data-value="2"><title>2026-03-16: 2</title><rect x="176" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="11" data-row="1" data-value="3"><title>2026-03-17: 3</title><rect x="176" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="11" data-row="2" data-value="5"><title>2026-03-18: 5</title><rect x="176" y="32" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="11" data-row="3" data-value="6"><title>2026-03-19: 6</title><rect x="176" y="48" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="11" data-row="4" data-value="8"><title>2026-03-20: 8</title><rect x="176" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="11" data-row="5" data-value="2"><title>2026-03-21: 2</title><rect x="176" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="11" data-row="6" data-value="3"><title>2026-03-22: 3</title><rect x="176" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="12" data-row="0" data-value="11"><title>2026-03-23: 11</title><rect x="192" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="12" data-row="1" data-value="11"><title>2026-03-24: 11</title><rect x="192" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="12" data-row="2" data-value="10"><title>2026-03-25: 10</title><rect x="192" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="12" data-row="3" data-value="9"><title>2026-03-26: 9</title><rect x="192" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="12" data-row="4" data-value="8"><title>2026-03-27: 8</title><rect x="192" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="12" data-row="5" data-value="0"><title>2026-03-28: 0</title><rect x="192" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="12" data-row="6" data-value="0"><title>2026-03-29: 0</title><rect x="192" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="13" data-row="0" data-value="3"><title>2026-03-30: 3</title><rect x="208" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="13" data-row="1" data-value="2"><title>2026-03-31: 2</title><rect x="208" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="13" data-row="2" data-value="8"><title>2026-04-01: 8</title><rect x="208" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="13" data-row="3" data-value="9"><title>2026-04-02: 9</title><rect x="208" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="13" data-row="4" data-value="10"><title>2026-04-03: 10</title><rect x="208" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="13" data-row="5" data-value="4"><title>2026-04-04: 4</title><rect x="208" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="13" data-row="6" data-value="4"><title>2026-04-05: 4</title><rect x="208" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="14" data-row="0" data-value="11"><title>2026-04-06: 11</title><rect x="224" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="14" data-row="1" data-value="10"><title>2026-04-07: 10</title><rect x="224" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="14" data-row="2" data-value="8"><title>2026-04-08: 8</title><rect x="224" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="14" data-row="3" data-value="7"><title>2026-04-09: 7</title><rect x="224" y="48" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="14" data-row="4" data-value="5"><title>2026-04-10: 5</title><rect x="224" y="64" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="14" data-row="5" data-value="0"><title>2026-04-11: 0</title><rect x="224" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="14" data-row="6" data-value="0"><title>2026-04-12: 0</title><rect x="224" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="15" data-row="0" data-value="1"><title>2026-04-13: 1</title><rect x="240" y="0" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="15" data-row="1" data-value="1"><title>2026-04-14: 1</title><rect x="240" y="16" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="15" data-row="2" data-value="1"><title>2026-04-15: 1</title><rect x="240" y="32" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="15" data-row="3" data-value="2"><title>2026-04-16: 2</title><rect x="240" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="15" data-row="4" data-value="3"><title>2026-04-17: 3</title><rect x="240" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="15" data-row="5" data-value="0"><title>2026-04-18: 0</title><rect x="240" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="15" data-row="6" data-value="0"><title>2026-04-19: 0</title><rect x="240" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="16" data-row="0" data-value="8"><title>2026-04-20: 8</title><rect x="256" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="16" data-row="1" data-value="9"><title>2026-04-21: 9</title><rect x="256" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="16" data-row="2" data-value="10"><title>2026-04-22: 10</title><rect x="256" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="16" data-row="3" data-value="11"><title>2026-04-23: 11</title><rect x="256" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="16" data-row="4" data-value="11"><title>2026-04-24: 11</title><rect x="256" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="16" data-row="5" data-value="3"><title>2026-04-25: 3</title><rect x="256" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="16" data-row="6" data-value="2"><title>2026-04-26: 2</title><rect x="256" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="17" data-row="0" data-value="8"><title>2026-04-27: 8</title><rect x="272" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="17" data-row="1" data-value="6"><title>2026-04-28: 6</title><rect x="272" y="16" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="17" data-row="2" data-value="5"><title>2026-04-29: 5</title><rect x="272" y="32" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="17" data-row="3" data-value="3"><title>2026-04-30: 3</title><rect x="272" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="17" data-row="4" data-value="8"><title>2026-05-01: 8</title><rect x="272" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="17" data-row="5" data-value="2"><title>2026-05-02: 2</title><rect x="272" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="17" data-row="6" data-value="3"><title>2026-05-03: 3</title><rect x="272" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="18" data-row="0" data-value="11"><title>2026-05-04: 11</title><rect x="288" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="18" data-row="1" data-value="11"><title>2026-05-05: 11</title><rect x="288" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="18" data-row="2" data-value="11"><title>2026-05-06: 11</title><rect x="288" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="18" data-row="3" data-value="10"><title>2026-05-07: 10</title><rect x="288" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="18" data-row="4" data-value="8"><title>2026-05-08: 8</title><rect x="288" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="18" data-row="5" data-value="0"><title>2026-05-09: 0</title><rect x="288" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="18" data-row="6" data-value="0"><title>2026-05-10: 0</title><rect x="288" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="19" data-row="0" data-value="3"><title>2026-05-11: 3</title><rect x="304" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="19" data-row="1" data-value="2"><title>2026-05-12: 2</title><rect x="304" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="19" data-row="2" data-value="1"><title>2026-05-13: 1</title><rect x="304" y="32" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="19" data-row="3" data-value="1"><title>2026-05-14: 1</title><rect x="304" y="48" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="19" data-row="4" data-value="1"><title>2026-05-15: 1</title><rect x="304" y="64" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="19" data-row="5" data-value="0"><title>2026-05-16: 0</title><rect x="304" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="19" data-row="6" data-value="0"><title>2026-05-17: 0</title><rect x="304" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="20" data-row="0" data-value="5"><title>2026-05-18: 5</title><rect x="320" y="0" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="20" data-row="1" data-value="6"><title>2026-05-19: 6</title><rect x="320" y="16" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="20" data-row="2" data-value="8"><title>2026-05-20: 8</title><rect x="320" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="20" data-row="3" data-value="9"><title>2026-05-21: 9</title><rect x="320" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="20" data-row="4" data-value="10"><title>2026-05-22: 10</title><rect x="320" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="20" data-row="5" data-value="4"><title>2026-05-23: 4</title><rect x="320" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="20" data-row="6" data-value="4"><title>2026-05-24: 4</title><rect x="320" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="21" data-row="0" data-value="10"><title>2026-05-25: 10</title><rect x="336" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="21" data-row="1" data-value="9"><title>2026-05-26: 9</title><rect x="336" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="21" data-row="2" data-value="8"><title>2026-05-27: 8</title><rect x="336" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="21" data-row="3" data-value="6"><title>2026-05-28: 6</title><rect x="336" y="48" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="21" data-row="4" data-value="5"><title>2026-05-29: 5</title><rect x="336" y="64" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="21" data-row="5" data-value="0"><title>2026-05-30: 0</title><rect x="336" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="21" data-row="6" data-value="0"><title>2026-05-31: 0</title><rect x="336" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="22" data-row="0" data-value="8"><title>2026-06-01: 8</title><rect x="352" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="22" data-row="1" data-value="9"><title>2026-06-02: 9</title><rect x="352" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="22" data-row="2" data-value="10"><title>2026-06-03: 10</title><rect x="352" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="22" data-row="3" data-value="11"><title>2026-06-04: 11</title><rect x="352" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="22" data-row="4" data-value="11"><title>2026-06-05: 11</title><rect x="352" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="22" data-row="5" data-value="4"><title>2026-06-06: 4</title><rect x="352" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="22" data-row="6" data-value="3"><title>2026-06-07: 3</title><rect x="352" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="23" data-row="0" data-value="8"><title>2026-06-08: 8</title><rect x="368" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="23" data-row="1" data-value="7"><title>2026-06-09: 7</title><rect x="368" y="16" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="23" data-row="2" data-value="5"><title>2026-06-10: 5</title><rect x="368" y="32" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="23" data-row="3" data-value="3"><title>2026-06-11: 3</title><rect x="368" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="23" data-row="4" data-value="2"><title>2026-06-12: 2</title><rect x="368" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="23" data-row="5" data-value="0"><title>2026-06-13: 0</title><rect x="368" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="23" data-row="6" data-value="0"><title>2026-06-14: 0</title><rect x="368" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="24" data-row="0" data-value="1"><title>2026-06-15: 1</title><rect x="384" y="0" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="24" data-row="1" data-value="2"><title>2026-06-16: 2</title><rect x="384" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="24" data-row="2" data-value="3"><title>2026-06-17: 3</title><rect x="384" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="24" data-row="3" data-value="5"><title>2026-06-18: 5</title><rect x="384" y="48" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="24" data-row="4" data-value="6"><title>2026-06-19: 6</title><rect x="384" y="64" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="24" data-row="5" data-value="1"><title>2026-06-20: 1</title><rect x="384" y="80" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="24" data-row="6" data-value="2"><title>2026-06-21: 2</title><rect x="384" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="25" data-row="0" data-value="10"><title>2026-06-22: 10</title><rect x="400" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="25" data-row="1" data-value="11"><title>2026-06-23: 11</title><rect x="400" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="25" data-row="2" data-value="11"><title>2026-06-24: 11</title><rect x="400" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="25" data-row="3" data-value="10"><title>2026-06-25: 10</title><rect x="400" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="25" data-row="4" data-value="9"><title>2026-06-26: 9</title><rect x="400" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="25" data-row="5" data-value="1"><title>2026-06-27: 1</title><rect x="400" y="80" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="25" data-row="6" data-value="0"><title>2026-06-28: 0</title><rect x="400" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="26" data-row="0" data-value="5"><title>2026-06-29: 5</title><rect x="416" y="0" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="26" data-row="1" data-value="3"><title>2026-06-30: 3</title><rect x="416" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="26" data-row="2" data-value="8"><title>2026-07-01: 8</title><rect x="416" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="26" data-row="3" data-value="9"><title>2026-07-02: 9</title><rect x="416" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="26" data-row="4" data-value="10"><title>2026-07-03: 10</title><rect x="416" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="26" data-row="5" data-value="4"><title>2026-07-04: 4</title><rect x="416" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="26" data-row="6" data-value="4"><title>2026-07-05: 4</title><rect x="416" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="27" data-row="0" data-value="11"><title>2026-07-06: 11</title><rect x="432" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="27" data-row="1" data-value="10"><title>2026-07-07: 10</title><rect x="432" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="27" data-row="2" data-value="8"><title>2026-07-08: 8</title><rect x="432" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="27" data-row="3" data-value="7"><title>2026-07-09: 7</title><rect x="432" y="48" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="27" data-row="4" data-value="5"><title>2026-07-10: 5</title><rect x="432" y="64" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="27" data-row="5" data-value="0"><title>2026-07-11: 0</title><rect x="432" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="27" data-row="6" data-value="0"><title>2026-07-12: 0</title><rect x="432" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="28" data-row="0" data-value="1"><title>2026-07-13: 1</title><rect x="448" y="0" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="28" data-row="1" data-value="1"><title>2026-07-14: 1</title><rect x="448" y="16" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="28" data-row="2" data-value="1"><title>2026-07-15: 1</title><rect x="448" y="32" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="28" data-row="3" data-value="2"><title>2026-07-16: 2</title><rect x="448" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="28" data-row="4" data-value="3"><title>2026-07-17: 3</title><rect x="448" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="28" data-row="5" data-value="0"><title>2026-07-18: 0</title><rect x="448" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="28" data-row="6" data-value="0"><title>2026-07-19: 0</title><rect x="448" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="29" data-row="0" data-value="8"><title>2026-07-20: 8</title><rect x="464" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="29" data-row="1" data-value="9"><title>2026-07-21: 9</title><rect x="464" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="29" data-row="2" data-value="10"><title>2026-07-22: 10</title><rect x="464" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="29" data-row="3" data-value="11"><title>2026-07-23: 11</title><rect x="464" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="29" data-row="4" data-value="11"><title>2026-07-24: 11</title><rect x="464" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="29" data-row="5" data-value="3"><title>2026-07-25: 3</title><rect x="464" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="29" data-row="6" data-value="2"><title>2026-07-26: 2</title><rect x="464" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="30" data-row="0" data-value="8"><title>2026-07-27: 8</title><rect x="480" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="30" data-row="1" data-value="6"><title>2026-07-28: 6</title><rect x="480" y="16" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="30" data-row="2" data-value="5"><title>2026-07-29: 5</title><rect x="480" y="32" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="30" data-row="3" data-value="3"><title>2026-07-30: 3</title><rect x="480" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="30" data-row="4" data-value="2"><title>2026-07-31: 2</title><rect x="480" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="30" data-row="5" data-value="1"><title>2026-08-01: 1</title><rect x="480" y="80" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="30" data-row="6" data-value="2"><title>2026-08-02: 2</title><rect x="480" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="31" data-row="0" data-value="10"><title>2026-08-03: 10</title><rect x="496" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="31" data-row="1" data-value="11"><title>2026-08-04: 11</title><rect x="496" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="31" data-row="2" data-value="11"><title>2026-08-05: 11</title><rect x="496" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="31" data-row="3" data-value="11"><title>2026-08-06: 11</title><rect x="496" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="31" data-row="4" data-value="10"><title>2026-08-07: 10</title><rect x="496" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="31" data-row="5" data-value="1"><title>2026-08-08: 1</title><rect x="496" y="80" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="31" data-row="6" data-value="0"><title>2026-08-09: 0</title><rect x="496" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="32" data-row="0" data-value="5"><title>2026-08-10: 5</title><rect x="512" y="0" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="32" data-row="1" data-value="3"><title>2026-08-11: 3</title><rect x="512" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="32" data-row="2" data-value="2"><title>2026-08-12: 2</title><rect x="512" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="32" data-row="3" data-value="1"><title>2026-08-13: 1</title><rect x="512" y="48" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="32" data-row="4" data-value="1"><title>2026-08-14: 1</title><rect x="512" y="64" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="32" data-row="5" data-value="0"><title>2026-08-15: 0</title><rect x="512" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="32" data-row="6" data-value="0"><title>2026-08-16: 0</title><rect x="512" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="33" data-row="0" data-value="3"><title>2026-08-17: 3</title><rect x="528" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="33" data-row="1" data-value="5"><title>2026-08-18: 5</title><rect x="528" y="16" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="33" data-row="2" data-value="6"><title>2026-08-19: 6</title><rect x="528" y="32" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="33" data-row="3" data-value="8"><title>2026-08-20: 8</title><rect x="528" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="33" data-row="4" data-value="9"><title>2026-08-21: 9</title><rect x="528" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="33" data-row="5" data-value="3"><title>2026-08-22: 3</title><rect x="528" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="33" data-row="6" data-value="4"><title>2026-08-23: 4</title><rect x="528" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="34" data-row="0" data-value="11"><title>2026-08-24: 11</title><rect x="544" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="34" data-row="1" data-value="10"><title>2026-08-25: 10</title><rect x="544" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="34" data-row="2" data-value="9"><title>2026-08-26: 9</title><rect x="544" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="34" data-row="3" data-value="8"><title>2026-08-27: 8</title><rect x="544" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="34" data-row="4" data-value="6"><title>2026-08-28: 6</title><rect x="544" y="64" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="34" data-row="5" data-value="0"><title>2026-08-29: 0</title><rect x="544" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="34" data-row="6" data-value="0"><title>2026-08-30: 0</title><rect x="544" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="35" data-row="0" data-value="2"><title>2026-08-31: 2</title><rect x="560" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="35" data-row="1" data-value="8"><title>2026-09-01: 8</title><rect x="560" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="35" data-row="2" data-value="9"><title>2026-09-02: 9</title><rect x="560" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="35" data-row="3" data-value="10"><title>2026-09-03: 10</title><rect x="560" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="35" data-row="4" data-value="11"><title>2026-09-04: 11</title><rect x="560" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="35" data-row="5" data-value="4"><title>2026-09-05: 4</title><rect x="560" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="35" data-row="6" data-value="4"><title>2026-09-06: 4</title><rect x="560" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="36" data-row="0" data-value="10"><title>2026-09-07: 10</title><rect x="576" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="36" data-row="1" data-value="8"><title>2026-09-08: 8</title><rect x="576" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="36" data-row="2" data-value="7"><title>2026-09-09: 7</title><rect x="576" y="32" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="36" data-row="3" data-value="5"><title>2026-09-10: 5</title><rect x="576" y="48" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="36" data-row="4" data-value="3"><title>2026-09-11: 3</title><rect x="576" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="36" data-row="5" data-value="0"><title>2026-09-12: 0</title><rect x="576" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="36" data-row="6" data-value="0"><title>2026-09-13: 0</title><rect x="576" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="37" data-row="0" data-value="1"><title>2026-09-14: 1</title><rect x="592" y="0" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="37" data-row="1" data-value="1"><title>2026-09-15: 1</title><rect x="592" y="16" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="37" data-row="2" data-value="2"><title>2026-09-16: 2</title><rect x="592" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="37" data-row="3" data-value="3"><title>2026-09-17: 3</title><rect x="592" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="37" data-row="4" data-value="5"><title>2026-09-18: 5</title><rect x="592" y="64" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="37" data-row="5" data-value="0"><title>2026-09-19: 0</title><rect x="592" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="37" data-row="6" data-value="1"><title>2026-09-20: 1</title><rect x="592" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="38" data-row="0" data-value="9"><title>2026-09-21: 9</title><rect x="608" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="38" data-row="1" data-value="10"><title>2026-09-22: 10</title><rect x="608" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="38" data-row="2" data-value="11"><title>2026-09-23: 11</title><rect x="608" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="38" data-row="3" data-value="11"><title>2026-09-24: 11</title><rect x="608" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="38" data-row="4" data-value="10"><title>2026-09-25: 10</title><rect x="608" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="38" data-row="5" data-value="2"><title>2026-09-26: 2</title><rect x="608" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="38" data-row="6" data-value="1"><title>2026-09-27: 1</title><rect x="608" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="39" data-row="0" data-value="6"><title>2026-09-28: 6</title><rect x="624" y="0" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="39" data-row="1" data-value="5"><title>2026-09-29: 5</title><rect x="624" y="16" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="39" data-row="2" data-value="3"><title>2026-09-30: 3</title><rect x="624" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="39" data-row="3" data-value="8"><title>2026-10-01: 8</title><rect x="624" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="39" data-row="4" data-value="9"><title>2026-10-02: 9</title><rect x="624" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="39" data-row="5" data-value="3"><title>2026-10-03: 3</title><rect x="624" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="39" data-row="6" data-value="4"><title>2026-10-04: 4</title><rect x="624" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="40" data-row="0" data-value="11"><title>2026-10-05: 11</title><rect x="640" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="40" data-row="1" data-value="11"><title>2026-10-06: 11</title><rect x="640" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="40" data-row="2" data-value="10"><title>2026-10-07: 10</title><rect x="640" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="40" data-row="3" data-value="8"><title>2026-10-08: 8</title><rect x="640" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="40" data-row="4" data-value="7"><title>2026-10-09: 7</title><rect x="640" y="64" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="40" data-row="5" data-value="0"><title>2026-10-10: 0</title><rect x="640" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="40" data-row="6" data-value="0"><title>2026-10-11: 0</title><rect x="640" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="41" data-row="0" data-value="2"><title>2026-10-12: 2</title><rect x="656" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="41" data-row="1" data-value="1"><title>2026-10-13: 1</title><rect x="656" y="16" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="41" data-row="2" data-value="1"><title>2026-10-14: 1</title><rect x="656" y="32" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="41" data-row="3" data-value="1"><title>2026-10-15: 1</title><rect x="656" y="48" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="41" data-row="4" data-value="2"><title>2026-10-16: 2</title><rect x="656" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="41" data-row="5" data-value="0"><title>2026-10-17: 0</title><rect x="656" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="41" data-row="6" data-value="0"><title>2026-10-18: 0</title><rect x="656" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="42" data-row="0" data-value="6"><title>2026-10-19: 6</title><rect x="672" y="0" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="42" data-row="1" data-value="8"><title>2026-10-20: 8</title><rect x="672" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="42" data-row="2" data-value="9"><title>2026-10-21: 9</title><rect x="672" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="42" data-row="3" data-value="10"><title>2026-10-22: 10</title><rect x="672" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="42" data-row="4" data-value="11"><title>2026-10-23: 11</title><rect x="672" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="42" data-row="5" data-value="4"><title>2026-10-24: 4</title><rect x="672" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="42" data-row="6" data-value="3"><title>2026-10-25: 3</title><rect x="672" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="43" data-row="0" data-value="9"><title>2026-10-26: 9</title><rect x="688" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="43" data-row="1" data-value="8"><title>2026-10-27: 8</title><rect x="688" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="43" data-row="2" data-value="6"><title>2026-10-28: 6</title><rect x="688" y="32" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="43" data-row="3" data-value="5"><title>2026-10-29: 5</title><rect x="688" y="48" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="43" data-row="4" data-value="3"><title>2026-10-30: 3</title><rect x="688" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="43" data-row="5" data-value="0"><title>2026-10-31: 0</title><rect x="688" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="43" data-row="6" data-value="1"><title>2026-11-01: 1</title><rect x="688" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="44" data-row="0" data-value="9"><title>2026-11-02: 9</title><rect x="704" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="44" data-row="1" data-value="10"><title>2026-11-03: 10</title><rect x="704" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="44" data-row="2" data-value="11"><title>2026-11-04: 11</title><rect x="704" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="44" data-row="3" data-value="11"><title>2026-11-05: 11</title><rect x="704" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="44" data-row="4" data-value="11"><title>2026-11-06: 11</title><rect x="704" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="44" data-row="5" data-value="3"><title>2026-11-07: 3</title><rect x="704" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="44" data-row="6" data-value="1"><title>2026-11-08: 1</title><rect x="704" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="45" data-row="0" data-value="7"><title>2026-11-09: 7</title><rect x="720" y="0" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="45" data-row="1" data-value="5"><title>2026-11-10: 5</title><rect x="720" y="16" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="45" data-row="2" data-value="3"><title>2026-11-11: 3</title><rect x="720" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="45" data-row="3" data-value="2"><title>2026-11-12: 2</title><rect x="720" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="45" data-row="4" data-value="1"><title>2026-11-13: 1</title><rect x="720" y="64" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="45" data-row="5" data-value="0"><title>2026-11-14: 0</title><rect x="720" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="45" data-row="6" data-value="0"><title>2026-11-15: 0</title><rect x="720" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="46" data-row="0" data-value="2"><title>2026-11-16: 2</title><rect x="736" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="46" data-row="1" data-value="3"><title>2026-11-17: 3</title><rect x="736" y="16" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="46" data-row="2" data-value="5"><title>2026-11-18: 5</title><rect x="736" y="32" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="46" data-row="3" data-value="6"><title>2026-11-19: 6</title><rect x="736" y="48" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="46" data-row="4" data-value="8"><title>2026-11-20: 8</title><rect x="736" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="46" data-row="5" data-value="2"><title>2026-11-21: 2</title><rect x="736" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="46" data-row="6" data-value="3"><title>2026-11-22: 3</title><rect x="736" y="96" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="47" data-row="0" data-value="11"><title>2026-11-23: 11</title><rect x="752" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="47" data-row="1" data-value="11"><title>2026-11-24: 11</title><rect x="752" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="47" data-row="2" data-value="10"><title>2026-11-25: 10</title><rect x="752" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="47" data-row="3" data-value="9"><title>2026-11-26: 9</title><rect x="752" y="48" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="47" data-row="4" data-value="8"><title>2026-11-27: 8</title><rect x="752" y="64" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="47" data-row="5" data-value="0"><title>2026-11-28: 0</title><rect x="752" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="47" data-row="6" data-value="0"><title>2026-11-29: 0</title><rect x="752" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="48" data-row="0" data-value="3"><title>2026-11-30: 3</title><rect x="768" y="0" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="48" data-row="1" data-value="8"><title>2026-12-01: 8</title><rect x="768" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="48" data-row="2" data-value="9"><title>2026-12-02: 9</title><rect x="768" y="32" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="48" data-row="3" data-value="10"><title>2026-12-03: 10</title><rect x="768" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="48" data-row="4" data-value="11"><title>2026-12-04: 11</title><rect x="768" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="48" data-row="5" data-value="4"><title>2026-12-05: 4</title><rect x="768" y="80" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="48" data-row="6" data-value="4"><title>2026-12-06: 4</title><rect x="768" y="96" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="49" data-row="0" data-value="10"><title>2026-12-07: 10</title><rect x="784" y="0" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="49" data-row="1" data-value="8"><title>2026-12-08: 8</title><rect x="784" y="16" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="49" data-row="2" data-value="7"><title>2026-12-09: 7</title><rect x="784" y="32" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="49" data-row="3" data-value="5"><title>2026-12-10: 5</title><rect x="784" y="48" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="49" data-row="4" data-value="3"><title>2026-12-11: 3</title><rect x="784" y="64" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="49" data-row="5" data-value="0"><title>2026-12-12: 0</title><rect x="784" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="49" data-row="6" data-value="0"><title>2026-12-13: 0</title><rect x="784" y="96" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="50" data-row="0" data-value="1"><title>2026-12-14: 1</title><rect x="800" y="0" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="50" data-row="1" data-value="1"><title>2026-12-15: 1</title><rect x="800" y="16" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="50" data-row="2" data-value="2"><title>2026-12-16: 2</title><rect x="800" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="50" data-row="3" data-value="3"><title>2026-12-17: 3</title><rect x="800" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="50" data-row="4" data-value="5"><title>2026-12-18: 5</title><rect x="800" y="64" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="50" data-row="5" data-value="0"><title>2026-12-19: 0</title><rect x="800" y="80" width="14" height="14" rx="2" fill="#f0fdf4" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="50" data-row="6" data-value="1"><title>2026-12-20: 1</title><rect x="800" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="51" data-row="0" data-value="9"><title>2026-12-21: 9</title><rect x="816" y="0" width="14" height="14" rx="2" fill="#16a34a" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="51" data-row="1" data-value="10"><title>2026-12-22: 10</title><rect x="816" y="16" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="51" data-row="2" data-value="11"><title>2026-12-23: 11</title><rect x="816" y="32" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="51" data-row="3" data-value="11"><title>2026-12-24: 11</title><rect x="816" y="48" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="51" data-row="4" data-value="10"><title>2026-12-25: 10</title><rect x="816" y="64" width="14" height="14" rx="2" fill="#15803d" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="51" data-row="5" data-value="2"><title>2026-12-26: 2</title><rect x="816" y="80" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="51" data-row="6" data-value="1"><title>2026-12-27: 1</title><rect x="816" y="96" width="14" height="14" rx="2" fill="#bbf7d0" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="52" data-row="0" data-value="6"><title>2026-12-28: 6</title><rect x="832" y="0" width="14" height="14" rx="2" fill="#22c55e" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="52" data-row="1" data-value="5"><title>2026-12-29: 5</title><rect x="832" y="16" width="14" height="14" rx="2" fill="#4ade80" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="52" data-row="2" data-value="3"><title>2026-12-30: 3</title><rect x="832" y="32" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
-<g class="iso-bar iso-flat" data-col="52" data-row="3" data-value="2"><title>2026-12-31: 2</title><rect x="832" y="48" width="14" height="14" rx="2" fill="#86efac" opacity="1" /></g>
+<g class="iso-bar iso-flat" data-col="0" data-row="3" data-value="8"><title>2026-01-01: 8</title><rect x="0" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="0" data-row="4" data-value="9"><title>2026-01-02: 9</title><rect x="0" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="0" data-row="5" data-value="3"><title>2026-01-03: 3</title><rect x="0" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="0" data-row="6" data-value="4"><title>2026-01-04: 4</title><rect x="0" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="1" data-row="0" data-value="11"><title>2026-01-05: 11</title><rect x="16" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="1" data-row="1" data-value="11"><title>2026-01-06: 11</title><rect x="16" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="1" data-row="2" data-value="10"><title>2026-01-07: 10</title><rect x="16" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="1" data-row="3" data-value="8"><title>2026-01-08: 8</title><rect x="16" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="1" data-row="4" data-value="7"><title>2026-01-09: 7</title><rect x="16" y="64" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="1" data-row="5" data-value="0"><title>2026-01-10: 0</title><rect x="16" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="1" data-row="6" data-value="0"><title>2026-01-11: 0</title><rect x="16" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="2" data-row="0" data-value="2"><title>2026-01-12: 2</title><rect x="32" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="2" data-row="1" data-value="1"><title>2026-01-13: 1</title><rect x="32" y="16" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="2" data-row="2" data-value="1"><title>2026-01-14: 1</title><rect x="32" y="32" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="2" data-row="3" data-value="1"><title>2026-01-15: 1</title><rect x="32" y="48" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="2" data-row="4" data-value="2"><title>2026-01-16: 2</title><rect x="32" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="2" data-row="5" data-value="0"><title>2026-01-17: 0</title><rect x="32" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="2" data-row="6" data-value="0"><title>2026-01-18: 0</title><rect x="32" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="3" data-row="0" data-value="6"><title>2026-01-19: 6</title><rect x="48" y="0" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="3" data-row="1" data-value="8"><title>2026-01-20: 8</title><rect x="48" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="3" data-row="2" data-value="9"><title>2026-01-21: 9</title><rect x="48" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="3" data-row="3" data-value="10"><title>2026-01-22: 10</title><rect x="48" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="3" data-row="4" data-value="11"><title>2026-01-23: 11</title><rect x="48" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="3" data-row="5" data-value="4"><title>2026-01-24: 4</title><rect x="48" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="3" data-row="6" data-value="3"><title>2026-01-25: 3</title><rect x="48" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="4" data-row="0" data-value="9"><title>2026-01-26: 9</title><rect x="64" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="4" data-row="1" data-value="8"><title>2026-01-27: 8</title><rect x="64" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="4" data-row="2" data-value="6"><title>2026-01-28: 6</title><rect x="64" y="32" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="4" data-row="3" data-value="5"><title>2026-01-29: 5</title><rect x="64" y="48" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="4" data-row="4" data-value="3"><title>2026-01-30: 3</title><rect x="64" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="4" data-row="5" data-value="0"><title>2026-01-31: 0</title><rect x="64" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="4" data-row="6" data-value="1"><title>2026-02-01: 1</title><rect x="64" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="5" data-row="0" data-value="9"><title>2026-02-02: 9</title><rect x="80" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="5" data-row="1" data-value="10"><title>2026-02-03: 10</title><rect x="80" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="5" data-row="2" data-value="11"><title>2026-02-04: 11</title><rect x="80" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="5" data-row="3" data-value="11"><title>2026-02-05: 11</title><rect x="80" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="5" data-row="4" data-value="11"><title>2026-02-06: 11</title><rect x="80" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="5" data-row="5" data-value="3"><title>2026-02-07: 3</title><rect x="80" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="5" data-row="6" data-value="1"><title>2026-02-08: 1</title><rect x="80" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="6" data-row="0" data-value="7"><title>2026-02-09: 7</title><rect x="96" y="0" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="6" data-row="1" data-value="5"><title>2026-02-10: 5</title><rect x="96" y="16" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="6" data-row="2" data-value="3"><title>2026-02-11: 3</title><rect x="96" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="6" data-row="3" data-value="2"><title>2026-02-12: 2</title><rect x="96" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="6" data-row="4" data-value="1"><title>2026-02-13: 1</title><rect x="96" y="64" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="6" data-row="5" data-value="0"><title>2026-02-14: 0</title><rect x="96" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="6" data-row="6" data-value="0"><title>2026-02-15: 0</title><rect x="96" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="7" data-row="0" data-value="2"><title>2026-02-16: 2</title><rect x="112" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="7" data-row="1" data-value="3"><title>2026-02-17: 3</title><rect x="112" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="7" data-row="2" data-value="5"><title>2026-02-18: 5</title><rect x="112" y="32" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="7" data-row="3" data-value="6"><title>2026-02-19: 6</title><rect x="112" y="48" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="7" data-row="4" data-value="8"><title>2026-02-20: 8</title><rect x="112" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="7" data-row="5" data-value="2"><title>2026-02-21: 2</title><rect x="112" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="7" data-row="6" data-value="3"><title>2026-02-22: 3</title><rect x="112" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="8" data-row="0" data-value="11"><title>2026-02-23: 11</title><rect x="128" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="8" data-row="1" data-value="11"><title>2026-02-24: 11</title><rect x="128" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="8" data-row="2" data-value="10"><title>2026-02-25: 10</title><rect x="128" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="8" data-row="3" data-value="9"><title>2026-02-26: 9</title><rect x="128" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="8" data-row="4" data-value="8"><title>2026-02-27: 8</title><rect x="128" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="8" data-row="5" data-value="0"><title>2026-02-28: 0</title><rect x="128" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="8" data-row="6" data-value="1"><title>2026-03-01: 1</title><rect x="128" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="9" data-row="0" data-value="9"><title>2026-03-02: 9</title><rect x="144" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="9" data-row="1" data-value="10"><title>2026-03-03: 10</title><rect x="144" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="9" data-row="2" data-value="11"><title>2026-03-04: 11</title><rect x="144" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="9" data-row="3" data-value="11"><title>2026-03-05: 11</title><rect x="144" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="9" data-row="4" data-value="11"><title>2026-03-06: 11</title><rect x="144" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="9" data-row="5" data-value="3"><title>2026-03-07: 3</title><rect x="144" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="9" data-row="6" data-value="1"><title>2026-03-08: 1</title><rect x="144" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="10" data-row="0" data-value="7"><title>2026-03-09: 7</title><rect x="160" y="0" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="10" data-row="1" data-value="5"><title>2026-03-10: 5</title><rect x="160" y="16" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="10" data-row="2" data-value="3"><title>2026-03-11: 3</title><rect x="160" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="10" data-row="3" data-value="2"><title>2026-03-12: 2</title><rect x="160" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="10" data-row="4" data-value="1"><title>2026-03-13: 1</title><rect x="160" y="64" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="10" data-row="5" data-value="0"><title>2026-03-14: 0</title><rect x="160" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="10" data-row="6" data-value="0"><title>2026-03-15: 0</title><rect x="160" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="11" data-row="0" data-value="2"><title>2026-03-16: 2</title><rect x="176" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="11" data-row="1" data-value="3"><title>2026-03-17: 3</title><rect x="176" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="11" data-row="2" data-value="5"><title>2026-03-18: 5</title><rect x="176" y="32" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="11" data-row="3" data-value="6"><title>2026-03-19: 6</title><rect x="176" y="48" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="11" data-row="4" data-value="8"><title>2026-03-20: 8</title><rect x="176" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="11" data-row="5" data-value="2"><title>2026-03-21: 2</title><rect x="176" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="11" data-row="6" data-value="3"><title>2026-03-22: 3</title><rect x="176" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="12" data-row="0" data-value="11"><title>2026-03-23: 11</title><rect x="192" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="12" data-row="1" data-value="11"><title>2026-03-24: 11</title><rect x="192" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="12" data-row="2" data-value="10"><title>2026-03-25: 10</title><rect x="192" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="12" data-row="3" data-value="9"><title>2026-03-26: 9</title><rect x="192" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="12" data-row="4" data-value="8"><title>2026-03-27: 8</title><rect x="192" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="12" data-row="5" data-value="0"><title>2026-03-28: 0</title><rect x="192" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="12" data-row="6" data-value="0"><title>2026-03-29: 0</title><rect x="192" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="13" data-row="0" data-value="3"><title>2026-03-30: 3</title><rect x="208" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="13" data-row="1" data-value="2"><title>2026-03-31: 2</title><rect x="208" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="13" data-row="2" data-value="8"><title>2026-04-01: 8</title><rect x="208" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="13" data-row="3" data-value="9"><title>2026-04-02: 9</title><rect x="208" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="13" data-row="4" data-value="10"><title>2026-04-03: 10</title><rect x="208" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="13" data-row="5" data-value="4"><title>2026-04-04: 4</title><rect x="208" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="13" data-row="6" data-value="4"><title>2026-04-05: 4</title><rect x="208" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="14" data-row="0" data-value="11"><title>2026-04-06: 11</title><rect x="224" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="14" data-row="1" data-value="10"><title>2026-04-07: 10</title><rect x="224" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="14" data-row="2" data-value="8"><title>2026-04-08: 8</title><rect x="224" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="14" data-row="3" data-value="7"><title>2026-04-09: 7</title><rect x="224" y="48" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="14" data-row="4" data-value="5"><title>2026-04-10: 5</title><rect x="224" y="64" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="14" data-row="5" data-value="0"><title>2026-04-11: 0</title><rect x="224" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="14" data-row="6" data-value="0"><title>2026-04-12: 0</title><rect x="224" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="15" data-row="0" data-value="1"><title>2026-04-13: 1</title><rect x="240" y="0" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="15" data-row="1" data-value="1"><title>2026-04-14: 1</title><rect x="240" y="16" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="15" data-row="2" data-value="1"><title>2026-04-15: 1</title><rect x="240" y="32" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="15" data-row="3" data-value="2"><title>2026-04-16: 2</title><rect x="240" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="15" data-row="4" data-value="3"><title>2026-04-17: 3</title><rect x="240" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="15" data-row="5" data-value="0"><title>2026-04-18: 0</title><rect x="240" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="15" data-row="6" data-value="0"><title>2026-04-19: 0</title><rect x="240" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="16" data-row="0" data-value="8"><title>2026-04-20: 8</title><rect x="256" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="16" data-row="1" data-value="9"><title>2026-04-21: 9</title><rect x="256" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="16" data-row="2" data-value="10"><title>2026-04-22: 10</title><rect x="256" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="16" data-row="3" data-value="11"><title>2026-04-23: 11</title><rect x="256" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="16" data-row="4" data-value="11"><title>2026-04-24: 11</title><rect x="256" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="16" data-row="5" data-value="3"><title>2026-04-25: 3</title><rect x="256" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="16" data-row="6" data-value="2"><title>2026-04-26: 2</title><rect x="256" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="17" data-row="0" data-value="8"><title>2026-04-27: 8</title><rect x="272" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="17" data-row="1" data-value="6"><title>2026-04-28: 6</title><rect x="272" y="16" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="17" data-row="2" data-value="5"><title>2026-04-29: 5</title><rect x="272" y="32" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="17" data-row="3" data-value="3"><title>2026-04-30: 3</title><rect x="272" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="17" data-row="4" data-value="8"><title>2026-05-01: 8</title><rect x="272" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="17" data-row="5" data-value="2"><title>2026-05-02: 2</title><rect x="272" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="17" data-row="6" data-value="3"><title>2026-05-03: 3</title><rect x="272" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="18" data-row="0" data-value="11"><title>2026-05-04: 11</title><rect x="288" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="18" data-row="1" data-value="11"><title>2026-05-05: 11</title><rect x="288" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="18" data-row="2" data-value="11"><title>2026-05-06: 11</title><rect x="288" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="18" data-row="3" data-value="10"><title>2026-05-07: 10</title><rect x="288" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="18" data-row="4" data-value="8"><title>2026-05-08: 8</title><rect x="288" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="18" data-row="5" data-value="0"><title>2026-05-09: 0</title><rect x="288" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="18" data-row="6" data-value="0"><title>2026-05-10: 0</title><rect x="288" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="19" data-row="0" data-value="3"><title>2026-05-11: 3</title><rect x="304" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="19" data-row="1" data-value="2"><title>2026-05-12: 2</title><rect x="304" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="19" data-row="2" data-value="1"><title>2026-05-13: 1</title><rect x="304" y="32" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="19" data-row="3" data-value="1"><title>2026-05-14: 1</title><rect x="304" y="48" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="19" data-row="4" data-value="1"><title>2026-05-15: 1</title><rect x="304" y="64" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="19" data-row="5" data-value="0"><title>2026-05-16: 0</title><rect x="304" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="19" data-row="6" data-value="0"><title>2026-05-17: 0</title><rect x="304" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="20" data-row="0" data-value="5"><title>2026-05-18: 5</title><rect x="320" y="0" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="20" data-row="1" data-value="6"><title>2026-05-19: 6</title><rect x="320" y="16" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="20" data-row="2" data-value="8"><title>2026-05-20: 8</title><rect x="320" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="20" data-row="3" data-value="9"><title>2026-05-21: 9</title><rect x="320" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="20" data-row="4" data-value="10"><title>2026-05-22: 10</title><rect x="320" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="20" data-row="5" data-value="4"><title>2026-05-23: 4</title><rect x="320" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="20" data-row="6" data-value="4"><title>2026-05-24: 4</title><rect x="320" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="21" data-row="0" data-value="10"><title>2026-05-25: 10</title><rect x="336" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="21" data-row="1" data-value="9"><title>2026-05-26: 9</title><rect x="336" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="21" data-row="2" data-value="8"><title>2026-05-27: 8</title><rect x="336" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="21" data-row="3" data-value="6"><title>2026-05-28: 6</title><rect x="336" y="48" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="21" data-row="4" data-value="5"><title>2026-05-29: 5</title><rect x="336" y="64" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="21" data-row="5" data-value="0"><title>2026-05-30: 0</title><rect x="336" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="21" data-row="6" data-value="0"><title>2026-05-31: 0</title><rect x="336" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="22" data-row="0" data-value="8"><title>2026-06-01: 8</title><rect x="352" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="22" data-row="1" data-value="9"><title>2026-06-02: 9</title><rect x="352" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="22" data-row="2" data-value="10"><title>2026-06-03: 10</title><rect x="352" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="22" data-row="3" data-value="11"><title>2026-06-04: 11</title><rect x="352" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="22" data-row="4" data-value="11"><title>2026-06-05: 11</title><rect x="352" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="22" data-row="5" data-value="4"><title>2026-06-06: 4</title><rect x="352" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="22" data-row="6" data-value="3"><title>2026-06-07: 3</title><rect x="352" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="23" data-row="0" data-value="8"><title>2026-06-08: 8</title><rect x="368" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="23" data-row="1" data-value="7"><title>2026-06-09: 7</title><rect x="368" y="16" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="23" data-row="2" data-value="5"><title>2026-06-10: 5</title><rect x="368" y="32" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="23" data-row="3" data-value="3"><title>2026-06-11: 3</title><rect x="368" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="23" data-row="4" data-value="2"><title>2026-06-12: 2</title><rect x="368" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="23" data-row="5" data-value="0"><title>2026-06-13: 0</title><rect x="368" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="23" data-row="6" data-value="0"><title>2026-06-14: 0</title><rect x="368" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="24" data-row="0" data-value="1"><title>2026-06-15: 1</title><rect x="384" y="0" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="24" data-row="1" data-value="2"><title>2026-06-16: 2</title><rect x="384" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="24" data-row="2" data-value="3"><title>2026-06-17: 3</title><rect x="384" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="24" data-row="3" data-value="5"><title>2026-06-18: 5</title><rect x="384" y="48" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="24" data-row="4" data-value="6"><title>2026-06-19: 6</title><rect x="384" y="64" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="24" data-row="5" data-value="1"><title>2026-06-20: 1</title><rect x="384" y="80" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="24" data-row="6" data-value="2"><title>2026-06-21: 2</title><rect x="384" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="25" data-row="0" data-value="10"><title>2026-06-22: 10</title><rect x="400" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="25" data-row="1" data-value="11"><title>2026-06-23: 11</title><rect x="400" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="25" data-row="2" data-value="11"><title>2026-06-24: 11</title><rect x="400" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="25" data-row="3" data-value="10"><title>2026-06-25: 10</title><rect x="400" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="25" data-row="4" data-value="9"><title>2026-06-26: 9</title><rect x="400" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="25" data-row="5" data-value="1"><title>2026-06-27: 1</title><rect x="400" y="80" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="25" data-row="6" data-value="0"><title>2026-06-28: 0</title><rect x="400" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="26" data-row="0" data-value="5"><title>2026-06-29: 5</title><rect x="416" y="0" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="26" data-row="1" data-value="3"><title>2026-06-30: 3</title><rect x="416" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="26" data-row="2" data-value="8"><title>2026-07-01: 8</title><rect x="416" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="26" data-row="3" data-value="9"><title>2026-07-02: 9</title><rect x="416" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="26" data-row="4" data-value="10"><title>2026-07-03: 10</title><rect x="416" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="26" data-row="5" data-value="4"><title>2026-07-04: 4</title><rect x="416" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="26" data-row="6" data-value="4"><title>2026-07-05: 4</title><rect x="416" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="27" data-row="0" data-value="11"><title>2026-07-06: 11</title><rect x="432" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="27" data-row="1" data-value="10"><title>2026-07-07: 10</title><rect x="432" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="27" data-row="2" data-value="8"><title>2026-07-08: 8</title><rect x="432" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="27" data-row="3" data-value="7"><title>2026-07-09: 7</title><rect x="432" y="48" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="27" data-row="4" data-value="5"><title>2026-07-10: 5</title><rect x="432" y="64" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="27" data-row="5" data-value="0"><title>2026-07-11: 0</title><rect x="432" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="27" data-row="6" data-value="0"><title>2026-07-12: 0</title><rect x="432" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="28" data-row="0" data-value="1"><title>2026-07-13: 1</title><rect x="448" y="0" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="28" data-row="1" data-value="1"><title>2026-07-14: 1</title><rect x="448" y="16" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="28" data-row="2" data-value="1"><title>2026-07-15: 1</title><rect x="448" y="32" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="28" data-row="3" data-value="2"><title>2026-07-16: 2</title><rect x="448" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="28" data-row="4" data-value="3"><title>2026-07-17: 3</title><rect x="448" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="28" data-row="5" data-value="0"><title>2026-07-18: 0</title><rect x="448" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="28" data-row="6" data-value="0"><title>2026-07-19: 0</title><rect x="448" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="29" data-row="0" data-value="8"><title>2026-07-20: 8</title><rect x="464" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="29" data-row="1" data-value="9"><title>2026-07-21: 9</title><rect x="464" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="29" data-row="2" data-value="10"><title>2026-07-22: 10</title><rect x="464" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="29" data-row="3" data-value="11"><title>2026-07-23: 11</title><rect x="464" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="29" data-row="4" data-value="11"><title>2026-07-24: 11</title><rect x="464" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="29" data-row="5" data-value="3"><title>2026-07-25: 3</title><rect x="464" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="29" data-row="6" data-value="2"><title>2026-07-26: 2</title><rect x="464" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="30" data-row="0" data-value="8"><title>2026-07-27: 8</title><rect x="480" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="30" data-row="1" data-value="6"><title>2026-07-28: 6</title><rect x="480" y="16" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="30" data-row="2" data-value="5"><title>2026-07-29: 5</title><rect x="480" y="32" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="30" data-row="3" data-value="3"><title>2026-07-30: 3</title><rect x="480" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="30" data-row="4" data-value="2"><title>2026-07-31: 2</title><rect x="480" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="30" data-row="5" data-value="1"><title>2026-08-01: 1</title><rect x="480" y="80" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="30" data-row="6" data-value="2"><title>2026-08-02: 2</title><rect x="480" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="31" data-row="0" data-value="10"><title>2026-08-03: 10</title><rect x="496" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="31" data-row="1" data-value="11"><title>2026-08-04: 11</title><rect x="496" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="31" data-row="2" data-value="11"><title>2026-08-05: 11</title><rect x="496" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="31" data-row="3" data-value="11"><title>2026-08-06: 11</title><rect x="496" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="31" data-row="4" data-value="10"><title>2026-08-07: 10</title><rect x="496" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="31" data-row="5" data-value="1"><title>2026-08-08: 1</title><rect x="496" y="80" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="31" data-row="6" data-value="0"><title>2026-08-09: 0</title><rect x="496" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="32" data-row="0" data-value="5"><title>2026-08-10: 5</title><rect x="512" y="0" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="32" data-row="1" data-value="3"><title>2026-08-11: 3</title><rect x="512" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="32" data-row="2" data-value="2"><title>2026-08-12: 2</title><rect x="512" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="32" data-row="3" data-value="1"><title>2026-08-13: 1</title><rect x="512" y="48" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="32" data-row="4" data-value="1"><title>2026-08-14: 1</title><rect x="512" y="64" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="32" data-row="5" data-value="0"><title>2026-08-15: 0</title><rect x="512" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="32" data-row="6" data-value="0"><title>2026-08-16: 0</title><rect x="512" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="33" data-row="0" data-value="3"><title>2026-08-17: 3</title><rect x="528" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="33" data-row="1" data-value="5"><title>2026-08-18: 5</title><rect x="528" y="16" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="33" data-row="2" data-value="6"><title>2026-08-19: 6</title><rect x="528" y="32" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="33" data-row="3" data-value="8"><title>2026-08-20: 8</title><rect x="528" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="33" data-row="4" data-value="9"><title>2026-08-21: 9</title><rect x="528" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="33" data-row="5" data-value="3"><title>2026-08-22: 3</title><rect x="528" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="33" data-row="6" data-value="4"><title>2026-08-23: 4</title><rect x="528" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="34" data-row="0" data-value="11"><title>2026-08-24: 11</title><rect x="544" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="34" data-row="1" data-value="10"><title>2026-08-25: 10</title><rect x="544" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="34" data-row="2" data-value="9"><title>2026-08-26: 9</title><rect x="544" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="34" data-row="3" data-value="8"><title>2026-08-27: 8</title><rect x="544" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="34" data-row="4" data-value="6"><title>2026-08-28: 6</title><rect x="544" y="64" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="34" data-row="5" data-value="0"><title>2026-08-29: 0</title><rect x="544" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="34" data-row="6" data-value="0"><title>2026-08-30: 0</title><rect x="544" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="35" data-row="0" data-value="2"><title>2026-08-31: 2</title><rect x="560" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="35" data-row="1" data-value="8"><title>2026-09-01: 8</title><rect x="560" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="35" data-row="2" data-value="9"><title>2026-09-02: 9</title><rect x="560" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="35" data-row="3" data-value="10"><title>2026-09-03: 10</title><rect x="560" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="35" data-row="4" data-value="11"><title>2026-09-04: 11</title><rect x="560" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="35" data-row="5" data-value="4"><title>2026-09-05: 4</title><rect x="560" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="35" data-row="6" data-value="4"><title>2026-09-06: 4</title><rect x="560" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="36" data-row="0" data-value="10"><title>2026-09-07: 10</title><rect x="576" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="36" data-row="1" data-value="8"><title>2026-09-08: 8</title><rect x="576" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="36" data-row="2" data-value="7"><title>2026-09-09: 7</title><rect x="576" y="32" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="36" data-row="3" data-value="5"><title>2026-09-10: 5</title><rect x="576" y="48" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="36" data-row="4" data-value="3"><title>2026-09-11: 3</title><rect x="576" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="36" data-row="5" data-value="0"><title>2026-09-12: 0</title><rect x="576" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="36" data-row="6" data-value="0"><title>2026-09-13: 0</title><rect x="576" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="37" data-row="0" data-value="1"><title>2026-09-14: 1</title><rect x="592" y="0" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="37" data-row="1" data-value="1"><title>2026-09-15: 1</title><rect x="592" y="16" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="37" data-row="2" data-value="2"><title>2026-09-16: 2</title><rect x="592" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="37" data-row="3" data-value="3"><title>2026-09-17: 3</title><rect x="592" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="37" data-row="4" data-value="5"><title>2026-09-18: 5</title><rect x="592" y="64" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="37" data-row="5" data-value="0"><title>2026-09-19: 0</title><rect x="592" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="37" data-row="6" data-value="1"><title>2026-09-20: 1</title><rect x="592" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="38" data-row="0" data-value="9"><title>2026-09-21: 9</title><rect x="608" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="38" data-row="1" data-value="10"><title>2026-09-22: 10</title><rect x="608" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="38" data-row="2" data-value="11"><title>2026-09-23: 11</title><rect x="608" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="38" data-row="3" data-value="11"><title>2026-09-24: 11</title><rect x="608" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="38" data-row="4" data-value="10"><title>2026-09-25: 10</title><rect x="608" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="38" data-row="5" data-value="2"><title>2026-09-26: 2</title><rect x="608" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="38" data-row="6" data-value="1"><title>2026-09-27: 1</title><rect x="608" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="39" data-row="0" data-value="6"><title>2026-09-28: 6</title><rect x="624" y="0" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="39" data-row="1" data-value="5"><title>2026-09-29: 5</title><rect x="624" y="16" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="39" data-row="2" data-value="3"><title>2026-09-30: 3</title><rect x="624" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="39" data-row="3" data-value="8"><title>2026-10-01: 8</title><rect x="624" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="39" data-row="4" data-value="9"><title>2026-10-02: 9</title><rect x="624" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="39" data-row="5" data-value="3"><title>2026-10-03: 3</title><rect x="624" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="39" data-row="6" data-value="4"><title>2026-10-04: 4</title><rect x="624" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="40" data-row="0" data-value="11"><title>2026-10-05: 11</title><rect x="640" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="40" data-row="1" data-value="11"><title>2026-10-06: 11</title><rect x="640" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="40" data-row="2" data-value="10"><title>2026-10-07: 10</title><rect x="640" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="40" data-row="3" data-value="8"><title>2026-10-08: 8</title><rect x="640" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="40" data-row="4" data-value="7"><title>2026-10-09: 7</title><rect x="640" y="64" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="40" data-row="5" data-value="0"><title>2026-10-10: 0</title><rect x="640" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="40" data-row="6" data-value="0"><title>2026-10-11: 0</title><rect x="640" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="41" data-row="0" data-value="2"><title>2026-10-12: 2</title><rect x="656" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="41" data-row="1" data-value="1"><title>2026-10-13: 1</title><rect x="656" y="16" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="41" data-row="2" data-value="1"><title>2026-10-14: 1</title><rect x="656" y="32" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="41" data-row="3" data-value="1"><title>2026-10-15: 1</title><rect x="656" y="48" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="41" data-row="4" data-value="2"><title>2026-10-16: 2</title><rect x="656" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="41" data-row="5" data-value="0"><title>2026-10-17: 0</title><rect x="656" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="41" data-row="6" data-value="0"><title>2026-10-18: 0</title><rect x="656" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="42" data-row="0" data-value="6"><title>2026-10-19: 6</title><rect x="672" y="0" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="42" data-row="1" data-value="8"><title>2026-10-20: 8</title><rect x="672" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="42" data-row="2" data-value="9"><title>2026-10-21: 9</title><rect x="672" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="42" data-row="3" data-value="10"><title>2026-10-22: 10</title><rect x="672" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="42" data-row="4" data-value="11"><title>2026-10-23: 11</title><rect x="672" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="42" data-row="5" data-value="4"><title>2026-10-24: 4</title><rect x="672" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="42" data-row="6" data-value="3"><title>2026-10-25: 3</title><rect x="672" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="43" data-row="0" data-value="9"><title>2026-10-26: 9</title><rect x="688" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="43" data-row="1" data-value="8"><title>2026-10-27: 8</title><rect x="688" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="43" data-row="2" data-value="6"><title>2026-10-28: 6</title><rect x="688" y="32" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="43" data-row="3" data-value="5"><title>2026-10-29: 5</title><rect x="688" y="48" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="43" data-row="4" data-value="3"><title>2026-10-30: 3</title><rect x="688" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="43" data-row="5" data-value="0"><title>2026-10-31: 0</title><rect x="688" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="43" data-row="6" data-value="1"><title>2026-11-01: 1</title><rect x="688" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="44" data-row="0" data-value="9"><title>2026-11-02: 9</title><rect x="704" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="44" data-row="1" data-value="10"><title>2026-11-03: 10</title><rect x="704" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="44" data-row="2" data-value="11"><title>2026-11-04: 11</title><rect x="704" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="44" data-row="3" data-value="11"><title>2026-11-05: 11</title><rect x="704" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="44" data-row="4" data-value="11"><title>2026-11-06: 11</title><rect x="704" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="44" data-row="5" data-value="3"><title>2026-11-07: 3</title><rect x="704" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="44" data-row="6" data-value="1"><title>2026-11-08: 1</title><rect x="704" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="45" data-row="0" data-value="7"><title>2026-11-09: 7</title><rect x="720" y="0" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="45" data-row="1" data-value="5"><title>2026-11-10: 5</title><rect x="720" y="16" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="45" data-row="2" data-value="3"><title>2026-11-11: 3</title><rect x="720" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="45" data-row="3" data-value="2"><title>2026-11-12: 2</title><rect x="720" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="45" data-row="4" data-value="1"><title>2026-11-13: 1</title><rect x="720" y="64" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="45" data-row="5" data-value="0"><title>2026-11-14: 0</title><rect x="720" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="45" data-row="6" data-value="0"><title>2026-11-15: 0</title><rect x="720" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="46" data-row="0" data-value="2"><title>2026-11-16: 2</title><rect x="736" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="46" data-row="1" data-value="3"><title>2026-11-17: 3</title><rect x="736" y="16" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="46" data-row="2" data-value="5"><title>2026-11-18: 5</title><rect x="736" y="32" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="46" data-row="3" data-value="6"><title>2026-11-19: 6</title><rect x="736" y="48" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="46" data-row="4" data-value="8"><title>2026-11-20: 8</title><rect x="736" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="46" data-row="5" data-value="2"><title>2026-11-21: 2</title><rect x="736" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="46" data-row="6" data-value="3"><title>2026-11-22: 3</title><rect x="736" y="96" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="47" data-row="0" data-value="11"><title>2026-11-23: 11</title><rect x="752" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="47" data-row="1" data-value="11"><title>2026-11-24: 11</title><rect x="752" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="47" data-row="2" data-value="10"><title>2026-11-25: 10</title><rect x="752" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="47" data-row="3" data-value="9"><title>2026-11-26: 9</title><rect x="752" y="48" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="47" data-row="4" data-value="8"><title>2026-11-27: 8</title><rect x="752" y="64" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="47" data-row="5" data-value="0"><title>2026-11-28: 0</title><rect x="752" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="47" data-row="6" data-value="0"><title>2026-11-29: 0</title><rect x="752" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="48" data-row="0" data-value="3"><title>2026-11-30: 3</title><rect x="768" y="0" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="48" data-row="1" data-value="8"><title>2026-12-01: 8</title><rect x="768" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="48" data-row="2" data-value="9"><title>2026-12-02: 9</title><rect x="768" y="32" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="48" data-row="3" data-value="10"><title>2026-12-03: 10</title><rect x="768" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="48" data-row="4" data-value="11"><title>2026-12-04: 11</title><rect x="768" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="48" data-row="5" data-value="4"><title>2026-12-05: 4</title><rect x="768" y="80" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="48" data-row="6" data-value="4"><title>2026-12-06: 4</title><rect x="768" y="96" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="49" data-row="0" data-value="10"><title>2026-12-07: 10</title><rect x="784" y="0" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="49" data-row="1" data-value="8"><title>2026-12-08: 8</title><rect x="784" y="16" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="49" data-row="2" data-value="7"><title>2026-12-09: 7</title><rect x="784" y="32" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="49" data-row="3" data-value="5"><title>2026-12-10: 5</title><rect x="784" y="48" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="49" data-row="4" data-value="3"><title>2026-12-11: 3</title><rect x="784" y="64" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="49" data-row="5" data-value="0"><title>2026-12-12: 0</title><rect x="784" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="49" data-row="6" data-value="0"><title>2026-12-13: 0</title><rect x="784" y="96" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="50" data-row="0" data-value="1"><title>2026-12-14: 1</title><rect x="800" y="0" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="50" data-row="1" data-value="1"><title>2026-12-15: 1</title><rect x="800" y="16" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="50" data-row="2" data-value="2"><title>2026-12-16: 2</title><rect x="800" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="50" data-row="3" data-value="3"><title>2026-12-17: 3</title><rect x="800" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="50" data-row="4" data-value="5"><title>2026-12-18: 5</title><rect x="800" y="64" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="50" data-row="5" data-value="0"><title>2026-12-19: 0</title><rect x="800" y="80" width="14" height="14" rx="2" fill="#f0fdf4" /></g>
+<g class="iso-bar iso-flat" data-col="50" data-row="6" data-value="1"><title>2026-12-20: 1</title><rect x="800" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="51" data-row="0" data-value="9"><title>2026-12-21: 9</title><rect x="816" y="0" width="14" height="14" rx="2" fill="#16a34a" /></g>
+<g class="iso-bar iso-flat" data-col="51" data-row="1" data-value="10"><title>2026-12-22: 10</title><rect x="816" y="16" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="51" data-row="2" data-value="11"><title>2026-12-23: 11</title><rect x="816" y="32" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="51" data-row="3" data-value="11"><title>2026-12-24: 11</title><rect x="816" y="48" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="51" data-row="4" data-value="10"><title>2026-12-25: 10</title><rect x="816" y="64" width="14" height="14" rx="2" fill="#15803d" /></g>
+<g class="iso-bar iso-flat" data-col="51" data-row="5" data-value="2"><title>2026-12-26: 2</title><rect x="816" y="80" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="51" data-row="6" data-value="1"><title>2026-12-27: 1</title><rect x="816" y="96" width="14" height="14" rx="2" fill="#bbf7d0" /></g>
+<g class="iso-bar iso-flat" data-col="52" data-row="0" data-value="6"><title>2026-12-28: 6</title><rect x="832" y="0" width="14" height="14" rx="2" fill="#22c55e" /></g>
+<g class="iso-bar iso-flat" data-col="52" data-row="1" data-value="5"><title>2026-12-29: 5</title><rect x="832" y="16" width="14" height="14" rx="2" fill="#4ade80" /></g>
+<g class="iso-bar iso-flat" data-col="52" data-row="2" data-value="3"><title>2026-12-30: 3</title><rect x="832" y="32" width="14" height="14" rx="2" fill="#86efac" /></g>
+<g class="iso-bar iso-flat" data-col="52" data-row="3" data-value="2"><title>2026-12-31: 2</title><rect x="832" y="48" width="14" height="14" rx="2" fill="#86efac" /></g>
 <rect class="iso-grid-cell" x="832" y="64" width="14" height="14" rx="2" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <rect class="iso-grid-cell" x="832" y="80" width="14" height="14" rx="2" fill="none" stroke="#e1e4e8" stroke-width="0.5" />
 <rect class="iso-grid-cell" x="832" y="96" width="14" height="14" rx="2" fill="none" stroke="#e1e4e8" stroke-width="0.5" />

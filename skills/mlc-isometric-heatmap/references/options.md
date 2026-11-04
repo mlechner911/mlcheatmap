@@ -34,7 +34,7 @@ const svg = grid.render({ view: "flat", colorScheme: "emerald", gridSize: 24 });
 - **Still work:** colors and `interpolateColors`, `valueDomain`, `zeroColor`, `renderFlatZero`, `opacity`, `dark`, `showGrid`, `gridCells`, label intervals and angles, `rowLabelStyle`, `showAxis`, tooltips, `title`, `wrapper`, day numbers.
 - **Ignored:** `shape`, `maxHeight`, `projectionAngle`, `labelMode`, `labelLift`, `showAxisWalls`, `heightGrid` and the mesh options.
 - **Labels:** Rows sit on the left. Columns sit on top by default; `labelPosition: "front"` moves them below.
-- **Hooks:** Cells keep the class `iso-bar` and their `data-col`, `data-row` and `data-value`, and also have the class `iso-flat`.
+- **Hooks:** Cells keep the class `iso-bar` and their `data-col`, `data-row` and `data-value`, and also have the class `iso-flat`. Match `.iso-bar`, not `[class="iso-bar"]`, as cells can carry further classes.
 
 ## Shapes
 
@@ -105,7 +105,7 @@ With `rowLabelAngle: -90`, a `backgroundColor` in `rowLabelStyle` gives vertical
 |---|---|---|---|
 | `interactive` | `boolean` | `true` | Tooltips as `<title>` and hover hooks |
 | `tooltipFormatter` | `(point) => string` | | Your own tooltip text, wins over the label of a cell; not used for `mesh` patches, which show an average |
-| `animated` | `boolean` | `true` | Staggered entrance animation |
+| `animated` | `boolean` | `true` | Staggered entrance animation; skipped when the system asks for reduced motion |
 | `shading` | `boolean` | | Surface shading |
 | `triangulateMesh`, `useSvg2Mesh` | `boolean` | | How a `mesh` is drawn |
 

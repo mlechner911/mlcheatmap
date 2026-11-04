@@ -45,7 +45,6 @@ export interface RenderMeshParams {
   geometryConfig: GeometryConfig;
   opacity?: number;
   titleTag?: string;
-  inlineStyle?: string;
   triangulateMesh?: boolean; // Decompose quad into planar triangles (default: true)
   useSvg2Mesh?: boolean;     // Experimental: use SVG 2.0 meshGradient (default: false)
   shading?: boolean;         // Toggle 3D light shading on the mesh terrain (default: true)
@@ -90,7 +89,6 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     geometryConfig,
     opacity,
     titleTag,
-    inlineStyle,
     triangulateMesh = true,
     useSvg2Mesh = false,
     shading = true
@@ -135,7 +133,7 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     const pts = `${p0.x.toFixed(1)},${p0.y.toFixed(1)} ${p1.x.toFixed(1)},${p1.y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)} ${p3.x.toFixed(1)},${p3.y.toFixed(1)}`;
 
     return `${meshDefs}
-<polygon points="${pts}" fill="url(#${gradId})" stroke="url(#${gradId})"${opacityAttr}${inlineStyle}>${titleTag}</polygon>`;
+<polygon points="${pts}" fill="url(#${gradId})" stroke="url(#${gradId})" stroke-width="1"${opacityAttr}>${titleTag}</polygon>`;
   }
 
   // --- OPTION B: Decompose Quad into Planar Triangles (Low-Poly Shading) ---
@@ -159,8 +157,8 @@ export function renderMeshQuad(params: RenderMeshParams): string {
     const pts_A = `${p0.x.toFixed(1)},${p0.y.toFixed(1)} ${p1.x.toFixed(1)},${p1.y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)}`;
     const pts_B = `${p0.x.toFixed(1)},${p0.y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)} ${p3.x.toFixed(1)},${p3.y.toFixed(1)}`;
 
-    return `<polygon points="${pts_A}" fill="${fill_A}" stroke="${stroke_A}" stroke-width="0.3" stroke-linejoin="round"${opacityAttr}${inlineStyle}>${titleTag}</polygon>
-<polygon points="${pts_B}" fill="${fill_B}" stroke="${stroke_B}" stroke-width="0.3" stroke-linejoin="round"${opacityAttr}${inlineStyle}>${titleTag}</polygon>`;
+    return `<polygon points="${pts_A}" fill="${fill_A}" stroke="${stroke_A}" stroke-linejoin="round"${opacityAttr}>${titleTag}</polygon>
+<polygon points="${pts_B}" fill="${fill_B}" stroke="${stroke_B}" stroke-linejoin="round"${opacityAttr}>${titleTag}</polygon>`;
   }
 
   // --- OPTION C: Standard Flat-Shaded Quad ---
@@ -173,5 +171,5 @@ export function renderMeshQuad(params: RenderMeshParams): string {
 
   const pts = `${p0.x.toFixed(1)},${p0.y.toFixed(1)} ${p1.x.toFixed(1)},${p1.y.toFixed(1)} ${p2.x.toFixed(1)},${p2.y.toFixed(1)} ${p3.x.toFixed(1)},${p3.y.toFixed(1)}`;
 
-  return `<polygon points="${pts}" fill="${fill}" stroke="${stroke}" stroke-width="0.5"${opacityAttr}${inlineStyle}>${titleTag}</polygon>`;
+  return `<polygon points="${pts}" fill="${fill}" stroke="${stroke}" stroke-width="0.5"${opacityAttr}>${titleTag}</polygon>`;
 }
