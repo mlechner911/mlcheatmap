@@ -89,7 +89,7 @@ Kontrast selbst — hell auf dunklem Grund, dunkel auf hellem.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_sky_styled_labels_slate_bg.svg" style="width:100%;aspect-ratio:1.793;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_sky_styled_labels_slate_bg.svg" style="width:100%;aspect-ratio:1.665;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Hinterlegte Beschriftung: die Zeilennamen bleiben lesbar, wo Säulen dahinterstehen.</figcaption>
 </figure>

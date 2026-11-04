@@ -8,7 +8,7 @@ One box per value, clearly delineated. This is the default, and in most cases th
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_prism_mixed.svg" style="width:100%;aspect-ratio:1.662;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_prism_mixed.svg" style="width:100%;aspect-ratio:1.428;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Three series as prisms. Each value is a discrete volumetric body and readable as such.</figcaption>
 </figure>
@@ -30,7 +30,7 @@ Instead of separated bodies, a continuous ribbon spans along each series row. Th
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_ribbon.svg" style="width:100%;aspect-ratio:2.241;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_ribbon.svg" style="width:100%;aspect-ratio:2.065;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Three ribbons. Comparing trajectories against each other is the primary strength of this shape.</figcaption>
 </figure>
@@ -41,7 +41,7 @@ A standard `ribbon` extends all the way down to the base plane, creating a solid
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_flatribbon.svg" style="width:100%;aspect-ratio:2.241;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_flatribbon.svg" style="width:100%;aspect-ratio:2.065;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Three floating ribbons. Because they do not drop to the floor, they do not occlude rows behind them.</figcaption>
 </figure>
@@ -61,14 +61,14 @@ This is the right shape for data that is genuinely continuous — temperature ac
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/mesh_terrain_sunset_hills.svg" style="width:100%;aspect-ratio:1.594;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/mesh_terrain_sunset_hills.svg" style="width:100%;aspect-ratio:1.412;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">A 3D terrain mesh. The circular gap in the center is not a bug, but a lake of null values — see Chapter 6.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/mesh_terrain_emerald_hills.svg" style="width:100%;aspect-ratio:2.175;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/mesh_terrain_emerald_hills.svg" style="width:100%;aspect-ratio:1.992;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">The exact same terrain rendered in a different color scheme.</figcaption>
 </figure>
@@ -79,7 +79,7 @@ Shapes can also be assigned on a per-row basis. While rarely needed, if two seri
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/month_mixed_shapes_per_row.svg" style="width:100%;aspect-ratio:1.380;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/month_mixed_shapes_per_row.svg" style="width:100%;aspect-ratio:1.200;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Distinct shapes per row within a single visualization.</figcaption>
 </figure>

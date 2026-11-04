@@ -286,7 +286,7 @@ export function renderMultiMonth({ presets, options, startOfWeek = 1 }) {
   const svgJune = gridJune.render({
     ...blockOptions,
     showRowLabels: false,
-    colLabels: gridJune.colLabels.map((w, ci) => (ci === 0 ? 'Jun' : w)),
+    colLabels: gridJune.colLabels.map((w, ci) => (ci === 0 ? 'Jun' : options.monthLabelsOnly ? '' : w)),
   });
 
   const spacerCols = 1;
