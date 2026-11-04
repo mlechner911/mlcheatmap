@@ -38,7 +38,7 @@ Seite, sondern steckt als CSS-Regel im SVG selbst.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_cylinder_mixed.svg" style="width:100%;aspect-ratio:1.662;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/24h_triple_cylinder_mixed.svg" style="width:100%;aspect-ratio:1.428;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Drei Reihen, Zylinder mit gemischten Werten</figcaption>
 </figure>
@@ -66,7 +66,7 @@ Seite, sondern steckt als CSS-Regel im SVG selbst.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/month_coral_styled_labels_orange_translucent.svg" style="width:100%;aspect-ratio:1.690;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/month_coral_styled_labels_orange_translucent.svg" style="width:100%;aspect-ratio:1.540;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Monat mit teiltransparent hinterlegter Beschriftung</figcaption>
 </figure>
@@ -94,7 +94,7 @@ Seite, sondern steckt als CSS-Regel im SVG selbst.
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_sunset_styled_labels_serif.svg" style="width:100%;aspect-ratio:1.740;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_sunset_styled_labels_serif.svg" style="width:100%;aspect-ratio:1.424;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Sechs Monate mit Serifenbeschriftung</figcaption>
 </figure>

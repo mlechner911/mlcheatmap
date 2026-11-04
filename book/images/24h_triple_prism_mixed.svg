@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-83.64 -20.50 526.68 316.88" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-83.64 -20.50 526.68 368.88" width="100%" height="100%">
     <!-- Generated with MLC Isometric 3D Heatmap Library -->
     <metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -519,12 +519,12 @@
       <polygon class="iso-face-right" points="327.36,213.50 340.35,206.00 340.35,234.00 327.36,241.50" fill="#a43e08" stroke="#a43e08" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
       <polygon class="iso-face-top" points="327.36,198.50 314.37,206.00 327.36,213.50 340.35,206.00" fill="#ea580c" stroke="#ea580c" stroke-width="0.3" stroke-linejoin="round" fill-opacity="1" stroke-opacity="1" />
     </g>
-<g class="iso-col-labels"><g transform="translate(-42.09 34.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">12AM</text></g>
-<g transform="translate(51.44 88.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">6AM</text></g>
-<g transform="translate(144.97 142.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">12PM</text></g>
-<g transform="translate(238.50 196.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">6PM</text></g></g>
-<g class="iso-row-labels"><g transform="translate(369.45 223.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Users (A)</text></g>
-<g transform="translate(353.86 232.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Background (B)</text></g>
-<g transform="translate(338.27 241.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Network (C)</text></g></g>
+<g class="iso-col-labels"><g transform="translate(-42.09 86.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">12AM</text></g>
+<g transform="translate(51.44 140.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">6AM</text></g>
+<g transform="translate(144.97 194.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">12PM</text></g>
+<g transform="translate(238.50 248.80) rotate(-30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="end">6PM</text></g></g>
+<g class="iso-row-labels"><g transform="translate(369.45 275.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Users (A)</text></g>
+<g transform="translate(353.86 284.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Background (B)</text></g>
+<g transform="translate(338.27 293.80) rotate(30)"><text x="0" y="3.50" fill="#57606a" font-size="10" font-family="sans-serif" text-anchor="start">Network (C)</text></g></g>
     </g>
   </svg>

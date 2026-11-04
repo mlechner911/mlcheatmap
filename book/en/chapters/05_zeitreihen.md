@@ -107,14 +107,14 @@ A gap exists between a single month and an entire year: 26 weeks is too wide for
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_sunset.svg" style="width:100%;aspect-ratio:1.492;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_sunset.svg" style="width:100%;aspect-ratio:1.491;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Six months with month dividers: boundaries remain distinctly readable.</figcaption>
 </figure>
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_double_sunset_height_grid.svg" style="width:100%;aspect-ratio:1.654;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_double_sunset_height_grid.svg" style="width:100%;aspect-ratio:1.494;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Two series across six months, paired with an isometric height grid.</figcaption>
 </figure>
@@ -147,7 +147,7 @@ When comparing quarters, semesters, or different facility locations, multiple gr
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/multimonth_combined_groups.svg" style="width:100%;aspect-ratio:1.298;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/multimonth_combined_groups.svg" style="width:100%;aspect-ratio:1.283;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Multiple monthly groups unified within a single graphic with a shared height scale.</figcaption>
 </figure>

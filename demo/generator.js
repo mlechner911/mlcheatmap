@@ -65,6 +65,9 @@ let options = {
   ...(args['label-mode'] ? { labelMode: args['label-mode'] } : {}),
   ...(args['month-labels-only'] ? { monthLabelsOnly: true } : {}),
   ...(args['no-title'] ? { noTitle: true } : {}),
+  ...(args['label-lift'] ? { labelLift: parseFloat(args['label-lift']) } : {}),
+  ...(args.padding ? { padding: parseInt(args.padding, 10) } : {}),
+  ...(args['row-label-interval'] ? { rowLabelInterval: parseInt(args['row-label-interval'], 10) } : {}),
   colorScheme,
   zeroColor,
   projectionAngle: angle,
@@ -533,6 +536,15 @@ if (Object.keys(rowLabelStyle).length > 0) {
 
 
 if (args['no-title']) options.title = undefined;
+
+// Bars below the floor reach down into the labels in front of them, so move those labels clear.
+if (args['clear-negative-labels']) {
+  const values = dataPoints.map((point) => point.value).filter((value) => value !== null);
+  const lowest = Math.min(...values);
+  const largest = Math.max(...values.map(Math.abs));
+  // A bit more than the depth: horizontal labels need room on their other side as well.
+  if (lowest < 0) options.labelLift = 1.3 * (lowest / largest) * (options.maxHeight ?? 40);
+}
 
 // Render SVG and write to file
 try {

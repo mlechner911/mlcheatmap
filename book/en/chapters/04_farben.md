@@ -30,7 +30,7 @@ By default, every cell is filled with a discrete color. For `ribbon` and `flatri
 
 <figure style="margin:2rem 0">
 <div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
-<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_smooth_gradient.svg" style="width:100%;aspect-ratio:1.492;display:block"></object>
+<object type="image/svg+xml" data="/books/mlcheatmap/images/sixmonths_split_smooth_gradient.svg" style="width:100%;aspect-ratio:1.491;display:block"></object>
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Six months with smooth color gradients. Transitions are as seamless as the physical metrics they represent.</figcaption>
 </figure>

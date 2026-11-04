@@ -11,7 +11,7 @@ const COLUMN_WIDTH = 648; // Width of the handbook column in pixels.
 const TARGET_FONT = 12; // Label size a reader should see, in pixels.
 const MAX_FONT = 24;
 const MIN_ANGLE = 22;
-const COMPOSITE_MAX_FONT = 14; // Vertical weekday labels sit one row apart and collide above this.
+const COMPOSITE_MAX_FONT = 18; // Vertical weekday labels sit two rows apart and collide above this.
 const DARK_ZERO = "--zero-color=#1e293b"; // Pushes itself in front of the data on a white page.
 
 const outDir = process.argv[2] ?? "book/images";
@@ -34,7 +34,8 @@ function adjust(args) {
   const joined = args.join(" ");
   const isStyled = joined.includes("--row-label-");
   const isComposite = /preset=(sixmonths-split|multimonth)/.test(joined);
-  const isSurface = /preset=(mesh-terrain|month-mesh)|shape=mesh/.test(joined);
+  const hasNegativeSurface = joined.includes("preset=mesh-terrain");
+  const isSurface = !hasNegativeSurface && /preset=month-mesh|shape=mesh/.test(joined);
   const angle = Number(/--angle=(\d+)/.exec(joined)?.[1] ?? 30);
 
   const result = args.filter((arg) => arg.replace(/"/g, "") !== DARK_ZERO && !arg.startsWith("--label-pos="));
@@ -45,9 +46,12 @@ function adjust(args) {
   if (angle < MIN_ANGLE) {
     result.splice(result.findIndex((arg) => arg.startsWith("--angle=")), 1, `--angle=${MIN_ANGLE}`);
   }
-  if (!isStyled) result.push("--label-mode=axis");
-  if (isComposite) result.push("--month-labels-only");
-  else result.push("--col-label-interval=auto");
+  // Badges stay upright, plain labels run along the axis.
+  if (!joined.includes("--row-label-bg")) result.push("--label-mode=axis");
+  // Composites are crowded: month names only, and every other weekday, in a larger size.
+  if (isComposite) result.push("--month-labels-only", "--row-label-interval=2");
+  else result.push("--col-label-interval=auto", "--clear-negative-labels");
+  if (isStyled) result.push("--padding=48"); // Their labels are wider than the layout assumes.
   return result;
 }
 
@@ -72,7 +76,11 @@ for (const name of figures) {
   let font = 6;
   let result;
   while (true) {
-    execFileSync("node", ["demo/generator.js", ...adjust(args), `--label-font-size=${font}`, `--out=${out}`], {
+    // A fixed size in a figure's own label style has to grow along, or it stays the smallest text.
+    const sized = adjust(args).map((arg) =>
+      arg.startsWith("--row-label-font-size=") ? `--row-label-font-size=${font}` : arg,
+    );
+    execFileSync("node", ["demo/generator.js", ...sized, `--label-font-size=${font}`, `--out=${out}`], {
       stdio: "ignore",
     });
     result = measure(readFileSync(out, "utf8"));
