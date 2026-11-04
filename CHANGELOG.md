@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.0 (2026-11-04)
+
+- Added `view: 'flat'`, a standard 2D heatmap from the same data, presets and color options. Only color carries the value there, so `shape`, `maxHeight` and other 3D options have no effect.
+
 ## 1.3.3 (2026-11-03)
 
 - Fixed plain dates like `2026-09-01` landing on the previous day, or vanishing from a month, west of UTC.

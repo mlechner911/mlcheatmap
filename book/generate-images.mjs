@@ -98,17 +98,37 @@ const september = Array.from({ length: 30 }, (_, i) => ({
   date: `2026-09-${String(i + 1).padStart(2, "0")}`,
   value: Math.round(14 + 6 * Math.sin(i / 3) + (i % 7 >= 5 ? -4 : 2)),
 }));
-const grid = presets.aggregateCalendarMonth(september, { year: 2026, month: 8, startOfWeek: 1, weekLabel: (week) => `Week ${week}` });
-for (let font = 6; font <= MAX_FONT; font += 1) {
-  const svg = grid.render({ colorScheme: "emerald", labelFontSize: font });
-  const result = measure(svg.replace(/<text[^>]*font-weight="bold"[^>]*>.*?<\/text>/g, ""));
-  if (result.shown >= TARGET_FONT || font === MAX_FONT) {
-    writeFileSync(join(outDir, "calendar_month_september.svg"), svg);
-    ratios.set("calendar_month_september", result.width / result.height);
-    console.log(`calendar_month_september: font ${font}, shown ${result.shown.toFixed(1)}px`);
-    break;
+const calendar = () => presets.aggregateCalendarMonth(september, { year: 2026, month: 8, startOfWeek: 1, weekLabel: (week) => `Week ${week}` });
+
+/** Writes a figure from a preset grid in the smallest font that reads well in the column. */
+function writePresetFigure(name, grid, options) {
+  for (let font = 6; font <= MAX_FONT; font += 1) {
+    const svg = grid.render({ ...options, labelFontSize: font });
+    const result = measure(svg.replace(/<text[^>]*font-weight="bold"[^>]*>.*?<\/text>/g, ""));
+    if (result.shown >= TARGET_FONT || font === MAX_FONT) {
+      writeFileSync(join(outDir, `${name}.svg`), svg);
+      ratios.set(name, result.width / result.height);
+      console.log(`${name}: font ${font}, shown ${result.shown.toFixed(1)}px`);
+      return;
+    }
   }
 }
+
+writePresetFigure("calendar_month_september", calendar(), { colorScheme: "emerald" });
+
+// The flat figures: no title, the caption says it.
+const flatCalendar = calendar();
+flatCalendar.title = undefined;
+writePresetFigure("flat_calendar_september", flatCalendar, { view: "flat", colorScheme: "emerald", animated: false });
+
+const year = [];
+for (let day = new Date(2026, 0, 1); day.getFullYear() === 2026; day.setDate(day.getDate() + 1)) {
+  const weekend = day.getDay() === 0 || day.getDay() === 6;
+  year.push({ date: new Date(day), value: Math.max(0, Math.round(6 + 5 * Math.sin(day.getDate() / 3) - (weekend ? 7 : 0))) });
+}
+const flatYear = presets.aggregateYear(year, { year: 2026, startOfWeek: 1 });
+flatYear.title = undefined;
+writePresetFigure("flat_year", flatYear, { view: "flat", colorScheme: "emerald", rowLabelInterval: "auto", animated: false });
 
 if (outDir === "book/images") {
   for (const language of ["en", "de"]) {

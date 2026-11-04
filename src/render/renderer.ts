@@ -12,7 +12,8 @@ import { renderColLabels, renderRowLabels } from './labels';
 import { getLabelLines, requiredLabelStep, thinLabels } from './label-layout';
 import { renderAxis, renderAxisWalls, renderHeightGridWall } from './axes';
 import { renderCell } from './cell';
-import { escapeHtml, renderCylinderDefs, renderMetadata, renderStyleTag, renderTitle, wrapTitle } from './svg-document';
+import { renderFlatHeatmap } from './flat';
+import { escapeHtml, renderCylinderDefs, renderDocument, renderStyleTag } from './svg-document';
 
 /** A grid model that brings its own points, size and labels. */
 interface GridModel {
@@ -25,7 +26,6 @@ interface GridModel {
   renderDefaults?: RenderDefaults;
 }
 
-const TITLE_LINE_HEIGHT = 18;
 const WALL_FILL_DARK = 'rgba(30, 41, 59, 0.7)';
 const WALL_FILL_LIGHT = 'rgba(241, 245, 249, 0.7)';
 
@@ -138,6 +138,23 @@ export function renderHeatmap(
   const getPoint = (col: number, row: number): HeatmapDataPoint => {
     return dataMap.get(`${col},${row}`) ?? { col, row, value: null };
   };
+
+  if (options.view === 'flat') {
+    return renderFlatHeatmap({
+      options,
+      cols,
+      rows,
+      colLabels,
+      rowLabels,
+      title,
+      getPoint,
+      maxAbsValue,
+      theme,
+      negativeTheme,
+      gridColor,
+      labelColor
+    });
+  }
 
   const geometryConfig: GeometryConfig = { gridSize, gap, cosAngle, sinAngle };
 
@@ -326,42 +343,18 @@ export function renderHeatmap(
     }));
   }
 
-  // Assemble final SVG
-  const width = (bounds.maxX - bounds.minX) + 2 * padding;
-  const titleLines = wrapTitle(title, width);
-  const titleOffset = titleLines.length > 1 ? (titleLines.length - 1) * TITLE_LINE_HEIGHT : 0;
-  const height = (bounds.maxY - bounds.minY) + 2 * padding + titleOffset;
-  const viewX = bounds.minX - padding;
-  const viewY = bounds.minY - padding - titleOffset;
-
-  const styleTag = interactive ? renderStyleTag(animated) : '';
   const hasCylinder = Array.from({ length: rows }, (_, r) => shapeForRow(options.shape, r)).includes('cylinder');
-  const defsSvg = hasCylinder ? renderCylinderDefs(uniqueColors, opacity) : '';
-  const titleSvg = renderTitle({ lines: titleLines, viewX, viewY, width, padding, lineHeight: TITLE_LINE_HEIGHT, isDark });
-
-  const customCommentText = options.generatorComment ?? 'Generated with MLC Isometric 3D Heatmap Library';
-  const generatorComment = `<!-- ${customCommentText} -->`;
-  const body = [...backgroundElements, ...elements, ...foregroundElements].join('\n');
-
-  if ((options.wrapper ?? 'svg') === 'g') {
-    return `<g class="iso-heatmap-group" data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
-      ${generatorComment}
-      ${styleTag}
-      ${defsSvg}
-      ${titleSvg}
-      ${body}
-    </g>`;
-  }
-
-  const metadataSvg = renderMetadata(options.creator ?? 'Michael Lechner', title, customCommentText);
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${width.toFixed(2)} ${height.toFixed(2)}" width="100%" height="100%">
-    ${generatorComment}
-    ${metadataSvg}
-    ${styleTag}
-    ${defsSvg}
-    ${titleSvg}
-    <g>
-      ${body}
-    </g>
-  </svg>`;
+  return renderDocument({
+    bounds,
+    padding,
+    title,
+    isDark,
+    styleTag: interactive ? renderStyleTag(animated) : '',
+    defs: hasCylinder ? renderCylinderDefs(uniqueColors, opacity) : '',
+    body: [...backgroundElements, ...elements, ...foregroundElements].join('\n'),
+    wrapper: options.wrapper ?? 'svg',
+    creator: options.creator,
+    comment: options.generatorComment ?? 'Generated with MLC Isometric 3D Heatmap Library',
+    fallbackTitle: 'MLC Isometric 3D Heatmap'
+  });
 }

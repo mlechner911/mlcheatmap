@@ -6,6 +6,8 @@
 
 import { shadeHex } from './color';
 
+const TITLE_LINE_HEIGHT = 18;
+
 export function escapeHtml(str: string): string {
   return str
     .replace(/&/g, '&amp;')
@@ -84,6 +86,25 @@ export function renderStyleTag(animated: boolean): string {
       </style>`;
 }
 
+/** Flat cells have no height to grow from or lift, so they fade in and only brighten on hover. */
+export function renderFlatStyleTag(animated: boolean): string {
+  return `<style>
+        ${animated ? `@keyframes iso-flat-in {
+          from {
+            opacity: 0;
+          }
+        }` : ''}
+        .iso-flat {
+          ${animated ? 'animation: iso-flat-in 0.4s ease both;' : ''}
+          transition: filter 0.2s ease;
+          cursor: pointer;
+        }
+        .iso-flat:hover {
+          filter: brightness(1.1);
+        }
+      </style>`;
+}
+
 /** One horizontal gradient per cylinder color; empty when no cylinder was drawn. */
 export function renderCylinderDefs(colors: ReadonlySet<string>, opacity: number): string {
   if (colors.size === 0) return '';
@@ -98,7 +119,7 @@ export function renderCylinderDefs(colors: ReadonlySet<string>, opacity: number)
   return `<defs>${gradients.join('\n')}</defs>`;
 }
 
-export function renderMetadata(creator: string, title: string | undefined, description: string): string {
+export function renderMetadata(creator: string, title: string | undefined, description: string, fallbackTitle: string): string {
   const currentDate = new Date().toISOString().split('T')[0];
   return `<metadata>
     <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -106,9 +127,56 @@ export function renderMetadata(creator: string, title: string | undefined, descr
       <rdf:Description rdf:about="">
         <dc:creator>${escapeHtml(creator)}</dc:creator>
         <dc:date>${currentDate}</dc:date>
-        <dc:title>${title ? escapeHtml(title.replace(/\n/g, ' — ')) : 'MLC Isometric 3D Heatmap'}</dc:title>
+        <dc:title>${title ? escapeHtml(title.replace(/\n/g, ' — ')) : escapeHtml(fallbackTitle)}</dc:title>
         <dc:description>${escapeHtml(description)}</dc:description>
       </rdf:Description>
     </rdf:RDF>
   </metadata>`;
+}
+
+/** Wraps a finished drawing into a complete SVG, or a group for composites, with room for its title. */
+export function renderDocument(params: {
+  bounds: { minX: number; maxX: number; minY: number; maxY: number };
+  padding: number;
+  title: string | undefined;
+  isDark: boolean;
+  styleTag: string;
+  defs: string;
+  body: string;
+  wrapper: 'svg' | 'g';
+  creator: string | undefined;
+  comment: string;
+  fallbackTitle: string;
+}): string {
+  const { bounds, padding, title, isDark, styleTag, defs, body, wrapper, creator, comment, fallbackTitle } = params;
+  const width = (bounds.maxX - bounds.minX) + 2 * padding;
+  const titleLines = wrapTitle(title, width);
+  const titleOffset = titleLines.length > 1 ? (titleLines.length - 1) * TITLE_LINE_HEIGHT : 0;
+  const height = (bounds.maxY - bounds.minY) + 2 * padding + titleOffset;
+  const viewX = bounds.minX - padding;
+  const viewY = bounds.minY - padding - titleOffset;
+  const titleSvg = renderTitle({ lines: titleLines, viewX, viewY, width, padding, lineHeight: TITLE_LINE_HEIGHT, isDark });
+  const generatorComment = `<!-- ${comment} -->`;
+
+  if (wrapper === 'g') {
+    return `<g class="iso-heatmap-group" data-min-x="${viewX.toFixed(2)}" data-min-y="${viewY.toFixed(2)}" data-width="${width.toFixed(2)}" data-height="${height.toFixed(2)}">
+      ${generatorComment}
+      ${styleTag}
+      ${defs}
+      ${titleSvg}
+      ${body}
+    </g>`;
+  }
+
+  const metadataSvg = renderMetadata(creator ?? 'Michael Lechner', title, comment, fallbackTitle);
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${viewX.toFixed(2)} ${viewY.toFixed(2)} ${width.toFixed(2)} ${height.toFixed(2)}" width="100%" height="100%">
+    ${generatorComment}
+    ${metadataSvg}
+    ${styleTag}
+    ${defs}
+    ${titleSvg}
+    <g>
+      ${body}
+    </g>
+  </svg>`;
 }

@@ -6,6 +6,7 @@
 
 | Option | Type | Default | Meaning |
 |---|---|---|---|
+| `view` | `'isometric' \| 'flat'` | `'isometric'` | 3D shapes, or a standard 2D heatmap |
 | `gridSize` | `number` | `16` | Cell size in pixels |
 | `gap` | `number` | `2` | Gap between cells in pixels |
 | `maxHeight` | `number` | `40` | Height of the tallest column in pixels |
@@ -13,6 +14,27 @@
 | `projectionAngle` | `number` | `30` | Camera slant in degrees, 10 to 60 |
 | `title` | `string` | none | Title inside the SVG |
 | `wrapper` | `'svg' \| 'g'` | `'svg'` | `'g'` returns a group for composites |
+
+## Flat view
+
+`view: "flat"` draws straight colored cells, for any grid or preset:
+
+```ts
+import { HeatmapGrid } from "mlc-isometric-heatmap";
+
+const grid = new HeatmapGrid(3, 2);
+grid.setCell(0, 0, 10);
+grid.setCell(2, 1, -5);
+grid.colLabels = ["A", "B", "C"];
+grid.rowLabels = ["One", "Two"];
+
+const svg = grid.render({ view: "flat", colorScheme: "emerald", gridSize: 24 });
+```
+
+- **Still work:** colors and `interpolateColors`, `valueDomain`, `zeroColor`, `renderFlatZero`, `opacity`, `dark`, `showGrid`, `gridCells`, label intervals and angles, `rowLabelStyle`, `showAxis`, tooltips, `title`, `wrapper`, day numbers.
+- **Ignored:** `shape`, `maxHeight`, `projectionAngle`, `labelMode`, `labelLift`, `showAxisWalls`, `heightGrid` and the mesh options.
+- **Labels:** Rows sit on the left. Columns sit on top by default; `labelPosition: "front"` moves them below.
+- **Hooks:** Cells keep the class `iso-bar` and their `data-col`, `data-row` and `data-value`, and also have the class `iso-flat`.
 
 ## Shapes
 
@@ -55,7 +77,7 @@ const svg = grid.render({
 | `colLabels`, `rowLabels` | `string[]` | from the grid | Axis labels |
 | `colLabelInterval`, `rowLabelInterval` | `number \| 'auto'` | `1` | Label every nth cell; `'auto'` drops what would overlap |
 | `labelMode` | `'screen' \| 'axis'` | `'screen'` | `'axis'` runs the text along the grid axis |
-| `labelPosition` | `'behind' \| 'front'` | `'front'` | Which side of the grid gets the labels |
+| `labelPosition` | `'behind' \| 'front'` | `'front'` | Which side of the grid gets the labels; in the flat view the default is `'behind'`, above the grid |
 | `labelFontSize` | `number` | `9` | Font size in pixels |
 | `labelLift` | `number` | `0` | Moves labels up in pixels, for example onto a wall |
 | `colLabelAngle`, `rowLabelAngle` | `number` | `0` | Rotation in degrees, ignored with `labelMode: 'axis'` |

@@ -83,3 +83,5 @@ Shapes can also be assigned on a per-row basis. While rarely needed, if two seri
 </div>
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Distinct shapes per row within a single visualization.</figcaption>
 </figure>
+
+If you want no shape at all but a standard heatmap, see [chapter 5](05_zeitreihen.md).
