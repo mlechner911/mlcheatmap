@@ -32,6 +32,7 @@ By introducing **3D height and perspective**:
 ## Features
 
 *   **Calendars from Dates**: Pass events with a date or timestamp instead of working out columns and rows. Presets place them by weekday and week, sum what falls together and label the axes.
+*   **Flat View**: `view: 'flat'` draws a standard 2D heatmap from the same data and presets, without the 3D effect.
 *   **Pure Vector Graphics (SVG)**: Renders directly as SVG code. Fully responsive, lightweight, scalable, and easy to embed or style.
 *   **Multiple 3D Shapes**:
     *   `prism`: Sharp 3D rectangular columns.
@@ -64,7 +65,7 @@ Load the rendering engine directly in modern browsers without build tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -76,10 +77,10 @@ Load scripts synchronously using standard HTML `<script>` tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/presets.umd.js"></script>
 
 <script>
   // Access elements on global window variables:
@@ -101,7 +102,7 @@ The recommended approach is to use the `HeatmapGrid` class to define grid dimens
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Or Browser-Native ES6 Module CDN Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
 
 // Create an 8x8 coordinate grid
 const grid = new HeatmapGrid(8, 8);
@@ -161,8 +162,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Or Browser-Native ES6 Module CDN Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/presets.es.js';
 
 // 1. Weekly 24h Grid (24 columns x 7 days)
 const events = [
@@ -194,6 +195,18 @@ const calendarSvg = calendar.render({ colorScheme: 'emerald' });
 
 `aggregateCalendarMonth` brings its own render defaults (flat relief, floor only under real days, labels along the axes); options passed to `render` override them.
 
+### 3. Flat Heatmap
+
+Need a standard heatmap instead of a landscape? Add `view: 'flat'`. Data, presets and colors stay the same:
+
+```typescript
+const svg = presets
+  .aggregateCalendarMonth(days, { year: 2026, month: 8 })
+  .render({ view: 'flat', colorScheme: 'emerald' });
+```
+
+Rows sit on the left and columns on top; `labelPosition: 'front'` moves the columns below the grid. Only color carries the value here, so the chart loses the grayscale and colorblind readability of the 3D view. `shape`, `maxHeight`, `projectionAngle`, `labelMode`, `labelLift`, `showAxisWalls` and `heightGrid` have no effect.
+
 ---
 
 ## Render Options
@@ -207,6 +220,7 @@ Configure the output by passing these settings to `.render()` or `renderHeatmap(
 | `maxHeight` | `number` | `40` | Maximum height of a 3D bar (for max value) in pixels. |
 | `colorScheme`| `string \| CustomColorScheme` | `'github'` | Presets: `'github'`, `'emerald'`, `'sky'`, `'coral'`, `'amber'`, `'purple'`, `'sunset'`, `'grayscale'`. |
 | `dark` | `boolean` | `false` | Enable dark theme color schemes. |
+| `view` | `'isometric' \| 'flat'` | `'isometric'` | 3D shapes, or a standard 2D heatmap of colored cells. |
 | `shape` | `'prism' \| 'cylinder' \| 'ribbon' \| 'flatribbon' \| 'mesh'` | `'prism'` | Visual layout style. |
 | `opacity` | `number` | `1.0` | Opacity value from `0.1` to `1.0`. |
 | `showGrid` | `boolean` | `true` | Show isometric grid floor layout lines. |

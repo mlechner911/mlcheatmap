@@ -107,3 +107,4 @@ liest.
 <figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Verschiedene Formen je Reihe innerhalb einer Grafik.</figcaption>
 </figure>
 
+Wer gar keine Form will, sondern eine normale Heatmap, findet das in [Kapitel 5](05_zeitreihen.md).

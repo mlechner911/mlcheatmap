@@ -461,6 +461,7 @@ if (presetType === '24h') {
   options = {
     ...options,
     ...p.renderDefaults,
+    labelPosition: args['label-pos'] || 'front',
     cols: p.cols,
     rows: p.rows,
     colLabels: p.colLabels,

@@ -73,3 +73,22 @@ const svg = `
   <g transform="translate(${dx.toFixed(2)}, ${dy.toFixed(2)})">${june.render(options)}</g>
 </svg>`;
 ```
+
+In the flat view, grids sit side by side without any projection, so one column is simply `gridSize` across:
+
+```ts
+import { presets } from "mlc-isometric-heatmap/presets";
+
+const may = presets.aggregateMonth([{ date: "2026-05-04", value: 8 }], { year: 2026, month: 4 });
+const june = presets.aggregateMonth([{ date: "2026-06-01", value: 5 }], { year: 2026, month: 5 });
+
+const gridSize = 16;
+const options = { view: "flat", wrapper: "g", gridSize, valueDomain: { min: 0, max: 10 } } as const;
+const dx = may.cols * gridSize + 40; // Room for the row labels of the next grid.
+
+const svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -40 400 200" width="100%">
+  ${may.render(options)}
+  <g transform="translate(${dx}, 0)">${june.render(options)}</g>
+</svg>`;
+```

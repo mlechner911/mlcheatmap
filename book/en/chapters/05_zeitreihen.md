@@ -48,6 +48,38 @@ Dates can arrive in whatever form your data has:
 
 Cells always follow the local time of whoever runs the code. An unreadable date is skipped without an error.
 
+## Without 3D: the Flat View
+
+Not every page needs a landscape. In a dense table or a small dashboard, a standard heatmap is often the better choice. One switch is enough, and your data and preset stay the same:
+
+```typescript
+const flat = presets
+  .aggregateCalendarMonth(days, { year: 2026, month: 8 })
+  .render({ view: 'flat', colorScheme: 'emerald' });
+```
+
+<figure style="margin:2rem 0">
+<div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
+<object type="image/svg+xml" data="/books/mlcheatmap/images/flat_calendar_september.svg" style="width:100%;aspect-ratio:1.390;display:block"></object>
+</div>
+<figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">The same September as a standard heatmap.</figcaption>
+</figure>
+
+<figure style="margin:2rem 0">
+<div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
+<object type="image/svg+xml" data="/books/mlcheatmap/images/flat_year.svg" style="width:100%;aspect-ratio:5.261;display:block"></object>
+</div>
+<figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">A year in flat view, with <code>aggregateYear</code> and <code>view: 'flat'</code>.</figcaption>
+</figure>
+
+What changes compared to the 3D view:
+
+- **Only color carries the value:** Height is gone, and with it the readability in grayscale and for colorblind readers. `interpolateColors` and a tooltip help, and a single-hue scheme like `emerald` usually reads better than a two-hue one.
+- **Labels:** Rows sit on the left and columns on top. `labelPosition: 'front'` moves the columns below the grid.
+- **No effect:** `shape`, `maxHeight`, `projectionAngle`, `labelMode`, `labelLift`, `showAxisWalls` and `heightGrid` are ignored.
+
+Colors, negative values, `null`, `valueDomain` and tooltips work as usual.
+
 ## 24 Hours Against Weekdays
 
 This preset reads `timestamp` instead of `date`, because the hour matters:

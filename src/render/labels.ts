@@ -27,7 +27,7 @@ interface AxisLabelParams {
   x: number;
   y: number;
   angle: number;
-  textAnchor: 'start' | 'end';
+  textAnchor: 'start' | 'middle' | 'end';
   text: string;
   color: string;
   fontSize: number;
@@ -36,7 +36,7 @@ interface AxisLabelParams {
 }
 
 /** A label rotated about its anchor; `background` is drawn in the same rotated frame. */
-function renderAxisLabel(params: AxisLabelParams): string {
+export function renderAxisLabel(params: AxisLabelParams): string {
   const { x, y, angle, textAnchor, text, color, fontSize, fontFamily, background } = params;
   const baseline = (fontSize * 0.35).toFixed(2);
   return `<g transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) rotate(${angle})">${background}<text x="0" y="${baseline}" fill="${color}" font-size="${fontSize}" font-family="${fontFamily}" text-anchor="${textAnchor}">${text}</text></g>`;

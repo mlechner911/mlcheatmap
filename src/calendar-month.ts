@@ -29,7 +29,6 @@ const CALENDAR_RENDER_DEFAULTS = {
   gap: 3,
   maxHeight: 14,
   gridCells: 'data',
-  labelPosition: 'front',
   labelMode: 'axis',
   labelFontSize: 11,
 } satisfies RenderDefaults;

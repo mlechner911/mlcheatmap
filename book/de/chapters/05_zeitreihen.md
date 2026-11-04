@@ -53,6 +53,40 @@ Datumswerte dürfen in der Form kommen, in der sie schon vorliegen:
 
 Die Zellen folgen immer der Ortszeit dort, wo der Code läuft. Ein unlesbares Datum wird ohne Fehler übersprungen.
 
+## Ohne 3D: die flache Ansicht
+
+Nicht jede Seite braucht eine Landschaft. In einer dichten Tabelle oder einem kleinen
+Dashboard ist die normale Heatmap oft die bessere Wahl. Ein einziger Schalter
+genügt, die Daten und das Preset bleiben gleich:
+
+```typescript
+const flat = presets
+  .aggregateCalendarMonth(days, { year: 2026, month: 8 })
+  .render({ view: 'flat', colorScheme: 'emerald' });
+```
+
+<figure style="margin:2rem 0">
+<div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
+<object type="image/svg+xml" data="/books/mlcheatmap/images/flat_calendar_september.svg" style="width:100%;aspect-ratio:1.390;display:block"></object>
+</div>
+<figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Derselbe September als normale Heatmap.</figcaption>
+</figure>
+
+<figure style="margin:2rem 0">
+<div style="background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 3px rgba(0,0,0,.35)">
+<object type="image/svg+xml" data="/books/mlcheatmap/images/flat_year.svg" style="width:100%;aspect-ratio:5.261;display:block"></object>
+</div>
+<figcaption style="font-size:.9em;opacity:.75;margin-top:.6rem;line-height:1.5">Ein Jahr flach, mit <code>aggregateYear</code> und <code>view: 'flat'</code>.</figcaption>
+</figure>
+
+Das ändert sich gegenüber der 3D-Ansicht:
+
+- **Nur noch die Farbe trägt den Wert:** Die Höhe fällt weg, und damit auch die Lesbarkeit in Graustufen und für farbenblinde Leser. `interpolateColors` und ein Tooltip helfen, ein einfarbiges Schema wie `emerald` ist meist besser lesbar als ein zweifarbiges.
+- **Beschriftung:** Zeilen stehen links, Spalten oben. `labelPosition: 'front'` setzt die Spalten unter das Raster.
+- **Ohne Wirkung:** `shape`, `maxHeight`, `projectionAngle`, `labelMode`, `labelLift`, `showAxisWalls` und `heightGrid` werden ignoriert.
+
+Farben, negative Werte, `null`, `valueDomain` und Tooltips funktionieren wie gewohnt.
+
 ## 24 Stunden gegen Wochentage
 
 Dieses Preset liest `timestamp` statt `date`, weil es auf die Stunde ankommt:

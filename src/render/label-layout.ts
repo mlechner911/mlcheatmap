@@ -88,13 +88,13 @@ export function axisLabelCorners(params: {
   x: number;
   y: number;
   angleDeg: number;
-  textAnchor: 'start' | 'end';
+  textAnchor: 'start' | 'middle' | 'end';
   width: number;
   height: number;
 }): { x: number; y: number }[] {
   const { x, y, angleDeg, textAnchor, width, height } = params;
   const a = (angleDeg * Math.PI) / 180;
-  const left = textAnchor === 'end' ? -width : 0;
+  const left = textAnchor === 'end' ? -width : textAnchor === 'middle' ? -width / 2 : 0;
   const localCorners = [
     [left, -height / 2],
     [left + width, -height / 2],

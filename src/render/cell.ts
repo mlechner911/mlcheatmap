@@ -79,12 +79,28 @@ function renderMeshCell(c: number, r: number, value: number, inlineStyle: string
             </g>`;
 }
 
+/** The color a value shows in, unless the point brings its own. */
+export function cellColor(
+  pt: HeatmapDataPoint & { value: number },
+  ctx: Pick<CellContext, 'options' | 'maxAbsValue' | 'theme' | 'negativeTheme'>
+): string {
+  const { options, maxAbsValue, theme, negativeTheme } = ctx;
+  if (pt.color) return pt.color;
+  if (pt.value === 0 && options.zeroColor) return options.zeroColor;
+  return getColorForValue(pt.value, maxAbsValue, theme, negativeTheme, options.interpolateColors);
+}
+
+/** The tooltip of a cell: formatter first, then the label of the point. */
+export function cellTooltip(pt: HeatmapDataPoint, options: HeatmapOptions): string {
+  return options.tooltipFormatter?.(pt) ?? pt.label ?? `Col ${pt.col}, Row ${pt.row}: ${pt.value}`;
+}
+
 /** The bar, surface or band of one cell, or an empty string when it draws nothing. */
 export function renderCell(pt: HeatmapDataPoint, c: number, r: number, ctx: CellContext): string {
   if (pt.value === null) {
     return '';
   }
-  const { options, cols, maxAbsValue, maxHeight, theme, negativeTheme, opacity, renderFlatZero, interactive, animated, geometryConfig, getPoint, uniqueColors } = ctx;
+  const { options, cols, maxAbsValue, maxHeight, opacity, renderFlatZero, interactive, animated, geometryConfig, getPoint, uniqueColors } = ctx;
   const { gridSize, gap, cosAngle, sinAngle } = geometryConfig;
 
   const h = maxAbsValue > 0 ? (pt.value / maxAbsValue) * maxHeight : 0;
@@ -92,14 +108,14 @@ export function renderCell(pt: HeatmapDataPoint, c: number, r: number, ctx: Cell
   const verticesTop = getBarVertices(c, r, hTop, geometryConfig);
   const verticesBottom = getBarVertices(c, r, Math.min(0, h), geometryConfig);
 
-  const baseColor = pt.color ?? (pt.value === 0 && options.zeroColor ? options.zeroColor : getColorForValue(pt.value, maxAbsValue, theme, negativeTheme, options.interpolateColors));
+  const baseColor = cellColor({ ...pt, value: pt.value }, ctx);
   const colors = {
     top: baseColor,
     left: shadeHex(baseColor, 0.85),
     right: shadeHex(baseColor, 0.70)
   };
 
-  const titleText = options.tooltipFormatter?.(pt) ?? pt.label ?? `Col ${c}, Row ${r}: ${pt.value}`;
+  const titleText = cellTooltip({ ...pt, col: c, row: r }, options);
   const titleTag = interactive ? `<title>${escapeHtml(titleText)}</title>` : '';
   const delay = (c + r) * 15;
   const origin = pt.value < 0 ? 'top' : 'bottom';

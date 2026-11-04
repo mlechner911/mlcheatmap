@@ -29,6 +29,7 @@ Durch **3D-Höhe und Perspektive**:
 ## Features
 
 *   **Kalender aus Datumswerten**: Du übergibst Ereignisse mit Datum oder Zeitstempel, statt Spalten und Zeilen auszurechnen. Die Presets ordnen sie nach Wochentag und Woche, summieren, was zusammenfällt, und beschriften die Achsen.
+*   **Flache Ansicht**: `view: 'flat'` zeichnet aus denselben Daten und Presets eine normale 2D-Heatmap, ohne 3D-Effekt.
 *   **Reine Vektorgrafik (SVG)**: Wird direkt als SVG-String generiert. Extrem leichtgewichtig, unendlich skalierbar und einfach in HTML einzubetten oder per CSS zu stylen.
 *   **Fünf 3D-Formen**:
     *   `prism`: Kantige, dreidimensionale Quadersäulen.
@@ -59,7 +60,7 @@ Lade die Rendering-Engine direkt in modernen Browsern ohne Build-Tools:
 
 ```html
 <script type="module">
-  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
+  import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
 
   const grid = new HeatmapGrid(5, 5);
   // ...
@@ -71,10 +72,10 @@ Lade die Skripte synchron über Standard-HTML-Tags:
 
 ```html
 <!-- Core Visuals Renderer -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.umd.js"></script>
 
 <!-- Optional Calendar Aggregators -->
-<script src="https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.umd.js"></script>
+<script src="https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/presets.umd.js"></script>
 
 <script>
   // Zugriff über globale Variablen:
@@ -95,7 +96,7 @@ Instanziere ein Grid, fülle Koordinaten aus und rendere das SVG:
 import { HeatmapGrid } from 'mlc-isometric-heatmap';
 
 // Oder Browser-native ES6-Modul-CDN-Import:
-// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
+// import { HeatmapGrid } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
 
 // 1. Grid erstellen (8 Spalten x 8 Zeilen)
 const grid = new HeatmapGrid(8, 8);
@@ -155,8 +156,8 @@ import { renderHeatmap } from 'mlc-isometric-heatmap';
 import { presets } from 'mlc-isometric-heatmap/presets';
 
 // Oder Browser-native ES6-Modul-CDN-Imports:
-// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/index.es.js';
-// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.3.3/dist/presets.es.js';
+// import { renderHeatmap } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/index.es.js';
+// import { presets } from 'https://unpkg.com/mlc-isometric-heatmap@1.4.0/dist/presets.es.js';
 
 // 1. Wöchentliche 24h-Ansicht (24 Spalten für Stunden x 7 Zeilen für Tage)
 const events = [
@@ -177,6 +178,18 @@ const monthlyGrid = presets.aggregateMonth(days, { year: 2026, month: 5 }); // J
 const yearlyGrid = presets.aggregateYear(days, { year: 2026 });
 ```
 
+### 3. Flache Heatmap
+
+Du brauchst eine normale Heatmap statt einer Landschaft? Ergänze `view: 'flat'`. Daten, Presets und Farben bleiben gleich:
+
+```typescript
+const svg = presets
+  .aggregateCalendarMonth(days, { year: 2026, month: 8 })
+  .render({ view: 'flat', colorScheme: 'emerald' });
+```
+
+Zeilen stehen links, Spalten oben; `labelPosition: 'front'` setzt die Spalten unter das Raster. Nur die Farbe trägt hier den Wert, die Lesbarkeit in Graustufen und für Farbenblinde der 3D-Ansicht fällt also weg. `shape`, `maxHeight`, `projectionAngle`, `labelMode`, `labelLift`, `showAxisWalls` und `heightGrid` haben keine Wirkung.
+
 ---
 
 ## Visualisierungsoptionen
@@ -190,6 +203,7 @@ Du kannst die Darstellung anpassen, indem du diese Einstellungen an `.render()` 
 | `maxHeight` | `number` | `40` | Maximale Höhe eines 3D-Balkens (für den Höchstwert) in Pixeln. |
 | `colorScheme`| `string \| CustomColorScheme` | `'github'` | Presets: `'github'`, `'emerald'`, `'sky'`, `'coral'`, `'amber'`, `'purple'`, `'sunset'`, `'grayscale'`. |
 | `dark` | `boolean` | `false` | Aktiviert die Dark-Mode-Farbvarianten. |
+| `view` | `'isometric' \| 'flat'` | `'isometric'` | 3D-Formen oder eine normale 2D-Heatmap aus farbigen Zellen. |
 | `shape` | `'prism' \| 'cylinder' \| 'ribbon' \| 'flatribbon' \| 'mesh'` | `'prism'` | Layout-Form. |
 | `opacity` | `number` | `1.0` | Deckkraft der 3D-Objektkörper (0.1 bis 1.0). |
 | `showGrid` | `boolean` | `true` | Zeigt die Boden-Gitterlinien im isometrischen Raum. |

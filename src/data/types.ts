@@ -41,6 +41,15 @@ export type ColorSchemeType =
 export type HeatmapShape = 'prism' | 'cylinder' | 'ribbon' | 'flatribbon' | 'mesh';
 
 /**
+ * How the grid is drawn.
+ * - `isometric`: 3D shapes, height and color both carry the value (default).
+ * - `flat`: a standard 2D heatmap of colored cells, only color carries the value.
+ *   Ignores `shape`, `maxHeight`, `projectionAngle`, `labelMode`, `labelLift`,
+ *   `showAxisWalls` and `heightGrid`.
+ */
+export type HeatmapView = 'isometric' | 'flat';
+
+/**
  * User-defined palette: a flat `empty` color for zero values plus an ordered
  * `steps` ramp from low to high magnitudes. Negative values reuse the ramp
  * hue-rotated by 150 degrees unless a diverging theme provides its own.
@@ -110,6 +119,7 @@ export interface ValueDomain {
 export interface HeatmapOptions {
   cols: number;
   rows: number;
+  view?: HeatmapView;      // 3D shapes or a standard 2D heatmap (default: 'isometric')
   gridSize?: number;       // Size of each grid cell in pixels (default: 16)
   gap?: number;            // Gap between cells in pixels (default: 2)
   maxHeight?: number;      // Maximum height of a bar for max value in pixels (default: 40)
@@ -142,7 +152,7 @@ export interface HeatmapOptions {
   title?: string;          // Optional title for the heatmap
   tooltipFormatter?: (point: HeatmapDataPoint) => string;
   projectionAngle?: number; // Projection angle in degrees (default: 30)
-  labelPosition?: 'behind' | 'front'; // Position of axis labels relative to the grid (default: 'front'; rear labels can be hidden by tall bars)
+  labelPosition?: 'behind' | 'front'; // Position of axis labels relative to the grid (default: 'front'; rear labels can be hidden by tall bars). With view: 'flat' it places column labels above ('behind', the default there) or below ('front') the grid.
   zeroColor?: string;      // Custom color for zero value elements
   shape?: HeatmapShape | HeatmapShape[] | ((row: number) => HeatmapShape); // Shape of the 3D bars (default: 'prism')
   opacity?: number;        // Opacity of the 3D bars (default: 1.0)
